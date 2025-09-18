@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 
 	product_v202309 "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202309"
 )
@@ -15,7 +15,7 @@ var (
 	appKey    = "67tg51bc4rv3j"
 	appSecret = "f82ef61bb7d7c95956085a343fa21009297afd12"
 	token     = "TTP_TNaijwAAAAA-gihZtv4n_iLNli0HGps9-vcjhiBVdj8sdRTGOGZZuP0FFFUZ_-jpqPLUx1ob2AWaWdzDi5He_ZzmgBwqItLDWZvzIJM9uctYrbSFuXlaQXpM-iR9A1CmNXLkBaLMHUnZpYybAkE2m8o18zxPoDZBzmIKRuF2DlDY6WyUhtGeR1I4Ny75nR9dEl1sd2sLjR0"
-    cipher    = "TTP_PNhwygAAAACxBhF2wVkPB3p9iP1SwbJC"
+	cipher    = "TTP_PNhwygAAAACxBhF2wVkPB3p9iP1SwbJC"
 )
 
 func TestExample(t *testing.T) {
@@ -34,18 +34,18 @@ func TestExample(t *testing.T) {
 	request = request.ContentType("application/json")
 	resp, httpRes, err := request.Execute()
 	if err != nil || httpRes.StatusCode != 200 {
-        fmt.Printf("request err:%v resbody:%s", err, httpRes.Body)
-        return
-    }
-    if resp == nil {
-        fmt.Printf("response is nil")
-        return
-    }
-    if resp.GetCode() != 0 {
-        fmt.Printf("response business is error! errorCode:%d errorMessage:%s", resp.GetCode(), resp.GetMessage())
-        return
-    }
-    fmt.Println("resp data := ", resp.GetData())
+		fmt.Printf("request err:%v resbody:%s", err, httpRes.Body)
+		return
+	}
+	if resp == nil {
+		fmt.Printf("response is nil")
+		return
+	}
+	if resp.GetCode() != 0 {
+		fmt.Printf("response business is error! errorCode:%d errorMessage:%s", resp.GetCode(), resp.GetMessage())
+		return
+	}
+	fmt.Println("resp data := ", resp.GetData())
 }
 
 func TestOrder202309OrdersGet(t *testing.T) {
@@ -61,9 +61,9 @@ func TestOrder202309OrdersGet(t *testing.T) {
 		"576487745724715360"})
 	resp, httpRes, err := request.Execute()
 	if err != nil || httpRes.StatusCode != 200 {
-        fmt.Printf("request err:%v resbody:%s", err, httpRes.Body)
-        return
-    }
+		fmt.Printf("request err:%v resbody:%s", err, httpRes.Body)
+		return
+	}
 	if resp == nil {
 		fmt.Printf("response is nil")
 		return
@@ -112,9 +112,9 @@ func TestListingSchemasGet(t *testing.T) {
 	request = request.CategoryIds([]int32{1, 2})
 	resp, httpRes, err := request.Execute()
 	if err != nil || httpRes.StatusCode != 200 {
-        fmt.Printf("request err:%v resbody:%s", err, httpRes.Body)
-        return
-    }
+		fmt.Printf("request err:%v resbody:%s", err, httpRes.Body)
+		return
+	}
 	if resp == nil {
 		fmt.Printf("response is nil")
 		return

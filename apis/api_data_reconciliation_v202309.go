@@ -11,49 +11,49 @@ API version: 1.0.0
 package apis
 
 import (
-    "bytes"
-    "context"
-    "io"
-    "net/http"
-    "net/url"
+	"bytes"
+	"context"
+	"io"
+	"net/http"
+	"net/url"
 
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/data_reconciliation/v202309"
+	data_reconciliation_v202309 "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/data_reconciliation/v202309"
 )
-
 
 // DataReconciliationV202309APIService DataReconciliationV202309API service
 type DataReconciliationV202309APIService service
 
 type ApiDataReconciliation202309OrdersSyncPostRequest struct {
-    ctx context.Context
-    ApiService *DataReconciliationV202309APIService
-    xTtsAccessToken *string
-    contentType *string
-    shopId *int64
-    dataReconciliation202309OrderStatusDataExchangeRequestBody *data_reconciliation_v202309.DataReconciliation202309OrderStatusDataExchangeRequestBody
+	ctx                                                        context.Context
+	ApiService                                                 *DataReconciliationV202309APIService
+	xTtsAccessToken                                            *string
+	contentType                                                *string
+	shopId                                                     *int64
+	dataReconciliation202309OrderStatusDataExchangeRequestBody *data_reconciliation_v202309.DataReconciliation202309OrderStatusDataExchangeRequestBody
 }
 
-// 
 func (r ApiDataReconciliation202309OrdersSyncPostRequest) XTtsAccessToken(xTtsAccessToken string) ApiDataReconciliation202309OrdersSyncPostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiDataReconciliation202309OrdersSyncPostRequest) ContentType(contentType string) ApiDataReconciliation202309OrdersSyncPostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
+
 // Tiktok shop seller shop id.
 func (r ApiDataReconciliation202309OrdersSyncPostRequest) ShopId(shopId int64) ApiDataReconciliation202309OrdersSyncPostRequest {
-    r.shopId = &shopId
-    return r
+	r.shopId = &shopId
+	return r
 }
 func (r ApiDataReconciliation202309OrdersSyncPostRequest) DataReconciliation202309OrderStatusDataExchangeRequestBody(dataReconciliation202309OrderStatusDataExchangeRequestBody data_reconciliation_v202309.DataReconciliation202309OrderStatusDataExchangeRequestBody) ApiDataReconciliation202309OrdersSyncPostRequest {
-    r.dataReconciliation202309OrderStatusDataExchangeRequestBody = &dataReconciliation202309OrderStatusDataExchangeRequestBody
-    return r
+	r.dataReconciliation202309OrderStatusDataExchangeRequestBody = &dataReconciliation202309OrderStatusDataExchangeRequestBody
+	return r
 }
 func (r ApiDataReconciliation202309OrdersSyncPostRequest) Execute() (*data_reconciliation_v202309.DataReconciliation202309OrderStatusDataExchangeResponse, *http.Response, error) {
-    return r.ApiService.DataReconciliation202309OrdersSyncPostExecute(r)
+	return r.ApiService.DataReconciliation202309OrdersSyncPostExecute(r)
 }
 
 /*
@@ -64,96 +64,97 @@ TikTok Shop-Connector exchange order data from DTC(Direct To Consumer) platform 
 @return ApiDataReconciliation202309OrdersSyncPostRequest
 */
 func (a *DataReconciliationV202309APIService) DataReconciliation202309OrdersSyncPost(ctx context.Context) ApiDataReconciliation202309OrdersSyncPostRequest {
-    return ApiDataReconciliation202309OrdersSyncPostRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiDataReconciliation202309OrdersSyncPostRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return DataReconciliation202309OrderStatusDataExchangeResponse
+//
+//	@return DataReconciliation202309OrderStatusDataExchangeResponse
 func (a *DataReconciliationV202309APIService) DataReconciliation202309OrdersSyncPostExecute(r ApiDataReconciliation202309OrdersSyncPostRequest) (*data_reconciliation_v202309.DataReconciliation202309OrderStatusDataExchangeResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *data_reconciliation_v202309.DataReconciliation202309OrderStatusDataExchangeResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *data_reconciliation_v202309.DataReconciliation202309OrderStatusDataExchangeResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DataReconciliationV202309APIService.DataReconciliation202309OrdersSyncPost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DataReconciliationV202309APIService.DataReconciliation202309OrdersSyncPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/data_reconciliation/202309/orders/sync"
+	localVarPath := localBasePath + "/data_reconciliation/202309/orders/sync"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.shopId != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_id", r.shopId, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	if r.shopId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_id", r.shopId, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.dataReconciliation202309OrderStatusDataExchangeRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.dataReconciliation202309OrderStatusDataExchangeRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
