@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202409
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202409CreateManufacturerResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202409CreateManufacturerResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202409CreateManufacturerResponseData{}
 
 // Product202409CreateManufacturerResponseData struct for Product202409CreateManufacturerResponseData
 type Product202409CreateManufacturerResponseData struct {
-    // A unique ID that identifies the manufacturer in TikTok Shop.
-    ManufacturerId *string `json:"manufacturer_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A unique ID that identifies the manufacturer in TikTok Shop.
+	ManufacturerId       *string `json:"manufacturer_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202409CreateManufacturerResponseData Product202409CreateManufacturerResponseData
@@ -32,89 +32,89 @@ type _Product202409CreateManufacturerResponseData Product202409CreateManufacture
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202409CreateManufacturerResponseData() *Product202409CreateManufacturerResponseData {
-    this := Product202409CreateManufacturerResponseData{}
-    return &this
+	this := Product202409CreateManufacturerResponseData{}
+	return &this
 }
 
 // NewProduct202409CreateManufacturerResponseDataWithDefaults instantiates a new Product202409CreateManufacturerResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202409CreateManufacturerResponseDataWithDefaults() *Product202409CreateManufacturerResponseData {
-    this := Product202409CreateManufacturerResponseData{}
-    return &this
+	this := Product202409CreateManufacturerResponseData{}
+	return &this
 }
 
 // GetManufacturerId returns the ManufacturerId field value if set, zero value otherwise.
 func (o *Product202409CreateManufacturerResponseData) GetManufacturerId() string {
-    if o == nil || utils.IsNil(o.ManufacturerId) {
-        var ret string
-        return ret
-    }
-    return *o.ManufacturerId
+	if o == nil || utils.IsNil(o.ManufacturerId) {
+		var ret string
+		return ret
+	}
+	return *o.ManufacturerId
 }
 
 // GetManufacturerIdOk returns a tuple with the ManufacturerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409CreateManufacturerResponseData) GetManufacturerIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ManufacturerId) {
-        return nil, false
-    }
-    return o.ManufacturerId, true
+	if o == nil || utils.IsNil(o.ManufacturerId) {
+		return nil, false
+	}
+	return o.ManufacturerId, true
 }
 
 // HasManufacturerId returns a boolean if a field has been set.
 func (o *Product202409CreateManufacturerResponseData) HasManufacturerId() bool {
-    if o != nil && !utils.IsNil(o.ManufacturerId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ManufacturerId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetManufacturerId gets a reference to the given string and assigns it to the ManufacturerId field.
 func (o *Product202409CreateManufacturerResponseData) SetManufacturerId(v string) {
-    o.ManufacturerId = &v
+	o.ManufacturerId = &v
 }
 
 func (o Product202409CreateManufacturerResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202409CreateManufacturerResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ManufacturerId) {
-        toSerialize["manufacturer_id"] = o.ManufacturerId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ManufacturerId) {
+		toSerialize["manufacturer_id"] = o.ManufacturerId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202409CreateManufacturerResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202409CreateManufacturerResponseData := _Product202409CreateManufacturerResponseData{}
+	varProduct202409CreateManufacturerResponseData := _Product202409CreateManufacturerResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202409CreateManufacturerResponseData)
+	err = json.Unmarshal(data, &varProduct202409CreateManufacturerResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202409CreateManufacturerResponseData(varProduct202409CreateManufacturerResponseData)
+	*o = Product202409CreateManufacturerResponseData(varProduct202409CreateManufacturerResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "manufacturer_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "manufacturer_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202409CreateManufacturerResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202409CreateManufacturerResponseData) UnmarshalJSON(src 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

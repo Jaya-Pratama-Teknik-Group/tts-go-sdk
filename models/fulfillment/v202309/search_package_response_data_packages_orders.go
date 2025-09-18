@@ -11,20 +11,20 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309SearchPackageResponseDataPackagesOrders type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309SearchPackageResponseDataPackagesOrders type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309SearchPackageResponseDataPackagesOrders{}
 
 // Fulfillment202309SearchPackageResponseDataPackagesOrders struct for Fulfillment202309SearchPackageResponseDataPackagesOrders
 type Fulfillment202309SearchPackageResponseDataPackagesOrders struct {
-    // TikTok Shop order ID.
-    Id *string `json:"id,omitempty"`
-    // The response list of SKUs.
-    Skus []Fulfillment202309SearchPackageResponseDataPackagesOrdersSkus `json:"skus,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// TikTok Shop order ID.
+	Id *string `json:"id,omitempty"`
+	// The response list of SKUs.
+	Skus                 []Fulfillment202309SearchPackageResponseDataPackagesOrdersSkus `json:"skus,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309SearchPackageResponseDataPackagesOrders Fulfillment202309SearchPackageResponseDataPackagesOrders
@@ -34,125 +34,125 @@ type _Fulfillment202309SearchPackageResponseDataPackagesOrders Fulfillment202309
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309SearchPackageResponseDataPackagesOrders() *Fulfillment202309SearchPackageResponseDataPackagesOrders {
-    this := Fulfillment202309SearchPackageResponseDataPackagesOrders{}
-    return &this
+	this := Fulfillment202309SearchPackageResponseDataPackagesOrders{}
+	return &this
 }
 
 // NewFulfillment202309SearchPackageResponseDataPackagesOrdersWithDefaults instantiates a new Fulfillment202309SearchPackageResponseDataPackagesOrders object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309SearchPackageResponseDataPackagesOrdersWithDefaults() *Fulfillment202309SearchPackageResponseDataPackagesOrders {
-    this := Fulfillment202309SearchPackageResponseDataPackagesOrders{}
-    return &this
+	this := Fulfillment202309SearchPackageResponseDataPackagesOrders{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Fulfillment202309SearchPackageResponseDataPackagesOrders) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309SearchPackageResponseDataPackagesOrders) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Fulfillment202309SearchPackageResponseDataPackagesOrders) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Fulfillment202309SearchPackageResponseDataPackagesOrders) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetSkus returns the Skus field value if set, zero value otherwise.
 func (o *Fulfillment202309SearchPackageResponseDataPackagesOrders) GetSkus() []Fulfillment202309SearchPackageResponseDataPackagesOrdersSkus {
-    if o == nil || utils.IsNil(o.Skus) {
-        var ret []Fulfillment202309SearchPackageResponseDataPackagesOrdersSkus
-        return ret
-    }
-    return o.Skus
+	if o == nil || utils.IsNil(o.Skus) {
+		var ret []Fulfillment202309SearchPackageResponseDataPackagesOrdersSkus
+		return ret
+	}
+	return o.Skus
 }
 
 // GetSkusOk returns a tuple with the Skus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309SearchPackageResponseDataPackagesOrders) GetSkusOk() ([]Fulfillment202309SearchPackageResponseDataPackagesOrdersSkus, bool) {
-    if o == nil || utils.IsNil(o.Skus) {
-        return nil, false
-    }
-    return o.Skus, true
+	if o == nil || utils.IsNil(o.Skus) {
+		return nil, false
+	}
+	return o.Skus, true
 }
 
 // HasSkus returns a boolean if a field has been set.
 func (o *Fulfillment202309SearchPackageResponseDataPackagesOrders) HasSkus() bool {
-    if o != nil && !utils.IsNil(o.Skus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Skus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkus gets a reference to the given []Fulfillment202309SearchPackageResponseDataPackagesOrdersSkus and assigns it to the Skus field.
 func (o *Fulfillment202309SearchPackageResponseDataPackagesOrders) SetSkus(v []Fulfillment202309SearchPackageResponseDataPackagesOrdersSkus) {
-    o.Skus = v
+	o.Skus = v
 }
 
 func (o Fulfillment202309SearchPackageResponseDataPackagesOrders) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309SearchPackageResponseDataPackagesOrders) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Skus) {
-        toSerialize["skus"] = o.Skus
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Skus) {
+		toSerialize["skus"] = o.Skus
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309SearchPackageResponseDataPackagesOrders) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309SearchPackageResponseDataPackagesOrders := _Fulfillment202309SearchPackageResponseDataPackagesOrders{}
+	varFulfillment202309SearchPackageResponseDataPackagesOrders := _Fulfillment202309SearchPackageResponseDataPackagesOrders{}
 
-    err = json.Unmarshal(data, &varFulfillment202309SearchPackageResponseDataPackagesOrders)
+	err = json.Unmarshal(data, &varFulfillment202309SearchPackageResponseDataPackagesOrders)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309SearchPackageResponseDataPackagesOrders(varFulfillment202309SearchPackageResponseDataPackagesOrders)
+	*o = Fulfillment202309SearchPackageResponseDataPackagesOrders(varFulfillment202309SearchPackageResponseDataPackagesOrders)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "skus")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "skus")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309SearchPackageResponseDataPackagesOrders struct {
@@ -190,5 +190,3 @@ func (v *NullableFulfillment202309SearchPackageResponseDataPackagesOrders) Unmar
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202409
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202409CreateResponsiblePersonResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202409CreateResponsiblePersonResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202409CreateResponsiblePersonResponseData{}
 
 // Product202409CreateResponsiblePersonResponseData struct for Product202409CreateResponsiblePersonResponseData
 type Product202409CreateResponsiblePersonResponseData struct {
-    // A unique ID that identifies the responsible person in TikTok Shop.
-    ResponsiblePersonId *string `json:"responsible_person_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A unique ID that identifies the responsible person in TikTok Shop.
+	ResponsiblePersonId  *string `json:"responsible_person_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202409CreateResponsiblePersonResponseData Product202409CreateResponsiblePersonResponseData
@@ -32,89 +32,89 @@ type _Product202409CreateResponsiblePersonResponseData Product202409CreateRespon
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202409CreateResponsiblePersonResponseData() *Product202409CreateResponsiblePersonResponseData {
-    this := Product202409CreateResponsiblePersonResponseData{}
-    return &this
+	this := Product202409CreateResponsiblePersonResponseData{}
+	return &this
 }
 
 // NewProduct202409CreateResponsiblePersonResponseDataWithDefaults instantiates a new Product202409CreateResponsiblePersonResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202409CreateResponsiblePersonResponseDataWithDefaults() *Product202409CreateResponsiblePersonResponseData {
-    this := Product202409CreateResponsiblePersonResponseData{}
-    return &this
+	this := Product202409CreateResponsiblePersonResponseData{}
+	return &this
 }
 
 // GetResponsiblePersonId returns the ResponsiblePersonId field value if set, zero value otherwise.
 func (o *Product202409CreateResponsiblePersonResponseData) GetResponsiblePersonId() string {
-    if o == nil || utils.IsNil(o.ResponsiblePersonId) {
-        var ret string
-        return ret
-    }
-    return *o.ResponsiblePersonId
+	if o == nil || utils.IsNil(o.ResponsiblePersonId) {
+		var ret string
+		return ret
+	}
+	return *o.ResponsiblePersonId
 }
 
 // GetResponsiblePersonIdOk returns a tuple with the ResponsiblePersonId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409CreateResponsiblePersonResponseData) GetResponsiblePersonIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ResponsiblePersonId) {
-        return nil, false
-    }
-    return o.ResponsiblePersonId, true
+	if o == nil || utils.IsNil(o.ResponsiblePersonId) {
+		return nil, false
+	}
+	return o.ResponsiblePersonId, true
 }
 
 // HasResponsiblePersonId returns a boolean if a field has been set.
 func (o *Product202409CreateResponsiblePersonResponseData) HasResponsiblePersonId() bool {
-    if o != nil && !utils.IsNil(o.ResponsiblePersonId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ResponsiblePersonId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetResponsiblePersonId gets a reference to the given string and assigns it to the ResponsiblePersonId field.
 func (o *Product202409CreateResponsiblePersonResponseData) SetResponsiblePersonId(v string) {
-    o.ResponsiblePersonId = &v
+	o.ResponsiblePersonId = &v
 }
 
 func (o Product202409CreateResponsiblePersonResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202409CreateResponsiblePersonResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ResponsiblePersonId) {
-        toSerialize["responsible_person_id"] = o.ResponsiblePersonId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ResponsiblePersonId) {
+		toSerialize["responsible_person_id"] = o.ResponsiblePersonId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202409CreateResponsiblePersonResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202409CreateResponsiblePersonResponseData := _Product202409CreateResponsiblePersonResponseData{}
+	varProduct202409CreateResponsiblePersonResponseData := _Product202409CreateResponsiblePersonResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202409CreateResponsiblePersonResponseData)
+	err = json.Unmarshal(data, &varProduct202409CreateResponsiblePersonResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202409CreateResponsiblePersonResponseData(varProduct202409CreateResponsiblePersonResponseData)
+	*o = Product202409CreateResponsiblePersonResponseData(varProduct202409CreateResponsiblePersonResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "responsible_person_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "responsible_person_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202409CreateResponsiblePersonResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202409CreateResponsiblePersonResponseData) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

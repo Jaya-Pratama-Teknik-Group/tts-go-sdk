@@ -11,22 +11,22 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage{}
 
 // ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage struct for ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage
 type ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage struct {
-    // Product image height. Units: pixels (px).
-    Height *int32 `json:"height,omitempty"`
-    // Product image URL.
-    Url *string `json:"url,omitempty"`
-    // Product image width. Units: pixels (px).
-    Width *int32 `json:"width,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Product image height. Units: pixels (px).
+	Height *int32 `json:"height,omitempty"`
+	// Product image URL.
+	Url *string `json:"url,omitempty"`
+	// Product image width. Units: pixels (px).
+	Width                *int32 `json:"width,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage
@@ -36,161 +36,161 @@ type _ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProd
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage() *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage {
-    this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage{}
+	return &this
 }
 
 // NewReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImageWithDefaults instantiates a new ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImageWithDefaults() *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage {
-    this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage{}
+	return &this
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) GetHeight() int32 {
-    if o == nil || utils.IsNil(o.Height) {
-        var ret int32
-        return ret
-    }
-    return *o.Height
+	if o == nil || utils.IsNil(o.Height) {
+		var ret int32
+		return ret
+	}
+	return *o.Height
 }
 
 // GetHeightOk returns a tuple with the Height field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) GetHeightOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Height) {
-        return nil, false
-    }
-    return o.Height, true
+	if o == nil || utils.IsNil(o.Height) {
+		return nil, false
+	}
+	return o.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) HasHeight() bool {
-    if o != nil && !utils.IsNil(o.Height) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Height) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHeight gets a reference to the given int32 and assigns it to the Height field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) SetHeight(v int32) {
-    o.Height = &v
+	o.Height = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) GetUrl() string {
-    if o == nil || utils.IsNil(o.Url) {
-        var ret string
-        return ret
-    }
-    return *o.Url
+	if o == nil || utils.IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
 }
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) GetUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Url) {
-        return nil, false
-    }
-    return o.Url, true
+	if o == nil || utils.IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
 }
 
 // HasUrl returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) HasUrl() bool {
-    if o != nil && !utils.IsNil(o.Url) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Url) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) SetUrl(v string) {
-    o.Url = &v
+	o.Url = &v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) GetWidth() int32 {
-    if o == nil || utils.IsNil(o.Width) {
-        var ret int32
-        return ret
-    }
-    return *o.Width
+	if o == nil || utils.IsNil(o.Width) {
+		var ret int32
+		return ret
+	}
+	return *o.Width
 }
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) GetWidthOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Width) {
-        return nil, false
-    }
-    return o.Width, true
+	if o == nil || utils.IsNil(o.Width) {
+		return nil, false
+	}
+	return o.Width, true
 }
 
 // HasWidth returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) HasWidth() bool {
-    if o != nil && !utils.IsNil(o.Width) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Width) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWidth gets a reference to the given int32 and assigns it to the Width field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) SetWidth(v int32) {
-    o.Width = &v
+	o.Width = &v
 }
 
 func (o ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Height) {
-        toSerialize["height"] = o.Height
-    }
-    if !utils.IsNil(o.Url) {
-        toSerialize["url"] = o.Url
-    }
-    if !utils.IsNil(o.Width) {
-        toSerialize["width"] = o.Width
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Height) {
+		toSerialize["height"] = o.Height
+	}
+	if !utils.IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
+	if !utils.IsNil(o.Width) {
+		toSerialize["width"] = o.Width
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage := _ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage{}
+	varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage := _ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage)
+	err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage(varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage)
+	*o = ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage(varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "height")
-        delete(additionalProperties, "url")
-        delete(additionalProperties, "width")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "height")
+		delete(additionalProperties, "url")
+		delete(additionalProperties, "width")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLineItemsProductImage struct {
@@ -228,5 +228,3 @@ func (v *NullableReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnLi
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

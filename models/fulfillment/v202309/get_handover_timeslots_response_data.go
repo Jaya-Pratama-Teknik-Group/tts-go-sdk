@@ -11,26 +11,26 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetHandoverTimeslotsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetHandoverTimeslotsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetHandoverTimeslotsResponseData{}
 
 // Fulfillment202309GetHandoverTimeslotsResponseData struct for Fulfillment202309GetHandoverTimeslotsResponseData
 type Fulfillment202309GetHandoverTimeslotsResponseData struct {
-    // Does this package support point delivery
-    CanDropOff *bool `json:"can_drop_off,omitempty"`
-    // Does this package support door-to-door collection
-    CanPickup *bool `json:"can_pickup,omitempty"`
-    // Only for UK. Use this field to determine wheather van collection is available
-    CanVanCollection *bool `json:"can_van_collection,omitempty"`
-    // View deliverable logistics outlets via URL
-    DropOffPointUrl *string `json:"drop_off_point_url,omitempty"`
-    // Package pickup time slots for door-to-door collection
-    PickupSlots []Fulfillment202309GetHandoverTimeslotsResponseDataPickupSlots `json:"pickup_slots,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Does this package support point delivery
+	CanDropOff *bool `json:"can_drop_off,omitempty"`
+	// Does this package support door-to-door collection
+	CanPickup *bool `json:"can_pickup,omitempty"`
+	// Only for UK. Use this field to determine wheather van collection is available
+	CanVanCollection *bool `json:"can_van_collection,omitempty"`
+	// View deliverable logistics outlets via URL
+	DropOffPointUrl *string `json:"drop_off_point_url,omitempty"`
+	// Package pickup time slots for door-to-door collection
+	PickupSlots          []Fulfillment202309GetHandoverTimeslotsResponseDataPickupSlots `json:"pickup_slots,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetHandoverTimeslotsResponseData Fulfillment202309GetHandoverTimeslotsResponseData
@@ -40,233 +40,233 @@ type _Fulfillment202309GetHandoverTimeslotsResponseData Fulfillment202309GetHand
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetHandoverTimeslotsResponseData() *Fulfillment202309GetHandoverTimeslotsResponseData {
-    this := Fulfillment202309GetHandoverTimeslotsResponseData{}
-    return &this
+	this := Fulfillment202309GetHandoverTimeslotsResponseData{}
+	return &this
 }
 
 // NewFulfillment202309GetHandoverTimeslotsResponseDataWithDefaults instantiates a new Fulfillment202309GetHandoverTimeslotsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetHandoverTimeslotsResponseDataWithDefaults() *Fulfillment202309GetHandoverTimeslotsResponseData {
-    this := Fulfillment202309GetHandoverTimeslotsResponseData{}
-    return &this
+	this := Fulfillment202309GetHandoverTimeslotsResponseData{}
+	return &this
 }
 
 // GetCanDropOff returns the CanDropOff field value if set, zero value otherwise.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetCanDropOff() bool {
-    if o == nil || utils.IsNil(o.CanDropOff) {
-        var ret bool
-        return ret
-    }
-    return *o.CanDropOff
+	if o == nil || utils.IsNil(o.CanDropOff) {
+		var ret bool
+		return ret
+	}
+	return *o.CanDropOff
 }
 
 // GetCanDropOffOk returns a tuple with the CanDropOff field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetCanDropOffOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.CanDropOff) {
-        return nil, false
-    }
-    return o.CanDropOff, true
+	if o == nil || utils.IsNil(o.CanDropOff) {
+		return nil, false
+	}
+	return o.CanDropOff, true
 }
 
 // HasCanDropOff returns a boolean if a field has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) HasCanDropOff() bool {
-    if o != nil && !utils.IsNil(o.CanDropOff) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CanDropOff) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCanDropOff gets a reference to the given bool and assigns it to the CanDropOff field.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) SetCanDropOff(v bool) {
-    o.CanDropOff = &v
+	o.CanDropOff = &v
 }
 
 // GetCanPickup returns the CanPickup field value if set, zero value otherwise.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetCanPickup() bool {
-    if o == nil || utils.IsNil(o.CanPickup) {
-        var ret bool
-        return ret
-    }
-    return *o.CanPickup
+	if o == nil || utils.IsNil(o.CanPickup) {
+		var ret bool
+		return ret
+	}
+	return *o.CanPickup
 }
 
 // GetCanPickupOk returns a tuple with the CanPickup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetCanPickupOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.CanPickup) {
-        return nil, false
-    }
-    return o.CanPickup, true
+	if o == nil || utils.IsNil(o.CanPickup) {
+		return nil, false
+	}
+	return o.CanPickup, true
 }
 
 // HasCanPickup returns a boolean if a field has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) HasCanPickup() bool {
-    if o != nil && !utils.IsNil(o.CanPickup) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CanPickup) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCanPickup gets a reference to the given bool and assigns it to the CanPickup field.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) SetCanPickup(v bool) {
-    o.CanPickup = &v
+	o.CanPickup = &v
 }
 
 // GetCanVanCollection returns the CanVanCollection field value if set, zero value otherwise.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetCanVanCollection() bool {
-    if o == nil || utils.IsNil(o.CanVanCollection) {
-        var ret bool
-        return ret
-    }
-    return *o.CanVanCollection
+	if o == nil || utils.IsNil(o.CanVanCollection) {
+		var ret bool
+		return ret
+	}
+	return *o.CanVanCollection
 }
 
 // GetCanVanCollectionOk returns a tuple with the CanVanCollection field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetCanVanCollectionOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.CanVanCollection) {
-        return nil, false
-    }
-    return o.CanVanCollection, true
+	if o == nil || utils.IsNil(o.CanVanCollection) {
+		return nil, false
+	}
+	return o.CanVanCollection, true
 }
 
 // HasCanVanCollection returns a boolean if a field has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) HasCanVanCollection() bool {
-    if o != nil && !utils.IsNil(o.CanVanCollection) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CanVanCollection) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCanVanCollection gets a reference to the given bool and assigns it to the CanVanCollection field.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) SetCanVanCollection(v bool) {
-    o.CanVanCollection = &v
+	o.CanVanCollection = &v
 }
 
 // GetDropOffPointUrl returns the DropOffPointUrl field value if set, zero value otherwise.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetDropOffPointUrl() string {
-    if o == nil || utils.IsNil(o.DropOffPointUrl) {
-        var ret string
-        return ret
-    }
-    return *o.DropOffPointUrl
+	if o == nil || utils.IsNil(o.DropOffPointUrl) {
+		var ret string
+		return ret
+	}
+	return *o.DropOffPointUrl
 }
 
 // GetDropOffPointUrlOk returns a tuple with the DropOffPointUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetDropOffPointUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.DropOffPointUrl) {
-        return nil, false
-    }
-    return o.DropOffPointUrl, true
+	if o == nil || utils.IsNil(o.DropOffPointUrl) {
+		return nil, false
+	}
+	return o.DropOffPointUrl, true
 }
 
 // HasDropOffPointUrl returns a boolean if a field has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) HasDropOffPointUrl() bool {
-    if o != nil && !utils.IsNil(o.DropOffPointUrl) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DropOffPointUrl) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDropOffPointUrl gets a reference to the given string and assigns it to the DropOffPointUrl field.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) SetDropOffPointUrl(v string) {
-    o.DropOffPointUrl = &v
+	o.DropOffPointUrl = &v
 }
 
 // GetPickupSlots returns the PickupSlots field value if set, zero value otherwise.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetPickupSlots() []Fulfillment202309GetHandoverTimeslotsResponseDataPickupSlots {
-    if o == nil || utils.IsNil(o.PickupSlots) {
-        var ret []Fulfillment202309GetHandoverTimeslotsResponseDataPickupSlots
-        return ret
-    }
-    return o.PickupSlots
+	if o == nil || utils.IsNil(o.PickupSlots) {
+		var ret []Fulfillment202309GetHandoverTimeslotsResponseDataPickupSlots
+		return ret
+	}
+	return o.PickupSlots
 }
 
 // GetPickupSlotsOk returns a tuple with the PickupSlots field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) GetPickupSlotsOk() ([]Fulfillment202309GetHandoverTimeslotsResponseDataPickupSlots, bool) {
-    if o == nil || utils.IsNil(o.PickupSlots) {
-        return nil, false
-    }
-    return o.PickupSlots, true
+	if o == nil || utils.IsNil(o.PickupSlots) {
+		return nil, false
+	}
+	return o.PickupSlots, true
 }
 
 // HasPickupSlots returns a boolean if a field has been set.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) HasPickupSlots() bool {
-    if o != nil && !utils.IsNil(o.PickupSlots) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PickupSlots) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPickupSlots gets a reference to the given []Fulfillment202309GetHandoverTimeslotsResponseDataPickupSlots and assigns it to the PickupSlots field.
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) SetPickupSlots(v []Fulfillment202309GetHandoverTimeslotsResponseDataPickupSlots) {
-    o.PickupSlots = v
+	o.PickupSlots = v
 }
 
 func (o Fulfillment202309GetHandoverTimeslotsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetHandoverTimeslotsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CanDropOff) {
-        toSerialize["can_drop_off"] = o.CanDropOff
-    }
-    if !utils.IsNil(o.CanPickup) {
-        toSerialize["can_pickup"] = o.CanPickup
-    }
-    if !utils.IsNil(o.CanVanCollection) {
-        toSerialize["can_van_collection"] = o.CanVanCollection
-    }
-    if !utils.IsNil(o.DropOffPointUrl) {
-        toSerialize["drop_off_point_url"] = o.DropOffPointUrl
-    }
-    if !utils.IsNil(o.PickupSlots) {
-        toSerialize["pickup_slots"] = o.PickupSlots
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CanDropOff) {
+		toSerialize["can_drop_off"] = o.CanDropOff
+	}
+	if !utils.IsNil(o.CanPickup) {
+		toSerialize["can_pickup"] = o.CanPickup
+	}
+	if !utils.IsNil(o.CanVanCollection) {
+		toSerialize["can_van_collection"] = o.CanVanCollection
+	}
+	if !utils.IsNil(o.DropOffPointUrl) {
+		toSerialize["drop_off_point_url"] = o.DropOffPointUrl
+	}
+	if !utils.IsNil(o.PickupSlots) {
+		toSerialize["pickup_slots"] = o.PickupSlots
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetHandoverTimeslotsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetHandoverTimeslotsResponseData := _Fulfillment202309GetHandoverTimeslotsResponseData{}
+	varFulfillment202309GetHandoverTimeslotsResponseData := _Fulfillment202309GetHandoverTimeslotsResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetHandoverTimeslotsResponseData)
+	err = json.Unmarshal(data, &varFulfillment202309GetHandoverTimeslotsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetHandoverTimeslotsResponseData(varFulfillment202309GetHandoverTimeslotsResponseData)
+	*o = Fulfillment202309GetHandoverTimeslotsResponseData(varFulfillment202309GetHandoverTimeslotsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "can_drop_off")
-        delete(additionalProperties, "can_pickup")
-        delete(additionalProperties, "can_van_collection")
-        delete(additionalProperties, "drop_off_point_url")
-        delete(additionalProperties, "pickup_slots")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "can_drop_off")
+		delete(additionalProperties, "can_pickup")
+		delete(additionalProperties, "can_van_collection")
+		delete(additionalProperties, "drop_off_point_url")
+		delete(additionalProperties, "pickup_slots")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetHandoverTimeslotsResponseData struct {
@@ -304,5 +304,3 @@ func (v *NullableFulfillment202309GetHandoverTimeslotsResponseData) UnmarshalJSO
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

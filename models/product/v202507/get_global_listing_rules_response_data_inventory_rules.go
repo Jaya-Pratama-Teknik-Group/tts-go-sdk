@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202507
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202507GetGlobalListingRulesResponseDataInventoryRules type satisfies the MappedNullable interface at compile time
+// checks if the Product202507GetGlobalListingRulesResponseDataInventoryRules type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202507GetGlobalListingRulesResponseDataInventoryRules{}
 
 // Product202507GetGlobalListingRulesResponseDataInventoryRules struct for Product202507GetGlobalListingRulesResponseDataInventoryRules
 type Product202507GetGlobalListingRulesResponseDataInventoryRules struct {
-    // The inventory allocation mode used for this warehouse in the local market. `SHARED` – Inventory is pooled across all covered markets. An inventory deduction in one market reflects across all. `DYNAMIC` – Inventory is divided proportionally among covered markets. An inventory deduction in one market affects only that market. `MANUAL` – Inventory is configured independently by sellers for each market. An inventory deduction in one market affects only that market.
-    AllocationMode *string `json:"allocation_mode,omitempty"`
-    // The list of markets where inventory from this warehouse is shared or dynamically allocated. **Note**: Applicable only for `SHARED` and `DYNAMIC` management modes.
-    AssociatedWarehouses []Product202507GetGlobalListingRulesResponseDataInventoryRulesAssociatedWarehouses `json:"associated_warehouses,omitempty"`
-    // The warehouse ID associated with the shop.
-    LocalWarehouseId *string `json:"local_warehouse_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The inventory allocation mode used for this warehouse in the local market. `SHARED` – Inventory is pooled across all covered markets. An inventory deduction in one market reflects across all. `DYNAMIC` – Inventory is divided proportionally among covered markets. An inventory deduction in one market affects only that market. `MANUAL` – Inventory is configured independently by sellers for each market. An inventory deduction in one market affects only that market.
+	AllocationMode *string `json:"allocation_mode,omitempty"`
+	// The list of markets where inventory from this warehouse is shared or dynamically allocated. **Note**: Applicable only for `SHARED` and `DYNAMIC` management modes.
+	AssociatedWarehouses []Product202507GetGlobalListingRulesResponseDataInventoryRulesAssociatedWarehouses `json:"associated_warehouses,omitempty"`
+	// The warehouse ID associated with the shop.
+	LocalWarehouseId     *string `json:"local_warehouse_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202507GetGlobalListingRulesResponseDataInventoryRules Product202507GetGlobalListingRulesResponseDataInventoryRules
@@ -36,161 +36,161 @@ type _Product202507GetGlobalListingRulesResponseDataInventoryRules Product202507
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202507GetGlobalListingRulesResponseDataInventoryRules() *Product202507GetGlobalListingRulesResponseDataInventoryRules {
-    this := Product202507GetGlobalListingRulesResponseDataInventoryRules{}
-    return &this
+	this := Product202507GetGlobalListingRulesResponseDataInventoryRules{}
+	return &this
 }
 
 // NewProduct202507GetGlobalListingRulesResponseDataInventoryRulesWithDefaults instantiates a new Product202507GetGlobalListingRulesResponseDataInventoryRules object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202507GetGlobalListingRulesResponseDataInventoryRulesWithDefaults() *Product202507GetGlobalListingRulesResponseDataInventoryRules {
-    this := Product202507GetGlobalListingRulesResponseDataInventoryRules{}
-    return &this
+	this := Product202507GetGlobalListingRulesResponseDataInventoryRules{}
+	return &this
 }
 
 // GetAllocationMode returns the AllocationMode field value if set, zero value otherwise.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) GetAllocationMode() string {
-    if o == nil || utils.IsNil(o.AllocationMode) {
-        var ret string
-        return ret
-    }
-    return *o.AllocationMode
+	if o == nil || utils.IsNil(o.AllocationMode) {
+		var ret string
+		return ret
+	}
+	return *o.AllocationMode
 }
 
 // GetAllocationModeOk returns a tuple with the AllocationMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) GetAllocationModeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.AllocationMode) {
-        return nil, false
-    }
-    return o.AllocationMode, true
+	if o == nil || utils.IsNil(o.AllocationMode) {
+		return nil, false
+	}
+	return o.AllocationMode, true
 }
 
 // HasAllocationMode returns a boolean if a field has been set.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) HasAllocationMode() bool {
-    if o != nil && !utils.IsNil(o.AllocationMode) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AllocationMode) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAllocationMode gets a reference to the given string and assigns it to the AllocationMode field.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) SetAllocationMode(v string) {
-    o.AllocationMode = &v
+	o.AllocationMode = &v
 }
 
 // GetAssociatedWarehouses returns the AssociatedWarehouses field value if set, zero value otherwise.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) GetAssociatedWarehouses() []Product202507GetGlobalListingRulesResponseDataInventoryRulesAssociatedWarehouses {
-    if o == nil || utils.IsNil(o.AssociatedWarehouses) {
-        var ret []Product202507GetGlobalListingRulesResponseDataInventoryRulesAssociatedWarehouses
-        return ret
-    }
-    return o.AssociatedWarehouses
+	if o == nil || utils.IsNil(o.AssociatedWarehouses) {
+		var ret []Product202507GetGlobalListingRulesResponseDataInventoryRulesAssociatedWarehouses
+		return ret
+	}
+	return o.AssociatedWarehouses
 }
 
 // GetAssociatedWarehousesOk returns a tuple with the AssociatedWarehouses field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) GetAssociatedWarehousesOk() ([]Product202507GetGlobalListingRulesResponseDataInventoryRulesAssociatedWarehouses, bool) {
-    if o == nil || utils.IsNil(o.AssociatedWarehouses) {
-        return nil, false
-    }
-    return o.AssociatedWarehouses, true
+	if o == nil || utils.IsNil(o.AssociatedWarehouses) {
+		return nil, false
+	}
+	return o.AssociatedWarehouses, true
 }
 
 // HasAssociatedWarehouses returns a boolean if a field has been set.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) HasAssociatedWarehouses() bool {
-    if o != nil && !utils.IsNil(o.AssociatedWarehouses) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AssociatedWarehouses) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAssociatedWarehouses gets a reference to the given []Product202507GetGlobalListingRulesResponseDataInventoryRulesAssociatedWarehouses and assigns it to the AssociatedWarehouses field.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) SetAssociatedWarehouses(v []Product202507GetGlobalListingRulesResponseDataInventoryRulesAssociatedWarehouses) {
-    o.AssociatedWarehouses = v
+	o.AssociatedWarehouses = v
 }
 
 // GetLocalWarehouseId returns the LocalWarehouseId field value if set, zero value otherwise.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) GetLocalWarehouseId() string {
-    if o == nil || utils.IsNil(o.LocalWarehouseId) {
-        var ret string
-        return ret
-    }
-    return *o.LocalWarehouseId
+	if o == nil || utils.IsNil(o.LocalWarehouseId) {
+		var ret string
+		return ret
+	}
+	return *o.LocalWarehouseId
 }
 
 // GetLocalWarehouseIdOk returns a tuple with the LocalWarehouseId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) GetLocalWarehouseIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.LocalWarehouseId) {
-        return nil, false
-    }
-    return o.LocalWarehouseId, true
+	if o == nil || utils.IsNil(o.LocalWarehouseId) {
+		return nil, false
+	}
+	return o.LocalWarehouseId, true
 }
 
 // HasLocalWarehouseId returns a boolean if a field has been set.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) HasLocalWarehouseId() bool {
-    if o != nil && !utils.IsNil(o.LocalWarehouseId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LocalWarehouseId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocalWarehouseId gets a reference to the given string and assigns it to the LocalWarehouseId field.
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) SetLocalWarehouseId(v string) {
-    o.LocalWarehouseId = &v
+	o.LocalWarehouseId = &v
 }
 
 func (o Product202507GetGlobalListingRulesResponseDataInventoryRules) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202507GetGlobalListingRulesResponseDataInventoryRules) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.AllocationMode) {
-        toSerialize["allocation_mode"] = o.AllocationMode
-    }
-    if !utils.IsNil(o.AssociatedWarehouses) {
-        toSerialize["associated_warehouses"] = o.AssociatedWarehouses
-    }
-    if !utils.IsNil(o.LocalWarehouseId) {
-        toSerialize["local_warehouse_id"] = o.LocalWarehouseId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.AllocationMode) {
+		toSerialize["allocation_mode"] = o.AllocationMode
+	}
+	if !utils.IsNil(o.AssociatedWarehouses) {
+		toSerialize["associated_warehouses"] = o.AssociatedWarehouses
+	}
+	if !utils.IsNil(o.LocalWarehouseId) {
+		toSerialize["local_warehouse_id"] = o.LocalWarehouseId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202507GetGlobalListingRulesResponseDataInventoryRules) UnmarshalJSON(data []byte) (err error) {
-    varProduct202507GetGlobalListingRulesResponseDataInventoryRules := _Product202507GetGlobalListingRulesResponseDataInventoryRules{}
+	varProduct202507GetGlobalListingRulesResponseDataInventoryRules := _Product202507GetGlobalListingRulesResponseDataInventoryRules{}
 
-    err = json.Unmarshal(data, &varProduct202507GetGlobalListingRulesResponseDataInventoryRules)
+	err = json.Unmarshal(data, &varProduct202507GetGlobalListingRulesResponseDataInventoryRules)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202507GetGlobalListingRulesResponseDataInventoryRules(varProduct202507GetGlobalListingRulesResponseDataInventoryRules)
+	*o = Product202507GetGlobalListingRulesResponseDataInventoryRules(varProduct202507GetGlobalListingRulesResponseDataInventoryRules)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "allocation_mode")
-        delete(additionalProperties, "associated_warehouses")
-        delete(additionalProperties, "local_warehouse_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "allocation_mode")
+		delete(additionalProperties, "associated_warehouses")
+		delete(additionalProperties, "local_warehouse_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202507GetGlobalListingRulesResponseDataInventoryRules struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202507GetGlobalListingRulesResponseDataInventoryRules) U
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

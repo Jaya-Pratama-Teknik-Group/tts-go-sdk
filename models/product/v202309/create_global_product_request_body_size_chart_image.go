@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CreateGlobalProductRequestBodySizeChartImage type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CreateGlobalProductRequestBodySizeChartImage type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CreateGlobalProductRequestBodySizeChartImage{}
 
 // Product202309CreateGlobalProductRequestBodySizeChartImage struct for Product202309CreateGlobalProductRequestBodySizeChartImage
 type Product202309CreateGlobalProductRequestBodySizeChartImage struct {
-    // The URI of the size chart image. Obtain this URI by uploading the images through the [Upload Product Image API](6509df95defece02be598a22)  with `use_case=SIZE_CHART_IMAGE`. 
-    Uri *string `json:"uri,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The URI of the size chart image. Obtain this URI by uploading the images through the [Upload Product Image API](6509df95defece02be598a22)  with `use_case=SIZE_CHART_IMAGE`.
+	Uri                  *string `json:"uri,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CreateGlobalProductRequestBodySizeChartImage Product202309CreateGlobalProductRequestBodySizeChartImage
@@ -32,89 +32,89 @@ type _Product202309CreateGlobalProductRequestBodySizeChartImage Product202309Cre
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CreateGlobalProductRequestBodySizeChartImage() *Product202309CreateGlobalProductRequestBodySizeChartImage {
-    this := Product202309CreateGlobalProductRequestBodySizeChartImage{}
-    return &this
+	this := Product202309CreateGlobalProductRequestBodySizeChartImage{}
+	return &this
 }
 
 // NewProduct202309CreateGlobalProductRequestBodySizeChartImageWithDefaults instantiates a new Product202309CreateGlobalProductRequestBodySizeChartImage object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CreateGlobalProductRequestBodySizeChartImageWithDefaults() *Product202309CreateGlobalProductRequestBodySizeChartImage {
-    this := Product202309CreateGlobalProductRequestBodySizeChartImage{}
-    return &this
+	this := Product202309CreateGlobalProductRequestBodySizeChartImage{}
+	return &this
 }
 
 // GetUri returns the Uri field value if set, zero value otherwise.
 func (o *Product202309CreateGlobalProductRequestBodySizeChartImage) GetUri() string {
-    if o == nil || utils.IsNil(o.Uri) {
-        var ret string
-        return ret
-    }
-    return *o.Uri
+	if o == nil || utils.IsNil(o.Uri) {
+		var ret string
+		return ret
+	}
+	return *o.Uri
 }
 
 // GetUriOk returns a tuple with the Uri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CreateGlobalProductRequestBodySizeChartImage) GetUriOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Uri) {
-        return nil, false
-    }
-    return o.Uri, true
+	if o == nil || utils.IsNil(o.Uri) {
+		return nil, false
+	}
+	return o.Uri, true
 }
 
 // HasUri returns a boolean if a field has been set.
 func (o *Product202309CreateGlobalProductRequestBodySizeChartImage) HasUri() bool {
-    if o != nil && !utils.IsNil(o.Uri) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Uri) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUri gets a reference to the given string and assigns it to the Uri field.
 func (o *Product202309CreateGlobalProductRequestBodySizeChartImage) SetUri(v string) {
-    o.Uri = &v
+	o.Uri = &v
 }
 
 func (o Product202309CreateGlobalProductRequestBodySizeChartImage) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CreateGlobalProductRequestBodySizeChartImage) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Uri) {
-        toSerialize["uri"] = o.Uri
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Uri) {
+		toSerialize["uri"] = o.Uri
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CreateGlobalProductRequestBodySizeChartImage) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CreateGlobalProductRequestBodySizeChartImage := _Product202309CreateGlobalProductRequestBodySizeChartImage{}
+	varProduct202309CreateGlobalProductRequestBodySizeChartImage := _Product202309CreateGlobalProductRequestBodySizeChartImage{}
 
-    err = json.Unmarshal(data, &varProduct202309CreateGlobalProductRequestBodySizeChartImage)
+	err = json.Unmarshal(data, &varProduct202309CreateGlobalProductRequestBodySizeChartImage)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CreateGlobalProductRequestBodySizeChartImage(varProduct202309CreateGlobalProductRequestBodySizeChartImage)
+	*o = Product202309CreateGlobalProductRequestBodySizeChartImage(varProduct202309CreateGlobalProductRequestBodySizeChartImage)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "uri")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "uri")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CreateGlobalProductRequestBodySizeChartImage struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309CreateGlobalProductRequestBodySizeChartImage) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

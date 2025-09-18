@@ -11,24 +11,24 @@ API version: 1.0.0
 package customer_service_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the CustomerService202309GetConversationMessagesResponseDataMessagesSender type satisfies the MappedNullable interface at compile time
+// checks if the CustomerService202309GetConversationMessagesResponseDataMessagesSender type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &CustomerService202309GetConversationMessagesResponseDataMessagesSender{}
 
 // CustomerService202309GetConversationMessagesResponseDataMessagesSender struct for CustomerService202309GetConversationMessagesResponseDataMessagesSender
 type CustomerService202309GetConversationMessagesResponseDataMessagesSender struct {
-    // Sender's avatar URL. 
-    Avatar *string `json:"avatar,omitempty"`
-    // Sender's ID. These are IM IDs, and can not be used to query orders.
-    ImUserId *string `json:"im_user_id,omitempty"`
-    // Sender's nickname. - For shops, the nickname is the shop's name.  - For customer service, the nickname is the customer service's name.  - For buyers, the nickname is the buyer's nickname on TikTok.  You can set the nicknames for shops and customer service agents on Seller Center.  
-    Nickname *string `json:"nickname,omitempty"`
-    // Sender's role. Possible enumerations: - `BUYER` - `SHOP` - `CUSTOMER_SERVICE` - `SYSTEM` - `ROBOT` For `SYSTEM` and `ROBOT` role, the value of `im_user_id`, `nickname`, and `avatar` are the same as those of the `SHOP` role.
-    Role *string `json:"role,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Sender's avatar URL.
+	Avatar *string `json:"avatar,omitempty"`
+	// Sender's ID. These are IM IDs, and can not be used to query orders.
+	ImUserId *string `json:"im_user_id,omitempty"`
+	// Sender's nickname. - For shops, the nickname is the shop's name.  - For customer service, the nickname is the customer service's name.  - For buyers, the nickname is the buyer's nickname on TikTok.  You can set the nicknames for shops and customer service agents on Seller Center.
+	Nickname *string `json:"nickname,omitempty"`
+	// Sender's role. Possible enumerations: - `BUYER` - `SHOP` - `CUSTOMER_SERVICE` - `SYSTEM` - `ROBOT` For `SYSTEM` and `ROBOT` role, the value of `im_user_id`, `nickname`, and `avatar` are the same as those of the `SHOP` role.
+	Role                 *string `json:"role,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _CustomerService202309GetConversationMessagesResponseDataMessagesSender CustomerService202309GetConversationMessagesResponseDataMessagesSender
@@ -38,197 +38,197 @@ type _CustomerService202309GetConversationMessagesResponseDataMessagesSender Cus
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewCustomerService202309GetConversationMessagesResponseDataMessagesSender() *CustomerService202309GetConversationMessagesResponseDataMessagesSender {
-    this := CustomerService202309GetConversationMessagesResponseDataMessagesSender{}
-    return &this
+	this := CustomerService202309GetConversationMessagesResponseDataMessagesSender{}
+	return &this
 }
 
 // NewCustomerService202309GetConversationMessagesResponseDataMessagesSenderWithDefaults instantiates a new CustomerService202309GetConversationMessagesResponseDataMessagesSender object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewCustomerService202309GetConversationMessagesResponseDataMessagesSenderWithDefaults() *CustomerService202309GetConversationMessagesResponseDataMessagesSender {
-    this := CustomerService202309GetConversationMessagesResponseDataMessagesSender{}
-    return &this
+	this := CustomerService202309GetConversationMessagesResponseDataMessagesSender{}
+	return &this
 }
 
 // GetAvatar returns the Avatar field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) GetAvatar() string {
-    if o == nil || utils.IsNil(o.Avatar) {
-        var ret string
-        return ret
-    }
-    return *o.Avatar
+	if o == nil || utils.IsNil(o.Avatar) {
+		var ret string
+		return ret
+	}
+	return *o.Avatar
 }
 
 // GetAvatarOk returns a tuple with the Avatar field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) GetAvatarOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Avatar) {
-        return nil, false
-    }
-    return o.Avatar, true
+	if o == nil || utils.IsNil(o.Avatar) {
+		return nil, false
+	}
+	return o.Avatar, true
 }
 
 // HasAvatar returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) HasAvatar() bool {
-    if o != nil && !utils.IsNil(o.Avatar) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Avatar) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAvatar gets a reference to the given string and assigns it to the Avatar field.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) SetAvatar(v string) {
-    o.Avatar = &v
+	o.Avatar = &v
 }
 
 // GetImUserId returns the ImUserId field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) GetImUserId() string {
-    if o == nil || utils.IsNil(o.ImUserId) {
-        var ret string
-        return ret
-    }
-    return *o.ImUserId
+	if o == nil || utils.IsNil(o.ImUserId) {
+		var ret string
+		return ret
+	}
+	return *o.ImUserId
 }
 
 // GetImUserIdOk returns a tuple with the ImUserId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) GetImUserIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ImUserId) {
-        return nil, false
-    }
-    return o.ImUserId, true
+	if o == nil || utils.IsNil(o.ImUserId) {
+		return nil, false
+	}
+	return o.ImUserId, true
 }
 
 // HasImUserId returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) HasImUserId() bool {
-    if o != nil && !utils.IsNil(o.ImUserId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ImUserId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImUserId gets a reference to the given string and assigns it to the ImUserId field.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) SetImUserId(v string) {
-    o.ImUserId = &v
+	o.ImUserId = &v
 }
 
 // GetNickname returns the Nickname field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) GetNickname() string {
-    if o == nil || utils.IsNil(o.Nickname) {
-        var ret string
-        return ret
-    }
-    return *o.Nickname
+	if o == nil || utils.IsNil(o.Nickname) {
+		var ret string
+		return ret
+	}
+	return *o.Nickname
 }
 
 // GetNicknameOk returns a tuple with the Nickname field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) GetNicknameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Nickname) {
-        return nil, false
-    }
-    return o.Nickname, true
+	if o == nil || utils.IsNil(o.Nickname) {
+		return nil, false
+	}
+	return o.Nickname, true
 }
 
 // HasNickname returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) HasNickname() bool {
-    if o != nil && !utils.IsNil(o.Nickname) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Nickname) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNickname gets a reference to the given string and assigns it to the Nickname field.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) SetNickname(v string) {
-    o.Nickname = &v
+	o.Nickname = &v
 }
 
 // GetRole returns the Role field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) GetRole() string {
-    if o == nil || utils.IsNil(o.Role) {
-        var ret string
-        return ret
-    }
-    return *o.Role
+	if o == nil || utils.IsNil(o.Role) {
+		var ret string
+		return ret
+	}
+	return *o.Role
 }
 
 // GetRoleOk returns a tuple with the Role field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) GetRoleOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Role) {
-        return nil, false
-    }
-    return o.Role, true
+	if o == nil || utils.IsNil(o.Role) {
+		return nil, false
+	}
+	return o.Role, true
 }
 
 // HasRole returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) HasRole() bool {
-    if o != nil && !utils.IsNil(o.Role) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Role) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRole gets a reference to the given string and assigns it to the Role field.
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) SetRole(v string) {
-    o.Role = &v
+	o.Role = &v
 }
 
 func (o CustomerService202309GetConversationMessagesResponseDataMessagesSender) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o CustomerService202309GetConversationMessagesResponseDataMessagesSender) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Avatar) {
-        toSerialize["avatar"] = o.Avatar
-    }
-    if !utils.IsNil(o.ImUserId) {
-        toSerialize["im_user_id"] = o.ImUserId
-    }
-    if !utils.IsNil(o.Nickname) {
-        toSerialize["nickname"] = o.Nickname
-    }
-    if !utils.IsNil(o.Role) {
-        toSerialize["role"] = o.Role
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Avatar) {
+		toSerialize["avatar"] = o.Avatar
+	}
+	if !utils.IsNil(o.ImUserId) {
+		toSerialize["im_user_id"] = o.ImUserId
+	}
+	if !utils.IsNil(o.Nickname) {
+		toSerialize["nickname"] = o.Nickname
+	}
+	if !utils.IsNil(o.Role) {
+		toSerialize["role"] = o.Role
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *CustomerService202309GetConversationMessagesResponseDataMessagesSender) UnmarshalJSON(data []byte) (err error) {
-    varCustomerService202309GetConversationMessagesResponseDataMessagesSender := _CustomerService202309GetConversationMessagesResponseDataMessagesSender{}
+	varCustomerService202309GetConversationMessagesResponseDataMessagesSender := _CustomerService202309GetConversationMessagesResponseDataMessagesSender{}
 
-    err = json.Unmarshal(data, &varCustomerService202309GetConversationMessagesResponseDataMessagesSender)
+	err = json.Unmarshal(data, &varCustomerService202309GetConversationMessagesResponseDataMessagesSender)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = CustomerService202309GetConversationMessagesResponseDataMessagesSender(varCustomerService202309GetConversationMessagesResponseDataMessagesSender)
+	*o = CustomerService202309GetConversationMessagesResponseDataMessagesSender(varCustomerService202309GetConversationMessagesResponseDataMessagesSender)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "avatar")
-        delete(additionalProperties, "im_user_id")
-        delete(additionalProperties, "nickname")
-        delete(additionalProperties, "role")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "avatar")
+		delete(additionalProperties, "im_user_id")
+		delete(additionalProperties, "nickname")
+		delete(additionalProperties, "role")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableCustomerService202309GetConversationMessagesResponseDataMessagesSender struct {
@@ -266,5 +266,3 @@ func (v *NullableCustomerService202309GetConversationMessagesResponseDataMessage
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

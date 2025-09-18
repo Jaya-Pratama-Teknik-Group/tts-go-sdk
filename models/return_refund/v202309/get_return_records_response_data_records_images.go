@@ -11,22 +11,22 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309GetReturnRecordsResponseDataRecordsImages type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309GetReturnRecordsResponseDataRecordsImages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309GetReturnRecordsResponseDataRecordsImages{}
 
 // ReturnRefund202309GetReturnRecordsResponseDataRecordsImages struct for ReturnRefund202309GetReturnRecordsResponseDataRecordsImages
 type ReturnRefund202309GetReturnRecordsResponseDataRecordsImages struct {
-    // The height of image. Unit: px
-    Height *int32 `json:"height,omitempty"`
-    // URL of the image.
-    Url *string `json:"url,omitempty"`
-    // The width of image.  Unit: px
-    Width *int32 `json:"width,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The height of image. Unit: px
+	Height *int32 `json:"height,omitempty"`
+	// URL of the image.
+	Url *string `json:"url,omitempty"`
+	// The width of image.  Unit: px
+	Width                *int32 `json:"width,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309GetReturnRecordsResponseDataRecordsImages ReturnRefund202309GetReturnRecordsResponseDataRecordsImages
@@ -36,161 +36,161 @@ type _ReturnRefund202309GetReturnRecordsResponseDataRecordsImages ReturnRefund20
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309GetReturnRecordsResponseDataRecordsImages() *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages {
-    this := ReturnRefund202309GetReturnRecordsResponseDataRecordsImages{}
-    return &this
+	this := ReturnRefund202309GetReturnRecordsResponseDataRecordsImages{}
+	return &this
 }
 
 // NewReturnRefund202309GetReturnRecordsResponseDataRecordsImagesWithDefaults instantiates a new ReturnRefund202309GetReturnRecordsResponseDataRecordsImages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309GetReturnRecordsResponseDataRecordsImagesWithDefaults() *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages {
-    this := ReturnRefund202309GetReturnRecordsResponseDataRecordsImages{}
-    return &this
+	this := ReturnRefund202309GetReturnRecordsResponseDataRecordsImages{}
+	return &this
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) GetHeight() int32 {
-    if o == nil || utils.IsNil(o.Height) {
-        var ret int32
-        return ret
-    }
-    return *o.Height
+	if o == nil || utils.IsNil(o.Height) {
+		var ret int32
+		return ret
+	}
+	return *o.Height
 }
 
 // GetHeightOk returns a tuple with the Height field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) GetHeightOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Height) {
-        return nil, false
-    }
-    return o.Height, true
+	if o == nil || utils.IsNil(o.Height) {
+		return nil, false
+	}
+	return o.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) HasHeight() bool {
-    if o != nil && !utils.IsNil(o.Height) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Height) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHeight gets a reference to the given int32 and assigns it to the Height field.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) SetHeight(v int32) {
-    o.Height = &v
+	o.Height = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) GetUrl() string {
-    if o == nil || utils.IsNil(o.Url) {
-        var ret string
-        return ret
-    }
-    return *o.Url
+	if o == nil || utils.IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
 }
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) GetUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Url) {
-        return nil, false
-    }
-    return o.Url, true
+	if o == nil || utils.IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
 }
 
 // HasUrl returns a boolean if a field has been set.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) HasUrl() bool {
-    if o != nil && !utils.IsNil(o.Url) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Url) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) SetUrl(v string) {
-    o.Url = &v
+	o.Url = &v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) GetWidth() int32 {
-    if o == nil || utils.IsNil(o.Width) {
-        var ret int32
-        return ret
-    }
-    return *o.Width
+	if o == nil || utils.IsNil(o.Width) {
+		var ret int32
+		return ret
+	}
+	return *o.Width
 }
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) GetWidthOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Width) {
-        return nil, false
-    }
-    return o.Width, true
+	if o == nil || utils.IsNil(o.Width) {
+		return nil, false
+	}
+	return o.Width, true
 }
 
 // HasWidth returns a boolean if a field has been set.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) HasWidth() bool {
-    if o != nil && !utils.IsNil(o.Width) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Width) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWidth gets a reference to the given int32 and assigns it to the Width field.
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) SetWidth(v int32) {
-    o.Width = &v
+	o.Width = &v
 }
 
 func (o ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Height) {
-        toSerialize["height"] = o.Height
-    }
-    if !utils.IsNil(o.Url) {
-        toSerialize["url"] = o.Url
-    }
-    if !utils.IsNil(o.Width) {
-        toSerialize["width"] = o.Width
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Height) {
+		toSerialize["height"] = o.Height
+	}
+	if !utils.IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
+	if !utils.IsNil(o.Width) {
+		toSerialize["width"] = o.Width
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309GetReturnRecordsResponseDataRecordsImages) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309GetReturnRecordsResponseDataRecordsImages := _ReturnRefund202309GetReturnRecordsResponseDataRecordsImages{}
+	varReturnRefund202309GetReturnRecordsResponseDataRecordsImages := _ReturnRefund202309GetReturnRecordsResponseDataRecordsImages{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309GetReturnRecordsResponseDataRecordsImages)
+	err = json.Unmarshal(data, &varReturnRefund202309GetReturnRecordsResponseDataRecordsImages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309GetReturnRecordsResponseDataRecordsImages(varReturnRefund202309GetReturnRecordsResponseDataRecordsImages)
+	*o = ReturnRefund202309GetReturnRecordsResponseDataRecordsImages(varReturnRefund202309GetReturnRecordsResponseDataRecordsImages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "height")
-        delete(additionalProperties, "url")
-        delete(additionalProperties, "width")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "height")
+		delete(additionalProperties, "url")
+		delete(additionalProperties, "width")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309GetReturnRecordsResponseDataRecordsImages struct {
@@ -228,5 +228,3 @@ func (v *NullableReturnRefund202309GetReturnRecordsResponseDataRecordsImages) Un
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_LogisticsV202309APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_LogisticsV202309APIService(t *testing.T) {
 
 	t.Run("Test LogisticsV202309APIService Logistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var deliveryOptionId string
 
@@ -38,7 +38,7 @@ func Test_sdk_golang_LogisticsV202309APIService(t *testing.T) {
 
 	t.Run("Test LogisticsV202309APIService Logistics202309GlobalWarehousesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LogisticsV202309API.Logistics202309GlobalWarehousesGet(context.Background()).Execute()
 
@@ -50,7 +50,7 @@ func Test_sdk_golang_LogisticsV202309APIService(t *testing.T) {
 
 	t.Run("Test LogisticsV202309APIService Logistics202309WarehousesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LogisticsV202309API.Logistics202309WarehousesGet(context.Background()).Execute()
 
@@ -62,7 +62,7 @@ func Test_sdk_golang_LogisticsV202309APIService(t *testing.T) {
 
 	t.Run("Test LogisticsV202309APIService Logistics202309WarehousesWarehouseIdDeliveryOptionsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var warehouseId string
 

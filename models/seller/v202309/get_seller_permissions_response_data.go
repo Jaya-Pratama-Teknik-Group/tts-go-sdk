@@ -11,18 +11,18 @@ API version: 1.0.0
 package seller_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Seller202309GetSellerPermissionsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Seller202309GetSellerPermissionsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Seller202309GetSellerPermissionsResponseData{}
 
 // Seller202309GetSellerPermissionsResponseData struct for Seller202309GetSellerPermissionsResponseData
 type Seller202309GetSellerPermissionsResponseData struct {
-    // The list of cross-border operations that the seller is permitted to perform.  Possible values: - MANAGE_GLOBAL_PRODUCT: Indicates the seller is permitted to manage global products listed in TikTok Shops across multiple countries. If this is empty, it means the seller does not have permission to conduct cross-border operations.
-    Permissions []string `json:"permissions,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of cross-border operations that the seller is permitted to perform.  Possible values: - MANAGE_GLOBAL_PRODUCT: Indicates the seller is permitted to manage global products listed in TikTok Shops across multiple countries. If this is empty, it means the seller does not have permission to conduct cross-border operations.
+	Permissions          []string `json:"permissions,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Seller202309GetSellerPermissionsResponseData Seller202309GetSellerPermissionsResponseData
@@ -32,89 +32,89 @@ type _Seller202309GetSellerPermissionsResponseData Seller202309GetSellerPermissi
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewSeller202309GetSellerPermissionsResponseData() *Seller202309GetSellerPermissionsResponseData {
-    this := Seller202309GetSellerPermissionsResponseData{}
-    return &this
+	this := Seller202309GetSellerPermissionsResponseData{}
+	return &this
 }
 
 // NewSeller202309GetSellerPermissionsResponseDataWithDefaults instantiates a new Seller202309GetSellerPermissionsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewSeller202309GetSellerPermissionsResponseDataWithDefaults() *Seller202309GetSellerPermissionsResponseData {
-    this := Seller202309GetSellerPermissionsResponseData{}
-    return &this
+	this := Seller202309GetSellerPermissionsResponseData{}
+	return &this
 }
 
 // GetPermissions returns the Permissions field value if set, zero value otherwise.
 func (o *Seller202309GetSellerPermissionsResponseData) GetPermissions() []string {
-    if o == nil || utils.IsNil(o.Permissions) {
-        var ret []string
-        return ret
-    }
-    return o.Permissions
+	if o == nil || utils.IsNil(o.Permissions) {
+		var ret []string
+		return ret
+	}
+	return o.Permissions
 }
 
 // GetPermissionsOk returns a tuple with the Permissions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Seller202309GetSellerPermissionsResponseData) GetPermissionsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.Permissions) {
-        return nil, false
-    }
-    return o.Permissions, true
+	if o == nil || utils.IsNil(o.Permissions) {
+		return nil, false
+	}
+	return o.Permissions, true
 }
 
 // HasPermissions returns a boolean if a field has been set.
 func (o *Seller202309GetSellerPermissionsResponseData) HasPermissions() bool {
-    if o != nil && !utils.IsNil(o.Permissions) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Permissions) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPermissions gets a reference to the given []string and assigns it to the Permissions field.
 func (o *Seller202309GetSellerPermissionsResponseData) SetPermissions(v []string) {
-    o.Permissions = v
+	o.Permissions = v
 }
 
 func (o Seller202309GetSellerPermissionsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Seller202309GetSellerPermissionsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Permissions) {
-        toSerialize["permissions"] = o.Permissions
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Permissions) {
+		toSerialize["permissions"] = o.Permissions
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Seller202309GetSellerPermissionsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varSeller202309GetSellerPermissionsResponseData := _Seller202309GetSellerPermissionsResponseData{}
+	varSeller202309GetSellerPermissionsResponseData := _Seller202309GetSellerPermissionsResponseData{}
 
-    err = json.Unmarshal(data, &varSeller202309GetSellerPermissionsResponseData)
+	err = json.Unmarshal(data, &varSeller202309GetSellerPermissionsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Seller202309GetSellerPermissionsResponseData(varSeller202309GetSellerPermissionsResponseData)
+	*o = Seller202309GetSellerPermissionsResponseData(varSeller202309GetSellerPermissionsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "permissions")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "permissions")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableSeller202309GetSellerPermissionsResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableSeller202309GetSellerPermissionsResponseData) UnmarshalJSON(src
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

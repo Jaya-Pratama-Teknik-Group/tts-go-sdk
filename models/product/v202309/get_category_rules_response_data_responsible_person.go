@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetCategoryRulesResponseDataResponsiblePerson type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetCategoryRulesResponseDataResponsiblePerson type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetCategoryRulesResponseDataResponsiblePerson{}
 
 // Product202309GetCategoryRulesResponseDataResponsiblePerson struct for Product202309GetCategoryRulesResponseDataResponsiblePerson
 type Product202309GetCategoryRulesResponseDataResponsiblePerson struct {
-    // A flag to indicate whether the responsible person information is required.
-    IsRequired *bool `json:"is_required,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A flag to indicate whether the responsible person information is required.
+	IsRequired           *bool `json:"is_required,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetCategoryRulesResponseDataResponsiblePerson Product202309GetCategoryRulesResponseDataResponsiblePerson
@@ -32,89 +32,89 @@ type _Product202309GetCategoryRulesResponseDataResponsiblePerson Product202309Ge
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetCategoryRulesResponseDataResponsiblePerson() *Product202309GetCategoryRulesResponseDataResponsiblePerson {
-    this := Product202309GetCategoryRulesResponseDataResponsiblePerson{}
-    return &this
+	this := Product202309GetCategoryRulesResponseDataResponsiblePerson{}
+	return &this
 }
 
 // NewProduct202309GetCategoryRulesResponseDataResponsiblePersonWithDefaults instantiates a new Product202309GetCategoryRulesResponseDataResponsiblePerson object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetCategoryRulesResponseDataResponsiblePersonWithDefaults() *Product202309GetCategoryRulesResponseDataResponsiblePerson {
-    this := Product202309GetCategoryRulesResponseDataResponsiblePerson{}
-    return &this
+	this := Product202309GetCategoryRulesResponseDataResponsiblePerson{}
+	return &this
 }
 
 // GetIsRequired returns the IsRequired field value if set, zero value otherwise.
 func (o *Product202309GetCategoryRulesResponseDataResponsiblePerson) GetIsRequired() bool {
-    if o == nil || utils.IsNil(o.IsRequired) {
-        var ret bool
-        return ret
-    }
-    return *o.IsRequired
+	if o == nil || utils.IsNil(o.IsRequired) {
+		var ret bool
+		return ret
+	}
+	return *o.IsRequired
 }
 
 // GetIsRequiredOk returns a tuple with the IsRequired field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetCategoryRulesResponseDataResponsiblePerson) GetIsRequiredOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.IsRequired) {
-        return nil, false
-    }
-    return o.IsRequired, true
+	if o == nil || utils.IsNil(o.IsRequired) {
+		return nil, false
+	}
+	return o.IsRequired, true
 }
 
 // HasIsRequired returns a boolean if a field has been set.
 func (o *Product202309GetCategoryRulesResponseDataResponsiblePerson) HasIsRequired() bool {
-    if o != nil && !utils.IsNil(o.IsRequired) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.IsRequired) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIsRequired gets a reference to the given bool and assigns it to the IsRequired field.
 func (o *Product202309GetCategoryRulesResponseDataResponsiblePerson) SetIsRequired(v bool) {
-    o.IsRequired = &v
+	o.IsRequired = &v
 }
 
 func (o Product202309GetCategoryRulesResponseDataResponsiblePerson) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetCategoryRulesResponseDataResponsiblePerson) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.IsRequired) {
-        toSerialize["is_required"] = o.IsRequired
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.IsRequired) {
+		toSerialize["is_required"] = o.IsRequired
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetCategoryRulesResponseDataResponsiblePerson) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetCategoryRulesResponseDataResponsiblePerson := _Product202309GetCategoryRulesResponseDataResponsiblePerson{}
+	varProduct202309GetCategoryRulesResponseDataResponsiblePerson := _Product202309GetCategoryRulesResponseDataResponsiblePerson{}
 
-    err = json.Unmarshal(data, &varProduct202309GetCategoryRulesResponseDataResponsiblePerson)
+	err = json.Unmarshal(data, &varProduct202309GetCategoryRulesResponseDataResponsiblePerson)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetCategoryRulesResponseDataResponsiblePerson(varProduct202309GetCategoryRulesResponseDataResponsiblePerson)
+	*o = Product202309GetCategoryRulesResponseDataResponsiblePerson(varProduct202309GetCategoryRulesResponseDataResponsiblePerson)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "is_required")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "is_required")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetCategoryRulesResponseDataResponsiblePerson struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309GetCategoryRulesResponseDataResponsiblePerson) Unm
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

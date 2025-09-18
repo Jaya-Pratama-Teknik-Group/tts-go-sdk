@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202507
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202507ReplicateProductRequestBodyReplicateTarget type satisfies the MappedNullable interface at compile time
+// checks if the Product202507ReplicateProductRequestBodyReplicateTarget type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202507ReplicateProductRequestBodyReplicateTarget{}
 
 // Product202507ReplicateProductRequestBodyReplicateTarget struct for Product202507ReplicateProductRequestBodyReplicateTarget
 type Product202507ReplicateProductRequestBodyReplicateTarget struct {
-    // The new market where you want to replicate the product.
-    Region *string `json:"region,omitempty"`
-    // The SKUs to be published in the specified market. - Max SKUs for EU, JP, UK, US: 300 - Max SKUs for other regions: 100 Note: SKUs of all source country must be included.
-    Skus []Product202507ReplicateProductRequestBodyReplicateTargetSkus `json:"skus,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The new market where you want to replicate the product.
+	Region *string `json:"region,omitempty"`
+	// The SKUs to be published in the specified market. - Max SKUs for EU, JP, UK, US: 300 - Max SKUs for other regions: 100 Note: SKUs of all source country must be included.
+	Skus                 []Product202507ReplicateProductRequestBodyReplicateTargetSkus `json:"skus,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202507ReplicateProductRequestBodyReplicateTarget Product202507ReplicateProductRequestBodyReplicateTarget
@@ -34,125 +34,125 @@ type _Product202507ReplicateProductRequestBodyReplicateTarget Product202507Repli
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202507ReplicateProductRequestBodyReplicateTarget() *Product202507ReplicateProductRequestBodyReplicateTarget {
-    this := Product202507ReplicateProductRequestBodyReplicateTarget{}
-    return &this
+	this := Product202507ReplicateProductRequestBodyReplicateTarget{}
+	return &this
 }
 
 // NewProduct202507ReplicateProductRequestBodyReplicateTargetWithDefaults instantiates a new Product202507ReplicateProductRequestBodyReplicateTarget object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202507ReplicateProductRequestBodyReplicateTargetWithDefaults() *Product202507ReplicateProductRequestBodyReplicateTarget {
-    this := Product202507ReplicateProductRequestBodyReplicateTarget{}
-    return &this
+	this := Product202507ReplicateProductRequestBodyReplicateTarget{}
+	return &this
 }
 
 // GetRegion returns the Region field value if set, zero value otherwise.
 func (o *Product202507ReplicateProductRequestBodyReplicateTarget) GetRegion() string {
-    if o == nil || utils.IsNil(o.Region) {
-        var ret string
-        return ret
-    }
-    return *o.Region
+	if o == nil || utils.IsNil(o.Region) {
+		var ret string
+		return ret
+	}
+	return *o.Region
 }
 
 // GetRegionOk returns a tuple with the Region field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTarget) GetRegionOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Region) {
-        return nil, false
-    }
-    return o.Region, true
+	if o == nil || utils.IsNil(o.Region) {
+		return nil, false
+	}
+	return o.Region, true
 }
 
 // HasRegion returns a boolean if a field has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTarget) HasRegion() bool {
-    if o != nil && !utils.IsNil(o.Region) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Region) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRegion gets a reference to the given string and assigns it to the Region field.
 func (o *Product202507ReplicateProductRequestBodyReplicateTarget) SetRegion(v string) {
-    o.Region = &v
+	o.Region = &v
 }
 
 // GetSkus returns the Skus field value if set, zero value otherwise.
 func (o *Product202507ReplicateProductRequestBodyReplicateTarget) GetSkus() []Product202507ReplicateProductRequestBodyReplicateTargetSkus {
-    if o == nil || utils.IsNil(o.Skus) {
-        var ret []Product202507ReplicateProductRequestBodyReplicateTargetSkus
-        return ret
-    }
-    return o.Skus
+	if o == nil || utils.IsNil(o.Skus) {
+		var ret []Product202507ReplicateProductRequestBodyReplicateTargetSkus
+		return ret
+	}
+	return o.Skus
 }
 
 // GetSkusOk returns a tuple with the Skus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTarget) GetSkusOk() ([]Product202507ReplicateProductRequestBodyReplicateTargetSkus, bool) {
-    if o == nil || utils.IsNil(o.Skus) {
-        return nil, false
-    }
-    return o.Skus, true
+	if o == nil || utils.IsNil(o.Skus) {
+		return nil, false
+	}
+	return o.Skus, true
 }
 
 // HasSkus returns a boolean if a field has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTarget) HasSkus() bool {
-    if o != nil && !utils.IsNil(o.Skus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Skus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkus gets a reference to the given []Product202507ReplicateProductRequestBodyReplicateTargetSkus and assigns it to the Skus field.
 func (o *Product202507ReplicateProductRequestBodyReplicateTarget) SetSkus(v []Product202507ReplicateProductRequestBodyReplicateTargetSkus) {
-    o.Skus = v
+	o.Skus = v
 }
 
 func (o Product202507ReplicateProductRequestBodyReplicateTarget) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202507ReplicateProductRequestBodyReplicateTarget) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Region) {
-        toSerialize["region"] = o.Region
-    }
-    if !utils.IsNil(o.Skus) {
-        toSerialize["skus"] = o.Skus
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Region) {
+		toSerialize["region"] = o.Region
+	}
+	if !utils.IsNil(o.Skus) {
+		toSerialize["skus"] = o.Skus
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202507ReplicateProductRequestBodyReplicateTarget) UnmarshalJSON(data []byte) (err error) {
-    varProduct202507ReplicateProductRequestBodyReplicateTarget := _Product202507ReplicateProductRequestBodyReplicateTarget{}
+	varProduct202507ReplicateProductRequestBodyReplicateTarget := _Product202507ReplicateProductRequestBodyReplicateTarget{}
 
-    err = json.Unmarshal(data, &varProduct202507ReplicateProductRequestBodyReplicateTarget)
+	err = json.Unmarshal(data, &varProduct202507ReplicateProductRequestBodyReplicateTarget)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202507ReplicateProductRequestBodyReplicateTarget(varProduct202507ReplicateProductRequestBodyReplicateTarget)
+	*o = Product202507ReplicateProductRequestBodyReplicateTarget(varProduct202507ReplicateProductRequestBodyReplicateTarget)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "region")
-        delete(additionalProperties, "skus")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "region")
+		delete(additionalProperties, "skus")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202507ReplicateProductRequestBodyReplicateTarget struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202507ReplicateProductRequestBodyReplicateTarget) Unmars
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

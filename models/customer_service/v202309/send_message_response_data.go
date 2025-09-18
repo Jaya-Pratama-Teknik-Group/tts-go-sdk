@@ -11,18 +11,18 @@ API version: 1.0.0
 package customer_service_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the CustomerService202309SendMessageResponseData type satisfies the MappedNullable interface at compile time
+// checks if the CustomerService202309SendMessageResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &CustomerService202309SendMessageResponseData{}
 
 // CustomerService202309SendMessageResponseData struct for CustomerService202309SendMessageResponseData
 type CustomerService202309SendMessageResponseData struct {
-    // Message ID
-    MessageId *string `json:"message_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Message ID
+	MessageId            *string `json:"message_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _CustomerService202309SendMessageResponseData CustomerService202309SendMessageResponseData
@@ -32,89 +32,89 @@ type _CustomerService202309SendMessageResponseData CustomerService202309SendMess
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewCustomerService202309SendMessageResponseData() *CustomerService202309SendMessageResponseData {
-    this := CustomerService202309SendMessageResponseData{}
-    return &this
+	this := CustomerService202309SendMessageResponseData{}
+	return &this
 }
 
 // NewCustomerService202309SendMessageResponseDataWithDefaults instantiates a new CustomerService202309SendMessageResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewCustomerService202309SendMessageResponseDataWithDefaults() *CustomerService202309SendMessageResponseData {
-    this := CustomerService202309SendMessageResponseData{}
-    return &this
+	this := CustomerService202309SendMessageResponseData{}
+	return &this
 }
 
 // GetMessageId returns the MessageId field value if set, zero value otherwise.
 func (o *CustomerService202309SendMessageResponseData) GetMessageId() string {
-    if o == nil || utils.IsNil(o.MessageId) {
-        var ret string
-        return ret
-    }
-    return *o.MessageId
+	if o == nil || utils.IsNil(o.MessageId) {
+		var ret string
+		return ret
+	}
+	return *o.MessageId
 }
 
 // GetMessageIdOk returns a tuple with the MessageId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309SendMessageResponseData) GetMessageIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.MessageId) {
-        return nil, false
-    }
-    return o.MessageId, true
+	if o == nil || utils.IsNil(o.MessageId) {
+		return nil, false
+	}
+	return o.MessageId, true
 }
 
 // HasMessageId returns a boolean if a field has been set.
 func (o *CustomerService202309SendMessageResponseData) HasMessageId() bool {
-    if o != nil && !utils.IsNil(o.MessageId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MessageId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMessageId gets a reference to the given string and assigns it to the MessageId field.
 func (o *CustomerService202309SendMessageResponseData) SetMessageId(v string) {
-    o.MessageId = &v
+	o.MessageId = &v
 }
 
 func (o CustomerService202309SendMessageResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o CustomerService202309SendMessageResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.MessageId) {
-        toSerialize["message_id"] = o.MessageId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.MessageId) {
+		toSerialize["message_id"] = o.MessageId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *CustomerService202309SendMessageResponseData) UnmarshalJSON(data []byte) (err error) {
-    varCustomerService202309SendMessageResponseData := _CustomerService202309SendMessageResponseData{}
+	varCustomerService202309SendMessageResponseData := _CustomerService202309SendMessageResponseData{}
 
-    err = json.Unmarshal(data, &varCustomerService202309SendMessageResponseData)
+	err = json.Unmarshal(data, &varCustomerService202309SendMessageResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = CustomerService202309SendMessageResponseData(varCustomerService202309SendMessageResponseData)
+	*o = CustomerService202309SendMessageResponseData(varCustomerService202309SendMessageResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "message_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "message_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableCustomerService202309SendMessageResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableCustomerService202309SendMessageResponseData) UnmarshalJSON(src
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

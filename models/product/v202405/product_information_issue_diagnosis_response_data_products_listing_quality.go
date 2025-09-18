@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202405
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality type satisfies the MappedNullable interface at compile time
+// checks if the Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality{}
 
 // Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality struct for Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality
 type Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality struct {
-    // The current quality tier of this product listing. The quality tier of a product listing depends on the quality of the content in its product fields such as the title, image, attributes etc.  Possible values: - POOR - FAIR - GOOD  **Note**: Available only for the US market.
-    CurrentTier *string `json:"current_tier,omitempty"`
-    // The remaining number of recommendations (see `diagnosis_results`) that must be implemented for the product to reach the highest tier.  **Note**: - To reach the highest tier, you must implement all recommendations listed in `diagnosis_results`.  - Available only for the US market.
-    RemainingRecommendations *int32 `json:"remaining_recommendations,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The current quality tier of this product listing. The quality tier of a product listing depends on the quality of the content in its product fields such as the title, image, attributes etc.  Possible values: - POOR - FAIR - GOOD  **Note**: Available only for the US market.
+	CurrentTier *string `json:"current_tier,omitempty"`
+	// The remaining number of recommendations (see `diagnosis_results`) that must be implemented for the product to reach the highest tier.  **Note**: - To reach the highest tier, you must implement all recommendations listed in `diagnosis_results`.  - Available only for the US market.
+	RemainingRecommendations *int32 `json:"remaining_recommendations,omitempty"`
+	AdditionalProperties     map[string]interface{}
 }
 
 type _Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality
@@ -34,125 +34,125 @@ type _Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQu
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality() *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality {
-    this := Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality{}
-    return &this
+	this := Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality{}
+	return &this
 }
 
 // NewProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQualityWithDefaults instantiates a new Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQualityWithDefaults() *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality {
-    this := Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality{}
-    return &this
+	this := Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality{}
+	return &this
 }
 
 // GetCurrentTier returns the CurrentTier field value if set, zero value otherwise.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) GetCurrentTier() string {
-    if o == nil || utils.IsNil(o.CurrentTier) {
-        var ret string
-        return ret
-    }
-    return *o.CurrentTier
+	if o == nil || utils.IsNil(o.CurrentTier) {
+		var ret string
+		return ret
+	}
+	return *o.CurrentTier
 }
 
 // GetCurrentTierOk returns a tuple with the CurrentTier field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) GetCurrentTierOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.CurrentTier) {
-        return nil, false
-    }
-    return o.CurrentTier, true
+	if o == nil || utils.IsNil(o.CurrentTier) {
+		return nil, false
+	}
+	return o.CurrentTier, true
 }
 
 // HasCurrentTier returns a boolean if a field has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) HasCurrentTier() bool {
-    if o != nil && !utils.IsNil(o.CurrentTier) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CurrentTier) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrentTier gets a reference to the given string and assigns it to the CurrentTier field.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) SetCurrentTier(v string) {
-    o.CurrentTier = &v
+	o.CurrentTier = &v
 }
 
 // GetRemainingRecommendations returns the RemainingRecommendations field value if set, zero value otherwise.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) GetRemainingRecommendations() int32 {
-    if o == nil || utils.IsNil(o.RemainingRecommendations) {
-        var ret int32
-        return ret
-    }
-    return *o.RemainingRecommendations
+	if o == nil || utils.IsNil(o.RemainingRecommendations) {
+		var ret int32
+		return ret
+	}
+	return *o.RemainingRecommendations
 }
 
 // GetRemainingRecommendationsOk returns a tuple with the RemainingRecommendations field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) GetRemainingRecommendationsOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.RemainingRecommendations) {
-        return nil, false
-    }
-    return o.RemainingRecommendations, true
+	if o == nil || utils.IsNil(o.RemainingRecommendations) {
+		return nil, false
+	}
+	return o.RemainingRecommendations, true
 }
 
 // HasRemainingRecommendations returns a boolean if a field has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) HasRemainingRecommendations() bool {
-    if o != nil && !utils.IsNil(o.RemainingRecommendations) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RemainingRecommendations) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRemainingRecommendations gets a reference to the given int32 and assigns it to the RemainingRecommendations field.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) SetRemainingRecommendations(v int32) {
-    o.RemainingRecommendations = &v
+	o.RemainingRecommendations = &v
 }
 
 func (o Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CurrentTier) {
-        toSerialize["current_tier"] = o.CurrentTier
-    }
-    if !utils.IsNil(o.RemainingRecommendations) {
-        toSerialize["remaining_recommendations"] = o.RemainingRecommendations
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CurrentTier) {
+		toSerialize["current_tier"] = o.CurrentTier
+	}
+	if !utils.IsNil(o.RemainingRecommendations) {
+		toSerialize["remaining_recommendations"] = o.RemainingRecommendations
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality) UnmarshalJSON(data []byte) (err error) {
-    varProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality := _Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality{}
+	varProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality := _Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality{}
 
-    err = json.Unmarshal(data, &varProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality)
+	err = json.Unmarshal(data, &varProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality(varProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality)
+	*o = Product202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality(varProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "current_tier")
-        delete(additionalProperties, "remaining_recommendations")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "current_tier")
+		delete(additionalProperties, "remaining_recommendations")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202405ProductInformationIssueDiagnosisResponseDataProductsListingQuality struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202405ProductInformationIssueDiagnosisResponseDataProduc
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

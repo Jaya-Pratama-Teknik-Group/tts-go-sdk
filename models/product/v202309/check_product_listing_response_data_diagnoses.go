@@ -11,21 +11,21 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CheckProductListingResponseDataDiagnoses type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CheckProductListingResponseDataDiagnoses type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CheckProductListingResponseDataDiagnoses{}
 
 // Product202309CheckProductListingResponseDataDiagnoses struct for Product202309CheckProductListingResponseDataDiagnoses
 type Product202309CheckProductListingResponseDataDiagnoses struct {
-    // The diagnosis results. 
-    DiagnosisResults []Product202309CheckProductListingResponseDataDiagnosesDiagnosisResults `json:"diagnosis_results,omitempty"`
-    // The product field being diagnosed.  Possible values:  - TITLE: Product title - DESCRIPTION: Product description - IMAGE: Product image displayed in the image gallery  - ATTRIBUTE: Product attribute - SIZE_CHART: Product size chart
-    Field *string `json:"field,omitempty"`
-    Suggestions *Product202309CheckProductListingResponseDataDiagnosesSuggestions `json:"suggestions,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The diagnosis results.
+	DiagnosisResults []Product202309CheckProductListingResponseDataDiagnosesDiagnosisResults `json:"diagnosis_results,omitempty"`
+	// The product field being diagnosed.  Possible values:  - TITLE: Product title - DESCRIPTION: Product description - IMAGE: Product image displayed in the image gallery  - ATTRIBUTE: Product attribute - SIZE_CHART: Product size chart
+	Field                *string                                                           `json:"field,omitempty"`
+	Suggestions          *Product202309CheckProductListingResponseDataDiagnosesSuggestions `json:"suggestions,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CheckProductListingResponseDataDiagnoses Product202309CheckProductListingResponseDataDiagnoses
@@ -35,161 +35,161 @@ type _Product202309CheckProductListingResponseDataDiagnoses Product202309CheckPr
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CheckProductListingResponseDataDiagnoses() *Product202309CheckProductListingResponseDataDiagnoses {
-    this := Product202309CheckProductListingResponseDataDiagnoses{}
-    return &this
+	this := Product202309CheckProductListingResponseDataDiagnoses{}
+	return &this
 }
 
 // NewProduct202309CheckProductListingResponseDataDiagnosesWithDefaults instantiates a new Product202309CheckProductListingResponseDataDiagnoses object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CheckProductListingResponseDataDiagnosesWithDefaults() *Product202309CheckProductListingResponseDataDiagnoses {
-    this := Product202309CheckProductListingResponseDataDiagnoses{}
-    return &this
+	this := Product202309CheckProductListingResponseDataDiagnoses{}
+	return &this
 }
 
 // GetDiagnosisResults returns the DiagnosisResults field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) GetDiagnosisResults() []Product202309CheckProductListingResponseDataDiagnosesDiagnosisResults {
-    if o == nil || utils.IsNil(o.DiagnosisResults) {
-        var ret []Product202309CheckProductListingResponseDataDiagnosesDiagnosisResults
-        return ret
-    }
-    return o.DiagnosisResults
+	if o == nil || utils.IsNil(o.DiagnosisResults) {
+		var ret []Product202309CheckProductListingResponseDataDiagnosesDiagnosisResults
+		return ret
+	}
+	return o.DiagnosisResults
 }
 
 // GetDiagnosisResultsOk returns a tuple with the DiagnosisResults field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) GetDiagnosisResultsOk() ([]Product202309CheckProductListingResponseDataDiagnosesDiagnosisResults, bool) {
-    if o == nil || utils.IsNil(o.DiagnosisResults) {
-        return nil, false
-    }
-    return o.DiagnosisResults, true
+	if o == nil || utils.IsNil(o.DiagnosisResults) {
+		return nil, false
+	}
+	return o.DiagnosisResults, true
 }
 
 // HasDiagnosisResults returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) HasDiagnosisResults() bool {
-    if o != nil && !utils.IsNil(o.DiagnosisResults) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DiagnosisResults) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDiagnosisResults gets a reference to the given []Product202309CheckProductListingResponseDataDiagnosesDiagnosisResults and assigns it to the DiagnosisResults field.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) SetDiagnosisResults(v []Product202309CheckProductListingResponseDataDiagnosesDiagnosisResults) {
-    o.DiagnosisResults = v
+	o.DiagnosisResults = v
 }
 
 // GetField returns the Field field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) GetField() string {
-    if o == nil || utils.IsNil(o.Field) {
-        var ret string
-        return ret
-    }
-    return *o.Field
+	if o == nil || utils.IsNil(o.Field) {
+		var ret string
+		return ret
+	}
+	return *o.Field
 }
 
 // GetFieldOk returns a tuple with the Field field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) GetFieldOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Field) {
-        return nil, false
-    }
-    return o.Field, true
+	if o == nil || utils.IsNil(o.Field) {
+		return nil, false
+	}
+	return o.Field, true
 }
 
 // HasField returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) HasField() bool {
-    if o != nil && !utils.IsNil(o.Field) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Field) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetField gets a reference to the given string and assigns it to the Field field.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) SetField(v string) {
-    o.Field = &v
+	o.Field = &v
 }
 
 // GetSuggestions returns the Suggestions field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) GetSuggestions() Product202309CheckProductListingResponseDataDiagnosesSuggestions {
-    if o == nil || utils.IsNil(o.Suggestions) {
-        var ret Product202309CheckProductListingResponseDataDiagnosesSuggestions
-        return ret
-    }
-    return *o.Suggestions
+	if o == nil || utils.IsNil(o.Suggestions) {
+		var ret Product202309CheckProductListingResponseDataDiagnosesSuggestions
+		return ret
+	}
+	return *o.Suggestions
 }
 
 // GetSuggestionsOk returns a tuple with the Suggestions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) GetSuggestionsOk() (*Product202309CheckProductListingResponseDataDiagnosesSuggestions, bool) {
-    if o == nil || utils.IsNil(o.Suggestions) {
-        return nil, false
-    }
-    return o.Suggestions, true
+	if o == nil || utils.IsNil(o.Suggestions) {
+		return nil, false
+	}
+	return o.Suggestions, true
 }
 
 // HasSuggestions returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) HasSuggestions() bool {
-    if o != nil && !utils.IsNil(o.Suggestions) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Suggestions) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSuggestions gets a reference to the given Product202309CheckProductListingResponseDataDiagnosesSuggestions and assigns it to the Suggestions field.
 func (o *Product202309CheckProductListingResponseDataDiagnoses) SetSuggestions(v Product202309CheckProductListingResponseDataDiagnosesSuggestions) {
-    o.Suggestions = &v
+	o.Suggestions = &v
 }
 
 func (o Product202309CheckProductListingResponseDataDiagnoses) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CheckProductListingResponseDataDiagnoses) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.DiagnosisResults) {
-        toSerialize["diagnosis_results"] = o.DiagnosisResults
-    }
-    if !utils.IsNil(o.Field) {
-        toSerialize["field"] = o.Field
-    }
-    if !utils.IsNil(o.Suggestions) {
-        toSerialize["suggestions"] = o.Suggestions
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.DiagnosisResults) {
+		toSerialize["diagnosis_results"] = o.DiagnosisResults
+	}
+	if !utils.IsNil(o.Field) {
+		toSerialize["field"] = o.Field
+	}
+	if !utils.IsNil(o.Suggestions) {
+		toSerialize["suggestions"] = o.Suggestions
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CheckProductListingResponseDataDiagnoses) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CheckProductListingResponseDataDiagnoses := _Product202309CheckProductListingResponseDataDiagnoses{}
+	varProduct202309CheckProductListingResponseDataDiagnoses := _Product202309CheckProductListingResponseDataDiagnoses{}
 
-    err = json.Unmarshal(data, &varProduct202309CheckProductListingResponseDataDiagnoses)
+	err = json.Unmarshal(data, &varProduct202309CheckProductListingResponseDataDiagnoses)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CheckProductListingResponseDataDiagnoses(varProduct202309CheckProductListingResponseDataDiagnoses)
+	*o = Product202309CheckProductListingResponseDataDiagnoses(varProduct202309CheckProductListingResponseDataDiagnoses)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "diagnosis_results")
-        delete(additionalProperties, "field")
-        delete(additionalProperties, "suggestions")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "diagnosis_results")
+		delete(additionalProperties, "field")
+		delete(additionalProperties, "suggestions")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CheckProductListingResponseDataDiagnoses struct {
@@ -227,5 +227,3 @@ func (v *NullableProduct202309CheckProductListingResponseDataDiagnoses) Unmarsha
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

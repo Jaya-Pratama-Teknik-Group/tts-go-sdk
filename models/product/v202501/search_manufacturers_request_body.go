@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202501
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202501SearchManufacturersRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Product202501SearchManufacturersRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202501SearchManufacturersRequestBody{}
 
 // Product202501SearchManufacturersRequestBody struct for Product202501SearchManufacturersRequestBody
 type Product202501SearchManufacturersRequestBody struct {
-    // Filter results to show those that contain this keyword. Search scope: name, registered trade name, local_number, email Max length: 200 characters  **Note**: Provide either the `manufacturer_ids` or `keyword`; if both are provided, `manufacturer_ids` will take priority.
-    Keyword *string `json:"keyword,omitempty"`
-    // The BCP-47 locale codes for displaying the manufacturer information. Default: The locale of the seller's registered business address. Possible values: - de-DE - en-IE - es-ES - fr-FR - it-IT
-    Locales []string `json:"locales,omitempty"`
-    // Filter results by these manufacturer IDs. Max IDs: The value of `page_size`
-    ManufacturerIds []string `json:"manufacturer_ids,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Filter results to show those that contain this keyword. Search scope: name, registered trade name, local_number, email Max length: 200 characters  **Note**: Provide either the `manufacturer_ids` or `keyword`; if both are provided, `manufacturer_ids` will take priority.
+	Keyword *string `json:"keyword,omitempty"`
+	// The BCP-47 locale codes for displaying the manufacturer information. Default: The locale of the seller's registered business address. Possible values: - de-DE - en-IE - es-ES - fr-FR - it-IT
+	Locales []string `json:"locales,omitempty"`
+	// Filter results by these manufacturer IDs. Max IDs: The value of `page_size`
+	ManufacturerIds      []string `json:"manufacturer_ids,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202501SearchManufacturersRequestBody Product202501SearchManufacturersRequestBody
@@ -36,161 +36,161 @@ type _Product202501SearchManufacturersRequestBody Product202501SearchManufacture
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202501SearchManufacturersRequestBody() *Product202501SearchManufacturersRequestBody {
-    this := Product202501SearchManufacturersRequestBody{}
-    return &this
+	this := Product202501SearchManufacturersRequestBody{}
+	return &this
 }
 
 // NewProduct202501SearchManufacturersRequestBodyWithDefaults instantiates a new Product202501SearchManufacturersRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202501SearchManufacturersRequestBodyWithDefaults() *Product202501SearchManufacturersRequestBody {
-    this := Product202501SearchManufacturersRequestBody{}
-    return &this
+	this := Product202501SearchManufacturersRequestBody{}
+	return &this
 }
 
 // GetKeyword returns the Keyword field value if set, zero value otherwise.
 func (o *Product202501SearchManufacturersRequestBody) GetKeyword() string {
-    if o == nil || utils.IsNil(o.Keyword) {
-        var ret string
-        return ret
-    }
-    return *o.Keyword
+	if o == nil || utils.IsNil(o.Keyword) {
+		var ret string
+		return ret
+	}
+	return *o.Keyword
 }
 
 // GetKeywordOk returns a tuple with the Keyword field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchManufacturersRequestBody) GetKeywordOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Keyword) {
-        return nil, false
-    }
-    return o.Keyword, true
+	if o == nil || utils.IsNil(o.Keyword) {
+		return nil, false
+	}
+	return o.Keyword, true
 }
 
 // HasKeyword returns a boolean if a field has been set.
 func (o *Product202501SearchManufacturersRequestBody) HasKeyword() bool {
-    if o != nil && !utils.IsNil(o.Keyword) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Keyword) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetKeyword gets a reference to the given string and assigns it to the Keyword field.
 func (o *Product202501SearchManufacturersRequestBody) SetKeyword(v string) {
-    o.Keyword = &v
+	o.Keyword = &v
 }
 
 // GetLocales returns the Locales field value if set, zero value otherwise.
 func (o *Product202501SearchManufacturersRequestBody) GetLocales() []string {
-    if o == nil || utils.IsNil(o.Locales) {
-        var ret []string
-        return ret
-    }
-    return o.Locales
+	if o == nil || utils.IsNil(o.Locales) {
+		var ret []string
+		return ret
+	}
+	return o.Locales
 }
 
 // GetLocalesOk returns a tuple with the Locales field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchManufacturersRequestBody) GetLocalesOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.Locales) {
-        return nil, false
-    }
-    return o.Locales, true
+	if o == nil || utils.IsNil(o.Locales) {
+		return nil, false
+	}
+	return o.Locales, true
 }
 
 // HasLocales returns a boolean if a field has been set.
 func (o *Product202501SearchManufacturersRequestBody) HasLocales() bool {
-    if o != nil && !utils.IsNil(o.Locales) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Locales) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocales gets a reference to the given []string and assigns it to the Locales field.
 func (o *Product202501SearchManufacturersRequestBody) SetLocales(v []string) {
-    o.Locales = v
+	o.Locales = v
 }
 
 // GetManufacturerIds returns the ManufacturerIds field value if set, zero value otherwise.
 func (o *Product202501SearchManufacturersRequestBody) GetManufacturerIds() []string {
-    if o == nil || utils.IsNil(o.ManufacturerIds) {
-        var ret []string
-        return ret
-    }
-    return o.ManufacturerIds
+	if o == nil || utils.IsNil(o.ManufacturerIds) {
+		var ret []string
+		return ret
+	}
+	return o.ManufacturerIds
 }
 
 // GetManufacturerIdsOk returns a tuple with the ManufacturerIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchManufacturersRequestBody) GetManufacturerIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.ManufacturerIds) {
-        return nil, false
-    }
-    return o.ManufacturerIds, true
+	if o == nil || utils.IsNil(o.ManufacturerIds) {
+		return nil, false
+	}
+	return o.ManufacturerIds, true
 }
 
 // HasManufacturerIds returns a boolean if a field has been set.
 func (o *Product202501SearchManufacturersRequestBody) HasManufacturerIds() bool {
-    if o != nil && !utils.IsNil(o.ManufacturerIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ManufacturerIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetManufacturerIds gets a reference to the given []string and assigns it to the ManufacturerIds field.
 func (o *Product202501SearchManufacturersRequestBody) SetManufacturerIds(v []string) {
-    o.ManufacturerIds = v
+	o.ManufacturerIds = v
 }
 
 func (o Product202501SearchManufacturersRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202501SearchManufacturersRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Keyword) {
-        toSerialize["keyword"] = o.Keyword
-    }
-    if !utils.IsNil(o.Locales) {
-        toSerialize["locales"] = o.Locales
-    }
-    if !utils.IsNil(o.ManufacturerIds) {
-        toSerialize["manufacturer_ids"] = o.ManufacturerIds
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Keyword) {
+		toSerialize["keyword"] = o.Keyword
+	}
+	if !utils.IsNil(o.Locales) {
+		toSerialize["locales"] = o.Locales
+	}
+	if !utils.IsNil(o.ManufacturerIds) {
+		toSerialize["manufacturer_ids"] = o.ManufacturerIds
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202501SearchManufacturersRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varProduct202501SearchManufacturersRequestBody := _Product202501SearchManufacturersRequestBody{}
+	varProduct202501SearchManufacturersRequestBody := _Product202501SearchManufacturersRequestBody{}
 
-    err = json.Unmarshal(data, &varProduct202501SearchManufacturersRequestBody)
+	err = json.Unmarshal(data, &varProduct202501SearchManufacturersRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202501SearchManufacturersRequestBody(varProduct202501SearchManufacturersRequestBody)
+	*o = Product202501SearchManufacturersRequestBody(varProduct202501SearchManufacturersRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "keyword")
-        delete(additionalProperties, "locales")
-        delete(additionalProperties, "manufacturer_ids")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "keyword")
+		delete(additionalProperties, "locales")
+		delete(additionalProperties, "manufacturer_ids")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202501SearchManufacturersRequestBody struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202501SearchManufacturersRequestBody) UnmarshalJSON(src 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

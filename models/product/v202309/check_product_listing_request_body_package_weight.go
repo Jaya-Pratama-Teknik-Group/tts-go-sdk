@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CheckProductListingRequestBodyPackageWeight type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CheckProductListingRequestBodyPackageWeight type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CheckProductListingRequestBodyPackageWeight{}
 
 // Product202309CheckProductListingRequestBodyPackageWeight struct for Product202309CheckProductListingRequestBodyPackageWeight
 type Product202309CheckProductListingRequestBodyPackageWeight struct {
-    // The unit for the package weight. Possible values based on region: - US: `KILOGRAM`, `POUND` - BR, JP, MX: `KILOGRAM`, `GRAM` - Other countries: `KILOGRAM`  **Note**: You must use the same system of measurement (metric system or imperial system) for `package_weight` and `package_dimensions`. In other words, if you are using `KILOGRAM` for the weight, you must use `CENTIMETER` for the dimensions.
-    Unit *string `json:"unit,omitempty"`
-    // The package weight, which must be a positive number. The number format varies based on the `unit`:  - `GRAM`: integer - `KILOGRAM`: up to 3 decimal places - `POUND`: up to 2 decimal places
-    Value *string `json:"value,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The unit for the package weight. Possible values based on region: - US: `KILOGRAM`, `POUND` - BR, JP, MX: `KILOGRAM`, `GRAM` - Other countries: `KILOGRAM`  **Note**: You must use the same system of measurement (metric system or imperial system) for `package_weight` and `package_dimensions`. In other words, if you are using `KILOGRAM` for the weight, you must use `CENTIMETER` for the dimensions.
+	Unit *string `json:"unit,omitempty"`
+	// The package weight, which must be a positive number. The number format varies based on the `unit`:  - `GRAM`: integer - `KILOGRAM`: up to 3 decimal places - `POUND`: up to 2 decimal places
+	Value                *string `json:"value,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CheckProductListingRequestBodyPackageWeight Product202309CheckProductListingRequestBodyPackageWeight
@@ -34,125 +34,125 @@ type _Product202309CheckProductListingRequestBodyPackageWeight Product202309Chec
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CheckProductListingRequestBodyPackageWeight() *Product202309CheckProductListingRequestBodyPackageWeight {
-    this := Product202309CheckProductListingRequestBodyPackageWeight{}
-    return &this
+	this := Product202309CheckProductListingRequestBodyPackageWeight{}
+	return &this
 }
 
 // NewProduct202309CheckProductListingRequestBodyPackageWeightWithDefaults instantiates a new Product202309CheckProductListingRequestBodyPackageWeight object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CheckProductListingRequestBodyPackageWeightWithDefaults() *Product202309CheckProductListingRequestBodyPackageWeight {
-    this := Product202309CheckProductListingRequestBodyPackageWeight{}
-    return &this
+	this := Product202309CheckProductListingRequestBodyPackageWeight{}
+	return &this
 }
 
 // GetUnit returns the Unit field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingRequestBodyPackageWeight) GetUnit() string {
-    if o == nil || utils.IsNil(o.Unit) {
-        var ret string
-        return ret
-    }
-    return *o.Unit
+	if o == nil || utils.IsNil(o.Unit) {
+		var ret string
+		return ret
+	}
+	return *o.Unit
 }
 
 // GetUnitOk returns a tuple with the Unit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingRequestBodyPackageWeight) GetUnitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Unit) {
-        return nil, false
-    }
-    return o.Unit, true
+	if o == nil || utils.IsNil(o.Unit) {
+		return nil, false
+	}
+	return o.Unit, true
 }
 
 // HasUnit returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingRequestBodyPackageWeight) HasUnit() bool {
-    if o != nil && !utils.IsNil(o.Unit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Unit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnit gets a reference to the given string and assigns it to the Unit field.
 func (o *Product202309CheckProductListingRequestBodyPackageWeight) SetUnit(v string) {
-    o.Unit = &v
+	o.Unit = &v
 }
 
 // GetValue returns the Value field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingRequestBodyPackageWeight) GetValue() string {
-    if o == nil || utils.IsNil(o.Value) {
-        var ret string
-        return ret
-    }
-    return *o.Value
+	if o == nil || utils.IsNil(o.Value) {
+		var ret string
+		return ret
+	}
+	return *o.Value
 }
 
 // GetValueOk returns a tuple with the Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingRequestBodyPackageWeight) GetValueOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Value) {
-        return nil, false
-    }
-    return o.Value, true
+	if o == nil || utils.IsNil(o.Value) {
+		return nil, false
+	}
+	return o.Value, true
 }
 
 // HasValue returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingRequestBodyPackageWeight) HasValue() bool {
-    if o != nil && !utils.IsNil(o.Value) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Value) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetValue gets a reference to the given string and assigns it to the Value field.
 func (o *Product202309CheckProductListingRequestBodyPackageWeight) SetValue(v string) {
-    o.Value = &v
+	o.Value = &v
 }
 
 func (o Product202309CheckProductListingRequestBodyPackageWeight) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CheckProductListingRequestBodyPackageWeight) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Unit) {
-        toSerialize["unit"] = o.Unit
-    }
-    if !utils.IsNil(o.Value) {
-        toSerialize["value"] = o.Value
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Unit) {
+		toSerialize["unit"] = o.Unit
+	}
+	if !utils.IsNil(o.Value) {
+		toSerialize["value"] = o.Value
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CheckProductListingRequestBodyPackageWeight) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CheckProductListingRequestBodyPackageWeight := _Product202309CheckProductListingRequestBodyPackageWeight{}
+	varProduct202309CheckProductListingRequestBodyPackageWeight := _Product202309CheckProductListingRequestBodyPackageWeight{}
 
-    err = json.Unmarshal(data, &varProduct202309CheckProductListingRequestBodyPackageWeight)
+	err = json.Unmarshal(data, &varProduct202309CheckProductListingRequestBodyPackageWeight)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CheckProductListingRequestBodyPackageWeight(varProduct202309CheckProductListingRequestBodyPackageWeight)
+	*o = Product202309CheckProductListingRequestBodyPackageWeight(varProduct202309CheckProductListingRequestBodyPackageWeight)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "unit")
-        delete(additionalProperties, "value")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "unit")
+		delete(additionalProperties, "value")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CheckProductListingRequestBodyPackageWeight struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309CheckProductListingRequestBodyPackageWeight) Unmar
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

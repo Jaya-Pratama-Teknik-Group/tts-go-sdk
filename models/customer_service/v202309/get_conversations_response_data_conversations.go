@@ -11,29 +11,29 @@ API version: 1.0.0
 package customer_service_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the CustomerService202309GetConversationsResponseDataConversations type satisfies the MappedNullable interface at compile time
+// checks if the CustomerService202309GetConversationsResponseDataConversations type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &CustomerService202309GetConversationsResponseDataConversations{}
 
 // CustomerService202309GetConversationsResponseDataConversations struct for CustomerService202309GetConversationsResponseDataConversations
 type CustomerService202309GetConversationsResponseDataConversations struct {
-    // Whether customer service agent can send message in this conversation. Under any of the following circumstances, the CS agent can send messages: 1. There has been a prior conversation between the buyer and the shop within the last 30 days. 2. The buyer placed an order at the shop within the past 60 days. 3. The buyer has a history of returns or refunds at the shop.
-    CanSendMessage *bool `json:"can_send_message,omitempty"`
-    // Unix timestamp when the conversation was created. In seconds.
-    CreateTime *int64 `json:"create_time,omitempty"`
-    // Conversation ID
-    Id *string `json:"id,omitempty"`
-    LatestMessage *CustomerService202309GetConversationsResponseDataConversationsLatestMessage `json:"latest_message,omitempty"`
-    // Number of participants in the conversation. - If there has been no customer service agent in the conversation, the value is `2`: the shop and the buyer; - Otherwise, the value is `3`: the shop, the buyer, and the customer service agent.
-    ParticipantCount *int32 `json:"participant_count,omitempty"`
-    // Conversation participants.
-    Participants []CustomerService202309GetConversationsResponseDataConversationsParticipants `json:"participants,omitempty"`
-    // Number of messages unread by the customer service agent.
-    UnreadCount *int32 `json:"unread_count,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Whether customer service agent can send message in this conversation. Under any of the following circumstances, the CS agent can send messages: 1. There has been a prior conversation between the buyer and the shop within the last 30 days. 2. The buyer placed an order at the shop within the past 60 days. 3. The buyer has a history of returns or refunds at the shop.
+	CanSendMessage *bool `json:"can_send_message,omitempty"`
+	// Unix timestamp when the conversation was created. In seconds.
+	CreateTime *int64 `json:"create_time,omitempty"`
+	// Conversation ID
+	Id            *string                                                                      `json:"id,omitempty"`
+	LatestMessage *CustomerService202309GetConversationsResponseDataConversationsLatestMessage `json:"latest_message,omitempty"`
+	// Number of participants in the conversation. - If there has been no customer service agent in the conversation, the value is `2`: the shop and the buyer; - Otherwise, the value is `3`: the shop, the buyer, and the customer service agent.
+	ParticipantCount *int32 `json:"participant_count,omitempty"`
+	// Conversation participants.
+	Participants []CustomerService202309GetConversationsResponseDataConversationsParticipants `json:"participants,omitempty"`
+	// Number of messages unread by the customer service agent.
+	UnreadCount          *int32 `json:"unread_count,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _CustomerService202309GetConversationsResponseDataConversations CustomerService202309GetConversationsResponseDataConversations
@@ -43,305 +43,305 @@ type _CustomerService202309GetConversationsResponseDataConversations CustomerSer
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewCustomerService202309GetConversationsResponseDataConversations() *CustomerService202309GetConversationsResponseDataConversations {
-    this := CustomerService202309GetConversationsResponseDataConversations{}
-    return &this
+	this := CustomerService202309GetConversationsResponseDataConversations{}
+	return &this
 }
 
 // NewCustomerService202309GetConversationsResponseDataConversationsWithDefaults instantiates a new CustomerService202309GetConversationsResponseDataConversations object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewCustomerService202309GetConversationsResponseDataConversationsWithDefaults() *CustomerService202309GetConversationsResponseDataConversations {
-    this := CustomerService202309GetConversationsResponseDataConversations{}
-    return &this
+	this := CustomerService202309GetConversationsResponseDataConversations{}
+	return &this
 }
 
 // GetCanSendMessage returns the CanSendMessage field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetCanSendMessage() bool {
-    if o == nil || utils.IsNil(o.CanSendMessage) {
-        var ret bool
-        return ret
-    }
-    return *o.CanSendMessage
+	if o == nil || utils.IsNil(o.CanSendMessage) {
+		var ret bool
+		return ret
+	}
+	return *o.CanSendMessage
 }
 
 // GetCanSendMessageOk returns a tuple with the CanSendMessage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetCanSendMessageOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.CanSendMessage) {
-        return nil, false
-    }
-    return o.CanSendMessage, true
+	if o == nil || utils.IsNil(o.CanSendMessage) {
+		return nil, false
+	}
+	return o.CanSendMessage, true
 }
 
 // HasCanSendMessage returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) HasCanSendMessage() bool {
-    if o != nil && !utils.IsNil(o.CanSendMessage) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CanSendMessage) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCanSendMessage gets a reference to the given bool and assigns it to the CanSendMessage field.
 func (o *CustomerService202309GetConversationsResponseDataConversations) SetCanSendMessage(v bool) {
-    o.CanSendMessage = &v
+	o.CanSendMessage = &v
 }
 
 // GetCreateTime returns the CreateTime field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetCreateTime() int64 {
-    if o == nil || utils.IsNil(o.CreateTime) {
-        var ret int64
-        return ret
-    }
-    return *o.CreateTime
+	if o == nil || utils.IsNil(o.CreateTime) {
+		var ret int64
+		return ret
+	}
+	return *o.CreateTime
 }
 
 // GetCreateTimeOk returns a tuple with the CreateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetCreateTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.CreateTime) {
-        return nil, false
-    }
-    return o.CreateTime, true
+	if o == nil || utils.IsNil(o.CreateTime) {
+		return nil, false
+	}
+	return o.CreateTime, true
 }
 
 // HasCreateTime returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) HasCreateTime() bool {
-    if o != nil && !utils.IsNil(o.CreateTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CreateTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCreateTime gets a reference to the given int64 and assigns it to the CreateTime field.
 func (o *CustomerService202309GetConversationsResponseDataConversations) SetCreateTime(v int64) {
-    o.CreateTime = &v
+	o.CreateTime = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *CustomerService202309GetConversationsResponseDataConversations) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetLatestMessage returns the LatestMessage field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetLatestMessage() CustomerService202309GetConversationsResponseDataConversationsLatestMessage {
-    if o == nil || utils.IsNil(o.LatestMessage) {
-        var ret CustomerService202309GetConversationsResponseDataConversationsLatestMessage
-        return ret
-    }
-    return *o.LatestMessage
+	if o == nil || utils.IsNil(o.LatestMessage) {
+		var ret CustomerService202309GetConversationsResponseDataConversationsLatestMessage
+		return ret
+	}
+	return *o.LatestMessage
 }
 
 // GetLatestMessageOk returns a tuple with the LatestMessage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetLatestMessageOk() (*CustomerService202309GetConversationsResponseDataConversationsLatestMessage, bool) {
-    if o == nil || utils.IsNil(o.LatestMessage) {
-        return nil, false
-    }
-    return o.LatestMessage, true
+	if o == nil || utils.IsNil(o.LatestMessage) {
+		return nil, false
+	}
+	return o.LatestMessage, true
 }
 
 // HasLatestMessage returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) HasLatestMessage() bool {
-    if o != nil && !utils.IsNil(o.LatestMessage) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LatestMessage) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLatestMessage gets a reference to the given CustomerService202309GetConversationsResponseDataConversationsLatestMessage and assigns it to the LatestMessage field.
 func (o *CustomerService202309GetConversationsResponseDataConversations) SetLatestMessage(v CustomerService202309GetConversationsResponseDataConversationsLatestMessage) {
-    o.LatestMessage = &v
+	o.LatestMessage = &v
 }
 
 // GetParticipantCount returns the ParticipantCount field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetParticipantCount() int32 {
-    if o == nil || utils.IsNil(o.ParticipantCount) {
-        var ret int32
-        return ret
-    }
-    return *o.ParticipantCount
+	if o == nil || utils.IsNil(o.ParticipantCount) {
+		var ret int32
+		return ret
+	}
+	return *o.ParticipantCount
 }
 
 // GetParticipantCountOk returns a tuple with the ParticipantCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetParticipantCountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.ParticipantCount) {
-        return nil, false
-    }
-    return o.ParticipantCount, true
+	if o == nil || utils.IsNil(o.ParticipantCount) {
+		return nil, false
+	}
+	return o.ParticipantCount, true
 }
 
 // HasParticipantCount returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) HasParticipantCount() bool {
-    if o != nil && !utils.IsNil(o.ParticipantCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ParticipantCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetParticipantCount gets a reference to the given int32 and assigns it to the ParticipantCount field.
 func (o *CustomerService202309GetConversationsResponseDataConversations) SetParticipantCount(v int32) {
-    o.ParticipantCount = &v
+	o.ParticipantCount = &v
 }
 
 // GetParticipants returns the Participants field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetParticipants() []CustomerService202309GetConversationsResponseDataConversationsParticipants {
-    if o == nil || utils.IsNil(o.Participants) {
-        var ret []CustomerService202309GetConversationsResponseDataConversationsParticipants
-        return ret
-    }
-    return o.Participants
+	if o == nil || utils.IsNil(o.Participants) {
+		var ret []CustomerService202309GetConversationsResponseDataConversationsParticipants
+		return ret
+	}
+	return o.Participants
 }
 
 // GetParticipantsOk returns a tuple with the Participants field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetParticipantsOk() ([]CustomerService202309GetConversationsResponseDataConversationsParticipants, bool) {
-    if o == nil || utils.IsNil(o.Participants) {
-        return nil, false
-    }
-    return o.Participants, true
+	if o == nil || utils.IsNil(o.Participants) {
+		return nil, false
+	}
+	return o.Participants, true
 }
 
 // HasParticipants returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) HasParticipants() bool {
-    if o != nil && !utils.IsNil(o.Participants) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Participants) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetParticipants gets a reference to the given []CustomerService202309GetConversationsResponseDataConversationsParticipants and assigns it to the Participants field.
 func (o *CustomerService202309GetConversationsResponseDataConversations) SetParticipants(v []CustomerService202309GetConversationsResponseDataConversationsParticipants) {
-    o.Participants = v
+	o.Participants = v
 }
 
 // GetUnreadCount returns the UnreadCount field value if set, zero value otherwise.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetUnreadCount() int32 {
-    if o == nil || utils.IsNil(o.UnreadCount) {
-        var ret int32
-        return ret
-    }
-    return *o.UnreadCount
+	if o == nil || utils.IsNil(o.UnreadCount) {
+		var ret int32
+		return ret
+	}
+	return *o.UnreadCount
 }
 
 // GetUnreadCountOk returns a tuple with the UnreadCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) GetUnreadCountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.UnreadCount) {
-        return nil, false
-    }
-    return o.UnreadCount, true
+	if o == nil || utils.IsNil(o.UnreadCount) {
+		return nil, false
+	}
+	return o.UnreadCount, true
 }
 
 // HasUnreadCount returns a boolean if a field has been set.
 func (o *CustomerService202309GetConversationsResponseDataConversations) HasUnreadCount() bool {
-    if o != nil && !utils.IsNil(o.UnreadCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UnreadCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnreadCount gets a reference to the given int32 and assigns it to the UnreadCount field.
 func (o *CustomerService202309GetConversationsResponseDataConversations) SetUnreadCount(v int32) {
-    o.UnreadCount = &v
+	o.UnreadCount = &v
 }
 
 func (o CustomerService202309GetConversationsResponseDataConversations) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o CustomerService202309GetConversationsResponseDataConversations) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CanSendMessage) {
-        toSerialize["can_send_message"] = o.CanSendMessage
-    }
-    if !utils.IsNil(o.CreateTime) {
-        toSerialize["create_time"] = o.CreateTime
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.LatestMessage) {
-        toSerialize["latest_message"] = o.LatestMessage
-    }
-    if !utils.IsNil(o.ParticipantCount) {
-        toSerialize["participant_count"] = o.ParticipantCount
-    }
-    if !utils.IsNil(o.Participants) {
-        toSerialize["participants"] = o.Participants
-    }
-    if !utils.IsNil(o.UnreadCount) {
-        toSerialize["unread_count"] = o.UnreadCount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CanSendMessage) {
+		toSerialize["can_send_message"] = o.CanSendMessage
+	}
+	if !utils.IsNil(o.CreateTime) {
+		toSerialize["create_time"] = o.CreateTime
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.LatestMessage) {
+		toSerialize["latest_message"] = o.LatestMessage
+	}
+	if !utils.IsNil(o.ParticipantCount) {
+		toSerialize["participant_count"] = o.ParticipantCount
+	}
+	if !utils.IsNil(o.Participants) {
+		toSerialize["participants"] = o.Participants
+	}
+	if !utils.IsNil(o.UnreadCount) {
+		toSerialize["unread_count"] = o.UnreadCount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *CustomerService202309GetConversationsResponseDataConversations) UnmarshalJSON(data []byte) (err error) {
-    varCustomerService202309GetConversationsResponseDataConversations := _CustomerService202309GetConversationsResponseDataConversations{}
+	varCustomerService202309GetConversationsResponseDataConversations := _CustomerService202309GetConversationsResponseDataConversations{}
 
-    err = json.Unmarshal(data, &varCustomerService202309GetConversationsResponseDataConversations)
+	err = json.Unmarshal(data, &varCustomerService202309GetConversationsResponseDataConversations)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = CustomerService202309GetConversationsResponseDataConversations(varCustomerService202309GetConversationsResponseDataConversations)
+	*o = CustomerService202309GetConversationsResponseDataConversations(varCustomerService202309GetConversationsResponseDataConversations)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "can_send_message")
-        delete(additionalProperties, "create_time")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "latest_message")
-        delete(additionalProperties, "participant_count")
-        delete(additionalProperties, "participants")
-        delete(additionalProperties, "unread_count")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "can_send_message")
+		delete(additionalProperties, "create_time")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "latest_message")
+		delete(additionalProperties, "participant_count")
+		delete(additionalProperties, "participants")
+		delete(additionalProperties, "unread_count")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableCustomerService202309GetConversationsResponseDataConversations struct {
@@ -379,5 +379,3 @@ func (v *NullableCustomerService202309GetConversationsResponseDataConversations)
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

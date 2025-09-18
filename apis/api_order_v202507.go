@@ -11,51 +11,51 @@ API version: 1.0.0
 package apis
 
 import (
-    "bytes"
-    "context"
-    "io"
-    "net/http"
-    "net/url"
-    "reflect"
+	"bytes"
+	"context"
+	"io"
+	"net/http"
+	"net/url"
+	"reflect"
 
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/order/v202507"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/order/v202507"
 )
-
 
 // OrderV202507APIService OrderV202507API service
 type OrderV202507APIService service
 
 type ApiOrder202507OrdersGetRequest struct {
-    ctx context.Context
-    ApiService *OrderV202507APIService
-    ids *[]string
-    xTtsAccessToken *string
-    contentType *string
-    shopCipher *string
+	ctx             context.Context
+	ApiService      *OrderV202507APIService
+	ids             *[]string
+	xTtsAccessToken *string
+	contentType     *string
+	shopCipher      *string
 }
 
 // A list of TikTok Shop order ID values. Max count: 50
 func (r ApiOrder202507OrdersGetRequest) Ids(ids []string) ApiOrder202507OrdersGetRequest {
-    r.ids = &ids
-    return r
+	r.ids = &ids
+	return r
 }
-// 
+
 func (r ApiOrder202507OrdersGetRequest) XTtsAccessToken(xTtsAccessToken string) ApiOrder202507OrdersGetRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiOrder202507OrdersGetRequest) ContentType(contentType string) ApiOrder202507OrdersGetRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
-// 
+
 func (r ApiOrder202507OrdersGetRequest) ShopCipher(shopCipher string) ApiOrder202507OrdersGetRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiOrder202507OrdersGetRequest) Execute() (*order_v202507.Order202507GetOrderDetailResponse, *http.Response, error) {
-    return r.ApiService.Order202507OrdersGetExecute(r)
+	return r.ApiService.Order202507OrdersGetExecute(r)
 }
 
 /*
@@ -66,108 +66,109 @@ Get the detailed order information of an order, including important attributes s
 @return ApiOrder202507OrdersGetRequest
 */
 func (a *OrderV202507APIService) Order202507OrdersGet(ctx context.Context) ApiOrder202507OrdersGetRequest {
-    return ApiOrder202507OrdersGetRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiOrder202507OrdersGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Order202507GetOrderDetailResponse
+//
+//	@return Order202507GetOrderDetailResponse
 func (a *OrderV202507APIService) Order202507OrdersGetExecute(r ApiOrder202507OrdersGetRequest) (*order_v202507.Order202507GetOrderDetailResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodGet
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *order_v202507.Order202507GetOrderDetailResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *order_v202507.Order202507GetOrderDetailResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OrderV202507APIService.Order202507OrdersGet")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OrderV202507APIService.Order202507OrdersGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/order/202507/orders"
+	localVarPath := localBasePath + "/order/202507/orders"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.ids == nil {
-        return localVarReturnValue, nil, reportError("ids is required and must be specified")
-    }
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.ids == nil {
+		return localVarReturnValue, nil, reportError("ids is required and must be specified")
+	}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    {
-        t := *r.ids
-        if reflect.TypeOf(t).Kind() == reflect.Slice {
-            s := reflect.ValueOf(t)
-            for i := 0; i < s.Len(); i++ {
-                parameterAddToHeaderOrQuery(localVarQueryParams, "ids", s.Index(i).Interface(), "multi")
-            }
-        } else {
-            parameterAddToHeaderOrQuery(localVarQueryParams, "ids", t, "multi")
-        }
-    }
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{}
+	{
+		t := *r.ids
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "ids", s.Index(i).Interface(), "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "ids", t, "multi")
+		}
+	}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }

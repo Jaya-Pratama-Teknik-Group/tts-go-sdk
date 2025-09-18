@@ -11,43 +11,42 @@ API version: 1.0.0
 package apis
 
 import (
-    "bytes"
-    "context"
-    "io"
-    "net/http"
-    "net/url"
+	"bytes"
+	"context"
+	"io"
+	"net/http"
+	"net/url"
 
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/fulfillment/v202407"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/fulfillment/v202407"
 )
-
 
 // FulfillmentV202407APIService FulfillmentV202407API service
 type FulfillmentV202407APIService service
 
 type ApiFulfillment202407BundlesPostRequest struct {
-    ctx context.Context
-    ApiService *FulfillmentV202407APIService
-    xTtsAccessToken *string
-    contentType *string
-    fulfillment202407CreateFirstMileBundleRequestBody *fulfillment_v202407.Fulfillment202407CreateFirstMileBundleRequestBody
+	ctx                                               context.Context
+	ApiService                                        *FulfillmentV202407APIService
+	xTtsAccessToken                                   *string
+	contentType                                       *string
+	fulfillment202407CreateFirstMileBundleRequestBody *fulfillment_v202407.Fulfillment202407CreateFirstMileBundleRequestBody
 }
 
-// 
 func (r ApiFulfillment202407BundlesPostRequest) XTtsAccessToken(xTtsAccessToken string) ApiFulfillment202407BundlesPostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiFulfillment202407BundlesPostRequest) ContentType(contentType string) ApiFulfillment202407BundlesPostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
 func (r ApiFulfillment202407BundlesPostRequest) Fulfillment202407CreateFirstMileBundleRequestBody(fulfillment202407CreateFirstMileBundleRequestBody fulfillment_v202407.Fulfillment202407CreateFirstMileBundleRequestBody) ApiFulfillment202407BundlesPostRequest {
-    r.fulfillment202407CreateFirstMileBundleRequestBody = &fulfillment202407CreateFirstMileBundleRequestBody
-    return r
+	r.fulfillment202407CreateFirstMileBundleRequestBody = &fulfillment202407CreateFirstMileBundleRequestBody
+	return r
 }
 func (r ApiFulfillment202407BundlesPostRequest) Execute() (*fulfillment_v202407.Fulfillment202407CreateFirstMileBundleResponse, *http.Response, error) {
-    return r.ApiService.Fulfillment202407BundlesPostExecute(r)
+	return r.ApiService.Fulfillment202407BundlesPostExecute(r)
 }
 
 /*
@@ -58,93 +57,94 @@ If you send multiple packages to TikTok Shop warehouse in a single first-mile bu
 @return ApiFulfillment202407BundlesPostRequest
 */
 func (a *FulfillmentV202407APIService) Fulfillment202407BundlesPost(ctx context.Context) ApiFulfillment202407BundlesPostRequest {
-    return ApiFulfillment202407BundlesPostRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiFulfillment202407BundlesPostRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Fulfillment202407CreateFirstMileBundleResponse
+//
+//	@return Fulfillment202407CreateFirstMileBundleResponse
 func (a *FulfillmentV202407APIService) Fulfillment202407BundlesPostExecute(r ApiFulfillment202407BundlesPostRequest) (*fulfillment_v202407.Fulfillment202407CreateFirstMileBundleResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *fulfillment_v202407.Fulfillment202407CreateFirstMileBundleResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *fulfillment_v202407.Fulfillment202407CreateFirstMileBundleResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FulfillmentV202407APIService.Fulfillment202407BundlesPost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FulfillmentV202407APIService.Fulfillment202407BundlesPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/fulfillment/202407/bundles"
+	localVarPath := localBasePath + "/fulfillment/202407/bundles"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.fulfillment202407CreateFirstMileBundleRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.fulfillment202407CreateFirstMileBundleRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }

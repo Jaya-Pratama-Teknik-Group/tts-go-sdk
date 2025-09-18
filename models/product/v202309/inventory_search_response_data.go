@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309InventorySearchResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202309InventorySearchResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309InventorySearchResponseData{}
 
 // Product202309InventorySearchResponseData struct for Product202309InventorySearchResponseData
 type Product202309InventorySearchResponseData struct {
-    // Inventory information for the requested products or SKUs.
-    Inventory []Product202309InventorySearchResponseDataInventory `json:"inventory,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Inventory information for the requested products or SKUs.
+	Inventory            []Product202309InventorySearchResponseDataInventory `json:"inventory,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309InventorySearchResponseData Product202309InventorySearchResponseData
@@ -32,89 +32,89 @@ type _Product202309InventorySearchResponseData Product202309InventorySearchRespo
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309InventorySearchResponseData() *Product202309InventorySearchResponseData {
-    this := Product202309InventorySearchResponseData{}
-    return &this
+	this := Product202309InventorySearchResponseData{}
+	return &this
 }
 
 // NewProduct202309InventorySearchResponseDataWithDefaults instantiates a new Product202309InventorySearchResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309InventorySearchResponseDataWithDefaults() *Product202309InventorySearchResponseData {
-    this := Product202309InventorySearchResponseData{}
-    return &this
+	this := Product202309InventorySearchResponseData{}
+	return &this
 }
 
 // GetInventory returns the Inventory field value if set, zero value otherwise.
 func (o *Product202309InventorySearchResponseData) GetInventory() []Product202309InventorySearchResponseDataInventory {
-    if o == nil || utils.IsNil(o.Inventory) {
-        var ret []Product202309InventorySearchResponseDataInventory
-        return ret
-    }
-    return o.Inventory
+	if o == nil || utils.IsNil(o.Inventory) {
+		var ret []Product202309InventorySearchResponseDataInventory
+		return ret
+	}
+	return o.Inventory
 }
 
 // GetInventoryOk returns a tuple with the Inventory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309InventorySearchResponseData) GetInventoryOk() ([]Product202309InventorySearchResponseDataInventory, bool) {
-    if o == nil || utils.IsNil(o.Inventory) {
-        return nil, false
-    }
-    return o.Inventory, true
+	if o == nil || utils.IsNil(o.Inventory) {
+		return nil, false
+	}
+	return o.Inventory, true
 }
 
 // HasInventory returns a boolean if a field has been set.
 func (o *Product202309InventorySearchResponseData) HasInventory() bool {
-    if o != nil && !utils.IsNil(o.Inventory) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Inventory) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetInventory gets a reference to the given []Product202309InventorySearchResponseDataInventory and assigns it to the Inventory field.
 func (o *Product202309InventorySearchResponseData) SetInventory(v []Product202309InventorySearchResponseDataInventory) {
-    o.Inventory = v
+	o.Inventory = v
 }
 
 func (o Product202309InventorySearchResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309InventorySearchResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Inventory) {
-        toSerialize["inventory"] = o.Inventory
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Inventory) {
+		toSerialize["inventory"] = o.Inventory
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309InventorySearchResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309InventorySearchResponseData := _Product202309InventorySearchResponseData{}
+	varProduct202309InventorySearchResponseData := _Product202309InventorySearchResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202309InventorySearchResponseData)
+	err = json.Unmarshal(data, &varProduct202309InventorySearchResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309InventorySearchResponseData(varProduct202309InventorySearchResponseData)
+	*o = Product202309InventorySearchResponseData(varProduct202309InventorySearchResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "inventory")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "inventory")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309InventorySearchResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309InventorySearchResponseData) UnmarshalJSON(src []b
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

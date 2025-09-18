@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202501
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202501SearchManufacturersResponseDataManufacturers type satisfies the MappedNullable interface at compile time
+// checks if the Product202501SearchManufacturersResponseDataManufacturers type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202501SearchManufacturersResponseDataManufacturers{}
 
 // Product202501SearchManufacturersResponseDataManufacturers struct for Product202501SearchManufacturersResponseDataManufacturers
 type Product202501SearchManufacturersResponseDataManufacturers struct {
-    // The manufacturer ID in TikTok Shop.
-    Id *string `json:"id,omitempty"`
-    // A list of contact details for the manufacturer, presented in different languages for each supported EU country.
-    RegionalProfiles []Product202501SearchManufacturersResponseDataManufacturersRegionalProfiles `json:"regional_profiles,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The manufacturer ID in TikTok Shop.
+	Id *string `json:"id,omitempty"`
+	// A list of contact details for the manufacturer, presented in different languages for each supported EU country.
+	RegionalProfiles     []Product202501SearchManufacturersResponseDataManufacturersRegionalProfiles `json:"regional_profiles,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202501SearchManufacturersResponseDataManufacturers Product202501SearchManufacturersResponseDataManufacturers
@@ -34,125 +34,125 @@ type _Product202501SearchManufacturersResponseDataManufacturers Product202501Sea
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202501SearchManufacturersResponseDataManufacturers() *Product202501SearchManufacturersResponseDataManufacturers {
-    this := Product202501SearchManufacturersResponseDataManufacturers{}
-    return &this
+	this := Product202501SearchManufacturersResponseDataManufacturers{}
+	return &this
 }
 
 // NewProduct202501SearchManufacturersResponseDataManufacturersWithDefaults instantiates a new Product202501SearchManufacturersResponseDataManufacturers object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202501SearchManufacturersResponseDataManufacturersWithDefaults() *Product202501SearchManufacturersResponseDataManufacturers {
-    this := Product202501SearchManufacturersResponseDataManufacturers{}
-    return &this
+	this := Product202501SearchManufacturersResponseDataManufacturers{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202501SearchManufacturersResponseDataManufacturers) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchManufacturersResponseDataManufacturers) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202501SearchManufacturersResponseDataManufacturers) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202501SearchManufacturersResponseDataManufacturers) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetRegionalProfiles returns the RegionalProfiles field value if set, zero value otherwise.
 func (o *Product202501SearchManufacturersResponseDataManufacturers) GetRegionalProfiles() []Product202501SearchManufacturersResponseDataManufacturersRegionalProfiles {
-    if o == nil || utils.IsNil(o.RegionalProfiles) {
-        var ret []Product202501SearchManufacturersResponseDataManufacturersRegionalProfiles
-        return ret
-    }
-    return o.RegionalProfiles
+	if o == nil || utils.IsNil(o.RegionalProfiles) {
+		var ret []Product202501SearchManufacturersResponseDataManufacturersRegionalProfiles
+		return ret
+	}
+	return o.RegionalProfiles
 }
 
 // GetRegionalProfilesOk returns a tuple with the RegionalProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchManufacturersResponseDataManufacturers) GetRegionalProfilesOk() ([]Product202501SearchManufacturersResponseDataManufacturersRegionalProfiles, bool) {
-    if o == nil || utils.IsNil(o.RegionalProfiles) {
-        return nil, false
-    }
-    return o.RegionalProfiles, true
+	if o == nil || utils.IsNil(o.RegionalProfiles) {
+		return nil, false
+	}
+	return o.RegionalProfiles, true
 }
 
 // HasRegionalProfiles returns a boolean if a field has been set.
 func (o *Product202501SearchManufacturersResponseDataManufacturers) HasRegionalProfiles() bool {
-    if o != nil && !utils.IsNil(o.RegionalProfiles) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RegionalProfiles) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRegionalProfiles gets a reference to the given []Product202501SearchManufacturersResponseDataManufacturersRegionalProfiles and assigns it to the RegionalProfiles field.
 func (o *Product202501SearchManufacturersResponseDataManufacturers) SetRegionalProfiles(v []Product202501SearchManufacturersResponseDataManufacturersRegionalProfiles) {
-    o.RegionalProfiles = v
+	o.RegionalProfiles = v
 }
 
 func (o Product202501SearchManufacturersResponseDataManufacturers) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202501SearchManufacturersResponseDataManufacturers) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.RegionalProfiles) {
-        toSerialize["regional_profiles"] = o.RegionalProfiles
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.RegionalProfiles) {
+		toSerialize["regional_profiles"] = o.RegionalProfiles
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202501SearchManufacturersResponseDataManufacturers) UnmarshalJSON(data []byte) (err error) {
-    varProduct202501SearchManufacturersResponseDataManufacturers := _Product202501SearchManufacturersResponseDataManufacturers{}
+	varProduct202501SearchManufacturersResponseDataManufacturers := _Product202501SearchManufacturersResponseDataManufacturers{}
 
-    err = json.Unmarshal(data, &varProduct202501SearchManufacturersResponseDataManufacturers)
+	err = json.Unmarshal(data, &varProduct202501SearchManufacturersResponseDataManufacturers)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202501SearchManufacturersResponseDataManufacturers(varProduct202501SearchManufacturersResponseDataManufacturers)
+	*o = Product202501SearchManufacturersResponseDataManufacturers(varProduct202501SearchManufacturersResponseDataManufacturers)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "regional_profiles")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "regional_profiles")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202501SearchManufacturersResponseDataManufacturers struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202501SearchManufacturersResponseDataManufacturers) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

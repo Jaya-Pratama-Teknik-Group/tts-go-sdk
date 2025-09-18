@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309EditGlobalProductRequestBodySizeChart type satisfies the MappedNullable interface at compile time
+// checks if the Product202309EditGlobalProductRequestBodySizeChart type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309EditGlobalProductRequestBodySizeChart{}
 
 // Product202309EditGlobalProductRequestBodySizeChart struct for Product202309EditGlobalProductRequestBodySizeChart
 type Product202309EditGlobalProductRequestBodySizeChart struct {
-    Image *Product202309EditGlobalProductRequestBodySizeChartImage `json:"image,omitempty"`
-    Template *Product202309EditGlobalProductRequestBodySizeChartTemplate `json:"template,omitempty"`
-    AdditionalProperties map[string]interface{}
+	Image                *Product202309EditGlobalProductRequestBodySizeChartImage    `json:"image,omitempty"`
+	Template             *Product202309EditGlobalProductRequestBodySizeChartTemplate `json:"template,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309EditGlobalProductRequestBodySizeChart Product202309EditGlobalProductRequestBodySizeChart
@@ -32,125 +32,125 @@ type _Product202309EditGlobalProductRequestBodySizeChart Product202309EditGlobal
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309EditGlobalProductRequestBodySizeChart() *Product202309EditGlobalProductRequestBodySizeChart {
-    this := Product202309EditGlobalProductRequestBodySizeChart{}
-    return &this
+	this := Product202309EditGlobalProductRequestBodySizeChart{}
+	return &this
 }
 
 // NewProduct202309EditGlobalProductRequestBodySizeChartWithDefaults instantiates a new Product202309EditGlobalProductRequestBodySizeChart object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309EditGlobalProductRequestBodySizeChartWithDefaults() *Product202309EditGlobalProductRequestBodySizeChart {
-    this := Product202309EditGlobalProductRequestBodySizeChart{}
-    return &this
+	this := Product202309EditGlobalProductRequestBodySizeChart{}
+	return &this
 }
 
 // GetImage returns the Image field value if set, zero value otherwise.
 func (o *Product202309EditGlobalProductRequestBodySizeChart) GetImage() Product202309EditGlobalProductRequestBodySizeChartImage {
-    if o == nil || utils.IsNil(o.Image) {
-        var ret Product202309EditGlobalProductRequestBodySizeChartImage
-        return ret
-    }
-    return *o.Image
+	if o == nil || utils.IsNil(o.Image) {
+		var ret Product202309EditGlobalProductRequestBodySizeChartImage
+		return ret
+	}
+	return *o.Image
 }
 
 // GetImageOk returns a tuple with the Image field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309EditGlobalProductRequestBodySizeChart) GetImageOk() (*Product202309EditGlobalProductRequestBodySizeChartImage, bool) {
-    if o == nil || utils.IsNil(o.Image) {
-        return nil, false
-    }
-    return o.Image, true
+	if o == nil || utils.IsNil(o.Image) {
+		return nil, false
+	}
+	return o.Image, true
 }
 
 // HasImage returns a boolean if a field has been set.
 func (o *Product202309EditGlobalProductRequestBodySizeChart) HasImage() bool {
-    if o != nil && !utils.IsNil(o.Image) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Image) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImage gets a reference to the given Product202309EditGlobalProductRequestBodySizeChartImage and assigns it to the Image field.
 func (o *Product202309EditGlobalProductRequestBodySizeChart) SetImage(v Product202309EditGlobalProductRequestBodySizeChartImage) {
-    o.Image = &v
+	o.Image = &v
 }
 
 // GetTemplate returns the Template field value if set, zero value otherwise.
 func (o *Product202309EditGlobalProductRequestBodySizeChart) GetTemplate() Product202309EditGlobalProductRequestBodySizeChartTemplate {
-    if o == nil || utils.IsNil(o.Template) {
-        var ret Product202309EditGlobalProductRequestBodySizeChartTemplate
-        return ret
-    }
-    return *o.Template
+	if o == nil || utils.IsNil(o.Template) {
+		var ret Product202309EditGlobalProductRequestBodySizeChartTemplate
+		return ret
+	}
+	return *o.Template
 }
 
 // GetTemplateOk returns a tuple with the Template field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309EditGlobalProductRequestBodySizeChart) GetTemplateOk() (*Product202309EditGlobalProductRequestBodySizeChartTemplate, bool) {
-    if o == nil || utils.IsNil(o.Template) {
-        return nil, false
-    }
-    return o.Template, true
+	if o == nil || utils.IsNil(o.Template) {
+		return nil, false
+	}
+	return o.Template, true
 }
 
 // HasTemplate returns a boolean if a field has been set.
 func (o *Product202309EditGlobalProductRequestBodySizeChart) HasTemplate() bool {
-    if o != nil && !utils.IsNil(o.Template) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Template) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTemplate gets a reference to the given Product202309EditGlobalProductRequestBodySizeChartTemplate and assigns it to the Template field.
 func (o *Product202309EditGlobalProductRequestBodySizeChart) SetTemplate(v Product202309EditGlobalProductRequestBodySizeChartTemplate) {
-    o.Template = &v
+	o.Template = &v
 }
 
 func (o Product202309EditGlobalProductRequestBodySizeChart) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309EditGlobalProductRequestBodySizeChart) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Image) {
-        toSerialize["image"] = o.Image
-    }
-    if !utils.IsNil(o.Template) {
-        toSerialize["template"] = o.Template
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Image) {
+		toSerialize["image"] = o.Image
+	}
+	if !utils.IsNil(o.Template) {
+		toSerialize["template"] = o.Template
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309EditGlobalProductRequestBodySizeChart) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309EditGlobalProductRequestBodySizeChart := _Product202309EditGlobalProductRequestBodySizeChart{}
+	varProduct202309EditGlobalProductRequestBodySizeChart := _Product202309EditGlobalProductRequestBodySizeChart{}
 
-    err = json.Unmarshal(data, &varProduct202309EditGlobalProductRequestBodySizeChart)
+	err = json.Unmarshal(data, &varProduct202309EditGlobalProductRequestBodySizeChart)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309EditGlobalProductRequestBodySizeChart(varProduct202309EditGlobalProductRequestBodySizeChart)
+	*o = Product202309EditGlobalProductRequestBodySizeChart(varProduct202309EditGlobalProductRequestBodySizeChart)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "image")
-        delete(additionalProperties, "template")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "image")
+		delete(additionalProperties, "template")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309EditGlobalProductRequestBodySizeChart struct {
@@ -188,5 +188,3 @@ func (v *NullableProduct202309EditGlobalProductRequestBodySizeChart) UnmarshalJS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package order_v202507
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences type satisfies the MappedNullable interface at compile time
+// checks if the Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences{}
 
 // Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences struct for Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences
 type Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences struct {
-    // Drop-off location selected by the buyer.
-    DropOffLocation *string `json:"drop_off_location,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Drop-off location selected by the buyer.
+	DropOffLocation      *string `json:"drop_off_location,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences
@@ -32,89 +32,89 @@ type _Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPrefere
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences() *Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences {
-    this := Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences{}
-    return &this
+	this := Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences{}
+	return &this
 }
 
 // NewOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferencesWithDefaults instantiates a new Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferencesWithDefaults() *Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences {
-    this := Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences{}
-    return &this
+	this := Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences{}
+	return &this
 }
 
 // GetDropOffLocation returns the DropOffLocation field value if set, zero value otherwise.
 func (o *Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences) GetDropOffLocation() string {
-    if o == nil || utils.IsNil(o.DropOffLocation) {
-        var ret string
-        return ret
-    }
-    return *o.DropOffLocation
+	if o == nil || utils.IsNil(o.DropOffLocation) {
+		var ret string
+		return ret
+	}
+	return *o.DropOffLocation
 }
 
 // GetDropOffLocationOk returns a tuple with the DropOffLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences) GetDropOffLocationOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.DropOffLocation) {
-        return nil, false
-    }
-    return o.DropOffLocation, true
+	if o == nil || utils.IsNil(o.DropOffLocation) {
+		return nil, false
+	}
+	return o.DropOffLocation, true
 }
 
 // HasDropOffLocation returns a boolean if a field has been set.
 func (o *Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences) HasDropOffLocation() bool {
-    if o != nil && !utils.IsNil(o.DropOffLocation) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DropOffLocation) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDropOffLocation gets a reference to the given string and assigns it to the DropOffLocation field.
 func (o *Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences) SetDropOffLocation(v string) {
-    o.DropOffLocation = &v
+	o.DropOffLocation = &v
 }
 
 func (o Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.DropOffLocation) {
-        toSerialize["drop_off_location"] = o.DropOffLocation
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.DropOffLocation) {
+		toSerialize["drop_off_location"] = o.DropOffLocation
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences) UnmarshalJSON(data []byte) (err error) {
-    varOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences := _Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences{}
+	varOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences := _Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences{}
 
-    err = json.Unmarshal(data, &varOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences)
+	err = json.Unmarshal(data, &varOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences(varOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences)
+	*o = Order202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences(varOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "drop_off_location")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "drop_off_location")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeliveryPreferences struct {
@@ -152,5 +152,3 @@ func (v *NullableOrder202507GetOrderDetailResponseDataOrdersRecipientAddressDeli
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package customer_service_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the CustomerService202309GetAgentSettingsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the CustomerService202309GetAgentSettingsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &CustomerService202309GetAgentSettingsResponseData{}
 
 // CustomerService202309GetAgentSettingsResponseData struct for CustomerService202309GetAgentSettingsResponseData
 type CustomerService202309GetAgentSettingsResponseData struct {
-    // Whether the current agent can accept chat. If true, the agent will receive auto-assigned chats. The agent can manually select chats to respond.  If false, the agent will receive manually assigned chats only. 
-    CanAcceptChat *bool `json:"can_accept_chat,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Whether the current agent can accept chat. If true, the agent will receive auto-assigned chats. The agent can manually select chats to respond.  If false, the agent will receive manually assigned chats only.
+	CanAcceptChat        *bool `json:"can_accept_chat,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _CustomerService202309GetAgentSettingsResponseData CustomerService202309GetAgentSettingsResponseData
@@ -32,89 +32,89 @@ type _CustomerService202309GetAgentSettingsResponseData CustomerService202309Get
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewCustomerService202309GetAgentSettingsResponseData() *CustomerService202309GetAgentSettingsResponseData {
-    this := CustomerService202309GetAgentSettingsResponseData{}
-    return &this
+	this := CustomerService202309GetAgentSettingsResponseData{}
+	return &this
 }
 
 // NewCustomerService202309GetAgentSettingsResponseDataWithDefaults instantiates a new CustomerService202309GetAgentSettingsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewCustomerService202309GetAgentSettingsResponseDataWithDefaults() *CustomerService202309GetAgentSettingsResponseData {
-    this := CustomerService202309GetAgentSettingsResponseData{}
-    return &this
+	this := CustomerService202309GetAgentSettingsResponseData{}
+	return &this
 }
 
 // GetCanAcceptChat returns the CanAcceptChat field value if set, zero value otherwise.
 func (o *CustomerService202309GetAgentSettingsResponseData) GetCanAcceptChat() bool {
-    if o == nil || utils.IsNil(o.CanAcceptChat) {
-        var ret bool
-        return ret
-    }
-    return *o.CanAcceptChat
+	if o == nil || utils.IsNil(o.CanAcceptChat) {
+		var ret bool
+		return ret
+	}
+	return *o.CanAcceptChat
 }
 
 // GetCanAcceptChatOk returns a tuple with the CanAcceptChat field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309GetAgentSettingsResponseData) GetCanAcceptChatOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.CanAcceptChat) {
-        return nil, false
-    }
-    return o.CanAcceptChat, true
+	if o == nil || utils.IsNil(o.CanAcceptChat) {
+		return nil, false
+	}
+	return o.CanAcceptChat, true
 }
 
 // HasCanAcceptChat returns a boolean if a field has been set.
 func (o *CustomerService202309GetAgentSettingsResponseData) HasCanAcceptChat() bool {
-    if o != nil && !utils.IsNil(o.CanAcceptChat) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CanAcceptChat) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCanAcceptChat gets a reference to the given bool and assigns it to the CanAcceptChat field.
 func (o *CustomerService202309GetAgentSettingsResponseData) SetCanAcceptChat(v bool) {
-    o.CanAcceptChat = &v
+	o.CanAcceptChat = &v
 }
 
 func (o CustomerService202309GetAgentSettingsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o CustomerService202309GetAgentSettingsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CanAcceptChat) {
-        toSerialize["can_accept_chat"] = o.CanAcceptChat
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CanAcceptChat) {
+		toSerialize["can_accept_chat"] = o.CanAcceptChat
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *CustomerService202309GetAgentSettingsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varCustomerService202309GetAgentSettingsResponseData := _CustomerService202309GetAgentSettingsResponseData{}
+	varCustomerService202309GetAgentSettingsResponseData := _CustomerService202309GetAgentSettingsResponseData{}
 
-    err = json.Unmarshal(data, &varCustomerService202309GetAgentSettingsResponseData)
+	err = json.Unmarshal(data, &varCustomerService202309GetAgentSettingsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = CustomerService202309GetAgentSettingsResponseData(varCustomerService202309GetAgentSettingsResponseData)
+	*o = CustomerService202309GetAgentSettingsResponseData(varCustomerService202309GetAgentSettingsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "can_accept_chat")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "can_accept_chat")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableCustomerService202309GetAgentSettingsResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableCustomerService202309GetAgentSettingsResponseData) UnmarshalJSO
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

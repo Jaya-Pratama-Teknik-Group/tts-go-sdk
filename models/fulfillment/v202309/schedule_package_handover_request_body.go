@@ -11,23 +11,23 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309SchedulePackageHandoverRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309SchedulePackageHandoverRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309SchedulePackageHandoverRequestBody{}
 
 // Fulfillment202309SchedulePackageHandoverRequestBody struct for Fulfillment202309SchedulePackageHandoverRequestBody
 type Fulfillment202309SchedulePackageHandoverRequestBody struct {
-    // Schedule the package as a pickup or drop off. - PICKUP (A shipping provider will pickup the package(s) from the seller's pickup address)   - DROP_OFF (Seller will need to drop off the package(s) to a designated location)
-    HandoverMethod *string `json:"handover_method,omitempty"`
-    // TikTok Shop order ID
-    OrderId *string `json:"order_id,omitempty"`
-    // Line item ID list
-    OrderLineItemIds []string `json:"order_line_item_ids,omitempty"`
-    PickupSlot *Fulfillment202309SchedulePackageHandoverRequestBodyPickupSlot `json:"pickup_slot,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Schedule the package as a pickup or drop off. - PICKUP (A shipping provider will pickup the package(s) from the seller's pickup address)   - DROP_OFF (Seller will need to drop off the package(s) to a designated location)
+	HandoverMethod *string `json:"handover_method,omitempty"`
+	// TikTok Shop order ID
+	OrderId *string `json:"order_id,omitempty"`
+	// Line item ID list
+	OrderLineItemIds     []string                                                       `json:"order_line_item_ids,omitempty"`
+	PickupSlot           *Fulfillment202309SchedulePackageHandoverRequestBodyPickupSlot `json:"pickup_slot,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309SchedulePackageHandoverRequestBody Fulfillment202309SchedulePackageHandoverRequestBody
@@ -37,197 +37,197 @@ type _Fulfillment202309SchedulePackageHandoverRequestBody Fulfillment202309Sched
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309SchedulePackageHandoverRequestBody() *Fulfillment202309SchedulePackageHandoverRequestBody {
-    this := Fulfillment202309SchedulePackageHandoverRequestBody{}
-    return &this
+	this := Fulfillment202309SchedulePackageHandoverRequestBody{}
+	return &this
 }
 
 // NewFulfillment202309SchedulePackageHandoverRequestBodyWithDefaults instantiates a new Fulfillment202309SchedulePackageHandoverRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309SchedulePackageHandoverRequestBodyWithDefaults() *Fulfillment202309SchedulePackageHandoverRequestBody {
-    this := Fulfillment202309SchedulePackageHandoverRequestBody{}
-    return &this
+	this := Fulfillment202309SchedulePackageHandoverRequestBody{}
+	return &this
 }
 
 // GetHandoverMethod returns the HandoverMethod field value if set, zero value otherwise.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) GetHandoverMethod() string {
-    if o == nil || utils.IsNil(o.HandoverMethod) {
-        var ret string
-        return ret
-    }
-    return *o.HandoverMethod
+	if o == nil || utils.IsNil(o.HandoverMethod) {
+		var ret string
+		return ret
+	}
+	return *o.HandoverMethod
 }
 
 // GetHandoverMethodOk returns a tuple with the HandoverMethod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) GetHandoverMethodOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.HandoverMethod) {
-        return nil, false
-    }
-    return o.HandoverMethod, true
+	if o == nil || utils.IsNil(o.HandoverMethod) {
+		return nil, false
+	}
+	return o.HandoverMethod, true
 }
 
 // HasHandoverMethod returns a boolean if a field has been set.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) HasHandoverMethod() bool {
-    if o != nil && !utils.IsNil(o.HandoverMethod) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.HandoverMethod) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHandoverMethod gets a reference to the given string and assigns it to the HandoverMethod field.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) SetHandoverMethod(v string) {
-    o.HandoverMethod = &v
+	o.HandoverMethod = &v
 }
 
 // GetOrderId returns the OrderId field value if set, zero value otherwise.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) GetOrderId() string {
-    if o == nil || utils.IsNil(o.OrderId) {
-        var ret string
-        return ret
-    }
-    return *o.OrderId
+	if o == nil || utils.IsNil(o.OrderId) {
+		var ret string
+		return ret
+	}
+	return *o.OrderId
 }
 
 // GetOrderIdOk returns a tuple with the OrderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) GetOrderIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.OrderId) {
-        return nil, false
-    }
-    return o.OrderId, true
+	if o == nil || utils.IsNil(o.OrderId) {
+		return nil, false
+	}
+	return o.OrderId, true
 }
 
 // HasOrderId returns a boolean if a field has been set.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) HasOrderId() bool {
-    if o != nil && !utils.IsNil(o.OrderId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderId gets a reference to the given string and assigns it to the OrderId field.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) SetOrderId(v string) {
-    o.OrderId = &v
+	o.OrderId = &v
 }
 
 // GetOrderLineItemIds returns the OrderLineItemIds field value if set, zero value otherwise.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) GetOrderLineItemIds() []string {
-    if o == nil || utils.IsNil(o.OrderLineItemIds) {
-        var ret []string
-        return ret
-    }
-    return o.OrderLineItemIds
+	if o == nil || utils.IsNil(o.OrderLineItemIds) {
+		var ret []string
+		return ret
+	}
+	return o.OrderLineItemIds
 }
 
 // GetOrderLineItemIdsOk returns a tuple with the OrderLineItemIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) GetOrderLineItemIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.OrderLineItemIds) {
-        return nil, false
-    }
-    return o.OrderLineItemIds, true
+	if o == nil || utils.IsNil(o.OrderLineItemIds) {
+		return nil, false
+	}
+	return o.OrderLineItemIds, true
 }
 
 // HasOrderLineItemIds returns a boolean if a field has been set.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) HasOrderLineItemIds() bool {
-    if o != nil && !utils.IsNil(o.OrderLineItemIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderLineItemIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderLineItemIds gets a reference to the given []string and assigns it to the OrderLineItemIds field.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) SetOrderLineItemIds(v []string) {
-    o.OrderLineItemIds = v
+	o.OrderLineItemIds = v
 }
 
 // GetPickupSlot returns the PickupSlot field value if set, zero value otherwise.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) GetPickupSlot() Fulfillment202309SchedulePackageHandoverRequestBodyPickupSlot {
-    if o == nil || utils.IsNil(o.PickupSlot) {
-        var ret Fulfillment202309SchedulePackageHandoverRequestBodyPickupSlot
-        return ret
-    }
-    return *o.PickupSlot
+	if o == nil || utils.IsNil(o.PickupSlot) {
+		var ret Fulfillment202309SchedulePackageHandoverRequestBodyPickupSlot
+		return ret
+	}
+	return *o.PickupSlot
 }
 
 // GetPickupSlotOk returns a tuple with the PickupSlot field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) GetPickupSlotOk() (*Fulfillment202309SchedulePackageHandoverRequestBodyPickupSlot, bool) {
-    if o == nil || utils.IsNil(o.PickupSlot) {
-        return nil, false
-    }
-    return o.PickupSlot, true
+	if o == nil || utils.IsNil(o.PickupSlot) {
+		return nil, false
+	}
+	return o.PickupSlot, true
 }
 
 // HasPickupSlot returns a boolean if a field has been set.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) HasPickupSlot() bool {
-    if o != nil && !utils.IsNil(o.PickupSlot) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PickupSlot) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPickupSlot gets a reference to the given Fulfillment202309SchedulePackageHandoverRequestBodyPickupSlot and assigns it to the PickupSlot field.
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) SetPickupSlot(v Fulfillment202309SchedulePackageHandoverRequestBodyPickupSlot) {
-    o.PickupSlot = &v
+	o.PickupSlot = &v
 }
 
 func (o Fulfillment202309SchedulePackageHandoverRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309SchedulePackageHandoverRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.HandoverMethod) {
-        toSerialize["handover_method"] = o.HandoverMethod
-    }
-    if !utils.IsNil(o.OrderId) {
-        toSerialize["order_id"] = o.OrderId
-    }
-    if !utils.IsNil(o.OrderLineItemIds) {
-        toSerialize["order_line_item_ids"] = o.OrderLineItemIds
-    }
-    if !utils.IsNil(o.PickupSlot) {
-        toSerialize["pickup_slot"] = o.PickupSlot
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.HandoverMethod) {
+		toSerialize["handover_method"] = o.HandoverMethod
+	}
+	if !utils.IsNil(o.OrderId) {
+		toSerialize["order_id"] = o.OrderId
+	}
+	if !utils.IsNil(o.OrderLineItemIds) {
+		toSerialize["order_line_item_ids"] = o.OrderLineItemIds
+	}
+	if !utils.IsNil(o.PickupSlot) {
+		toSerialize["pickup_slot"] = o.PickupSlot
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309SchedulePackageHandoverRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309SchedulePackageHandoverRequestBody := _Fulfillment202309SchedulePackageHandoverRequestBody{}
+	varFulfillment202309SchedulePackageHandoverRequestBody := _Fulfillment202309SchedulePackageHandoverRequestBody{}
 
-    err = json.Unmarshal(data, &varFulfillment202309SchedulePackageHandoverRequestBody)
+	err = json.Unmarshal(data, &varFulfillment202309SchedulePackageHandoverRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309SchedulePackageHandoverRequestBody(varFulfillment202309SchedulePackageHandoverRequestBody)
+	*o = Fulfillment202309SchedulePackageHandoverRequestBody(varFulfillment202309SchedulePackageHandoverRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "handover_method")
-        delete(additionalProperties, "order_id")
-        delete(additionalProperties, "order_line_item_ids")
-        delete(additionalProperties, "pickup_slot")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "handover_method")
+		delete(additionalProperties, "order_id")
+		delete(additionalProperties, "order_line_item_ids")
+		delete(additionalProperties, "pickup_slot")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309SchedulePackageHandoverRequestBody struct {
@@ -265,5 +265,3 @@ func (v *NullableFulfillment202309SchedulePackageHandoverRequestBody) UnmarshalJ
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,24 +11,24 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetProductResponseDataAuditFailedReasons type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetProductResponseDataAuditFailedReasons type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetProductResponseDataAuditFailedReasons{}
 
 // Product202309GetProductResponseDataAuditFailedReasons struct for Product202309GetProductResponseDataAuditFailedReasons
 type Product202309GetProductResponseDataAuditFailedReasons struct {
-    // The platform for listing the product. Possible values: - TIKTOK_SHOP - TOKOPEDIA
-    ListingPlatform *string `json:"listing_platform,omitempty"`
-    // The audit failure reason name.
-    Position *string `json:"position,omitempty"`
-    // A brief reason for failing TikTok Shop audit.
-    Reasons []string `json:"reasons,omitempty"`
-    // A detailed explanation of the reason for failure.
-    Suggestions []string `json:"suggestions,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The platform for listing the product. Possible values: - TIKTOK_SHOP - TOKOPEDIA
+	ListingPlatform *string `json:"listing_platform,omitempty"`
+	// The audit failure reason name.
+	Position *string `json:"position,omitempty"`
+	// A brief reason for failing TikTok Shop audit.
+	Reasons []string `json:"reasons,omitempty"`
+	// A detailed explanation of the reason for failure.
+	Suggestions          []string `json:"suggestions,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetProductResponseDataAuditFailedReasons Product202309GetProductResponseDataAuditFailedReasons
@@ -38,197 +38,197 @@ type _Product202309GetProductResponseDataAuditFailedReasons Product202309GetProd
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetProductResponseDataAuditFailedReasons() *Product202309GetProductResponseDataAuditFailedReasons {
-    this := Product202309GetProductResponseDataAuditFailedReasons{}
-    return &this
+	this := Product202309GetProductResponseDataAuditFailedReasons{}
+	return &this
 }
 
 // NewProduct202309GetProductResponseDataAuditFailedReasonsWithDefaults instantiates a new Product202309GetProductResponseDataAuditFailedReasons object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetProductResponseDataAuditFailedReasonsWithDefaults() *Product202309GetProductResponseDataAuditFailedReasons {
-    this := Product202309GetProductResponseDataAuditFailedReasons{}
-    return &this
+	this := Product202309GetProductResponseDataAuditFailedReasons{}
+	return &this
 }
 
 // GetListingPlatform returns the ListingPlatform field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) GetListingPlatform() string {
-    if o == nil || utils.IsNil(o.ListingPlatform) {
-        var ret string
-        return ret
-    }
-    return *o.ListingPlatform
+	if o == nil || utils.IsNil(o.ListingPlatform) {
+		var ret string
+		return ret
+	}
+	return *o.ListingPlatform
 }
 
 // GetListingPlatformOk returns a tuple with the ListingPlatform field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) GetListingPlatformOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ListingPlatform) {
-        return nil, false
-    }
-    return o.ListingPlatform, true
+	if o == nil || utils.IsNil(o.ListingPlatform) {
+		return nil, false
+	}
+	return o.ListingPlatform, true
 }
 
 // HasListingPlatform returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) HasListingPlatform() bool {
-    if o != nil && !utils.IsNil(o.ListingPlatform) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ListingPlatform) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetListingPlatform gets a reference to the given string and assigns it to the ListingPlatform field.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) SetListingPlatform(v string) {
-    o.ListingPlatform = &v
+	o.ListingPlatform = &v
 }
 
 // GetPosition returns the Position field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) GetPosition() string {
-    if o == nil || utils.IsNil(o.Position) {
-        var ret string
-        return ret
-    }
-    return *o.Position
+	if o == nil || utils.IsNil(o.Position) {
+		var ret string
+		return ret
+	}
+	return *o.Position
 }
 
 // GetPositionOk returns a tuple with the Position field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) GetPositionOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Position) {
-        return nil, false
-    }
-    return o.Position, true
+	if o == nil || utils.IsNil(o.Position) {
+		return nil, false
+	}
+	return o.Position, true
 }
 
 // HasPosition returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) HasPosition() bool {
-    if o != nil && !utils.IsNil(o.Position) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Position) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPosition gets a reference to the given string and assigns it to the Position field.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) SetPosition(v string) {
-    o.Position = &v
+	o.Position = &v
 }
 
 // GetReasons returns the Reasons field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) GetReasons() []string {
-    if o == nil || utils.IsNil(o.Reasons) {
-        var ret []string
-        return ret
-    }
-    return o.Reasons
+	if o == nil || utils.IsNil(o.Reasons) {
+		var ret []string
+		return ret
+	}
+	return o.Reasons
 }
 
 // GetReasonsOk returns a tuple with the Reasons field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) GetReasonsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.Reasons) {
-        return nil, false
-    }
-    return o.Reasons, true
+	if o == nil || utils.IsNil(o.Reasons) {
+		return nil, false
+	}
+	return o.Reasons, true
 }
 
 // HasReasons returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) HasReasons() bool {
-    if o != nil && !utils.IsNil(o.Reasons) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Reasons) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReasons gets a reference to the given []string and assigns it to the Reasons field.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) SetReasons(v []string) {
-    o.Reasons = v
+	o.Reasons = v
 }
 
 // GetSuggestions returns the Suggestions field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) GetSuggestions() []string {
-    if o == nil || utils.IsNil(o.Suggestions) {
-        var ret []string
-        return ret
-    }
-    return o.Suggestions
+	if o == nil || utils.IsNil(o.Suggestions) {
+		var ret []string
+		return ret
+	}
+	return o.Suggestions
 }
 
 // GetSuggestionsOk returns a tuple with the Suggestions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) GetSuggestionsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.Suggestions) {
-        return nil, false
-    }
-    return o.Suggestions, true
+	if o == nil || utils.IsNil(o.Suggestions) {
+		return nil, false
+	}
+	return o.Suggestions, true
 }
 
 // HasSuggestions returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) HasSuggestions() bool {
-    if o != nil && !utils.IsNil(o.Suggestions) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Suggestions) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSuggestions gets a reference to the given []string and assigns it to the Suggestions field.
 func (o *Product202309GetProductResponseDataAuditFailedReasons) SetSuggestions(v []string) {
-    o.Suggestions = v
+	o.Suggestions = v
 }
 
 func (o Product202309GetProductResponseDataAuditFailedReasons) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetProductResponseDataAuditFailedReasons) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ListingPlatform) {
-        toSerialize["listing_platform"] = o.ListingPlatform
-    }
-    if !utils.IsNil(o.Position) {
-        toSerialize["position"] = o.Position
-    }
-    if !utils.IsNil(o.Reasons) {
-        toSerialize["reasons"] = o.Reasons
-    }
-    if !utils.IsNil(o.Suggestions) {
-        toSerialize["suggestions"] = o.Suggestions
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ListingPlatform) {
+		toSerialize["listing_platform"] = o.ListingPlatform
+	}
+	if !utils.IsNil(o.Position) {
+		toSerialize["position"] = o.Position
+	}
+	if !utils.IsNil(o.Reasons) {
+		toSerialize["reasons"] = o.Reasons
+	}
+	if !utils.IsNil(o.Suggestions) {
+		toSerialize["suggestions"] = o.Suggestions
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetProductResponseDataAuditFailedReasons) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetProductResponseDataAuditFailedReasons := _Product202309GetProductResponseDataAuditFailedReasons{}
+	varProduct202309GetProductResponseDataAuditFailedReasons := _Product202309GetProductResponseDataAuditFailedReasons{}
 
-    err = json.Unmarshal(data, &varProduct202309GetProductResponseDataAuditFailedReasons)
+	err = json.Unmarshal(data, &varProduct202309GetProductResponseDataAuditFailedReasons)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetProductResponseDataAuditFailedReasons(varProduct202309GetProductResponseDataAuditFailedReasons)
+	*o = Product202309GetProductResponseDataAuditFailedReasons(varProduct202309GetProductResponseDataAuditFailedReasons)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "listing_platform")
-        delete(additionalProperties, "position")
-        delete(additionalProperties, "reasons")
-        delete(additionalProperties, "suggestions")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "listing_platform")
+		delete(additionalProperties, "position")
+		delete(additionalProperties, "reasons")
+		delete(additionalProperties, "suggestions")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetProductResponseDataAuditFailedReasons struct {
@@ -266,5 +266,3 @@ func (v *NullableProduct202309GetProductResponseDataAuditFailedReasons) Unmarsha
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

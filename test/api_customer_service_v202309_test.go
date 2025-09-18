@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_CustomerServiceV202309APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_CustomerServiceV202309APIService(t *testing.T) {
 
 	t.Run("Test CustomerServiceV202309APIService CustomerService202309AgentsSettingsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.CustomerServiceV202309API.CustomerService202309AgentsSettingsGet(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_sdk_golang_CustomerServiceV202309APIService(t *testing.T) {
 
 	t.Run("Test CustomerServiceV202309APIService CustomerService202309AgentsSettingsPut", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.CustomerServiceV202309API.CustomerService202309AgentsSettingsPut(context.Background()).Execute()
 
@@ -48,7 +48,7 @@ func Test_sdk_golang_CustomerServiceV202309APIService(t *testing.T) {
 
 	t.Run("Test CustomerServiceV202309APIService CustomerService202309ConversationsConversationIdMessagesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var conversationId string
 
@@ -62,7 +62,7 @@ func Test_sdk_golang_CustomerServiceV202309APIService(t *testing.T) {
 
 	t.Run("Test CustomerServiceV202309APIService CustomerService202309ConversationsConversationIdMessagesPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var conversationId string
 
@@ -76,7 +76,7 @@ func Test_sdk_golang_CustomerServiceV202309APIService(t *testing.T) {
 
 	t.Run("Test CustomerServiceV202309APIService CustomerService202309ConversationsConversationIdMessagesReadPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var conversationId string
 
@@ -90,7 +90,7 @@ func Test_sdk_golang_CustomerServiceV202309APIService(t *testing.T) {
 
 	t.Run("Test CustomerServiceV202309APIService CustomerService202309ConversationsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.CustomerServiceV202309API.CustomerService202309ConversationsGet(context.Background()).Execute()
 
@@ -102,7 +102,7 @@ func Test_sdk_golang_CustomerServiceV202309APIService(t *testing.T) {
 
 	t.Run("Test CustomerServiceV202309APIService CustomerService202309ConversationsPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.CustomerServiceV202309API.CustomerService202309ConversationsPost(context.Background()).Execute()
 
@@ -114,7 +114,7 @@ func Test_sdk_golang_CustomerServiceV202309APIService(t *testing.T) {
 
 	t.Run("Test CustomerServiceV202309APIService CustomerService202309ImagesUploadPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.CustomerServiceV202309API.CustomerService202309ImagesUploadPost(context.Background()).Execute()
 

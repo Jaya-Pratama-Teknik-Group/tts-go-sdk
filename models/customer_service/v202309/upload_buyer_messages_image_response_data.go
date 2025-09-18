@@ -11,22 +11,22 @@ API version: 1.0.0
 package customer_service_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the CustomerService202309UploadBuyerMessagesImageResponseData type satisfies the MappedNullable interface at compile time
+// checks if the CustomerService202309UploadBuyerMessagesImageResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &CustomerService202309UploadBuyerMessagesImageResponseData{}
 
 // CustomerService202309UploadBuyerMessagesImageResponseData struct for CustomerService202309UploadBuyerMessagesImageResponseData
 type CustomerService202309UploadBuyerMessagesImageResponseData struct {
-    // Image height
-    Height *int32 `json:"height,omitempty"`
-    // Image URL 
-    Url *string `json:"url,omitempty"`
-    // Image width
-    Width *int32 `json:"width,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Image height
+	Height *int32 `json:"height,omitempty"`
+	// Image URL
+	Url *string `json:"url,omitempty"`
+	// Image width
+	Width                *int32 `json:"width,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _CustomerService202309UploadBuyerMessagesImageResponseData CustomerService202309UploadBuyerMessagesImageResponseData
@@ -36,161 +36,161 @@ type _CustomerService202309UploadBuyerMessagesImageResponseData CustomerService2
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewCustomerService202309UploadBuyerMessagesImageResponseData() *CustomerService202309UploadBuyerMessagesImageResponseData {
-    this := CustomerService202309UploadBuyerMessagesImageResponseData{}
-    return &this
+	this := CustomerService202309UploadBuyerMessagesImageResponseData{}
+	return &this
 }
 
 // NewCustomerService202309UploadBuyerMessagesImageResponseDataWithDefaults instantiates a new CustomerService202309UploadBuyerMessagesImageResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewCustomerService202309UploadBuyerMessagesImageResponseDataWithDefaults() *CustomerService202309UploadBuyerMessagesImageResponseData {
-    this := CustomerService202309UploadBuyerMessagesImageResponseData{}
-    return &this
+	this := CustomerService202309UploadBuyerMessagesImageResponseData{}
+	return &this
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) GetHeight() int32 {
-    if o == nil || utils.IsNil(o.Height) {
-        var ret int32
-        return ret
-    }
-    return *o.Height
+	if o == nil || utils.IsNil(o.Height) {
+		var ret int32
+		return ret
+	}
+	return *o.Height
 }
 
 // GetHeightOk returns a tuple with the Height field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) GetHeightOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Height) {
-        return nil, false
-    }
-    return o.Height, true
+	if o == nil || utils.IsNil(o.Height) {
+		return nil, false
+	}
+	return o.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) HasHeight() bool {
-    if o != nil && !utils.IsNil(o.Height) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Height) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHeight gets a reference to the given int32 and assigns it to the Height field.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) SetHeight(v int32) {
-    o.Height = &v
+	o.Height = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) GetUrl() string {
-    if o == nil || utils.IsNil(o.Url) {
-        var ret string
-        return ret
-    }
-    return *o.Url
+	if o == nil || utils.IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
 }
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) GetUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Url) {
-        return nil, false
-    }
-    return o.Url, true
+	if o == nil || utils.IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
 }
 
 // HasUrl returns a boolean if a field has been set.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) HasUrl() bool {
-    if o != nil && !utils.IsNil(o.Url) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Url) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) SetUrl(v string) {
-    o.Url = &v
+	o.Url = &v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) GetWidth() int32 {
-    if o == nil || utils.IsNil(o.Width) {
-        var ret int32
-        return ret
-    }
-    return *o.Width
+	if o == nil || utils.IsNil(o.Width) {
+		var ret int32
+		return ret
+	}
+	return *o.Width
 }
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) GetWidthOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Width) {
-        return nil, false
-    }
-    return o.Width, true
+	if o == nil || utils.IsNil(o.Width) {
+		return nil, false
+	}
+	return o.Width, true
 }
 
 // HasWidth returns a boolean if a field has been set.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) HasWidth() bool {
-    if o != nil && !utils.IsNil(o.Width) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Width) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWidth gets a reference to the given int32 and assigns it to the Width field.
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) SetWidth(v int32) {
-    o.Width = &v
+	o.Width = &v
 }
 
 func (o CustomerService202309UploadBuyerMessagesImageResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o CustomerService202309UploadBuyerMessagesImageResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Height) {
-        toSerialize["height"] = o.Height
-    }
-    if !utils.IsNil(o.Url) {
-        toSerialize["url"] = o.Url
-    }
-    if !utils.IsNil(o.Width) {
-        toSerialize["width"] = o.Width
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Height) {
+		toSerialize["height"] = o.Height
+	}
+	if !utils.IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
+	if !utils.IsNil(o.Width) {
+		toSerialize["width"] = o.Width
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *CustomerService202309UploadBuyerMessagesImageResponseData) UnmarshalJSON(data []byte) (err error) {
-    varCustomerService202309UploadBuyerMessagesImageResponseData := _CustomerService202309UploadBuyerMessagesImageResponseData{}
+	varCustomerService202309UploadBuyerMessagesImageResponseData := _CustomerService202309UploadBuyerMessagesImageResponseData{}
 
-    err = json.Unmarshal(data, &varCustomerService202309UploadBuyerMessagesImageResponseData)
+	err = json.Unmarshal(data, &varCustomerService202309UploadBuyerMessagesImageResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = CustomerService202309UploadBuyerMessagesImageResponseData(varCustomerService202309UploadBuyerMessagesImageResponseData)
+	*o = CustomerService202309UploadBuyerMessagesImageResponseData(varCustomerService202309UploadBuyerMessagesImageResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "height")
-        delete(additionalProperties, "url")
-        delete(additionalProperties, "width")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "height")
+		delete(additionalProperties, "url")
+		delete(additionalProperties, "width")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableCustomerService202309UploadBuyerMessagesImageResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullableCustomerService202309UploadBuyerMessagesImageResponseData) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,19 +11,19 @@ API version: 1.0.0
 package promotion_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202406SearchCouponsResponseDataCouponsThreshold type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202406SearchCouponsResponseDataCouponsThreshold type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202406SearchCouponsResponseDataCouponsThreshold{}
 
 // Promotion202406SearchCouponsResponseDataCouponsThreshold struct for Promotion202406SearchCouponsResponseDataCouponsThreshold
 type Promotion202406SearchCouponsResponseDataCouponsThreshold struct {
-    MinSpend *Promotion202406SearchCouponsResponseDataCouponsThresholdMinSpend `json:"min_spend,omitempty"`
-    // The type of purchase criteria. Possible enumerations are: - `NONE`: No minimum purchase criteria. - `MIN_SPEND`: Buyer must meet or exceed the minimum spend criteria with eligible products.
-    Type *string `json:"type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	MinSpend *Promotion202406SearchCouponsResponseDataCouponsThresholdMinSpend `json:"min_spend,omitempty"`
+	// The type of purchase criteria. Possible enumerations are: - `NONE`: No minimum purchase criteria. - `MIN_SPEND`: Buyer must meet or exceed the minimum spend criteria with eligible products.
+	Type                 *string `json:"type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202406SearchCouponsResponseDataCouponsThreshold Promotion202406SearchCouponsResponseDataCouponsThreshold
@@ -33,125 +33,125 @@ type _Promotion202406SearchCouponsResponseDataCouponsThreshold Promotion202406Se
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202406SearchCouponsResponseDataCouponsThreshold() *Promotion202406SearchCouponsResponseDataCouponsThreshold {
-    this := Promotion202406SearchCouponsResponseDataCouponsThreshold{}
-    return &this
+	this := Promotion202406SearchCouponsResponseDataCouponsThreshold{}
+	return &this
 }
 
 // NewPromotion202406SearchCouponsResponseDataCouponsThresholdWithDefaults instantiates a new Promotion202406SearchCouponsResponseDataCouponsThreshold object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202406SearchCouponsResponseDataCouponsThresholdWithDefaults() *Promotion202406SearchCouponsResponseDataCouponsThreshold {
-    this := Promotion202406SearchCouponsResponseDataCouponsThreshold{}
-    return &this
+	this := Promotion202406SearchCouponsResponseDataCouponsThreshold{}
+	return &this
 }
 
 // GetMinSpend returns the MinSpend field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseDataCouponsThreshold) GetMinSpend() Promotion202406SearchCouponsResponseDataCouponsThresholdMinSpend {
-    if o == nil || utils.IsNil(o.MinSpend) {
-        var ret Promotion202406SearchCouponsResponseDataCouponsThresholdMinSpend
-        return ret
-    }
-    return *o.MinSpend
+	if o == nil || utils.IsNil(o.MinSpend) {
+		var ret Promotion202406SearchCouponsResponseDataCouponsThresholdMinSpend
+		return ret
+	}
+	return *o.MinSpend
 }
 
 // GetMinSpendOk returns a tuple with the MinSpend field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsThreshold) GetMinSpendOk() (*Promotion202406SearchCouponsResponseDataCouponsThresholdMinSpend, bool) {
-    if o == nil || utils.IsNil(o.MinSpend) {
-        return nil, false
-    }
-    return o.MinSpend, true
+	if o == nil || utils.IsNil(o.MinSpend) {
+		return nil, false
+	}
+	return o.MinSpend, true
 }
 
 // HasMinSpend returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsThreshold) HasMinSpend() bool {
-    if o != nil && !utils.IsNil(o.MinSpend) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MinSpend) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMinSpend gets a reference to the given Promotion202406SearchCouponsResponseDataCouponsThresholdMinSpend and assigns it to the MinSpend field.
 func (o *Promotion202406SearchCouponsResponseDataCouponsThreshold) SetMinSpend(v Promotion202406SearchCouponsResponseDataCouponsThresholdMinSpend) {
-    o.MinSpend = &v
+	o.MinSpend = &v
 }
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseDataCouponsThreshold) GetType() string {
-    if o == nil || utils.IsNil(o.Type) {
-        var ret string
-        return ret
-    }
-    return *o.Type
+	if o == nil || utils.IsNil(o.Type) {
+		var ret string
+		return ret
+	}
+	return *o.Type
 }
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsThreshold) GetTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Type) {
-        return nil, false
-    }
-    return o.Type, true
+	if o == nil || utils.IsNil(o.Type) {
+		return nil, false
+	}
+	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsThreshold) HasType() bool {
-    if o != nil && !utils.IsNil(o.Type) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Type) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
 func (o *Promotion202406SearchCouponsResponseDataCouponsThreshold) SetType(v string) {
-    o.Type = &v
+	o.Type = &v
 }
 
 func (o Promotion202406SearchCouponsResponseDataCouponsThreshold) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202406SearchCouponsResponseDataCouponsThreshold) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.MinSpend) {
-        toSerialize["min_spend"] = o.MinSpend
-    }
-    if !utils.IsNil(o.Type) {
-        toSerialize["type"] = o.Type
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.MinSpend) {
+		toSerialize["min_spend"] = o.MinSpend
+	}
+	if !utils.IsNil(o.Type) {
+		toSerialize["type"] = o.Type
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202406SearchCouponsResponseDataCouponsThreshold) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202406SearchCouponsResponseDataCouponsThreshold := _Promotion202406SearchCouponsResponseDataCouponsThreshold{}
+	varPromotion202406SearchCouponsResponseDataCouponsThreshold := _Promotion202406SearchCouponsResponseDataCouponsThreshold{}
 
-    err = json.Unmarshal(data, &varPromotion202406SearchCouponsResponseDataCouponsThreshold)
+	err = json.Unmarshal(data, &varPromotion202406SearchCouponsResponseDataCouponsThreshold)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202406SearchCouponsResponseDataCouponsThreshold(varPromotion202406SearchCouponsResponseDataCouponsThreshold)
+	*o = Promotion202406SearchCouponsResponseDataCouponsThreshold(varPromotion202406SearchCouponsResponseDataCouponsThreshold)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "min_spend")
-        delete(additionalProperties, "type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "min_spend")
+		delete(additionalProperties, "type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202406SearchCouponsResponseDataCouponsThreshold struct {
@@ -189,5 +189,3 @@ func (v *NullablePromotion202406SearchCouponsResponseDataCouponsThreshold) Unmar
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

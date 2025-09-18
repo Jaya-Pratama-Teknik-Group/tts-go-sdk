@@ -11,27 +11,27 @@ API version: 1.0.0
 package product_v202409
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202409SearchManufacturersResponseDataManufacturers type satisfies the MappedNullable interface at compile time
+// checks if the Product202409SearchManufacturersResponseDataManufacturers type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202409SearchManufacturersResponseDataManufacturers{}
 
 // Product202409SearchManufacturersResponseDataManufacturers struct for Product202409SearchManufacturersResponseDataManufacturers
 type Product202409SearchManufacturersResponseDataManufacturers struct {
-    // The postal address of the manufacturer. Max length: 500 characters
-    Address *string `json:"address,omitempty"`
-    // The email address of the manufacturer.
-    Email *string `json:"email,omitempty"`
-    // The manufacturer ID in TikTok Shop.
-    Id *string `json:"id,omitempty"`
-    // The manufacturer name. Max length: 255 characters
-    Name *string `json:"name,omitempty"`
-    PhoneNumber *Product202409SearchManufacturersResponseDataManufacturersPhoneNumber `json:"phone_number,omitempty"`
-    // The registered trade name of the manufacturer. Max length: 200 characters
-    RegisteredTradeName *string `json:"registered_trade_name,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The postal address of the manufacturer. Max length: 500 characters
+	Address *string `json:"address,omitempty"`
+	// The email address of the manufacturer.
+	Email *string `json:"email,omitempty"`
+	// The manufacturer ID in TikTok Shop.
+	Id *string `json:"id,omitempty"`
+	// The manufacturer name. Max length: 255 characters
+	Name        *string                                                               `json:"name,omitempty"`
+	PhoneNumber *Product202409SearchManufacturersResponseDataManufacturersPhoneNumber `json:"phone_number,omitempty"`
+	// The registered trade name of the manufacturer. Max length: 200 characters
+	RegisteredTradeName  *string `json:"registered_trade_name,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202409SearchManufacturersResponseDataManufacturers Product202409SearchManufacturersResponseDataManufacturers
@@ -41,269 +41,269 @@ type _Product202409SearchManufacturersResponseDataManufacturers Product202409Sea
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202409SearchManufacturersResponseDataManufacturers() *Product202409SearchManufacturersResponseDataManufacturers {
-    this := Product202409SearchManufacturersResponseDataManufacturers{}
-    return &this
+	this := Product202409SearchManufacturersResponseDataManufacturers{}
+	return &this
 }
 
 // NewProduct202409SearchManufacturersResponseDataManufacturersWithDefaults instantiates a new Product202409SearchManufacturersResponseDataManufacturers object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202409SearchManufacturersResponseDataManufacturersWithDefaults() *Product202409SearchManufacturersResponseDataManufacturers {
-    this := Product202409SearchManufacturersResponseDataManufacturers{}
-    return &this
+	this := Product202409SearchManufacturersResponseDataManufacturers{}
+	return &this
 }
 
 // GetAddress returns the Address field value if set, zero value otherwise.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetAddress() string {
-    if o == nil || utils.IsNil(o.Address) {
-        var ret string
-        return ret
-    }
-    return *o.Address
+	if o == nil || utils.IsNil(o.Address) {
+		var ret string
+		return ret
+	}
+	return *o.Address
 }
 
 // GetAddressOk returns a tuple with the Address field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetAddressOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Address) {
-        return nil, false
-    }
-    return o.Address, true
+	if o == nil || utils.IsNil(o.Address) {
+		return nil, false
+	}
+	return o.Address, true
 }
 
 // HasAddress returns a boolean if a field has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) HasAddress() bool {
-    if o != nil && !utils.IsNil(o.Address) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Address) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddress gets a reference to the given string and assigns it to the Address field.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) SetAddress(v string) {
-    o.Address = &v
+	o.Address = &v
 }
 
 // GetEmail returns the Email field value if set, zero value otherwise.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetEmail() string {
-    if o == nil || utils.IsNil(o.Email) {
-        var ret string
-        return ret
-    }
-    return *o.Email
+	if o == nil || utils.IsNil(o.Email) {
+		var ret string
+		return ret
+	}
+	return *o.Email
 }
 
 // GetEmailOk returns a tuple with the Email field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetEmailOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Email) {
-        return nil, false
-    }
-    return o.Email, true
+	if o == nil || utils.IsNil(o.Email) {
+		return nil, false
+	}
+	return o.Email, true
 }
 
 // HasEmail returns a boolean if a field has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) HasEmail() bool {
-    if o != nil && !utils.IsNil(o.Email) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Email) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetEmail gets a reference to the given string and assigns it to the Email field.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) SetEmail(v string) {
-    o.Email = &v
+	o.Email = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 // GetPhoneNumber returns the PhoneNumber field value if set, zero value otherwise.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetPhoneNumber() Product202409SearchManufacturersResponseDataManufacturersPhoneNumber {
-    if o == nil || utils.IsNil(o.PhoneNumber) {
-        var ret Product202409SearchManufacturersResponseDataManufacturersPhoneNumber
-        return ret
-    }
-    return *o.PhoneNumber
+	if o == nil || utils.IsNil(o.PhoneNumber) {
+		var ret Product202409SearchManufacturersResponseDataManufacturersPhoneNumber
+		return ret
+	}
+	return *o.PhoneNumber
 }
 
 // GetPhoneNumberOk returns a tuple with the PhoneNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetPhoneNumberOk() (*Product202409SearchManufacturersResponseDataManufacturersPhoneNumber, bool) {
-    if o == nil || utils.IsNil(o.PhoneNumber) {
-        return nil, false
-    }
-    return o.PhoneNumber, true
+	if o == nil || utils.IsNil(o.PhoneNumber) {
+		return nil, false
+	}
+	return o.PhoneNumber, true
 }
 
 // HasPhoneNumber returns a boolean if a field has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) HasPhoneNumber() bool {
-    if o != nil && !utils.IsNil(o.PhoneNumber) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PhoneNumber) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPhoneNumber gets a reference to the given Product202409SearchManufacturersResponseDataManufacturersPhoneNumber and assigns it to the PhoneNumber field.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) SetPhoneNumber(v Product202409SearchManufacturersResponseDataManufacturersPhoneNumber) {
-    o.PhoneNumber = &v
+	o.PhoneNumber = &v
 }
 
 // GetRegisteredTradeName returns the RegisteredTradeName field value if set, zero value otherwise.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetRegisteredTradeName() string {
-    if o == nil || utils.IsNil(o.RegisteredTradeName) {
-        var ret string
-        return ret
-    }
-    return *o.RegisteredTradeName
+	if o == nil || utils.IsNil(o.RegisteredTradeName) {
+		var ret string
+		return ret
+	}
+	return *o.RegisteredTradeName
 }
 
 // GetRegisteredTradeNameOk returns a tuple with the RegisteredTradeName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) GetRegisteredTradeNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.RegisteredTradeName) {
-        return nil, false
-    }
-    return o.RegisteredTradeName, true
+	if o == nil || utils.IsNil(o.RegisteredTradeName) {
+		return nil, false
+	}
+	return o.RegisteredTradeName, true
 }
 
 // HasRegisteredTradeName returns a boolean if a field has been set.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) HasRegisteredTradeName() bool {
-    if o != nil && !utils.IsNil(o.RegisteredTradeName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RegisteredTradeName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRegisteredTradeName gets a reference to the given string and assigns it to the RegisteredTradeName field.
 func (o *Product202409SearchManufacturersResponseDataManufacturers) SetRegisteredTradeName(v string) {
-    o.RegisteredTradeName = &v
+	o.RegisteredTradeName = &v
 }
 
 func (o Product202409SearchManufacturersResponseDataManufacturers) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202409SearchManufacturersResponseDataManufacturers) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Address) {
-        toSerialize["address"] = o.Address
-    }
-    if !utils.IsNil(o.Email) {
-        toSerialize["email"] = o.Email
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
-    if !utils.IsNil(o.PhoneNumber) {
-        toSerialize["phone_number"] = o.PhoneNumber
-    }
-    if !utils.IsNil(o.RegisteredTradeName) {
-        toSerialize["registered_trade_name"] = o.RegisteredTradeName
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Address) {
+		toSerialize["address"] = o.Address
+	}
+	if !utils.IsNil(o.Email) {
+		toSerialize["email"] = o.Email
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !utils.IsNil(o.PhoneNumber) {
+		toSerialize["phone_number"] = o.PhoneNumber
+	}
+	if !utils.IsNil(o.RegisteredTradeName) {
+		toSerialize["registered_trade_name"] = o.RegisteredTradeName
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202409SearchManufacturersResponseDataManufacturers) UnmarshalJSON(data []byte) (err error) {
-    varProduct202409SearchManufacturersResponseDataManufacturers := _Product202409SearchManufacturersResponseDataManufacturers{}
+	varProduct202409SearchManufacturersResponseDataManufacturers := _Product202409SearchManufacturersResponseDataManufacturers{}
 
-    err = json.Unmarshal(data, &varProduct202409SearchManufacturersResponseDataManufacturers)
+	err = json.Unmarshal(data, &varProduct202409SearchManufacturersResponseDataManufacturers)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202409SearchManufacturersResponseDataManufacturers(varProduct202409SearchManufacturersResponseDataManufacturers)
+	*o = Product202409SearchManufacturersResponseDataManufacturers(varProduct202409SearchManufacturersResponseDataManufacturers)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "address")
-        delete(additionalProperties, "email")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "name")
-        delete(additionalProperties, "phone_number")
-        delete(additionalProperties, "registered_trade_name")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "address")
+		delete(additionalProperties, "email")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "phone_number")
+		delete(additionalProperties, "registered_trade_name")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202409SearchManufacturersResponseDataManufacturers struct {
@@ -341,5 +341,3 @@ func (v *NullableProduct202409SearchManufacturersResponseDataManufacturers) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

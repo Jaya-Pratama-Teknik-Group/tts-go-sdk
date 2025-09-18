@@ -11,18 +11,18 @@ API version: 1.0.0
 package logistics_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Logistics202309GetWarehouseListResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Logistics202309GetWarehouseListResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Logistics202309GetWarehouseListResponseData{}
 
 // Logistics202309GetWarehouseListResponseData struct for Logistics202309GetWarehouseListResponseData
 type Logistics202309GetWarehouseListResponseData struct {
-    // All the warehouses associated with the seller.
-    Warehouses []Logistics202309GetWarehouseListResponseDataWarehouses `json:"warehouses,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// All the warehouses associated with the seller.
+	Warehouses           []Logistics202309GetWarehouseListResponseDataWarehouses `json:"warehouses,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Logistics202309GetWarehouseListResponseData Logistics202309GetWarehouseListResponseData
@@ -32,89 +32,89 @@ type _Logistics202309GetWarehouseListResponseData Logistics202309GetWarehouseLis
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewLogistics202309GetWarehouseListResponseData() *Logistics202309GetWarehouseListResponseData {
-    this := Logistics202309GetWarehouseListResponseData{}
-    return &this
+	this := Logistics202309GetWarehouseListResponseData{}
+	return &this
 }
 
 // NewLogistics202309GetWarehouseListResponseDataWithDefaults instantiates a new Logistics202309GetWarehouseListResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewLogistics202309GetWarehouseListResponseDataWithDefaults() *Logistics202309GetWarehouseListResponseData {
-    this := Logistics202309GetWarehouseListResponseData{}
-    return &this
+	this := Logistics202309GetWarehouseListResponseData{}
+	return &this
 }
 
 // GetWarehouses returns the Warehouses field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseListResponseData) GetWarehouses() []Logistics202309GetWarehouseListResponseDataWarehouses {
-    if o == nil || utils.IsNil(o.Warehouses) {
-        var ret []Logistics202309GetWarehouseListResponseDataWarehouses
-        return ret
-    }
-    return o.Warehouses
+	if o == nil || utils.IsNil(o.Warehouses) {
+		var ret []Logistics202309GetWarehouseListResponseDataWarehouses
+		return ret
+	}
+	return o.Warehouses
 }
 
 // GetWarehousesOk returns a tuple with the Warehouses field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseListResponseData) GetWarehousesOk() ([]Logistics202309GetWarehouseListResponseDataWarehouses, bool) {
-    if o == nil || utils.IsNil(o.Warehouses) {
-        return nil, false
-    }
-    return o.Warehouses, true
+	if o == nil || utils.IsNil(o.Warehouses) {
+		return nil, false
+	}
+	return o.Warehouses, true
 }
 
 // HasWarehouses returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseListResponseData) HasWarehouses() bool {
-    if o != nil && !utils.IsNil(o.Warehouses) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Warehouses) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWarehouses gets a reference to the given []Logistics202309GetWarehouseListResponseDataWarehouses and assigns it to the Warehouses field.
 func (o *Logistics202309GetWarehouseListResponseData) SetWarehouses(v []Logistics202309GetWarehouseListResponseDataWarehouses) {
-    o.Warehouses = v
+	o.Warehouses = v
 }
 
 func (o Logistics202309GetWarehouseListResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Logistics202309GetWarehouseListResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Warehouses) {
-        toSerialize["warehouses"] = o.Warehouses
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Warehouses) {
+		toSerialize["warehouses"] = o.Warehouses
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Logistics202309GetWarehouseListResponseData) UnmarshalJSON(data []byte) (err error) {
-    varLogistics202309GetWarehouseListResponseData := _Logistics202309GetWarehouseListResponseData{}
+	varLogistics202309GetWarehouseListResponseData := _Logistics202309GetWarehouseListResponseData{}
 
-    err = json.Unmarshal(data, &varLogistics202309GetWarehouseListResponseData)
+	err = json.Unmarshal(data, &varLogistics202309GetWarehouseListResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Logistics202309GetWarehouseListResponseData(varLogistics202309GetWarehouseListResponseData)
+	*o = Logistics202309GetWarehouseListResponseData(varLogistics202309GetWarehouseListResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "warehouses")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "warehouses")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableLogistics202309GetWarehouseListResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableLogistics202309GetWarehouseListResponseData) UnmarshalJSON(src 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

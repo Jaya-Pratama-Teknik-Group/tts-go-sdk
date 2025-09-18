@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetAttributesResponseDataAttributesValues type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetAttributesResponseDataAttributesValues type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetAttributesResponseDataAttributesValues{}
 
 // Product202309GetAttributesResponseDataAttributesValues struct for Product202309GetAttributesResponseDataAttributesValues
 type Product202309GetAttributesResponseDataAttributesValues struct {
-    // The icon url value of the built-in attribute value.
-    IconUrl *string `json:"icon_url,omitempty"`
-    // The ID of the built-in attribute value.
-    Id *string `json:"id,omitempty"`
-    // The name of the built-in attribute value.
-    Name *string `json:"name,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The icon url value of the built-in attribute value.
+	IconUrl *string `json:"icon_url,omitempty"`
+	// The ID of the built-in attribute value.
+	Id *string `json:"id,omitempty"`
+	// The name of the built-in attribute value.
+	Name                 *string `json:"name,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetAttributesResponseDataAttributesValues Product202309GetAttributesResponseDataAttributesValues
@@ -36,161 +36,161 @@ type _Product202309GetAttributesResponseDataAttributesValues Product202309GetAtt
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetAttributesResponseDataAttributesValues() *Product202309GetAttributesResponseDataAttributesValues {
-    this := Product202309GetAttributesResponseDataAttributesValues{}
-    return &this
+	this := Product202309GetAttributesResponseDataAttributesValues{}
+	return &this
 }
 
 // NewProduct202309GetAttributesResponseDataAttributesValuesWithDefaults instantiates a new Product202309GetAttributesResponseDataAttributesValues object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetAttributesResponseDataAttributesValuesWithDefaults() *Product202309GetAttributesResponseDataAttributesValues {
-    this := Product202309GetAttributesResponseDataAttributesValues{}
-    return &this
+	this := Product202309GetAttributesResponseDataAttributesValues{}
+	return &this
 }
 
 // GetIconUrl returns the IconUrl field value if set, zero value otherwise.
 func (o *Product202309GetAttributesResponseDataAttributesValues) GetIconUrl() string {
-    if o == nil || utils.IsNil(o.IconUrl) {
-        var ret string
-        return ret
-    }
-    return *o.IconUrl
+	if o == nil || utils.IsNil(o.IconUrl) {
+		var ret string
+		return ret
+	}
+	return *o.IconUrl
 }
 
 // GetIconUrlOk returns a tuple with the IconUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetAttributesResponseDataAttributesValues) GetIconUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.IconUrl) {
-        return nil, false
-    }
-    return o.IconUrl, true
+	if o == nil || utils.IsNil(o.IconUrl) {
+		return nil, false
+	}
+	return o.IconUrl, true
 }
 
 // HasIconUrl returns a boolean if a field has been set.
 func (o *Product202309GetAttributesResponseDataAttributesValues) HasIconUrl() bool {
-    if o != nil && !utils.IsNil(o.IconUrl) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.IconUrl) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIconUrl gets a reference to the given string and assigns it to the IconUrl field.
 func (o *Product202309GetAttributesResponseDataAttributesValues) SetIconUrl(v string) {
-    o.IconUrl = &v
+	o.IconUrl = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202309GetAttributesResponseDataAttributesValues) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetAttributesResponseDataAttributesValues) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202309GetAttributesResponseDataAttributesValues) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202309GetAttributesResponseDataAttributesValues) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Product202309GetAttributesResponseDataAttributesValues) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetAttributesResponseDataAttributesValues) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Product202309GetAttributesResponseDataAttributesValues) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Product202309GetAttributesResponseDataAttributesValues) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 func (o Product202309GetAttributesResponseDataAttributesValues) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetAttributesResponseDataAttributesValues) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.IconUrl) {
-        toSerialize["icon_url"] = o.IconUrl
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.IconUrl) {
+		toSerialize["icon_url"] = o.IconUrl
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetAttributesResponseDataAttributesValues) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetAttributesResponseDataAttributesValues := _Product202309GetAttributesResponseDataAttributesValues{}
+	varProduct202309GetAttributesResponseDataAttributesValues := _Product202309GetAttributesResponseDataAttributesValues{}
 
-    err = json.Unmarshal(data, &varProduct202309GetAttributesResponseDataAttributesValues)
+	err = json.Unmarshal(data, &varProduct202309GetAttributesResponseDataAttributesValues)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetAttributesResponseDataAttributesValues(varProduct202309GetAttributesResponseDataAttributesValues)
+	*o = Product202309GetAttributesResponseDataAttributesValues(varProduct202309GetAttributesResponseDataAttributesValues)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "icon_url")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "name")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "icon_url")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "name")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetAttributesResponseDataAttributesValues struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202309GetAttributesResponseDataAttributesValues) Unmarsh
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

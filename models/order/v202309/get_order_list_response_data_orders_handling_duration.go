@@ -11,20 +11,20 @@ API version: 1.0.0
 package order_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Order202309GetOrderListResponseDataOrdersHandlingDuration type satisfies the MappedNullable interface at compile time
+// checks if the Order202309GetOrderListResponseDataOrdersHandlingDuration type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Order202309GetOrderListResponseDataOrdersHandlingDuration{}
 
 // Order202309GetOrderListResponseDataOrdersHandlingDuration struct for Order202309GetOrderListResponseDataOrdersHandlingDuration
 type Order202309GetOrderListResponseDataOrdersHandlingDuration struct {
-    // The number of days.
-    Days *string `json:"days,omitempty"`
-    // Indicates if the duration is calculated in calendar days or business days. Possible values: - `CALENDAR_DAY`: Represents consecutive days, including weekends and holidays. - `BUSINESS_DAY`: Represents business days, excluding weekends and public holidays. Default: `BUSINESS_DAY`
-    Type *string `json:"type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The number of days.
+	Days *string `json:"days,omitempty"`
+	// Indicates if the duration is calculated in calendar days or business days. Possible values: - `CALENDAR_DAY`: Represents consecutive days, including weekends and holidays. - `BUSINESS_DAY`: Represents business days, excluding weekends and public holidays. Default: `BUSINESS_DAY`
+	Type                 *string `json:"type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Order202309GetOrderListResponseDataOrdersHandlingDuration Order202309GetOrderListResponseDataOrdersHandlingDuration
@@ -34,125 +34,125 @@ type _Order202309GetOrderListResponseDataOrdersHandlingDuration Order202309GetOr
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewOrder202309GetOrderListResponseDataOrdersHandlingDuration() *Order202309GetOrderListResponseDataOrdersHandlingDuration {
-    this := Order202309GetOrderListResponseDataOrdersHandlingDuration{}
-    return &this
+	this := Order202309GetOrderListResponseDataOrdersHandlingDuration{}
+	return &this
 }
 
 // NewOrder202309GetOrderListResponseDataOrdersHandlingDurationWithDefaults instantiates a new Order202309GetOrderListResponseDataOrdersHandlingDuration object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewOrder202309GetOrderListResponseDataOrdersHandlingDurationWithDefaults() *Order202309GetOrderListResponseDataOrdersHandlingDuration {
-    this := Order202309GetOrderListResponseDataOrdersHandlingDuration{}
-    return &this
+	this := Order202309GetOrderListResponseDataOrdersHandlingDuration{}
+	return &this
 }
 
 // GetDays returns the Days field value if set, zero value otherwise.
 func (o *Order202309GetOrderListResponseDataOrdersHandlingDuration) GetDays() string {
-    if o == nil || utils.IsNil(o.Days) {
-        var ret string
-        return ret
-    }
-    return *o.Days
+	if o == nil || utils.IsNil(o.Days) {
+		var ret string
+		return ret
+	}
+	return *o.Days
 }
 
 // GetDaysOk returns a tuple with the Days field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderListResponseDataOrdersHandlingDuration) GetDaysOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Days) {
-        return nil, false
-    }
-    return o.Days, true
+	if o == nil || utils.IsNil(o.Days) {
+		return nil, false
+	}
+	return o.Days, true
 }
 
 // HasDays returns a boolean if a field has been set.
 func (o *Order202309GetOrderListResponseDataOrdersHandlingDuration) HasDays() bool {
-    if o != nil && !utils.IsNil(o.Days) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Days) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDays gets a reference to the given string and assigns it to the Days field.
 func (o *Order202309GetOrderListResponseDataOrdersHandlingDuration) SetDays(v string) {
-    o.Days = &v
+	o.Days = &v
 }
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *Order202309GetOrderListResponseDataOrdersHandlingDuration) GetType() string {
-    if o == nil || utils.IsNil(o.Type) {
-        var ret string
-        return ret
-    }
-    return *o.Type
+	if o == nil || utils.IsNil(o.Type) {
+		var ret string
+		return ret
+	}
+	return *o.Type
 }
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderListResponseDataOrdersHandlingDuration) GetTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Type) {
-        return nil, false
-    }
-    return o.Type, true
+	if o == nil || utils.IsNil(o.Type) {
+		return nil, false
+	}
+	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *Order202309GetOrderListResponseDataOrdersHandlingDuration) HasType() bool {
-    if o != nil && !utils.IsNil(o.Type) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Type) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
 func (o *Order202309GetOrderListResponseDataOrdersHandlingDuration) SetType(v string) {
-    o.Type = &v
+	o.Type = &v
 }
 
 func (o Order202309GetOrderListResponseDataOrdersHandlingDuration) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Order202309GetOrderListResponseDataOrdersHandlingDuration) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Days) {
-        toSerialize["days"] = o.Days
-    }
-    if !utils.IsNil(o.Type) {
-        toSerialize["type"] = o.Type
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Days) {
+		toSerialize["days"] = o.Days
+	}
+	if !utils.IsNil(o.Type) {
+		toSerialize["type"] = o.Type
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Order202309GetOrderListResponseDataOrdersHandlingDuration) UnmarshalJSON(data []byte) (err error) {
-    varOrder202309GetOrderListResponseDataOrdersHandlingDuration := _Order202309GetOrderListResponseDataOrdersHandlingDuration{}
+	varOrder202309GetOrderListResponseDataOrdersHandlingDuration := _Order202309GetOrderListResponseDataOrdersHandlingDuration{}
 
-    err = json.Unmarshal(data, &varOrder202309GetOrderListResponseDataOrdersHandlingDuration)
+	err = json.Unmarshal(data, &varOrder202309GetOrderListResponseDataOrdersHandlingDuration)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Order202309GetOrderListResponseDataOrdersHandlingDuration(varOrder202309GetOrderListResponseDataOrdersHandlingDuration)
+	*o = Order202309GetOrderListResponseDataOrdersHandlingDuration(varOrder202309GetOrderListResponseDataOrdersHandlingDuration)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "days")
-        delete(additionalProperties, "type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "days")
+		delete(additionalProperties, "type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableOrder202309GetOrderListResponseDataOrdersHandlingDuration struct {
@@ -190,5 +190,3 @@ func (v *NullableOrder202309GetOrderListResponseDataOrdersHandlingDuration) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

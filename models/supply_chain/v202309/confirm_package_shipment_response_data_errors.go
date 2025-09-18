@@ -11,21 +11,21 @@ API version: 1.0.0
 package supply_chain_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the SupplyChain202309ConfirmPackageShipmentResponseDataErrors type satisfies the MappedNullable interface at compile time
+// checks if the SupplyChain202309ConfirmPackageShipmentResponseDataErrors type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &SupplyChain202309ConfirmPackageShipmentResponseDataErrors{}
 
 // SupplyChain202309ConfirmPackageShipmentResponseDataErrors struct for SupplyChain202309ConfirmPackageShipmentResponseDataErrors
 type SupplyChain202309ConfirmPackageShipmentResponseDataErrors struct {
-    // Error code
-    Code *string `json:"code,omitempty"`
-    Detail *SupplyChain202309ConfirmPackageShipmentResponseDataErrorsDetail `json:"detail,omitempty"`
-    // Error message
-    Message *string `json:"message,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Error code
+	Code   *string                                                          `json:"code,omitempty"`
+	Detail *SupplyChain202309ConfirmPackageShipmentResponseDataErrorsDetail `json:"detail,omitempty"`
+	// Error message
+	Message              *string `json:"message,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _SupplyChain202309ConfirmPackageShipmentResponseDataErrors SupplyChain202309ConfirmPackageShipmentResponseDataErrors
@@ -35,161 +35,161 @@ type _SupplyChain202309ConfirmPackageShipmentResponseDataErrors SupplyChain20230
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewSupplyChain202309ConfirmPackageShipmentResponseDataErrors() *SupplyChain202309ConfirmPackageShipmentResponseDataErrors {
-    this := SupplyChain202309ConfirmPackageShipmentResponseDataErrors{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentResponseDataErrors{}
+	return &this
 }
 
 // NewSupplyChain202309ConfirmPackageShipmentResponseDataErrorsWithDefaults instantiates a new SupplyChain202309ConfirmPackageShipmentResponseDataErrors object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewSupplyChain202309ConfirmPackageShipmentResponseDataErrorsWithDefaults() *SupplyChain202309ConfirmPackageShipmentResponseDataErrors {
-    this := SupplyChain202309ConfirmPackageShipmentResponseDataErrors{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentResponseDataErrors{}
+	return &this
 }
 
 // GetCode returns the Code field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) GetCode() string {
-    if o == nil || utils.IsNil(o.Code) {
-        var ret string
-        return ret
-    }
-    return *o.Code
+	if o == nil || utils.IsNil(o.Code) {
+		var ret string
+		return ret
+	}
+	return *o.Code
 }
 
 // GetCodeOk returns a tuple with the Code field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) GetCodeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Code) {
-        return nil, false
-    }
-    return o.Code, true
+	if o == nil || utils.IsNil(o.Code) {
+		return nil, false
+	}
+	return o.Code, true
 }
 
 // HasCode returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) HasCode() bool {
-    if o != nil && !utils.IsNil(o.Code) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Code) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCode gets a reference to the given string and assigns it to the Code field.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) SetCode(v string) {
-    o.Code = &v
+	o.Code = &v
 }
 
 // GetDetail returns the Detail field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) GetDetail() SupplyChain202309ConfirmPackageShipmentResponseDataErrorsDetail {
-    if o == nil || utils.IsNil(o.Detail) {
-        var ret SupplyChain202309ConfirmPackageShipmentResponseDataErrorsDetail
-        return ret
-    }
-    return *o.Detail
+	if o == nil || utils.IsNil(o.Detail) {
+		var ret SupplyChain202309ConfirmPackageShipmentResponseDataErrorsDetail
+		return ret
+	}
+	return *o.Detail
 }
 
 // GetDetailOk returns a tuple with the Detail field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) GetDetailOk() (*SupplyChain202309ConfirmPackageShipmentResponseDataErrorsDetail, bool) {
-    if o == nil || utils.IsNil(o.Detail) {
-        return nil, false
-    }
-    return o.Detail, true
+	if o == nil || utils.IsNil(o.Detail) {
+		return nil, false
+	}
+	return o.Detail, true
 }
 
 // HasDetail returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) HasDetail() bool {
-    if o != nil && !utils.IsNil(o.Detail) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Detail) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDetail gets a reference to the given SupplyChain202309ConfirmPackageShipmentResponseDataErrorsDetail and assigns it to the Detail field.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) SetDetail(v SupplyChain202309ConfirmPackageShipmentResponseDataErrorsDetail) {
-    o.Detail = &v
+	o.Detail = &v
 }
 
 // GetMessage returns the Message field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) GetMessage() string {
-    if o == nil || utils.IsNil(o.Message) {
-        var ret string
-        return ret
-    }
-    return *o.Message
+	if o == nil || utils.IsNil(o.Message) {
+		var ret string
+		return ret
+	}
+	return *o.Message
 }
 
 // GetMessageOk returns a tuple with the Message field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) GetMessageOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Message) {
-        return nil, false
-    }
-    return o.Message, true
+	if o == nil || utils.IsNil(o.Message) {
+		return nil, false
+	}
+	return o.Message, true
 }
 
 // HasMessage returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) HasMessage() bool {
-    if o != nil && !utils.IsNil(o.Message) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Message) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMessage gets a reference to the given string and assigns it to the Message field.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) SetMessage(v string) {
-    o.Message = &v
+	o.Message = &v
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentResponseDataErrors) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentResponseDataErrors) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Code) {
-        toSerialize["code"] = o.Code
-    }
-    if !utils.IsNil(o.Detail) {
-        toSerialize["detail"] = o.Detail
-    }
-    if !utils.IsNil(o.Message) {
-        toSerialize["message"] = o.Message
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Code) {
+		toSerialize["code"] = o.Code
+	}
+	if !utils.IsNil(o.Detail) {
+		toSerialize["detail"] = o.Detail
+	}
+	if !utils.IsNil(o.Message) {
+		toSerialize["message"] = o.Message
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *SupplyChain202309ConfirmPackageShipmentResponseDataErrors) UnmarshalJSON(data []byte) (err error) {
-    varSupplyChain202309ConfirmPackageShipmentResponseDataErrors := _SupplyChain202309ConfirmPackageShipmentResponseDataErrors{}
+	varSupplyChain202309ConfirmPackageShipmentResponseDataErrors := _SupplyChain202309ConfirmPackageShipmentResponseDataErrors{}
 
-    err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentResponseDataErrors)
+	err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentResponseDataErrors)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = SupplyChain202309ConfirmPackageShipmentResponseDataErrors(varSupplyChain202309ConfirmPackageShipmentResponseDataErrors)
+	*o = SupplyChain202309ConfirmPackageShipmentResponseDataErrors(varSupplyChain202309ConfirmPackageShipmentResponseDataErrors)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "code")
-        delete(additionalProperties, "detail")
-        delete(additionalProperties, "message")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "code")
+		delete(additionalProperties, "detail")
+		delete(additionalProperties, "message")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableSupplyChain202309ConfirmPackageShipmentResponseDataErrors struct {
@@ -227,5 +227,3 @@ func (v *NullableSupplyChain202309ConfirmPackageShipmentResponseDataErrors) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

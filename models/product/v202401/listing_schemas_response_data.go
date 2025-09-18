@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202401
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202401ListingSchemasResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202401ListingSchemasResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202401ListingSchemasResponseData{}
 
 // Product202401ListingSchemasResponseData struct for Product202401ListingSchemasResponseData
 type Product202401ListingSchemasResponseData struct {
-    // The list of errors that occurred from executing the mutation.
-    Errors []Product202401ListingSchemasResponseDataErrors `json:"errors,omitempty"`
-    // The schema information of listing product.
-    ListingSchemas []Product202401ListingSchemasResponseDataListingSchemas `json:"listing_schemas,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of errors that occurred from executing the mutation.
+	Errors []Product202401ListingSchemasResponseDataErrors `json:"errors,omitempty"`
+	// The schema information of listing product.
+	ListingSchemas       []Product202401ListingSchemasResponseDataListingSchemas `json:"listing_schemas,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202401ListingSchemasResponseData Product202401ListingSchemasResponseData
@@ -34,125 +34,125 @@ type _Product202401ListingSchemasResponseData Product202401ListingSchemasRespons
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202401ListingSchemasResponseData() *Product202401ListingSchemasResponseData {
-    this := Product202401ListingSchemasResponseData{}
-    return &this
+	this := Product202401ListingSchemasResponseData{}
+	return &this
 }
 
 // NewProduct202401ListingSchemasResponseDataWithDefaults instantiates a new Product202401ListingSchemasResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202401ListingSchemasResponseDataWithDefaults() *Product202401ListingSchemasResponseData {
-    this := Product202401ListingSchemasResponseData{}
-    return &this
+	this := Product202401ListingSchemasResponseData{}
+	return &this
 }
 
 // GetErrors returns the Errors field value if set, zero value otherwise.
 func (o *Product202401ListingSchemasResponseData) GetErrors() []Product202401ListingSchemasResponseDataErrors {
-    if o == nil || utils.IsNil(o.Errors) {
-        var ret []Product202401ListingSchemasResponseDataErrors
-        return ret
-    }
-    return o.Errors
+	if o == nil || utils.IsNil(o.Errors) {
+		var ret []Product202401ListingSchemasResponseDataErrors
+		return ret
+	}
+	return o.Errors
 }
 
 // GetErrorsOk returns a tuple with the Errors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202401ListingSchemasResponseData) GetErrorsOk() ([]Product202401ListingSchemasResponseDataErrors, bool) {
-    if o == nil || utils.IsNil(o.Errors) {
-        return nil, false
-    }
-    return o.Errors, true
+	if o == nil || utils.IsNil(o.Errors) {
+		return nil, false
+	}
+	return o.Errors, true
 }
 
 // HasErrors returns a boolean if a field has been set.
 func (o *Product202401ListingSchemasResponseData) HasErrors() bool {
-    if o != nil && !utils.IsNil(o.Errors) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Errors) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetErrors gets a reference to the given []Product202401ListingSchemasResponseDataErrors and assigns it to the Errors field.
 func (o *Product202401ListingSchemasResponseData) SetErrors(v []Product202401ListingSchemasResponseDataErrors) {
-    o.Errors = v
+	o.Errors = v
 }
 
 // GetListingSchemas returns the ListingSchemas field value if set, zero value otherwise.
 func (o *Product202401ListingSchemasResponseData) GetListingSchemas() []Product202401ListingSchemasResponseDataListingSchemas {
-    if o == nil || utils.IsNil(o.ListingSchemas) {
-        var ret []Product202401ListingSchemasResponseDataListingSchemas
-        return ret
-    }
-    return o.ListingSchemas
+	if o == nil || utils.IsNil(o.ListingSchemas) {
+		var ret []Product202401ListingSchemasResponseDataListingSchemas
+		return ret
+	}
+	return o.ListingSchemas
 }
 
 // GetListingSchemasOk returns a tuple with the ListingSchemas field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202401ListingSchemasResponseData) GetListingSchemasOk() ([]Product202401ListingSchemasResponseDataListingSchemas, bool) {
-    if o == nil || utils.IsNil(o.ListingSchemas) {
-        return nil, false
-    }
-    return o.ListingSchemas, true
+	if o == nil || utils.IsNil(o.ListingSchemas) {
+		return nil, false
+	}
+	return o.ListingSchemas, true
 }
 
 // HasListingSchemas returns a boolean if a field has been set.
 func (o *Product202401ListingSchemasResponseData) HasListingSchemas() bool {
-    if o != nil && !utils.IsNil(o.ListingSchemas) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ListingSchemas) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetListingSchemas gets a reference to the given []Product202401ListingSchemasResponseDataListingSchemas and assigns it to the ListingSchemas field.
 func (o *Product202401ListingSchemasResponseData) SetListingSchemas(v []Product202401ListingSchemasResponseDataListingSchemas) {
-    o.ListingSchemas = v
+	o.ListingSchemas = v
 }
 
 func (o Product202401ListingSchemasResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202401ListingSchemasResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Errors) {
-        toSerialize["errors"] = o.Errors
-    }
-    if !utils.IsNil(o.ListingSchemas) {
-        toSerialize["listing_schemas"] = o.ListingSchemas
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Errors) {
+		toSerialize["errors"] = o.Errors
+	}
+	if !utils.IsNil(o.ListingSchemas) {
+		toSerialize["listing_schemas"] = o.ListingSchemas
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202401ListingSchemasResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202401ListingSchemasResponseData := _Product202401ListingSchemasResponseData{}
+	varProduct202401ListingSchemasResponseData := _Product202401ListingSchemasResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202401ListingSchemasResponseData)
+	err = json.Unmarshal(data, &varProduct202401ListingSchemasResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202401ListingSchemasResponseData(varProduct202401ListingSchemasResponseData)
+	*o = Product202401ListingSchemasResponseData(varProduct202401ListingSchemasResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "errors")
-        delete(additionalProperties, "listing_schemas")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "errors")
+		delete(additionalProperties, "listing_schemas")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202401ListingSchemasResponseData struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202401ListingSchemasResponseData) UnmarshalJSON(src []by
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

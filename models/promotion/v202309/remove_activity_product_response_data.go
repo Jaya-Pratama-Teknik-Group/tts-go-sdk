@@ -11,22 +11,22 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309RemoveActivityProductResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309RemoveActivityProductResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309RemoveActivityProductResponseData{}
 
 // Promotion202309RemoveActivityProductResponseData struct for Promotion202309RemoveActivityProductResponseData
 type Promotion202309RemoveActivityProductResponseData struct {
-    // A unique ID that identifies activities.
-    ActivityId *string `json:"activity_id,omitempty"`
-    // Activity status. Possible values: - DRAFT: Promotion activities with this status are not available to TikTok users. - NOT_START: Promotion activities with this status are not available to TikTok users until the set activity start time. - ONGOING: Promotion activities with this status are available to TikTok users. - EXPIRED: Promotion activities with this status are not available to TikTok users because it has expired. - DEACTIVATED: The activity has been deactivated by the seller and is not available to TikTok users. - NOT_EFFECTIVE:  The activity is terminated by the platform and is not available to TikTok users.
-    Status *string `json:"status,omitempty"`
-    // Activity update time, unix timestamp.
-    UpdateTime *int64 `json:"update_time,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A unique ID that identifies activities.
+	ActivityId *string `json:"activity_id,omitempty"`
+	// Activity status. Possible values: - DRAFT: Promotion activities with this status are not available to TikTok users. - NOT_START: Promotion activities with this status are not available to TikTok users until the set activity start time. - ONGOING: Promotion activities with this status are available to TikTok users. - EXPIRED: Promotion activities with this status are not available to TikTok users because it has expired. - DEACTIVATED: The activity has been deactivated by the seller and is not available to TikTok users. - NOT_EFFECTIVE:  The activity is terminated by the platform and is not available to TikTok users.
+	Status *string `json:"status,omitempty"`
+	// Activity update time, unix timestamp.
+	UpdateTime           *int64 `json:"update_time,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309RemoveActivityProductResponseData Promotion202309RemoveActivityProductResponseData
@@ -36,161 +36,161 @@ type _Promotion202309RemoveActivityProductResponseData Promotion202309RemoveActi
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309RemoveActivityProductResponseData() *Promotion202309RemoveActivityProductResponseData {
-    this := Promotion202309RemoveActivityProductResponseData{}
-    return &this
+	this := Promotion202309RemoveActivityProductResponseData{}
+	return &this
 }
 
 // NewPromotion202309RemoveActivityProductResponseDataWithDefaults instantiates a new Promotion202309RemoveActivityProductResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309RemoveActivityProductResponseDataWithDefaults() *Promotion202309RemoveActivityProductResponseData {
-    this := Promotion202309RemoveActivityProductResponseData{}
-    return &this
+	this := Promotion202309RemoveActivityProductResponseData{}
+	return &this
 }
 
 // GetActivityId returns the ActivityId field value if set, zero value otherwise.
 func (o *Promotion202309RemoveActivityProductResponseData) GetActivityId() string {
-    if o == nil || utils.IsNil(o.ActivityId) {
-        var ret string
-        return ret
-    }
-    return *o.ActivityId
+	if o == nil || utils.IsNil(o.ActivityId) {
+		var ret string
+		return ret
+	}
+	return *o.ActivityId
 }
 
 // GetActivityIdOk returns a tuple with the ActivityId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309RemoveActivityProductResponseData) GetActivityIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ActivityId) {
-        return nil, false
-    }
-    return o.ActivityId, true
+	if o == nil || utils.IsNil(o.ActivityId) {
+		return nil, false
+	}
+	return o.ActivityId, true
 }
 
 // HasActivityId returns a boolean if a field has been set.
 func (o *Promotion202309RemoveActivityProductResponseData) HasActivityId() bool {
-    if o != nil && !utils.IsNil(o.ActivityId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ActivityId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetActivityId gets a reference to the given string and assigns it to the ActivityId field.
 func (o *Promotion202309RemoveActivityProductResponseData) SetActivityId(v string) {
-    o.ActivityId = &v
+	o.ActivityId = &v
 }
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *Promotion202309RemoveActivityProductResponseData) GetStatus() string {
-    if o == nil || utils.IsNil(o.Status) {
-        var ret string
-        return ret
-    }
-    return *o.Status
+	if o == nil || utils.IsNil(o.Status) {
+		var ret string
+		return ret
+	}
+	return *o.Status
 }
 
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309RemoveActivityProductResponseData) GetStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Status) {
-        return nil, false
-    }
-    return o.Status, true
+	if o == nil || utils.IsNil(o.Status) {
+		return nil, false
+	}
+	return o.Status, true
 }
 
 // HasStatus returns a boolean if a field has been set.
 func (o *Promotion202309RemoveActivityProductResponseData) HasStatus() bool {
-    if o != nil && !utils.IsNil(o.Status) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Status) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatus gets a reference to the given string and assigns it to the Status field.
 func (o *Promotion202309RemoveActivityProductResponseData) SetStatus(v string) {
-    o.Status = &v
+	o.Status = &v
 }
 
 // GetUpdateTime returns the UpdateTime field value if set, zero value otherwise.
 func (o *Promotion202309RemoveActivityProductResponseData) GetUpdateTime() int64 {
-    if o == nil || utils.IsNil(o.UpdateTime) {
-        var ret int64
-        return ret
-    }
-    return *o.UpdateTime
+	if o == nil || utils.IsNil(o.UpdateTime) {
+		var ret int64
+		return ret
+	}
+	return *o.UpdateTime
 }
 
 // GetUpdateTimeOk returns a tuple with the UpdateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309RemoveActivityProductResponseData) GetUpdateTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UpdateTime) {
-        return nil, false
-    }
-    return o.UpdateTime, true
+	if o == nil || utils.IsNil(o.UpdateTime) {
+		return nil, false
+	}
+	return o.UpdateTime, true
 }
 
 // HasUpdateTime returns a boolean if a field has been set.
 func (o *Promotion202309RemoveActivityProductResponseData) HasUpdateTime() bool {
-    if o != nil && !utils.IsNil(o.UpdateTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UpdateTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUpdateTime gets a reference to the given int64 and assigns it to the UpdateTime field.
 func (o *Promotion202309RemoveActivityProductResponseData) SetUpdateTime(v int64) {
-    o.UpdateTime = &v
+	o.UpdateTime = &v
 }
 
 func (o Promotion202309RemoveActivityProductResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309RemoveActivityProductResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ActivityId) {
-        toSerialize["activity_id"] = o.ActivityId
-    }
-    if !utils.IsNil(o.Status) {
-        toSerialize["status"] = o.Status
-    }
-    if !utils.IsNil(o.UpdateTime) {
-        toSerialize["update_time"] = o.UpdateTime
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ActivityId) {
+		toSerialize["activity_id"] = o.ActivityId
+	}
+	if !utils.IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !utils.IsNil(o.UpdateTime) {
+		toSerialize["update_time"] = o.UpdateTime
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309RemoveActivityProductResponseData) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309RemoveActivityProductResponseData := _Promotion202309RemoveActivityProductResponseData{}
+	varPromotion202309RemoveActivityProductResponseData := _Promotion202309RemoveActivityProductResponseData{}
 
-    err = json.Unmarshal(data, &varPromotion202309RemoveActivityProductResponseData)
+	err = json.Unmarshal(data, &varPromotion202309RemoveActivityProductResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309RemoveActivityProductResponseData(varPromotion202309RemoveActivityProductResponseData)
+	*o = Promotion202309RemoveActivityProductResponseData(varPromotion202309RemoveActivityProductResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "activity_id")
-        delete(additionalProperties, "status")
-        delete(additionalProperties, "update_time")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "activity_id")
+		delete(additionalProperties, "status")
+		delete(additionalProperties, "update_time")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309RemoveActivityProductResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullablePromotion202309RemoveActivityProductResponseData) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory type satisfies the MappedNullable interface at compile time
+// checks if the Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory{}
 
 // Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory struct for Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory
 type Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory struct {
-    // The number of units allocated.
-    Quantity *int32 `json:"quantity,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The number of units allocated.
+	Quantity             *int32 `json:"quantity,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory
@@ -32,89 +32,89 @@ type _Product202309InventorySearchResponseDataInventorySkusTotalAvailableInvento
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory() *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory {
-    this := Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory{}
-    return &this
+	this := Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory{}
+	return &this
 }
 
 // NewProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventoryWithDefaults instantiates a new Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventoryWithDefaults() *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory {
-    this := Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory{}
-    return &this
+	this := Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory{}
+	return &this
 }
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory) GetQuantity() int32 {
-    if o == nil || utils.IsNil(o.Quantity) {
-        var ret int32
-        return ret
-    }
-    return *o.Quantity
+	if o == nil || utils.IsNil(o.Quantity) {
+		var ret int32
+		return ret
+	}
+	return *o.Quantity
 }
 
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory) GetQuantityOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Quantity) {
-        return nil, false
-    }
-    return o.Quantity, true
+	if o == nil || utils.IsNil(o.Quantity) {
+		return nil, false
+	}
+	return o.Quantity, true
 }
 
 // HasQuantity returns a boolean if a field has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory) HasQuantity() bool {
-    if o != nil && !utils.IsNil(o.Quantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Quantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantity gets a reference to the given int32 and assigns it to the Quantity field.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory) SetQuantity(v int32) {
-    o.Quantity = &v
+	o.Quantity = &v
 }
 
 func (o Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Quantity) {
-        toSerialize["quantity"] = o.Quantity
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Quantity) {
+		toSerialize["quantity"] = o.Quantity
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory := _Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory{}
+	varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory := _Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory{}
 
-    err = json.Unmarshal(data, &varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory)
+	err = json.Unmarshal(data, &varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory(varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory)
+	*o = Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory(varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "quantity")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "quantity")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionInShopInventory struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309InventorySearchResponseDataInventorySkusTotalAvail
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

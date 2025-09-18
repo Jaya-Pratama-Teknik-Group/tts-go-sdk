@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_AuthorizationV202403APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_AuthorizationV202403APIService(t *testing.T) {
 
 	t.Run("Test AuthorizationV202403APIService Authorization202403ShopsDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.AuthorizationV202403API.Authorization202403ShopsDelete(context.Background()).Execute()
 

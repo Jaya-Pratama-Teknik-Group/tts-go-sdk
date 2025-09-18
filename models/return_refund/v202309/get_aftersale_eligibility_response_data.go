@@ -11,18 +11,18 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309GetAftersaleEligibilityResponseData type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309GetAftersaleEligibilityResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309GetAftersaleEligibilityResponseData{}
 
 // ReturnRefund202309GetAftersaleEligibilityResponseData struct for ReturnRefund202309GetAftersaleEligibilityResponseData
 type ReturnRefund202309GetAftersaleEligibilityResponseData struct {
-    // The eligible aftersale options for a given SKU.
-    SkuEligibility []ReturnRefund202309GetAftersaleEligibilityResponseDataSkuEligibility `json:"sku_eligibility,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The eligible aftersale options for a given SKU.
+	SkuEligibility       []ReturnRefund202309GetAftersaleEligibilityResponseDataSkuEligibility `json:"sku_eligibility,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309GetAftersaleEligibilityResponseData ReturnRefund202309GetAftersaleEligibilityResponseData
@@ -32,89 +32,89 @@ type _ReturnRefund202309GetAftersaleEligibilityResponseData ReturnRefund202309Ge
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309GetAftersaleEligibilityResponseData() *ReturnRefund202309GetAftersaleEligibilityResponseData {
-    this := ReturnRefund202309GetAftersaleEligibilityResponseData{}
-    return &this
+	this := ReturnRefund202309GetAftersaleEligibilityResponseData{}
+	return &this
 }
 
 // NewReturnRefund202309GetAftersaleEligibilityResponseDataWithDefaults instantiates a new ReturnRefund202309GetAftersaleEligibilityResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309GetAftersaleEligibilityResponseDataWithDefaults() *ReturnRefund202309GetAftersaleEligibilityResponseData {
-    this := ReturnRefund202309GetAftersaleEligibilityResponseData{}
-    return &this
+	this := ReturnRefund202309GetAftersaleEligibilityResponseData{}
+	return &this
 }
 
 // GetSkuEligibility returns the SkuEligibility field value if set, zero value otherwise.
 func (o *ReturnRefund202309GetAftersaleEligibilityResponseData) GetSkuEligibility() []ReturnRefund202309GetAftersaleEligibilityResponseDataSkuEligibility {
-    if o == nil || utils.IsNil(o.SkuEligibility) {
-        var ret []ReturnRefund202309GetAftersaleEligibilityResponseDataSkuEligibility
-        return ret
-    }
-    return o.SkuEligibility
+	if o == nil || utils.IsNil(o.SkuEligibility) {
+		var ret []ReturnRefund202309GetAftersaleEligibilityResponseDataSkuEligibility
+		return ret
+	}
+	return o.SkuEligibility
 }
 
 // GetSkuEligibilityOk returns a tuple with the SkuEligibility field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309GetAftersaleEligibilityResponseData) GetSkuEligibilityOk() ([]ReturnRefund202309GetAftersaleEligibilityResponseDataSkuEligibility, bool) {
-    if o == nil || utils.IsNil(o.SkuEligibility) {
-        return nil, false
-    }
-    return o.SkuEligibility, true
+	if o == nil || utils.IsNil(o.SkuEligibility) {
+		return nil, false
+	}
+	return o.SkuEligibility, true
 }
 
 // HasSkuEligibility returns a boolean if a field has been set.
 func (o *ReturnRefund202309GetAftersaleEligibilityResponseData) HasSkuEligibility() bool {
-    if o != nil && !utils.IsNil(o.SkuEligibility) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuEligibility) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuEligibility gets a reference to the given []ReturnRefund202309GetAftersaleEligibilityResponseDataSkuEligibility and assigns it to the SkuEligibility field.
 func (o *ReturnRefund202309GetAftersaleEligibilityResponseData) SetSkuEligibility(v []ReturnRefund202309GetAftersaleEligibilityResponseDataSkuEligibility) {
-    o.SkuEligibility = v
+	o.SkuEligibility = v
 }
 
 func (o ReturnRefund202309GetAftersaleEligibilityResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309GetAftersaleEligibilityResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.SkuEligibility) {
-        toSerialize["sku_eligibility"] = o.SkuEligibility
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.SkuEligibility) {
+		toSerialize["sku_eligibility"] = o.SkuEligibility
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309GetAftersaleEligibilityResponseData) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309GetAftersaleEligibilityResponseData := _ReturnRefund202309GetAftersaleEligibilityResponseData{}
+	varReturnRefund202309GetAftersaleEligibilityResponseData := _ReturnRefund202309GetAftersaleEligibilityResponseData{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309GetAftersaleEligibilityResponseData)
+	err = json.Unmarshal(data, &varReturnRefund202309GetAftersaleEligibilityResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309GetAftersaleEligibilityResponseData(varReturnRefund202309GetAftersaleEligibilityResponseData)
+	*o = ReturnRefund202309GetAftersaleEligibilityResponseData(varReturnRefund202309GetAftersaleEligibilityResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "sku_eligibility")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "sku_eligibility")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309GetAftersaleEligibilityResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableReturnRefund202309GetAftersaleEligibilityResponseData) Unmarsha
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

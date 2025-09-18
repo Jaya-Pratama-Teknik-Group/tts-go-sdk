@@ -11,20 +11,20 @@ API version: 1.0.0
 package promotion_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202406GetCouponResponseDataCouponLiveTasks type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202406GetCouponResponseDataCouponLiveTasks type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202406GetCouponResponseDataCouponLiveTasks{}
 
 // Promotion202406GetCouponResponseDataCouponLiveTasks struct for Promotion202406GetCouponResponseDataCouponLiveTasks
 type Promotion202406GetCouponResponseDataCouponLiveTasks struct {
-    // Number of seconds for which the shopper must watch the LIVE in order to claim the coupon.
-    MinWatchTime *string `json:"min_watch_time,omitempty"`
-    // Possible enumerations: - `NONE`: Any shopper in the LIVE room may claim the coupon. - `FOLLOW_HOST`: Shoppers must follow the LIVE host before being able to claim the coupon. - `WATCH_FOR_MIN_TIME`: Shoppers must watch the LIVE for the time specified by `min_watch_time` before being able to claim the coupon.
-    Type *string `json:"type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Number of seconds for which the shopper must watch the LIVE in order to claim the coupon.
+	MinWatchTime *string `json:"min_watch_time,omitempty"`
+	// Possible enumerations: - `NONE`: Any shopper in the LIVE room may claim the coupon. - `FOLLOW_HOST`: Shoppers must follow the LIVE host before being able to claim the coupon. - `WATCH_FOR_MIN_TIME`: Shoppers must watch the LIVE for the time specified by `min_watch_time` before being able to claim the coupon.
+	Type                 *string `json:"type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202406GetCouponResponseDataCouponLiveTasks Promotion202406GetCouponResponseDataCouponLiveTasks
@@ -34,125 +34,125 @@ type _Promotion202406GetCouponResponseDataCouponLiveTasks Promotion202406GetCoup
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202406GetCouponResponseDataCouponLiveTasks() *Promotion202406GetCouponResponseDataCouponLiveTasks {
-    this := Promotion202406GetCouponResponseDataCouponLiveTasks{}
-    return &this
+	this := Promotion202406GetCouponResponseDataCouponLiveTasks{}
+	return &this
 }
 
 // NewPromotion202406GetCouponResponseDataCouponLiveTasksWithDefaults instantiates a new Promotion202406GetCouponResponseDataCouponLiveTasks object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202406GetCouponResponseDataCouponLiveTasksWithDefaults() *Promotion202406GetCouponResponseDataCouponLiveTasks {
-    this := Promotion202406GetCouponResponseDataCouponLiveTasks{}
-    return &this
+	this := Promotion202406GetCouponResponseDataCouponLiveTasks{}
+	return &this
 }
 
 // GetMinWatchTime returns the MinWatchTime field value if set, zero value otherwise.
 func (o *Promotion202406GetCouponResponseDataCouponLiveTasks) GetMinWatchTime() string {
-    if o == nil || utils.IsNil(o.MinWatchTime) {
-        var ret string
-        return ret
-    }
-    return *o.MinWatchTime
+	if o == nil || utils.IsNil(o.MinWatchTime) {
+		var ret string
+		return ret
+	}
+	return *o.MinWatchTime
 }
 
 // GetMinWatchTimeOk returns a tuple with the MinWatchTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406GetCouponResponseDataCouponLiveTasks) GetMinWatchTimeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.MinWatchTime) {
-        return nil, false
-    }
-    return o.MinWatchTime, true
+	if o == nil || utils.IsNil(o.MinWatchTime) {
+		return nil, false
+	}
+	return o.MinWatchTime, true
 }
 
 // HasMinWatchTime returns a boolean if a field has been set.
 func (o *Promotion202406GetCouponResponseDataCouponLiveTasks) HasMinWatchTime() bool {
-    if o != nil && !utils.IsNil(o.MinWatchTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MinWatchTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMinWatchTime gets a reference to the given string and assigns it to the MinWatchTime field.
 func (o *Promotion202406GetCouponResponseDataCouponLiveTasks) SetMinWatchTime(v string) {
-    o.MinWatchTime = &v
+	o.MinWatchTime = &v
 }
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *Promotion202406GetCouponResponseDataCouponLiveTasks) GetType() string {
-    if o == nil || utils.IsNil(o.Type) {
-        var ret string
-        return ret
-    }
-    return *o.Type
+	if o == nil || utils.IsNil(o.Type) {
+		var ret string
+		return ret
+	}
+	return *o.Type
 }
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406GetCouponResponseDataCouponLiveTasks) GetTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Type) {
-        return nil, false
-    }
-    return o.Type, true
+	if o == nil || utils.IsNil(o.Type) {
+		return nil, false
+	}
+	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *Promotion202406GetCouponResponseDataCouponLiveTasks) HasType() bool {
-    if o != nil && !utils.IsNil(o.Type) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Type) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
 func (o *Promotion202406GetCouponResponseDataCouponLiveTasks) SetType(v string) {
-    o.Type = &v
+	o.Type = &v
 }
 
 func (o Promotion202406GetCouponResponseDataCouponLiveTasks) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202406GetCouponResponseDataCouponLiveTasks) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.MinWatchTime) {
-        toSerialize["min_watch_time"] = o.MinWatchTime
-    }
-    if !utils.IsNil(o.Type) {
-        toSerialize["type"] = o.Type
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.MinWatchTime) {
+		toSerialize["min_watch_time"] = o.MinWatchTime
+	}
+	if !utils.IsNil(o.Type) {
+		toSerialize["type"] = o.Type
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202406GetCouponResponseDataCouponLiveTasks) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202406GetCouponResponseDataCouponLiveTasks := _Promotion202406GetCouponResponseDataCouponLiveTasks{}
+	varPromotion202406GetCouponResponseDataCouponLiveTasks := _Promotion202406GetCouponResponseDataCouponLiveTasks{}
 
-    err = json.Unmarshal(data, &varPromotion202406GetCouponResponseDataCouponLiveTasks)
+	err = json.Unmarshal(data, &varPromotion202406GetCouponResponseDataCouponLiveTasks)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202406GetCouponResponseDataCouponLiveTasks(varPromotion202406GetCouponResponseDataCouponLiveTasks)
+	*o = Promotion202406GetCouponResponseDataCouponLiveTasks(varPromotion202406GetCouponResponseDataCouponLiveTasks)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "min_watch_time")
-        delete(additionalProperties, "type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "min_watch_time")
+		delete(additionalProperties, "type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202406GetCouponResponseDataCouponLiveTasks struct {
@@ -190,5 +190,3 @@ func (v *NullablePromotion202406GetCouponResponseDataCouponLiveTasks) UnmarshalJ
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

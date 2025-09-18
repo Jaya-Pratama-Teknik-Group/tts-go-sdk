@@ -11,20 +11,20 @@ API version: 1.0.0
 package finance_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Finance202309GetStatementsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Finance202309GetStatementsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Finance202309GetStatementsResponseData{}
 
 // Finance202309GetStatementsResponseData struct for Finance202309GetStatementsResponseData
 type Finance202309GetStatementsResponseData struct {
-    // An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
-    NextPageToken *string `json:"next_page_token,omitempty"`
-    // The list of statements that meet the query conditions.
-    Statements []Finance202309GetStatementsResponseDataStatements `json:"statements,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
+	NextPageToken *string `json:"next_page_token,omitempty"`
+	// The list of statements that meet the query conditions.
+	Statements           []Finance202309GetStatementsResponseDataStatements `json:"statements,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Finance202309GetStatementsResponseData Finance202309GetStatementsResponseData
@@ -34,125 +34,125 @@ type _Finance202309GetStatementsResponseData Finance202309GetStatementsResponseD
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFinance202309GetStatementsResponseData() *Finance202309GetStatementsResponseData {
-    this := Finance202309GetStatementsResponseData{}
-    return &this
+	this := Finance202309GetStatementsResponseData{}
+	return &this
 }
 
 // NewFinance202309GetStatementsResponseDataWithDefaults instantiates a new Finance202309GetStatementsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFinance202309GetStatementsResponseDataWithDefaults() *Finance202309GetStatementsResponseData {
-    this := Finance202309GetStatementsResponseData{}
-    return &this
+	this := Finance202309GetStatementsResponseData{}
+	return &this
 }
 
 // GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseData) GetNextPageToken() string {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        var ret string
-        return ret
-    }
-    return *o.NextPageToken
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		var ret string
+		return ret
+	}
+	return *o.NextPageToken
 }
 
 // GetNextPageTokenOk returns a tuple with the NextPageToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseData) GetNextPageTokenOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        return nil, false
-    }
-    return o.NextPageToken, true
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		return nil, false
+	}
+	return o.NextPageToken, true
 }
 
 // HasNextPageToken returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseData) HasNextPageToken() bool {
-    if o != nil && !utils.IsNil(o.NextPageToken) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NextPageToken) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNextPageToken gets a reference to the given string and assigns it to the NextPageToken field.
 func (o *Finance202309GetStatementsResponseData) SetNextPageToken(v string) {
-    o.NextPageToken = &v
+	o.NextPageToken = &v
 }
 
 // GetStatements returns the Statements field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseData) GetStatements() []Finance202309GetStatementsResponseDataStatements {
-    if o == nil || utils.IsNil(o.Statements) {
-        var ret []Finance202309GetStatementsResponseDataStatements
-        return ret
-    }
-    return o.Statements
+	if o == nil || utils.IsNil(o.Statements) {
+		var ret []Finance202309GetStatementsResponseDataStatements
+		return ret
+	}
+	return o.Statements
 }
 
 // GetStatementsOk returns a tuple with the Statements field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseData) GetStatementsOk() ([]Finance202309GetStatementsResponseDataStatements, bool) {
-    if o == nil || utils.IsNil(o.Statements) {
-        return nil, false
-    }
-    return o.Statements, true
+	if o == nil || utils.IsNil(o.Statements) {
+		return nil, false
+	}
+	return o.Statements, true
 }
 
 // HasStatements returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseData) HasStatements() bool {
-    if o != nil && !utils.IsNil(o.Statements) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Statements) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatements gets a reference to the given []Finance202309GetStatementsResponseDataStatements and assigns it to the Statements field.
 func (o *Finance202309GetStatementsResponseData) SetStatements(v []Finance202309GetStatementsResponseDataStatements) {
-    o.Statements = v
+	o.Statements = v
 }
 
 func (o Finance202309GetStatementsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Finance202309GetStatementsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.NextPageToken) {
-        toSerialize["next_page_token"] = o.NextPageToken
-    }
-    if !utils.IsNil(o.Statements) {
-        toSerialize["statements"] = o.Statements
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.NextPageToken) {
+		toSerialize["next_page_token"] = o.NextPageToken
+	}
+	if !utils.IsNil(o.Statements) {
+		toSerialize["statements"] = o.Statements
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Finance202309GetStatementsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFinance202309GetStatementsResponseData := _Finance202309GetStatementsResponseData{}
+	varFinance202309GetStatementsResponseData := _Finance202309GetStatementsResponseData{}
 
-    err = json.Unmarshal(data, &varFinance202309GetStatementsResponseData)
+	err = json.Unmarshal(data, &varFinance202309GetStatementsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Finance202309GetStatementsResponseData(varFinance202309GetStatementsResponseData)
+	*o = Finance202309GetStatementsResponseData(varFinance202309GetStatementsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "next_page_token")
-        delete(additionalProperties, "statements")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "next_page_token")
+		delete(additionalProperties, "statements")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFinance202309GetStatementsResponseData struct {
@@ -190,5 +190,3 @@ func (v *NullableFinance202309GetStatementsResponseData) UnmarshalJSON(src []byt
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,20 +11,20 @@ API version: 1.0.0
 package supply_chain_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the SupplyChain202309ConfirmPackageShipmentResponseData type satisfies the MappedNullable interface at compile time
+// checks if the SupplyChain202309ConfirmPackageShipmentResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &SupplyChain202309ConfirmPackageShipmentResponseData{}
 
 // SupplyChain202309ConfirmPackageShipmentResponseData struct for SupplyChain202309ConfirmPackageShipmentResponseData
 type SupplyChain202309ConfirmPackageShipmentResponseData struct {
-    // Error list
-    Errors []SupplyChain202309ConfirmPackageShipmentResponseDataErrors `json:"errors,omitempty"`
-    // List of packages that have been successfully confirmed
-    SuccessPackages []string `json:"success_packages,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Error list
+	Errors []SupplyChain202309ConfirmPackageShipmentResponseDataErrors `json:"errors,omitempty"`
+	// List of packages that have been successfully confirmed
+	SuccessPackages      []string `json:"success_packages,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _SupplyChain202309ConfirmPackageShipmentResponseData SupplyChain202309ConfirmPackageShipmentResponseData
@@ -34,125 +34,125 @@ type _SupplyChain202309ConfirmPackageShipmentResponseData SupplyChain202309Confi
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewSupplyChain202309ConfirmPackageShipmentResponseData() *SupplyChain202309ConfirmPackageShipmentResponseData {
-    this := SupplyChain202309ConfirmPackageShipmentResponseData{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentResponseData{}
+	return &this
 }
 
 // NewSupplyChain202309ConfirmPackageShipmentResponseDataWithDefaults instantiates a new SupplyChain202309ConfirmPackageShipmentResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewSupplyChain202309ConfirmPackageShipmentResponseDataWithDefaults() *SupplyChain202309ConfirmPackageShipmentResponseData {
-    this := SupplyChain202309ConfirmPackageShipmentResponseData{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentResponseData{}
+	return &this
 }
 
 // GetErrors returns the Errors field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseData) GetErrors() []SupplyChain202309ConfirmPackageShipmentResponseDataErrors {
-    if o == nil || utils.IsNil(o.Errors) {
-        var ret []SupplyChain202309ConfirmPackageShipmentResponseDataErrors
-        return ret
-    }
-    return o.Errors
+	if o == nil || utils.IsNil(o.Errors) {
+		var ret []SupplyChain202309ConfirmPackageShipmentResponseDataErrors
+		return ret
+	}
+	return o.Errors
 }
 
 // GetErrorsOk returns a tuple with the Errors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseData) GetErrorsOk() ([]SupplyChain202309ConfirmPackageShipmentResponseDataErrors, bool) {
-    if o == nil || utils.IsNil(o.Errors) {
-        return nil, false
-    }
-    return o.Errors, true
+	if o == nil || utils.IsNil(o.Errors) {
+		return nil, false
+	}
+	return o.Errors, true
 }
 
 // HasErrors returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseData) HasErrors() bool {
-    if o != nil && !utils.IsNil(o.Errors) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Errors) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetErrors gets a reference to the given []SupplyChain202309ConfirmPackageShipmentResponseDataErrors and assigns it to the Errors field.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseData) SetErrors(v []SupplyChain202309ConfirmPackageShipmentResponseDataErrors) {
-    o.Errors = v
+	o.Errors = v
 }
 
 // GetSuccessPackages returns the SuccessPackages field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseData) GetSuccessPackages() []string {
-    if o == nil || utils.IsNil(o.SuccessPackages) {
-        var ret []string
-        return ret
-    }
-    return o.SuccessPackages
+	if o == nil || utils.IsNil(o.SuccessPackages) {
+		var ret []string
+		return ret
+	}
+	return o.SuccessPackages
 }
 
 // GetSuccessPackagesOk returns a tuple with the SuccessPackages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseData) GetSuccessPackagesOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.SuccessPackages) {
-        return nil, false
-    }
-    return o.SuccessPackages, true
+	if o == nil || utils.IsNil(o.SuccessPackages) {
+		return nil, false
+	}
+	return o.SuccessPackages, true
 }
 
 // HasSuccessPackages returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseData) HasSuccessPackages() bool {
-    if o != nil && !utils.IsNil(o.SuccessPackages) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SuccessPackages) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSuccessPackages gets a reference to the given []string and assigns it to the SuccessPackages field.
 func (o *SupplyChain202309ConfirmPackageShipmentResponseData) SetSuccessPackages(v []string) {
-    o.SuccessPackages = v
+	o.SuccessPackages = v
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Errors) {
-        toSerialize["errors"] = o.Errors
-    }
-    if !utils.IsNil(o.SuccessPackages) {
-        toSerialize["success_packages"] = o.SuccessPackages
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Errors) {
+		toSerialize["errors"] = o.Errors
+	}
+	if !utils.IsNil(o.SuccessPackages) {
+		toSerialize["success_packages"] = o.SuccessPackages
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *SupplyChain202309ConfirmPackageShipmentResponseData) UnmarshalJSON(data []byte) (err error) {
-    varSupplyChain202309ConfirmPackageShipmentResponseData := _SupplyChain202309ConfirmPackageShipmentResponseData{}
+	varSupplyChain202309ConfirmPackageShipmentResponseData := _SupplyChain202309ConfirmPackageShipmentResponseData{}
 
-    err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentResponseData)
+	err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = SupplyChain202309ConfirmPackageShipmentResponseData(varSupplyChain202309ConfirmPackageShipmentResponseData)
+	*o = SupplyChain202309ConfirmPackageShipmentResponseData(varSupplyChain202309ConfirmPackageShipmentResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "errors")
-        delete(additionalProperties, "success_packages")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "errors")
+		delete(additionalProperties, "success_packages")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableSupplyChain202309ConfirmPackageShipmentResponseData struct {
@@ -190,5 +190,3 @@ func (v *NullableSupplyChain202309ConfirmPackageShipmentResponseData) UnmarshalJ
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

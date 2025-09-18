@@ -11,18 +11,18 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309UpdateActivityRequestBodyParticipationLimit type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309UpdateActivityRequestBodyParticipationLimit type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309UpdateActivityRequestBodyParticipationLimit{}
 
 // Promotion202309UpdateActivityRequestBodyParticipationLimit struct for Promotion202309UpdateActivityRequestBodyParticipationLimit
 type Promotion202309UpdateActivityRequestBodyParticipationLimit struct {
-    // Determines whether the promotion activity limits the number of times each buyer can receive its benefit. e.g.: - `BUYER_NO_LIMIT`: No limit for buyer​s. Buyers can benefit from this promotion across multiple orders. - `BUYER_LIMIT_ONLY_ONE`: Buyers can benefit from this promotion activity for no more than one order. ​Default: `BUYER_NO_LIMIT`
-    Type *string `json:"type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Determines whether the promotion activity limits the number of times each buyer can receive its benefit. e.g.: - `BUYER_NO_LIMIT`: No limit for buyer​s. Buyers can benefit from this promotion across multiple orders. - `BUYER_LIMIT_ONLY_ONE`: Buyers can benefit from this promotion activity for no more than one order. ​Default: `BUYER_NO_LIMIT`
+	Type                 *string `json:"type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309UpdateActivityRequestBodyParticipationLimit Promotion202309UpdateActivityRequestBodyParticipationLimit
@@ -32,89 +32,89 @@ type _Promotion202309UpdateActivityRequestBodyParticipationLimit Promotion202309
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309UpdateActivityRequestBodyParticipationLimit() *Promotion202309UpdateActivityRequestBodyParticipationLimit {
-    this := Promotion202309UpdateActivityRequestBodyParticipationLimit{}
-    return &this
+	this := Promotion202309UpdateActivityRequestBodyParticipationLimit{}
+	return &this
 }
 
 // NewPromotion202309UpdateActivityRequestBodyParticipationLimitWithDefaults instantiates a new Promotion202309UpdateActivityRequestBodyParticipationLimit object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309UpdateActivityRequestBodyParticipationLimitWithDefaults() *Promotion202309UpdateActivityRequestBodyParticipationLimit {
-    this := Promotion202309UpdateActivityRequestBodyParticipationLimit{}
-    return &this
+	this := Promotion202309UpdateActivityRequestBodyParticipationLimit{}
+	return &this
 }
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityRequestBodyParticipationLimit) GetType() string {
-    if o == nil || utils.IsNil(o.Type) {
-        var ret string
-        return ret
-    }
-    return *o.Type
+	if o == nil || utils.IsNil(o.Type) {
+		var ret string
+		return ret
+	}
+	return *o.Type
 }
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityRequestBodyParticipationLimit) GetTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Type) {
-        return nil, false
-    }
-    return o.Type, true
+	if o == nil || utils.IsNil(o.Type) {
+		return nil, false
+	}
+	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityRequestBodyParticipationLimit) HasType() bool {
-    if o != nil && !utils.IsNil(o.Type) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Type) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
 func (o *Promotion202309UpdateActivityRequestBodyParticipationLimit) SetType(v string) {
-    o.Type = &v
+	o.Type = &v
 }
 
 func (o Promotion202309UpdateActivityRequestBodyParticipationLimit) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309UpdateActivityRequestBodyParticipationLimit) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Type) {
-        toSerialize["type"] = o.Type
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Type) {
+		toSerialize["type"] = o.Type
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309UpdateActivityRequestBodyParticipationLimit) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309UpdateActivityRequestBodyParticipationLimit := _Promotion202309UpdateActivityRequestBodyParticipationLimit{}
+	varPromotion202309UpdateActivityRequestBodyParticipationLimit := _Promotion202309UpdateActivityRequestBodyParticipationLimit{}
 
-    err = json.Unmarshal(data, &varPromotion202309UpdateActivityRequestBodyParticipationLimit)
+	err = json.Unmarshal(data, &varPromotion202309UpdateActivityRequestBodyParticipationLimit)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309UpdateActivityRequestBodyParticipationLimit(varPromotion202309UpdateActivityRequestBodyParticipationLimit)
+	*o = Promotion202309UpdateActivityRequestBodyParticipationLimit(varPromotion202309UpdateActivityRequestBodyParticipationLimit)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309UpdateActivityRequestBodyParticipationLimit struct {
@@ -152,5 +152,3 @@ func (v *NullablePromotion202309UpdateActivityRequestBodyParticipationLimit) Unm
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202505
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202505CreateImageTranslationTasksResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202505CreateImageTranslationTasksResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202505CreateImageTranslationTasksResponseData{}
 
 // Product202505CreateImageTranslationTasksResponseData struct for Product202505CreateImageTranslationTasksResponseData
 type Product202505CreateImageTranslationTasksResponseData struct {
-    // The list of translation tasks created for the requested images.  Each task corresponds to the translation of 1 image into 1 target language. So if you specified 2 target languages for an image, 2 tasks will be created.
-    TranslationTasks []Product202505CreateImageTranslationTasksResponseDataTranslationTasks `json:"translation_tasks,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of translation tasks created for the requested images.  Each task corresponds to the translation of 1 image into 1 target language. So if you specified 2 target languages for an image, 2 tasks will be created.
+	TranslationTasks     []Product202505CreateImageTranslationTasksResponseDataTranslationTasks `json:"translation_tasks,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202505CreateImageTranslationTasksResponseData Product202505CreateImageTranslationTasksResponseData
@@ -32,89 +32,89 @@ type _Product202505CreateImageTranslationTasksResponseData Product202505CreateIm
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202505CreateImageTranslationTasksResponseData() *Product202505CreateImageTranslationTasksResponseData {
-    this := Product202505CreateImageTranslationTasksResponseData{}
-    return &this
+	this := Product202505CreateImageTranslationTasksResponseData{}
+	return &this
 }
 
 // NewProduct202505CreateImageTranslationTasksResponseDataWithDefaults instantiates a new Product202505CreateImageTranslationTasksResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202505CreateImageTranslationTasksResponseDataWithDefaults() *Product202505CreateImageTranslationTasksResponseData {
-    this := Product202505CreateImageTranslationTasksResponseData{}
-    return &this
+	this := Product202505CreateImageTranslationTasksResponseData{}
+	return &this
 }
 
 // GetTranslationTasks returns the TranslationTasks field value if set, zero value otherwise.
 func (o *Product202505CreateImageTranslationTasksResponseData) GetTranslationTasks() []Product202505CreateImageTranslationTasksResponseDataTranslationTasks {
-    if o == nil || utils.IsNil(o.TranslationTasks) {
-        var ret []Product202505CreateImageTranslationTasksResponseDataTranslationTasks
-        return ret
-    }
-    return o.TranslationTasks
+	if o == nil || utils.IsNil(o.TranslationTasks) {
+		var ret []Product202505CreateImageTranslationTasksResponseDataTranslationTasks
+		return ret
+	}
+	return o.TranslationTasks
 }
 
 // GetTranslationTasksOk returns a tuple with the TranslationTasks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202505CreateImageTranslationTasksResponseData) GetTranslationTasksOk() ([]Product202505CreateImageTranslationTasksResponseDataTranslationTasks, bool) {
-    if o == nil || utils.IsNil(o.TranslationTasks) {
-        return nil, false
-    }
-    return o.TranslationTasks, true
+	if o == nil || utils.IsNil(o.TranslationTasks) {
+		return nil, false
+	}
+	return o.TranslationTasks, true
 }
 
 // HasTranslationTasks returns a boolean if a field has been set.
 func (o *Product202505CreateImageTranslationTasksResponseData) HasTranslationTasks() bool {
-    if o != nil && !utils.IsNil(o.TranslationTasks) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TranslationTasks) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTranslationTasks gets a reference to the given []Product202505CreateImageTranslationTasksResponseDataTranslationTasks and assigns it to the TranslationTasks field.
 func (o *Product202505CreateImageTranslationTasksResponseData) SetTranslationTasks(v []Product202505CreateImageTranslationTasksResponseDataTranslationTasks) {
-    o.TranslationTasks = v
+	o.TranslationTasks = v
 }
 
 func (o Product202505CreateImageTranslationTasksResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202505CreateImageTranslationTasksResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.TranslationTasks) {
-        toSerialize["translation_tasks"] = o.TranslationTasks
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.TranslationTasks) {
+		toSerialize["translation_tasks"] = o.TranslationTasks
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202505CreateImageTranslationTasksResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202505CreateImageTranslationTasksResponseData := _Product202505CreateImageTranslationTasksResponseData{}
+	varProduct202505CreateImageTranslationTasksResponseData := _Product202505CreateImageTranslationTasksResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202505CreateImageTranslationTasksResponseData)
+	err = json.Unmarshal(data, &varProduct202505CreateImageTranslationTasksResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202505CreateImageTranslationTasksResponseData(varProduct202505CreateImageTranslationTasksResponseData)
+	*o = Product202505CreateImageTranslationTasksResponseData(varProduct202505CreateImageTranslationTasksResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "translation_tasks")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "translation_tasks")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202505CreateImageTranslationTasksResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202505CreateImageTranslationTasksResponseData) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

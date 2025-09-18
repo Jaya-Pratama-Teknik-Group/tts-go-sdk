@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202407
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202407SearchSizeChartsResponseDataSizeChart type satisfies the MappedNullable interface at compile time
+// checks if the Product202407SearchSizeChartsResponseDataSizeChart type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202407SearchSizeChartsResponseDataSizeChart{}
 
 // Product202407SearchSizeChartsResponseDataSizeChart struct for Product202407SearchSizeChartsResponseDataSizeChart
 type Product202407SearchSizeChartsResponseDataSizeChart struct {
-    // The list of images included in a size chart.
-    Images []Product202407SearchSizeChartsResponseDataSizeChartImages `json:"images,omitempty"`
-    // The size chart template ID.
-    TemplateId *string `json:"template_id,omitempty"`
-    // The size chart template name.
-    TemplateName *string `json:"template_name,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of images included in a size chart.
+	Images []Product202407SearchSizeChartsResponseDataSizeChartImages `json:"images,omitempty"`
+	// The size chart template ID.
+	TemplateId *string `json:"template_id,omitempty"`
+	// The size chart template name.
+	TemplateName         *string `json:"template_name,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202407SearchSizeChartsResponseDataSizeChart Product202407SearchSizeChartsResponseDataSizeChart
@@ -36,161 +36,161 @@ type _Product202407SearchSizeChartsResponseDataSizeChart Product202407SearchSize
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202407SearchSizeChartsResponseDataSizeChart() *Product202407SearchSizeChartsResponseDataSizeChart {
-    this := Product202407SearchSizeChartsResponseDataSizeChart{}
-    return &this
+	this := Product202407SearchSizeChartsResponseDataSizeChart{}
+	return &this
 }
 
 // NewProduct202407SearchSizeChartsResponseDataSizeChartWithDefaults instantiates a new Product202407SearchSizeChartsResponseDataSizeChart object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202407SearchSizeChartsResponseDataSizeChartWithDefaults() *Product202407SearchSizeChartsResponseDataSizeChart {
-    this := Product202407SearchSizeChartsResponseDataSizeChart{}
-    return &this
+	this := Product202407SearchSizeChartsResponseDataSizeChart{}
+	return &this
 }
 
 // GetImages returns the Images field value if set, zero value otherwise.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) GetImages() []Product202407SearchSizeChartsResponseDataSizeChartImages {
-    if o == nil || utils.IsNil(o.Images) {
-        var ret []Product202407SearchSizeChartsResponseDataSizeChartImages
-        return ret
-    }
-    return o.Images
+	if o == nil || utils.IsNil(o.Images) {
+		var ret []Product202407SearchSizeChartsResponseDataSizeChartImages
+		return ret
+	}
+	return o.Images
 }
 
 // GetImagesOk returns a tuple with the Images field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) GetImagesOk() ([]Product202407SearchSizeChartsResponseDataSizeChartImages, bool) {
-    if o == nil || utils.IsNil(o.Images) {
-        return nil, false
-    }
-    return o.Images, true
+	if o == nil || utils.IsNil(o.Images) {
+		return nil, false
+	}
+	return o.Images, true
 }
 
 // HasImages returns a boolean if a field has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) HasImages() bool {
-    if o != nil && !utils.IsNil(o.Images) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Images) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImages gets a reference to the given []Product202407SearchSizeChartsResponseDataSizeChartImages and assigns it to the Images field.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) SetImages(v []Product202407SearchSizeChartsResponseDataSizeChartImages) {
-    o.Images = v
+	o.Images = v
 }
 
 // GetTemplateId returns the TemplateId field value if set, zero value otherwise.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) GetTemplateId() string {
-    if o == nil || utils.IsNil(o.TemplateId) {
-        var ret string
-        return ret
-    }
-    return *o.TemplateId
+	if o == nil || utils.IsNil(o.TemplateId) {
+		var ret string
+		return ret
+	}
+	return *o.TemplateId
 }
 
 // GetTemplateIdOk returns a tuple with the TemplateId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) GetTemplateIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TemplateId) {
-        return nil, false
-    }
-    return o.TemplateId, true
+	if o == nil || utils.IsNil(o.TemplateId) {
+		return nil, false
+	}
+	return o.TemplateId, true
 }
 
 // HasTemplateId returns a boolean if a field has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) HasTemplateId() bool {
-    if o != nil && !utils.IsNil(o.TemplateId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TemplateId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTemplateId gets a reference to the given string and assigns it to the TemplateId field.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) SetTemplateId(v string) {
-    o.TemplateId = &v
+	o.TemplateId = &v
 }
 
 // GetTemplateName returns the TemplateName field value if set, zero value otherwise.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) GetTemplateName() string {
-    if o == nil || utils.IsNil(o.TemplateName) {
-        var ret string
-        return ret
-    }
-    return *o.TemplateName
+	if o == nil || utils.IsNil(o.TemplateName) {
+		var ret string
+		return ret
+	}
+	return *o.TemplateName
 }
 
 // GetTemplateNameOk returns a tuple with the TemplateName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) GetTemplateNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TemplateName) {
-        return nil, false
-    }
-    return o.TemplateName, true
+	if o == nil || utils.IsNil(o.TemplateName) {
+		return nil, false
+	}
+	return o.TemplateName, true
 }
 
 // HasTemplateName returns a boolean if a field has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) HasTemplateName() bool {
-    if o != nil && !utils.IsNil(o.TemplateName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TemplateName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTemplateName gets a reference to the given string and assigns it to the TemplateName field.
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) SetTemplateName(v string) {
-    o.TemplateName = &v
+	o.TemplateName = &v
 }
 
 func (o Product202407SearchSizeChartsResponseDataSizeChart) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202407SearchSizeChartsResponseDataSizeChart) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Images) {
-        toSerialize["images"] = o.Images
-    }
-    if !utils.IsNil(o.TemplateId) {
-        toSerialize["template_id"] = o.TemplateId
-    }
-    if !utils.IsNil(o.TemplateName) {
-        toSerialize["template_name"] = o.TemplateName
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Images) {
+		toSerialize["images"] = o.Images
+	}
+	if !utils.IsNil(o.TemplateId) {
+		toSerialize["template_id"] = o.TemplateId
+	}
+	if !utils.IsNil(o.TemplateName) {
+		toSerialize["template_name"] = o.TemplateName
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202407SearchSizeChartsResponseDataSizeChart) UnmarshalJSON(data []byte) (err error) {
-    varProduct202407SearchSizeChartsResponseDataSizeChart := _Product202407SearchSizeChartsResponseDataSizeChart{}
+	varProduct202407SearchSizeChartsResponseDataSizeChart := _Product202407SearchSizeChartsResponseDataSizeChart{}
 
-    err = json.Unmarshal(data, &varProduct202407SearchSizeChartsResponseDataSizeChart)
+	err = json.Unmarshal(data, &varProduct202407SearchSizeChartsResponseDataSizeChart)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202407SearchSizeChartsResponseDataSizeChart(varProduct202407SearchSizeChartsResponseDataSizeChart)
+	*o = Product202407SearchSizeChartsResponseDataSizeChart(varProduct202407SearchSizeChartsResponseDataSizeChart)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "images")
-        delete(additionalProperties, "template_id")
-        delete(additionalProperties, "template_name")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "images")
+		delete(additionalProperties, "template_id")
+		delete(additionalProperties, "template_name")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202407SearchSizeChartsResponseDataSizeChart struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202407SearchSizeChartsResponseDataSizeChart) UnmarshalJS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

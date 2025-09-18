@@ -11,20 +11,20 @@ API version: 1.0.0
 package promotion_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202406GetCouponResponseDataCouponUsageStats type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202406GetCouponResponseDataCouponUsageStats type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202406GetCouponResponseDataCouponUsageStats{}
 
 // Promotion202406GetCouponResponseDataCouponUsageStats struct for Promotion202406GetCouponResponseDataCouponUsageStats
 type Promotion202406GetCouponResponseDataCouponUsageStats struct {
-    // The number of times that the coupon has been claimed.
-    ClaimedCount *int32 `json:"claimed_count,omitempty"`
-    // The number of times that a coupon has been redeemed (i.e. applied to an order).
-    RedeemedCount *int32 `json:"redeemed_count,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The number of times that the coupon has been claimed.
+	ClaimedCount *int32 `json:"claimed_count,omitempty"`
+	// The number of times that a coupon has been redeemed (i.e. applied to an order).
+	RedeemedCount        *int32 `json:"redeemed_count,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202406GetCouponResponseDataCouponUsageStats Promotion202406GetCouponResponseDataCouponUsageStats
@@ -34,125 +34,125 @@ type _Promotion202406GetCouponResponseDataCouponUsageStats Promotion202406GetCou
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202406GetCouponResponseDataCouponUsageStats() *Promotion202406GetCouponResponseDataCouponUsageStats {
-    this := Promotion202406GetCouponResponseDataCouponUsageStats{}
-    return &this
+	this := Promotion202406GetCouponResponseDataCouponUsageStats{}
+	return &this
 }
 
 // NewPromotion202406GetCouponResponseDataCouponUsageStatsWithDefaults instantiates a new Promotion202406GetCouponResponseDataCouponUsageStats object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202406GetCouponResponseDataCouponUsageStatsWithDefaults() *Promotion202406GetCouponResponseDataCouponUsageStats {
-    this := Promotion202406GetCouponResponseDataCouponUsageStats{}
-    return &this
+	this := Promotion202406GetCouponResponseDataCouponUsageStats{}
+	return &this
 }
 
 // GetClaimedCount returns the ClaimedCount field value if set, zero value otherwise.
 func (o *Promotion202406GetCouponResponseDataCouponUsageStats) GetClaimedCount() int32 {
-    if o == nil || utils.IsNil(o.ClaimedCount) {
-        var ret int32
-        return ret
-    }
-    return *o.ClaimedCount
+	if o == nil || utils.IsNil(o.ClaimedCount) {
+		var ret int32
+		return ret
+	}
+	return *o.ClaimedCount
 }
 
 // GetClaimedCountOk returns a tuple with the ClaimedCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageStats) GetClaimedCountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.ClaimedCount) {
-        return nil, false
-    }
-    return o.ClaimedCount, true
+	if o == nil || utils.IsNil(o.ClaimedCount) {
+		return nil, false
+	}
+	return o.ClaimedCount, true
 }
 
 // HasClaimedCount returns a boolean if a field has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageStats) HasClaimedCount() bool {
-    if o != nil && !utils.IsNil(o.ClaimedCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ClaimedCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetClaimedCount gets a reference to the given int32 and assigns it to the ClaimedCount field.
 func (o *Promotion202406GetCouponResponseDataCouponUsageStats) SetClaimedCount(v int32) {
-    o.ClaimedCount = &v
+	o.ClaimedCount = &v
 }
 
 // GetRedeemedCount returns the RedeemedCount field value if set, zero value otherwise.
 func (o *Promotion202406GetCouponResponseDataCouponUsageStats) GetRedeemedCount() int32 {
-    if o == nil || utils.IsNil(o.RedeemedCount) {
-        var ret int32
-        return ret
-    }
-    return *o.RedeemedCount
+	if o == nil || utils.IsNil(o.RedeemedCount) {
+		var ret int32
+		return ret
+	}
+	return *o.RedeemedCount
 }
 
 // GetRedeemedCountOk returns a tuple with the RedeemedCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageStats) GetRedeemedCountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.RedeemedCount) {
-        return nil, false
-    }
-    return o.RedeemedCount, true
+	if o == nil || utils.IsNil(o.RedeemedCount) {
+		return nil, false
+	}
+	return o.RedeemedCount, true
 }
 
 // HasRedeemedCount returns a boolean if a field has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageStats) HasRedeemedCount() bool {
-    if o != nil && !utils.IsNil(o.RedeemedCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RedeemedCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRedeemedCount gets a reference to the given int32 and assigns it to the RedeemedCount field.
 func (o *Promotion202406GetCouponResponseDataCouponUsageStats) SetRedeemedCount(v int32) {
-    o.RedeemedCount = &v
+	o.RedeemedCount = &v
 }
 
 func (o Promotion202406GetCouponResponseDataCouponUsageStats) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202406GetCouponResponseDataCouponUsageStats) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ClaimedCount) {
-        toSerialize["claimed_count"] = o.ClaimedCount
-    }
-    if !utils.IsNil(o.RedeemedCount) {
-        toSerialize["redeemed_count"] = o.RedeemedCount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ClaimedCount) {
+		toSerialize["claimed_count"] = o.ClaimedCount
+	}
+	if !utils.IsNil(o.RedeemedCount) {
+		toSerialize["redeemed_count"] = o.RedeemedCount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202406GetCouponResponseDataCouponUsageStats) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202406GetCouponResponseDataCouponUsageStats := _Promotion202406GetCouponResponseDataCouponUsageStats{}
+	varPromotion202406GetCouponResponseDataCouponUsageStats := _Promotion202406GetCouponResponseDataCouponUsageStats{}
 
-    err = json.Unmarshal(data, &varPromotion202406GetCouponResponseDataCouponUsageStats)
+	err = json.Unmarshal(data, &varPromotion202406GetCouponResponseDataCouponUsageStats)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202406GetCouponResponseDataCouponUsageStats(varPromotion202406GetCouponResponseDataCouponUsageStats)
+	*o = Promotion202406GetCouponResponseDataCouponUsageStats(varPromotion202406GetCouponResponseDataCouponUsageStats)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "claimed_count")
-        delete(additionalProperties, "redeemed_count")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "claimed_count")
+		delete(additionalProperties, "redeemed_count")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202406GetCouponResponseDataCouponUsageStats struct {
@@ -190,5 +190,3 @@ func (v *NullablePromotion202406GetCouponResponseDataCouponUsageStats) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

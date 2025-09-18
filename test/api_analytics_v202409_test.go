@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_AnalyticsV202409APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_AnalyticsV202409APIService(t *testing.T) {
 
 	t.Run("Test AnalyticsV202409APIService Analytics202409ShopVideosOverviewPerformanceGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.AnalyticsV202409API.Analytics202409ShopVideosOverviewPerformanceGet(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_sdk_golang_AnalyticsV202409APIService(t *testing.T) {
 
 	t.Run("Test AnalyticsV202409APIService Analytics202409ShopVideosPerformanceGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.AnalyticsV202409API.Analytics202409ShopVideosPerformanceGet(context.Background()).Execute()
 
@@ -48,7 +48,7 @@ func Test_sdk_golang_AnalyticsV202409APIService(t *testing.T) {
 
 	t.Run("Test AnalyticsV202409APIService Analytics202409ShopVideosVideoIdPerformanceGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var videoId string
 
@@ -62,7 +62,7 @@ func Test_sdk_golang_AnalyticsV202409APIService(t *testing.T) {
 
 	t.Run("Test AnalyticsV202409APIService Analytics202409ShopVideosVideoIdProductsPerformanceGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var videoId string
 

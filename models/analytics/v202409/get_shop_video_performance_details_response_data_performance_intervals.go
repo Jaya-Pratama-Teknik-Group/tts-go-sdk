@@ -11,27 +11,27 @@ API version: 1.0.0
 package analytics_v202409
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals type satisfies the MappedNullable interface at compile time
+// checks if the Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals{}
 
 // Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals struct for Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals
 type Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals struct {
-    // Ratio of the number of product clicks compared to number of video views in raw decimal format. To calculate the percentage, multiple it by 100%. Example: 0.0528 <=> 5.28%
-    ClickThroughRate *string `json:"click_through_rate,omitempty"`
-    // Average number of buyers per day from the video during the selected time range.
-    DailyAvgBuyers *string `json:"daily_avg_buyers,omitempty"`
-    // End date of the interval (ISO 8601 YYYY-MM-DD format) in shop registered timezone, exclusive.
-    EndDate *string `json:"end_date,omitempty"`
-    Gmv *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsGmv `json:"gmv,omitempty"`
-    // Start date of the interval (ISO 8601 YYYY-MM-DD format) in shop registered timezone, inclusive.
-    StartDate *string `json:"start_date,omitempty"`
-    // Total number of video views during the selected time range.
-    Views *int64 `json:"views,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Ratio of the number of product clicks compared to number of video views in raw decimal format. To calculate the percentage, multiple it by 100%. Example: 0.0528 <=> 5.28%
+	ClickThroughRate *string `json:"click_through_rate,omitempty"`
+	// Average number of buyers per day from the video during the selected time range.
+	DailyAvgBuyers *string `json:"daily_avg_buyers,omitempty"`
+	// End date of the interval (ISO 8601 YYYY-MM-DD format) in shop registered timezone, exclusive.
+	EndDate *string                                                                           `json:"end_date,omitempty"`
+	Gmv     *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsGmv `json:"gmv,omitempty"`
+	// Start date of the interval (ISO 8601 YYYY-MM-DD format) in shop registered timezone, inclusive.
+	StartDate *string `json:"start_date,omitempty"`
+	// Total number of video views during the selected time range.
+	Views                *int64 `json:"views,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals
@@ -41,269 +41,269 @@ type _Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceInterv
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals() *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals {
-    this := Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals{}
-    return &this
+	this := Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals{}
+	return &this
 }
 
 // NewAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsWithDefaults instantiates a new Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsWithDefaults() *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals {
-    this := Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals{}
-    return &this
+	this := Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals{}
+	return &this
 }
 
 // GetClickThroughRate returns the ClickThroughRate field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetClickThroughRate() string {
-    if o == nil || utils.IsNil(o.ClickThroughRate) {
-        var ret string
-        return ret
-    }
-    return *o.ClickThroughRate
+	if o == nil || utils.IsNil(o.ClickThroughRate) {
+		var ret string
+		return ret
+	}
+	return *o.ClickThroughRate
 }
 
 // GetClickThroughRateOk returns a tuple with the ClickThroughRate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetClickThroughRateOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ClickThroughRate) {
-        return nil, false
-    }
-    return o.ClickThroughRate, true
+	if o == nil || utils.IsNil(o.ClickThroughRate) {
+		return nil, false
+	}
+	return o.ClickThroughRate, true
 }
 
 // HasClickThroughRate returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) HasClickThroughRate() bool {
-    if o != nil && !utils.IsNil(o.ClickThroughRate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ClickThroughRate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetClickThroughRate gets a reference to the given string and assigns it to the ClickThroughRate field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) SetClickThroughRate(v string) {
-    o.ClickThroughRate = &v
+	o.ClickThroughRate = &v
 }
 
 // GetDailyAvgBuyers returns the DailyAvgBuyers field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetDailyAvgBuyers() string {
-    if o == nil || utils.IsNil(o.DailyAvgBuyers) {
-        var ret string
-        return ret
-    }
-    return *o.DailyAvgBuyers
+	if o == nil || utils.IsNil(o.DailyAvgBuyers) {
+		var ret string
+		return ret
+	}
+	return *o.DailyAvgBuyers
 }
 
 // GetDailyAvgBuyersOk returns a tuple with the DailyAvgBuyers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetDailyAvgBuyersOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.DailyAvgBuyers) {
-        return nil, false
-    }
-    return o.DailyAvgBuyers, true
+	if o == nil || utils.IsNil(o.DailyAvgBuyers) {
+		return nil, false
+	}
+	return o.DailyAvgBuyers, true
 }
 
 // HasDailyAvgBuyers returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) HasDailyAvgBuyers() bool {
-    if o != nil && !utils.IsNil(o.DailyAvgBuyers) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DailyAvgBuyers) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDailyAvgBuyers gets a reference to the given string and assigns it to the DailyAvgBuyers field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) SetDailyAvgBuyers(v string) {
-    o.DailyAvgBuyers = &v
+	o.DailyAvgBuyers = &v
 }
 
 // GetEndDate returns the EndDate field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetEndDate() string {
-    if o == nil || utils.IsNil(o.EndDate) {
-        var ret string
-        return ret
-    }
-    return *o.EndDate
+	if o == nil || utils.IsNil(o.EndDate) {
+		var ret string
+		return ret
+	}
+	return *o.EndDate
 }
 
 // GetEndDateOk returns a tuple with the EndDate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetEndDateOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.EndDate) {
-        return nil, false
-    }
-    return o.EndDate, true
+	if o == nil || utils.IsNil(o.EndDate) {
+		return nil, false
+	}
+	return o.EndDate, true
 }
 
 // HasEndDate returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) HasEndDate() bool {
-    if o != nil && !utils.IsNil(o.EndDate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.EndDate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetEndDate gets a reference to the given string and assigns it to the EndDate field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) SetEndDate(v string) {
-    o.EndDate = &v
+	o.EndDate = &v
 }
 
 // GetGmv returns the Gmv field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetGmv() Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsGmv {
-    if o == nil || utils.IsNil(o.Gmv) {
-        var ret Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsGmv
-        return ret
-    }
-    return *o.Gmv
+	if o == nil || utils.IsNil(o.Gmv) {
+		var ret Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsGmv
+		return ret
+	}
+	return *o.Gmv
 }
 
 // GetGmvOk returns a tuple with the Gmv field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetGmvOk() (*Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsGmv, bool) {
-    if o == nil || utils.IsNil(o.Gmv) {
-        return nil, false
-    }
-    return o.Gmv, true
+	if o == nil || utils.IsNil(o.Gmv) {
+		return nil, false
+	}
+	return o.Gmv, true
 }
 
 // HasGmv returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) HasGmv() bool {
-    if o != nil && !utils.IsNil(o.Gmv) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Gmv) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGmv gets a reference to the given Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsGmv and assigns it to the Gmv field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) SetGmv(v Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervalsGmv) {
-    o.Gmv = &v
+	o.Gmv = &v
 }
 
 // GetStartDate returns the StartDate field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetStartDate() string {
-    if o == nil || utils.IsNil(o.StartDate) {
-        var ret string
-        return ret
-    }
-    return *o.StartDate
+	if o == nil || utils.IsNil(o.StartDate) {
+		var ret string
+		return ret
+	}
+	return *o.StartDate
 }
 
 // GetStartDateOk returns a tuple with the StartDate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetStartDateOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.StartDate) {
-        return nil, false
-    }
-    return o.StartDate, true
+	if o == nil || utils.IsNil(o.StartDate) {
+		return nil, false
+	}
+	return o.StartDate, true
 }
 
 // HasStartDate returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) HasStartDate() bool {
-    if o != nil && !utils.IsNil(o.StartDate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.StartDate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStartDate gets a reference to the given string and assigns it to the StartDate field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) SetStartDate(v string) {
-    o.StartDate = &v
+	o.StartDate = &v
 }
 
 // GetViews returns the Views field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetViews() int64 {
-    if o == nil || utils.IsNil(o.Views) {
-        var ret int64
-        return ret
-    }
-    return *o.Views
+	if o == nil || utils.IsNil(o.Views) {
+		var ret int64
+		return ret
+	}
+	return *o.Views
 }
 
 // GetViewsOk returns a tuple with the Views field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) GetViewsOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Views) {
-        return nil, false
-    }
-    return o.Views, true
+	if o == nil || utils.IsNil(o.Views) {
+		return nil, false
+	}
+	return o.Views, true
 }
 
 // HasViews returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) HasViews() bool {
-    if o != nil && !utils.IsNil(o.Views) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Views) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetViews gets a reference to the given int64 and assigns it to the Views field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) SetViews(v int64) {
-    o.Views = &v
+	o.Views = &v
 }
 
 func (o Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ClickThroughRate) {
-        toSerialize["click_through_rate"] = o.ClickThroughRate
-    }
-    if !utils.IsNil(o.DailyAvgBuyers) {
-        toSerialize["daily_avg_buyers"] = o.DailyAvgBuyers
-    }
-    if !utils.IsNil(o.EndDate) {
-        toSerialize["end_date"] = o.EndDate
-    }
-    if !utils.IsNil(o.Gmv) {
-        toSerialize["gmv"] = o.Gmv
-    }
-    if !utils.IsNil(o.StartDate) {
-        toSerialize["start_date"] = o.StartDate
-    }
-    if !utils.IsNil(o.Views) {
-        toSerialize["views"] = o.Views
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ClickThroughRate) {
+		toSerialize["click_through_rate"] = o.ClickThroughRate
+	}
+	if !utils.IsNil(o.DailyAvgBuyers) {
+		toSerialize["daily_avg_buyers"] = o.DailyAvgBuyers
+	}
+	if !utils.IsNil(o.EndDate) {
+		toSerialize["end_date"] = o.EndDate
+	}
+	if !utils.IsNil(o.Gmv) {
+		toSerialize["gmv"] = o.Gmv
+	}
+	if !utils.IsNil(o.StartDate) {
+		toSerialize["start_date"] = o.StartDate
+	}
+	if !utils.IsNil(o.Views) {
+		toSerialize["views"] = o.Views
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals) UnmarshalJSON(data []byte) (err error) {
-    varAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals := _Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals{}
+	varAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals := _Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals{}
 
-    err = json.Unmarshal(data, &varAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals)
+	err = json.Unmarshal(data, &varAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals(varAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals)
+	*o = Analytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals(varAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "click_through_rate")
-        delete(additionalProperties, "daily_avg_buyers")
-        delete(additionalProperties, "end_date")
-        delete(additionalProperties, "gmv")
-        delete(additionalProperties, "start_date")
-        delete(additionalProperties, "views")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "click_through_rate")
+		delete(additionalProperties, "daily_avg_buyers")
+		delete(additionalProperties, "end_date")
+		delete(additionalProperties, "gmv")
+		delete(additionalProperties, "start_date")
+		delete(additionalProperties, "views")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerformanceIntervals struct {
@@ -341,5 +341,3 @@ func (v *NullableAnalytics202409GetShopVideoPerformanceDetailsResponseDataPerfor
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

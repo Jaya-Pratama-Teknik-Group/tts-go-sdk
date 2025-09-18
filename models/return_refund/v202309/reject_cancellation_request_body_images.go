@@ -11,24 +11,24 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309RejectCancellationRequestBodyImages type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309RejectCancellationRequestBodyImages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309RejectCancellationRequestBodyImages{}
 
 // ReturnRefund202309RejectCancellationRequestBodyImages struct for ReturnRefund202309RejectCancellationRequestBodyImages
 type ReturnRefund202309RejectCancellationRequestBodyImages struct {
-    // Image height. Unit: px
-    Height *int32 `json:"height,omitempty"`
-    // Image ID.
-    ImageId *string `json:"image_id,omitempty"`
-    // MIME type.
-    MimeType *string `json:"mime_type,omitempty"`
-    // Image width. Unit: px
-    Width *int32 `json:"width,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Image height. Unit: px
+	Height *int32 `json:"height,omitempty"`
+	// Image ID.
+	ImageId *string `json:"image_id,omitempty"`
+	// MIME type.
+	MimeType *string `json:"mime_type,omitempty"`
+	// Image width. Unit: px
+	Width                *int32 `json:"width,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309RejectCancellationRequestBodyImages ReturnRefund202309RejectCancellationRequestBodyImages
@@ -38,197 +38,197 @@ type _ReturnRefund202309RejectCancellationRequestBodyImages ReturnRefund202309Re
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309RejectCancellationRequestBodyImages() *ReturnRefund202309RejectCancellationRequestBodyImages {
-    this := ReturnRefund202309RejectCancellationRequestBodyImages{}
-    return &this
+	this := ReturnRefund202309RejectCancellationRequestBodyImages{}
+	return &this
 }
 
 // NewReturnRefund202309RejectCancellationRequestBodyImagesWithDefaults instantiates a new ReturnRefund202309RejectCancellationRequestBodyImages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309RejectCancellationRequestBodyImagesWithDefaults() *ReturnRefund202309RejectCancellationRequestBodyImages {
-    this := ReturnRefund202309RejectCancellationRequestBodyImages{}
-    return &this
+	this := ReturnRefund202309RejectCancellationRequestBodyImages{}
+	return &this
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) GetHeight() int32 {
-    if o == nil || utils.IsNil(o.Height) {
-        var ret int32
-        return ret
-    }
-    return *o.Height
+	if o == nil || utils.IsNil(o.Height) {
+		var ret int32
+		return ret
+	}
+	return *o.Height
 }
 
 // GetHeightOk returns a tuple with the Height field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) GetHeightOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Height) {
-        return nil, false
-    }
-    return o.Height, true
+	if o == nil || utils.IsNil(o.Height) {
+		return nil, false
+	}
+	return o.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) HasHeight() bool {
-    if o != nil && !utils.IsNil(o.Height) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Height) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHeight gets a reference to the given int32 and assigns it to the Height field.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) SetHeight(v int32) {
-    o.Height = &v
+	o.Height = &v
 }
 
 // GetImageId returns the ImageId field value if set, zero value otherwise.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) GetImageId() string {
-    if o == nil || utils.IsNil(o.ImageId) {
-        var ret string
-        return ret
-    }
-    return *o.ImageId
+	if o == nil || utils.IsNil(o.ImageId) {
+		var ret string
+		return ret
+	}
+	return *o.ImageId
 }
 
 // GetImageIdOk returns a tuple with the ImageId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) GetImageIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ImageId) {
-        return nil, false
-    }
-    return o.ImageId, true
+	if o == nil || utils.IsNil(o.ImageId) {
+		return nil, false
+	}
+	return o.ImageId, true
 }
 
 // HasImageId returns a boolean if a field has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) HasImageId() bool {
-    if o != nil && !utils.IsNil(o.ImageId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ImageId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImageId gets a reference to the given string and assigns it to the ImageId field.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) SetImageId(v string) {
-    o.ImageId = &v
+	o.ImageId = &v
 }
 
 // GetMimeType returns the MimeType field value if set, zero value otherwise.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) GetMimeType() string {
-    if o == nil || utils.IsNil(o.MimeType) {
-        var ret string
-        return ret
-    }
-    return *o.MimeType
+	if o == nil || utils.IsNil(o.MimeType) {
+		var ret string
+		return ret
+	}
+	return *o.MimeType
 }
 
 // GetMimeTypeOk returns a tuple with the MimeType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) GetMimeTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.MimeType) {
-        return nil, false
-    }
-    return o.MimeType, true
+	if o == nil || utils.IsNil(o.MimeType) {
+		return nil, false
+	}
+	return o.MimeType, true
 }
 
 // HasMimeType returns a boolean if a field has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) HasMimeType() bool {
-    if o != nil && !utils.IsNil(o.MimeType) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MimeType) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMimeType gets a reference to the given string and assigns it to the MimeType field.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) SetMimeType(v string) {
-    o.MimeType = &v
+	o.MimeType = &v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) GetWidth() int32 {
-    if o == nil || utils.IsNil(o.Width) {
-        var ret int32
-        return ret
-    }
-    return *o.Width
+	if o == nil || utils.IsNil(o.Width) {
+		var ret int32
+		return ret
+	}
+	return *o.Width
 }
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) GetWidthOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Width) {
-        return nil, false
-    }
-    return o.Width, true
+	if o == nil || utils.IsNil(o.Width) {
+		return nil, false
+	}
+	return o.Width, true
 }
 
 // HasWidth returns a boolean if a field has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) HasWidth() bool {
-    if o != nil && !utils.IsNil(o.Width) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Width) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWidth gets a reference to the given int32 and assigns it to the Width field.
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) SetWidth(v int32) {
-    o.Width = &v
+	o.Width = &v
 }
 
 func (o ReturnRefund202309RejectCancellationRequestBodyImages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309RejectCancellationRequestBodyImages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Height) {
-        toSerialize["height"] = o.Height
-    }
-    if !utils.IsNil(o.ImageId) {
-        toSerialize["image_id"] = o.ImageId
-    }
-    if !utils.IsNil(o.MimeType) {
-        toSerialize["mime_type"] = o.MimeType
-    }
-    if !utils.IsNil(o.Width) {
-        toSerialize["width"] = o.Width
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Height) {
+		toSerialize["height"] = o.Height
+	}
+	if !utils.IsNil(o.ImageId) {
+		toSerialize["image_id"] = o.ImageId
+	}
+	if !utils.IsNil(o.MimeType) {
+		toSerialize["mime_type"] = o.MimeType
+	}
+	if !utils.IsNil(o.Width) {
+		toSerialize["width"] = o.Width
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309RejectCancellationRequestBodyImages) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309RejectCancellationRequestBodyImages := _ReturnRefund202309RejectCancellationRequestBodyImages{}
+	varReturnRefund202309RejectCancellationRequestBodyImages := _ReturnRefund202309RejectCancellationRequestBodyImages{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309RejectCancellationRequestBodyImages)
+	err = json.Unmarshal(data, &varReturnRefund202309RejectCancellationRequestBodyImages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309RejectCancellationRequestBodyImages(varReturnRefund202309RejectCancellationRequestBodyImages)
+	*o = ReturnRefund202309RejectCancellationRequestBodyImages(varReturnRefund202309RejectCancellationRequestBodyImages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "height")
-        delete(additionalProperties, "image_id")
-        delete(additionalProperties, "mime_type")
-        delete(additionalProperties, "width")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "height")
+		delete(additionalProperties, "image_id")
+		delete(additionalProperties, "mime_type")
+		delete(additionalProperties, "width")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309RejectCancellationRequestBodyImages struct {
@@ -266,5 +266,3 @@ func (v *NullableReturnRefund202309RejectCancellationRequestBodyImages) Unmarsha
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

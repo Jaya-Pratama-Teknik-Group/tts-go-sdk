@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202501
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber type satisfies the MappedNullable interface at compile time
+// checks if the Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber{}
 
 // Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber struct for Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber
 type Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber struct {
-    // The country code of the phone number, prefixed by a plus `+` symbol. E.g. +353 for Ireland. Only EU country codes are allowed. Max digits: 4
-    CountryCode *string `json:"country_code,omitempty"`
-    // The local number. Length: 7 - 11 digits
-    LocalNumber *string `json:"local_number,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The country code of the phone number, prefixed by a plus `+` symbol. E.g. +353 for Ireland. Only EU country codes are allowed. Max digits: 4
+	CountryCode *string `json:"country_code,omitempty"`
+	// The local number. Length: 7 - 11 digits
+	LocalNumber          *string `json:"local_number,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber
@@ -34,125 +34,125 @@ type _Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegiona
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber() *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber {
-    this := Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber{}
-    return &this
+	this := Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber{}
+	return &this
 }
 
 // NewProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumberWithDefaults instantiates a new Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumberWithDefaults() *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber {
-    this := Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber{}
-    return &this
+	this := Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber{}
+	return &this
 }
 
 // GetCountryCode returns the CountryCode field value if set, zero value otherwise.
 func (o *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) GetCountryCode() string {
-    if o == nil || utils.IsNil(o.CountryCode) {
-        var ret string
-        return ret
-    }
-    return *o.CountryCode
+	if o == nil || utils.IsNil(o.CountryCode) {
+		var ret string
+		return ret
+	}
+	return *o.CountryCode
 }
 
 // GetCountryCodeOk returns a tuple with the CountryCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) GetCountryCodeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.CountryCode) {
-        return nil, false
-    }
-    return o.CountryCode, true
+	if o == nil || utils.IsNil(o.CountryCode) {
+		return nil, false
+	}
+	return o.CountryCode, true
 }
 
 // HasCountryCode returns a boolean if a field has been set.
 func (o *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) HasCountryCode() bool {
-    if o != nil && !utils.IsNil(o.CountryCode) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CountryCode) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCountryCode gets a reference to the given string and assigns it to the CountryCode field.
 func (o *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) SetCountryCode(v string) {
-    o.CountryCode = &v
+	o.CountryCode = &v
 }
 
 // GetLocalNumber returns the LocalNumber field value if set, zero value otherwise.
 func (o *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) GetLocalNumber() string {
-    if o == nil || utils.IsNil(o.LocalNumber) {
-        var ret string
-        return ret
-    }
-    return *o.LocalNumber
+	if o == nil || utils.IsNil(o.LocalNumber) {
+		var ret string
+		return ret
+	}
+	return *o.LocalNumber
 }
 
 // GetLocalNumberOk returns a tuple with the LocalNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) GetLocalNumberOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.LocalNumber) {
-        return nil, false
-    }
-    return o.LocalNumber, true
+	if o == nil || utils.IsNil(o.LocalNumber) {
+		return nil, false
+	}
+	return o.LocalNumber, true
 }
 
 // HasLocalNumber returns a boolean if a field has been set.
 func (o *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) HasLocalNumber() bool {
-    if o != nil && !utils.IsNil(o.LocalNumber) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LocalNumber) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocalNumber gets a reference to the given string and assigns it to the LocalNumber field.
 func (o *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) SetLocalNumber(v string) {
-    o.LocalNumber = &v
+	o.LocalNumber = &v
 }
 
 func (o Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CountryCode) {
-        toSerialize["country_code"] = o.CountryCode
-    }
-    if !utils.IsNil(o.LocalNumber) {
-        toSerialize["local_number"] = o.LocalNumber
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CountryCode) {
+		toSerialize["country_code"] = o.CountryCode
+	}
+	if !utils.IsNil(o.LocalNumber) {
+		toSerialize["local_number"] = o.LocalNumber
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber) UnmarshalJSON(data []byte) (err error) {
-    varProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber := _Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber{}
+	varProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber := _Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber{}
 
-    err = json.Unmarshal(data, &varProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber)
+	err = json.Unmarshal(data, &varProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber(varProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber)
+	*o = Product202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber(varProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "country_code")
-        delete(additionalProperties, "local_number")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "country_code")
+		delete(additionalProperties, "local_number")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202501SearchResponsiblePersonsResponseDataResponsiblePersonsRegionalProfilesPhoneNumber struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202501SearchResponsiblePersonsResponseDataResponsiblePer
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

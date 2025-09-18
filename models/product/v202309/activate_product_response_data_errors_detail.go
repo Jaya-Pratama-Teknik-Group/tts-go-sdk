@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309ActivateProductResponseDataErrorsDetail type satisfies the MappedNullable interface at compile time
+// checks if the Product202309ActivateProductResponseDataErrorsDetail type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309ActivateProductResponseDataErrorsDetail{}
 
 // Product202309ActivateProductResponseDataErrorsDetail struct for Product202309ActivateProductResponseDataErrorsDetail
 type Product202309ActivateProductResponseDataErrorsDetail struct {
-    // A list of further nested errors or issues related to the main error.
-    ExtraErrors []Product202309ActivateProductResponseDataErrorsDetailExtraErrors `json:"extra_errors,omitempty"`
-    // The ID of the product that could not be activated.
-    ProductId *string `json:"product_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A list of further nested errors or issues related to the main error.
+	ExtraErrors []Product202309ActivateProductResponseDataErrorsDetailExtraErrors `json:"extra_errors,omitempty"`
+	// The ID of the product that could not be activated.
+	ProductId            *string `json:"product_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309ActivateProductResponseDataErrorsDetail Product202309ActivateProductResponseDataErrorsDetail
@@ -34,125 +34,125 @@ type _Product202309ActivateProductResponseDataErrorsDetail Product202309Activate
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309ActivateProductResponseDataErrorsDetail() *Product202309ActivateProductResponseDataErrorsDetail {
-    this := Product202309ActivateProductResponseDataErrorsDetail{}
-    return &this
+	this := Product202309ActivateProductResponseDataErrorsDetail{}
+	return &this
 }
 
 // NewProduct202309ActivateProductResponseDataErrorsDetailWithDefaults instantiates a new Product202309ActivateProductResponseDataErrorsDetail object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309ActivateProductResponseDataErrorsDetailWithDefaults() *Product202309ActivateProductResponseDataErrorsDetail {
-    this := Product202309ActivateProductResponseDataErrorsDetail{}
-    return &this
+	this := Product202309ActivateProductResponseDataErrorsDetail{}
+	return &this
 }
 
 // GetExtraErrors returns the ExtraErrors field value if set, zero value otherwise.
 func (o *Product202309ActivateProductResponseDataErrorsDetail) GetExtraErrors() []Product202309ActivateProductResponseDataErrorsDetailExtraErrors {
-    if o == nil || utils.IsNil(o.ExtraErrors) {
-        var ret []Product202309ActivateProductResponseDataErrorsDetailExtraErrors
-        return ret
-    }
-    return o.ExtraErrors
+	if o == nil || utils.IsNil(o.ExtraErrors) {
+		var ret []Product202309ActivateProductResponseDataErrorsDetailExtraErrors
+		return ret
+	}
+	return o.ExtraErrors
 }
 
 // GetExtraErrorsOk returns a tuple with the ExtraErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309ActivateProductResponseDataErrorsDetail) GetExtraErrorsOk() ([]Product202309ActivateProductResponseDataErrorsDetailExtraErrors, bool) {
-    if o == nil || utils.IsNil(o.ExtraErrors) {
-        return nil, false
-    }
-    return o.ExtraErrors, true
+	if o == nil || utils.IsNil(o.ExtraErrors) {
+		return nil, false
+	}
+	return o.ExtraErrors, true
 }
 
 // HasExtraErrors returns a boolean if a field has been set.
 func (o *Product202309ActivateProductResponseDataErrorsDetail) HasExtraErrors() bool {
-    if o != nil && !utils.IsNil(o.ExtraErrors) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ExtraErrors) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetExtraErrors gets a reference to the given []Product202309ActivateProductResponseDataErrorsDetailExtraErrors and assigns it to the ExtraErrors field.
 func (o *Product202309ActivateProductResponseDataErrorsDetail) SetExtraErrors(v []Product202309ActivateProductResponseDataErrorsDetailExtraErrors) {
-    o.ExtraErrors = v
+	o.ExtraErrors = v
 }
 
 // GetProductId returns the ProductId field value if set, zero value otherwise.
 func (o *Product202309ActivateProductResponseDataErrorsDetail) GetProductId() string {
-    if o == nil || utils.IsNil(o.ProductId) {
-        var ret string
-        return ret
-    }
-    return *o.ProductId
+	if o == nil || utils.IsNil(o.ProductId) {
+		var ret string
+		return ret
+	}
+	return *o.ProductId
 }
 
 // GetProductIdOk returns a tuple with the ProductId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309ActivateProductResponseDataErrorsDetail) GetProductIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ProductId) {
-        return nil, false
-    }
-    return o.ProductId, true
+	if o == nil || utils.IsNil(o.ProductId) {
+		return nil, false
+	}
+	return o.ProductId, true
 }
 
 // HasProductId returns a boolean if a field has been set.
 func (o *Product202309ActivateProductResponseDataErrorsDetail) HasProductId() bool {
-    if o != nil && !utils.IsNil(o.ProductId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductId gets a reference to the given string and assigns it to the ProductId field.
 func (o *Product202309ActivateProductResponseDataErrorsDetail) SetProductId(v string) {
-    o.ProductId = &v
+	o.ProductId = &v
 }
 
 func (o Product202309ActivateProductResponseDataErrorsDetail) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309ActivateProductResponseDataErrorsDetail) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ExtraErrors) {
-        toSerialize["extra_errors"] = o.ExtraErrors
-    }
-    if !utils.IsNil(o.ProductId) {
-        toSerialize["product_id"] = o.ProductId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ExtraErrors) {
+		toSerialize["extra_errors"] = o.ExtraErrors
+	}
+	if !utils.IsNil(o.ProductId) {
+		toSerialize["product_id"] = o.ProductId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309ActivateProductResponseDataErrorsDetail) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309ActivateProductResponseDataErrorsDetail := _Product202309ActivateProductResponseDataErrorsDetail{}
+	varProduct202309ActivateProductResponseDataErrorsDetail := _Product202309ActivateProductResponseDataErrorsDetail{}
 
-    err = json.Unmarshal(data, &varProduct202309ActivateProductResponseDataErrorsDetail)
+	err = json.Unmarshal(data, &varProduct202309ActivateProductResponseDataErrorsDetail)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309ActivateProductResponseDataErrorsDetail(varProduct202309ActivateProductResponseDataErrorsDetail)
+	*o = Product202309ActivateProductResponseDataErrorsDetail(varProduct202309ActivateProductResponseDataErrorsDetail)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "extra_errors")
-        delete(additionalProperties, "product_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "extra_errors")
+		delete(additionalProperties, "product_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309ActivateProductResponseDataErrorsDetail struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309ActivateProductResponseDataErrorsDetail) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

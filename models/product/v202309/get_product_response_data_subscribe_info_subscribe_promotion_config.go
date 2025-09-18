@@ -11,24 +11,24 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig{}
 
 // Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig struct for Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig
 type Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig struct {
-    // An enum that communicated the type of discount: - REGULAR - FIRST_ORDER - RETENTION
-    DiscountLevel *string `json:"discount_level,omitempty"`
-    // The discount options available to the seller for the given discount level.
-    DiscountOptions []int32 `json:"discount_options,omitempty"`
-    // The maximum discount a seller can set for the associated discount level.
-    MaxDiscount *int32 `json:"max_discount,omitempty"`
-    // The minimum discount a seller can set for the associated discount level.
-    MinDiscount *int32 `json:"min_discount,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// An enum that communicated the type of discount: - REGULAR - FIRST_ORDER - RETENTION
+	DiscountLevel *string `json:"discount_level,omitempty"`
+	// The discount options available to the seller for the given discount level.
+	DiscountOptions []int32 `json:"discount_options,omitempty"`
+	// The maximum discount a seller can set for the associated discount level.
+	MaxDiscount *int32 `json:"max_discount,omitempty"`
+	// The minimum discount a seller can set for the associated discount level.
+	MinDiscount          *int32 `json:"min_discount,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig
@@ -38,197 +38,197 @@ type _Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig P
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig() *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig {
-    this := Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig{}
-    return &this
+	this := Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig{}
+	return &this
 }
 
 // NewProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfigWithDefaults instantiates a new Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfigWithDefaults() *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig {
-    this := Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig{}
-    return &this
+	this := Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig{}
+	return &this
 }
 
 // GetDiscountLevel returns the DiscountLevel field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) GetDiscountLevel() string {
-    if o == nil || utils.IsNil(o.DiscountLevel) {
-        var ret string
-        return ret
-    }
-    return *o.DiscountLevel
+	if o == nil || utils.IsNil(o.DiscountLevel) {
+		var ret string
+		return ret
+	}
+	return *o.DiscountLevel
 }
 
 // GetDiscountLevelOk returns a tuple with the DiscountLevel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) GetDiscountLevelOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.DiscountLevel) {
-        return nil, false
-    }
-    return o.DiscountLevel, true
+	if o == nil || utils.IsNil(o.DiscountLevel) {
+		return nil, false
+	}
+	return o.DiscountLevel, true
 }
 
 // HasDiscountLevel returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) HasDiscountLevel() bool {
-    if o != nil && !utils.IsNil(o.DiscountLevel) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DiscountLevel) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDiscountLevel gets a reference to the given string and assigns it to the DiscountLevel field.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) SetDiscountLevel(v string) {
-    o.DiscountLevel = &v
+	o.DiscountLevel = &v
 }
 
 // GetDiscountOptions returns the DiscountOptions field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) GetDiscountOptions() []int32 {
-    if o == nil || utils.IsNil(o.DiscountOptions) {
-        var ret []int32
-        return ret
-    }
-    return o.DiscountOptions
+	if o == nil || utils.IsNil(o.DiscountOptions) {
+		var ret []int32
+		return ret
+	}
+	return o.DiscountOptions
 }
 
 // GetDiscountOptionsOk returns a tuple with the DiscountOptions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) GetDiscountOptionsOk() ([]int32, bool) {
-    if o == nil || utils.IsNil(o.DiscountOptions) {
-        return nil, false
-    }
-    return o.DiscountOptions, true
+	if o == nil || utils.IsNil(o.DiscountOptions) {
+		return nil, false
+	}
+	return o.DiscountOptions, true
 }
 
 // HasDiscountOptions returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) HasDiscountOptions() bool {
-    if o != nil && !utils.IsNil(o.DiscountOptions) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DiscountOptions) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDiscountOptions gets a reference to the given []int32 and assigns it to the DiscountOptions field.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) SetDiscountOptions(v []int32) {
-    o.DiscountOptions = v
+	o.DiscountOptions = v
 }
 
 // GetMaxDiscount returns the MaxDiscount field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) GetMaxDiscount() int32 {
-    if o == nil || utils.IsNil(o.MaxDiscount) {
-        var ret int32
-        return ret
-    }
-    return *o.MaxDiscount
+	if o == nil || utils.IsNil(o.MaxDiscount) {
+		var ret int32
+		return ret
+	}
+	return *o.MaxDiscount
 }
 
 // GetMaxDiscountOk returns a tuple with the MaxDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) GetMaxDiscountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.MaxDiscount) {
-        return nil, false
-    }
-    return o.MaxDiscount, true
+	if o == nil || utils.IsNil(o.MaxDiscount) {
+		return nil, false
+	}
+	return o.MaxDiscount, true
 }
 
 // HasMaxDiscount returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) HasMaxDiscount() bool {
-    if o != nil && !utils.IsNil(o.MaxDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MaxDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMaxDiscount gets a reference to the given int32 and assigns it to the MaxDiscount field.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) SetMaxDiscount(v int32) {
-    o.MaxDiscount = &v
+	o.MaxDiscount = &v
 }
 
 // GetMinDiscount returns the MinDiscount field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) GetMinDiscount() int32 {
-    if o == nil || utils.IsNil(o.MinDiscount) {
-        var ret int32
-        return ret
-    }
-    return *o.MinDiscount
+	if o == nil || utils.IsNil(o.MinDiscount) {
+		var ret int32
+		return ret
+	}
+	return *o.MinDiscount
 }
 
 // GetMinDiscountOk returns a tuple with the MinDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) GetMinDiscountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.MinDiscount) {
-        return nil, false
-    }
-    return o.MinDiscount, true
+	if o == nil || utils.IsNil(o.MinDiscount) {
+		return nil, false
+	}
+	return o.MinDiscount, true
 }
 
 // HasMinDiscount returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) HasMinDiscount() bool {
-    if o != nil && !utils.IsNil(o.MinDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MinDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMinDiscount gets a reference to the given int32 and assigns it to the MinDiscount field.
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) SetMinDiscount(v int32) {
-    o.MinDiscount = &v
+	o.MinDiscount = &v
 }
 
 func (o Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.DiscountLevel) {
-        toSerialize["discount_level"] = o.DiscountLevel
-    }
-    if !utils.IsNil(o.DiscountOptions) {
-        toSerialize["discount_options"] = o.DiscountOptions
-    }
-    if !utils.IsNil(o.MaxDiscount) {
-        toSerialize["max_discount"] = o.MaxDiscount
-    }
-    if !utils.IsNil(o.MinDiscount) {
-        toSerialize["min_discount"] = o.MinDiscount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.DiscountLevel) {
+		toSerialize["discount_level"] = o.DiscountLevel
+	}
+	if !utils.IsNil(o.DiscountOptions) {
+		toSerialize["discount_options"] = o.DiscountOptions
+	}
+	if !utils.IsNil(o.MaxDiscount) {
+		toSerialize["max_discount"] = o.MaxDiscount
+	}
+	if !utils.IsNil(o.MinDiscount) {
+		toSerialize["min_discount"] = o.MinDiscount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig := _Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig{}
+	varProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig := _Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig{}
 
-    err = json.Unmarshal(data, &varProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig)
+	err = json.Unmarshal(data, &varProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig(varProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig)
+	*o = Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig(varProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "discount_level")
-        delete(additionalProperties, "discount_options")
-        delete(additionalProperties, "max_discount")
-        delete(additionalProperties, "min_discount")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "discount_level")
+		delete(additionalProperties, "discount_options")
+		delete(additionalProperties, "max_discount")
+		delete(additionalProperties, "min_discount")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig struct {
@@ -266,5 +266,3 @@ func (v *NullableProduct202309GetProductResponseDataSubscribeInfoSubscribePromot
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

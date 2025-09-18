@@ -11,20 +11,20 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetEligibleShippingServiceRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetEligibleShippingServiceRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetEligibleShippingServiceRequestBody{}
 
 // Fulfillment202309GetEligibleShippingServiceRequestBody struct for Fulfillment202309GetEligibleShippingServiceRequestBody
 type Fulfillment202309GetEligibleShippingServiceRequestBody struct {
-    Dimension *Fulfillment202309GetEligibleShippingServiceRequestBodyDimension `json:"dimension,omitempty"`
-    // Order line item ID list
-    OrderLineItemIds []string `json:"order_line_item_ids,omitempty"`
-    Weight *Fulfillment202309GetEligibleShippingServiceRequestBodyWeight `json:"weight,omitempty"`
-    AdditionalProperties map[string]interface{}
+	Dimension *Fulfillment202309GetEligibleShippingServiceRequestBodyDimension `json:"dimension,omitempty"`
+	// Order line item ID list
+	OrderLineItemIds     []string                                                      `json:"order_line_item_ids,omitempty"`
+	Weight               *Fulfillment202309GetEligibleShippingServiceRequestBodyWeight `json:"weight,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetEligibleShippingServiceRequestBody Fulfillment202309GetEligibleShippingServiceRequestBody
@@ -34,161 +34,161 @@ type _Fulfillment202309GetEligibleShippingServiceRequestBody Fulfillment202309Ge
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetEligibleShippingServiceRequestBody() *Fulfillment202309GetEligibleShippingServiceRequestBody {
-    this := Fulfillment202309GetEligibleShippingServiceRequestBody{}
-    return &this
+	this := Fulfillment202309GetEligibleShippingServiceRequestBody{}
+	return &this
 }
 
 // NewFulfillment202309GetEligibleShippingServiceRequestBodyWithDefaults instantiates a new Fulfillment202309GetEligibleShippingServiceRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetEligibleShippingServiceRequestBodyWithDefaults() *Fulfillment202309GetEligibleShippingServiceRequestBody {
-    this := Fulfillment202309GetEligibleShippingServiceRequestBody{}
-    return &this
+	this := Fulfillment202309GetEligibleShippingServiceRequestBody{}
+	return &this
 }
 
 // GetDimension returns the Dimension field value if set, zero value otherwise.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) GetDimension() Fulfillment202309GetEligibleShippingServiceRequestBodyDimension {
-    if o == nil || utils.IsNil(o.Dimension) {
-        var ret Fulfillment202309GetEligibleShippingServiceRequestBodyDimension
-        return ret
-    }
-    return *o.Dimension
+	if o == nil || utils.IsNil(o.Dimension) {
+		var ret Fulfillment202309GetEligibleShippingServiceRequestBodyDimension
+		return ret
+	}
+	return *o.Dimension
 }
 
 // GetDimensionOk returns a tuple with the Dimension field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) GetDimensionOk() (*Fulfillment202309GetEligibleShippingServiceRequestBodyDimension, bool) {
-    if o == nil || utils.IsNil(o.Dimension) {
-        return nil, false
-    }
-    return o.Dimension, true
+	if o == nil || utils.IsNil(o.Dimension) {
+		return nil, false
+	}
+	return o.Dimension, true
 }
 
 // HasDimension returns a boolean if a field has been set.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) HasDimension() bool {
-    if o != nil && !utils.IsNil(o.Dimension) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Dimension) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDimension gets a reference to the given Fulfillment202309GetEligibleShippingServiceRequestBodyDimension and assigns it to the Dimension field.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) SetDimension(v Fulfillment202309GetEligibleShippingServiceRequestBodyDimension) {
-    o.Dimension = &v
+	o.Dimension = &v
 }
 
 // GetOrderLineItemIds returns the OrderLineItemIds field value if set, zero value otherwise.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) GetOrderLineItemIds() []string {
-    if o == nil || utils.IsNil(o.OrderLineItemIds) {
-        var ret []string
-        return ret
-    }
-    return o.OrderLineItemIds
+	if o == nil || utils.IsNil(o.OrderLineItemIds) {
+		var ret []string
+		return ret
+	}
+	return o.OrderLineItemIds
 }
 
 // GetOrderLineItemIdsOk returns a tuple with the OrderLineItemIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) GetOrderLineItemIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.OrderLineItemIds) {
-        return nil, false
-    }
-    return o.OrderLineItemIds, true
+	if o == nil || utils.IsNil(o.OrderLineItemIds) {
+		return nil, false
+	}
+	return o.OrderLineItemIds, true
 }
 
 // HasOrderLineItemIds returns a boolean if a field has been set.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) HasOrderLineItemIds() bool {
-    if o != nil && !utils.IsNil(o.OrderLineItemIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderLineItemIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderLineItemIds gets a reference to the given []string and assigns it to the OrderLineItemIds field.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) SetOrderLineItemIds(v []string) {
-    o.OrderLineItemIds = v
+	o.OrderLineItemIds = v
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) GetWeight() Fulfillment202309GetEligibleShippingServiceRequestBodyWeight {
-    if o == nil || utils.IsNil(o.Weight) {
-        var ret Fulfillment202309GetEligibleShippingServiceRequestBodyWeight
-        return ret
-    }
-    return *o.Weight
+	if o == nil || utils.IsNil(o.Weight) {
+		var ret Fulfillment202309GetEligibleShippingServiceRequestBodyWeight
+		return ret
+	}
+	return *o.Weight
 }
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) GetWeightOk() (*Fulfillment202309GetEligibleShippingServiceRequestBodyWeight, bool) {
-    if o == nil || utils.IsNil(o.Weight) {
-        return nil, false
-    }
-    return o.Weight, true
+	if o == nil || utils.IsNil(o.Weight) {
+		return nil, false
+	}
+	return o.Weight, true
 }
 
 // HasWeight returns a boolean if a field has been set.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) HasWeight() bool {
-    if o != nil && !utils.IsNil(o.Weight) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Weight) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWeight gets a reference to the given Fulfillment202309GetEligibleShippingServiceRequestBodyWeight and assigns it to the Weight field.
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) SetWeight(v Fulfillment202309GetEligibleShippingServiceRequestBodyWeight) {
-    o.Weight = &v
+	o.Weight = &v
 }
 
 func (o Fulfillment202309GetEligibleShippingServiceRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetEligibleShippingServiceRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Dimension) {
-        toSerialize["dimension"] = o.Dimension
-    }
-    if !utils.IsNil(o.OrderLineItemIds) {
-        toSerialize["order_line_item_ids"] = o.OrderLineItemIds
-    }
-    if !utils.IsNil(o.Weight) {
-        toSerialize["weight"] = o.Weight
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Dimension) {
+		toSerialize["dimension"] = o.Dimension
+	}
+	if !utils.IsNil(o.OrderLineItemIds) {
+		toSerialize["order_line_item_ids"] = o.OrderLineItemIds
+	}
+	if !utils.IsNil(o.Weight) {
+		toSerialize["weight"] = o.Weight
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetEligibleShippingServiceRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetEligibleShippingServiceRequestBody := _Fulfillment202309GetEligibleShippingServiceRequestBody{}
+	varFulfillment202309GetEligibleShippingServiceRequestBody := _Fulfillment202309GetEligibleShippingServiceRequestBody{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetEligibleShippingServiceRequestBody)
+	err = json.Unmarshal(data, &varFulfillment202309GetEligibleShippingServiceRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetEligibleShippingServiceRequestBody(varFulfillment202309GetEligibleShippingServiceRequestBody)
+	*o = Fulfillment202309GetEligibleShippingServiceRequestBody(varFulfillment202309GetEligibleShippingServiceRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "dimension")
-        delete(additionalProperties, "order_line_item_ids")
-        delete(additionalProperties, "weight")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "dimension")
+		delete(additionalProperties, "order_line_item_ids")
+		delete(additionalProperties, "weight")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetEligibleShippingServiceRequestBody struct {
@@ -226,5 +226,3 @@ func (v *NullableFulfillment202309GetEligibleShippingServiceRequestBody) Unmarsh
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

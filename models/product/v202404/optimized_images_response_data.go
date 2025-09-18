@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202404
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202404OptimizedImagesResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202404OptimizedImagesResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202404OptimizedImagesResponseData{}
 
 // Product202404OptimizedImagesResponseData struct for Product202404OptimizedImagesResponseData
 type Product202404OptimizedImagesResponseData struct {
-    // The list of images to be optimized.
-    Images []Product202404OptimizedImagesResponseDataImages `json:"images,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of images to be optimized.
+	Images               []Product202404OptimizedImagesResponseDataImages `json:"images,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202404OptimizedImagesResponseData Product202404OptimizedImagesResponseData
@@ -32,89 +32,89 @@ type _Product202404OptimizedImagesResponseData Product202404OptimizedImagesRespo
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202404OptimizedImagesResponseData() *Product202404OptimizedImagesResponseData {
-    this := Product202404OptimizedImagesResponseData{}
-    return &this
+	this := Product202404OptimizedImagesResponseData{}
+	return &this
 }
 
 // NewProduct202404OptimizedImagesResponseDataWithDefaults instantiates a new Product202404OptimizedImagesResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202404OptimizedImagesResponseDataWithDefaults() *Product202404OptimizedImagesResponseData {
-    this := Product202404OptimizedImagesResponseData{}
-    return &this
+	this := Product202404OptimizedImagesResponseData{}
+	return &this
 }
 
 // GetImages returns the Images field value if set, zero value otherwise.
 func (o *Product202404OptimizedImagesResponseData) GetImages() []Product202404OptimizedImagesResponseDataImages {
-    if o == nil || utils.IsNil(o.Images) {
-        var ret []Product202404OptimizedImagesResponseDataImages
-        return ret
-    }
-    return o.Images
+	if o == nil || utils.IsNil(o.Images) {
+		var ret []Product202404OptimizedImagesResponseDataImages
+		return ret
+	}
+	return o.Images
 }
 
 // GetImagesOk returns a tuple with the Images field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202404OptimizedImagesResponseData) GetImagesOk() ([]Product202404OptimizedImagesResponseDataImages, bool) {
-    if o == nil || utils.IsNil(o.Images) {
-        return nil, false
-    }
-    return o.Images, true
+	if o == nil || utils.IsNil(o.Images) {
+		return nil, false
+	}
+	return o.Images, true
 }
 
 // HasImages returns a boolean if a field has been set.
 func (o *Product202404OptimizedImagesResponseData) HasImages() bool {
-    if o != nil && !utils.IsNil(o.Images) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Images) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImages gets a reference to the given []Product202404OptimizedImagesResponseDataImages and assigns it to the Images field.
 func (o *Product202404OptimizedImagesResponseData) SetImages(v []Product202404OptimizedImagesResponseDataImages) {
-    o.Images = v
+	o.Images = v
 }
 
 func (o Product202404OptimizedImagesResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202404OptimizedImagesResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Images) {
-        toSerialize["images"] = o.Images
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Images) {
+		toSerialize["images"] = o.Images
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202404OptimizedImagesResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202404OptimizedImagesResponseData := _Product202404OptimizedImagesResponseData{}
+	varProduct202404OptimizedImagesResponseData := _Product202404OptimizedImagesResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202404OptimizedImagesResponseData)
+	err = json.Unmarshal(data, &varProduct202404OptimizedImagesResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202404OptimizedImagesResponseData(varProduct202404OptimizedImagesResponseData)
+	*o = Product202404OptimizedImagesResponseData(varProduct202404OptimizedImagesResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "images")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "images")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202404OptimizedImagesResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202404OptimizedImagesResponseData) UnmarshalJSON(src []b
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

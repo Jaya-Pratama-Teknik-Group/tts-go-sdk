@@ -11,18 +11,18 @@ API version: 1.0.0
 package logistics_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Logistics202309GetGlobalSellerWarehouseResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Logistics202309GetGlobalSellerWarehouseResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Logistics202309GetGlobalSellerWarehouseResponseData{}
 
 // Logistics202309GetGlobalSellerWarehouseResponseData struct for Logistics202309GetGlobalSellerWarehouseResponseData
 type Logistics202309GetGlobalSellerWarehouseResponseData struct {
-    // Global warehouse information.
-    GlobalWarehouses []Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses `json:"global_warehouses,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Global warehouse information.
+	GlobalWarehouses     []Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses `json:"global_warehouses,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Logistics202309GetGlobalSellerWarehouseResponseData Logistics202309GetGlobalSellerWarehouseResponseData
@@ -32,89 +32,89 @@ type _Logistics202309GetGlobalSellerWarehouseResponseData Logistics202309GetGlob
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewLogistics202309GetGlobalSellerWarehouseResponseData() *Logistics202309GetGlobalSellerWarehouseResponseData {
-    this := Logistics202309GetGlobalSellerWarehouseResponseData{}
-    return &this
+	this := Logistics202309GetGlobalSellerWarehouseResponseData{}
+	return &this
 }
 
 // NewLogistics202309GetGlobalSellerWarehouseResponseDataWithDefaults instantiates a new Logistics202309GetGlobalSellerWarehouseResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewLogistics202309GetGlobalSellerWarehouseResponseDataWithDefaults() *Logistics202309GetGlobalSellerWarehouseResponseData {
-    this := Logistics202309GetGlobalSellerWarehouseResponseData{}
-    return &this
+	this := Logistics202309GetGlobalSellerWarehouseResponseData{}
+	return &this
 }
 
 // GetGlobalWarehouses returns the GlobalWarehouses field value if set, zero value otherwise.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseData) GetGlobalWarehouses() []Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses {
-    if o == nil || utils.IsNil(o.GlobalWarehouses) {
-        var ret []Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses
-        return ret
-    }
-    return o.GlobalWarehouses
+	if o == nil || utils.IsNil(o.GlobalWarehouses) {
+		var ret []Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses
+		return ret
+	}
+	return o.GlobalWarehouses
 }
 
 // GetGlobalWarehousesOk returns a tuple with the GlobalWarehouses field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseData) GetGlobalWarehousesOk() ([]Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses, bool) {
-    if o == nil || utils.IsNil(o.GlobalWarehouses) {
-        return nil, false
-    }
-    return o.GlobalWarehouses, true
+	if o == nil || utils.IsNil(o.GlobalWarehouses) {
+		return nil, false
+	}
+	return o.GlobalWarehouses, true
 }
 
 // HasGlobalWarehouses returns a boolean if a field has been set.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseData) HasGlobalWarehouses() bool {
-    if o != nil && !utils.IsNil(o.GlobalWarehouses) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.GlobalWarehouses) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGlobalWarehouses gets a reference to the given []Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses and assigns it to the GlobalWarehouses field.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseData) SetGlobalWarehouses(v []Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) {
-    o.GlobalWarehouses = v
+	o.GlobalWarehouses = v
 }
 
 func (o Logistics202309GetGlobalSellerWarehouseResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Logistics202309GetGlobalSellerWarehouseResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.GlobalWarehouses) {
-        toSerialize["global_warehouses"] = o.GlobalWarehouses
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.GlobalWarehouses) {
+		toSerialize["global_warehouses"] = o.GlobalWarehouses
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Logistics202309GetGlobalSellerWarehouseResponseData) UnmarshalJSON(data []byte) (err error) {
-    varLogistics202309GetGlobalSellerWarehouseResponseData := _Logistics202309GetGlobalSellerWarehouseResponseData{}
+	varLogistics202309GetGlobalSellerWarehouseResponseData := _Logistics202309GetGlobalSellerWarehouseResponseData{}
 
-    err = json.Unmarshal(data, &varLogistics202309GetGlobalSellerWarehouseResponseData)
+	err = json.Unmarshal(data, &varLogistics202309GetGlobalSellerWarehouseResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Logistics202309GetGlobalSellerWarehouseResponseData(varLogistics202309GetGlobalSellerWarehouseResponseData)
+	*o = Logistics202309GetGlobalSellerWarehouseResponseData(varLogistics202309GetGlobalSellerWarehouseResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "global_warehouses")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "global_warehouses")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableLogistics202309GetGlobalSellerWarehouseResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableLogistics202309GetGlobalSellerWarehouseResponseData) UnmarshalJ
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

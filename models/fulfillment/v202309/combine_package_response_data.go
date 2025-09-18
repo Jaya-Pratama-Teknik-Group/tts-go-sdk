@@ -11,20 +11,20 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309CombinePackageResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309CombinePackageResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309CombinePackageResponseData{}
 
 // Fulfillment202309CombinePackageResponseData struct for Fulfillment202309CombinePackageResponseData
 type Fulfillment202309CombinePackageResponseData struct {
-    // Return list of possible errors.
-    Errors []Fulfillment202309CombinePackageResponseDataErrors `json:"errors,omitempty"`
-    // Return list of successfully combined packages.
-    Packages []Fulfillment202309CombinePackageResponseDataPackages `json:"packages,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Return list of possible errors.
+	Errors []Fulfillment202309CombinePackageResponseDataErrors `json:"errors,omitempty"`
+	// Return list of successfully combined packages.
+	Packages             []Fulfillment202309CombinePackageResponseDataPackages `json:"packages,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309CombinePackageResponseData Fulfillment202309CombinePackageResponseData
@@ -34,125 +34,125 @@ type _Fulfillment202309CombinePackageResponseData Fulfillment202309CombinePackag
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309CombinePackageResponseData() *Fulfillment202309CombinePackageResponseData {
-    this := Fulfillment202309CombinePackageResponseData{}
-    return &this
+	this := Fulfillment202309CombinePackageResponseData{}
+	return &this
 }
 
 // NewFulfillment202309CombinePackageResponseDataWithDefaults instantiates a new Fulfillment202309CombinePackageResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309CombinePackageResponseDataWithDefaults() *Fulfillment202309CombinePackageResponseData {
-    this := Fulfillment202309CombinePackageResponseData{}
-    return &this
+	this := Fulfillment202309CombinePackageResponseData{}
+	return &this
 }
 
 // GetErrors returns the Errors field value if set, zero value otherwise.
 func (o *Fulfillment202309CombinePackageResponseData) GetErrors() []Fulfillment202309CombinePackageResponseDataErrors {
-    if o == nil || utils.IsNil(o.Errors) {
-        var ret []Fulfillment202309CombinePackageResponseDataErrors
-        return ret
-    }
-    return o.Errors
+	if o == nil || utils.IsNil(o.Errors) {
+		var ret []Fulfillment202309CombinePackageResponseDataErrors
+		return ret
+	}
+	return o.Errors
 }
 
 // GetErrorsOk returns a tuple with the Errors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CombinePackageResponseData) GetErrorsOk() ([]Fulfillment202309CombinePackageResponseDataErrors, bool) {
-    if o == nil || utils.IsNil(o.Errors) {
-        return nil, false
-    }
-    return o.Errors, true
+	if o == nil || utils.IsNil(o.Errors) {
+		return nil, false
+	}
+	return o.Errors, true
 }
 
 // HasErrors returns a boolean if a field has been set.
 func (o *Fulfillment202309CombinePackageResponseData) HasErrors() bool {
-    if o != nil && !utils.IsNil(o.Errors) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Errors) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetErrors gets a reference to the given []Fulfillment202309CombinePackageResponseDataErrors and assigns it to the Errors field.
 func (o *Fulfillment202309CombinePackageResponseData) SetErrors(v []Fulfillment202309CombinePackageResponseDataErrors) {
-    o.Errors = v
+	o.Errors = v
 }
 
 // GetPackages returns the Packages field value if set, zero value otherwise.
 func (o *Fulfillment202309CombinePackageResponseData) GetPackages() []Fulfillment202309CombinePackageResponseDataPackages {
-    if o == nil || utils.IsNil(o.Packages) {
-        var ret []Fulfillment202309CombinePackageResponseDataPackages
-        return ret
-    }
-    return o.Packages
+	if o == nil || utils.IsNil(o.Packages) {
+		var ret []Fulfillment202309CombinePackageResponseDataPackages
+		return ret
+	}
+	return o.Packages
 }
 
 // GetPackagesOk returns a tuple with the Packages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CombinePackageResponseData) GetPackagesOk() ([]Fulfillment202309CombinePackageResponseDataPackages, bool) {
-    if o == nil || utils.IsNil(o.Packages) {
-        return nil, false
-    }
-    return o.Packages, true
+	if o == nil || utils.IsNil(o.Packages) {
+		return nil, false
+	}
+	return o.Packages, true
 }
 
 // HasPackages returns a boolean if a field has been set.
 func (o *Fulfillment202309CombinePackageResponseData) HasPackages() bool {
-    if o != nil && !utils.IsNil(o.Packages) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Packages) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPackages gets a reference to the given []Fulfillment202309CombinePackageResponseDataPackages and assigns it to the Packages field.
 func (o *Fulfillment202309CombinePackageResponseData) SetPackages(v []Fulfillment202309CombinePackageResponseDataPackages) {
-    o.Packages = v
+	o.Packages = v
 }
 
 func (o Fulfillment202309CombinePackageResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309CombinePackageResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Errors) {
-        toSerialize["errors"] = o.Errors
-    }
-    if !utils.IsNil(o.Packages) {
-        toSerialize["packages"] = o.Packages
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Errors) {
+		toSerialize["errors"] = o.Errors
+	}
+	if !utils.IsNil(o.Packages) {
+		toSerialize["packages"] = o.Packages
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309CombinePackageResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309CombinePackageResponseData := _Fulfillment202309CombinePackageResponseData{}
+	varFulfillment202309CombinePackageResponseData := _Fulfillment202309CombinePackageResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202309CombinePackageResponseData)
+	err = json.Unmarshal(data, &varFulfillment202309CombinePackageResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309CombinePackageResponseData(varFulfillment202309CombinePackageResponseData)
+	*o = Fulfillment202309CombinePackageResponseData(varFulfillment202309CombinePackageResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "errors")
-        delete(additionalProperties, "packages")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "errors")
+		delete(additionalProperties, "packages")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309CombinePackageResponseData struct {
@@ -190,5 +190,3 @@ func (v *NullableFulfillment202309CombinePackageResponseData) UnmarshalJSON(src 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

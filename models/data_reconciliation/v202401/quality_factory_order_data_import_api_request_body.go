@@ -11,18 +11,18 @@ API version: 1.0.0
 package data_reconciliation_v202401
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody{}
 
 // DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody struct for DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody
 type DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody struct {
-    // The exchange order list 
-    Orders []DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyOrders `json:"orders,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The exchange order list
+	Orders               []DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyOrders `json:"orders,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody
@@ -32,89 +32,89 @@ type _DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody DataRe
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody() *DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody {
-    this := DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody{}
-    return &this
+	this := DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody{}
+	return &this
 }
 
 // NewDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyWithDefaults instantiates a new DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyWithDefaults() *DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody {
-    this := DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody{}
-    return &this
+	this := DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody{}
+	return &this
 }
 
 // GetOrders returns the Orders field value if set, zero value otherwise.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody) GetOrders() []DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyOrders {
-    if o == nil || utils.IsNil(o.Orders) {
-        var ret []DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyOrders
-        return ret
-    }
-    return o.Orders
+	if o == nil || utils.IsNil(o.Orders) {
+		var ret []DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyOrders
+		return ret
+	}
+	return o.Orders
 }
 
 // GetOrdersOk returns a tuple with the Orders field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody) GetOrdersOk() ([]DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyOrders, bool) {
-    if o == nil || utils.IsNil(o.Orders) {
-        return nil, false
-    }
-    return o.Orders, true
+	if o == nil || utils.IsNil(o.Orders) {
+		return nil, false
+	}
+	return o.Orders, true
 }
 
 // HasOrders returns a boolean if a field has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody) HasOrders() bool {
-    if o != nil && !utils.IsNil(o.Orders) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Orders) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrders gets a reference to the given []DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyOrders and assigns it to the Orders field.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody) SetOrders(v []DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBodyOrders) {
-    o.Orders = v
+	o.Orders = v
 }
 
 func (o DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Orders) {
-        toSerialize["orders"] = o.Orders
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Orders) {
+		toSerialize["orders"] = o.Orders
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody := _DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody{}
+	varDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody := _DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody{}
 
-    err = json.Unmarshal(data, &varDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody)
+	err = json.Unmarshal(data, &varDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody(varDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody)
+	*o = DataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody(varDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "orders")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "orders")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableDataReconciliation202401QualityFactoryOrderDataImportAPIRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableDataReconciliation202401QualityFactoryOrderDataImportAPIRequest
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

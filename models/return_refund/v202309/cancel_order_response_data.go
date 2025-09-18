@@ -11,20 +11,20 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309CancelOrderResponseData type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309CancelOrderResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309CancelOrderResponseData{}
 
 // ReturnRefund202309CancelOrderResponseData struct for ReturnRefund202309CancelOrderResponseData
 type ReturnRefund202309CancelOrderResponseData struct {
-    // The identifier of a specific order cancellation.
-    CancelId *string `json:"cancel_id,omitempty"`
-    // The status of an order cancellation request.  Available values: - CANCELLATION_REQUEST_PENDING - CANCELLATION_REQUEST_SUCCESS - CANCELLATION_REQUEST_CANCEL - CANCELLATION_REQUEST_COMPLETE
-    CancelStatus *string `json:"cancel_status,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The identifier of a specific order cancellation.
+	CancelId *string `json:"cancel_id,omitempty"`
+	// The status of an order cancellation request.  Available values: - CANCELLATION_REQUEST_PENDING - CANCELLATION_REQUEST_SUCCESS - CANCELLATION_REQUEST_CANCEL - CANCELLATION_REQUEST_COMPLETE
+	CancelStatus         *string `json:"cancel_status,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309CancelOrderResponseData ReturnRefund202309CancelOrderResponseData
@@ -34,125 +34,125 @@ type _ReturnRefund202309CancelOrderResponseData ReturnRefund202309CancelOrderRes
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309CancelOrderResponseData() *ReturnRefund202309CancelOrderResponseData {
-    this := ReturnRefund202309CancelOrderResponseData{}
-    return &this
+	this := ReturnRefund202309CancelOrderResponseData{}
+	return &this
 }
 
 // NewReturnRefund202309CancelOrderResponseDataWithDefaults instantiates a new ReturnRefund202309CancelOrderResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309CancelOrderResponseDataWithDefaults() *ReturnRefund202309CancelOrderResponseData {
-    this := ReturnRefund202309CancelOrderResponseData{}
-    return &this
+	this := ReturnRefund202309CancelOrderResponseData{}
+	return &this
 }
 
 // GetCancelId returns the CancelId field value if set, zero value otherwise.
 func (o *ReturnRefund202309CancelOrderResponseData) GetCancelId() string {
-    if o == nil || utils.IsNil(o.CancelId) {
-        var ret string
-        return ret
-    }
-    return *o.CancelId
+	if o == nil || utils.IsNil(o.CancelId) {
+		var ret string
+		return ret
+	}
+	return *o.CancelId
 }
 
 // GetCancelIdOk returns a tuple with the CancelId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309CancelOrderResponseData) GetCancelIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.CancelId) {
-        return nil, false
-    }
-    return o.CancelId, true
+	if o == nil || utils.IsNil(o.CancelId) {
+		return nil, false
+	}
+	return o.CancelId, true
 }
 
 // HasCancelId returns a boolean if a field has been set.
 func (o *ReturnRefund202309CancelOrderResponseData) HasCancelId() bool {
-    if o != nil && !utils.IsNil(o.CancelId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CancelId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCancelId gets a reference to the given string and assigns it to the CancelId field.
 func (o *ReturnRefund202309CancelOrderResponseData) SetCancelId(v string) {
-    o.CancelId = &v
+	o.CancelId = &v
 }
 
 // GetCancelStatus returns the CancelStatus field value if set, zero value otherwise.
 func (o *ReturnRefund202309CancelOrderResponseData) GetCancelStatus() string {
-    if o == nil || utils.IsNil(o.CancelStatus) {
-        var ret string
-        return ret
-    }
-    return *o.CancelStatus
+	if o == nil || utils.IsNil(o.CancelStatus) {
+		var ret string
+		return ret
+	}
+	return *o.CancelStatus
 }
 
 // GetCancelStatusOk returns a tuple with the CancelStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309CancelOrderResponseData) GetCancelStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.CancelStatus) {
-        return nil, false
-    }
-    return o.CancelStatus, true
+	if o == nil || utils.IsNil(o.CancelStatus) {
+		return nil, false
+	}
+	return o.CancelStatus, true
 }
 
 // HasCancelStatus returns a boolean if a field has been set.
 func (o *ReturnRefund202309CancelOrderResponseData) HasCancelStatus() bool {
-    if o != nil && !utils.IsNil(o.CancelStatus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CancelStatus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCancelStatus gets a reference to the given string and assigns it to the CancelStatus field.
 func (o *ReturnRefund202309CancelOrderResponseData) SetCancelStatus(v string) {
-    o.CancelStatus = &v
+	o.CancelStatus = &v
 }
 
 func (o ReturnRefund202309CancelOrderResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309CancelOrderResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CancelId) {
-        toSerialize["cancel_id"] = o.CancelId
-    }
-    if !utils.IsNil(o.CancelStatus) {
-        toSerialize["cancel_status"] = o.CancelStatus
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CancelId) {
+		toSerialize["cancel_id"] = o.CancelId
+	}
+	if !utils.IsNil(o.CancelStatus) {
+		toSerialize["cancel_status"] = o.CancelStatus
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309CancelOrderResponseData) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309CancelOrderResponseData := _ReturnRefund202309CancelOrderResponseData{}
+	varReturnRefund202309CancelOrderResponseData := _ReturnRefund202309CancelOrderResponseData{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309CancelOrderResponseData)
+	err = json.Unmarshal(data, &varReturnRefund202309CancelOrderResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309CancelOrderResponseData(varReturnRefund202309CancelOrderResponseData)
+	*o = ReturnRefund202309CancelOrderResponseData(varReturnRefund202309CancelOrderResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "cancel_id")
-        delete(additionalProperties, "cancel_status")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "cancel_id")
+		delete(additionalProperties, "cancel_status")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309CancelOrderResponseData struct {
@@ -190,5 +190,3 @@ func (v *NullableReturnRefund202309CancelOrderResponseData) UnmarshalJSON(src []
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

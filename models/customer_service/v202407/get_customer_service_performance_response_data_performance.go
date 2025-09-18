@@ -11,24 +11,24 @@ API version: 1.0.0
 package customer_service_v202407
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the CustomerService202407GetCustomerServicePerformanceResponseDataPerformance type satisfies the MappedNullable interface at compile time
+// checks if the CustomerService202407GetCustomerServicePerformanceResponseDataPerformance type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &CustomerService202407GetCustomerServicePerformanceResponseDataPerformance{}
 
 // CustomerService202407GetCustomerServicePerformanceResponseDataPerformance struct for CustomerService202407GetCustomerServicePerformanceResponseDataPerformance
 type CustomerService202407GetCustomerServicePerformanceResponseDataPerformance struct {
-    // The percentage of chat support sessions of which the first response happens within 24 hours. The sessions which started in the specified time slot are included in calculation. - Automated responses such as FAQ cards are regarded as responses within 24 hours. - Sessions initiated during vacation mode are excluded from this calculation.
-    ResponsePercentage *string `json:"response_percentage,omitempty"`
-    // The average first response time in minutes for chat support sessions. The sessions which started in the specified time slot are included in calculation.
-    ResponseTimeMins *string `json:"response_time_mins,omitempty"`
-    // The percentage of chat support sessions rated 'Satisfied' (4 or 5 stars). The sessions of which the rating occurred in the specified time slot are included in the calculation; the sessions without rate are not included in the calculation.
-    SatisfactionPercentage *string `json:"satisfaction_percentage,omitempty"`
-    // The total number of chat support sessions initiated by customers. A session starts when a customer first clicks an FAQ card or sends a message (text, image, video, emoji, product card, order card, etc.) in chat. The sessions which started in the specified time slot are included in calculation.
-    SupportSessionCount *int32 `json:"support_session_count,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The percentage of chat support sessions of which the first response happens within 24 hours. The sessions which started in the specified time slot are included in calculation. - Automated responses such as FAQ cards are regarded as responses within 24 hours. - Sessions initiated during vacation mode are excluded from this calculation.
+	ResponsePercentage *string `json:"response_percentage,omitempty"`
+	// The average first response time in minutes for chat support sessions. The sessions which started in the specified time slot are included in calculation.
+	ResponseTimeMins *string `json:"response_time_mins,omitempty"`
+	// The percentage of chat support sessions rated 'Satisfied' (4 or 5 stars). The sessions of which the rating occurred in the specified time slot are included in the calculation; the sessions without rate are not included in the calculation.
+	SatisfactionPercentage *string `json:"satisfaction_percentage,omitempty"`
+	// The total number of chat support sessions initiated by customers. A session starts when a customer first clicks an FAQ card or sends a message (text, image, video, emoji, product card, order card, etc.) in chat. The sessions which started in the specified time slot are included in calculation.
+	SupportSessionCount  *int32 `json:"support_session_count,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _CustomerService202407GetCustomerServicePerformanceResponseDataPerformance CustomerService202407GetCustomerServicePerformanceResponseDataPerformance
@@ -38,197 +38,197 @@ type _CustomerService202407GetCustomerServicePerformanceResponseDataPerformance 
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewCustomerService202407GetCustomerServicePerformanceResponseDataPerformance() *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance {
-    this := CustomerService202407GetCustomerServicePerformanceResponseDataPerformance{}
-    return &this
+	this := CustomerService202407GetCustomerServicePerformanceResponseDataPerformance{}
+	return &this
 }
 
 // NewCustomerService202407GetCustomerServicePerformanceResponseDataPerformanceWithDefaults instantiates a new CustomerService202407GetCustomerServicePerformanceResponseDataPerformance object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewCustomerService202407GetCustomerServicePerformanceResponseDataPerformanceWithDefaults() *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance {
-    this := CustomerService202407GetCustomerServicePerformanceResponseDataPerformance{}
-    return &this
+	this := CustomerService202407GetCustomerServicePerformanceResponseDataPerformance{}
+	return &this
 }
 
 // GetResponsePercentage returns the ResponsePercentage field value if set, zero value otherwise.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) GetResponsePercentage() string {
-    if o == nil || utils.IsNil(o.ResponsePercentage) {
-        var ret string
-        return ret
-    }
-    return *o.ResponsePercentage
+	if o == nil || utils.IsNil(o.ResponsePercentage) {
+		var ret string
+		return ret
+	}
+	return *o.ResponsePercentage
 }
 
 // GetResponsePercentageOk returns a tuple with the ResponsePercentage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) GetResponsePercentageOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ResponsePercentage) {
-        return nil, false
-    }
-    return o.ResponsePercentage, true
+	if o == nil || utils.IsNil(o.ResponsePercentage) {
+		return nil, false
+	}
+	return o.ResponsePercentage, true
 }
 
 // HasResponsePercentage returns a boolean if a field has been set.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) HasResponsePercentage() bool {
-    if o != nil && !utils.IsNil(o.ResponsePercentage) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ResponsePercentage) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetResponsePercentage gets a reference to the given string and assigns it to the ResponsePercentage field.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) SetResponsePercentage(v string) {
-    o.ResponsePercentage = &v
+	o.ResponsePercentage = &v
 }
 
 // GetResponseTimeMins returns the ResponseTimeMins field value if set, zero value otherwise.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) GetResponseTimeMins() string {
-    if o == nil || utils.IsNil(o.ResponseTimeMins) {
-        var ret string
-        return ret
-    }
-    return *o.ResponseTimeMins
+	if o == nil || utils.IsNil(o.ResponseTimeMins) {
+		var ret string
+		return ret
+	}
+	return *o.ResponseTimeMins
 }
 
 // GetResponseTimeMinsOk returns a tuple with the ResponseTimeMins field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) GetResponseTimeMinsOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ResponseTimeMins) {
-        return nil, false
-    }
-    return o.ResponseTimeMins, true
+	if o == nil || utils.IsNil(o.ResponseTimeMins) {
+		return nil, false
+	}
+	return o.ResponseTimeMins, true
 }
 
 // HasResponseTimeMins returns a boolean if a field has been set.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) HasResponseTimeMins() bool {
-    if o != nil && !utils.IsNil(o.ResponseTimeMins) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ResponseTimeMins) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetResponseTimeMins gets a reference to the given string and assigns it to the ResponseTimeMins field.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) SetResponseTimeMins(v string) {
-    o.ResponseTimeMins = &v
+	o.ResponseTimeMins = &v
 }
 
 // GetSatisfactionPercentage returns the SatisfactionPercentage field value if set, zero value otherwise.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) GetSatisfactionPercentage() string {
-    if o == nil || utils.IsNil(o.SatisfactionPercentage) {
-        var ret string
-        return ret
-    }
-    return *o.SatisfactionPercentage
+	if o == nil || utils.IsNil(o.SatisfactionPercentage) {
+		var ret string
+		return ret
+	}
+	return *o.SatisfactionPercentage
 }
 
 // GetSatisfactionPercentageOk returns a tuple with the SatisfactionPercentage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) GetSatisfactionPercentageOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SatisfactionPercentage) {
-        return nil, false
-    }
-    return o.SatisfactionPercentage, true
+	if o == nil || utils.IsNil(o.SatisfactionPercentage) {
+		return nil, false
+	}
+	return o.SatisfactionPercentage, true
 }
 
 // HasSatisfactionPercentage returns a boolean if a field has been set.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) HasSatisfactionPercentage() bool {
-    if o != nil && !utils.IsNil(o.SatisfactionPercentage) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SatisfactionPercentage) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSatisfactionPercentage gets a reference to the given string and assigns it to the SatisfactionPercentage field.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) SetSatisfactionPercentage(v string) {
-    o.SatisfactionPercentage = &v
+	o.SatisfactionPercentage = &v
 }
 
 // GetSupportSessionCount returns the SupportSessionCount field value if set, zero value otherwise.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) GetSupportSessionCount() int32 {
-    if o == nil || utils.IsNil(o.SupportSessionCount) {
-        var ret int32
-        return ret
-    }
-    return *o.SupportSessionCount
+	if o == nil || utils.IsNil(o.SupportSessionCount) {
+		var ret int32
+		return ret
+	}
+	return *o.SupportSessionCount
 }
 
 // GetSupportSessionCountOk returns a tuple with the SupportSessionCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) GetSupportSessionCountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.SupportSessionCount) {
-        return nil, false
-    }
-    return o.SupportSessionCount, true
+	if o == nil || utils.IsNil(o.SupportSessionCount) {
+		return nil, false
+	}
+	return o.SupportSessionCount, true
 }
 
 // HasSupportSessionCount returns a boolean if a field has been set.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) HasSupportSessionCount() bool {
-    if o != nil && !utils.IsNil(o.SupportSessionCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SupportSessionCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSupportSessionCount gets a reference to the given int32 and assigns it to the SupportSessionCount field.
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) SetSupportSessionCount(v int32) {
-    o.SupportSessionCount = &v
+	o.SupportSessionCount = &v
 }
 
 func (o CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ResponsePercentage) {
-        toSerialize["response_percentage"] = o.ResponsePercentage
-    }
-    if !utils.IsNil(o.ResponseTimeMins) {
-        toSerialize["response_time_mins"] = o.ResponseTimeMins
-    }
-    if !utils.IsNil(o.SatisfactionPercentage) {
-        toSerialize["satisfaction_percentage"] = o.SatisfactionPercentage
-    }
-    if !utils.IsNil(o.SupportSessionCount) {
-        toSerialize["support_session_count"] = o.SupportSessionCount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ResponsePercentage) {
+		toSerialize["response_percentage"] = o.ResponsePercentage
+	}
+	if !utils.IsNil(o.ResponseTimeMins) {
+		toSerialize["response_time_mins"] = o.ResponseTimeMins
+	}
+	if !utils.IsNil(o.SatisfactionPercentage) {
+		toSerialize["satisfaction_percentage"] = o.SatisfactionPercentage
+	}
+	if !utils.IsNil(o.SupportSessionCount) {
+		toSerialize["support_session_count"] = o.SupportSessionCount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *CustomerService202407GetCustomerServicePerformanceResponseDataPerformance) UnmarshalJSON(data []byte) (err error) {
-    varCustomerService202407GetCustomerServicePerformanceResponseDataPerformance := _CustomerService202407GetCustomerServicePerformanceResponseDataPerformance{}
+	varCustomerService202407GetCustomerServicePerformanceResponseDataPerformance := _CustomerService202407GetCustomerServicePerformanceResponseDataPerformance{}
 
-    err = json.Unmarshal(data, &varCustomerService202407GetCustomerServicePerformanceResponseDataPerformance)
+	err = json.Unmarshal(data, &varCustomerService202407GetCustomerServicePerformanceResponseDataPerformance)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = CustomerService202407GetCustomerServicePerformanceResponseDataPerformance(varCustomerService202407GetCustomerServicePerformanceResponseDataPerformance)
+	*o = CustomerService202407GetCustomerServicePerformanceResponseDataPerformance(varCustomerService202407GetCustomerServicePerformanceResponseDataPerformance)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "response_percentage")
-        delete(additionalProperties, "response_time_mins")
-        delete(additionalProperties, "satisfaction_percentage")
-        delete(additionalProperties, "support_session_count")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "response_percentage")
+		delete(additionalProperties, "response_time_mins")
+		delete(additionalProperties, "satisfaction_percentage")
+		delete(additionalProperties, "support_session_count")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableCustomerService202407GetCustomerServicePerformanceResponseDataPerformance struct {
@@ -266,5 +266,3 @@ func (v *NullableCustomerService202407GetCustomerServicePerformanceResponseDataP
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

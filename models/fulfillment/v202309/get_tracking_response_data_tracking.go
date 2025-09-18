@@ -11,20 +11,20 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetTrackingResponseDataTracking type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetTrackingResponseDataTracking type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetTrackingResponseDataTracking{}
 
 // Fulfillment202309GetTrackingResponseDataTracking struct for Fulfillment202309GetTrackingResponseDataTracking
 type Fulfillment202309GetTrackingResponseDataTracking struct {
-    // Tracking status description.
-    Description *string `json:"description,omitempty"`
-    // Tracking status update time. Unix timestamp in milliseconds.
-    UpdateTimeMillis *int64 `json:"update_time_millis,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Tracking status description.
+	Description *string `json:"description,omitempty"`
+	// Tracking status update time. Unix timestamp in milliseconds.
+	UpdateTimeMillis     *int64 `json:"update_time_millis,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetTrackingResponseDataTracking Fulfillment202309GetTrackingResponseDataTracking
@@ -34,125 +34,125 @@ type _Fulfillment202309GetTrackingResponseDataTracking Fulfillment202309GetTrack
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetTrackingResponseDataTracking() *Fulfillment202309GetTrackingResponseDataTracking {
-    this := Fulfillment202309GetTrackingResponseDataTracking{}
-    return &this
+	this := Fulfillment202309GetTrackingResponseDataTracking{}
+	return &this
 }
 
 // NewFulfillment202309GetTrackingResponseDataTrackingWithDefaults instantiates a new Fulfillment202309GetTrackingResponseDataTracking object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetTrackingResponseDataTrackingWithDefaults() *Fulfillment202309GetTrackingResponseDataTracking {
-    this := Fulfillment202309GetTrackingResponseDataTracking{}
-    return &this
+	this := Fulfillment202309GetTrackingResponseDataTracking{}
+	return &this
 }
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *Fulfillment202309GetTrackingResponseDataTracking) GetDescription() string {
-    if o == nil || utils.IsNil(o.Description) {
-        var ret string
-        return ret
-    }
-    return *o.Description
+	if o == nil || utils.IsNil(o.Description) {
+		var ret string
+		return ret
+	}
+	return *o.Description
 }
 
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetTrackingResponseDataTracking) GetDescriptionOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Description) {
-        return nil, false
-    }
-    return o.Description, true
+	if o == nil || utils.IsNil(o.Description) {
+		return nil, false
+	}
+	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *Fulfillment202309GetTrackingResponseDataTracking) HasDescription() bool {
-    if o != nil && !utils.IsNil(o.Description) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Description) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDescription gets a reference to the given string and assigns it to the Description field.
 func (o *Fulfillment202309GetTrackingResponseDataTracking) SetDescription(v string) {
-    o.Description = &v
+	o.Description = &v
 }
 
 // GetUpdateTimeMillis returns the UpdateTimeMillis field value if set, zero value otherwise.
 func (o *Fulfillment202309GetTrackingResponseDataTracking) GetUpdateTimeMillis() int64 {
-    if o == nil || utils.IsNil(o.UpdateTimeMillis) {
-        var ret int64
-        return ret
-    }
-    return *o.UpdateTimeMillis
+	if o == nil || utils.IsNil(o.UpdateTimeMillis) {
+		var ret int64
+		return ret
+	}
+	return *o.UpdateTimeMillis
 }
 
 // GetUpdateTimeMillisOk returns a tuple with the UpdateTimeMillis field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetTrackingResponseDataTracking) GetUpdateTimeMillisOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UpdateTimeMillis) {
-        return nil, false
-    }
-    return o.UpdateTimeMillis, true
+	if o == nil || utils.IsNil(o.UpdateTimeMillis) {
+		return nil, false
+	}
+	return o.UpdateTimeMillis, true
 }
 
 // HasUpdateTimeMillis returns a boolean if a field has been set.
 func (o *Fulfillment202309GetTrackingResponseDataTracking) HasUpdateTimeMillis() bool {
-    if o != nil && !utils.IsNil(o.UpdateTimeMillis) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UpdateTimeMillis) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUpdateTimeMillis gets a reference to the given int64 and assigns it to the UpdateTimeMillis field.
 func (o *Fulfillment202309GetTrackingResponseDataTracking) SetUpdateTimeMillis(v int64) {
-    o.UpdateTimeMillis = &v
+	o.UpdateTimeMillis = &v
 }
 
 func (o Fulfillment202309GetTrackingResponseDataTracking) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetTrackingResponseDataTracking) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Description) {
-        toSerialize["description"] = o.Description
-    }
-    if !utils.IsNil(o.UpdateTimeMillis) {
-        toSerialize["update_time_millis"] = o.UpdateTimeMillis
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Description) {
+		toSerialize["description"] = o.Description
+	}
+	if !utils.IsNil(o.UpdateTimeMillis) {
+		toSerialize["update_time_millis"] = o.UpdateTimeMillis
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetTrackingResponseDataTracking) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetTrackingResponseDataTracking := _Fulfillment202309GetTrackingResponseDataTracking{}
+	varFulfillment202309GetTrackingResponseDataTracking := _Fulfillment202309GetTrackingResponseDataTracking{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetTrackingResponseDataTracking)
+	err = json.Unmarshal(data, &varFulfillment202309GetTrackingResponseDataTracking)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetTrackingResponseDataTracking(varFulfillment202309GetTrackingResponseDataTracking)
+	*o = Fulfillment202309GetTrackingResponseDataTracking(varFulfillment202309GetTrackingResponseDataTracking)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "description")
-        delete(additionalProperties, "update_time_millis")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "description")
+		delete(additionalProperties, "update_time_millis")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetTrackingResponseDataTracking struct {
@@ -190,5 +190,3 @@ func (v *NullableFulfillment202309GetTrackingResponseDataTracking) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

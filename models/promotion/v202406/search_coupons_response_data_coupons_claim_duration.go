@@ -11,20 +11,20 @@ API version: 1.0.0
 package promotion_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202406SearchCouponsResponseDataCouponsClaimDuration type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202406SearchCouponsResponseDataCouponsClaimDuration type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202406SearchCouponsResponseDataCouponsClaimDuration{}
 
 // Promotion202406SearchCouponsResponseDataCouponsClaimDuration struct for Promotion202406SearchCouponsResponseDataCouponsClaimDuration
 type Promotion202406SearchCouponsResponseDataCouponsClaimDuration struct {
-    // The UNIX timestamp from which a shopper can claim the coupon.
-    EndTime *int32 `json:"end_time,omitempty"`
-    // The UNIX timestamp from which a shopper can claim the coupon.
-    StartTime *int32 `json:"start_time,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The UNIX timestamp from which a shopper can claim the coupon.
+	EndTime *int32 `json:"end_time,omitempty"`
+	// The UNIX timestamp from which a shopper can claim the coupon.
+	StartTime            *int32 `json:"start_time,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202406SearchCouponsResponseDataCouponsClaimDuration Promotion202406SearchCouponsResponseDataCouponsClaimDuration
@@ -34,125 +34,125 @@ type _Promotion202406SearchCouponsResponseDataCouponsClaimDuration Promotion2024
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202406SearchCouponsResponseDataCouponsClaimDuration() *Promotion202406SearchCouponsResponseDataCouponsClaimDuration {
-    this := Promotion202406SearchCouponsResponseDataCouponsClaimDuration{}
-    return &this
+	this := Promotion202406SearchCouponsResponseDataCouponsClaimDuration{}
+	return &this
 }
 
 // NewPromotion202406SearchCouponsResponseDataCouponsClaimDurationWithDefaults instantiates a new Promotion202406SearchCouponsResponseDataCouponsClaimDuration object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202406SearchCouponsResponseDataCouponsClaimDurationWithDefaults() *Promotion202406SearchCouponsResponseDataCouponsClaimDuration {
-    this := Promotion202406SearchCouponsResponseDataCouponsClaimDuration{}
-    return &this
+	this := Promotion202406SearchCouponsResponseDataCouponsClaimDuration{}
+	return &this
 }
 
 // GetEndTime returns the EndTime field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseDataCouponsClaimDuration) GetEndTime() int32 {
-    if o == nil || utils.IsNil(o.EndTime) {
-        var ret int32
-        return ret
-    }
-    return *o.EndTime
+	if o == nil || utils.IsNil(o.EndTime) {
+		var ret int32
+		return ret
+	}
+	return *o.EndTime
 }
 
 // GetEndTimeOk returns a tuple with the EndTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsClaimDuration) GetEndTimeOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.EndTime) {
-        return nil, false
-    }
-    return o.EndTime, true
+	if o == nil || utils.IsNil(o.EndTime) {
+		return nil, false
+	}
+	return o.EndTime, true
 }
 
 // HasEndTime returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsClaimDuration) HasEndTime() bool {
-    if o != nil && !utils.IsNil(o.EndTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.EndTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetEndTime gets a reference to the given int32 and assigns it to the EndTime field.
 func (o *Promotion202406SearchCouponsResponseDataCouponsClaimDuration) SetEndTime(v int32) {
-    o.EndTime = &v
+	o.EndTime = &v
 }
 
 // GetStartTime returns the StartTime field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseDataCouponsClaimDuration) GetStartTime() int32 {
-    if o == nil || utils.IsNil(o.StartTime) {
-        var ret int32
-        return ret
-    }
-    return *o.StartTime
+	if o == nil || utils.IsNil(o.StartTime) {
+		var ret int32
+		return ret
+	}
+	return *o.StartTime
 }
 
 // GetStartTimeOk returns a tuple with the StartTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsClaimDuration) GetStartTimeOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.StartTime) {
-        return nil, false
-    }
-    return o.StartTime, true
+	if o == nil || utils.IsNil(o.StartTime) {
+		return nil, false
+	}
+	return o.StartTime, true
 }
 
 // HasStartTime returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsClaimDuration) HasStartTime() bool {
-    if o != nil && !utils.IsNil(o.StartTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.StartTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStartTime gets a reference to the given int32 and assigns it to the StartTime field.
 func (o *Promotion202406SearchCouponsResponseDataCouponsClaimDuration) SetStartTime(v int32) {
-    o.StartTime = &v
+	o.StartTime = &v
 }
 
 func (o Promotion202406SearchCouponsResponseDataCouponsClaimDuration) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202406SearchCouponsResponseDataCouponsClaimDuration) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.EndTime) {
-        toSerialize["end_time"] = o.EndTime
-    }
-    if !utils.IsNil(o.StartTime) {
-        toSerialize["start_time"] = o.StartTime
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.EndTime) {
+		toSerialize["end_time"] = o.EndTime
+	}
+	if !utils.IsNil(o.StartTime) {
+		toSerialize["start_time"] = o.StartTime
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202406SearchCouponsResponseDataCouponsClaimDuration) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202406SearchCouponsResponseDataCouponsClaimDuration := _Promotion202406SearchCouponsResponseDataCouponsClaimDuration{}
+	varPromotion202406SearchCouponsResponseDataCouponsClaimDuration := _Promotion202406SearchCouponsResponseDataCouponsClaimDuration{}
 
-    err = json.Unmarshal(data, &varPromotion202406SearchCouponsResponseDataCouponsClaimDuration)
+	err = json.Unmarshal(data, &varPromotion202406SearchCouponsResponseDataCouponsClaimDuration)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202406SearchCouponsResponseDataCouponsClaimDuration(varPromotion202406SearchCouponsResponseDataCouponsClaimDuration)
+	*o = Promotion202406SearchCouponsResponseDataCouponsClaimDuration(varPromotion202406SearchCouponsResponseDataCouponsClaimDuration)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "end_time")
-        delete(additionalProperties, "start_time")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "end_time")
+		delete(additionalProperties, "start_time")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202406SearchCouponsResponseDataCouponsClaimDuration struct {
@@ -190,5 +190,3 @@ func (v *NullablePromotion202406SearchCouponsResponseDataCouponsClaimDuration) U
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,17 +11,17 @@ API version: 1.0.0
 package promotion_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202406GetCouponResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202406GetCouponResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202406GetCouponResponseData{}
 
 // Promotion202406GetCouponResponseData struct for Promotion202406GetCouponResponseData
 type Promotion202406GetCouponResponseData struct {
-    Coupon *Promotion202406GetCouponResponseDataCoupon `json:"coupon,omitempty"`
-    AdditionalProperties map[string]interface{}
+	Coupon               *Promotion202406GetCouponResponseDataCoupon `json:"coupon,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202406GetCouponResponseData Promotion202406GetCouponResponseData
@@ -31,89 +31,89 @@ type _Promotion202406GetCouponResponseData Promotion202406GetCouponResponseData
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202406GetCouponResponseData() *Promotion202406GetCouponResponseData {
-    this := Promotion202406GetCouponResponseData{}
-    return &this
+	this := Promotion202406GetCouponResponseData{}
+	return &this
 }
 
 // NewPromotion202406GetCouponResponseDataWithDefaults instantiates a new Promotion202406GetCouponResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202406GetCouponResponseDataWithDefaults() *Promotion202406GetCouponResponseData {
-    this := Promotion202406GetCouponResponseData{}
-    return &this
+	this := Promotion202406GetCouponResponseData{}
+	return &this
 }
 
 // GetCoupon returns the Coupon field value if set, zero value otherwise.
 func (o *Promotion202406GetCouponResponseData) GetCoupon() Promotion202406GetCouponResponseDataCoupon {
-    if o == nil || utils.IsNil(o.Coupon) {
-        var ret Promotion202406GetCouponResponseDataCoupon
-        return ret
-    }
-    return *o.Coupon
+	if o == nil || utils.IsNil(o.Coupon) {
+		var ret Promotion202406GetCouponResponseDataCoupon
+		return ret
+	}
+	return *o.Coupon
 }
 
 // GetCouponOk returns a tuple with the Coupon field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406GetCouponResponseData) GetCouponOk() (*Promotion202406GetCouponResponseDataCoupon, bool) {
-    if o == nil || utils.IsNil(o.Coupon) {
-        return nil, false
-    }
-    return o.Coupon, true
+	if o == nil || utils.IsNil(o.Coupon) {
+		return nil, false
+	}
+	return o.Coupon, true
 }
 
 // HasCoupon returns a boolean if a field has been set.
 func (o *Promotion202406GetCouponResponseData) HasCoupon() bool {
-    if o != nil && !utils.IsNil(o.Coupon) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Coupon) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCoupon gets a reference to the given Promotion202406GetCouponResponseDataCoupon and assigns it to the Coupon field.
 func (o *Promotion202406GetCouponResponseData) SetCoupon(v Promotion202406GetCouponResponseDataCoupon) {
-    o.Coupon = &v
+	o.Coupon = &v
 }
 
 func (o Promotion202406GetCouponResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202406GetCouponResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Coupon) {
-        toSerialize["coupon"] = o.Coupon
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Coupon) {
+		toSerialize["coupon"] = o.Coupon
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202406GetCouponResponseData) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202406GetCouponResponseData := _Promotion202406GetCouponResponseData{}
+	varPromotion202406GetCouponResponseData := _Promotion202406GetCouponResponseData{}
 
-    err = json.Unmarshal(data, &varPromotion202406GetCouponResponseData)
+	err = json.Unmarshal(data, &varPromotion202406GetCouponResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202406GetCouponResponseData(varPromotion202406GetCouponResponseData)
+	*o = Promotion202406GetCouponResponseData(varPromotion202406GetCouponResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "coupon")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "coupon")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202406GetCouponResponseData struct {
@@ -151,5 +151,3 @@ func (v *NullablePromotion202406GetCouponResponseData) UnmarshalJSON(src []byte)
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

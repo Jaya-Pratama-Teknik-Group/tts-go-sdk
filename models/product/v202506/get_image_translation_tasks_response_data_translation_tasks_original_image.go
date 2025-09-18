@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202506
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage type satisfies the MappedNullable interface at compile time
+// checks if the Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage{}
 
 // Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage struct for Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage
 type Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage struct {
-    // The URI of the original image.
-    Uri *string `json:"uri,omitempty"`
-    // The URL of the original image.
-    Url *string `json:"url,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The URI of the original image.
+	Uri *string `json:"uri,omitempty"`
+	// The URL of the original image.
+	Url                  *string `json:"url,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage
@@ -34,125 +34,125 @@ type _Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalI
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage() *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage {
-    this := Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage{}
-    return &this
+	this := Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage{}
+	return &this
 }
 
 // NewProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImageWithDefaults instantiates a new Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImageWithDefaults() *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage {
-    this := Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage{}
-    return &this
+	this := Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage{}
+	return &this
 }
 
 // GetUri returns the Uri field value if set, zero value otherwise.
 func (o *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) GetUri() string {
-    if o == nil || utils.IsNil(o.Uri) {
-        var ret string
-        return ret
-    }
-    return *o.Uri
+	if o == nil || utils.IsNil(o.Uri) {
+		var ret string
+		return ret
+	}
+	return *o.Uri
 }
 
 // GetUriOk returns a tuple with the Uri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) GetUriOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Uri) {
-        return nil, false
-    }
-    return o.Uri, true
+	if o == nil || utils.IsNil(o.Uri) {
+		return nil, false
+	}
+	return o.Uri, true
 }
 
 // HasUri returns a boolean if a field has been set.
 func (o *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) HasUri() bool {
-    if o != nil && !utils.IsNil(o.Uri) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Uri) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUri gets a reference to the given string and assigns it to the Uri field.
 func (o *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) SetUri(v string) {
-    o.Uri = &v
+	o.Uri = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) GetUrl() string {
-    if o == nil || utils.IsNil(o.Url) {
-        var ret string
-        return ret
-    }
-    return *o.Url
+	if o == nil || utils.IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
 }
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) GetUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Url) {
-        return nil, false
-    }
-    return o.Url, true
+	if o == nil || utils.IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
 }
 
 // HasUrl returns a boolean if a field has been set.
 func (o *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) HasUrl() bool {
-    if o != nil && !utils.IsNil(o.Url) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Url) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
 func (o *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) SetUrl(v string) {
-    o.Url = &v
+	o.Url = &v
 }
 
 func (o Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Uri) {
-        toSerialize["uri"] = o.Uri
-    }
-    if !utils.IsNil(o.Url) {
-        toSerialize["url"] = o.Url
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Uri) {
+		toSerialize["uri"] = o.Uri
+	}
+	if !utils.IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage) UnmarshalJSON(data []byte) (err error) {
-    varProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage := _Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage{}
+	varProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage := _Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage{}
 
-    err = json.Unmarshal(data, &varProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage)
+	err = json.Unmarshal(data, &varProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage(varProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage)
+	*o = Product202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage(varProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "uri")
-        delete(additionalProperties, "url")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "uri")
+		delete(additionalProperties, "url")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202506GetImageTranslationTasksResponseDataTranslationTasksOriginalImage struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202506GetImageTranslationTasksResponseDataTranslationTas
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

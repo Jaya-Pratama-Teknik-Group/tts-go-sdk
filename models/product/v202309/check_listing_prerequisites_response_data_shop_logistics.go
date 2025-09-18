@@ -11,24 +11,24 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CheckListingPrerequisitesResponseDataShopLogistics type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CheckListingPrerequisitesResponseDataShopLogistics type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CheckListingPrerequisitesResponseDataShopLogistics{}
 
 // Product202309CheckListingPrerequisitesResponseDataShopLogistics struct for Product202309CheckListingPrerequisitesResponseDataShopLogistics
 type Product202309CheckListingPrerequisitesResponseDataShopLogistics struct {
-    // Shop logistics service. If the warehouse has no logistics services available, the warehouse cannot be used to create products.  Detailed explanation of JSON return results - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met, and the detailed failure reasons will be returned through the \"fail_reasons\" field.
-    DeliveryOption *string `json:"delivery_option,omitempty"`
-    // Shop pickup warehouse, shops without pickup warehouse can not create products  Detailed explanation of JSON return results - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met
-    PickupWarehouse *string `json:"pickup_warehouse,omitempty"`
-    // Listing Prerequisites check if the shop's return warehouse meets the listing requirements  Detailed explanation of JSON return results - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met, and the detailed failure reasons will be returned through the \"fail_reasons\" field. 
-    ReturnWarehouse *string `json:"return_warehouse,omitempty"`
-    // Listing Prerequisites check if the shop's shipping template meets the listing requirements. If sellers set TikTok Shipping, the SHIPPING_TEMPLATE will always return \"is_failed:false\". Detailed explanation of JSON return results - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met
-    ShippingTemplate *string `json:"shipping_template,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Shop logistics service. If the warehouse has no logistics services available, the warehouse cannot be used to create products.  Detailed explanation of JSON return results - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met, and the detailed failure reasons will be returned through the \"fail_reasons\" field.
+	DeliveryOption *string `json:"delivery_option,omitempty"`
+	// Shop pickup warehouse, shops without pickup warehouse can not create products  Detailed explanation of JSON return results - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met
+	PickupWarehouse *string `json:"pickup_warehouse,omitempty"`
+	// Listing Prerequisites check if the shop's return warehouse meets the listing requirements  Detailed explanation of JSON return results - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met, and the detailed failure reasons will be returned through the \"fail_reasons\" field.
+	ReturnWarehouse *string `json:"return_warehouse,omitempty"`
+	// Listing Prerequisites check if the shop's shipping template meets the listing requirements. If sellers set TikTok Shipping, the SHIPPING_TEMPLATE will always return \"is_failed:false\". Detailed explanation of JSON return results - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met
+	ShippingTemplate     *string `json:"shipping_template,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CheckListingPrerequisitesResponseDataShopLogistics Product202309CheckListingPrerequisitesResponseDataShopLogistics
@@ -38,197 +38,197 @@ type _Product202309CheckListingPrerequisitesResponseDataShopLogistics Product202
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CheckListingPrerequisitesResponseDataShopLogistics() *Product202309CheckListingPrerequisitesResponseDataShopLogistics {
-    this := Product202309CheckListingPrerequisitesResponseDataShopLogistics{}
-    return &this
+	this := Product202309CheckListingPrerequisitesResponseDataShopLogistics{}
+	return &this
 }
 
 // NewProduct202309CheckListingPrerequisitesResponseDataShopLogisticsWithDefaults instantiates a new Product202309CheckListingPrerequisitesResponseDataShopLogistics object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CheckListingPrerequisitesResponseDataShopLogisticsWithDefaults() *Product202309CheckListingPrerequisitesResponseDataShopLogistics {
-    this := Product202309CheckListingPrerequisitesResponseDataShopLogistics{}
-    return &this
+	this := Product202309CheckListingPrerequisitesResponseDataShopLogistics{}
+	return &this
 }
 
 // GetDeliveryOption returns the DeliveryOption field value if set, zero value otherwise.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) GetDeliveryOption() string {
-    if o == nil || utils.IsNil(o.DeliveryOption) {
-        var ret string
-        return ret
-    }
-    return *o.DeliveryOption
+	if o == nil || utils.IsNil(o.DeliveryOption) {
+		var ret string
+		return ret
+	}
+	return *o.DeliveryOption
 }
 
 // GetDeliveryOptionOk returns a tuple with the DeliveryOption field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) GetDeliveryOptionOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.DeliveryOption) {
-        return nil, false
-    }
-    return o.DeliveryOption, true
+	if o == nil || utils.IsNil(o.DeliveryOption) {
+		return nil, false
+	}
+	return o.DeliveryOption, true
 }
 
 // HasDeliveryOption returns a boolean if a field has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) HasDeliveryOption() bool {
-    if o != nil && !utils.IsNil(o.DeliveryOption) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DeliveryOption) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDeliveryOption gets a reference to the given string and assigns it to the DeliveryOption field.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) SetDeliveryOption(v string) {
-    o.DeliveryOption = &v
+	o.DeliveryOption = &v
 }
 
 // GetPickupWarehouse returns the PickupWarehouse field value if set, zero value otherwise.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) GetPickupWarehouse() string {
-    if o == nil || utils.IsNil(o.PickupWarehouse) {
-        var ret string
-        return ret
-    }
-    return *o.PickupWarehouse
+	if o == nil || utils.IsNil(o.PickupWarehouse) {
+		var ret string
+		return ret
+	}
+	return *o.PickupWarehouse
 }
 
 // GetPickupWarehouseOk returns a tuple with the PickupWarehouse field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) GetPickupWarehouseOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PickupWarehouse) {
-        return nil, false
-    }
-    return o.PickupWarehouse, true
+	if o == nil || utils.IsNil(o.PickupWarehouse) {
+		return nil, false
+	}
+	return o.PickupWarehouse, true
 }
 
 // HasPickupWarehouse returns a boolean if a field has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) HasPickupWarehouse() bool {
-    if o != nil && !utils.IsNil(o.PickupWarehouse) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PickupWarehouse) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPickupWarehouse gets a reference to the given string and assigns it to the PickupWarehouse field.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) SetPickupWarehouse(v string) {
-    o.PickupWarehouse = &v
+	o.PickupWarehouse = &v
 }
 
 // GetReturnWarehouse returns the ReturnWarehouse field value if set, zero value otherwise.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) GetReturnWarehouse() string {
-    if o == nil || utils.IsNil(o.ReturnWarehouse) {
-        var ret string
-        return ret
-    }
-    return *o.ReturnWarehouse
+	if o == nil || utils.IsNil(o.ReturnWarehouse) {
+		var ret string
+		return ret
+	}
+	return *o.ReturnWarehouse
 }
 
 // GetReturnWarehouseOk returns a tuple with the ReturnWarehouse field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) GetReturnWarehouseOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ReturnWarehouse) {
-        return nil, false
-    }
-    return o.ReturnWarehouse, true
+	if o == nil || utils.IsNil(o.ReturnWarehouse) {
+		return nil, false
+	}
+	return o.ReturnWarehouse, true
 }
 
 // HasReturnWarehouse returns a boolean if a field has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) HasReturnWarehouse() bool {
-    if o != nil && !utils.IsNil(o.ReturnWarehouse) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ReturnWarehouse) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReturnWarehouse gets a reference to the given string and assigns it to the ReturnWarehouse field.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) SetReturnWarehouse(v string) {
-    o.ReturnWarehouse = &v
+	o.ReturnWarehouse = &v
 }
 
 // GetShippingTemplate returns the ShippingTemplate field value if set, zero value otherwise.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) GetShippingTemplate() string {
-    if o == nil || utils.IsNil(o.ShippingTemplate) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingTemplate
+	if o == nil || utils.IsNil(o.ShippingTemplate) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingTemplate
 }
 
 // GetShippingTemplateOk returns a tuple with the ShippingTemplate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) GetShippingTemplateOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingTemplate) {
-        return nil, false
-    }
-    return o.ShippingTemplate, true
+	if o == nil || utils.IsNil(o.ShippingTemplate) {
+		return nil, false
+	}
+	return o.ShippingTemplate, true
 }
 
 // HasShippingTemplate returns a boolean if a field has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) HasShippingTemplate() bool {
-    if o != nil && !utils.IsNil(o.ShippingTemplate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingTemplate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingTemplate gets a reference to the given string and assigns it to the ShippingTemplate field.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) SetShippingTemplate(v string) {
-    o.ShippingTemplate = &v
+	o.ShippingTemplate = &v
 }
 
 func (o Product202309CheckListingPrerequisitesResponseDataShopLogistics) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CheckListingPrerequisitesResponseDataShopLogistics) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.DeliveryOption) {
-        toSerialize["delivery_option"] = o.DeliveryOption
-    }
-    if !utils.IsNil(o.PickupWarehouse) {
-        toSerialize["pickup_warehouse"] = o.PickupWarehouse
-    }
-    if !utils.IsNil(o.ReturnWarehouse) {
-        toSerialize["return_warehouse"] = o.ReturnWarehouse
-    }
-    if !utils.IsNil(o.ShippingTemplate) {
-        toSerialize["shipping_template"] = o.ShippingTemplate
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.DeliveryOption) {
+		toSerialize["delivery_option"] = o.DeliveryOption
+	}
+	if !utils.IsNil(o.PickupWarehouse) {
+		toSerialize["pickup_warehouse"] = o.PickupWarehouse
+	}
+	if !utils.IsNil(o.ReturnWarehouse) {
+		toSerialize["return_warehouse"] = o.ReturnWarehouse
+	}
+	if !utils.IsNil(o.ShippingTemplate) {
+		toSerialize["shipping_template"] = o.ShippingTemplate
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CheckListingPrerequisitesResponseDataShopLogistics) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CheckListingPrerequisitesResponseDataShopLogistics := _Product202309CheckListingPrerequisitesResponseDataShopLogistics{}
+	varProduct202309CheckListingPrerequisitesResponseDataShopLogistics := _Product202309CheckListingPrerequisitesResponseDataShopLogistics{}
 
-    err = json.Unmarshal(data, &varProduct202309CheckListingPrerequisitesResponseDataShopLogistics)
+	err = json.Unmarshal(data, &varProduct202309CheckListingPrerequisitesResponseDataShopLogistics)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CheckListingPrerequisitesResponseDataShopLogistics(varProduct202309CheckListingPrerequisitesResponseDataShopLogistics)
+	*o = Product202309CheckListingPrerequisitesResponseDataShopLogistics(varProduct202309CheckListingPrerequisitesResponseDataShopLogistics)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "delivery_option")
-        delete(additionalProperties, "pickup_warehouse")
-        delete(additionalProperties, "return_warehouse")
-        delete(additionalProperties, "shipping_template")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "delivery_option")
+		delete(additionalProperties, "pickup_warehouse")
+		delete(additionalProperties, "return_warehouse")
+		delete(additionalProperties, "shipping_template")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CheckListingPrerequisitesResponseDataShopLogistics struct {
@@ -266,5 +266,3 @@ func (v *NullableProduct202309CheckListingPrerequisitesResponseDataShopLogistics
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

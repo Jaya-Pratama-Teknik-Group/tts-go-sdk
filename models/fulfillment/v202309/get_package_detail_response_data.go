@@ -11,56 +11,56 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetPackageDetailResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetPackageDetailResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetPackageDetailResponseData{}
 
 // Fulfillment202309GetPackageDetailResponseData struct for Fulfillment202309GetPackageDetailResponseData
 type Fulfillment202309GetPackageDetailResponseData struct {
-    // Package creation time. Unix timestamp.
-    CreateTime *int64 `json:"create_time,omitempty"`
-    // Order delivery option ID. Delivery option ID is mapped to seller configured logistics templates ID.
-    DeliveryOptionId *string `json:"delivery_option_id,omitempty"`
-    // Delivery option name. For display purposes only.
-    DeliveryOptionName *string `json:"delivery_option_name,omitempty"`
-    Dimension *Fulfillment202309GetPackageDetailResponseDataDimension `json:"dimension,omitempty"`
-    // Whether the package is delivered by pick up or drop off. Possible values: - `PICKUP`: A Logistics carrier will pickup the package(s) from the seller's pickup address. - `DROP_OFF`: Seller will need to drop off the package(s) to a designated location.
-    HandoverMethod *string `json:"handover_method,omitempty"`
-    // Whether there are multiple SKU IDs in a package.
-    HasMultiSkus *bool `json:"has_multi_skus,omitempty"`
-    Insurance *Fulfillment202309GetPackageDetailResponseDataInsurance `json:"insurance,omitempty"`
-    // For cross-border order only. Cross-border order last mile tracking number. 
-    LastMileTrackingNumber *string `json:"last_mile_tracking_number,omitempty"`
-    // Possible values: - `BUYER_UNNOTED`: The order has not been noted by buyer. - `BUYER_NOTED`: The order has been noted by buyer. 
-    NoteTag *string `json:"note_tag,omitempty"`
-    // The order line item ID contained in the package.
-    OrderLineItemIds []string `json:"order_line_item_ids,omitempty"`
-    // The response list of TikTok Shop orders.
-    Orders []Fulfillment202309GetPackageDetailResponseDataOrders `json:"orders,omitempty"`
-    // TikTok Shop package ID. 
-    PackageId *string `json:"package_id,omitempty"`
-    // Possible values: - `PROCESSING`: Package has been arranged by seller. Waiting for carrier to collect the parcel. - `FULFILLING`: Package has been collected by carrier and in transit. - `COMPLETED`: Package has been delivered. - `CANCELLED`: Package has been canceled. Normally, the package is canceled due to the package being lost or damaged.
-    PackageStatus *string `json:"package_status,omitempty"`
-    PickupSlot *Fulfillment202309GetPackageDetailResponseDataPickupSlot `json:"pickup_slot,omitempty"`
-    RecipientAddress *Fulfillment202309GetPackageDetailResponseDataRecipientAddress `json:"recipient_address,omitempty"`
-    SenderAddress *Fulfillment202309GetPackageDetailResponseDataSenderAddress `json:"sender_address,omitempty"`
-    // Package shipping provider ID.
-    ShippingProviderId *string `json:"shipping_provider_id,omitempty"`
-    // Package shipping provider name.
-    ShippingProviderName *string `json:"shipping_provider_name,omitempty"`
-    // The method of delivery.  Possible values: - `TIKTOK`: Shipping service provided by TikTok. The seller should obtain a shipping label from TikTok. - `SELLER`: Seller provides shipping, including through 3rd party fulfillment providers on behalf of the seller. 
-    ShippingType *string `json:"shipping_type,omitempty"`
-    // Possible values: - `DEFAULT`: The package has not undergone any combine or split operation. - `COMBINE`: The package has been consolidated with another order. - `SPLIT`: The order has been split into multiple orders.
-    SplitAndCombineTag *string `json:"split_and_combine_tag,omitempty"`
-    // Package tracking number.
-    TrackingNumber *string `json:"tracking_number,omitempty"`
-    // The time the package has been updated. Unix timestamp.
-    UpdateTime *int64 `json:"update_time,omitempty"`
-    Weight *Fulfillment202309GetPackageDetailResponseDataWeight `json:"weight,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Package creation time. Unix timestamp.
+	CreateTime *int64 `json:"create_time,omitempty"`
+	// Order delivery option ID. Delivery option ID is mapped to seller configured logistics templates ID.
+	DeliveryOptionId *string `json:"delivery_option_id,omitempty"`
+	// Delivery option name. For display purposes only.
+	DeliveryOptionName *string                                                 `json:"delivery_option_name,omitempty"`
+	Dimension          *Fulfillment202309GetPackageDetailResponseDataDimension `json:"dimension,omitempty"`
+	// Whether the package is delivered by pick up or drop off. Possible values: - `PICKUP`: A Logistics carrier will pickup the package(s) from the seller's pickup address. - `DROP_OFF`: Seller will need to drop off the package(s) to a designated location.
+	HandoverMethod *string `json:"handover_method,omitempty"`
+	// Whether there are multiple SKU IDs in a package.
+	HasMultiSkus *bool                                                   `json:"has_multi_skus,omitempty"`
+	Insurance    *Fulfillment202309GetPackageDetailResponseDataInsurance `json:"insurance,omitempty"`
+	// For cross-border order only. Cross-border order last mile tracking number.
+	LastMileTrackingNumber *string `json:"last_mile_tracking_number,omitempty"`
+	// Possible values: - `BUYER_UNNOTED`: The order has not been noted by buyer. - `BUYER_NOTED`: The order has been noted by buyer.
+	NoteTag *string `json:"note_tag,omitempty"`
+	// The order line item ID contained in the package.
+	OrderLineItemIds []string `json:"order_line_item_ids,omitempty"`
+	// The response list of TikTok Shop orders.
+	Orders []Fulfillment202309GetPackageDetailResponseDataOrders `json:"orders,omitempty"`
+	// TikTok Shop package ID.
+	PackageId *string `json:"package_id,omitempty"`
+	// Possible values: - `PROCESSING`: Package has been arranged by seller. Waiting for carrier to collect the parcel. - `FULFILLING`: Package has been collected by carrier and in transit. - `COMPLETED`: Package has been delivered. - `CANCELLED`: Package has been canceled. Normally, the package is canceled due to the package being lost or damaged.
+	PackageStatus    *string                                                        `json:"package_status,omitempty"`
+	PickupSlot       *Fulfillment202309GetPackageDetailResponseDataPickupSlot       `json:"pickup_slot,omitempty"`
+	RecipientAddress *Fulfillment202309GetPackageDetailResponseDataRecipientAddress `json:"recipient_address,omitempty"`
+	SenderAddress    *Fulfillment202309GetPackageDetailResponseDataSenderAddress    `json:"sender_address,omitempty"`
+	// Package shipping provider ID.
+	ShippingProviderId *string `json:"shipping_provider_id,omitempty"`
+	// Package shipping provider name.
+	ShippingProviderName *string `json:"shipping_provider_name,omitempty"`
+	// The method of delivery.  Possible values: - `TIKTOK`: Shipping service provided by TikTok. The seller should obtain a shipping label from TikTok. - `SELLER`: Seller provides shipping, including through 3rd party fulfillment providers on behalf of the seller.
+	ShippingType *string `json:"shipping_type,omitempty"`
+	// Possible values: - `DEFAULT`: The package has not undergone any combine or split operation. - `COMBINE`: The package has been consolidated with another order. - `SPLIT`: The order has been split into multiple orders.
+	SplitAndCombineTag *string `json:"split_and_combine_tag,omitempty"`
+	// Package tracking number.
+	TrackingNumber *string `json:"tracking_number,omitempty"`
+	// The time the package has been updated. Unix timestamp.
+	UpdateTime           *int64                                               `json:"update_time,omitempty"`
+	Weight               *Fulfillment202309GetPackageDetailResponseDataWeight `json:"weight,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetPackageDetailResponseData Fulfillment202309GetPackageDetailResponseData
@@ -70,881 +70,881 @@ type _Fulfillment202309GetPackageDetailResponseData Fulfillment202309GetPackageD
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetPackageDetailResponseData() *Fulfillment202309GetPackageDetailResponseData {
-    this := Fulfillment202309GetPackageDetailResponseData{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseData{}
+	return &this
 }
 
 // NewFulfillment202309GetPackageDetailResponseDataWithDefaults instantiates a new Fulfillment202309GetPackageDetailResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetPackageDetailResponseDataWithDefaults() *Fulfillment202309GetPackageDetailResponseData {
-    this := Fulfillment202309GetPackageDetailResponseData{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseData{}
+	return &this
 }
 
 // GetCreateTime returns the CreateTime field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetCreateTime() int64 {
-    if o == nil || utils.IsNil(o.CreateTime) {
-        var ret int64
-        return ret
-    }
-    return *o.CreateTime
+	if o == nil || utils.IsNil(o.CreateTime) {
+		var ret int64
+		return ret
+	}
+	return *o.CreateTime
 }
 
 // GetCreateTimeOk returns a tuple with the CreateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetCreateTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.CreateTime) {
-        return nil, false
-    }
-    return o.CreateTime, true
+	if o == nil || utils.IsNil(o.CreateTime) {
+		return nil, false
+	}
+	return o.CreateTime, true
 }
 
 // HasCreateTime returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasCreateTime() bool {
-    if o != nil && !utils.IsNil(o.CreateTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CreateTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCreateTime gets a reference to the given int64 and assigns it to the CreateTime field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetCreateTime(v int64) {
-    o.CreateTime = &v
+	o.CreateTime = &v
 }
 
 // GetDeliveryOptionId returns the DeliveryOptionId field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetDeliveryOptionId() string {
-    if o == nil || utils.IsNil(o.DeliveryOptionId) {
-        var ret string
-        return ret
-    }
-    return *o.DeliveryOptionId
+	if o == nil || utils.IsNil(o.DeliveryOptionId) {
+		var ret string
+		return ret
+	}
+	return *o.DeliveryOptionId
 }
 
 // GetDeliveryOptionIdOk returns a tuple with the DeliveryOptionId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetDeliveryOptionIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.DeliveryOptionId) {
-        return nil, false
-    }
-    return o.DeliveryOptionId, true
+	if o == nil || utils.IsNil(o.DeliveryOptionId) {
+		return nil, false
+	}
+	return o.DeliveryOptionId, true
 }
 
 // HasDeliveryOptionId returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasDeliveryOptionId() bool {
-    if o != nil && !utils.IsNil(o.DeliveryOptionId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DeliveryOptionId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDeliveryOptionId gets a reference to the given string and assigns it to the DeliveryOptionId field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetDeliveryOptionId(v string) {
-    o.DeliveryOptionId = &v
+	o.DeliveryOptionId = &v
 }
 
 // GetDeliveryOptionName returns the DeliveryOptionName field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetDeliveryOptionName() string {
-    if o == nil || utils.IsNil(o.DeliveryOptionName) {
-        var ret string
-        return ret
-    }
-    return *o.DeliveryOptionName
+	if o == nil || utils.IsNil(o.DeliveryOptionName) {
+		var ret string
+		return ret
+	}
+	return *o.DeliveryOptionName
 }
 
 // GetDeliveryOptionNameOk returns a tuple with the DeliveryOptionName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetDeliveryOptionNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.DeliveryOptionName) {
-        return nil, false
-    }
-    return o.DeliveryOptionName, true
+	if o == nil || utils.IsNil(o.DeliveryOptionName) {
+		return nil, false
+	}
+	return o.DeliveryOptionName, true
 }
 
 // HasDeliveryOptionName returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasDeliveryOptionName() bool {
-    if o != nil && !utils.IsNil(o.DeliveryOptionName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DeliveryOptionName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDeliveryOptionName gets a reference to the given string and assigns it to the DeliveryOptionName field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetDeliveryOptionName(v string) {
-    o.DeliveryOptionName = &v
+	o.DeliveryOptionName = &v
 }
 
 // GetDimension returns the Dimension field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetDimension() Fulfillment202309GetPackageDetailResponseDataDimension {
-    if o == nil || utils.IsNil(o.Dimension) {
-        var ret Fulfillment202309GetPackageDetailResponseDataDimension
-        return ret
-    }
-    return *o.Dimension
+	if o == nil || utils.IsNil(o.Dimension) {
+		var ret Fulfillment202309GetPackageDetailResponseDataDimension
+		return ret
+	}
+	return *o.Dimension
 }
 
 // GetDimensionOk returns a tuple with the Dimension field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetDimensionOk() (*Fulfillment202309GetPackageDetailResponseDataDimension, bool) {
-    if o == nil || utils.IsNil(o.Dimension) {
-        return nil, false
-    }
-    return o.Dimension, true
+	if o == nil || utils.IsNil(o.Dimension) {
+		return nil, false
+	}
+	return o.Dimension, true
 }
 
 // HasDimension returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasDimension() bool {
-    if o != nil && !utils.IsNil(o.Dimension) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Dimension) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDimension gets a reference to the given Fulfillment202309GetPackageDetailResponseDataDimension and assigns it to the Dimension field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetDimension(v Fulfillment202309GetPackageDetailResponseDataDimension) {
-    o.Dimension = &v
+	o.Dimension = &v
 }
 
 // GetHandoverMethod returns the HandoverMethod field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetHandoverMethod() string {
-    if o == nil || utils.IsNil(o.HandoverMethod) {
-        var ret string
-        return ret
-    }
-    return *o.HandoverMethod
+	if o == nil || utils.IsNil(o.HandoverMethod) {
+		var ret string
+		return ret
+	}
+	return *o.HandoverMethod
 }
 
 // GetHandoverMethodOk returns a tuple with the HandoverMethod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetHandoverMethodOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.HandoverMethod) {
-        return nil, false
-    }
-    return o.HandoverMethod, true
+	if o == nil || utils.IsNil(o.HandoverMethod) {
+		return nil, false
+	}
+	return o.HandoverMethod, true
 }
 
 // HasHandoverMethod returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasHandoverMethod() bool {
-    if o != nil && !utils.IsNil(o.HandoverMethod) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.HandoverMethod) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHandoverMethod gets a reference to the given string and assigns it to the HandoverMethod field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetHandoverMethod(v string) {
-    o.HandoverMethod = &v
+	o.HandoverMethod = &v
 }
 
 // GetHasMultiSkus returns the HasMultiSkus field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetHasMultiSkus() bool {
-    if o == nil || utils.IsNil(o.HasMultiSkus) {
-        var ret bool
-        return ret
-    }
-    return *o.HasMultiSkus
+	if o == nil || utils.IsNil(o.HasMultiSkus) {
+		var ret bool
+		return ret
+	}
+	return *o.HasMultiSkus
 }
 
 // GetHasMultiSkusOk returns a tuple with the HasMultiSkus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetHasMultiSkusOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.HasMultiSkus) {
-        return nil, false
-    }
-    return o.HasMultiSkus, true
+	if o == nil || utils.IsNil(o.HasMultiSkus) {
+		return nil, false
+	}
+	return o.HasMultiSkus, true
 }
 
 // HasHasMultiSkus returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasHasMultiSkus() bool {
-    if o != nil && !utils.IsNil(o.HasMultiSkus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.HasMultiSkus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHasMultiSkus gets a reference to the given bool and assigns it to the HasMultiSkus field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetHasMultiSkus(v bool) {
-    o.HasMultiSkus = &v
+	o.HasMultiSkus = &v
 }
 
 // GetInsurance returns the Insurance field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetInsurance() Fulfillment202309GetPackageDetailResponseDataInsurance {
-    if o == nil || utils.IsNil(o.Insurance) {
-        var ret Fulfillment202309GetPackageDetailResponseDataInsurance
-        return ret
-    }
-    return *o.Insurance
+	if o == nil || utils.IsNil(o.Insurance) {
+		var ret Fulfillment202309GetPackageDetailResponseDataInsurance
+		return ret
+	}
+	return *o.Insurance
 }
 
 // GetInsuranceOk returns a tuple with the Insurance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetInsuranceOk() (*Fulfillment202309GetPackageDetailResponseDataInsurance, bool) {
-    if o == nil || utils.IsNil(o.Insurance) {
-        return nil, false
-    }
-    return o.Insurance, true
+	if o == nil || utils.IsNil(o.Insurance) {
+		return nil, false
+	}
+	return o.Insurance, true
 }
 
 // HasInsurance returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasInsurance() bool {
-    if o != nil && !utils.IsNil(o.Insurance) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Insurance) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetInsurance gets a reference to the given Fulfillment202309GetPackageDetailResponseDataInsurance and assigns it to the Insurance field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetInsurance(v Fulfillment202309GetPackageDetailResponseDataInsurance) {
-    o.Insurance = &v
+	o.Insurance = &v
 }
 
 // GetLastMileTrackingNumber returns the LastMileTrackingNumber field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetLastMileTrackingNumber() string {
-    if o == nil || utils.IsNil(o.LastMileTrackingNumber) {
-        var ret string
-        return ret
-    }
-    return *o.LastMileTrackingNumber
+	if o == nil || utils.IsNil(o.LastMileTrackingNumber) {
+		var ret string
+		return ret
+	}
+	return *o.LastMileTrackingNumber
 }
 
 // GetLastMileTrackingNumberOk returns a tuple with the LastMileTrackingNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetLastMileTrackingNumberOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.LastMileTrackingNumber) {
-        return nil, false
-    }
-    return o.LastMileTrackingNumber, true
+	if o == nil || utils.IsNil(o.LastMileTrackingNumber) {
+		return nil, false
+	}
+	return o.LastMileTrackingNumber, true
 }
 
 // HasLastMileTrackingNumber returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasLastMileTrackingNumber() bool {
-    if o != nil && !utils.IsNil(o.LastMileTrackingNumber) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LastMileTrackingNumber) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLastMileTrackingNumber gets a reference to the given string and assigns it to the LastMileTrackingNumber field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetLastMileTrackingNumber(v string) {
-    o.LastMileTrackingNumber = &v
+	o.LastMileTrackingNumber = &v
 }
 
 // GetNoteTag returns the NoteTag field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetNoteTag() string {
-    if o == nil || utils.IsNil(o.NoteTag) {
-        var ret string
-        return ret
-    }
-    return *o.NoteTag
+	if o == nil || utils.IsNil(o.NoteTag) {
+		var ret string
+		return ret
+	}
+	return *o.NoteTag
 }
 
 // GetNoteTagOk returns a tuple with the NoteTag field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetNoteTagOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NoteTag) {
-        return nil, false
-    }
-    return o.NoteTag, true
+	if o == nil || utils.IsNil(o.NoteTag) {
+		return nil, false
+	}
+	return o.NoteTag, true
 }
 
 // HasNoteTag returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasNoteTag() bool {
-    if o != nil && !utils.IsNil(o.NoteTag) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NoteTag) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNoteTag gets a reference to the given string and assigns it to the NoteTag field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetNoteTag(v string) {
-    o.NoteTag = &v
+	o.NoteTag = &v
 }
 
 // GetOrderLineItemIds returns the OrderLineItemIds field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetOrderLineItemIds() []string {
-    if o == nil || utils.IsNil(o.OrderLineItemIds) {
-        var ret []string
-        return ret
-    }
-    return o.OrderLineItemIds
+	if o == nil || utils.IsNil(o.OrderLineItemIds) {
+		var ret []string
+		return ret
+	}
+	return o.OrderLineItemIds
 }
 
 // GetOrderLineItemIdsOk returns a tuple with the OrderLineItemIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetOrderLineItemIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.OrderLineItemIds) {
-        return nil, false
-    }
-    return o.OrderLineItemIds, true
+	if o == nil || utils.IsNil(o.OrderLineItemIds) {
+		return nil, false
+	}
+	return o.OrderLineItemIds, true
 }
 
 // HasOrderLineItemIds returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasOrderLineItemIds() bool {
-    if o != nil && !utils.IsNil(o.OrderLineItemIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderLineItemIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderLineItemIds gets a reference to the given []string and assigns it to the OrderLineItemIds field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetOrderLineItemIds(v []string) {
-    o.OrderLineItemIds = v
+	o.OrderLineItemIds = v
 }
 
 // GetOrders returns the Orders field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetOrders() []Fulfillment202309GetPackageDetailResponseDataOrders {
-    if o == nil || utils.IsNil(o.Orders) {
-        var ret []Fulfillment202309GetPackageDetailResponseDataOrders
-        return ret
-    }
-    return o.Orders
+	if o == nil || utils.IsNil(o.Orders) {
+		var ret []Fulfillment202309GetPackageDetailResponseDataOrders
+		return ret
+	}
+	return o.Orders
 }
 
 // GetOrdersOk returns a tuple with the Orders field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetOrdersOk() ([]Fulfillment202309GetPackageDetailResponseDataOrders, bool) {
-    if o == nil || utils.IsNil(o.Orders) {
-        return nil, false
-    }
-    return o.Orders, true
+	if o == nil || utils.IsNil(o.Orders) {
+		return nil, false
+	}
+	return o.Orders, true
 }
 
 // HasOrders returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasOrders() bool {
-    if o != nil && !utils.IsNil(o.Orders) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Orders) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrders gets a reference to the given []Fulfillment202309GetPackageDetailResponseDataOrders and assigns it to the Orders field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetOrders(v []Fulfillment202309GetPackageDetailResponseDataOrders) {
-    o.Orders = v
+	o.Orders = v
 }
 
 // GetPackageId returns the PackageId field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetPackageId() string {
-    if o == nil || utils.IsNil(o.PackageId) {
-        var ret string
-        return ret
-    }
-    return *o.PackageId
+	if o == nil || utils.IsNil(o.PackageId) {
+		var ret string
+		return ret
+	}
+	return *o.PackageId
 }
 
 // GetPackageIdOk returns a tuple with the PackageId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetPackageIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PackageId) {
-        return nil, false
-    }
-    return o.PackageId, true
+	if o == nil || utils.IsNil(o.PackageId) {
+		return nil, false
+	}
+	return o.PackageId, true
 }
 
 // HasPackageId returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasPackageId() bool {
-    if o != nil && !utils.IsNil(o.PackageId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PackageId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPackageId gets a reference to the given string and assigns it to the PackageId field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetPackageId(v string) {
-    o.PackageId = &v
+	o.PackageId = &v
 }
 
 // GetPackageStatus returns the PackageStatus field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetPackageStatus() string {
-    if o == nil || utils.IsNil(o.PackageStatus) {
-        var ret string
-        return ret
-    }
-    return *o.PackageStatus
+	if o == nil || utils.IsNil(o.PackageStatus) {
+		var ret string
+		return ret
+	}
+	return *o.PackageStatus
 }
 
 // GetPackageStatusOk returns a tuple with the PackageStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetPackageStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PackageStatus) {
-        return nil, false
-    }
-    return o.PackageStatus, true
+	if o == nil || utils.IsNil(o.PackageStatus) {
+		return nil, false
+	}
+	return o.PackageStatus, true
 }
 
 // HasPackageStatus returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasPackageStatus() bool {
-    if o != nil && !utils.IsNil(o.PackageStatus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PackageStatus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPackageStatus gets a reference to the given string and assigns it to the PackageStatus field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetPackageStatus(v string) {
-    o.PackageStatus = &v
+	o.PackageStatus = &v
 }
 
 // GetPickupSlot returns the PickupSlot field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetPickupSlot() Fulfillment202309GetPackageDetailResponseDataPickupSlot {
-    if o == nil || utils.IsNil(o.PickupSlot) {
-        var ret Fulfillment202309GetPackageDetailResponseDataPickupSlot
-        return ret
-    }
-    return *o.PickupSlot
+	if o == nil || utils.IsNil(o.PickupSlot) {
+		var ret Fulfillment202309GetPackageDetailResponseDataPickupSlot
+		return ret
+	}
+	return *o.PickupSlot
 }
 
 // GetPickupSlotOk returns a tuple with the PickupSlot field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetPickupSlotOk() (*Fulfillment202309GetPackageDetailResponseDataPickupSlot, bool) {
-    if o == nil || utils.IsNil(o.PickupSlot) {
-        return nil, false
-    }
-    return o.PickupSlot, true
+	if o == nil || utils.IsNil(o.PickupSlot) {
+		return nil, false
+	}
+	return o.PickupSlot, true
 }
 
 // HasPickupSlot returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasPickupSlot() bool {
-    if o != nil && !utils.IsNil(o.PickupSlot) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PickupSlot) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPickupSlot gets a reference to the given Fulfillment202309GetPackageDetailResponseDataPickupSlot and assigns it to the PickupSlot field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetPickupSlot(v Fulfillment202309GetPackageDetailResponseDataPickupSlot) {
-    o.PickupSlot = &v
+	o.PickupSlot = &v
 }
 
 // GetRecipientAddress returns the RecipientAddress field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetRecipientAddress() Fulfillment202309GetPackageDetailResponseDataRecipientAddress {
-    if o == nil || utils.IsNil(o.RecipientAddress) {
-        var ret Fulfillment202309GetPackageDetailResponseDataRecipientAddress
-        return ret
-    }
-    return *o.RecipientAddress
+	if o == nil || utils.IsNil(o.RecipientAddress) {
+		var ret Fulfillment202309GetPackageDetailResponseDataRecipientAddress
+		return ret
+	}
+	return *o.RecipientAddress
 }
 
 // GetRecipientAddressOk returns a tuple with the RecipientAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetRecipientAddressOk() (*Fulfillment202309GetPackageDetailResponseDataRecipientAddress, bool) {
-    if o == nil || utils.IsNil(o.RecipientAddress) {
-        return nil, false
-    }
-    return o.RecipientAddress, true
+	if o == nil || utils.IsNil(o.RecipientAddress) {
+		return nil, false
+	}
+	return o.RecipientAddress, true
 }
 
 // HasRecipientAddress returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasRecipientAddress() bool {
-    if o != nil && !utils.IsNil(o.RecipientAddress) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RecipientAddress) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRecipientAddress gets a reference to the given Fulfillment202309GetPackageDetailResponseDataRecipientAddress and assigns it to the RecipientAddress field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetRecipientAddress(v Fulfillment202309GetPackageDetailResponseDataRecipientAddress) {
-    o.RecipientAddress = &v
+	o.RecipientAddress = &v
 }
 
 // GetSenderAddress returns the SenderAddress field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetSenderAddress() Fulfillment202309GetPackageDetailResponseDataSenderAddress {
-    if o == nil || utils.IsNil(o.SenderAddress) {
-        var ret Fulfillment202309GetPackageDetailResponseDataSenderAddress
-        return ret
-    }
-    return *o.SenderAddress
+	if o == nil || utils.IsNil(o.SenderAddress) {
+		var ret Fulfillment202309GetPackageDetailResponseDataSenderAddress
+		return ret
+	}
+	return *o.SenderAddress
 }
 
 // GetSenderAddressOk returns a tuple with the SenderAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetSenderAddressOk() (*Fulfillment202309GetPackageDetailResponseDataSenderAddress, bool) {
-    if o == nil || utils.IsNil(o.SenderAddress) {
-        return nil, false
-    }
-    return o.SenderAddress, true
+	if o == nil || utils.IsNil(o.SenderAddress) {
+		return nil, false
+	}
+	return o.SenderAddress, true
 }
 
 // HasSenderAddress returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasSenderAddress() bool {
-    if o != nil && !utils.IsNil(o.SenderAddress) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SenderAddress) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSenderAddress gets a reference to the given Fulfillment202309GetPackageDetailResponseDataSenderAddress and assigns it to the SenderAddress field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetSenderAddress(v Fulfillment202309GetPackageDetailResponseDataSenderAddress) {
-    o.SenderAddress = &v
+	o.SenderAddress = &v
 }
 
 // GetShippingProviderId returns the ShippingProviderId field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetShippingProviderId() string {
-    if o == nil || utils.IsNil(o.ShippingProviderId) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingProviderId
+	if o == nil || utils.IsNil(o.ShippingProviderId) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingProviderId
 }
 
 // GetShippingProviderIdOk returns a tuple with the ShippingProviderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetShippingProviderIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingProviderId) {
-        return nil, false
-    }
-    return o.ShippingProviderId, true
+	if o == nil || utils.IsNil(o.ShippingProviderId) {
+		return nil, false
+	}
+	return o.ShippingProviderId, true
 }
 
 // HasShippingProviderId returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasShippingProviderId() bool {
-    if o != nil && !utils.IsNil(o.ShippingProviderId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingProviderId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingProviderId gets a reference to the given string and assigns it to the ShippingProviderId field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetShippingProviderId(v string) {
-    o.ShippingProviderId = &v
+	o.ShippingProviderId = &v
 }
 
 // GetShippingProviderName returns the ShippingProviderName field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetShippingProviderName() string {
-    if o == nil || utils.IsNil(o.ShippingProviderName) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingProviderName
+	if o == nil || utils.IsNil(o.ShippingProviderName) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingProviderName
 }
 
 // GetShippingProviderNameOk returns a tuple with the ShippingProviderName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetShippingProviderNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingProviderName) {
-        return nil, false
-    }
-    return o.ShippingProviderName, true
+	if o == nil || utils.IsNil(o.ShippingProviderName) {
+		return nil, false
+	}
+	return o.ShippingProviderName, true
 }
 
 // HasShippingProviderName returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasShippingProviderName() bool {
-    if o != nil && !utils.IsNil(o.ShippingProviderName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingProviderName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingProviderName gets a reference to the given string and assigns it to the ShippingProviderName field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetShippingProviderName(v string) {
-    o.ShippingProviderName = &v
+	o.ShippingProviderName = &v
 }
 
 // GetShippingType returns the ShippingType field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetShippingType() string {
-    if o == nil || utils.IsNil(o.ShippingType) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingType
+	if o == nil || utils.IsNil(o.ShippingType) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingType
 }
 
 // GetShippingTypeOk returns a tuple with the ShippingType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetShippingTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingType) {
-        return nil, false
-    }
-    return o.ShippingType, true
+	if o == nil || utils.IsNil(o.ShippingType) {
+		return nil, false
+	}
+	return o.ShippingType, true
 }
 
 // HasShippingType returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasShippingType() bool {
-    if o != nil && !utils.IsNil(o.ShippingType) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingType) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingType gets a reference to the given string and assigns it to the ShippingType field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetShippingType(v string) {
-    o.ShippingType = &v
+	o.ShippingType = &v
 }
 
 // GetSplitAndCombineTag returns the SplitAndCombineTag field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetSplitAndCombineTag() string {
-    if o == nil || utils.IsNil(o.SplitAndCombineTag) {
-        var ret string
-        return ret
-    }
-    return *o.SplitAndCombineTag
+	if o == nil || utils.IsNil(o.SplitAndCombineTag) {
+		var ret string
+		return ret
+	}
+	return *o.SplitAndCombineTag
 }
 
 // GetSplitAndCombineTagOk returns a tuple with the SplitAndCombineTag field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetSplitAndCombineTagOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SplitAndCombineTag) {
-        return nil, false
-    }
-    return o.SplitAndCombineTag, true
+	if o == nil || utils.IsNil(o.SplitAndCombineTag) {
+		return nil, false
+	}
+	return o.SplitAndCombineTag, true
 }
 
 // HasSplitAndCombineTag returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasSplitAndCombineTag() bool {
-    if o != nil && !utils.IsNil(o.SplitAndCombineTag) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SplitAndCombineTag) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSplitAndCombineTag gets a reference to the given string and assigns it to the SplitAndCombineTag field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetSplitAndCombineTag(v string) {
-    o.SplitAndCombineTag = &v
+	o.SplitAndCombineTag = &v
 }
 
 // GetTrackingNumber returns the TrackingNumber field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetTrackingNumber() string {
-    if o == nil || utils.IsNil(o.TrackingNumber) {
-        var ret string
-        return ret
-    }
-    return *o.TrackingNumber
+	if o == nil || utils.IsNil(o.TrackingNumber) {
+		var ret string
+		return ret
+	}
+	return *o.TrackingNumber
 }
 
 // GetTrackingNumberOk returns a tuple with the TrackingNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetTrackingNumberOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TrackingNumber) {
-        return nil, false
-    }
-    return o.TrackingNumber, true
+	if o == nil || utils.IsNil(o.TrackingNumber) {
+		return nil, false
+	}
+	return o.TrackingNumber, true
 }
 
 // HasTrackingNumber returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasTrackingNumber() bool {
-    if o != nil && !utils.IsNil(o.TrackingNumber) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TrackingNumber) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTrackingNumber gets a reference to the given string and assigns it to the TrackingNumber field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetTrackingNumber(v string) {
-    o.TrackingNumber = &v
+	o.TrackingNumber = &v
 }
 
 // GetUpdateTime returns the UpdateTime field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetUpdateTime() int64 {
-    if o == nil || utils.IsNil(o.UpdateTime) {
-        var ret int64
-        return ret
-    }
-    return *o.UpdateTime
+	if o == nil || utils.IsNil(o.UpdateTime) {
+		var ret int64
+		return ret
+	}
+	return *o.UpdateTime
 }
 
 // GetUpdateTimeOk returns a tuple with the UpdateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetUpdateTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UpdateTime) {
-        return nil, false
-    }
-    return o.UpdateTime, true
+	if o == nil || utils.IsNil(o.UpdateTime) {
+		return nil, false
+	}
+	return o.UpdateTime, true
 }
 
 // HasUpdateTime returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasUpdateTime() bool {
-    if o != nil && !utils.IsNil(o.UpdateTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UpdateTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUpdateTime gets a reference to the given int64 and assigns it to the UpdateTime field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetUpdateTime(v int64) {
-    o.UpdateTime = &v
+	o.UpdateTime = &v
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetWeight() Fulfillment202309GetPackageDetailResponseDataWeight {
-    if o == nil || utils.IsNil(o.Weight) {
-        var ret Fulfillment202309GetPackageDetailResponseDataWeight
-        return ret
-    }
-    return *o.Weight
+	if o == nil || utils.IsNil(o.Weight) {
+		var ret Fulfillment202309GetPackageDetailResponseDataWeight
+		return ret
+	}
+	return *o.Weight
 }
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) GetWeightOk() (*Fulfillment202309GetPackageDetailResponseDataWeight, bool) {
-    if o == nil || utils.IsNil(o.Weight) {
-        return nil, false
-    }
-    return o.Weight, true
+	if o == nil || utils.IsNil(o.Weight) {
+		return nil, false
+	}
+	return o.Weight, true
 }
 
 // HasWeight returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseData) HasWeight() bool {
-    if o != nil && !utils.IsNil(o.Weight) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Weight) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWeight gets a reference to the given Fulfillment202309GetPackageDetailResponseDataWeight and assigns it to the Weight field.
 func (o *Fulfillment202309GetPackageDetailResponseData) SetWeight(v Fulfillment202309GetPackageDetailResponseDataWeight) {
-    o.Weight = &v
+	o.Weight = &v
 }
 
 func (o Fulfillment202309GetPackageDetailResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetPackageDetailResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CreateTime) {
-        toSerialize["create_time"] = o.CreateTime
-    }
-    if !utils.IsNil(o.DeliveryOptionId) {
-        toSerialize["delivery_option_id"] = o.DeliveryOptionId
-    }
-    if !utils.IsNil(o.DeliveryOptionName) {
-        toSerialize["delivery_option_name"] = o.DeliveryOptionName
-    }
-    if !utils.IsNil(o.Dimension) {
-        toSerialize["dimension"] = o.Dimension
-    }
-    if !utils.IsNil(o.HandoverMethod) {
-        toSerialize["handover_method"] = o.HandoverMethod
-    }
-    if !utils.IsNil(o.HasMultiSkus) {
-        toSerialize["has_multi_skus"] = o.HasMultiSkus
-    }
-    if !utils.IsNil(o.Insurance) {
-        toSerialize["insurance"] = o.Insurance
-    }
-    if !utils.IsNil(o.LastMileTrackingNumber) {
-        toSerialize["last_mile_tracking_number"] = o.LastMileTrackingNumber
-    }
-    if !utils.IsNil(o.NoteTag) {
-        toSerialize["note_tag"] = o.NoteTag
-    }
-    if !utils.IsNil(o.OrderLineItemIds) {
-        toSerialize["order_line_item_ids"] = o.OrderLineItemIds
-    }
-    if !utils.IsNil(o.Orders) {
-        toSerialize["orders"] = o.Orders
-    }
-    if !utils.IsNil(o.PackageId) {
-        toSerialize["package_id"] = o.PackageId
-    }
-    if !utils.IsNil(o.PackageStatus) {
-        toSerialize["package_status"] = o.PackageStatus
-    }
-    if !utils.IsNil(o.PickupSlot) {
-        toSerialize["pickup_slot"] = o.PickupSlot
-    }
-    if !utils.IsNil(o.RecipientAddress) {
-        toSerialize["recipient_address"] = o.RecipientAddress
-    }
-    if !utils.IsNil(o.SenderAddress) {
-        toSerialize["sender_address"] = o.SenderAddress
-    }
-    if !utils.IsNil(o.ShippingProviderId) {
-        toSerialize["shipping_provider_id"] = o.ShippingProviderId
-    }
-    if !utils.IsNil(o.ShippingProviderName) {
-        toSerialize["shipping_provider_name"] = o.ShippingProviderName
-    }
-    if !utils.IsNil(o.ShippingType) {
-        toSerialize["shipping_type"] = o.ShippingType
-    }
-    if !utils.IsNil(o.SplitAndCombineTag) {
-        toSerialize["split_and_combine_tag"] = o.SplitAndCombineTag
-    }
-    if !utils.IsNil(o.TrackingNumber) {
-        toSerialize["tracking_number"] = o.TrackingNumber
-    }
-    if !utils.IsNil(o.UpdateTime) {
-        toSerialize["update_time"] = o.UpdateTime
-    }
-    if !utils.IsNil(o.Weight) {
-        toSerialize["weight"] = o.Weight
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CreateTime) {
+		toSerialize["create_time"] = o.CreateTime
+	}
+	if !utils.IsNil(o.DeliveryOptionId) {
+		toSerialize["delivery_option_id"] = o.DeliveryOptionId
+	}
+	if !utils.IsNil(o.DeliveryOptionName) {
+		toSerialize["delivery_option_name"] = o.DeliveryOptionName
+	}
+	if !utils.IsNil(o.Dimension) {
+		toSerialize["dimension"] = o.Dimension
+	}
+	if !utils.IsNil(o.HandoverMethod) {
+		toSerialize["handover_method"] = o.HandoverMethod
+	}
+	if !utils.IsNil(o.HasMultiSkus) {
+		toSerialize["has_multi_skus"] = o.HasMultiSkus
+	}
+	if !utils.IsNil(o.Insurance) {
+		toSerialize["insurance"] = o.Insurance
+	}
+	if !utils.IsNil(o.LastMileTrackingNumber) {
+		toSerialize["last_mile_tracking_number"] = o.LastMileTrackingNumber
+	}
+	if !utils.IsNil(o.NoteTag) {
+		toSerialize["note_tag"] = o.NoteTag
+	}
+	if !utils.IsNil(o.OrderLineItemIds) {
+		toSerialize["order_line_item_ids"] = o.OrderLineItemIds
+	}
+	if !utils.IsNil(o.Orders) {
+		toSerialize["orders"] = o.Orders
+	}
+	if !utils.IsNil(o.PackageId) {
+		toSerialize["package_id"] = o.PackageId
+	}
+	if !utils.IsNil(o.PackageStatus) {
+		toSerialize["package_status"] = o.PackageStatus
+	}
+	if !utils.IsNil(o.PickupSlot) {
+		toSerialize["pickup_slot"] = o.PickupSlot
+	}
+	if !utils.IsNil(o.RecipientAddress) {
+		toSerialize["recipient_address"] = o.RecipientAddress
+	}
+	if !utils.IsNil(o.SenderAddress) {
+		toSerialize["sender_address"] = o.SenderAddress
+	}
+	if !utils.IsNil(o.ShippingProviderId) {
+		toSerialize["shipping_provider_id"] = o.ShippingProviderId
+	}
+	if !utils.IsNil(o.ShippingProviderName) {
+		toSerialize["shipping_provider_name"] = o.ShippingProviderName
+	}
+	if !utils.IsNil(o.ShippingType) {
+		toSerialize["shipping_type"] = o.ShippingType
+	}
+	if !utils.IsNil(o.SplitAndCombineTag) {
+		toSerialize["split_and_combine_tag"] = o.SplitAndCombineTag
+	}
+	if !utils.IsNil(o.TrackingNumber) {
+		toSerialize["tracking_number"] = o.TrackingNumber
+	}
+	if !utils.IsNil(o.UpdateTime) {
+		toSerialize["update_time"] = o.UpdateTime
+	}
+	if !utils.IsNil(o.Weight) {
+		toSerialize["weight"] = o.Weight
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetPackageDetailResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetPackageDetailResponseData := _Fulfillment202309GetPackageDetailResponseData{}
+	varFulfillment202309GetPackageDetailResponseData := _Fulfillment202309GetPackageDetailResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseData)
+	err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetPackageDetailResponseData(varFulfillment202309GetPackageDetailResponseData)
+	*o = Fulfillment202309GetPackageDetailResponseData(varFulfillment202309GetPackageDetailResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "create_time")
-        delete(additionalProperties, "delivery_option_id")
-        delete(additionalProperties, "delivery_option_name")
-        delete(additionalProperties, "dimension")
-        delete(additionalProperties, "handover_method")
-        delete(additionalProperties, "has_multi_skus")
-        delete(additionalProperties, "insurance")
-        delete(additionalProperties, "last_mile_tracking_number")
-        delete(additionalProperties, "note_tag")
-        delete(additionalProperties, "order_line_item_ids")
-        delete(additionalProperties, "orders")
-        delete(additionalProperties, "package_id")
-        delete(additionalProperties, "package_status")
-        delete(additionalProperties, "pickup_slot")
-        delete(additionalProperties, "recipient_address")
-        delete(additionalProperties, "sender_address")
-        delete(additionalProperties, "shipping_provider_id")
-        delete(additionalProperties, "shipping_provider_name")
-        delete(additionalProperties, "shipping_type")
-        delete(additionalProperties, "split_and_combine_tag")
-        delete(additionalProperties, "tracking_number")
-        delete(additionalProperties, "update_time")
-        delete(additionalProperties, "weight")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "create_time")
+		delete(additionalProperties, "delivery_option_id")
+		delete(additionalProperties, "delivery_option_name")
+		delete(additionalProperties, "dimension")
+		delete(additionalProperties, "handover_method")
+		delete(additionalProperties, "has_multi_skus")
+		delete(additionalProperties, "insurance")
+		delete(additionalProperties, "last_mile_tracking_number")
+		delete(additionalProperties, "note_tag")
+		delete(additionalProperties, "order_line_item_ids")
+		delete(additionalProperties, "orders")
+		delete(additionalProperties, "package_id")
+		delete(additionalProperties, "package_status")
+		delete(additionalProperties, "pickup_slot")
+		delete(additionalProperties, "recipient_address")
+		delete(additionalProperties, "sender_address")
+		delete(additionalProperties, "shipping_provider_id")
+		delete(additionalProperties, "shipping_provider_name")
+		delete(additionalProperties, "shipping_type")
+		delete(additionalProperties, "split_and_combine_tag")
+		delete(additionalProperties, "tracking_number")
+		delete(additionalProperties, "update_time")
+		delete(additionalProperties, "weight")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetPackageDetailResponseData struct {
@@ -982,5 +982,3 @@ func (v *NullableFulfillment202309GetPackageDetailResponseData) UnmarshalJSON(sr
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

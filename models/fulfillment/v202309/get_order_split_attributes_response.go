@@ -11,23 +11,23 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetOrderSplitAttributesResponse type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetOrderSplitAttributesResponse type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetOrderSplitAttributesResponse{}
 
 // Fulfillment202309GetOrderSplitAttributesResponse struct for Fulfillment202309GetOrderSplitAttributesResponse
 type Fulfillment202309GetOrderSplitAttributesResponse struct {
-    // The success or failure status code returned in API response.
-    Code *int32 `json:"code,omitempty"`
-    Data *Fulfillment202309GetOrderSplitAttributesResponseData `json:"data,omitempty"`
-    // The success or failure messages returned in API response. Reasons of failure will be described in the message.
-    Message *string `json:"message,omitempty"`
-    // Request log.
-    RequestId *string `json:"request_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The success or failure status code returned in API response.
+	Code *int32                                                `json:"code,omitempty"`
+	Data *Fulfillment202309GetOrderSplitAttributesResponseData `json:"data,omitempty"`
+	// The success or failure messages returned in API response. Reasons of failure will be described in the message.
+	Message *string `json:"message,omitempty"`
+	// Request log.
+	RequestId            *string `json:"request_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetOrderSplitAttributesResponse Fulfillment202309GetOrderSplitAttributesResponse
@@ -37,197 +37,197 @@ type _Fulfillment202309GetOrderSplitAttributesResponse Fulfillment202309GetOrder
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetOrderSplitAttributesResponse() *Fulfillment202309GetOrderSplitAttributesResponse {
-    this := Fulfillment202309GetOrderSplitAttributesResponse{}
-    return &this
+	this := Fulfillment202309GetOrderSplitAttributesResponse{}
+	return &this
 }
 
 // NewFulfillment202309GetOrderSplitAttributesResponseWithDefaults instantiates a new Fulfillment202309GetOrderSplitAttributesResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetOrderSplitAttributesResponseWithDefaults() *Fulfillment202309GetOrderSplitAttributesResponse {
-    this := Fulfillment202309GetOrderSplitAttributesResponse{}
-    return &this
+	this := Fulfillment202309GetOrderSplitAttributesResponse{}
+	return &this
 }
 
 // GetCode returns the Code field value if set, zero value otherwise.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) GetCode() int32 {
-    if o == nil || utils.IsNil(o.Code) {
-        var ret int32
-        return ret
-    }
-    return *o.Code
+	if o == nil || utils.IsNil(o.Code) {
+		var ret int32
+		return ret
+	}
+	return *o.Code
 }
 
 // GetCodeOk returns a tuple with the Code field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) GetCodeOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Code) {
-        return nil, false
-    }
-    return o.Code, true
+	if o == nil || utils.IsNil(o.Code) {
+		return nil, false
+	}
+	return o.Code, true
 }
 
 // HasCode returns a boolean if a field has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) HasCode() bool {
-    if o != nil && !utils.IsNil(o.Code) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Code) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCode gets a reference to the given int32 and assigns it to the Code field.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) SetCode(v int32) {
-    o.Code = &v
+	o.Code = &v
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) GetData() Fulfillment202309GetOrderSplitAttributesResponseData {
-    if o == nil || utils.IsNil(o.Data) {
-        var ret Fulfillment202309GetOrderSplitAttributesResponseData
-        return ret
-    }
-    return *o.Data
+	if o == nil || utils.IsNil(o.Data) {
+		var ret Fulfillment202309GetOrderSplitAttributesResponseData
+		return ret
+	}
+	return *o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) GetDataOk() (*Fulfillment202309GetOrderSplitAttributesResponseData, bool) {
-    if o == nil || utils.IsNil(o.Data) {
-        return nil, false
-    }
-    return o.Data, true
+	if o == nil || utils.IsNil(o.Data) {
+		return nil, false
+	}
+	return o.Data, true
 }
 
 // HasData returns a boolean if a field has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) HasData() bool {
-    if o != nil && !utils.IsNil(o.Data) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Data) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetData gets a reference to the given Fulfillment202309GetOrderSplitAttributesResponseData and assigns it to the Data field.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) SetData(v Fulfillment202309GetOrderSplitAttributesResponseData) {
-    o.Data = &v
+	o.Data = &v
 }
 
 // GetMessage returns the Message field value if set, zero value otherwise.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) GetMessage() string {
-    if o == nil || utils.IsNil(o.Message) {
-        var ret string
-        return ret
-    }
-    return *o.Message
+	if o == nil || utils.IsNil(o.Message) {
+		var ret string
+		return ret
+	}
+	return *o.Message
 }
 
 // GetMessageOk returns a tuple with the Message field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) GetMessageOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Message) {
-        return nil, false
-    }
-    return o.Message, true
+	if o == nil || utils.IsNil(o.Message) {
+		return nil, false
+	}
+	return o.Message, true
 }
 
 // HasMessage returns a boolean if a field has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) HasMessage() bool {
-    if o != nil && !utils.IsNil(o.Message) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Message) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMessage gets a reference to the given string and assigns it to the Message field.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) SetMessage(v string) {
-    o.Message = &v
+	o.Message = &v
 }
 
 // GetRequestId returns the RequestId field value if set, zero value otherwise.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) GetRequestId() string {
-    if o == nil || utils.IsNil(o.RequestId) {
-        var ret string
-        return ret
-    }
-    return *o.RequestId
+	if o == nil || utils.IsNil(o.RequestId) {
+		var ret string
+		return ret
+	}
+	return *o.RequestId
 }
 
 // GetRequestIdOk returns a tuple with the RequestId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) GetRequestIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.RequestId) {
-        return nil, false
-    }
-    return o.RequestId, true
+	if o == nil || utils.IsNil(o.RequestId) {
+		return nil, false
+	}
+	return o.RequestId, true
 }
 
 // HasRequestId returns a boolean if a field has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) HasRequestId() bool {
-    if o != nil && !utils.IsNil(o.RequestId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RequestId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRequestId gets a reference to the given string and assigns it to the RequestId field.
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) SetRequestId(v string) {
-    o.RequestId = &v
+	o.RequestId = &v
 }
 
 func (o Fulfillment202309GetOrderSplitAttributesResponse) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetOrderSplitAttributesResponse) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Code) {
-        toSerialize["code"] = o.Code
-    }
-    if !utils.IsNil(o.Data) {
-        toSerialize["data"] = o.Data
-    }
-    if !utils.IsNil(o.Message) {
-        toSerialize["message"] = o.Message
-    }
-    if !utils.IsNil(o.RequestId) {
-        toSerialize["request_id"] = o.RequestId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Code) {
+		toSerialize["code"] = o.Code
+	}
+	if !utils.IsNil(o.Data) {
+		toSerialize["data"] = o.Data
+	}
+	if !utils.IsNil(o.Message) {
+		toSerialize["message"] = o.Message
+	}
+	if !utils.IsNil(o.RequestId) {
+		toSerialize["request_id"] = o.RequestId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetOrderSplitAttributesResponse) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetOrderSplitAttributesResponse := _Fulfillment202309GetOrderSplitAttributesResponse{}
+	varFulfillment202309GetOrderSplitAttributesResponse := _Fulfillment202309GetOrderSplitAttributesResponse{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetOrderSplitAttributesResponse)
+	err = json.Unmarshal(data, &varFulfillment202309GetOrderSplitAttributesResponse)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetOrderSplitAttributesResponse(varFulfillment202309GetOrderSplitAttributesResponse)
+	*o = Fulfillment202309GetOrderSplitAttributesResponse(varFulfillment202309GetOrderSplitAttributesResponse)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "code")
-        delete(additionalProperties, "data")
-        delete(additionalProperties, "message")
-        delete(additionalProperties, "request_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "code")
+		delete(additionalProperties, "data")
+		delete(additionalProperties, "message")
+		delete(additionalProperties, "request_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetOrderSplitAttributesResponse struct {
@@ -265,5 +265,3 @@ func (v *NullableFulfillment202309GetOrderSplitAttributesResponse) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

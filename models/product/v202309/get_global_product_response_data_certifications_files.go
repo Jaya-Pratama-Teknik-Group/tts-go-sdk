@@ -11,24 +11,24 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetGlobalProductResponseDataCertificationsFiles type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetGlobalProductResponseDataCertificationsFiles type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetGlobalProductResponseDataCertificationsFiles{}
 
 // Product202309GetGlobalProductResponseDataCertificationsFiles struct for Product202309GetGlobalProductResponseDataCertificationsFiles
 type Product202309GetGlobalProductResponseDataCertificationsFiles struct {
-    // The format of the certification file.
-    Format *string `json:"format,omitempty"`
-    // The ID of the certification file.
-    Id *string `json:"id,omitempty"`
-    // The name of the certification file
-    Name *string `json:"name,omitempty"`
-    //  The URLs to view the certification files. 
-    Urls []string `json:"urls,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The format of the certification file.
+	Format *string `json:"format,omitempty"`
+	// The ID of the certification file.
+	Id *string `json:"id,omitempty"`
+	// The name of the certification file
+	Name *string `json:"name,omitempty"`
+	//  The URLs to view the certification files.
+	Urls                 []string `json:"urls,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetGlobalProductResponseDataCertificationsFiles Product202309GetGlobalProductResponseDataCertificationsFiles
@@ -38,197 +38,197 @@ type _Product202309GetGlobalProductResponseDataCertificationsFiles Product202309
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetGlobalProductResponseDataCertificationsFiles() *Product202309GetGlobalProductResponseDataCertificationsFiles {
-    this := Product202309GetGlobalProductResponseDataCertificationsFiles{}
-    return &this
+	this := Product202309GetGlobalProductResponseDataCertificationsFiles{}
+	return &this
 }
 
 // NewProduct202309GetGlobalProductResponseDataCertificationsFilesWithDefaults instantiates a new Product202309GetGlobalProductResponseDataCertificationsFiles object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetGlobalProductResponseDataCertificationsFilesWithDefaults() *Product202309GetGlobalProductResponseDataCertificationsFiles {
-    this := Product202309GetGlobalProductResponseDataCertificationsFiles{}
-    return &this
+	this := Product202309GetGlobalProductResponseDataCertificationsFiles{}
+	return &this
 }
 
 // GetFormat returns the Format field value if set, zero value otherwise.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) GetFormat() string {
-    if o == nil || utils.IsNil(o.Format) {
-        var ret string
-        return ret
-    }
-    return *o.Format
+	if o == nil || utils.IsNil(o.Format) {
+		var ret string
+		return ret
+	}
+	return *o.Format
 }
 
 // GetFormatOk returns a tuple with the Format field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) GetFormatOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Format) {
-        return nil, false
-    }
-    return o.Format, true
+	if o == nil || utils.IsNil(o.Format) {
+		return nil, false
+	}
+	return o.Format, true
 }
 
 // HasFormat returns a boolean if a field has been set.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) HasFormat() bool {
-    if o != nil && !utils.IsNil(o.Format) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Format) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFormat gets a reference to the given string and assigns it to the Format field.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) SetFormat(v string) {
-    o.Format = &v
+	o.Format = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 // GetUrls returns the Urls field value if set, zero value otherwise.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) GetUrls() []string {
-    if o == nil || utils.IsNil(o.Urls) {
-        var ret []string
-        return ret
-    }
-    return o.Urls
+	if o == nil || utils.IsNil(o.Urls) {
+		var ret []string
+		return ret
+	}
+	return o.Urls
 }
 
 // GetUrlsOk returns a tuple with the Urls field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) GetUrlsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.Urls) {
-        return nil, false
-    }
-    return o.Urls, true
+	if o == nil || utils.IsNil(o.Urls) {
+		return nil, false
+	}
+	return o.Urls, true
 }
 
 // HasUrls returns a boolean if a field has been set.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) HasUrls() bool {
-    if o != nil && !utils.IsNil(o.Urls) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Urls) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUrls gets a reference to the given []string and assigns it to the Urls field.
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) SetUrls(v []string) {
-    o.Urls = v
+	o.Urls = v
 }
 
 func (o Product202309GetGlobalProductResponseDataCertificationsFiles) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetGlobalProductResponseDataCertificationsFiles) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Format) {
-        toSerialize["format"] = o.Format
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
-    if !utils.IsNil(o.Urls) {
-        toSerialize["urls"] = o.Urls
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Format) {
+		toSerialize["format"] = o.Format
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !utils.IsNil(o.Urls) {
+		toSerialize["urls"] = o.Urls
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetGlobalProductResponseDataCertificationsFiles) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetGlobalProductResponseDataCertificationsFiles := _Product202309GetGlobalProductResponseDataCertificationsFiles{}
+	varProduct202309GetGlobalProductResponseDataCertificationsFiles := _Product202309GetGlobalProductResponseDataCertificationsFiles{}
 
-    err = json.Unmarshal(data, &varProduct202309GetGlobalProductResponseDataCertificationsFiles)
+	err = json.Unmarshal(data, &varProduct202309GetGlobalProductResponseDataCertificationsFiles)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetGlobalProductResponseDataCertificationsFiles(varProduct202309GetGlobalProductResponseDataCertificationsFiles)
+	*o = Product202309GetGlobalProductResponseDataCertificationsFiles(varProduct202309GetGlobalProductResponseDataCertificationsFiles)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "format")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "name")
-        delete(additionalProperties, "urls")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "format")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "urls")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetGlobalProductResponseDataCertificationsFiles struct {
@@ -266,5 +266,3 @@ func (v *NullableProduct202309GetGlobalProductResponseDataCertificationsFiles) U
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,45 +11,44 @@ API version: 1.0.0
 package apis
 
 import (
-    "bytes"
-    "context"
-    "io"
-    "net/http"
-    "net/url"
-    "strings"
+	"bytes"
+	"context"
+	"io"
+	"net/http"
+	"net/url"
+	"strings"
 
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202507"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202507"
 )
-
 
 // ProductV202507APIService ProductV202507API service
 type ProductV202507APIService service
 
 type ApiProduct202507GlobalListingRulesGetRequest struct {
-    ctx context.Context
-    ApiService *ProductV202507APIService
-    xTtsAccessToken *string
-    contentType *string
-    shopCipher *string
+	ctx             context.Context
+	ApiService      *ProductV202507APIService
+	xTtsAccessToken *string
+	contentType     *string
+	shopCipher      *string
 }
 
-// 
 func (r ApiProduct202507GlobalListingRulesGetRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202507GlobalListingRulesGetRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202507GlobalListingRulesGetRequest) ContentType(contentType string) ApiProduct202507GlobalListingRulesGetRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
-// 
+
 func (r ApiProduct202507GlobalListingRulesGetRequest) ShopCipher(shopCipher string) ApiProduct202507GlobalListingRulesGetRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiProduct202507GlobalListingRulesGetRequest) Execute() (*product_v202507.Product202507GetGlobalListingRulesResponse, *http.Response, error) {
-    return r.ApiService.Product202507GlobalListingRulesGetExecute(r)
+	return r.ApiService.Product202507GlobalListingRulesGetExecute(r)
 }
 
 /*
@@ -61,129 +60,130 @@ Retrieves the global listing rules for a local shop that belongs to a global sel
 @return ApiProduct202507GlobalListingRulesGetRequest
 */
 func (a *ProductV202507APIService) Product202507GlobalListingRulesGet(ctx context.Context) ApiProduct202507GlobalListingRulesGetRequest {
-    return ApiProduct202507GlobalListingRulesGetRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiProduct202507GlobalListingRulesGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Product202507GetGlobalListingRulesResponse
+//
+//	@return Product202507GetGlobalListingRulesResponse
 func (a *ProductV202507APIService) Product202507GlobalListingRulesGetExecute(r ApiProduct202507GlobalListingRulesGetRequest) (*product_v202507.Product202507GetGlobalListingRulesResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodGet
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202507.Product202507GetGlobalListingRulesResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202507.Product202507GetGlobalListingRulesResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202507APIService.Product202507GlobalListingRulesGet")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202507APIService.Product202507GlobalListingRulesGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202507/global_listing_rules"
+	localVarPath := localBasePath + "/product/202507/global_listing_rules"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiProduct202507ProductsProductIdGlobalReplicatePostRequest struct {
-    ctx context.Context
-    ApiService *ProductV202507APIService
-    productId string
-    xTtsAccessToken *string
-    contentType *string
-    shopCipher *string
-    product202507ReplicateProductRequestBody *product_v202507.Product202507ReplicateProductRequestBody
+	ctx                                      context.Context
+	ApiService                               *ProductV202507APIService
+	productId                                string
+	xTtsAccessToken                          *string
+	contentType                              *string
+	shopCipher                               *string
+	product202507ReplicateProductRequestBody *product_v202507.Product202507ReplicateProductRequestBody
 }
 
-// 
 func (r ApiProduct202507ProductsProductIdGlobalReplicatePostRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202507ProductsProductIdGlobalReplicatePostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202507ProductsProductIdGlobalReplicatePostRequest) ContentType(contentType string) ApiProduct202507ProductsProductIdGlobalReplicatePostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
-// 
+
 func (r ApiProduct202507ProductsProductIdGlobalReplicatePostRequest) ShopCipher(shopCipher string) ApiProduct202507ProductsProductIdGlobalReplicatePostRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiProduct202507ProductsProductIdGlobalReplicatePostRequest) Product202507ReplicateProductRequestBody(product202507ReplicateProductRequestBody product_v202507.Product202507ReplicateProductRequestBody) ApiProduct202507ProductsProductIdGlobalReplicatePostRequest {
-    r.product202507ReplicateProductRequestBody = &product202507ReplicateProductRequestBody
-    return r
+	r.product202507ReplicateProductRequestBody = &product202507ReplicateProductRequestBody
+	return r
 }
 func (r ApiProduct202507ProductsProductIdGlobalReplicatePostRequest) Execute() (*product_v202507.Product202507ReplicateProductResponse, *http.Response, error) {
-    return r.ApiService.Product202507ProductsProductIdGlobalReplicatePostExecute(r)
+	return r.ApiService.Product202507ProductsProductIdGlobalReplicatePostExecute(r)
 }
 
 /*
@@ -195,128 +195,129 @@ Description of [POST]/product/:version/Replicate_Product
 @return ApiProduct202507ProductsProductIdGlobalReplicatePostRequest
 */
 func (a *ProductV202507APIService) Product202507ProductsProductIdGlobalReplicatePost(ctx context.Context, productId string) ApiProduct202507ProductsProductIdGlobalReplicatePostRequest {
-    return ApiProduct202507ProductsProductIdGlobalReplicatePostRequest{
-        ApiService: a,
-        ctx: ctx,
-        productId: productId,
-    }
+	return ApiProduct202507ProductsProductIdGlobalReplicatePostRequest{
+		ApiService: a,
+		ctx:        ctx,
+		productId:  productId,
+	}
 }
 
 // Execute executes the request
-//  @return Product202507ReplicateProductResponse
+//
+//	@return Product202507ReplicateProductResponse
 func (a *ProductV202507APIService) Product202507ProductsProductIdGlobalReplicatePostExecute(r ApiProduct202507ProductsProductIdGlobalReplicatePostRequest) (*product_v202507.Product202507ReplicateProductResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202507.Product202507ReplicateProductResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202507.Product202507ReplicateProductResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202507APIService.Product202507ProductsProductIdGlobalReplicatePost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202507APIService.Product202507ProductsProductIdGlobalReplicatePost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202507/products/{product_id}/global_replicate"
-    localVarPath = strings.Replace(localVarPath, "{"+"product_id"+"}", url.PathEscape(parameterValueToString(r.productId, "productId")), -1)
+	localVarPath := localBasePath + "/product/202507/products/{product_id}/global_replicate"
+	localVarPath = strings.Replace(localVarPath, "{"+"product_id"+"}", url.PathEscape(parameterValueToString(r.productId, "productId")), -1)
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.product202507ReplicateProductRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.product202507ReplicateProductRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiProduct202507ProductsProductIdReplicatedProductsGetRequest struct {
-    ctx context.Context
-    ApiService *ProductV202507APIService
-    productId string
-    xTtsAccessToken *string
-    contentType *string
-    shopCipher *string
+	ctx             context.Context
+	ApiService      *ProductV202507APIService
+	productId       string
+	xTtsAccessToken *string
+	contentType     *string
+	shopCipher      *string
 }
 
-// 
 func (r ApiProduct202507ProductsProductIdReplicatedProductsGetRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202507ProductsProductIdReplicatedProductsGetRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202507ProductsProductIdReplicatedProductsGetRequest) ContentType(contentType string) ApiProduct202507ProductsProductIdReplicatedProductsGetRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
-// 
+
 func (r ApiProduct202507ProductsProductIdReplicatedProductsGetRequest) ShopCipher(shopCipher string) ApiProduct202507ProductsProductIdReplicatedProductsGetRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiProduct202507ProductsProductIdReplicatedProductsGetRequest) Execute() (*product_v202507.Product202507GetGlobalReplicatedProductsResponse, *http.Response, error) {
-    return r.ApiService.Product202507ProductsProductIdReplicatedProductsGetExecute(r)
+	return r.ApiService.Product202507ProductsProductIdReplicatedProductsGetExecute(r)
 }
 
 /*
@@ -329,96 +330,97 @@ Applicable only for global sellers.
 @return ApiProduct202507ProductsProductIdReplicatedProductsGetRequest
 */
 func (a *ProductV202507APIService) Product202507ProductsProductIdReplicatedProductsGet(ctx context.Context, productId string) ApiProduct202507ProductsProductIdReplicatedProductsGetRequest {
-    return ApiProduct202507ProductsProductIdReplicatedProductsGetRequest{
-        ApiService: a,
-        ctx: ctx,
-        productId: productId,
-    }
+	return ApiProduct202507ProductsProductIdReplicatedProductsGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+		productId:  productId,
+	}
 }
 
 // Execute executes the request
-//  @return Product202507GetGlobalReplicatedProductsResponse
+//
+//	@return Product202507GetGlobalReplicatedProductsResponse
 func (a *ProductV202507APIService) Product202507ProductsProductIdReplicatedProductsGetExecute(r ApiProduct202507ProductsProductIdReplicatedProductsGetRequest) (*product_v202507.Product202507GetGlobalReplicatedProductsResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodGet
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202507.Product202507GetGlobalReplicatedProductsResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202507.Product202507GetGlobalReplicatedProductsResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202507APIService.Product202507ProductsProductIdReplicatedProductsGet")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202507APIService.Product202507ProductsProductIdReplicatedProductsGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202507/products/{product_id}/replicated_products"
-    localVarPath = strings.Replace(localVarPath, "{"+"product_id"+"}", url.PathEscape(parameterValueToString(r.productId, "productId")), -1)
+	localVarPath := localBasePath + "/product/202507/products/{product_id}/replicated_products"
+	localVarPath = strings.Replace(localVarPath, "{"+"product_id"+"}", url.PathEscape(parameterValueToString(r.productId, "productId")), -1)
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }

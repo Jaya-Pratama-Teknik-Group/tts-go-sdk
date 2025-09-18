@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202502
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType type satisfies the MappedNullable interface at compile time
+// checks if the Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType{}
 
 // Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType struct for Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType
 type Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType struct {
-    // The desired duration for handling a pre-sale order and handing it over to a shipping carrier.   Applicable only for the following regions and pre-sale type: **US** - `MADE_TO_ORDER`: Business days - `CUSTOM`: Business days  **UK and SEA** - `PRE_ORDER`: Calendar days
-    HandlingDurationDays *int32 `json:"handling_duration_days,omitempty"`
-    // The date on which the product gets converted into a regular product and becomes available for general purchase. On this date, order handling will also start, changing the status of the order to [`AWAITING_SHIPMENT`](https://partner.tiktokshop.com/docv2/page/650b1b4bbace3e02b76d1011).  Applicable only for `PRE_ORDER` in the US. **Note**: This date is a unix timestamp (seconds) based on the seller-selected timezone in Seller Center.
-    ReleaseDate *int64 `json:"release_date,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The desired duration for handling a pre-sale order and handing it over to a shipping carrier.   Applicable only for the following regions and pre-sale type: **US** - `MADE_TO_ORDER`: Business days - `CUSTOM`: Business days  **UK and SEA** - `PRE_ORDER`: Calendar days
+	HandlingDurationDays *int32 `json:"handling_duration_days,omitempty"`
+	// The date on which the product gets converted into a regular product and becomes available for general purchase. On this date, order handling will also start, changing the status of the order to [`AWAITING_SHIPMENT`](https://partner.tiktokshop.com/docv2/page/650b1b4bbace3e02b76d1011).  Applicable only for `PRE_ORDER` in the US. **Note**: This date is a unix timestamp (seconds) based on the seller-selected timezone in Seller Center.
+	ReleaseDate          *int64 `json:"release_date,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType
@@ -34,125 +34,125 @@ type _Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType 
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType() *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType {
-    this := Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType{}
-    return &this
+	this := Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType{}
+	return &this
 }
 
 // NewProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentTypeWithDefaults instantiates a new Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentTypeWithDefaults() *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType {
-    this := Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType{}
-    return &this
+	this := Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType{}
+	return &this
 }
 
 // GetHandlingDurationDays returns the HandlingDurationDays field value if set, zero value otherwise.
 func (o *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) GetHandlingDurationDays() int32 {
-    if o == nil || utils.IsNil(o.HandlingDurationDays) {
-        var ret int32
-        return ret
-    }
-    return *o.HandlingDurationDays
+	if o == nil || utils.IsNil(o.HandlingDurationDays) {
+		var ret int32
+		return ret
+	}
+	return *o.HandlingDurationDays
 }
 
 // GetHandlingDurationDaysOk returns a tuple with the HandlingDurationDays field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) GetHandlingDurationDaysOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.HandlingDurationDays) {
-        return nil, false
-    }
-    return o.HandlingDurationDays, true
+	if o == nil || utils.IsNil(o.HandlingDurationDays) {
+		return nil, false
+	}
+	return o.HandlingDurationDays, true
 }
 
 // HasHandlingDurationDays returns a boolean if a field has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) HasHandlingDurationDays() bool {
-    if o != nil && !utils.IsNil(o.HandlingDurationDays) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.HandlingDurationDays) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHandlingDurationDays gets a reference to the given int32 and assigns it to the HandlingDurationDays field.
 func (o *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) SetHandlingDurationDays(v int32) {
-    o.HandlingDurationDays = &v
+	o.HandlingDurationDays = &v
 }
 
 // GetReleaseDate returns the ReleaseDate field value if set, zero value otherwise.
 func (o *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) GetReleaseDate() int64 {
-    if o == nil || utils.IsNil(o.ReleaseDate) {
-        var ret int64
-        return ret
-    }
-    return *o.ReleaseDate
+	if o == nil || utils.IsNil(o.ReleaseDate) {
+		var ret int64
+		return ret
+	}
+	return *o.ReleaseDate
 }
 
 // GetReleaseDateOk returns a tuple with the ReleaseDate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) GetReleaseDateOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.ReleaseDate) {
-        return nil, false
-    }
-    return o.ReleaseDate, true
+	if o == nil || utils.IsNil(o.ReleaseDate) {
+		return nil, false
+	}
+	return o.ReleaseDate, true
 }
 
 // HasReleaseDate returns a boolean if a field has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) HasReleaseDate() bool {
-    if o != nil && !utils.IsNil(o.ReleaseDate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ReleaseDate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReleaseDate gets a reference to the given int64 and assigns it to the ReleaseDate field.
 func (o *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) SetReleaseDate(v int64) {
-    o.ReleaseDate = &v
+	o.ReleaseDate = &v
 }
 
 func (o Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.HandlingDurationDays) {
-        toSerialize["handling_duration_days"] = o.HandlingDurationDays
-    }
-    if !utils.IsNil(o.ReleaseDate) {
-        toSerialize["release_date"] = o.ReleaseDate
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.HandlingDurationDays) {
+		toSerialize["handling_duration_days"] = o.HandlingDurationDays
+	}
+	if !utils.IsNil(o.ReleaseDate) {
+		toSerialize["release_date"] = o.ReleaseDate
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType) UnmarshalJSON(data []byte) (err error) {
-    varProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType := _Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType{}
+	varProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType := _Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType{}
 
-    err = json.Unmarshal(data, &varProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType)
+	err = json.Unmarshal(data, &varProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType(varProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType)
+	*o = Product202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType(varProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "handling_duration_days")
-        delete(additionalProperties, "release_date")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "handling_duration_days")
+		delete(additionalProperties, "release_date")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfillmentType struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202502SearchProductsResponseDataProductsSkusPreSaleFulfi
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

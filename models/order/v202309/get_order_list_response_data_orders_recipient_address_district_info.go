@@ -11,22 +11,22 @@ API version: 1.0.0
 package order_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo type satisfies the MappedNullable interface at compile time
+// checks if the Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo{}
 
 // Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo struct for Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo
 type Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo struct {
-    // Administrative district level code. Value can be L0/L1/L2/L3/L4. eg. US is L0.
-    AddressLevel *string `json:"address_level,omitempty"`
-    // The name of administrative division that can be used by the seller for shipping. e.g. state/county/city/district/town/etc.
-    AddressLevelName *string `json:"address_level_name,omitempty"`
-    // Administrative area name. eg: London.
-    AddressName *string `json:"address_name,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Administrative district level code. Value can be L0/L1/L2/L3/L4. eg. US is L0.
+	AddressLevel *string `json:"address_level,omitempty"`
+	// The name of administrative division that can be used by the seller for shipping. e.g. state/county/city/district/town/etc.
+	AddressLevelName *string `json:"address_level_name,omitempty"`
+	// Administrative area name. eg: London.
+	AddressName          *string `json:"address_name,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo
@@ -36,161 +36,161 @@ type _Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo Orde
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo() *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo {
-    this := Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo{}
-    return &this
+	this := Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo{}
+	return &this
 }
 
 // NewOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfoWithDefaults instantiates a new Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfoWithDefaults() *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo {
-    this := Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo{}
-    return &this
+	this := Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo{}
+	return &this
 }
 
 // GetAddressLevel returns the AddressLevel field value if set, zero value otherwise.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) GetAddressLevel() string {
-    if o == nil || utils.IsNil(o.AddressLevel) {
-        var ret string
-        return ret
-    }
-    return *o.AddressLevel
+	if o == nil || utils.IsNil(o.AddressLevel) {
+		var ret string
+		return ret
+	}
+	return *o.AddressLevel
 }
 
 // GetAddressLevelOk returns a tuple with the AddressLevel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) GetAddressLevelOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.AddressLevel) {
-        return nil, false
-    }
-    return o.AddressLevel, true
+	if o == nil || utils.IsNil(o.AddressLevel) {
+		return nil, false
+	}
+	return o.AddressLevel, true
 }
 
 // HasAddressLevel returns a boolean if a field has been set.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) HasAddressLevel() bool {
-    if o != nil && !utils.IsNil(o.AddressLevel) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AddressLevel) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddressLevel gets a reference to the given string and assigns it to the AddressLevel field.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) SetAddressLevel(v string) {
-    o.AddressLevel = &v
+	o.AddressLevel = &v
 }
 
 // GetAddressLevelName returns the AddressLevelName field value if set, zero value otherwise.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) GetAddressLevelName() string {
-    if o == nil || utils.IsNil(o.AddressLevelName) {
-        var ret string
-        return ret
-    }
-    return *o.AddressLevelName
+	if o == nil || utils.IsNil(o.AddressLevelName) {
+		var ret string
+		return ret
+	}
+	return *o.AddressLevelName
 }
 
 // GetAddressLevelNameOk returns a tuple with the AddressLevelName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) GetAddressLevelNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.AddressLevelName) {
-        return nil, false
-    }
-    return o.AddressLevelName, true
+	if o == nil || utils.IsNil(o.AddressLevelName) {
+		return nil, false
+	}
+	return o.AddressLevelName, true
 }
 
 // HasAddressLevelName returns a boolean if a field has been set.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) HasAddressLevelName() bool {
-    if o != nil && !utils.IsNil(o.AddressLevelName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AddressLevelName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddressLevelName gets a reference to the given string and assigns it to the AddressLevelName field.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) SetAddressLevelName(v string) {
-    o.AddressLevelName = &v
+	o.AddressLevelName = &v
 }
 
 // GetAddressName returns the AddressName field value if set, zero value otherwise.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) GetAddressName() string {
-    if o == nil || utils.IsNil(o.AddressName) {
-        var ret string
-        return ret
-    }
-    return *o.AddressName
+	if o == nil || utils.IsNil(o.AddressName) {
+		var ret string
+		return ret
+	}
+	return *o.AddressName
 }
 
 // GetAddressNameOk returns a tuple with the AddressName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) GetAddressNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.AddressName) {
-        return nil, false
-    }
-    return o.AddressName, true
+	if o == nil || utils.IsNil(o.AddressName) {
+		return nil, false
+	}
+	return o.AddressName, true
 }
 
 // HasAddressName returns a boolean if a field has been set.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) HasAddressName() bool {
-    if o != nil && !utils.IsNil(o.AddressName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AddressName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddressName gets a reference to the given string and assigns it to the AddressName field.
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) SetAddressName(v string) {
-    o.AddressName = &v
+	o.AddressName = &v
 }
 
 func (o Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.AddressLevel) {
-        toSerialize["address_level"] = o.AddressLevel
-    }
-    if !utils.IsNil(o.AddressLevelName) {
-        toSerialize["address_level_name"] = o.AddressLevelName
-    }
-    if !utils.IsNil(o.AddressName) {
-        toSerialize["address_name"] = o.AddressName
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.AddressLevel) {
+		toSerialize["address_level"] = o.AddressLevel
+	}
+	if !utils.IsNil(o.AddressLevelName) {
+		toSerialize["address_level_name"] = o.AddressLevelName
+	}
+	if !utils.IsNil(o.AddressName) {
+		toSerialize["address_name"] = o.AddressName
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo) UnmarshalJSON(data []byte) (err error) {
-    varOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo := _Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo{}
+	varOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo := _Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo{}
 
-    err = json.Unmarshal(data, &varOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo)
+	err = json.Unmarshal(data, &varOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo(varOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo)
+	*o = Order202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo(varOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "address_level")
-        delete(additionalProperties, "address_level_name")
-        delete(additionalProperties, "address_name")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "address_level")
+		delete(additionalProperties, "address_level_name")
+		delete(additionalProperties, "address_name")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableOrder202309GetOrderListResponseDataOrdersRecipientAddressDistrictInfo struct {
@@ -228,5 +228,3 @@ func (v *NullableOrder202309GetOrderListResponseDataOrdersRecipientAddressDistri
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

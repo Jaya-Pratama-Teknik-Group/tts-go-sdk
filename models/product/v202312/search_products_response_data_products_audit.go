@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202312
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202312SearchProductsResponseDataProductsAudit type satisfies the MappedNullable interface at compile time
+// checks if the Product202312SearchProductsResponseDataProductsAudit type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202312SearchProductsResponseDataProductsAudit{}
 
 // Product202312SearchProductsResponseDataProductsAudit struct for Product202312SearchProductsResponseDataProductsAudit
 type Product202312SearchProductsResponseDataProductsAudit struct {
-    // The reason why the product is pre-approved.  Applicable only if `audit.status=PRE_APPROVED`, otherwise returns an empty array.  Possible values: - KYC_PENDING: The seller's onboarding (KYC - Know Your Customer information) is incomplete or awaiting processing. - RESTRICTED_CATEGORY_PENDING: The product is in a restricted category, and category approval is still pending. To request access, submit an application through the Qualification Center on TikTok Shop Seller Center. Applicable only for the US market.
-    PreApprovedReasons []string `json:"pre_approved_reasons,omitempty"`
-    // The product audit status. Possible values:  - NONE: The product is not applicable for audit because it has not been submitted for listing on this platform, or it is in a draft, frozen, or deactivated state. - AUDITING: The product is currently being audited. - FAILED: The product failed the audit, or the audit was cancelled. - PRE_APPROVED: The product has passed the audit but is not yet listed due to pending prerequisites. Refer to `pre_approved_reasons` for the prerequisites. - APPROVED: The product passed the audit and has been listed on the platform.
-    Status *string `json:"status,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The reason why the product is pre-approved.  Applicable only if `audit.status=PRE_APPROVED`, otherwise returns an empty array.  Possible values: - KYC_PENDING: The seller's onboarding (KYC - Know Your Customer information) is incomplete or awaiting processing. - RESTRICTED_CATEGORY_PENDING: The product is in a restricted category, and category approval is still pending. To request access, submit an application through the Qualification Center on TikTok Shop Seller Center. Applicable only for the US market.
+	PreApprovedReasons []string `json:"pre_approved_reasons,omitempty"`
+	// The product audit status. Possible values:  - NONE: The product is not applicable for audit because it has not been submitted for listing on this platform, or it is in a draft, frozen, or deactivated state. - AUDITING: The product is currently being audited. - FAILED: The product failed the audit, or the audit was cancelled. - PRE_APPROVED: The product has passed the audit but is not yet listed due to pending prerequisites. Refer to `pre_approved_reasons` for the prerequisites. - APPROVED: The product passed the audit and has been listed on the platform.
+	Status               *string `json:"status,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202312SearchProductsResponseDataProductsAudit Product202312SearchProductsResponseDataProductsAudit
@@ -34,125 +34,125 @@ type _Product202312SearchProductsResponseDataProductsAudit Product202312SearchPr
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202312SearchProductsResponseDataProductsAudit() *Product202312SearchProductsResponseDataProductsAudit {
-    this := Product202312SearchProductsResponseDataProductsAudit{}
-    return &this
+	this := Product202312SearchProductsResponseDataProductsAudit{}
+	return &this
 }
 
 // NewProduct202312SearchProductsResponseDataProductsAuditWithDefaults instantiates a new Product202312SearchProductsResponseDataProductsAudit object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202312SearchProductsResponseDataProductsAuditWithDefaults() *Product202312SearchProductsResponseDataProductsAudit {
-    this := Product202312SearchProductsResponseDataProductsAudit{}
-    return &this
+	this := Product202312SearchProductsResponseDataProductsAudit{}
+	return &this
 }
 
 // GetPreApprovedReasons returns the PreApprovedReasons field value if set, zero value otherwise.
 func (o *Product202312SearchProductsResponseDataProductsAudit) GetPreApprovedReasons() []string {
-    if o == nil || utils.IsNil(o.PreApprovedReasons) {
-        var ret []string
-        return ret
-    }
-    return o.PreApprovedReasons
+	if o == nil || utils.IsNil(o.PreApprovedReasons) {
+		var ret []string
+		return ret
+	}
+	return o.PreApprovedReasons
 }
 
 // GetPreApprovedReasonsOk returns a tuple with the PreApprovedReasons field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchProductsResponseDataProductsAudit) GetPreApprovedReasonsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.PreApprovedReasons) {
-        return nil, false
-    }
-    return o.PreApprovedReasons, true
+	if o == nil || utils.IsNil(o.PreApprovedReasons) {
+		return nil, false
+	}
+	return o.PreApprovedReasons, true
 }
 
 // HasPreApprovedReasons returns a boolean if a field has been set.
 func (o *Product202312SearchProductsResponseDataProductsAudit) HasPreApprovedReasons() bool {
-    if o != nil && !utils.IsNil(o.PreApprovedReasons) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PreApprovedReasons) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPreApprovedReasons gets a reference to the given []string and assigns it to the PreApprovedReasons field.
 func (o *Product202312SearchProductsResponseDataProductsAudit) SetPreApprovedReasons(v []string) {
-    o.PreApprovedReasons = v
+	o.PreApprovedReasons = v
 }
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *Product202312SearchProductsResponseDataProductsAudit) GetStatus() string {
-    if o == nil || utils.IsNil(o.Status) {
-        var ret string
-        return ret
-    }
-    return *o.Status
+	if o == nil || utils.IsNil(o.Status) {
+		var ret string
+		return ret
+	}
+	return *o.Status
 }
 
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchProductsResponseDataProductsAudit) GetStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Status) {
-        return nil, false
-    }
-    return o.Status, true
+	if o == nil || utils.IsNil(o.Status) {
+		return nil, false
+	}
+	return o.Status, true
 }
 
 // HasStatus returns a boolean if a field has been set.
 func (o *Product202312SearchProductsResponseDataProductsAudit) HasStatus() bool {
-    if o != nil && !utils.IsNil(o.Status) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Status) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatus gets a reference to the given string and assigns it to the Status field.
 func (o *Product202312SearchProductsResponseDataProductsAudit) SetStatus(v string) {
-    o.Status = &v
+	o.Status = &v
 }
 
 func (o Product202312SearchProductsResponseDataProductsAudit) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202312SearchProductsResponseDataProductsAudit) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.PreApprovedReasons) {
-        toSerialize["pre_approved_reasons"] = o.PreApprovedReasons
-    }
-    if !utils.IsNil(o.Status) {
-        toSerialize["status"] = o.Status
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.PreApprovedReasons) {
+		toSerialize["pre_approved_reasons"] = o.PreApprovedReasons
+	}
+	if !utils.IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202312SearchProductsResponseDataProductsAudit) UnmarshalJSON(data []byte) (err error) {
-    varProduct202312SearchProductsResponseDataProductsAudit := _Product202312SearchProductsResponseDataProductsAudit{}
+	varProduct202312SearchProductsResponseDataProductsAudit := _Product202312SearchProductsResponseDataProductsAudit{}
 
-    err = json.Unmarshal(data, &varProduct202312SearchProductsResponseDataProductsAudit)
+	err = json.Unmarshal(data, &varProduct202312SearchProductsResponseDataProductsAudit)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202312SearchProductsResponseDataProductsAudit(varProduct202312SearchProductsResponseDataProductsAudit)
+	*o = Product202312SearchProductsResponseDataProductsAudit(varProduct202312SearchProductsResponseDataProductsAudit)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "pre_approved_reasons")
-        delete(additionalProperties, "status")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "pre_approved_reasons")
+		delete(additionalProperties, "status")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202312SearchProductsResponseDataProductsAudit struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202312SearchProductsResponseDataProductsAudit) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

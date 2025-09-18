@@ -11,18 +11,18 @@ API version: 1.0.0
 package order_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Order202309GetOrderDetailResponseDataOrdersPackages type satisfies the MappedNullable interface at compile time
+// checks if the Order202309GetOrderDetailResponseDataOrdersPackages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Order202309GetOrderDetailResponseDataOrdersPackages{}
 
 // Order202309GetOrderDetailResponseDataOrdersPackages struct for Order202309GetOrderDetailResponseDataOrdersPackages
 type Order202309GetOrderDetailResponseDataOrdersPackages struct {
-    // Package ID
-    Id *string `json:"id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Package ID
+	Id                   *string `json:"id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Order202309GetOrderDetailResponseDataOrdersPackages Order202309GetOrderDetailResponseDataOrdersPackages
@@ -32,89 +32,89 @@ type _Order202309GetOrderDetailResponseDataOrdersPackages Order202309GetOrderDet
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewOrder202309GetOrderDetailResponseDataOrdersPackages() *Order202309GetOrderDetailResponseDataOrdersPackages {
-    this := Order202309GetOrderDetailResponseDataOrdersPackages{}
-    return &this
+	this := Order202309GetOrderDetailResponseDataOrdersPackages{}
+	return &this
 }
 
 // NewOrder202309GetOrderDetailResponseDataOrdersPackagesWithDefaults instantiates a new Order202309GetOrderDetailResponseDataOrdersPackages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewOrder202309GetOrderDetailResponseDataOrdersPackagesWithDefaults() *Order202309GetOrderDetailResponseDataOrdersPackages {
-    this := Order202309GetOrderDetailResponseDataOrdersPackages{}
-    return &this
+	this := Order202309GetOrderDetailResponseDataOrdersPackages{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Order202309GetOrderDetailResponseDataOrdersPackages) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderDetailResponseDataOrdersPackages) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Order202309GetOrderDetailResponseDataOrdersPackages) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Order202309GetOrderDetailResponseDataOrdersPackages) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 func (o Order202309GetOrderDetailResponseDataOrdersPackages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Order202309GetOrderDetailResponseDataOrdersPackages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Order202309GetOrderDetailResponseDataOrdersPackages) UnmarshalJSON(data []byte) (err error) {
-    varOrder202309GetOrderDetailResponseDataOrdersPackages := _Order202309GetOrderDetailResponseDataOrdersPackages{}
+	varOrder202309GetOrderDetailResponseDataOrdersPackages := _Order202309GetOrderDetailResponseDataOrdersPackages{}
 
-    err = json.Unmarshal(data, &varOrder202309GetOrderDetailResponseDataOrdersPackages)
+	err = json.Unmarshal(data, &varOrder202309GetOrderDetailResponseDataOrdersPackages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Order202309GetOrderDetailResponseDataOrdersPackages(varOrder202309GetOrderDetailResponseDataOrdersPackages)
+	*o = Order202309GetOrderDetailResponseDataOrdersPackages(varOrder202309GetOrderDetailResponseDataOrdersPackages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableOrder202309GetOrderDetailResponseDataOrdersPackages struct {
@@ -152,5 +152,3 @@ func (v *NullableOrder202309GetOrderDetailResponseDataOrdersPackages) UnmarshalJ
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

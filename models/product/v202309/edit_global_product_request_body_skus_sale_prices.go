@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309EditGlobalProductRequestBodySkusSalePrices type satisfies the MappedNullable interface at compile time
+// checks if the Product202309EditGlobalProductRequestBodySkusSalePrices type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309EditGlobalProductRequestBodySkusSalePrices{}
 
 // Product202309EditGlobalProductRequestBodySkusSalePrices struct for Product202309EditGlobalProductRequestBodySkusSalePrices
 type Product202309EditGlobalProductRequestBodySkusSalePrices struct {
-    // The price amount. Refer to [Product Pricing](https://partner.tiktokshop.com/docv2/page/67e1288d76cfee049d9af858) for the allowed price ranges in each market.
-    Amount *string `json:"amount,omitempty"`
-    // The market where you want to sync the sale price. Possible values: - DE: Germany - ES: Spain - FR: France - GB: United Kingdom - ID: Indonesia - IE: Ireland - IT: Italy - JP: Japan - MY: Malaysia - PH: Philippines - SG: Singapore - TH: Thailand - US: United States - VN: Vietnam
-    Region *string `json:"region,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The price amount. Refer to [Product Pricing](https://partner.tiktokshop.com/docv2/page/67e1288d76cfee049d9af858) for the allowed price ranges in each market.
+	Amount *string `json:"amount,omitempty"`
+	// The market where you want to sync the sale price. Possible values: - DE: Germany - ES: Spain - FR: France - GB: United Kingdom - ID: Indonesia - IE: Ireland - IT: Italy - JP: Japan - MY: Malaysia - PH: Philippines - SG: Singapore - TH: Thailand - US: United States - VN: Vietnam
+	Region               *string `json:"region,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309EditGlobalProductRequestBodySkusSalePrices Product202309EditGlobalProductRequestBodySkusSalePrices
@@ -34,125 +34,125 @@ type _Product202309EditGlobalProductRequestBodySkusSalePrices Product202309EditG
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309EditGlobalProductRequestBodySkusSalePrices() *Product202309EditGlobalProductRequestBodySkusSalePrices {
-    this := Product202309EditGlobalProductRequestBodySkusSalePrices{}
-    return &this
+	this := Product202309EditGlobalProductRequestBodySkusSalePrices{}
+	return &this
 }
 
 // NewProduct202309EditGlobalProductRequestBodySkusSalePricesWithDefaults instantiates a new Product202309EditGlobalProductRequestBodySkusSalePrices object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309EditGlobalProductRequestBodySkusSalePricesWithDefaults() *Product202309EditGlobalProductRequestBodySkusSalePrices {
-    this := Product202309EditGlobalProductRequestBodySkusSalePrices{}
-    return &this
+	this := Product202309EditGlobalProductRequestBodySkusSalePrices{}
+	return &this
 }
 
 // GetAmount returns the Amount field value if set, zero value otherwise.
 func (o *Product202309EditGlobalProductRequestBodySkusSalePrices) GetAmount() string {
-    if o == nil || utils.IsNil(o.Amount) {
-        var ret string
-        return ret
-    }
-    return *o.Amount
+	if o == nil || utils.IsNil(o.Amount) {
+		var ret string
+		return ret
+	}
+	return *o.Amount
 }
 
 // GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309EditGlobalProductRequestBodySkusSalePrices) GetAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Amount) {
-        return nil, false
-    }
-    return o.Amount, true
+	if o == nil || utils.IsNil(o.Amount) {
+		return nil, false
+	}
+	return o.Amount, true
 }
 
 // HasAmount returns a boolean if a field has been set.
 func (o *Product202309EditGlobalProductRequestBodySkusSalePrices) HasAmount() bool {
-    if o != nil && !utils.IsNil(o.Amount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Amount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAmount gets a reference to the given string and assigns it to the Amount field.
 func (o *Product202309EditGlobalProductRequestBodySkusSalePrices) SetAmount(v string) {
-    o.Amount = &v
+	o.Amount = &v
 }
 
 // GetRegion returns the Region field value if set, zero value otherwise.
 func (o *Product202309EditGlobalProductRequestBodySkusSalePrices) GetRegion() string {
-    if o == nil || utils.IsNil(o.Region) {
-        var ret string
-        return ret
-    }
-    return *o.Region
+	if o == nil || utils.IsNil(o.Region) {
+		var ret string
+		return ret
+	}
+	return *o.Region
 }
 
 // GetRegionOk returns a tuple with the Region field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309EditGlobalProductRequestBodySkusSalePrices) GetRegionOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Region) {
-        return nil, false
-    }
-    return o.Region, true
+	if o == nil || utils.IsNil(o.Region) {
+		return nil, false
+	}
+	return o.Region, true
 }
 
 // HasRegion returns a boolean if a field has been set.
 func (o *Product202309EditGlobalProductRequestBodySkusSalePrices) HasRegion() bool {
-    if o != nil && !utils.IsNil(o.Region) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Region) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRegion gets a reference to the given string and assigns it to the Region field.
 func (o *Product202309EditGlobalProductRequestBodySkusSalePrices) SetRegion(v string) {
-    o.Region = &v
+	o.Region = &v
 }
 
 func (o Product202309EditGlobalProductRequestBodySkusSalePrices) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309EditGlobalProductRequestBodySkusSalePrices) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Amount) {
-        toSerialize["amount"] = o.Amount
-    }
-    if !utils.IsNil(o.Region) {
-        toSerialize["region"] = o.Region
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
+	}
+	if !utils.IsNil(o.Region) {
+		toSerialize["region"] = o.Region
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309EditGlobalProductRequestBodySkusSalePrices) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309EditGlobalProductRequestBodySkusSalePrices := _Product202309EditGlobalProductRequestBodySkusSalePrices{}
+	varProduct202309EditGlobalProductRequestBodySkusSalePrices := _Product202309EditGlobalProductRequestBodySkusSalePrices{}
 
-    err = json.Unmarshal(data, &varProduct202309EditGlobalProductRequestBodySkusSalePrices)
+	err = json.Unmarshal(data, &varProduct202309EditGlobalProductRequestBodySkusSalePrices)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309EditGlobalProductRequestBodySkusSalePrices(varProduct202309EditGlobalProductRequestBodySkusSalePrices)
+	*o = Product202309EditGlobalProductRequestBodySkusSalePrices(varProduct202309EditGlobalProductRequestBodySkusSalePrices)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "amount")
-        delete(additionalProperties, "region")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "amount")
+		delete(additionalProperties, "region")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309EditGlobalProductRequestBodySkusSalePrices struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309EditGlobalProductRequestBodySkusSalePrices) Unmars
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

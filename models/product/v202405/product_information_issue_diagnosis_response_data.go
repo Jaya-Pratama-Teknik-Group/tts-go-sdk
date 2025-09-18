@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202405
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202405ProductInformationIssueDiagnosisResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202405ProductInformationIssueDiagnosisResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202405ProductInformationIssueDiagnosisResponseData{}
 
 // Product202405ProductInformationIssueDiagnosisResponseData struct for Product202405ProductInformationIssueDiagnosisResponseData
 type Product202405ProductInformationIssueDiagnosisResponseData struct {
-    // The list of requested products and the corresponding diagnosis results.
-    Products []Product202405ProductInformationIssueDiagnosisResponseDataProducts `json:"products,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of requested products and the corresponding diagnosis results.
+	Products             []Product202405ProductInformationIssueDiagnosisResponseDataProducts `json:"products,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202405ProductInformationIssueDiagnosisResponseData Product202405ProductInformationIssueDiagnosisResponseData
@@ -32,89 +32,89 @@ type _Product202405ProductInformationIssueDiagnosisResponseData Product202405Pro
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202405ProductInformationIssueDiagnosisResponseData() *Product202405ProductInformationIssueDiagnosisResponseData {
-    this := Product202405ProductInformationIssueDiagnosisResponseData{}
-    return &this
+	this := Product202405ProductInformationIssueDiagnosisResponseData{}
+	return &this
 }
 
 // NewProduct202405ProductInformationIssueDiagnosisResponseDataWithDefaults instantiates a new Product202405ProductInformationIssueDiagnosisResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202405ProductInformationIssueDiagnosisResponseDataWithDefaults() *Product202405ProductInformationIssueDiagnosisResponseData {
-    this := Product202405ProductInformationIssueDiagnosisResponseData{}
-    return &this
+	this := Product202405ProductInformationIssueDiagnosisResponseData{}
+	return &this
 }
 
 // GetProducts returns the Products field value if set, zero value otherwise.
 func (o *Product202405ProductInformationIssueDiagnosisResponseData) GetProducts() []Product202405ProductInformationIssueDiagnosisResponseDataProducts {
-    if o == nil || utils.IsNil(o.Products) {
-        var ret []Product202405ProductInformationIssueDiagnosisResponseDataProducts
-        return ret
-    }
-    return o.Products
+	if o == nil || utils.IsNil(o.Products) {
+		var ret []Product202405ProductInformationIssueDiagnosisResponseDataProducts
+		return ret
+	}
+	return o.Products
 }
 
 // GetProductsOk returns a tuple with the Products field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseData) GetProductsOk() ([]Product202405ProductInformationIssueDiagnosisResponseDataProducts, bool) {
-    if o == nil || utils.IsNil(o.Products) {
-        return nil, false
-    }
-    return o.Products, true
+	if o == nil || utils.IsNil(o.Products) {
+		return nil, false
+	}
+	return o.Products, true
 }
 
 // HasProducts returns a boolean if a field has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseData) HasProducts() bool {
-    if o != nil && !utils.IsNil(o.Products) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Products) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProducts gets a reference to the given []Product202405ProductInformationIssueDiagnosisResponseDataProducts and assigns it to the Products field.
 func (o *Product202405ProductInformationIssueDiagnosisResponseData) SetProducts(v []Product202405ProductInformationIssueDiagnosisResponseDataProducts) {
-    o.Products = v
+	o.Products = v
 }
 
 func (o Product202405ProductInformationIssueDiagnosisResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202405ProductInformationIssueDiagnosisResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Products) {
-        toSerialize["products"] = o.Products
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Products) {
+		toSerialize["products"] = o.Products
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202405ProductInformationIssueDiagnosisResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202405ProductInformationIssueDiagnosisResponseData := _Product202405ProductInformationIssueDiagnosisResponseData{}
+	varProduct202405ProductInformationIssueDiagnosisResponseData := _Product202405ProductInformationIssueDiagnosisResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202405ProductInformationIssueDiagnosisResponseData)
+	err = json.Unmarshal(data, &varProduct202405ProductInformationIssueDiagnosisResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202405ProductInformationIssueDiagnosisResponseData(varProduct202405ProductInformationIssueDiagnosisResponseData)
+	*o = Product202405ProductInformationIssueDiagnosisResponseData(varProduct202405ProductInformationIssueDiagnosisResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "products")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "products")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202405ProductInformationIssueDiagnosisResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202405ProductInformationIssueDiagnosisResponseData) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

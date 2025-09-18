@@ -11,18 +11,18 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetTrackingResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetTrackingResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetTrackingResponseData{}
 
 // Fulfillment202309GetTrackingResponseData struct for Fulfillment202309GetTrackingResponseData
 type Fulfillment202309GetTrackingResponseData struct {
-    // The return list of tracking information.
-    Tracking []Fulfillment202309GetTrackingResponseDataTracking `json:"tracking,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The return list of tracking information.
+	Tracking             []Fulfillment202309GetTrackingResponseDataTracking `json:"tracking,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetTrackingResponseData Fulfillment202309GetTrackingResponseData
@@ -32,89 +32,89 @@ type _Fulfillment202309GetTrackingResponseData Fulfillment202309GetTrackingRespo
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetTrackingResponseData() *Fulfillment202309GetTrackingResponseData {
-    this := Fulfillment202309GetTrackingResponseData{}
-    return &this
+	this := Fulfillment202309GetTrackingResponseData{}
+	return &this
 }
 
 // NewFulfillment202309GetTrackingResponseDataWithDefaults instantiates a new Fulfillment202309GetTrackingResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetTrackingResponseDataWithDefaults() *Fulfillment202309GetTrackingResponseData {
-    this := Fulfillment202309GetTrackingResponseData{}
-    return &this
+	this := Fulfillment202309GetTrackingResponseData{}
+	return &this
 }
 
 // GetTracking returns the Tracking field value if set, zero value otherwise.
 func (o *Fulfillment202309GetTrackingResponseData) GetTracking() []Fulfillment202309GetTrackingResponseDataTracking {
-    if o == nil || utils.IsNil(o.Tracking) {
-        var ret []Fulfillment202309GetTrackingResponseDataTracking
-        return ret
-    }
-    return o.Tracking
+	if o == nil || utils.IsNil(o.Tracking) {
+		var ret []Fulfillment202309GetTrackingResponseDataTracking
+		return ret
+	}
+	return o.Tracking
 }
 
 // GetTrackingOk returns a tuple with the Tracking field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetTrackingResponseData) GetTrackingOk() ([]Fulfillment202309GetTrackingResponseDataTracking, bool) {
-    if o == nil || utils.IsNil(o.Tracking) {
-        return nil, false
-    }
-    return o.Tracking, true
+	if o == nil || utils.IsNil(o.Tracking) {
+		return nil, false
+	}
+	return o.Tracking, true
 }
 
 // HasTracking returns a boolean if a field has been set.
 func (o *Fulfillment202309GetTrackingResponseData) HasTracking() bool {
-    if o != nil && !utils.IsNil(o.Tracking) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Tracking) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTracking gets a reference to the given []Fulfillment202309GetTrackingResponseDataTracking and assigns it to the Tracking field.
 func (o *Fulfillment202309GetTrackingResponseData) SetTracking(v []Fulfillment202309GetTrackingResponseDataTracking) {
-    o.Tracking = v
+	o.Tracking = v
 }
 
 func (o Fulfillment202309GetTrackingResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetTrackingResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Tracking) {
-        toSerialize["tracking"] = o.Tracking
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Tracking) {
+		toSerialize["tracking"] = o.Tracking
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetTrackingResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetTrackingResponseData := _Fulfillment202309GetTrackingResponseData{}
+	varFulfillment202309GetTrackingResponseData := _Fulfillment202309GetTrackingResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetTrackingResponseData)
+	err = json.Unmarshal(data, &varFulfillment202309GetTrackingResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetTrackingResponseData(varFulfillment202309GetTrackingResponseData)
+	*o = Fulfillment202309GetTrackingResponseData(varFulfillment202309GetTrackingResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "tracking")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tracking")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetTrackingResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableFulfillment202309GetTrackingResponseData) UnmarshalJSON(src []b
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

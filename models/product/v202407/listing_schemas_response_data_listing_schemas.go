@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202407
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202407ListingSchemasResponseDataListingSchemas type satisfies the MappedNullable interface at compile time
+// checks if the Product202407ListingSchemasResponseDataListingSchemas type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202407ListingSchemasResponseDataListingSchemas{}
 
 // Product202407ListingSchemasResponseDataListingSchemas struct for Product202407ListingSchemasResponseDataListingSchemas
 type Product202407ListingSchemasResponseDataListingSchemas struct {
-    // The category id
-    CategoryId *int32 `json:"category_id,omitempty"`
-    // The description of the fields in the schema explains the capabilities, rules, and other properties of the fields.
-    Fields []Product202407ListingSchemasResponseDataListingSchemasFields `json:"fields,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The category id
+	CategoryId *int32 `json:"category_id,omitempty"`
+	// The description of the fields in the schema explains the capabilities, rules, and other properties of the fields.
+	Fields               []Product202407ListingSchemasResponseDataListingSchemasFields `json:"fields,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202407ListingSchemasResponseDataListingSchemas Product202407ListingSchemasResponseDataListingSchemas
@@ -34,125 +34,125 @@ type _Product202407ListingSchemasResponseDataListingSchemas Product202407Listing
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202407ListingSchemasResponseDataListingSchemas() *Product202407ListingSchemasResponseDataListingSchemas {
-    this := Product202407ListingSchemasResponseDataListingSchemas{}
-    return &this
+	this := Product202407ListingSchemasResponseDataListingSchemas{}
+	return &this
 }
 
 // NewProduct202407ListingSchemasResponseDataListingSchemasWithDefaults instantiates a new Product202407ListingSchemasResponseDataListingSchemas object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202407ListingSchemasResponseDataListingSchemasWithDefaults() *Product202407ListingSchemasResponseDataListingSchemas {
-    this := Product202407ListingSchemasResponseDataListingSchemas{}
-    return &this
+	this := Product202407ListingSchemasResponseDataListingSchemas{}
+	return &this
 }
 
 // GetCategoryId returns the CategoryId field value if set, zero value otherwise.
 func (o *Product202407ListingSchemasResponseDataListingSchemas) GetCategoryId() int32 {
-    if o == nil || utils.IsNil(o.CategoryId) {
-        var ret int32
-        return ret
-    }
-    return *o.CategoryId
+	if o == nil || utils.IsNil(o.CategoryId) {
+		var ret int32
+		return ret
+	}
+	return *o.CategoryId
 }
 
 // GetCategoryIdOk returns a tuple with the CategoryId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407ListingSchemasResponseDataListingSchemas) GetCategoryIdOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.CategoryId) {
-        return nil, false
-    }
-    return o.CategoryId, true
+	if o == nil || utils.IsNil(o.CategoryId) {
+		return nil, false
+	}
+	return o.CategoryId, true
 }
 
 // HasCategoryId returns a boolean if a field has been set.
 func (o *Product202407ListingSchemasResponseDataListingSchemas) HasCategoryId() bool {
-    if o != nil && !utils.IsNil(o.CategoryId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CategoryId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCategoryId gets a reference to the given int32 and assigns it to the CategoryId field.
 func (o *Product202407ListingSchemasResponseDataListingSchemas) SetCategoryId(v int32) {
-    o.CategoryId = &v
+	o.CategoryId = &v
 }
 
 // GetFields returns the Fields field value if set, zero value otherwise.
 func (o *Product202407ListingSchemasResponseDataListingSchemas) GetFields() []Product202407ListingSchemasResponseDataListingSchemasFields {
-    if o == nil || utils.IsNil(o.Fields) {
-        var ret []Product202407ListingSchemasResponseDataListingSchemasFields
-        return ret
-    }
-    return o.Fields
+	if o == nil || utils.IsNil(o.Fields) {
+		var ret []Product202407ListingSchemasResponseDataListingSchemasFields
+		return ret
+	}
+	return o.Fields
 }
 
 // GetFieldsOk returns a tuple with the Fields field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407ListingSchemasResponseDataListingSchemas) GetFieldsOk() ([]Product202407ListingSchemasResponseDataListingSchemasFields, bool) {
-    if o == nil || utils.IsNil(o.Fields) {
-        return nil, false
-    }
-    return o.Fields, true
+	if o == nil || utils.IsNil(o.Fields) {
+		return nil, false
+	}
+	return o.Fields, true
 }
 
 // HasFields returns a boolean if a field has been set.
 func (o *Product202407ListingSchemasResponseDataListingSchemas) HasFields() bool {
-    if o != nil && !utils.IsNil(o.Fields) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Fields) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFields gets a reference to the given []Product202407ListingSchemasResponseDataListingSchemasFields and assigns it to the Fields field.
 func (o *Product202407ListingSchemasResponseDataListingSchemas) SetFields(v []Product202407ListingSchemasResponseDataListingSchemasFields) {
-    o.Fields = v
+	o.Fields = v
 }
 
 func (o Product202407ListingSchemasResponseDataListingSchemas) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202407ListingSchemasResponseDataListingSchemas) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CategoryId) {
-        toSerialize["category_id"] = o.CategoryId
-    }
-    if !utils.IsNil(o.Fields) {
-        toSerialize["fields"] = o.Fields
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CategoryId) {
+		toSerialize["category_id"] = o.CategoryId
+	}
+	if !utils.IsNil(o.Fields) {
+		toSerialize["fields"] = o.Fields
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202407ListingSchemasResponseDataListingSchemas) UnmarshalJSON(data []byte) (err error) {
-    varProduct202407ListingSchemasResponseDataListingSchemas := _Product202407ListingSchemasResponseDataListingSchemas{}
+	varProduct202407ListingSchemasResponseDataListingSchemas := _Product202407ListingSchemasResponseDataListingSchemas{}
 
-    err = json.Unmarshal(data, &varProduct202407ListingSchemasResponseDataListingSchemas)
+	err = json.Unmarshal(data, &varProduct202407ListingSchemasResponseDataListingSchemas)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202407ListingSchemasResponseDataListingSchemas(varProduct202407ListingSchemasResponseDataListingSchemas)
+	*o = Product202407ListingSchemasResponseDataListingSchemas(varProduct202407ListingSchemasResponseDataListingSchemas)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "category_id")
-        delete(additionalProperties, "fields")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "category_id")
+		delete(additionalProperties, "fields")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202407ListingSchemasResponseDataListingSchemas struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202407ListingSchemasResponseDataListingSchemas) Unmarsha
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

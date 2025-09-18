@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource{}
 
 // Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource struct for Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource
 type Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource struct {
-    // The ID of the source product.
-    ProductId *string `json:"product_id,omitempty"`
-    // The shop ID of the source product.
-    ShopId *string `json:"shop_id,omitempty"`
-    // The SKU ID of the source product.
-    SkuId *string `json:"sku_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The ID of the source product.
+	ProductId *string `json:"product_id,omitempty"`
+	// The shop ID of the source product.
+	ShopId *string `json:"shop_id,omitempty"`
+	// The SKU ID of the source product.
+	SkuId                *string `json:"sku_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource
@@ -36,161 +36,161 @@ type _Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource 
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource() *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource {
-    this := Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource{}
-    return &this
+	this := Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource{}
+	return &this
 }
 
 // NewProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSourceWithDefaults instantiates a new Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSourceWithDefaults() *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource {
-    this := Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource{}
-    return &this
+	this := Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource{}
+	return &this
 }
 
 // GetProductId returns the ProductId field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) GetProductId() string {
-    if o == nil || utils.IsNil(o.ProductId) {
-        var ret string
-        return ret
-    }
-    return *o.ProductId
+	if o == nil || utils.IsNil(o.ProductId) {
+		var ret string
+		return ret
+	}
+	return *o.ProductId
 }
 
 // GetProductIdOk returns a tuple with the ProductId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) GetProductIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ProductId) {
-        return nil, false
-    }
-    return o.ProductId, true
+	if o == nil || utils.IsNil(o.ProductId) {
+		return nil, false
+	}
+	return o.ProductId, true
 }
 
 // HasProductId returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) HasProductId() bool {
-    if o != nil && !utils.IsNil(o.ProductId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductId gets a reference to the given string and assigns it to the ProductId field.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) SetProductId(v string) {
-    o.ProductId = &v
+	o.ProductId = &v
 }
 
 // GetShopId returns the ShopId field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) GetShopId() string {
-    if o == nil || utils.IsNil(o.ShopId) {
-        var ret string
-        return ret
-    }
-    return *o.ShopId
+	if o == nil || utils.IsNil(o.ShopId) {
+		var ret string
+		return ret
+	}
+	return *o.ShopId
 }
 
 // GetShopIdOk returns a tuple with the ShopId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) GetShopIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShopId) {
-        return nil, false
-    }
-    return o.ShopId, true
+	if o == nil || utils.IsNil(o.ShopId) {
+		return nil, false
+	}
+	return o.ShopId, true
 }
 
 // HasShopId returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) HasShopId() bool {
-    if o != nil && !utils.IsNil(o.ShopId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShopId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShopId gets a reference to the given string and assigns it to the ShopId field.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) SetShopId(v string) {
-    o.ShopId = &v
+	o.ShopId = &v
 }
 
 // GetSkuId returns the SkuId field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) GetSkuId() string {
-    if o == nil || utils.IsNil(o.SkuId) {
-        var ret string
-        return ret
-    }
-    return *o.SkuId
+	if o == nil || utils.IsNil(o.SkuId) {
+		var ret string
+		return ret
+	}
+	return *o.SkuId
 }
 
 // GetSkuIdOk returns a tuple with the SkuId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) GetSkuIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SkuId) {
-        return nil, false
-    }
-    return o.SkuId, true
+	if o == nil || utils.IsNil(o.SkuId) {
+		return nil, false
+	}
+	return o.SkuId, true
 }
 
 // HasSkuId returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) HasSkuId() bool {
-    if o != nil && !utils.IsNil(o.SkuId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuId gets a reference to the given string and assigns it to the SkuId field.
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) SetSkuId(v string) {
-    o.SkuId = &v
+	o.SkuId = &v
 }
 
 func (o Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ProductId) {
-        toSerialize["product_id"] = o.ProductId
-    }
-    if !utils.IsNil(o.ShopId) {
-        toSerialize["shop_id"] = o.ShopId
-    }
-    if !utils.IsNil(o.SkuId) {
-        toSerialize["sku_id"] = o.SkuId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ProductId) {
+		toSerialize["product_id"] = o.ProductId
+	}
+	if !utils.IsNil(o.ShopId) {
+		toSerialize["shop_id"] = o.ShopId
+	}
+	if !utils.IsNil(o.SkuId) {
+		toSerialize["sku_id"] = o.SkuId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource := _Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource{}
+	varProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource := _Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource{}
 
-    err = json.Unmarshal(data, &varProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource)
+	err = json.Unmarshal(data, &varProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource(varProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource)
+	*o = Product202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource(varProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "product_id")
-        delete(additionalProperties, "shop_id")
-        delete(additionalProperties, "sku_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "product_id")
+		delete(additionalProperties, "shop_id")
+		delete(additionalProperties, "sku_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetProductResponseDataSkusGlobalListingPolicyReplicateSource struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202309GetProductResponseDataSkusGlobalListingPolicyRepli
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

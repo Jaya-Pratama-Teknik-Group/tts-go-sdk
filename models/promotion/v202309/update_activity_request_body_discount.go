@@ -11,19 +11,19 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309UpdateActivityRequestBodyDiscount type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309UpdateActivityRequestBodyDiscount type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309UpdateActivityRequestBodyDiscount{}
 
 // Promotion202309UpdateActivityRequestBodyDiscount struct for Promotion202309UpdateActivityRequestBodyDiscount
 type Promotion202309UpdateActivityRequestBodyDiscount struct {
-    BmsmDiscount *Promotion202309UpdateActivityRequestBodyDiscountBmsmDiscount `json:"bmsm_discount,omitempty"`
-    GiftDiscount *Promotion202309UpdateActivityRequestBodyDiscountGiftDiscount `json:"gift_discount,omitempty"`
-    ShippingDiscount *Promotion202309UpdateActivityRequestBodyDiscountShippingDiscount `json:"shipping_discount,omitempty"`
-    AdditionalProperties map[string]interface{}
+	BmsmDiscount         *Promotion202309UpdateActivityRequestBodyDiscountBmsmDiscount     `json:"bmsm_discount,omitempty"`
+	GiftDiscount         *Promotion202309UpdateActivityRequestBodyDiscountGiftDiscount     `json:"gift_discount,omitempty"`
+	ShippingDiscount     *Promotion202309UpdateActivityRequestBodyDiscountShippingDiscount `json:"shipping_discount,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309UpdateActivityRequestBodyDiscount Promotion202309UpdateActivityRequestBodyDiscount
@@ -33,161 +33,161 @@ type _Promotion202309UpdateActivityRequestBodyDiscount Promotion202309UpdateActi
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309UpdateActivityRequestBodyDiscount() *Promotion202309UpdateActivityRequestBodyDiscount {
-    this := Promotion202309UpdateActivityRequestBodyDiscount{}
-    return &this
+	this := Promotion202309UpdateActivityRequestBodyDiscount{}
+	return &this
 }
 
 // NewPromotion202309UpdateActivityRequestBodyDiscountWithDefaults instantiates a new Promotion202309UpdateActivityRequestBodyDiscount object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309UpdateActivityRequestBodyDiscountWithDefaults() *Promotion202309UpdateActivityRequestBodyDiscount {
-    this := Promotion202309UpdateActivityRequestBodyDiscount{}
-    return &this
+	this := Promotion202309UpdateActivityRequestBodyDiscount{}
+	return &this
 }
 
 // GetBmsmDiscount returns the BmsmDiscount field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) GetBmsmDiscount() Promotion202309UpdateActivityRequestBodyDiscountBmsmDiscount {
-    if o == nil || utils.IsNil(o.BmsmDiscount) {
-        var ret Promotion202309UpdateActivityRequestBodyDiscountBmsmDiscount
-        return ret
-    }
-    return *o.BmsmDiscount
+	if o == nil || utils.IsNil(o.BmsmDiscount) {
+		var ret Promotion202309UpdateActivityRequestBodyDiscountBmsmDiscount
+		return ret
+	}
+	return *o.BmsmDiscount
 }
 
 // GetBmsmDiscountOk returns a tuple with the BmsmDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) GetBmsmDiscountOk() (*Promotion202309UpdateActivityRequestBodyDiscountBmsmDiscount, bool) {
-    if o == nil || utils.IsNil(o.BmsmDiscount) {
-        return nil, false
-    }
-    return o.BmsmDiscount, true
+	if o == nil || utils.IsNil(o.BmsmDiscount) {
+		return nil, false
+	}
+	return o.BmsmDiscount, true
 }
 
 // HasBmsmDiscount returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) HasBmsmDiscount() bool {
-    if o != nil && !utils.IsNil(o.BmsmDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.BmsmDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetBmsmDiscount gets a reference to the given Promotion202309UpdateActivityRequestBodyDiscountBmsmDiscount and assigns it to the BmsmDiscount field.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) SetBmsmDiscount(v Promotion202309UpdateActivityRequestBodyDiscountBmsmDiscount) {
-    o.BmsmDiscount = &v
+	o.BmsmDiscount = &v
 }
 
 // GetGiftDiscount returns the GiftDiscount field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) GetGiftDiscount() Promotion202309UpdateActivityRequestBodyDiscountGiftDiscount {
-    if o == nil || utils.IsNil(o.GiftDiscount) {
-        var ret Promotion202309UpdateActivityRequestBodyDiscountGiftDiscount
-        return ret
-    }
-    return *o.GiftDiscount
+	if o == nil || utils.IsNil(o.GiftDiscount) {
+		var ret Promotion202309UpdateActivityRequestBodyDiscountGiftDiscount
+		return ret
+	}
+	return *o.GiftDiscount
 }
 
 // GetGiftDiscountOk returns a tuple with the GiftDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) GetGiftDiscountOk() (*Promotion202309UpdateActivityRequestBodyDiscountGiftDiscount, bool) {
-    if o == nil || utils.IsNil(o.GiftDiscount) {
-        return nil, false
-    }
-    return o.GiftDiscount, true
+	if o == nil || utils.IsNil(o.GiftDiscount) {
+		return nil, false
+	}
+	return o.GiftDiscount, true
 }
 
 // HasGiftDiscount returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) HasGiftDiscount() bool {
-    if o != nil && !utils.IsNil(o.GiftDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.GiftDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGiftDiscount gets a reference to the given Promotion202309UpdateActivityRequestBodyDiscountGiftDiscount and assigns it to the GiftDiscount field.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) SetGiftDiscount(v Promotion202309UpdateActivityRequestBodyDiscountGiftDiscount) {
-    o.GiftDiscount = &v
+	o.GiftDiscount = &v
 }
 
 // GetShippingDiscount returns the ShippingDiscount field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) GetShippingDiscount() Promotion202309UpdateActivityRequestBodyDiscountShippingDiscount {
-    if o == nil || utils.IsNil(o.ShippingDiscount) {
-        var ret Promotion202309UpdateActivityRequestBodyDiscountShippingDiscount
-        return ret
-    }
-    return *o.ShippingDiscount
+	if o == nil || utils.IsNil(o.ShippingDiscount) {
+		var ret Promotion202309UpdateActivityRequestBodyDiscountShippingDiscount
+		return ret
+	}
+	return *o.ShippingDiscount
 }
 
 // GetShippingDiscountOk returns a tuple with the ShippingDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) GetShippingDiscountOk() (*Promotion202309UpdateActivityRequestBodyDiscountShippingDiscount, bool) {
-    if o == nil || utils.IsNil(o.ShippingDiscount) {
-        return nil, false
-    }
-    return o.ShippingDiscount, true
+	if o == nil || utils.IsNil(o.ShippingDiscount) {
+		return nil, false
+	}
+	return o.ShippingDiscount, true
 }
 
 // HasShippingDiscount returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) HasShippingDiscount() bool {
-    if o != nil && !utils.IsNil(o.ShippingDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingDiscount gets a reference to the given Promotion202309UpdateActivityRequestBodyDiscountShippingDiscount and assigns it to the ShippingDiscount field.
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) SetShippingDiscount(v Promotion202309UpdateActivityRequestBodyDiscountShippingDiscount) {
-    o.ShippingDiscount = &v
+	o.ShippingDiscount = &v
 }
 
 func (o Promotion202309UpdateActivityRequestBodyDiscount) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309UpdateActivityRequestBodyDiscount) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.BmsmDiscount) {
-        toSerialize["bmsm_discount"] = o.BmsmDiscount
-    }
-    if !utils.IsNil(o.GiftDiscount) {
-        toSerialize["gift_discount"] = o.GiftDiscount
-    }
-    if !utils.IsNil(o.ShippingDiscount) {
-        toSerialize["shipping_discount"] = o.ShippingDiscount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.BmsmDiscount) {
+		toSerialize["bmsm_discount"] = o.BmsmDiscount
+	}
+	if !utils.IsNil(o.GiftDiscount) {
+		toSerialize["gift_discount"] = o.GiftDiscount
+	}
+	if !utils.IsNil(o.ShippingDiscount) {
+		toSerialize["shipping_discount"] = o.ShippingDiscount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309UpdateActivityRequestBodyDiscount) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309UpdateActivityRequestBodyDiscount := _Promotion202309UpdateActivityRequestBodyDiscount{}
+	varPromotion202309UpdateActivityRequestBodyDiscount := _Promotion202309UpdateActivityRequestBodyDiscount{}
 
-    err = json.Unmarshal(data, &varPromotion202309UpdateActivityRequestBodyDiscount)
+	err = json.Unmarshal(data, &varPromotion202309UpdateActivityRequestBodyDiscount)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309UpdateActivityRequestBodyDiscount(varPromotion202309UpdateActivityRequestBodyDiscount)
+	*o = Promotion202309UpdateActivityRequestBodyDiscount(varPromotion202309UpdateActivityRequestBodyDiscount)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "bmsm_discount")
-        delete(additionalProperties, "gift_discount")
-        delete(additionalProperties, "shipping_discount")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "bmsm_discount")
+		delete(additionalProperties, "gift_discount")
+		delete(additionalProperties, "shipping_discount")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309UpdateActivityRequestBodyDiscount struct {
@@ -225,5 +225,3 @@ func (v *NullablePromotion202309UpdateActivityRequestBodyDiscount) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

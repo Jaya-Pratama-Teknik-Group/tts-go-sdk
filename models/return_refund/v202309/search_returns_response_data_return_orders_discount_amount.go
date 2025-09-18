@@ -11,26 +11,26 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount{}
 
 // ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount struct for ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount
 type ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount struct {
-    // The discount currency.
-    Currency *string `json:"currency,omitempty"`
-    // The refund amount of platform discount.
-    ProductPlatformDiscount *string `json:"product_platform_discount,omitempty"`
-    // The refund amount of product seller discount.
-    ProductSellerDiscount *string `json:"product_seller_discount,omitempty"`
-    // The refund amount of shipping fee platform discount.
-    ShippingFeePlatformDiscount *string `json:"shipping_fee_platform_discount,omitempty"`
-    // The refund amount of shipping fee seller discount.
-    ShippingFeeSellerDiscount *string `json:"shipping_fee_seller_discount,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The discount currency.
+	Currency *string `json:"currency,omitempty"`
+	// The refund amount of platform discount.
+	ProductPlatformDiscount *string `json:"product_platform_discount,omitempty"`
+	// The refund amount of product seller discount.
+	ProductSellerDiscount *string `json:"product_seller_discount,omitempty"`
+	// The refund amount of shipping fee platform discount.
+	ShippingFeePlatformDiscount *string `json:"shipping_fee_platform_discount,omitempty"`
+	// The refund amount of shipping fee seller discount.
+	ShippingFeeSellerDiscount *string `json:"shipping_fee_seller_discount,omitempty"`
+	AdditionalProperties      map[string]interface{}
 }
 
 type _ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount
@@ -40,233 +40,233 @@ type _ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount Retu
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount() *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount {
-    this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount{}
+	return &this
 }
 
 // NewReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmountWithDefaults instantiates a new ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmountWithDefaults() *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount {
-    this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount{}
+	return &this
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 // GetProductPlatformDiscount returns the ProductPlatformDiscount field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetProductPlatformDiscount() string {
-    if o == nil || utils.IsNil(o.ProductPlatformDiscount) {
-        var ret string
-        return ret
-    }
-    return *o.ProductPlatformDiscount
+	if o == nil || utils.IsNil(o.ProductPlatformDiscount) {
+		var ret string
+		return ret
+	}
+	return *o.ProductPlatformDiscount
 }
 
 // GetProductPlatformDiscountOk returns a tuple with the ProductPlatformDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetProductPlatformDiscountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ProductPlatformDiscount) {
-        return nil, false
-    }
-    return o.ProductPlatformDiscount, true
+	if o == nil || utils.IsNil(o.ProductPlatformDiscount) {
+		return nil, false
+	}
+	return o.ProductPlatformDiscount, true
 }
 
 // HasProductPlatformDiscount returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) HasProductPlatformDiscount() bool {
-    if o != nil && !utils.IsNil(o.ProductPlatformDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductPlatformDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductPlatformDiscount gets a reference to the given string and assigns it to the ProductPlatformDiscount field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) SetProductPlatformDiscount(v string) {
-    o.ProductPlatformDiscount = &v
+	o.ProductPlatformDiscount = &v
 }
 
 // GetProductSellerDiscount returns the ProductSellerDiscount field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetProductSellerDiscount() string {
-    if o == nil || utils.IsNil(o.ProductSellerDiscount) {
-        var ret string
-        return ret
-    }
-    return *o.ProductSellerDiscount
+	if o == nil || utils.IsNil(o.ProductSellerDiscount) {
+		var ret string
+		return ret
+	}
+	return *o.ProductSellerDiscount
 }
 
 // GetProductSellerDiscountOk returns a tuple with the ProductSellerDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetProductSellerDiscountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ProductSellerDiscount) {
-        return nil, false
-    }
-    return o.ProductSellerDiscount, true
+	if o == nil || utils.IsNil(o.ProductSellerDiscount) {
+		return nil, false
+	}
+	return o.ProductSellerDiscount, true
 }
 
 // HasProductSellerDiscount returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) HasProductSellerDiscount() bool {
-    if o != nil && !utils.IsNil(o.ProductSellerDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductSellerDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductSellerDiscount gets a reference to the given string and assigns it to the ProductSellerDiscount field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) SetProductSellerDiscount(v string) {
-    o.ProductSellerDiscount = &v
+	o.ProductSellerDiscount = &v
 }
 
 // GetShippingFeePlatformDiscount returns the ShippingFeePlatformDiscount field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetShippingFeePlatformDiscount() string {
-    if o == nil || utils.IsNil(o.ShippingFeePlatformDiscount) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingFeePlatformDiscount
+	if o == nil || utils.IsNil(o.ShippingFeePlatformDiscount) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingFeePlatformDiscount
 }
 
 // GetShippingFeePlatformDiscountOk returns a tuple with the ShippingFeePlatformDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetShippingFeePlatformDiscountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingFeePlatformDiscount) {
-        return nil, false
-    }
-    return o.ShippingFeePlatformDiscount, true
+	if o == nil || utils.IsNil(o.ShippingFeePlatformDiscount) {
+		return nil, false
+	}
+	return o.ShippingFeePlatformDiscount, true
 }
 
 // HasShippingFeePlatformDiscount returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) HasShippingFeePlatformDiscount() bool {
-    if o != nil && !utils.IsNil(o.ShippingFeePlatformDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingFeePlatformDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingFeePlatformDiscount gets a reference to the given string and assigns it to the ShippingFeePlatformDiscount field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) SetShippingFeePlatformDiscount(v string) {
-    o.ShippingFeePlatformDiscount = &v
+	o.ShippingFeePlatformDiscount = &v
 }
 
 // GetShippingFeeSellerDiscount returns the ShippingFeeSellerDiscount field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetShippingFeeSellerDiscount() string {
-    if o == nil || utils.IsNil(o.ShippingFeeSellerDiscount) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingFeeSellerDiscount
+	if o == nil || utils.IsNil(o.ShippingFeeSellerDiscount) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingFeeSellerDiscount
 }
 
 // GetShippingFeeSellerDiscountOk returns a tuple with the ShippingFeeSellerDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) GetShippingFeeSellerDiscountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingFeeSellerDiscount) {
-        return nil, false
-    }
-    return o.ShippingFeeSellerDiscount, true
+	if o == nil || utils.IsNil(o.ShippingFeeSellerDiscount) {
+		return nil, false
+	}
+	return o.ShippingFeeSellerDiscount, true
 }
 
 // HasShippingFeeSellerDiscount returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) HasShippingFeeSellerDiscount() bool {
-    if o != nil && !utils.IsNil(o.ShippingFeeSellerDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingFeeSellerDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingFeeSellerDiscount gets a reference to the given string and assigns it to the ShippingFeeSellerDiscount field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) SetShippingFeeSellerDiscount(v string) {
-    o.ShippingFeeSellerDiscount = &v
+	o.ShippingFeeSellerDiscount = &v
 }
 
 func (o ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
-    if !utils.IsNil(o.ProductPlatformDiscount) {
-        toSerialize["product_platform_discount"] = o.ProductPlatformDiscount
-    }
-    if !utils.IsNil(o.ProductSellerDiscount) {
-        toSerialize["product_seller_discount"] = o.ProductSellerDiscount
-    }
-    if !utils.IsNil(o.ShippingFeePlatformDiscount) {
-        toSerialize["shipping_fee_platform_discount"] = o.ShippingFeePlatformDiscount
-    }
-    if !utils.IsNil(o.ShippingFeeSellerDiscount) {
-        toSerialize["shipping_fee_seller_discount"] = o.ShippingFeeSellerDiscount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
+	if !utils.IsNil(o.ProductPlatformDiscount) {
+		toSerialize["product_platform_discount"] = o.ProductPlatformDiscount
+	}
+	if !utils.IsNil(o.ProductSellerDiscount) {
+		toSerialize["product_seller_discount"] = o.ProductSellerDiscount
+	}
+	if !utils.IsNil(o.ShippingFeePlatformDiscount) {
+		toSerialize["shipping_fee_platform_discount"] = o.ShippingFeePlatformDiscount
+	}
+	if !utils.IsNil(o.ShippingFeeSellerDiscount) {
+		toSerialize["shipping_fee_seller_discount"] = o.ShippingFeeSellerDiscount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount := _ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount{}
+	varReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount := _ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount)
+	err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount(varReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount)
+	*o = ReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount(varReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "currency")
-        delete(additionalProperties, "product_platform_discount")
-        delete(additionalProperties, "product_seller_discount")
-        delete(additionalProperties, "shipping_fee_platform_discount")
-        delete(additionalProperties, "shipping_fee_seller_discount")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "currency")
+		delete(additionalProperties, "product_platform_discount")
+		delete(additionalProperties, "product_seller_discount")
+		delete(additionalProperties, "shipping_fee_platform_discount")
+		delete(additionalProperties, "shipping_fee_seller_discount")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscountAmount struct {
@@ -304,5 +304,3 @@ func (v *NullableReturnRefund202309SearchReturnsResponseDataReturnOrdersDiscount
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

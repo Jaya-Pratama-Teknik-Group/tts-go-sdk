@@ -11,18 +11,18 @@ API version: 1.0.0
 package customer_service_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the CustomerService202309CreateConversationRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the CustomerService202309CreateConversationRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &CustomerService202309CreateConversationRequestBody{}
 
 // CustomerService202309CreateConversationRequestBody struct for CustomerService202309CreateConversationRequestBody
 type CustomerService202309CreateConversationRequestBody struct {
-    // Buyer's user ID The value is the same as `data.orders.user_id` in the response data of [Get Order Detail](650aa8ccc16ffe02b8f167a0).
-    BuyerUserId *string `json:"buyer_user_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Buyer's user ID The value is the same as `data.orders.user_id` in the response data of [Get Order Detail](650aa8ccc16ffe02b8f167a0).
+	BuyerUserId          *string `json:"buyer_user_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _CustomerService202309CreateConversationRequestBody CustomerService202309CreateConversationRequestBody
@@ -32,89 +32,89 @@ type _CustomerService202309CreateConversationRequestBody CustomerService202309Cr
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewCustomerService202309CreateConversationRequestBody() *CustomerService202309CreateConversationRequestBody {
-    this := CustomerService202309CreateConversationRequestBody{}
-    return &this
+	this := CustomerService202309CreateConversationRequestBody{}
+	return &this
 }
 
 // NewCustomerService202309CreateConversationRequestBodyWithDefaults instantiates a new CustomerService202309CreateConversationRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewCustomerService202309CreateConversationRequestBodyWithDefaults() *CustomerService202309CreateConversationRequestBody {
-    this := CustomerService202309CreateConversationRequestBody{}
-    return &this
+	this := CustomerService202309CreateConversationRequestBody{}
+	return &this
 }
 
 // GetBuyerUserId returns the BuyerUserId field value if set, zero value otherwise.
 func (o *CustomerService202309CreateConversationRequestBody) GetBuyerUserId() string {
-    if o == nil || utils.IsNil(o.BuyerUserId) {
-        var ret string
-        return ret
-    }
-    return *o.BuyerUserId
+	if o == nil || utils.IsNil(o.BuyerUserId) {
+		var ret string
+		return ret
+	}
+	return *o.BuyerUserId
 }
 
 // GetBuyerUserIdOk returns a tuple with the BuyerUserId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309CreateConversationRequestBody) GetBuyerUserIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.BuyerUserId) {
-        return nil, false
-    }
-    return o.BuyerUserId, true
+	if o == nil || utils.IsNil(o.BuyerUserId) {
+		return nil, false
+	}
+	return o.BuyerUserId, true
 }
 
 // HasBuyerUserId returns a boolean if a field has been set.
 func (o *CustomerService202309CreateConversationRequestBody) HasBuyerUserId() bool {
-    if o != nil && !utils.IsNil(o.BuyerUserId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.BuyerUserId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetBuyerUserId gets a reference to the given string and assigns it to the BuyerUserId field.
 func (o *CustomerService202309CreateConversationRequestBody) SetBuyerUserId(v string) {
-    o.BuyerUserId = &v
+	o.BuyerUserId = &v
 }
 
 func (o CustomerService202309CreateConversationRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o CustomerService202309CreateConversationRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.BuyerUserId) {
-        toSerialize["buyer_user_id"] = o.BuyerUserId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.BuyerUserId) {
+		toSerialize["buyer_user_id"] = o.BuyerUserId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *CustomerService202309CreateConversationRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varCustomerService202309CreateConversationRequestBody := _CustomerService202309CreateConversationRequestBody{}
+	varCustomerService202309CreateConversationRequestBody := _CustomerService202309CreateConversationRequestBody{}
 
-    err = json.Unmarshal(data, &varCustomerService202309CreateConversationRequestBody)
+	err = json.Unmarshal(data, &varCustomerService202309CreateConversationRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = CustomerService202309CreateConversationRequestBody(varCustomerService202309CreateConversationRequestBody)
+	*o = CustomerService202309CreateConversationRequestBody(varCustomerService202309CreateConversationRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "buyer_user_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "buyer_user_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableCustomerService202309CreateConversationRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableCustomerService202309CreateConversationRequestBody) UnmarshalJS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

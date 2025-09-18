@@ -11,22 +11,22 @@ API version: 1.0.0
 package logistics_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit type satisfies the MappedNullable interface at compile time
+// checks if the Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit{}
 
 // Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit struct for Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit
 type Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit struct {
-    // Maximum weight limit.
-    MaxWeight *int64 `json:"max_weight,omitempty"`
-    // Minimum weight limit.
-    MinWeight *int64 `json:"min_weight,omitempty"`
-    // The unit of measurement for the weight, with possible values: - GRAM - POUND
-    Unit *string `json:"unit,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Maximum weight limit.
+	MaxWeight *int64 `json:"max_weight,omitempty"`
+	// Minimum weight limit.
+	MinWeight *int64 `json:"min_weight,omitempty"`
+	// The unit of measurement for the weight, with possible values: - GRAM - POUND
+	Unit                 *string `json:"unit,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit
@@ -36,161 +36,161 @@ type _Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeigh
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit() *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit {
-    this := Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit{}
-    return &this
+	this := Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit{}
+	return &this
 }
 
 // NewLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimitWithDefaults instantiates a new Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimitWithDefaults() *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit {
-    this := Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit{}
-    return &this
+	this := Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit{}
+	return &this
 }
 
 // GetMaxWeight returns the MaxWeight field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) GetMaxWeight() int64 {
-    if o == nil || utils.IsNil(o.MaxWeight) {
-        var ret int64
-        return ret
-    }
-    return *o.MaxWeight
+	if o == nil || utils.IsNil(o.MaxWeight) {
+		var ret int64
+		return ret
+	}
+	return *o.MaxWeight
 }
 
 // GetMaxWeightOk returns a tuple with the MaxWeight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) GetMaxWeightOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.MaxWeight) {
-        return nil, false
-    }
-    return o.MaxWeight, true
+	if o == nil || utils.IsNil(o.MaxWeight) {
+		return nil, false
+	}
+	return o.MaxWeight, true
 }
 
 // HasMaxWeight returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) HasMaxWeight() bool {
-    if o != nil && !utils.IsNil(o.MaxWeight) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MaxWeight) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMaxWeight gets a reference to the given int64 and assigns it to the MaxWeight field.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) SetMaxWeight(v int64) {
-    o.MaxWeight = &v
+	o.MaxWeight = &v
 }
 
 // GetMinWeight returns the MinWeight field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) GetMinWeight() int64 {
-    if o == nil || utils.IsNil(o.MinWeight) {
-        var ret int64
-        return ret
-    }
-    return *o.MinWeight
+	if o == nil || utils.IsNil(o.MinWeight) {
+		var ret int64
+		return ret
+	}
+	return *o.MinWeight
 }
 
 // GetMinWeightOk returns a tuple with the MinWeight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) GetMinWeightOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.MinWeight) {
-        return nil, false
-    }
-    return o.MinWeight, true
+	if o == nil || utils.IsNil(o.MinWeight) {
+		return nil, false
+	}
+	return o.MinWeight, true
 }
 
 // HasMinWeight returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) HasMinWeight() bool {
-    if o != nil && !utils.IsNil(o.MinWeight) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MinWeight) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMinWeight gets a reference to the given int64 and assigns it to the MinWeight field.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) SetMinWeight(v int64) {
-    o.MinWeight = &v
+	o.MinWeight = &v
 }
 
 // GetUnit returns the Unit field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) GetUnit() string {
-    if o == nil || utils.IsNil(o.Unit) {
-        var ret string
-        return ret
-    }
-    return *o.Unit
+	if o == nil || utils.IsNil(o.Unit) {
+		var ret string
+		return ret
+	}
+	return *o.Unit
 }
 
 // GetUnitOk returns a tuple with the Unit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) GetUnitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Unit) {
-        return nil, false
-    }
-    return o.Unit, true
+	if o == nil || utils.IsNil(o.Unit) {
+		return nil, false
+	}
+	return o.Unit, true
 }
 
 // HasUnit returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) HasUnit() bool {
-    if o != nil && !utils.IsNil(o.Unit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Unit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnit gets a reference to the given string and assigns it to the Unit field.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) SetUnit(v string) {
-    o.Unit = &v
+	o.Unit = &v
 }
 
 func (o Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.MaxWeight) {
-        toSerialize["max_weight"] = o.MaxWeight
-    }
-    if !utils.IsNil(o.MinWeight) {
-        toSerialize["min_weight"] = o.MinWeight
-    }
-    if !utils.IsNil(o.Unit) {
-        toSerialize["unit"] = o.Unit
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.MaxWeight) {
+		toSerialize["max_weight"] = o.MaxWeight
+	}
+	if !utils.IsNil(o.MinWeight) {
+		toSerialize["min_weight"] = o.MinWeight
+	}
+	if !utils.IsNil(o.Unit) {
+		toSerialize["unit"] = o.Unit
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit) UnmarshalJSON(data []byte) (err error) {
-    varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit := _Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit{}
+	varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit := _Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit{}
 
-    err = json.Unmarshal(data, &varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit)
+	err = json.Unmarshal(data, &varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit(varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit)
+	*o = Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit(varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "max_weight")
-        delete(additionalProperties, "min_weight")
-        delete(additionalProperties, "unit")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "max_weight")
+		delete(additionalProperties, "min_weight")
+		delete(additionalProperties, "unit")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsWeightLimit struct {
@@ -228,5 +228,3 @@ func (v *NullableLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryO
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309RecoverProductsRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Product202309RecoverProductsRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309RecoverProductsRequestBody{}
 
 // Product202309RecoverProductsRequestBody struct for Product202309RecoverProductsRequestBody
 type Product202309RecoverProductsRequestBody struct {
-    // The product IDs to recover. Max number of IDs: 20.
-    ProductIds []string `json:"product_ids,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The product IDs to recover. Max number of IDs: 20.
+	ProductIds           []string `json:"product_ids,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309RecoverProductsRequestBody Product202309RecoverProductsRequestBody
@@ -32,89 +32,89 @@ type _Product202309RecoverProductsRequestBody Product202309RecoverProductsReques
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309RecoverProductsRequestBody() *Product202309RecoverProductsRequestBody {
-    this := Product202309RecoverProductsRequestBody{}
-    return &this
+	this := Product202309RecoverProductsRequestBody{}
+	return &this
 }
 
 // NewProduct202309RecoverProductsRequestBodyWithDefaults instantiates a new Product202309RecoverProductsRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309RecoverProductsRequestBodyWithDefaults() *Product202309RecoverProductsRequestBody {
-    this := Product202309RecoverProductsRequestBody{}
-    return &this
+	this := Product202309RecoverProductsRequestBody{}
+	return &this
 }
 
 // GetProductIds returns the ProductIds field value if set, zero value otherwise.
 func (o *Product202309RecoverProductsRequestBody) GetProductIds() []string {
-    if o == nil || utils.IsNil(o.ProductIds) {
-        var ret []string
-        return ret
-    }
-    return o.ProductIds
+	if o == nil || utils.IsNil(o.ProductIds) {
+		var ret []string
+		return ret
+	}
+	return o.ProductIds
 }
 
 // GetProductIdsOk returns a tuple with the ProductIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309RecoverProductsRequestBody) GetProductIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.ProductIds) {
-        return nil, false
-    }
-    return o.ProductIds, true
+	if o == nil || utils.IsNil(o.ProductIds) {
+		return nil, false
+	}
+	return o.ProductIds, true
 }
 
 // HasProductIds returns a boolean if a field has been set.
 func (o *Product202309RecoverProductsRequestBody) HasProductIds() bool {
-    if o != nil && !utils.IsNil(o.ProductIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductIds gets a reference to the given []string and assigns it to the ProductIds field.
 func (o *Product202309RecoverProductsRequestBody) SetProductIds(v []string) {
-    o.ProductIds = v
+	o.ProductIds = v
 }
 
 func (o Product202309RecoverProductsRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309RecoverProductsRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ProductIds) {
-        toSerialize["product_ids"] = o.ProductIds
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ProductIds) {
+		toSerialize["product_ids"] = o.ProductIds
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309RecoverProductsRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309RecoverProductsRequestBody := _Product202309RecoverProductsRequestBody{}
+	varProduct202309RecoverProductsRequestBody := _Product202309RecoverProductsRequestBody{}
 
-    err = json.Unmarshal(data, &varProduct202309RecoverProductsRequestBody)
+	err = json.Unmarshal(data, &varProduct202309RecoverProductsRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309RecoverProductsRequestBody(varProduct202309RecoverProductsRequestBody)
+	*o = Product202309RecoverProductsRequestBody(varProduct202309RecoverProductsRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "product_ids")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "product_ids")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309RecoverProductsRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309RecoverProductsRequestBody) UnmarshalJSON(src []by
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

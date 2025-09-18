@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson{}
 
 // Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson struct for Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson
 type Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson struct {
-    // A flag to indicate whether the responsible person is required for **all EU markets**. - true: The manufacturer is required in all EU markets. - false: The manufacturer is required only in some EU markets. Refer to `required_regions` and `optional_regions` for details.
-    IsRequired *bool `json:"is_required,omitempty"`
-    // The markets where the responsible person is optional. Possible values: - DE: Germany - ES: Spain - FR: France - IT: Italy - IE: Ireland
-    OptionalRegions []string `json:"optional_regions,omitempty"`
-    // The markets where the responsible person is required. Possible values: - DE: Germany - ES: Spain - FR: France - IT: Italy - IE: Ireland
-    RequiredRegions []string `json:"required_regions,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A flag to indicate whether the responsible person is required for **all EU markets**. - true: The manufacturer is required in all EU markets. - false: The manufacturer is required only in some EU markets. Refer to `required_regions` and `optional_regions` for details.
+	IsRequired *bool `json:"is_required,omitempty"`
+	// The markets where the responsible person is optional. Possible values: - DE: Germany - ES: Spain - FR: France - IT: Italy - IE: Ireland
+	OptionalRegions []string `json:"optional_regions,omitempty"`
+	// The markets where the responsible person is required. Possible values: - DE: Germany - ES: Spain - FR: France - IT: Italy - IE: Ireland
+	RequiredRegions      []string `json:"required_regions,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson
@@ -36,161 +36,161 @@ type _Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson Product20
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetGlobalCategoryRulesResponseDataResponsiblePerson() *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson {
-    this := Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson{}
-    return &this
+	this := Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson{}
+	return &this
 }
 
 // NewProduct202309GetGlobalCategoryRulesResponseDataResponsiblePersonWithDefaults instantiates a new Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetGlobalCategoryRulesResponseDataResponsiblePersonWithDefaults() *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson {
-    this := Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson{}
-    return &this
+	this := Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson{}
+	return &this
 }
 
 // GetIsRequired returns the IsRequired field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) GetIsRequired() bool {
-    if o == nil || utils.IsNil(o.IsRequired) {
-        var ret bool
-        return ret
-    }
-    return *o.IsRequired
+	if o == nil || utils.IsNil(o.IsRequired) {
+		var ret bool
+		return ret
+	}
+	return *o.IsRequired
 }
 
 // GetIsRequiredOk returns a tuple with the IsRequired field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) GetIsRequiredOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.IsRequired) {
-        return nil, false
-    }
-    return o.IsRequired, true
+	if o == nil || utils.IsNil(o.IsRequired) {
+		return nil, false
+	}
+	return o.IsRequired, true
 }
 
 // HasIsRequired returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) HasIsRequired() bool {
-    if o != nil && !utils.IsNil(o.IsRequired) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.IsRequired) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIsRequired gets a reference to the given bool and assigns it to the IsRequired field.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) SetIsRequired(v bool) {
-    o.IsRequired = &v
+	o.IsRequired = &v
 }
 
 // GetOptionalRegions returns the OptionalRegions field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) GetOptionalRegions() []string {
-    if o == nil || utils.IsNil(o.OptionalRegions) {
-        var ret []string
-        return ret
-    }
-    return o.OptionalRegions
+	if o == nil || utils.IsNil(o.OptionalRegions) {
+		var ret []string
+		return ret
+	}
+	return o.OptionalRegions
 }
 
 // GetOptionalRegionsOk returns a tuple with the OptionalRegions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) GetOptionalRegionsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.OptionalRegions) {
-        return nil, false
-    }
-    return o.OptionalRegions, true
+	if o == nil || utils.IsNil(o.OptionalRegions) {
+		return nil, false
+	}
+	return o.OptionalRegions, true
 }
 
 // HasOptionalRegions returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) HasOptionalRegions() bool {
-    if o != nil && !utils.IsNil(o.OptionalRegions) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OptionalRegions) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOptionalRegions gets a reference to the given []string and assigns it to the OptionalRegions field.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) SetOptionalRegions(v []string) {
-    o.OptionalRegions = v
+	o.OptionalRegions = v
 }
 
 // GetRequiredRegions returns the RequiredRegions field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) GetRequiredRegions() []string {
-    if o == nil || utils.IsNil(o.RequiredRegions) {
-        var ret []string
-        return ret
-    }
-    return o.RequiredRegions
+	if o == nil || utils.IsNil(o.RequiredRegions) {
+		var ret []string
+		return ret
+	}
+	return o.RequiredRegions
 }
 
 // GetRequiredRegionsOk returns a tuple with the RequiredRegions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) GetRequiredRegionsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.RequiredRegions) {
-        return nil, false
-    }
-    return o.RequiredRegions, true
+	if o == nil || utils.IsNil(o.RequiredRegions) {
+		return nil, false
+	}
+	return o.RequiredRegions, true
 }
 
 // HasRequiredRegions returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) HasRequiredRegions() bool {
-    if o != nil && !utils.IsNil(o.RequiredRegions) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RequiredRegions) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRequiredRegions gets a reference to the given []string and assigns it to the RequiredRegions field.
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) SetRequiredRegions(v []string) {
-    o.RequiredRegions = v
+	o.RequiredRegions = v
 }
 
 func (o Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.IsRequired) {
-        toSerialize["is_required"] = o.IsRequired
-    }
-    if !utils.IsNil(o.OptionalRegions) {
-        toSerialize["optional_regions"] = o.OptionalRegions
-    }
-    if !utils.IsNil(o.RequiredRegions) {
-        toSerialize["required_regions"] = o.RequiredRegions
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.IsRequired) {
+		toSerialize["is_required"] = o.IsRequired
+	}
+	if !utils.IsNil(o.OptionalRegions) {
+		toSerialize["optional_regions"] = o.OptionalRegions
+	}
+	if !utils.IsNil(o.RequiredRegions) {
+		toSerialize["required_regions"] = o.RequiredRegions
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetGlobalCategoryRulesResponseDataResponsiblePerson := _Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson{}
+	varProduct202309GetGlobalCategoryRulesResponseDataResponsiblePerson := _Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson{}
 
-    err = json.Unmarshal(data, &varProduct202309GetGlobalCategoryRulesResponseDataResponsiblePerson)
+	err = json.Unmarshal(data, &varProduct202309GetGlobalCategoryRulesResponseDataResponsiblePerson)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson(varProduct202309GetGlobalCategoryRulesResponseDataResponsiblePerson)
+	*o = Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson(varProduct202309GetGlobalCategoryRulesResponseDataResponsiblePerson)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "is_required")
-        delete(additionalProperties, "optional_regions")
-        delete(additionalProperties, "required_regions")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "is_required")
+		delete(additionalProperties, "optional_regions")
+		delete(additionalProperties, "required_regions")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetGlobalCategoryRulesResponseDataResponsiblePerson struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202309GetGlobalCategoryRulesResponseDataResponsiblePerso
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

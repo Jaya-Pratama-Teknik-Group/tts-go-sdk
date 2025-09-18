@@ -11,24 +11,24 @@ API version: 1.0.0
 package analytics_v202409
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData type satisfies the MappedNullable interface at compile time
+// checks if the Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData{}
 
 // Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData struct for Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData
 type Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData struct {
-    // Total number of video comments since the video was published.
-    TotalComments *int64 `json:"total_comments,omitempty"`
-    // Total number of video likes since the video was published.
-    TotalLikes *int64 `json:"total_likes,omitempty"`
-    // Total number of video shares since the video was published.
-    TotalShares *int64 `json:"total_shares,omitempty"`
-    // Total number of video views since the video was published.
-    TotalViews *int64 `json:"total_views,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Total number of video comments since the video was published.
+	TotalComments *int64 `json:"total_comments,omitempty"`
+	// Total number of video likes since the video was published.
+	TotalLikes *int64 `json:"total_likes,omitempty"`
+	// Total number of video shares since the video was published.
+	TotalShares *int64 `json:"total_shares,omitempty"`
+	// Total number of video views since the video was published.
+	TotalViews           *int64 `json:"total_views,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData
@@ -38,197 +38,197 @@ type _Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData An
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData() *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData {
-    this := Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData{}
-    return &this
+	this := Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData{}
+	return &this
 }
 
 // NewAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementDataWithDefaults instantiates a new Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementDataWithDefaults() *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData {
-    this := Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData{}
-    return &this
+	this := Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData{}
+	return &this
 }
 
 // GetTotalComments returns the TotalComments field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) GetTotalComments() int64 {
-    if o == nil || utils.IsNil(o.TotalComments) {
-        var ret int64
-        return ret
-    }
-    return *o.TotalComments
+	if o == nil || utils.IsNil(o.TotalComments) {
+		var ret int64
+		return ret
+	}
+	return *o.TotalComments
 }
 
 // GetTotalCommentsOk returns a tuple with the TotalComments field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) GetTotalCommentsOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.TotalComments) {
-        return nil, false
-    }
-    return o.TotalComments, true
+	if o == nil || utils.IsNil(o.TotalComments) {
+		return nil, false
+	}
+	return o.TotalComments, true
 }
 
 // HasTotalComments returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) HasTotalComments() bool {
-    if o != nil && !utils.IsNil(o.TotalComments) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalComments) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalComments gets a reference to the given int64 and assigns it to the TotalComments field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) SetTotalComments(v int64) {
-    o.TotalComments = &v
+	o.TotalComments = &v
 }
 
 // GetTotalLikes returns the TotalLikes field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) GetTotalLikes() int64 {
-    if o == nil || utils.IsNil(o.TotalLikes) {
-        var ret int64
-        return ret
-    }
-    return *o.TotalLikes
+	if o == nil || utils.IsNil(o.TotalLikes) {
+		var ret int64
+		return ret
+	}
+	return *o.TotalLikes
 }
 
 // GetTotalLikesOk returns a tuple with the TotalLikes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) GetTotalLikesOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.TotalLikes) {
-        return nil, false
-    }
-    return o.TotalLikes, true
+	if o == nil || utils.IsNil(o.TotalLikes) {
+		return nil, false
+	}
+	return o.TotalLikes, true
 }
 
 // HasTotalLikes returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) HasTotalLikes() bool {
-    if o != nil && !utils.IsNil(o.TotalLikes) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalLikes) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalLikes gets a reference to the given int64 and assigns it to the TotalLikes field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) SetTotalLikes(v int64) {
-    o.TotalLikes = &v
+	o.TotalLikes = &v
 }
 
 // GetTotalShares returns the TotalShares field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) GetTotalShares() int64 {
-    if o == nil || utils.IsNil(o.TotalShares) {
-        var ret int64
-        return ret
-    }
-    return *o.TotalShares
+	if o == nil || utils.IsNil(o.TotalShares) {
+		var ret int64
+		return ret
+	}
+	return *o.TotalShares
 }
 
 // GetTotalSharesOk returns a tuple with the TotalShares field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) GetTotalSharesOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.TotalShares) {
-        return nil, false
-    }
-    return o.TotalShares, true
+	if o == nil || utils.IsNil(o.TotalShares) {
+		return nil, false
+	}
+	return o.TotalShares, true
 }
 
 // HasTotalShares returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) HasTotalShares() bool {
-    if o != nil && !utils.IsNil(o.TotalShares) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalShares) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalShares gets a reference to the given int64 and assigns it to the TotalShares field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) SetTotalShares(v int64) {
-    o.TotalShares = &v
+	o.TotalShares = &v
 }
 
 // GetTotalViews returns the TotalViews field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) GetTotalViews() int64 {
-    if o == nil || utils.IsNil(o.TotalViews) {
-        var ret int64
-        return ret
-    }
-    return *o.TotalViews
+	if o == nil || utils.IsNil(o.TotalViews) {
+		var ret int64
+		return ret
+	}
+	return *o.TotalViews
 }
 
 // GetTotalViewsOk returns a tuple with the TotalViews field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) GetTotalViewsOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.TotalViews) {
-        return nil, false
-    }
-    return o.TotalViews, true
+	if o == nil || utils.IsNil(o.TotalViews) {
+		return nil, false
+	}
+	return o.TotalViews, true
 }
 
 // HasTotalViews returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) HasTotalViews() bool {
-    if o != nil && !utils.IsNil(o.TotalViews) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalViews) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalViews gets a reference to the given int64 and assigns it to the TotalViews field.
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) SetTotalViews(v int64) {
-    o.TotalViews = &v
+	o.TotalViews = &v
 }
 
 func (o Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.TotalComments) {
-        toSerialize["total_comments"] = o.TotalComments
-    }
-    if !utils.IsNil(o.TotalLikes) {
-        toSerialize["total_likes"] = o.TotalLikes
-    }
-    if !utils.IsNil(o.TotalShares) {
-        toSerialize["total_shares"] = o.TotalShares
-    }
-    if !utils.IsNil(o.TotalViews) {
-        toSerialize["total_views"] = o.TotalViews
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.TotalComments) {
+		toSerialize["total_comments"] = o.TotalComments
+	}
+	if !utils.IsNil(o.TotalLikes) {
+		toSerialize["total_likes"] = o.TotalLikes
+	}
+	if !utils.IsNil(o.TotalShares) {
+		toSerialize["total_shares"] = o.TotalShares
+	}
+	if !utils.IsNil(o.TotalViews) {
+		toSerialize["total_views"] = o.TotalViews
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData) UnmarshalJSON(data []byte) (err error) {
-    varAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData := _Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData{}
+	varAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData := _Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData{}
 
-    err = json.Unmarshal(data, &varAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData)
+	err = json.Unmarshal(data, &varAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData(varAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData)
+	*o = Analytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData(varAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "total_comments")
-        delete(additionalProperties, "total_likes")
-        delete(additionalProperties, "total_shares")
-        delete(additionalProperties, "total_views")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "total_comments")
+		delete(additionalProperties, "total_likes")
+		delete(additionalProperties, "total_shares")
+		delete(additionalProperties, "total_views")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngagementData struct {
@@ -266,5 +266,3 @@ func (v *NullableAnalytics202409GetShopVideoPerformanceDetailsResponseDataEngage
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

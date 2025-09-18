@@ -11,18 +11,18 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress{}
 
 // ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress struct for ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress
 type ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress struct {
-    // The full return warehouse address.
-    FullAddress *string `json:"full_address,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The full return warehouse address.
+	FullAddress          *string `json:"full_address,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress
@@ -32,89 +32,89 @@ type _ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddr
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress() *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress {
-    this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress{}
+	return &this
 }
 
 // NewReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddressWithDefaults instantiates a new ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddressWithDefaults() *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress {
-    this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress{}
+	return &this
 }
 
 // GetFullAddress returns the FullAddress field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress) GetFullAddress() string {
-    if o == nil || utils.IsNil(o.FullAddress) {
-        var ret string
-        return ret
-    }
-    return *o.FullAddress
+	if o == nil || utils.IsNil(o.FullAddress) {
+		var ret string
+		return ret
+	}
+	return *o.FullAddress
 }
 
 // GetFullAddressOk returns a tuple with the FullAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress) GetFullAddressOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.FullAddress) {
-        return nil, false
-    }
-    return o.FullAddress, true
+	if o == nil || utils.IsNil(o.FullAddress) {
+		return nil, false
+	}
+	return o.FullAddress, true
 }
 
 // HasFullAddress returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress) HasFullAddress() bool {
-    if o != nil && !utils.IsNil(o.FullAddress) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.FullAddress) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFullAddress gets a reference to the given string and assigns it to the FullAddress field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress) SetFullAddress(v string) {
-    o.FullAddress = &v
+	o.FullAddress = &v
 }
 
 func (o ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.FullAddress) {
-        toSerialize["full_address"] = o.FullAddress
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.FullAddress) {
+		toSerialize["full_address"] = o.FullAddress
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress := _ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress{}
+	varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress := _ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress)
+	err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress(varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress)
+	*o = ReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress(varReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "full_address")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "full_address")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWarehouseAddress struct {
@@ -152,5 +152,3 @@ func (v *NullableReturnRefund202309SearchReturnsResponseDataReturnOrdersReturnWa
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

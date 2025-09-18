@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202507
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202507ReplicateProductRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Product202507ReplicateProductRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202507ReplicateProductRequestBody{}
 
 // Product202507ReplicateProductRequestBody struct for Product202507ReplicateProductRequestBody
 type Product202507ReplicateProductRequestBody struct {
-    // Target markets for replicating the local product.
-    ReplicateTarget []Product202507ReplicateProductRequestBodyReplicateTarget `json:"replicate_target,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Target markets for replicating the local product.
+	ReplicateTarget      []Product202507ReplicateProductRequestBodyReplicateTarget `json:"replicate_target,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202507ReplicateProductRequestBody Product202507ReplicateProductRequestBody
@@ -32,89 +32,89 @@ type _Product202507ReplicateProductRequestBody Product202507ReplicateProductRequ
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202507ReplicateProductRequestBody() *Product202507ReplicateProductRequestBody {
-    this := Product202507ReplicateProductRequestBody{}
-    return &this
+	this := Product202507ReplicateProductRequestBody{}
+	return &this
 }
 
 // NewProduct202507ReplicateProductRequestBodyWithDefaults instantiates a new Product202507ReplicateProductRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202507ReplicateProductRequestBodyWithDefaults() *Product202507ReplicateProductRequestBody {
-    this := Product202507ReplicateProductRequestBody{}
-    return &this
+	this := Product202507ReplicateProductRequestBody{}
+	return &this
 }
 
 // GetReplicateTarget returns the ReplicateTarget field value if set, zero value otherwise.
 func (o *Product202507ReplicateProductRequestBody) GetReplicateTarget() []Product202507ReplicateProductRequestBodyReplicateTarget {
-    if o == nil || utils.IsNil(o.ReplicateTarget) {
-        var ret []Product202507ReplicateProductRequestBodyReplicateTarget
-        return ret
-    }
-    return o.ReplicateTarget
+	if o == nil || utils.IsNil(o.ReplicateTarget) {
+		var ret []Product202507ReplicateProductRequestBodyReplicateTarget
+		return ret
+	}
+	return o.ReplicateTarget
 }
 
 // GetReplicateTargetOk returns a tuple with the ReplicateTarget field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507ReplicateProductRequestBody) GetReplicateTargetOk() ([]Product202507ReplicateProductRequestBodyReplicateTarget, bool) {
-    if o == nil || utils.IsNil(o.ReplicateTarget) {
-        return nil, false
-    }
-    return o.ReplicateTarget, true
+	if o == nil || utils.IsNil(o.ReplicateTarget) {
+		return nil, false
+	}
+	return o.ReplicateTarget, true
 }
 
 // HasReplicateTarget returns a boolean if a field has been set.
 func (o *Product202507ReplicateProductRequestBody) HasReplicateTarget() bool {
-    if o != nil && !utils.IsNil(o.ReplicateTarget) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ReplicateTarget) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReplicateTarget gets a reference to the given []Product202507ReplicateProductRequestBodyReplicateTarget and assigns it to the ReplicateTarget field.
 func (o *Product202507ReplicateProductRequestBody) SetReplicateTarget(v []Product202507ReplicateProductRequestBodyReplicateTarget) {
-    o.ReplicateTarget = v
+	o.ReplicateTarget = v
 }
 
 func (o Product202507ReplicateProductRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202507ReplicateProductRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ReplicateTarget) {
-        toSerialize["replicate_target"] = o.ReplicateTarget
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ReplicateTarget) {
+		toSerialize["replicate_target"] = o.ReplicateTarget
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202507ReplicateProductRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varProduct202507ReplicateProductRequestBody := _Product202507ReplicateProductRequestBody{}
+	varProduct202507ReplicateProductRequestBody := _Product202507ReplicateProductRequestBody{}
 
-    err = json.Unmarshal(data, &varProduct202507ReplicateProductRequestBody)
+	err = json.Unmarshal(data, &varProduct202507ReplicateProductRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202507ReplicateProductRequestBody(varProduct202507ReplicateProductRequestBody)
+	*o = Product202507ReplicateProductRequestBody(varProduct202507ReplicateProductRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "replicate_target")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "replicate_target")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202507ReplicateProductRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202507ReplicateProductRequestBody) UnmarshalJSON(src []b
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

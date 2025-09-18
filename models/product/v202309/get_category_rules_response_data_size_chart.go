@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetCategoryRulesResponseDataSizeChart type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetCategoryRulesResponseDataSizeChart type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetCategoryRulesResponseDataSizeChart{}
 
 // Product202309GetCategoryRulesResponseDataSizeChart struct for Product202309GetCategoryRulesResponseDataSizeChart
 type Product202309GetCategoryRulesResponseDataSizeChart struct {
-    // A flag to indicate whether a size chart is required.
-    IsRequired *bool `json:"is_required,omitempty"`
-    // A flag to indicate whether size charts are supported.  **Note**: If size charts are not supported, even if you provide a size chart when creating or editing a product, the size chart will not be saved.
-    IsSupported *bool `json:"is_supported,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A flag to indicate whether a size chart is required.
+	IsRequired *bool `json:"is_required,omitempty"`
+	// A flag to indicate whether size charts are supported.  **Note**: If size charts are not supported, even if you provide a size chart when creating or editing a product, the size chart will not be saved.
+	IsSupported          *bool `json:"is_supported,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetCategoryRulesResponseDataSizeChart Product202309GetCategoryRulesResponseDataSizeChart
@@ -34,125 +34,125 @@ type _Product202309GetCategoryRulesResponseDataSizeChart Product202309GetCategor
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetCategoryRulesResponseDataSizeChart() *Product202309GetCategoryRulesResponseDataSizeChart {
-    this := Product202309GetCategoryRulesResponseDataSizeChart{}
-    return &this
+	this := Product202309GetCategoryRulesResponseDataSizeChart{}
+	return &this
 }
 
 // NewProduct202309GetCategoryRulesResponseDataSizeChartWithDefaults instantiates a new Product202309GetCategoryRulesResponseDataSizeChart object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetCategoryRulesResponseDataSizeChartWithDefaults() *Product202309GetCategoryRulesResponseDataSizeChart {
-    this := Product202309GetCategoryRulesResponseDataSizeChart{}
-    return &this
+	this := Product202309GetCategoryRulesResponseDataSizeChart{}
+	return &this
 }
 
 // GetIsRequired returns the IsRequired field value if set, zero value otherwise.
 func (o *Product202309GetCategoryRulesResponseDataSizeChart) GetIsRequired() bool {
-    if o == nil || utils.IsNil(o.IsRequired) {
-        var ret bool
-        return ret
-    }
-    return *o.IsRequired
+	if o == nil || utils.IsNil(o.IsRequired) {
+		var ret bool
+		return ret
+	}
+	return *o.IsRequired
 }
 
 // GetIsRequiredOk returns a tuple with the IsRequired field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetCategoryRulesResponseDataSizeChart) GetIsRequiredOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.IsRequired) {
-        return nil, false
-    }
-    return o.IsRequired, true
+	if o == nil || utils.IsNil(o.IsRequired) {
+		return nil, false
+	}
+	return o.IsRequired, true
 }
 
 // HasIsRequired returns a boolean if a field has been set.
 func (o *Product202309GetCategoryRulesResponseDataSizeChart) HasIsRequired() bool {
-    if o != nil && !utils.IsNil(o.IsRequired) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.IsRequired) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIsRequired gets a reference to the given bool and assigns it to the IsRequired field.
 func (o *Product202309GetCategoryRulesResponseDataSizeChart) SetIsRequired(v bool) {
-    o.IsRequired = &v
+	o.IsRequired = &v
 }
 
 // GetIsSupported returns the IsSupported field value if set, zero value otherwise.
 func (o *Product202309GetCategoryRulesResponseDataSizeChart) GetIsSupported() bool {
-    if o == nil || utils.IsNil(o.IsSupported) {
-        var ret bool
-        return ret
-    }
-    return *o.IsSupported
+	if o == nil || utils.IsNil(o.IsSupported) {
+		var ret bool
+		return ret
+	}
+	return *o.IsSupported
 }
 
 // GetIsSupportedOk returns a tuple with the IsSupported field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetCategoryRulesResponseDataSizeChart) GetIsSupportedOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.IsSupported) {
-        return nil, false
-    }
-    return o.IsSupported, true
+	if o == nil || utils.IsNil(o.IsSupported) {
+		return nil, false
+	}
+	return o.IsSupported, true
 }
 
 // HasIsSupported returns a boolean if a field has been set.
 func (o *Product202309GetCategoryRulesResponseDataSizeChart) HasIsSupported() bool {
-    if o != nil && !utils.IsNil(o.IsSupported) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.IsSupported) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIsSupported gets a reference to the given bool and assigns it to the IsSupported field.
 func (o *Product202309GetCategoryRulesResponseDataSizeChart) SetIsSupported(v bool) {
-    o.IsSupported = &v
+	o.IsSupported = &v
 }
 
 func (o Product202309GetCategoryRulesResponseDataSizeChart) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetCategoryRulesResponseDataSizeChart) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.IsRequired) {
-        toSerialize["is_required"] = o.IsRequired
-    }
-    if !utils.IsNil(o.IsSupported) {
-        toSerialize["is_supported"] = o.IsSupported
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.IsRequired) {
+		toSerialize["is_required"] = o.IsRequired
+	}
+	if !utils.IsNil(o.IsSupported) {
+		toSerialize["is_supported"] = o.IsSupported
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetCategoryRulesResponseDataSizeChart) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetCategoryRulesResponseDataSizeChart := _Product202309GetCategoryRulesResponseDataSizeChart{}
+	varProduct202309GetCategoryRulesResponseDataSizeChart := _Product202309GetCategoryRulesResponseDataSizeChart{}
 
-    err = json.Unmarshal(data, &varProduct202309GetCategoryRulesResponseDataSizeChart)
+	err = json.Unmarshal(data, &varProduct202309GetCategoryRulesResponseDataSizeChart)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetCategoryRulesResponseDataSizeChart(varProduct202309GetCategoryRulesResponseDataSizeChart)
+	*o = Product202309GetCategoryRulesResponseDataSizeChart(varProduct202309GetCategoryRulesResponseDataSizeChart)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "is_required")
-        delete(additionalProperties, "is_supported")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "is_required")
+		delete(additionalProperties, "is_supported")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetCategoryRulesResponseDataSizeChart struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309GetCategoryRulesResponseDataSizeChart) UnmarshalJS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

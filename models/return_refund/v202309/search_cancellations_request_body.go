@@ -11,36 +11,36 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309SearchCancellationsRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309SearchCancellationsRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309SearchCancellationsRequestBody{}
 
 // ReturnRefund202309SearchCancellationsRequestBody struct for ReturnRefund202309SearchCancellationsRequestBody
 type ReturnRefund202309SearchCancellationsRequestBody struct {
-    // List of TikTok Shop buyer user IDs.
-    BuyerUserIds []string `json:"buyer_user_ids,omitempty"`
-    // List of order cancellations IDs.
-    CancelIds []string `json:"cancel_ids,omitempty"`
-    // List of order cancellation statuses. Possible values: - CANCELLATION_REQUEST_PENDING - CANCELLATION_REQUEST_SUCCESS - CANCELLATION_REQUEST_CANCEL - CANCELLATION_REQUEST_COMPLETE  Please see \"API Overview\" for more information about these statuses.
-    CancelStatus []string `json:"cancel_status,omitempty"`
-    // List of order cancellation types. Possible values: - CANCEL: Cancel by seller or system. - BUYER_CANCEL: Cancel by buyer. Need to be approved by seller or system.
-    CancelTypes []string `json:"cancel_types,omitempty"`
-    // Filter cancellations to show only orders that have been created after a specified date and time. Unix timestamp. 
-    CreateTimeGe *int64 `json:"create_time_ge,omitempty"`
-    // Filter cancellations to show only orders that have been created before a specified date and time. Unix timestamp. 
-    CreateTimeLt *int64 `json:"create_time_lt,omitempty"`
-    // The BCP-47 locale codes for displaying the order, delimited by commas. Default: en-US Refer to [Locale codes](678e3a47bae28f030a8c7523) for the list of supported locale codes.
-    Locale *string `json:"locale,omitempty"`
-    // List of TikTok Shop order IDs.
-    OrderIds []string `json:"order_ids,omitempty"`
-    // Filter cancellations to show only orders that have been updated after a specified date and time. Unix timestamp.
-    UpdateTimeGe *int64 `json:"update_time_ge,omitempty"`
-    // Filter cancellations to show only orders that have been updated before a specified date and time. Unix timestamp.
-    UpdateTimeLt *int64 `json:"update_time_lt,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// List of TikTok Shop buyer user IDs.
+	BuyerUserIds []string `json:"buyer_user_ids,omitempty"`
+	// List of order cancellations IDs.
+	CancelIds []string `json:"cancel_ids,omitempty"`
+	// List of order cancellation statuses. Possible values: - CANCELLATION_REQUEST_PENDING - CANCELLATION_REQUEST_SUCCESS - CANCELLATION_REQUEST_CANCEL - CANCELLATION_REQUEST_COMPLETE  Please see \"API Overview\" for more information about these statuses.
+	CancelStatus []string `json:"cancel_status,omitempty"`
+	// List of order cancellation types. Possible values: - CANCEL: Cancel by seller or system. - BUYER_CANCEL: Cancel by buyer. Need to be approved by seller or system.
+	CancelTypes []string `json:"cancel_types,omitempty"`
+	// Filter cancellations to show only orders that have been created after a specified date and time. Unix timestamp.
+	CreateTimeGe *int64 `json:"create_time_ge,omitempty"`
+	// Filter cancellations to show only orders that have been created before a specified date and time. Unix timestamp.
+	CreateTimeLt *int64 `json:"create_time_lt,omitempty"`
+	// The BCP-47 locale codes for displaying the order, delimited by commas. Default: en-US Refer to [Locale codes](678e3a47bae28f030a8c7523) for the list of supported locale codes.
+	Locale *string `json:"locale,omitempty"`
+	// List of TikTok Shop order IDs.
+	OrderIds []string `json:"order_ids,omitempty"`
+	// Filter cancellations to show only orders that have been updated after a specified date and time. Unix timestamp.
+	UpdateTimeGe *int64 `json:"update_time_ge,omitempty"`
+	// Filter cancellations to show only orders that have been updated before a specified date and time. Unix timestamp.
+	UpdateTimeLt         *int64 `json:"update_time_lt,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309SearchCancellationsRequestBody ReturnRefund202309SearchCancellationsRequestBody
@@ -50,413 +50,413 @@ type _ReturnRefund202309SearchCancellationsRequestBody ReturnRefund202309SearchC
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309SearchCancellationsRequestBody() *ReturnRefund202309SearchCancellationsRequestBody {
-    this := ReturnRefund202309SearchCancellationsRequestBody{}
-    return &this
+	this := ReturnRefund202309SearchCancellationsRequestBody{}
+	return &this
 }
 
 // NewReturnRefund202309SearchCancellationsRequestBodyWithDefaults instantiates a new ReturnRefund202309SearchCancellationsRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309SearchCancellationsRequestBodyWithDefaults() *ReturnRefund202309SearchCancellationsRequestBody {
-    this := ReturnRefund202309SearchCancellationsRequestBody{}
-    return &this
+	this := ReturnRefund202309SearchCancellationsRequestBody{}
+	return &this
 }
 
 // GetBuyerUserIds returns the BuyerUserIds field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetBuyerUserIds() []string {
-    if o == nil || utils.IsNil(o.BuyerUserIds) {
-        var ret []string
-        return ret
-    }
-    return o.BuyerUserIds
+	if o == nil || utils.IsNil(o.BuyerUserIds) {
+		var ret []string
+		return ret
+	}
+	return o.BuyerUserIds
 }
 
 // GetBuyerUserIdsOk returns a tuple with the BuyerUserIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetBuyerUserIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.BuyerUserIds) {
-        return nil, false
-    }
-    return o.BuyerUserIds, true
+	if o == nil || utils.IsNil(o.BuyerUserIds) {
+		return nil, false
+	}
+	return o.BuyerUserIds, true
 }
 
 // HasBuyerUserIds returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasBuyerUserIds() bool {
-    if o != nil && !utils.IsNil(o.BuyerUserIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.BuyerUserIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetBuyerUserIds gets a reference to the given []string and assigns it to the BuyerUserIds field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetBuyerUserIds(v []string) {
-    o.BuyerUserIds = v
+	o.BuyerUserIds = v
 }
 
 // GetCancelIds returns the CancelIds field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCancelIds() []string {
-    if o == nil || utils.IsNil(o.CancelIds) {
-        var ret []string
-        return ret
-    }
-    return o.CancelIds
+	if o == nil || utils.IsNil(o.CancelIds) {
+		var ret []string
+		return ret
+	}
+	return o.CancelIds
 }
 
 // GetCancelIdsOk returns a tuple with the CancelIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCancelIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.CancelIds) {
-        return nil, false
-    }
-    return o.CancelIds, true
+	if o == nil || utils.IsNil(o.CancelIds) {
+		return nil, false
+	}
+	return o.CancelIds, true
 }
 
 // HasCancelIds returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasCancelIds() bool {
-    if o != nil && !utils.IsNil(o.CancelIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CancelIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCancelIds gets a reference to the given []string and assigns it to the CancelIds field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetCancelIds(v []string) {
-    o.CancelIds = v
+	o.CancelIds = v
 }
 
 // GetCancelStatus returns the CancelStatus field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCancelStatus() []string {
-    if o == nil || utils.IsNil(o.CancelStatus) {
-        var ret []string
-        return ret
-    }
-    return o.CancelStatus
+	if o == nil || utils.IsNil(o.CancelStatus) {
+		var ret []string
+		return ret
+	}
+	return o.CancelStatus
 }
 
 // GetCancelStatusOk returns a tuple with the CancelStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCancelStatusOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.CancelStatus) {
-        return nil, false
-    }
-    return o.CancelStatus, true
+	if o == nil || utils.IsNil(o.CancelStatus) {
+		return nil, false
+	}
+	return o.CancelStatus, true
 }
 
 // HasCancelStatus returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasCancelStatus() bool {
-    if o != nil && !utils.IsNil(o.CancelStatus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CancelStatus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCancelStatus gets a reference to the given []string and assigns it to the CancelStatus field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetCancelStatus(v []string) {
-    o.CancelStatus = v
+	o.CancelStatus = v
 }
 
 // GetCancelTypes returns the CancelTypes field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCancelTypes() []string {
-    if o == nil || utils.IsNil(o.CancelTypes) {
-        var ret []string
-        return ret
-    }
-    return o.CancelTypes
+	if o == nil || utils.IsNil(o.CancelTypes) {
+		var ret []string
+		return ret
+	}
+	return o.CancelTypes
 }
 
 // GetCancelTypesOk returns a tuple with the CancelTypes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCancelTypesOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.CancelTypes) {
-        return nil, false
-    }
-    return o.CancelTypes, true
+	if o == nil || utils.IsNil(o.CancelTypes) {
+		return nil, false
+	}
+	return o.CancelTypes, true
 }
 
 // HasCancelTypes returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasCancelTypes() bool {
-    if o != nil && !utils.IsNil(o.CancelTypes) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CancelTypes) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCancelTypes gets a reference to the given []string and assigns it to the CancelTypes field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetCancelTypes(v []string) {
-    o.CancelTypes = v
+	o.CancelTypes = v
 }
 
 // GetCreateTimeGe returns the CreateTimeGe field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCreateTimeGe() int64 {
-    if o == nil || utils.IsNil(o.CreateTimeGe) {
-        var ret int64
-        return ret
-    }
-    return *o.CreateTimeGe
+	if o == nil || utils.IsNil(o.CreateTimeGe) {
+		var ret int64
+		return ret
+	}
+	return *o.CreateTimeGe
 }
 
 // GetCreateTimeGeOk returns a tuple with the CreateTimeGe field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCreateTimeGeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.CreateTimeGe) {
-        return nil, false
-    }
-    return o.CreateTimeGe, true
+	if o == nil || utils.IsNil(o.CreateTimeGe) {
+		return nil, false
+	}
+	return o.CreateTimeGe, true
 }
 
 // HasCreateTimeGe returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasCreateTimeGe() bool {
-    if o != nil && !utils.IsNil(o.CreateTimeGe) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CreateTimeGe) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCreateTimeGe gets a reference to the given int64 and assigns it to the CreateTimeGe field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetCreateTimeGe(v int64) {
-    o.CreateTimeGe = &v
+	o.CreateTimeGe = &v
 }
 
 // GetCreateTimeLt returns the CreateTimeLt field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCreateTimeLt() int64 {
-    if o == nil || utils.IsNil(o.CreateTimeLt) {
-        var ret int64
-        return ret
-    }
-    return *o.CreateTimeLt
+	if o == nil || utils.IsNil(o.CreateTimeLt) {
+		var ret int64
+		return ret
+	}
+	return *o.CreateTimeLt
 }
 
 // GetCreateTimeLtOk returns a tuple with the CreateTimeLt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetCreateTimeLtOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.CreateTimeLt) {
-        return nil, false
-    }
-    return o.CreateTimeLt, true
+	if o == nil || utils.IsNil(o.CreateTimeLt) {
+		return nil, false
+	}
+	return o.CreateTimeLt, true
 }
 
 // HasCreateTimeLt returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasCreateTimeLt() bool {
-    if o != nil && !utils.IsNil(o.CreateTimeLt) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CreateTimeLt) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCreateTimeLt gets a reference to the given int64 and assigns it to the CreateTimeLt field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetCreateTimeLt(v int64) {
-    o.CreateTimeLt = &v
+	o.CreateTimeLt = &v
 }
 
 // GetLocale returns the Locale field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetLocale() string {
-    if o == nil || utils.IsNil(o.Locale) {
-        var ret string
-        return ret
-    }
-    return *o.Locale
+	if o == nil || utils.IsNil(o.Locale) {
+		var ret string
+		return ret
+	}
+	return *o.Locale
 }
 
 // GetLocaleOk returns a tuple with the Locale field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetLocaleOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Locale) {
-        return nil, false
-    }
-    return o.Locale, true
+	if o == nil || utils.IsNil(o.Locale) {
+		return nil, false
+	}
+	return o.Locale, true
 }
 
 // HasLocale returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasLocale() bool {
-    if o != nil && !utils.IsNil(o.Locale) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Locale) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocale gets a reference to the given string and assigns it to the Locale field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetLocale(v string) {
-    o.Locale = &v
+	o.Locale = &v
 }
 
 // GetOrderIds returns the OrderIds field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetOrderIds() []string {
-    if o == nil || utils.IsNil(o.OrderIds) {
-        var ret []string
-        return ret
-    }
-    return o.OrderIds
+	if o == nil || utils.IsNil(o.OrderIds) {
+		var ret []string
+		return ret
+	}
+	return o.OrderIds
 }
 
 // GetOrderIdsOk returns a tuple with the OrderIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetOrderIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.OrderIds) {
-        return nil, false
-    }
-    return o.OrderIds, true
+	if o == nil || utils.IsNil(o.OrderIds) {
+		return nil, false
+	}
+	return o.OrderIds, true
 }
 
 // HasOrderIds returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasOrderIds() bool {
-    if o != nil && !utils.IsNil(o.OrderIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderIds gets a reference to the given []string and assigns it to the OrderIds field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetOrderIds(v []string) {
-    o.OrderIds = v
+	o.OrderIds = v
 }
 
 // GetUpdateTimeGe returns the UpdateTimeGe field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetUpdateTimeGe() int64 {
-    if o == nil || utils.IsNil(o.UpdateTimeGe) {
-        var ret int64
-        return ret
-    }
-    return *o.UpdateTimeGe
+	if o == nil || utils.IsNil(o.UpdateTimeGe) {
+		var ret int64
+		return ret
+	}
+	return *o.UpdateTimeGe
 }
 
 // GetUpdateTimeGeOk returns a tuple with the UpdateTimeGe field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetUpdateTimeGeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UpdateTimeGe) {
-        return nil, false
-    }
-    return o.UpdateTimeGe, true
+	if o == nil || utils.IsNil(o.UpdateTimeGe) {
+		return nil, false
+	}
+	return o.UpdateTimeGe, true
 }
 
 // HasUpdateTimeGe returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasUpdateTimeGe() bool {
-    if o != nil && !utils.IsNil(o.UpdateTimeGe) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UpdateTimeGe) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUpdateTimeGe gets a reference to the given int64 and assigns it to the UpdateTimeGe field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetUpdateTimeGe(v int64) {
-    o.UpdateTimeGe = &v
+	o.UpdateTimeGe = &v
 }
 
 // GetUpdateTimeLt returns the UpdateTimeLt field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetUpdateTimeLt() int64 {
-    if o == nil || utils.IsNil(o.UpdateTimeLt) {
-        var ret int64
-        return ret
-    }
-    return *o.UpdateTimeLt
+	if o == nil || utils.IsNil(o.UpdateTimeLt) {
+		var ret int64
+		return ret
+	}
+	return *o.UpdateTimeLt
 }
 
 // GetUpdateTimeLtOk returns a tuple with the UpdateTimeLt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) GetUpdateTimeLtOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UpdateTimeLt) {
-        return nil, false
-    }
-    return o.UpdateTimeLt, true
+	if o == nil || utils.IsNil(o.UpdateTimeLt) {
+		return nil, false
+	}
+	return o.UpdateTimeLt, true
 }
 
 // HasUpdateTimeLt returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) HasUpdateTimeLt() bool {
-    if o != nil && !utils.IsNil(o.UpdateTimeLt) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UpdateTimeLt) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUpdateTimeLt gets a reference to the given int64 and assigns it to the UpdateTimeLt field.
 func (o *ReturnRefund202309SearchCancellationsRequestBody) SetUpdateTimeLt(v int64) {
-    o.UpdateTimeLt = &v
+	o.UpdateTimeLt = &v
 }
 
 func (o ReturnRefund202309SearchCancellationsRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309SearchCancellationsRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.BuyerUserIds) {
-        toSerialize["buyer_user_ids"] = o.BuyerUserIds
-    }
-    if !utils.IsNil(o.CancelIds) {
-        toSerialize["cancel_ids"] = o.CancelIds
-    }
-    if !utils.IsNil(o.CancelStatus) {
-        toSerialize["cancel_status"] = o.CancelStatus
-    }
-    if !utils.IsNil(o.CancelTypes) {
-        toSerialize["cancel_types"] = o.CancelTypes
-    }
-    if !utils.IsNil(o.CreateTimeGe) {
-        toSerialize["create_time_ge"] = o.CreateTimeGe
-    }
-    if !utils.IsNil(o.CreateTimeLt) {
-        toSerialize["create_time_lt"] = o.CreateTimeLt
-    }
-    if !utils.IsNil(o.Locale) {
-        toSerialize["locale"] = o.Locale
-    }
-    if !utils.IsNil(o.OrderIds) {
-        toSerialize["order_ids"] = o.OrderIds
-    }
-    if !utils.IsNil(o.UpdateTimeGe) {
-        toSerialize["update_time_ge"] = o.UpdateTimeGe
-    }
-    if !utils.IsNil(o.UpdateTimeLt) {
-        toSerialize["update_time_lt"] = o.UpdateTimeLt
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.BuyerUserIds) {
+		toSerialize["buyer_user_ids"] = o.BuyerUserIds
+	}
+	if !utils.IsNil(o.CancelIds) {
+		toSerialize["cancel_ids"] = o.CancelIds
+	}
+	if !utils.IsNil(o.CancelStatus) {
+		toSerialize["cancel_status"] = o.CancelStatus
+	}
+	if !utils.IsNil(o.CancelTypes) {
+		toSerialize["cancel_types"] = o.CancelTypes
+	}
+	if !utils.IsNil(o.CreateTimeGe) {
+		toSerialize["create_time_ge"] = o.CreateTimeGe
+	}
+	if !utils.IsNil(o.CreateTimeLt) {
+		toSerialize["create_time_lt"] = o.CreateTimeLt
+	}
+	if !utils.IsNil(o.Locale) {
+		toSerialize["locale"] = o.Locale
+	}
+	if !utils.IsNil(o.OrderIds) {
+		toSerialize["order_ids"] = o.OrderIds
+	}
+	if !utils.IsNil(o.UpdateTimeGe) {
+		toSerialize["update_time_ge"] = o.UpdateTimeGe
+	}
+	if !utils.IsNil(o.UpdateTimeLt) {
+		toSerialize["update_time_lt"] = o.UpdateTimeLt
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309SearchCancellationsRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309SearchCancellationsRequestBody := _ReturnRefund202309SearchCancellationsRequestBody{}
+	varReturnRefund202309SearchCancellationsRequestBody := _ReturnRefund202309SearchCancellationsRequestBody{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309SearchCancellationsRequestBody)
+	err = json.Unmarshal(data, &varReturnRefund202309SearchCancellationsRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309SearchCancellationsRequestBody(varReturnRefund202309SearchCancellationsRequestBody)
+	*o = ReturnRefund202309SearchCancellationsRequestBody(varReturnRefund202309SearchCancellationsRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "buyer_user_ids")
-        delete(additionalProperties, "cancel_ids")
-        delete(additionalProperties, "cancel_status")
-        delete(additionalProperties, "cancel_types")
-        delete(additionalProperties, "create_time_ge")
-        delete(additionalProperties, "create_time_lt")
-        delete(additionalProperties, "locale")
-        delete(additionalProperties, "order_ids")
-        delete(additionalProperties, "update_time_ge")
-        delete(additionalProperties, "update_time_lt")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "buyer_user_ids")
+		delete(additionalProperties, "cancel_ids")
+		delete(additionalProperties, "cancel_status")
+		delete(additionalProperties, "cancel_types")
+		delete(additionalProperties, "create_time_ge")
+		delete(additionalProperties, "create_time_lt")
+		delete(additionalProperties, "locale")
+		delete(additionalProperties, "order_ids")
+		delete(additionalProperties, "update_time_ge")
+		delete(additionalProperties, "update_time_lt")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309SearchCancellationsRequestBody struct {
@@ -494,5 +494,3 @@ func (v *NullableReturnRefund202309SearchCancellationsRequestBody) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

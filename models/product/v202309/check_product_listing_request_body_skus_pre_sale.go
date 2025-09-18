@@ -11,19 +11,19 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CheckProductListingRequestBodySkusPreSale type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CheckProductListingRequestBodySkusPreSale type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CheckProductListingRequestBodySkusPreSale{}
 
 // Product202309CheckProductListingRequestBodySkusPreSale struct for Product202309CheckProductListingRequestBodySkusPreSale
 type Product202309CheckProductListingRequestBodySkusPreSale struct {
-    FulfillmentType *Product202309CheckProductListingRequestBodySkusPreSaleFulfillmentType `json:"fulfillment_type,omitempty"`
-    // The type of pre-sale. Possible values based on the region: **US** - `PRE_ORDER`: The product is not yet available or released. Fulfillment can be extended by specifying a release date. - `MADE_TO_ORDER`: The product is produced only after the order is received. Fulfillment can be extended by specifying a duration. - `CUSTOM`: The product requires a fulfillment timeline that exceeds the standard due to other factors. Fulfillment can be extended by specifying a duration.  **UK and SEA** - `PRE_ORDER`: The product is not yet available or released. Fulfillment can be extended by specifying a duration. 
-    Type *string `json:"type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	FulfillmentType *Product202309CheckProductListingRequestBodySkusPreSaleFulfillmentType `json:"fulfillment_type,omitempty"`
+	// The type of pre-sale. Possible values based on the region: **US** - `PRE_ORDER`: The product is not yet available or released. Fulfillment can be extended by specifying a release date. - `MADE_TO_ORDER`: The product is produced only after the order is received. Fulfillment can be extended by specifying a duration. - `CUSTOM`: The product requires a fulfillment timeline that exceeds the standard due to other factors. Fulfillment can be extended by specifying a duration.  **UK and SEA** - `PRE_ORDER`: The product is not yet available or released. Fulfillment can be extended by specifying a duration.
+	Type                 *string `json:"type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CheckProductListingRequestBodySkusPreSale Product202309CheckProductListingRequestBodySkusPreSale
@@ -33,125 +33,125 @@ type _Product202309CheckProductListingRequestBodySkusPreSale Product202309CheckP
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CheckProductListingRequestBodySkusPreSale() *Product202309CheckProductListingRequestBodySkusPreSale {
-    this := Product202309CheckProductListingRequestBodySkusPreSale{}
-    return &this
+	this := Product202309CheckProductListingRequestBodySkusPreSale{}
+	return &this
 }
 
 // NewProduct202309CheckProductListingRequestBodySkusPreSaleWithDefaults instantiates a new Product202309CheckProductListingRequestBodySkusPreSale object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CheckProductListingRequestBodySkusPreSaleWithDefaults() *Product202309CheckProductListingRequestBodySkusPreSale {
-    this := Product202309CheckProductListingRequestBodySkusPreSale{}
-    return &this
+	this := Product202309CheckProductListingRequestBodySkusPreSale{}
+	return &this
 }
 
 // GetFulfillmentType returns the FulfillmentType field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingRequestBodySkusPreSale) GetFulfillmentType() Product202309CheckProductListingRequestBodySkusPreSaleFulfillmentType {
-    if o == nil || utils.IsNil(o.FulfillmentType) {
-        var ret Product202309CheckProductListingRequestBodySkusPreSaleFulfillmentType
-        return ret
-    }
-    return *o.FulfillmentType
+	if o == nil || utils.IsNil(o.FulfillmentType) {
+		var ret Product202309CheckProductListingRequestBodySkusPreSaleFulfillmentType
+		return ret
+	}
+	return *o.FulfillmentType
 }
 
 // GetFulfillmentTypeOk returns a tuple with the FulfillmentType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingRequestBodySkusPreSale) GetFulfillmentTypeOk() (*Product202309CheckProductListingRequestBodySkusPreSaleFulfillmentType, bool) {
-    if o == nil || utils.IsNil(o.FulfillmentType) {
-        return nil, false
-    }
-    return o.FulfillmentType, true
+	if o == nil || utils.IsNil(o.FulfillmentType) {
+		return nil, false
+	}
+	return o.FulfillmentType, true
 }
 
 // HasFulfillmentType returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingRequestBodySkusPreSale) HasFulfillmentType() bool {
-    if o != nil && !utils.IsNil(o.FulfillmentType) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.FulfillmentType) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFulfillmentType gets a reference to the given Product202309CheckProductListingRequestBodySkusPreSaleFulfillmentType and assigns it to the FulfillmentType field.
 func (o *Product202309CheckProductListingRequestBodySkusPreSale) SetFulfillmentType(v Product202309CheckProductListingRequestBodySkusPreSaleFulfillmentType) {
-    o.FulfillmentType = &v
+	o.FulfillmentType = &v
 }
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingRequestBodySkusPreSale) GetType() string {
-    if o == nil || utils.IsNil(o.Type) {
-        var ret string
-        return ret
-    }
-    return *o.Type
+	if o == nil || utils.IsNil(o.Type) {
+		var ret string
+		return ret
+	}
+	return *o.Type
 }
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingRequestBodySkusPreSale) GetTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Type) {
-        return nil, false
-    }
-    return o.Type, true
+	if o == nil || utils.IsNil(o.Type) {
+		return nil, false
+	}
+	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingRequestBodySkusPreSale) HasType() bool {
-    if o != nil && !utils.IsNil(o.Type) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Type) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
 func (o *Product202309CheckProductListingRequestBodySkusPreSale) SetType(v string) {
-    o.Type = &v
+	o.Type = &v
 }
 
 func (o Product202309CheckProductListingRequestBodySkusPreSale) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CheckProductListingRequestBodySkusPreSale) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.FulfillmentType) {
-        toSerialize["fulfillment_type"] = o.FulfillmentType
-    }
-    if !utils.IsNil(o.Type) {
-        toSerialize["type"] = o.Type
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.FulfillmentType) {
+		toSerialize["fulfillment_type"] = o.FulfillmentType
+	}
+	if !utils.IsNil(o.Type) {
+		toSerialize["type"] = o.Type
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CheckProductListingRequestBodySkusPreSale) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CheckProductListingRequestBodySkusPreSale := _Product202309CheckProductListingRequestBodySkusPreSale{}
+	varProduct202309CheckProductListingRequestBodySkusPreSale := _Product202309CheckProductListingRequestBodySkusPreSale{}
 
-    err = json.Unmarshal(data, &varProduct202309CheckProductListingRequestBodySkusPreSale)
+	err = json.Unmarshal(data, &varProduct202309CheckProductListingRequestBodySkusPreSale)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CheckProductListingRequestBodySkusPreSale(varProduct202309CheckProductListingRequestBodySkusPreSale)
+	*o = Product202309CheckProductListingRequestBodySkusPreSale(varProduct202309CheckProductListingRequestBodySkusPreSale)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "fulfillment_type")
-        delete(additionalProperties, "type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "fulfillment_type")
+		delete(additionalProperties, "type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CheckProductListingRequestBodySkusPreSale struct {
@@ -189,5 +189,3 @@ func (v *NullableProduct202309CheckProductListingRequestBodySkusPreSale) Unmarsh
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

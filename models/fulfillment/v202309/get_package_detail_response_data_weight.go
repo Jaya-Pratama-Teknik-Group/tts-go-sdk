@@ -11,20 +11,20 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetPackageDetailResponseDataWeight type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetPackageDetailResponseDataWeight type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetPackageDetailResponseDataWeight{}
 
 // Fulfillment202309GetPackageDetailResponseDataWeight struct for Fulfillment202309GetPackageDetailResponseDataWeight
 type Fulfillment202309GetPackageDetailResponseDataWeight struct {
-    // The unit of measurement used to measure the weight. Possible values: - `GRAM` - `POUND`
-    Unit *string `json:"unit,omitempty"`
-    // The value of the weight of the scheduled package.
-    Value *string `json:"value,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The unit of measurement used to measure the weight. Possible values: - `GRAM` - `POUND`
+	Unit *string `json:"unit,omitempty"`
+	// The value of the weight of the scheduled package.
+	Value                *string `json:"value,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetPackageDetailResponseDataWeight Fulfillment202309GetPackageDetailResponseDataWeight
@@ -34,125 +34,125 @@ type _Fulfillment202309GetPackageDetailResponseDataWeight Fulfillment202309GetPa
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetPackageDetailResponseDataWeight() *Fulfillment202309GetPackageDetailResponseDataWeight {
-    this := Fulfillment202309GetPackageDetailResponseDataWeight{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseDataWeight{}
+	return &this
 }
 
 // NewFulfillment202309GetPackageDetailResponseDataWeightWithDefaults instantiates a new Fulfillment202309GetPackageDetailResponseDataWeight object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetPackageDetailResponseDataWeightWithDefaults() *Fulfillment202309GetPackageDetailResponseDataWeight {
-    this := Fulfillment202309GetPackageDetailResponseDataWeight{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseDataWeight{}
+	return &this
 }
 
 // GetUnit returns the Unit field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataWeight) GetUnit() string {
-    if o == nil || utils.IsNil(o.Unit) {
-        var ret string
-        return ret
-    }
-    return *o.Unit
+	if o == nil || utils.IsNil(o.Unit) {
+		var ret string
+		return ret
+	}
+	return *o.Unit
 }
 
 // GetUnitOk returns a tuple with the Unit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataWeight) GetUnitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Unit) {
-        return nil, false
-    }
-    return o.Unit, true
+	if o == nil || utils.IsNil(o.Unit) {
+		return nil, false
+	}
+	return o.Unit, true
 }
 
 // HasUnit returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataWeight) HasUnit() bool {
-    if o != nil && !utils.IsNil(o.Unit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Unit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnit gets a reference to the given string and assigns it to the Unit field.
 func (o *Fulfillment202309GetPackageDetailResponseDataWeight) SetUnit(v string) {
-    o.Unit = &v
+	o.Unit = &v
 }
 
 // GetValue returns the Value field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataWeight) GetValue() string {
-    if o == nil || utils.IsNil(o.Value) {
-        var ret string
-        return ret
-    }
-    return *o.Value
+	if o == nil || utils.IsNil(o.Value) {
+		var ret string
+		return ret
+	}
+	return *o.Value
 }
 
 // GetValueOk returns a tuple with the Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataWeight) GetValueOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Value) {
-        return nil, false
-    }
-    return o.Value, true
+	if o == nil || utils.IsNil(o.Value) {
+		return nil, false
+	}
+	return o.Value, true
 }
 
 // HasValue returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataWeight) HasValue() bool {
-    if o != nil && !utils.IsNil(o.Value) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Value) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetValue gets a reference to the given string and assigns it to the Value field.
 func (o *Fulfillment202309GetPackageDetailResponseDataWeight) SetValue(v string) {
-    o.Value = &v
+	o.Value = &v
 }
 
 func (o Fulfillment202309GetPackageDetailResponseDataWeight) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetPackageDetailResponseDataWeight) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Unit) {
-        toSerialize["unit"] = o.Unit
-    }
-    if !utils.IsNil(o.Value) {
-        toSerialize["value"] = o.Value
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Unit) {
+		toSerialize["unit"] = o.Unit
+	}
+	if !utils.IsNil(o.Value) {
+		toSerialize["value"] = o.Value
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetPackageDetailResponseDataWeight) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetPackageDetailResponseDataWeight := _Fulfillment202309GetPackageDetailResponseDataWeight{}
+	varFulfillment202309GetPackageDetailResponseDataWeight := _Fulfillment202309GetPackageDetailResponseDataWeight{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseDataWeight)
+	err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseDataWeight)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetPackageDetailResponseDataWeight(varFulfillment202309GetPackageDetailResponseDataWeight)
+	*o = Fulfillment202309GetPackageDetailResponseDataWeight(varFulfillment202309GetPackageDetailResponseDataWeight)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "unit")
-        delete(additionalProperties, "value")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "unit")
+		delete(additionalProperties, "value")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetPackageDetailResponseDataWeight struct {
@@ -190,5 +190,3 @@ func (v *NullableFulfillment202309GetPackageDetailResponseDataWeight) UnmarshalJ
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

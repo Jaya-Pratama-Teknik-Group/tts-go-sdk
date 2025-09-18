@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202507
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202507ReplicateProductResponseDataErrorsDetail type satisfies the MappedNullable interface at compile time
+// checks if the Product202507ReplicateProductResponseDataErrorsDetail type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202507ReplicateProductResponseDataErrorsDetail{}
 
 // Product202507ReplicateProductResponseDataErrorsDetail struct for Product202507ReplicateProductResponseDataErrorsDetail
 type Product202507ReplicateProductResponseDataErrorsDetail struct {
-    // The target region where the error occurred.
-    Region *string `json:"region,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The target region where the error occurred.
+	Region               *string `json:"region,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202507ReplicateProductResponseDataErrorsDetail Product202507ReplicateProductResponseDataErrorsDetail
@@ -32,89 +32,89 @@ type _Product202507ReplicateProductResponseDataErrorsDetail Product202507Replica
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202507ReplicateProductResponseDataErrorsDetail() *Product202507ReplicateProductResponseDataErrorsDetail {
-    this := Product202507ReplicateProductResponseDataErrorsDetail{}
-    return &this
+	this := Product202507ReplicateProductResponseDataErrorsDetail{}
+	return &this
 }
 
 // NewProduct202507ReplicateProductResponseDataErrorsDetailWithDefaults instantiates a new Product202507ReplicateProductResponseDataErrorsDetail object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202507ReplicateProductResponseDataErrorsDetailWithDefaults() *Product202507ReplicateProductResponseDataErrorsDetail {
-    this := Product202507ReplicateProductResponseDataErrorsDetail{}
-    return &this
+	this := Product202507ReplicateProductResponseDataErrorsDetail{}
+	return &this
 }
 
 // GetRegion returns the Region field value if set, zero value otherwise.
 func (o *Product202507ReplicateProductResponseDataErrorsDetail) GetRegion() string {
-    if o == nil || utils.IsNil(o.Region) {
-        var ret string
-        return ret
-    }
-    return *o.Region
+	if o == nil || utils.IsNil(o.Region) {
+		var ret string
+		return ret
+	}
+	return *o.Region
 }
 
 // GetRegionOk returns a tuple with the Region field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507ReplicateProductResponseDataErrorsDetail) GetRegionOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Region) {
-        return nil, false
-    }
-    return o.Region, true
+	if o == nil || utils.IsNil(o.Region) {
+		return nil, false
+	}
+	return o.Region, true
 }
 
 // HasRegion returns a boolean if a field has been set.
 func (o *Product202507ReplicateProductResponseDataErrorsDetail) HasRegion() bool {
-    if o != nil && !utils.IsNil(o.Region) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Region) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRegion gets a reference to the given string and assigns it to the Region field.
 func (o *Product202507ReplicateProductResponseDataErrorsDetail) SetRegion(v string) {
-    o.Region = &v
+	o.Region = &v
 }
 
 func (o Product202507ReplicateProductResponseDataErrorsDetail) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202507ReplicateProductResponseDataErrorsDetail) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Region) {
-        toSerialize["region"] = o.Region
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Region) {
+		toSerialize["region"] = o.Region
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202507ReplicateProductResponseDataErrorsDetail) UnmarshalJSON(data []byte) (err error) {
-    varProduct202507ReplicateProductResponseDataErrorsDetail := _Product202507ReplicateProductResponseDataErrorsDetail{}
+	varProduct202507ReplicateProductResponseDataErrorsDetail := _Product202507ReplicateProductResponseDataErrorsDetail{}
 
-    err = json.Unmarshal(data, &varProduct202507ReplicateProductResponseDataErrorsDetail)
+	err = json.Unmarshal(data, &varProduct202507ReplicateProductResponseDataErrorsDetail)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202507ReplicateProductResponseDataErrorsDetail(varProduct202507ReplicateProductResponseDataErrorsDetail)
+	*o = Product202507ReplicateProductResponseDataErrorsDetail(varProduct202507ReplicateProductResponseDataErrorsDetail)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "region")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "region")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202507ReplicateProductResponseDataErrorsDetail struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202507ReplicateProductResponseDataErrorsDetail) Unmarsha
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

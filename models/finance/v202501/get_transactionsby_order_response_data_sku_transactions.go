@@ -11,37 +11,37 @@ API version: 1.0.0
 package finance_v202501
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Finance202501GetTransactionsbyOrderResponseDataSkuTransactions type satisfies the MappedNullable interface at compile time
+// checks if the Finance202501GetTransactionsbyOrderResponseDataSkuTransactions type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Finance202501GetTransactionsbyOrderResponseDataSkuTransactions{}
 
 // Finance202501GetTransactionsbyOrderResponseDataSkuTransactions struct for Finance202501GetTransactionsbyOrderResponseDataSkuTransactions
 type Finance202501GetTransactionsbyOrderResponseDataSkuTransactions struct {
-    // The total fees and taxes charged by TikTok Shop at the time of order settlement. Shipping-related costs are excluded. This is equivalent to the sum of all contributory amounts in `fee_tax_breakdown`. 
-    FeeTaxAmount *string `json:"fee_tax_amount,omitempty"`
-    FeeTaxBreakdown *Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsFeeTaxBreakdown `json:"fee_tax_breakdown,omitempty"`
-    // The product title.
-    ProductName *string `json:"product_name,omitempty"`
-    // The SKU quantity included in the order settlement.
-    Quantity *string `json:"quantity,omitempty"`
-    // The revenue amount at the time of order settlement. This is equivalent to the sum of all amounts in `revenue_breakdown`.
-    RevenueAmount *string `json:"revenue_amount,omitempty"`
-    RevenueBreakdown *Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsRevenueBreakdown `json:"revenue_breakdown,omitempty"`
-    // The settlement amount for the SKU.
-    SettlementAmount *string `json:"settlement_amount,omitempty"`
-    // The shipping costs at the time of order settlement. This is equivalent to the sum of all contributory amounts in `shipping_cost_breakdown`.
-    ShippingCostAmount *string `json:"shipping_cost_amount,omitempty"`
-    ShippingCostBreakdown *Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsShippingCostBreakdown `json:"shipping_cost_breakdown,omitempty"`
-    // The SKU ID in TikTok Shop.
-    SkuId *string `json:"sku_id,omitempty"`
-    // The SKU name.
-    SkuName *string `json:"sku_name,omitempty"`
-    // The statement ID.
-    StatementId *string `json:"statement_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The total fees and taxes charged by TikTok Shop at the time of order settlement. Shipping-related costs are excluded. This is equivalent to the sum of all contributory amounts in `fee_tax_breakdown`.
+	FeeTaxAmount    *string                                                                        `json:"fee_tax_amount,omitempty"`
+	FeeTaxBreakdown *Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsFeeTaxBreakdown `json:"fee_tax_breakdown,omitempty"`
+	// The product title.
+	ProductName *string `json:"product_name,omitempty"`
+	// The SKU quantity included in the order settlement.
+	Quantity *string `json:"quantity,omitempty"`
+	// The revenue amount at the time of order settlement. This is equivalent to the sum of all amounts in `revenue_breakdown`.
+	RevenueAmount    *string                                                                         `json:"revenue_amount,omitempty"`
+	RevenueBreakdown *Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsRevenueBreakdown `json:"revenue_breakdown,omitempty"`
+	// The settlement amount for the SKU.
+	SettlementAmount *string `json:"settlement_amount,omitempty"`
+	// The shipping costs at the time of order settlement. This is equivalent to the sum of all contributory amounts in `shipping_cost_breakdown`.
+	ShippingCostAmount    *string                                                                              `json:"shipping_cost_amount,omitempty"`
+	ShippingCostBreakdown *Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsShippingCostBreakdown `json:"shipping_cost_breakdown,omitempty"`
+	// The SKU ID in TikTok Shop.
+	SkuId *string `json:"sku_id,omitempty"`
+	// The SKU name.
+	SkuName *string `json:"sku_name,omitempty"`
+	// The statement ID.
+	StatementId          *string `json:"statement_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Finance202501GetTransactionsbyOrderResponseDataSkuTransactions Finance202501GetTransactionsbyOrderResponseDataSkuTransactions
@@ -51,485 +51,485 @@ type _Finance202501GetTransactionsbyOrderResponseDataSkuTransactions Finance2025
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFinance202501GetTransactionsbyOrderResponseDataSkuTransactions() *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions {
-    this := Finance202501GetTransactionsbyOrderResponseDataSkuTransactions{}
-    return &this
+	this := Finance202501GetTransactionsbyOrderResponseDataSkuTransactions{}
+	return &this
 }
 
 // NewFinance202501GetTransactionsbyOrderResponseDataSkuTransactionsWithDefaults instantiates a new Finance202501GetTransactionsbyOrderResponseDataSkuTransactions object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFinance202501GetTransactionsbyOrderResponseDataSkuTransactionsWithDefaults() *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions {
-    this := Finance202501GetTransactionsbyOrderResponseDataSkuTransactions{}
-    return &this
+	this := Finance202501GetTransactionsbyOrderResponseDataSkuTransactions{}
+	return &this
 }
 
 // GetFeeTaxAmount returns the FeeTaxAmount field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetFeeTaxAmount() string {
-    if o == nil || utils.IsNil(o.FeeTaxAmount) {
-        var ret string
-        return ret
-    }
-    return *o.FeeTaxAmount
+	if o == nil || utils.IsNil(o.FeeTaxAmount) {
+		var ret string
+		return ret
+	}
+	return *o.FeeTaxAmount
 }
 
 // GetFeeTaxAmountOk returns a tuple with the FeeTaxAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetFeeTaxAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.FeeTaxAmount) {
-        return nil, false
-    }
-    return o.FeeTaxAmount, true
+	if o == nil || utils.IsNil(o.FeeTaxAmount) {
+		return nil, false
+	}
+	return o.FeeTaxAmount, true
 }
 
 // HasFeeTaxAmount returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasFeeTaxAmount() bool {
-    if o != nil && !utils.IsNil(o.FeeTaxAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.FeeTaxAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFeeTaxAmount gets a reference to the given string and assigns it to the FeeTaxAmount field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetFeeTaxAmount(v string) {
-    o.FeeTaxAmount = &v
+	o.FeeTaxAmount = &v
 }
 
 // GetFeeTaxBreakdown returns the FeeTaxBreakdown field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetFeeTaxBreakdown() Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsFeeTaxBreakdown {
-    if o == nil || utils.IsNil(o.FeeTaxBreakdown) {
-        var ret Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsFeeTaxBreakdown
-        return ret
-    }
-    return *o.FeeTaxBreakdown
+	if o == nil || utils.IsNil(o.FeeTaxBreakdown) {
+		var ret Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsFeeTaxBreakdown
+		return ret
+	}
+	return *o.FeeTaxBreakdown
 }
 
 // GetFeeTaxBreakdownOk returns a tuple with the FeeTaxBreakdown field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetFeeTaxBreakdownOk() (*Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsFeeTaxBreakdown, bool) {
-    if o == nil || utils.IsNil(o.FeeTaxBreakdown) {
-        return nil, false
-    }
-    return o.FeeTaxBreakdown, true
+	if o == nil || utils.IsNil(o.FeeTaxBreakdown) {
+		return nil, false
+	}
+	return o.FeeTaxBreakdown, true
 }
 
 // HasFeeTaxBreakdown returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasFeeTaxBreakdown() bool {
-    if o != nil && !utils.IsNil(o.FeeTaxBreakdown) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.FeeTaxBreakdown) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFeeTaxBreakdown gets a reference to the given Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsFeeTaxBreakdown and assigns it to the FeeTaxBreakdown field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetFeeTaxBreakdown(v Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsFeeTaxBreakdown) {
-    o.FeeTaxBreakdown = &v
+	o.FeeTaxBreakdown = &v
 }
 
 // GetProductName returns the ProductName field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetProductName() string {
-    if o == nil || utils.IsNil(o.ProductName) {
-        var ret string
-        return ret
-    }
-    return *o.ProductName
+	if o == nil || utils.IsNil(o.ProductName) {
+		var ret string
+		return ret
+	}
+	return *o.ProductName
 }
 
 // GetProductNameOk returns a tuple with the ProductName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetProductNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ProductName) {
-        return nil, false
-    }
-    return o.ProductName, true
+	if o == nil || utils.IsNil(o.ProductName) {
+		return nil, false
+	}
+	return o.ProductName, true
 }
 
 // HasProductName returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasProductName() bool {
-    if o != nil && !utils.IsNil(o.ProductName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductName gets a reference to the given string and assigns it to the ProductName field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetProductName(v string) {
-    o.ProductName = &v
+	o.ProductName = &v
 }
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetQuantity() string {
-    if o == nil || utils.IsNil(o.Quantity) {
-        var ret string
-        return ret
-    }
-    return *o.Quantity
+	if o == nil || utils.IsNil(o.Quantity) {
+		var ret string
+		return ret
+	}
+	return *o.Quantity
 }
 
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetQuantityOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Quantity) {
-        return nil, false
-    }
-    return o.Quantity, true
+	if o == nil || utils.IsNil(o.Quantity) {
+		return nil, false
+	}
+	return o.Quantity, true
 }
 
 // HasQuantity returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasQuantity() bool {
-    if o != nil && !utils.IsNil(o.Quantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Quantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantity gets a reference to the given string and assigns it to the Quantity field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetQuantity(v string) {
-    o.Quantity = &v
+	o.Quantity = &v
 }
 
 // GetRevenueAmount returns the RevenueAmount field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetRevenueAmount() string {
-    if o == nil || utils.IsNil(o.RevenueAmount) {
-        var ret string
-        return ret
-    }
-    return *o.RevenueAmount
+	if o == nil || utils.IsNil(o.RevenueAmount) {
+		var ret string
+		return ret
+	}
+	return *o.RevenueAmount
 }
 
 // GetRevenueAmountOk returns a tuple with the RevenueAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetRevenueAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.RevenueAmount) {
-        return nil, false
-    }
-    return o.RevenueAmount, true
+	if o == nil || utils.IsNil(o.RevenueAmount) {
+		return nil, false
+	}
+	return o.RevenueAmount, true
 }
 
 // HasRevenueAmount returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasRevenueAmount() bool {
-    if o != nil && !utils.IsNil(o.RevenueAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RevenueAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRevenueAmount gets a reference to the given string and assigns it to the RevenueAmount field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetRevenueAmount(v string) {
-    o.RevenueAmount = &v
+	o.RevenueAmount = &v
 }
 
 // GetRevenueBreakdown returns the RevenueBreakdown field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetRevenueBreakdown() Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsRevenueBreakdown {
-    if o == nil || utils.IsNil(o.RevenueBreakdown) {
-        var ret Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsRevenueBreakdown
-        return ret
-    }
-    return *o.RevenueBreakdown
+	if o == nil || utils.IsNil(o.RevenueBreakdown) {
+		var ret Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsRevenueBreakdown
+		return ret
+	}
+	return *o.RevenueBreakdown
 }
 
 // GetRevenueBreakdownOk returns a tuple with the RevenueBreakdown field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetRevenueBreakdownOk() (*Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsRevenueBreakdown, bool) {
-    if o == nil || utils.IsNil(o.RevenueBreakdown) {
-        return nil, false
-    }
-    return o.RevenueBreakdown, true
+	if o == nil || utils.IsNil(o.RevenueBreakdown) {
+		return nil, false
+	}
+	return o.RevenueBreakdown, true
 }
 
 // HasRevenueBreakdown returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasRevenueBreakdown() bool {
-    if o != nil && !utils.IsNil(o.RevenueBreakdown) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RevenueBreakdown) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRevenueBreakdown gets a reference to the given Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsRevenueBreakdown and assigns it to the RevenueBreakdown field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetRevenueBreakdown(v Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsRevenueBreakdown) {
-    o.RevenueBreakdown = &v
+	o.RevenueBreakdown = &v
 }
 
 // GetSettlementAmount returns the SettlementAmount field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetSettlementAmount() string {
-    if o == nil || utils.IsNil(o.SettlementAmount) {
-        var ret string
-        return ret
-    }
-    return *o.SettlementAmount
+	if o == nil || utils.IsNil(o.SettlementAmount) {
+		var ret string
+		return ret
+	}
+	return *o.SettlementAmount
 }
 
 // GetSettlementAmountOk returns a tuple with the SettlementAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetSettlementAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SettlementAmount) {
-        return nil, false
-    }
-    return o.SettlementAmount, true
+	if o == nil || utils.IsNil(o.SettlementAmount) {
+		return nil, false
+	}
+	return o.SettlementAmount, true
 }
 
 // HasSettlementAmount returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasSettlementAmount() bool {
-    if o != nil && !utils.IsNil(o.SettlementAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SettlementAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSettlementAmount gets a reference to the given string and assigns it to the SettlementAmount field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetSettlementAmount(v string) {
-    o.SettlementAmount = &v
+	o.SettlementAmount = &v
 }
 
 // GetShippingCostAmount returns the ShippingCostAmount field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetShippingCostAmount() string {
-    if o == nil || utils.IsNil(o.ShippingCostAmount) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingCostAmount
+	if o == nil || utils.IsNil(o.ShippingCostAmount) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingCostAmount
 }
 
 // GetShippingCostAmountOk returns a tuple with the ShippingCostAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetShippingCostAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingCostAmount) {
-        return nil, false
-    }
-    return o.ShippingCostAmount, true
+	if o == nil || utils.IsNil(o.ShippingCostAmount) {
+		return nil, false
+	}
+	return o.ShippingCostAmount, true
 }
 
 // HasShippingCostAmount returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasShippingCostAmount() bool {
-    if o != nil && !utils.IsNil(o.ShippingCostAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingCostAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingCostAmount gets a reference to the given string and assigns it to the ShippingCostAmount field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetShippingCostAmount(v string) {
-    o.ShippingCostAmount = &v
+	o.ShippingCostAmount = &v
 }
 
 // GetShippingCostBreakdown returns the ShippingCostBreakdown field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetShippingCostBreakdown() Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsShippingCostBreakdown {
-    if o == nil || utils.IsNil(o.ShippingCostBreakdown) {
-        var ret Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsShippingCostBreakdown
-        return ret
-    }
-    return *o.ShippingCostBreakdown
+	if o == nil || utils.IsNil(o.ShippingCostBreakdown) {
+		var ret Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsShippingCostBreakdown
+		return ret
+	}
+	return *o.ShippingCostBreakdown
 }
 
 // GetShippingCostBreakdownOk returns a tuple with the ShippingCostBreakdown field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetShippingCostBreakdownOk() (*Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsShippingCostBreakdown, bool) {
-    if o == nil || utils.IsNil(o.ShippingCostBreakdown) {
-        return nil, false
-    }
-    return o.ShippingCostBreakdown, true
+	if o == nil || utils.IsNil(o.ShippingCostBreakdown) {
+		return nil, false
+	}
+	return o.ShippingCostBreakdown, true
 }
 
 // HasShippingCostBreakdown returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasShippingCostBreakdown() bool {
-    if o != nil && !utils.IsNil(o.ShippingCostBreakdown) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingCostBreakdown) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingCostBreakdown gets a reference to the given Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsShippingCostBreakdown and assigns it to the ShippingCostBreakdown field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetShippingCostBreakdown(v Finance202501GetTransactionsbyOrderResponseDataSkuTransactionsShippingCostBreakdown) {
-    o.ShippingCostBreakdown = &v
+	o.ShippingCostBreakdown = &v
 }
 
 // GetSkuId returns the SkuId field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetSkuId() string {
-    if o == nil || utils.IsNil(o.SkuId) {
-        var ret string
-        return ret
-    }
-    return *o.SkuId
+	if o == nil || utils.IsNil(o.SkuId) {
+		var ret string
+		return ret
+	}
+	return *o.SkuId
 }
 
 // GetSkuIdOk returns a tuple with the SkuId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetSkuIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SkuId) {
-        return nil, false
-    }
-    return o.SkuId, true
+	if o == nil || utils.IsNil(o.SkuId) {
+		return nil, false
+	}
+	return o.SkuId, true
 }
 
 // HasSkuId returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasSkuId() bool {
-    if o != nil && !utils.IsNil(o.SkuId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuId gets a reference to the given string and assigns it to the SkuId field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetSkuId(v string) {
-    o.SkuId = &v
+	o.SkuId = &v
 }
 
 // GetSkuName returns the SkuName field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetSkuName() string {
-    if o == nil || utils.IsNil(o.SkuName) {
-        var ret string
-        return ret
-    }
-    return *o.SkuName
+	if o == nil || utils.IsNil(o.SkuName) {
+		var ret string
+		return ret
+	}
+	return *o.SkuName
 }
 
 // GetSkuNameOk returns a tuple with the SkuName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetSkuNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SkuName) {
-        return nil, false
-    }
-    return o.SkuName, true
+	if o == nil || utils.IsNil(o.SkuName) {
+		return nil, false
+	}
+	return o.SkuName, true
 }
 
 // HasSkuName returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasSkuName() bool {
-    if o != nil && !utils.IsNil(o.SkuName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuName gets a reference to the given string and assigns it to the SkuName field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetSkuName(v string) {
-    o.SkuName = &v
+	o.SkuName = &v
 }
 
 // GetStatementId returns the StatementId field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetStatementId() string {
-    if o == nil || utils.IsNil(o.StatementId) {
-        var ret string
-        return ret
-    }
-    return *o.StatementId
+	if o == nil || utils.IsNil(o.StatementId) {
+		var ret string
+		return ret
+	}
+	return *o.StatementId
 }
 
 // GetStatementIdOk returns a tuple with the StatementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) GetStatementIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.StatementId) {
-        return nil, false
-    }
-    return o.StatementId, true
+	if o == nil || utils.IsNil(o.StatementId) {
+		return nil, false
+	}
+	return o.StatementId, true
 }
 
 // HasStatementId returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) HasStatementId() bool {
-    if o != nil && !utils.IsNil(o.StatementId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.StatementId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatementId gets a reference to the given string and assigns it to the StatementId field.
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) SetStatementId(v string) {
-    o.StatementId = &v
+	o.StatementId = &v
 }
 
 func (o Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.FeeTaxAmount) {
-        toSerialize["fee_tax_amount"] = o.FeeTaxAmount
-    }
-    if !utils.IsNil(o.FeeTaxBreakdown) {
-        toSerialize["fee_tax_breakdown"] = o.FeeTaxBreakdown
-    }
-    if !utils.IsNil(o.ProductName) {
-        toSerialize["product_name"] = o.ProductName
-    }
-    if !utils.IsNil(o.Quantity) {
-        toSerialize["quantity"] = o.Quantity
-    }
-    if !utils.IsNil(o.RevenueAmount) {
-        toSerialize["revenue_amount"] = o.RevenueAmount
-    }
-    if !utils.IsNil(o.RevenueBreakdown) {
-        toSerialize["revenue_breakdown"] = o.RevenueBreakdown
-    }
-    if !utils.IsNil(o.SettlementAmount) {
-        toSerialize["settlement_amount"] = o.SettlementAmount
-    }
-    if !utils.IsNil(o.ShippingCostAmount) {
-        toSerialize["shipping_cost_amount"] = o.ShippingCostAmount
-    }
-    if !utils.IsNil(o.ShippingCostBreakdown) {
-        toSerialize["shipping_cost_breakdown"] = o.ShippingCostBreakdown
-    }
-    if !utils.IsNil(o.SkuId) {
-        toSerialize["sku_id"] = o.SkuId
-    }
-    if !utils.IsNil(o.SkuName) {
-        toSerialize["sku_name"] = o.SkuName
-    }
-    if !utils.IsNil(o.StatementId) {
-        toSerialize["statement_id"] = o.StatementId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.FeeTaxAmount) {
+		toSerialize["fee_tax_amount"] = o.FeeTaxAmount
+	}
+	if !utils.IsNil(o.FeeTaxBreakdown) {
+		toSerialize["fee_tax_breakdown"] = o.FeeTaxBreakdown
+	}
+	if !utils.IsNil(o.ProductName) {
+		toSerialize["product_name"] = o.ProductName
+	}
+	if !utils.IsNil(o.Quantity) {
+		toSerialize["quantity"] = o.Quantity
+	}
+	if !utils.IsNil(o.RevenueAmount) {
+		toSerialize["revenue_amount"] = o.RevenueAmount
+	}
+	if !utils.IsNil(o.RevenueBreakdown) {
+		toSerialize["revenue_breakdown"] = o.RevenueBreakdown
+	}
+	if !utils.IsNil(o.SettlementAmount) {
+		toSerialize["settlement_amount"] = o.SettlementAmount
+	}
+	if !utils.IsNil(o.ShippingCostAmount) {
+		toSerialize["shipping_cost_amount"] = o.ShippingCostAmount
+	}
+	if !utils.IsNil(o.ShippingCostBreakdown) {
+		toSerialize["shipping_cost_breakdown"] = o.ShippingCostBreakdown
+	}
+	if !utils.IsNil(o.SkuId) {
+		toSerialize["sku_id"] = o.SkuId
+	}
+	if !utils.IsNil(o.SkuName) {
+		toSerialize["sku_name"] = o.SkuName
+	}
+	if !utils.IsNil(o.StatementId) {
+		toSerialize["statement_id"] = o.StatementId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Finance202501GetTransactionsbyOrderResponseDataSkuTransactions) UnmarshalJSON(data []byte) (err error) {
-    varFinance202501GetTransactionsbyOrderResponseDataSkuTransactions := _Finance202501GetTransactionsbyOrderResponseDataSkuTransactions{}
+	varFinance202501GetTransactionsbyOrderResponseDataSkuTransactions := _Finance202501GetTransactionsbyOrderResponseDataSkuTransactions{}
 
-    err = json.Unmarshal(data, &varFinance202501GetTransactionsbyOrderResponseDataSkuTransactions)
+	err = json.Unmarshal(data, &varFinance202501GetTransactionsbyOrderResponseDataSkuTransactions)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Finance202501GetTransactionsbyOrderResponseDataSkuTransactions(varFinance202501GetTransactionsbyOrderResponseDataSkuTransactions)
+	*o = Finance202501GetTransactionsbyOrderResponseDataSkuTransactions(varFinance202501GetTransactionsbyOrderResponseDataSkuTransactions)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "fee_tax_amount")
-        delete(additionalProperties, "fee_tax_breakdown")
-        delete(additionalProperties, "product_name")
-        delete(additionalProperties, "quantity")
-        delete(additionalProperties, "revenue_amount")
-        delete(additionalProperties, "revenue_breakdown")
-        delete(additionalProperties, "settlement_amount")
-        delete(additionalProperties, "shipping_cost_amount")
-        delete(additionalProperties, "shipping_cost_breakdown")
-        delete(additionalProperties, "sku_id")
-        delete(additionalProperties, "sku_name")
-        delete(additionalProperties, "statement_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "fee_tax_amount")
+		delete(additionalProperties, "fee_tax_breakdown")
+		delete(additionalProperties, "product_name")
+		delete(additionalProperties, "quantity")
+		delete(additionalProperties, "revenue_amount")
+		delete(additionalProperties, "revenue_breakdown")
+		delete(additionalProperties, "settlement_amount")
+		delete(additionalProperties, "shipping_cost_amount")
+		delete(additionalProperties, "shipping_cost_breakdown")
+		delete(additionalProperties, "sku_id")
+		delete(additionalProperties, "sku_name")
+		delete(additionalProperties, "statement_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFinance202501GetTransactionsbyOrderResponseDataSkuTransactions struct {
@@ -567,5 +567,3 @@ func (v *NullableFinance202501GetTransactionsbyOrderResponseDataSkuTransactions)
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309RecommendCategoryResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202309RecommendCategoryResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309RecommendCategoryResponseData{}
 
 // Product202309RecommendCategoryResponseData struct for Product202309RecommendCategoryResponseData
 type Product202309RecommendCategoryResponseData struct {
-    // Recommended category information.
-    Categories []Product202309RecommendCategoryResponseDataCategories `json:"categories,omitempty"`
-    // The recommended category ID. This is always a leaf category.
-    LeafCategoryId *string `json:"leaf_category_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Recommended category information.
+	Categories []Product202309RecommendCategoryResponseDataCategories `json:"categories,omitempty"`
+	// The recommended category ID. This is always a leaf category.
+	LeafCategoryId       *string `json:"leaf_category_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309RecommendCategoryResponseData Product202309RecommendCategoryResponseData
@@ -34,125 +34,125 @@ type _Product202309RecommendCategoryResponseData Product202309RecommendCategoryR
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309RecommendCategoryResponseData() *Product202309RecommendCategoryResponseData {
-    this := Product202309RecommendCategoryResponseData{}
-    return &this
+	this := Product202309RecommendCategoryResponseData{}
+	return &this
 }
 
 // NewProduct202309RecommendCategoryResponseDataWithDefaults instantiates a new Product202309RecommendCategoryResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309RecommendCategoryResponseDataWithDefaults() *Product202309RecommendCategoryResponseData {
-    this := Product202309RecommendCategoryResponseData{}
-    return &this
+	this := Product202309RecommendCategoryResponseData{}
+	return &this
 }
 
 // GetCategories returns the Categories field value if set, zero value otherwise.
 func (o *Product202309RecommendCategoryResponseData) GetCategories() []Product202309RecommendCategoryResponseDataCategories {
-    if o == nil || utils.IsNil(o.Categories) {
-        var ret []Product202309RecommendCategoryResponseDataCategories
-        return ret
-    }
-    return o.Categories
+	if o == nil || utils.IsNil(o.Categories) {
+		var ret []Product202309RecommendCategoryResponseDataCategories
+		return ret
+	}
+	return o.Categories
 }
 
 // GetCategoriesOk returns a tuple with the Categories field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309RecommendCategoryResponseData) GetCategoriesOk() ([]Product202309RecommendCategoryResponseDataCategories, bool) {
-    if o == nil || utils.IsNil(o.Categories) {
-        return nil, false
-    }
-    return o.Categories, true
+	if o == nil || utils.IsNil(o.Categories) {
+		return nil, false
+	}
+	return o.Categories, true
 }
 
 // HasCategories returns a boolean if a field has been set.
 func (o *Product202309RecommendCategoryResponseData) HasCategories() bool {
-    if o != nil && !utils.IsNil(o.Categories) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Categories) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCategories gets a reference to the given []Product202309RecommendCategoryResponseDataCategories and assigns it to the Categories field.
 func (o *Product202309RecommendCategoryResponseData) SetCategories(v []Product202309RecommendCategoryResponseDataCategories) {
-    o.Categories = v
+	o.Categories = v
 }
 
 // GetLeafCategoryId returns the LeafCategoryId field value if set, zero value otherwise.
 func (o *Product202309RecommendCategoryResponseData) GetLeafCategoryId() string {
-    if o == nil || utils.IsNil(o.LeafCategoryId) {
-        var ret string
-        return ret
-    }
-    return *o.LeafCategoryId
+	if o == nil || utils.IsNil(o.LeafCategoryId) {
+		var ret string
+		return ret
+	}
+	return *o.LeafCategoryId
 }
 
 // GetLeafCategoryIdOk returns a tuple with the LeafCategoryId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309RecommendCategoryResponseData) GetLeafCategoryIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.LeafCategoryId) {
-        return nil, false
-    }
-    return o.LeafCategoryId, true
+	if o == nil || utils.IsNil(o.LeafCategoryId) {
+		return nil, false
+	}
+	return o.LeafCategoryId, true
 }
 
 // HasLeafCategoryId returns a boolean if a field has been set.
 func (o *Product202309RecommendCategoryResponseData) HasLeafCategoryId() bool {
-    if o != nil && !utils.IsNil(o.LeafCategoryId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LeafCategoryId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLeafCategoryId gets a reference to the given string and assigns it to the LeafCategoryId field.
 func (o *Product202309RecommendCategoryResponseData) SetLeafCategoryId(v string) {
-    o.LeafCategoryId = &v
+	o.LeafCategoryId = &v
 }
 
 func (o Product202309RecommendCategoryResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309RecommendCategoryResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Categories) {
-        toSerialize["categories"] = o.Categories
-    }
-    if !utils.IsNil(o.LeafCategoryId) {
-        toSerialize["leaf_category_id"] = o.LeafCategoryId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Categories) {
+		toSerialize["categories"] = o.Categories
+	}
+	if !utils.IsNil(o.LeafCategoryId) {
+		toSerialize["leaf_category_id"] = o.LeafCategoryId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309RecommendCategoryResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309RecommendCategoryResponseData := _Product202309RecommendCategoryResponseData{}
+	varProduct202309RecommendCategoryResponseData := _Product202309RecommendCategoryResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202309RecommendCategoryResponseData)
+	err = json.Unmarshal(data, &varProduct202309RecommendCategoryResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309RecommendCategoryResponseData(varProduct202309RecommendCategoryResponseData)
+	*o = Product202309RecommendCategoryResponseData(varProduct202309RecommendCategoryResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "categories")
-        delete(additionalProperties, "leaf_category_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "categories")
+		delete(additionalProperties, "leaf_category_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309RecommendCategoryResponseData struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309RecommendCategoryResponseData) UnmarshalJSON(src [
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

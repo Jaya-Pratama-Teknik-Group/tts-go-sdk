@@ -11,21 +11,21 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetGlobalCategoryRulesResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetGlobalCategoryRulesResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetGlobalCategoryRulesResponseData{}
 
 // Product202309GetGlobalCategoryRulesResponseData struct for Product202309GetGlobalCategoryRulesResponseData
 type Product202309GetGlobalCategoryRulesResponseData struct {
-    Manufacturer *Product202309GetGlobalCategoryRulesResponseDataManufacturer `json:"manufacturer,omitempty"`
-    // Certification related rules. As per TikTok Shop guidelines, certifications are required for certain restricted product categories. Refer to [TikTok Shop Restricted Products Policy](https://seller-us.tiktok.com/university/essay?identity=1&role=1&knowledge_id=3238037484275457&from=policy) for information on product category restrictions.  If this is empty, it means certifications are not required for this category.
-    ProductCertifications []Product202309GetGlobalCategoryRulesResponseDataProductCertifications `json:"product_certifications,omitempty"`
-    ResponsiblePerson *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson `json:"responsible_person,omitempty"`
-    SizeChart *Product202309GetGlobalCategoryRulesResponseDataSizeChart `json:"size_chart,omitempty"`
-    AdditionalProperties map[string]interface{}
+	Manufacturer *Product202309GetGlobalCategoryRulesResponseDataManufacturer `json:"manufacturer,omitempty"`
+	// Certification related rules. As per TikTok Shop guidelines, certifications are required for certain restricted product categories. Refer to [TikTok Shop Restricted Products Policy](https://seller-us.tiktok.com/university/essay?identity=1&role=1&knowledge_id=3238037484275457&from=policy) for information on product category restrictions.  If this is empty, it means certifications are not required for this category.
+	ProductCertifications []Product202309GetGlobalCategoryRulesResponseDataProductCertifications `json:"product_certifications,omitempty"`
+	ResponsiblePerson     *Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson      `json:"responsible_person,omitempty"`
+	SizeChart             *Product202309GetGlobalCategoryRulesResponseDataSizeChart              `json:"size_chart,omitempty"`
+	AdditionalProperties  map[string]interface{}
 }
 
 type _Product202309GetGlobalCategoryRulesResponseData Product202309GetGlobalCategoryRulesResponseData
@@ -35,197 +35,197 @@ type _Product202309GetGlobalCategoryRulesResponseData Product202309GetGlobalCate
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetGlobalCategoryRulesResponseData() *Product202309GetGlobalCategoryRulesResponseData {
-    this := Product202309GetGlobalCategoryRulesResponseData{}
-    return &this
+	this := Product202309GetGlobalCategoryRulesResponseData{}
+	return &this
 }
 
 // NewProduct202309GetGlobalCategoryRulesResponseDataWithDefaults instantiates a new Product202309GetGlobalCategoryRulesResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetGlobalCategoryRulesResponseDataWithDefaults() *Product202309GetGlobalCategoryRulesResponseData {
-    this := Product202309GetGlobalCategoryRulesResponseData{}
-    return &this
+	this := Product202309GetGlobalCategoryRulesResponseData{}
+	return &this
 }
 
 // GetManufacturer returns the Manufacturer field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseData) GetManufacturer() Product202309GetGlobalCategoryRulesResponseDataManufacturer {
-    if o == nil || utils.IsNil(o.Manufacturer) {
-        var ret Product202309GetGlobalCategoryRulesResponseDataManufacturer
-        return ret
-    }
-    return *o.Manufacturer
+	if o == nil || utils.IsNil(o.Manufacturer) {
+		var ret Product202309GetGlobalCategoryRulesResponseDataManufacturer
+		return ret
+	}
+	return *o.Manufacturer
 }
 
 // GetManufacturerOk returns a tuple with the Manufacturer field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseData) GetManufacturerOk() (*Product202309GetGlobalCategoryRulesResponseDataManufacturer, bool) {
-    if o == nil || utils.IsNil(o.Manufacturer) {
-        return nil, false
-    }
-    return o.Manufacturer, true
+	if o == nil || utils.IsNil(o.Manufacturer) {
+		return nil, false
+	}
+	return o.Manufacturer, true
 }
 
 // HasManufacturer returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseData) HasManufacturer() bool {
-    if o != nil && !utils.IsNil(o.Manufacturer) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Manufacturer) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetManufacturer gets a reference to the given Product202309GetGlobalCategoryRulesResponseDataManufacturer and assigns it to the Manufacturer field.
 func (o *Product202309GetGlobalCategoryRulesResponseData) SetManufacturer(v Product202309GetGlobalCategoryRulesResponseDataManufacturer) {
-    o.Manufacturer = &v
+	o.Manufacturer = &v
 }
 
 // GetProductCertifications returns the ProductCertifications field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseData) GetProductCertifications() []Product202309GetGlobalCategoryRulesResponseDataProductCertifications {
-    if o == nil || utils.IsNil(o.ProductCertifications) {
-        var ret []Product202309GetGlobalCategoryRulesResponseDataProductCertifications
-        return ret
-    }
-    return o.ProductCertifications
+	if o == nil || utils.IsNil(o.ProductCertifications) {
+		var ret []Product202309GetGlobalCategoryRulesResponseDataProductCertifications
+		return ret
+	}
+	return o.ProductCertifications
 }
 
 // GetProductCertificationsOk returns a tuple with the ProductCertifications field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseData) GetProductCertificationsOk() ([]Product202309GetGlobalCategoryRulesResponseDataProductCertifications, bool) {
-    if o == nil || utils.IsNil(o.ProductCertifications) {
-        return nil, false
-    }
-    return o.ProductCertifications, true
+	if o == nil || utils.IsNil(o.ProductCertifications) {
+		return nil, false
+	}
+	return o.ProductCertifications, true
 }
 
 // HasProductCertifications returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseData) HasProductCertifications() bool {
-    if o != nil && !utils.IsNil(o.ProductCertifications) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductCertifications) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductCertifications gets a reference to the given []Product202309GetGlobalCategoryRulesResponseDataProductCertifications and assigns it to the ProductCertifications field.
 func (o *Product202309GetGlobalCategoryRulesResponseData) SetProductCertifications(v []Product202309GetGlobalCategoryRulesResponseDataProductCertifications) {
-    o.ProductCertifications = v
+	o.ProductCertifications = v
 }
 
 // GetResponsiblePerson returns the ResponsiblePerson field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseData) GetResponsiblePerson() Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson {
-    if o == nil || utils.IsNil(o.ResponsiblePerson) {
-        var ret Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson
-        return ret
-    }
-    return *o.ResponsiblePerson
+	if o == nil || utils.IsNil(o.ResponsiblePerson) {
+		var ret Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson
+		return ret
+	}
+	return *o.ResponsiblePerson
 }
 
 // GetResponsiblePersonOk returns a tuple with the ResponsiblePerson field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseData) GetResponsiblePersonOk() (*Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson, bool) {
-    if o == nil || utils.IsNil(o.ResponsiblePerson) {
-        return nil, false
-    }
-    return o.ResponsiblePerson, true
+	if o == nil || utils.IsNil(o.ResponsiblePerson) {
+		return nil, false
+	}
+	return o.ResponsiblePerson, true
 }
 
 // HasResponsiblePerson returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseData) HasResponsiblePerson() bool {
-    if o != nil && !utils.IsNil(o.ResponsiblePerson) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ResponsiblePerson) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetResponsiblePerson gets a reference to the given Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson and assigns it to the ResponsiblePerson field.
 func (o *Product202309GetGlobalCategoryRulesResponseData) SetResponsiblePerson(v Product202309GetGlobalCategoryRulesResponseDataResponsiblePerson) {
-    o.ResponsiblePerson = &v
+	o.ResponsiblePerson = &v
 }
 
 // GetSizeChart returns the SizeChart field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseData) GetSizeChart() Product202309GetGlobalCategoryRulesResponseDataSizeChart {
-    if o == nil || utils.IsNil(o.SizeChart) {
-        var ret Product202309GetGlobalCategoryRulesResponseDataSizeChart
-        return ret
-    }
-    return *o.SizeChart
+	if o == nil || utils.IsNil(o.SizeChart) {
+		var ret Product202309GetGlobalCategoryRulesResponseDataSizeChart
+		return ret
+	}
+	return *o.SizeChart
 }
 
 // GetSizeChartOk returns a tuple with the SizeChart field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseData) GetSizeChartOk() (*Product202309GetGlobalCategoryRulesResponseDataSizeChart, bool) {
-    if o == nil || utils.IsNil(o.SizeChart) {
-        return nil, false
-    }
-    return o.SizeChart, true
+	if o == nil || utils.IsNil(o.SizeChart) {
+		return nil, false
+	}
+	return o.SizeChart, true
 }
 
 // HasSizeChart returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseData) HasSizeChart() bool {
-    if o != nil && !utils.IsNil(o.SizeChart) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SizeChart) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSizeChart gets a reference to the given Product202309GetGlobalCategoryRulesResponseDataSizeChart and assigns it to the SizeChart field.
 func (o *Product202309GetGlobalCategoryRulesResponseData) SetSizeChart(v Product202309GetGlobalCategoryRulesResponseDataSizeChart) {
-    o.SizeChart = &v
+	o.SizeChart = &v
 }
 
 func (o Product202309GetGlobalCategoryRulesResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetGlobalCategoryRulesResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Manufacturer) {
-        toSerialize["manufacturer"] = o.Manufacturer
-    }
-    if !utils.IsNil(o.ProductCertifications) {
-        toSerialize["product_certifications"] = o.ProductCertifications
-    }
-    if !utils.IsNil(o.ResponsiblePerson) {
-        toSerialize["responsible_person"] = o.ResponsiblePerson
-    }
-    if !utils.IsNil(o.SizeChart) {
-        toSerialize["size_chart"] = o.SizeChart
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Manufacturer) {
+		toSerialize["manufacturer"] = o.Manufacturer
+	}
+	if !utils.IsNil(o.ProductCertifications) {
+		toSerialize["product_certifications"] = o.ProductCertifications
+	}
+	if !utils.IsNil(o.ResponsiblePerson) {
+		toSerialize["responsible_person"] = o.ResponsiblePerson
+	}
+	if !utils.IsNil(o.SizeChart) {
+		toSerialize["size_chart"] = o.SizeChart
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetGlobalCategoryRulesResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetGlobalCategoryRulesResponseData := _Product202309GetGlobalCategoryRulesResponseData{}
+	varProduct202309GetGlobalCategoryRulesResponseData := _Product202309GetGlobalCategoryRulesResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202309GetGlobalCategoryRulesResponseData)
+	err = json.Unmarshal(data, &varProduct202309GetGlobalCategoryRulesResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetGlobalCategoryRulesResponseData(varProduct202309GetGlobalCategoryRulesResponseData)
+	*o = Product202309GetGlobalCategoryRulesResponseData(varProduct202309GetGlobalCategoryRulesResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "manufacturer")
-        delete(additionalProperties, "product_certifications")
-        delete(additionalProperties, "responsible_person")
-        delete(additionalProperties, "size_chart")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "manufacturer")
+		delete(additionalProperties, "product_certifications")
+		delete(additionalProperties, "responsible_person")
+		delete(additionalProperties, "size_chart")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetGlobalCategoryRulesResponseData struct {
@@ -263,5 +263,3 @@ func (v *NullableProduct202309GetGlobalCategoryRulesResponseData) UnmarshalJSON(
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

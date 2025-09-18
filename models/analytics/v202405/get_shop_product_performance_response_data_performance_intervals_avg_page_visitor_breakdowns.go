@@ -11,20 +11,20 @@ API version: 1.0.0
 package analytics_v202405
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns type satisfies the MappedNullable interface at compile time
+// checks if the Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns{}
 
 // Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns struct for Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns
 type Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns struct {
-    // Average number of unique visitors per day for the corresponding type.
-    Amount *int64 `json:"amount,omitempty"`
-    // Breakdown type. Possible values: LIVE, VIDEO, PRODUCT_CARD
-    Type *string `json:"type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Average number of unique visitors per day for the corresponding type.
+	Amount *int64 `json:"amount,omitempty"`
+	// Breakdown type. Possible values: LIVE, VIDEO, PRODUCT_CARD
+	Type                 *string `json:"type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns
@@ -34,125 +34,125 @@ type _Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAv
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns() *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns {
-    this := Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns{}
-    return &this
+	this := Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns{}
+	return &this
 }
 
 // NewAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdownsWithDefaults instantiates a new Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdownsWithDefaults() *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns {
-    this := Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns{}
-    return &this
+	this := Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns{}
+	return &this
 }
 
 // GetAmount returns the Amount field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) GetAmount() int64 {
-    if o == nil || utils.IsNil(o.Amount) {
-        var ret int64
-        return ret
-    }
-    return *o.Amount
+	if o == nil || utils.IsNil(o.Amount) {
+		var ret int64
+		return ret
+	}
+	return *o.Amount
 }
 
 // GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) GetAmountOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Amount) {
-        return nil, false
-    }
-    return o.Amount, true
+	if o == nil || utils.IsNil(o.Amount) {
+		return nil, false
+	}
+	return o.Amount, true
 }
 
 // HasAmount returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) HasAmount() bool {
-    if o != nil && !utils.IsNil(o.Amount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Amount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAmount gets a reference to the given int64 and assigns it to the Amount field.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) SetAmount(v int64) {
-    o.Amount = &v
+	o.Amount = &v
 }
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) GetType() string {
-    if o == nil || utils.IsNil(o.Type) {
-        var ret string
-        return ret
-    }
-    return *o.Type
+	if o == nil || utils.IsNil(o.Type) {
+		var ret string
+		return ret
+	}
+	return *o.Type
 }
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) GetTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Type) {
-        return nil, false
-    }
-    return o.Type, true
+	if o == nil || utils.IsNil(o.Type) {
+		return nil, false
+	}
+	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) HasType() bool {
-    if o != nil && !utils.IsNil(o.Type) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Type) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) SetType(v string) {
-    o.Type = &v
+	o.Type = &v
 }
 
 func (o Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Amount) {
-        toSerialize["amount"] = o.Amount
-    }
-    if !utils.IsNil(o.Type) {
-        toSerialize["type"] = o.Type
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
+	}
+	if !utils.IsNil(o.Type) {
+		toSerialize["type"] = o.Type
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns) UnmarshalJSON(data []byte) (err error) {
-    varAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns := _Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns{}
+	varAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns := _Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns{}
 
-    err = json.Unmarshal(data, &varAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns)
+	err = json.Unmarshal(data, &varAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns(varAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns)
+	*o = Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns(varAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "amount")
-        delete(additionalProperties, "type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "amount")
+		delete(additionalProperties, "type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAnalytics202405GetShopProductPerformanceResponseDataPerformanceIntervalsAvgPageVisitorBreakdowns struct {
@@ -190,5 +190,3 @@ func (v *NullableAnalytics202405GetShopProductPerformanceResponseDataPerformance
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

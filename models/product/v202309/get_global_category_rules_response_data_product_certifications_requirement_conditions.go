@@ -11,24 +11,24 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions{}
 
 // Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions struct for Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions
 type Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions struct {
-    // The ID of the product attribute that is being evaluated by the condition.
-    AttributeId *string `json:"attribute_id,omitempty"`
-    // The ID of the product attribute value that must match the seller's input for the condition to be true.
-    AttributeValueId *string `json:"attribute_value_id,omitempty"`
-    // The type of condition, such as matching values, or range comparisons. Possible values: - VALUE_ID_MATCH: The condition is true when the seller selects a value whose ID matches the one specified in this condition.
-    ConditionType *string `json:"condition_type,omitempty"`
-    // The market where the certification is required when the conditions are met. Possible values: - DE: Germany - ES: Spain - FR: France - GB: United Kingdom - ID: Indonesia - IT: Italy - IE: Ireland - JP: Japan - MY: Malaysia - PH: Philippines - SG: Singapore - TH: Thailand - US: United States - VN: Vietnam - MX: Mexico
-    Region *string `json:"region,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The ID of the product attribute that is being evaluated by the condition.
+	AttributeId *string `json:"attribute_id,omitempty"`
+	// The ID of the product attribute value that must match the seller's input for the condition to be true.
+	AttributeValueId *string `json:"attribute_value_id,omitempty"`
+	// The type of condition, such as matching values, or range comparisons. Possible values: - VALUE_ID_MATCH: The condition is true when the seller selects a value whose ID matches the one specified in this condition.
+	ConditionType *string `json:"condition_type,omitempty"`
+	// The market where the certification is required when the conditions are met. Possible values: - DE: Germany - ES: Spain - FR: France - GB: United Kingdom - ID: Indonesia - IT: Italy - IE: Ireland - JP: Japan - MY: Malaysia - PH: Philippines - SG: Singapore - TH: Thailand - US: United States - VN: Vietnam - MX: Mexico
+	Region               *string `json:"region,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions
@@ -38,197 +38,197 @@ type _Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequir
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions() *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions {
-    this := Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions{}
-    return &this
+	this := Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions{}
+	return &this
 }
 
 // NewProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditionsWithDefaults instantiates a new Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditionsWithDefaults() *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions {
-    this := Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions{}
-    return &this
+	this := Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions{}
+	return &this
 }
 
 // GetAttributeId returns the AttributeId field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) GetAttributeId() string {
-    if o == nil || utils.IsNil(o.AttributeId) {
-        var ret string
-        return ret
-    }
-    return *o.AttributeId
+	if o == nil || utils.IsNil(o.AttributeId) {
+		var ret string
+		return ret
+	}
+	return *o.AttributeId
 }
 
 // GetAttributeIdOk returns a tuple with the AttributeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) GetAttributeIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.AttributeId) {
-        return nil, false
-    }
-    return o.AttributeId, true
+	if o == nil || utils.IsNil(o.AttributeId) {
+		return nil, false
+	}
+	return o.AttributeId, true
 }
 
 // HasAttributeId returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) HasAttributeId() bool {
-    if o != nil && !utils.IsNil(o.AttributeId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AttributeId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAttributeId gets a reference to the given string and assigns it to the AttributeId field.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) SetAttributeId(v string) {
-    o.AttributeId = &v
+	o.AttributeId = &v
 }
 
 // GetAttributeValueId returns the AttributeValueId field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) GetAttributeValueId() string {
-    if o == nil || utils.IsNil(o.AttributeValueId) {
-        var ret string
-        return ret
-    }
-    return *o.AttributeValueId
+	if o == nil || utils.IsNil(o.AttributeValueId) {
+		var ret string
+		return ret
+	}
+	return *o.AttributeValueId
 }
 
 // GetAttributeValueIdOk returns a tuple with the AttributeValueId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) GetAttributeValueIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.AttributeValueId) {
-        return nil, false
-    }
-    return o.AttributeValueId, true
+	if o == nil || utils.IsNil(o.AttributeValueId) {
+		return nil, false
+	}
+	return o.AttributeValueId, true
 }
 
 // HasAttributeValueId returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) HasAttributeValueId() bool {
-    if o != nil && !utils.IsNil(o.AttributeValueId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AttributeValueId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAttributeValueId gets a reference to the given string and assigns it to the AttributeValueId field.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) SetAttributeValueId(v string) {
-    o.AttributeValueId = &v
+	o.AttributeValueId = &v
 }
 
 // GetConditionType returns the ConditionType field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) GetConditionType() string {
-    if o == nil || utils.IsNil(o.ConditionType) {
-        var ret string
-        return ret
-    }
-    return *o.ConditionType
+	if o == nil || utils.IsNil(o.ConditionType) {
+		var ret string
+		return ret
+	}
+	return *o.ConditionType
 }
 
 // GetConditionTypeOk returns a tuple with the ConditionType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) GetConditionTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ConditionType) {
-        return nil, false
-    }
-    return o.ConditionType, true
+	if o == nil || utils.IsNil(o.ConditionType) {
+		return nil, false
+	}
+	return o.ConditionType, true
 }
 
 // HasConditionType returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) HasConditionType() bool {
-    if o != nil && !utils.IsNil(o.ConditionType) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ConditionType) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetConditionType gets a reference to the given string and assigns it to the ConditionType field.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) SetConditionType(v string) {
-    o.ConditionType = &v
+	o.ConditionType = &v
 }
 
 // GetRegion returns the Region field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) GetRegion() string {
-    if o == nil || utils.IsNil(o.Region) {
-        var ret string
-        return ret
-    }
-    return *o.Region
+	if o == nil || utils.IsNil(o.Region) {
+		var ret string
+		return ret
+	}
+	return *o.Region
 }
 
 // GetRegionOk returns a tuple with the Region field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) GetRegionOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Region) {
-        return nil, false
-    }
-    return o.Region, true
+	if o == nil || utils.IsNil(o.Region) {
+		return nil, false
+	}
+	return o.Region, true
 }
 
 // HasRegion returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) HasRegion() bool {
-    if o != nil && !utils.IsNil(o.Region) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Region) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRegion gets a reference to the given string and assigns it to the Region field.
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) SetRegion(v string) {
-    o.Region = &v
+	o.Region = &v
 }
 
 func (o Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.AttributeId) {
-        toSerialize["attribute_id"] = o.AttributeId
-    }
-    if !utils.IsNil(o.AttributeValueId) {
-        toSerialize["attribute_value_id"] = o.AttributeValueId
-    }
-    if !utils.IsNil(o.ConditionType) {
-        toSerialize["condition_type"] = o.ConditionType
-    }
-    if !utils.IsNil(o.Region) {
-        toSerialize["region"] = o.Region
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.AttributeId) {
+		toSerialize["attribute_id"] = o.AttributeId
+	}
+	if !utils.IsNil(o.AttributeValueId) {
+		toSerialize["attribute_value_id"] = o.AttributeValueId
+	}
+	if !utils.IsNil(o.ConditionType) {
+		toSerialize["condition_type"] = o.ConditionType
+	}
+	if !utils.IsNil(o.Region) {
+		toSerialize["region"] = o.Region
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions := _Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions{}
+	varProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions := _Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions{}
 
-    err = json.Unmarshal(data, &varProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions)
+	err = json.Unmarshal(data, &varProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions(varProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions)
+	*o = Product202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions(varProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "attribute_id")
-        delete(additionalProperties, "attribute_value_id")
-        delete(additionalProperties, "condition_type")
-        delete(additionalProperties, "region")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "attribute_id")
+		delete(additionalProperties, "attribute_value_id")
+		delete(additionalProperties, "condition_type")
+		delete(additionalProperties, "region")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetGlobalCategoryRulesResponseDataProductCertificationsRequirementConditions struct {
@@ -266,5 +266,3 @@ func (v *NullableProduct202309GetGlobalCategoryRulesResponseDataProductCertifica
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

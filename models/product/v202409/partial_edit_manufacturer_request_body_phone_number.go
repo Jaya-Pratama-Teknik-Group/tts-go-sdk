@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202409
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202409PartialEditManufacturerRequestBodyPhoneNumber type satisfies the MappedNullable interface at compile time
+// checks if the Product202409PartialEditManufacturerRequestBodyPhoneNumber type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202409PartialEditManufacturerRequestBodyPhoneNumber{}
 
 // Product202409PartialEditManufacturerRequestBodyPhoneNumber struct for Product202409PartialEditManufacturerRequestBodyPhoneNumber
 type Product202409PartialEditManufacturerRequestBodyPhoneNumber struct {
-    // Indicates the availability of the phone number. Possible values: - `AVAILABLE`: The phone number is available and required. - `UNAVAILABLE`: No phone number is available.  Default: AVAILABLE
-    Availability *string `json:"availability,omitempty"`
-    // The country code of the phone number, prefixed by a plus `+` symbol. E.g. +353 for Ireland. Max digits: 4 Required if `availability=AVAILABLE`. 
-    CountryCode *string `json:"country_code,omitempty"`
-    // The local number. Length: 7 - 20 digits Required if `availability=AVAILABLE`. 
-    LocalNumber *string `json:"local_number,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Indicates the availability of the phone number. Possible values: - `AVAILABLE`: The phone number is available and required. - `UNAVAILABLE`: No phone number is available.  Default: AVAILABLE
+	Availability *string `json:"availability,omitempty"`
+	// The country code of the phone number, prefixed by a plus `+` symbol. E.g. +353 for Ireland. Max digits: 4 Required if `availability=AVAILABLE`.
+	CountryCode *string `json:"country_code,omitempty"`
+	// The local number. Length: 7 - 20 digits Required if `availability=AVAILABLE`.
+	LocalNumber          *string `json:"local_number,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202409PartialEditManufacturerRequestBodyPhoneNumber Product202409PartialEditManufacturerRequestBodyPhoneNumber
@@ -36,161 +36,161 @@ type _Product202409PartialEditManufacturerRequestBodyPhoneNumber Product202409Pa
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202409PartialEditManufacturerRequestBodyPhoneNumber() *Product202409PartialEditManufacturerRequestBodyPhoneNumber {
-    this := Product202409PartialEditManufacturerRequestBodyPhoneNumber{}
-    return &this
+	this := Product202409PartialEditManufacturerRequestBodyPhoneNumber{}
+	return &this
 }
 
 // NewProduct202409PartialEditManufacturerRequestBodyPhoneNumberWithDefaults instantiates a new Product202409PartialEditManufacturerRequestBodyPhoneNumber object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202409PartialEditManufacturerRequestBodyPhoneNumberWithDefaults() *Product202409PartialEditManufacturerRequestBodyPhoneNumber {
-    this := Product202409PartialEditManufacturerRequestBodyPhoneNumber{}
-    return &this
+	this := Product202409PartialEditManufacturerRequestBodyPhoneNumber{}
+	return &this
 }
 
 // GetAvailability returns the Availability field value if set, zero value otherwise.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) GetAvailability() string {
-    if o == nil || utils.IsNil(o.Availability) {
-        var ret string
-        return ret
-    }
-    return *o.Availability
+	if o == nil || utils.IsNil(o.Availability) {
+		var ret string
+		return ret
+	}
+	return *o.Availability
 }
 
 // GetAvailabilityOk returns a tuple with the Availability field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) GetAvailabilityOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Availability) {
-        return nil, false
-    }
-    return o.Availability, true
+	if o == nil || utils.IsNil(o.Availability) {
+		return nil, false
+	}
+	return o.Availability, true
 }
 
 // HasAvailability returns a boolean if a field has been set.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) HasAvailability() bool {
-    if o != nil && !utils.IsNil(o.Availability) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Availability) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAvailability gets a reference to the given string and assigns it to the Availability field.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) SetAvailability(v string) {
-    o.Availability = &v
+	o.Availability = &v
 }
 
 // GetCountryCode returns the CountryCode field value if set, zero value otherwise.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) GetCountryCode() string {
-    if o == nil || utils.IsNil(o.CountryCode) {
-        var ret string
-        return ret
-    }
-    return *o.CountryCode
+	if o == nil || utils.IsNil(o.CountryCode) {
+		var ret string
+		return ret
+	}
+	return *o.CountryCode
 }
 
 // GetCountryCodeOk returns a tuple with the CountryCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) GetCountryCodeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.CountryCode) {
-        return nil, false
-    }
-    return o.CountryCode, true
+	if o == nil || utils.IsNil(o.CountryCode) {
+		return nil, false
+	}
+	return o.CountryCode, true
 }
 
 // HasCountryCode returns a boolean if a field has been set.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) HasCountryCode() bool {
-    if o != nil && !utils.IsNil(o.CountryCode) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CountryCode) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCountryCode gets a reference to the given string and assigns it to the CountryCode field.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) SetCountryCode(v string) {
-    o.CountryCode = &v
+	o.CountryCode = &v
 }
 
 // GetLocalNumber returns the LocalNumber field value if set, zero value otherwise.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) GetLocalNumber() string {
-    if o == nil || utils.IsNil(o.LocalNumber) {
-        var ret string
-        return ret
-    }
-    return *o.LocalNumber
+	if o == nil || utils.IsNil(o.LocalNumber) {
+		var ret string
+		return ret
+	}
+	return *o.LocalNumber
 }
 
 // GetLocalNumberOk returns a tuple with the LocalNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) GetLocalNumberOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.LocalNumber) {
-        return nil, false
-    }
-    return o.LocalNumber, true
+	if o == nil || utils.IsNil(o.LocalNumber) {
+		return nil, false
+	}
+	return o.LocalNumber, true
 }
 
 // HasLocalNumber returns a boolean if a field has been set.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) HasLocalNumber() bool {
-    if o != nil && !utils.IsNil(o.LocalNumber) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LocalNumber) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocalNumber gets a reference to the given string and assigns it to the LocalNumber field.
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) SetLocalNumber(v string) {
-    o.LocalNumber = &v
+	o.LocalNumber = &v
 }
 
 func (o Product202409PartialEditManufacturerRequestBodyPhoneNumber) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202409PartialEditManufacturerRequestBodyPhoneNumber) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Availability) {
-        toSerialize["availability"] = o.Availability
-    }
-    if !utils.IsNil(o.CountryCode) {
-        toSerialize["country_code"] = o.CountryCode
-    }
-    if !utils.IsNil(o.LocalNumber) {
-        toSerialize["local_number"] = o.LocalNumber
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Availability) {
+		toSerialize["availability"] = o.Availability
+	}
+	if !utils.IsNil(o.CountryCode) {
+		toSerialize["country_code"] = o.CountryCode
+	}
+	if !utils.IsNil(o.LocalNumber) {
+		toSerialize["local_number"] = o.LocalNumber
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202409PartialEditManufacturerRequestBodyPhoneNumber) UnmarshalJSON(data []byte) (err error) {
-    varProduct202409PartialEditManufacturerRequestBodyPhoneNumber := _Product202409PartialEditManufacturerRequestBodyPhoneNumber{}
+	varProduct202409PartialEditManufacturerRequestBodyPhoneNumber := _Product202409PartialEditManufacturerRequestBodyPhoneNumber{}
 
-    err = json.Unmarshal(data, &varProduct202409PartialEditManufacturerRequestBodyPhoneNumber)
+	err = json.Unmarshal(data, &varProduct202409PartialEditManufacturerRequestBodyPhoneNumber)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202409PartialEditManufacturerRequestBodyPhoneNumber(varProduct202409PartialEditManufacturerRequestBodyPhoneNumber)
+	*o = Product202409PartialEditManufacturerRequestBodyPhoneNumber(varProduct202409PartialEditManufacturerRequestBodyPhoneNumber)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "availability")
-        delete(additionalProperties, "country_code")
-        delete(additionalProperties, "local_number")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "availability")
+		delete(additionalProperties, "country_code")
+		delete(additionalProperties, "local_number")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202409PartialEditManufacturerRequestBodyPhoneNumber struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202409PartialEditManufacturerRequestBodyPhoneNumber) Unm
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

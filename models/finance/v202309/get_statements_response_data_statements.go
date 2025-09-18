@@ -11,38 +11,38 @@ API version: 1.0.0
 package finance_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Finance202309GetStatementsResponseDataStatements type satisfies the MappedNullable interface at compile time
+// checks if the Finance202309GetStatementsResponseDataStatements type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Finance202309GetStatementsResponseDataStatements{}
 
 // Finance202309GetStatementsResponseDataStatements struct for Finance202309GetStatementsResponseDataStatements
 type Finance202309GetStatementsResponseDataStatements struct {
-    // The adjustment amount. For more details about the reason for adjustment, refer to the [Get Statement Transactions API](https://partner.tiktokshop.com/docv2/page/650a6749defece02be67da87).
-    AdjustmentAmount *string `json:"adjustment_amount,omitempty"`
-    // The currency code in ISO 4217 format.
-    Currency *string `json:"currency,omitempty"`
-    // The fees charged by TikTok Shop at the time of order settlement. An order is deemed settled a certain number of days after delivery (varies by region) if no returns or refunds are pending.  **Note**: Shipping-related costs are excluded, except for local sellers in the SEA region, where they are included.
-    FeeAmount *string `json:"fee_amount,omitempty"`
-    // The statement ID.
-    Id *string `json:"id,omitempty"`
-    // The final revenue amount after seller discounts are deducted. Applicable only for local sellers outside the SEA region. 
-    NetSalesAmount *string `json:"net_sales_amount,omitempty"`
-    // The payment ID.
-    PaymentId *string `json:"payment_id,omitempty"`
-    // The payment status, indicating whether payment has been transferred to the seller's bank account. Possible values: - PAID: Payment has been transferred to the seller. - FAILED: Payment transfer failed. - PROCESSING: Payment is currently being processed.
-    PaymentStatus *string `json:"payment_status,omitempty"`
-    // The final revenue amount at the time of order settlement.  Applicable for all regions except UK and US.
-    RevenueAmount *string `json:"revenue_amount,omitempty"`
-    // The settlement amount. 
-    SettlementAmount *string `json:"settlement_amount,omitempty"`
-    // The shipping fees. Applicable only for local sellers outside the SEA region. 
-    ShippingCostAmount *string `json:"shipping_cost_amount,omitempty"`
-    // The time when the statement was generated. Unix timestamp.  Statements are generated daily at 00:00 UTC, and it includes all transactions from the past day. 
-    StatementTime *int64 `json:"statement_time,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The adjustment amount. For more details about the reason for adjustment, refer to the [Get Statement Transactions API](https://partner.tiktokshop.com/docv2/page/650a6749defece02be67da87).
+	AdjustmentAmount *string `json:"adjustment_amount,omitempty"`
+	// The currency code in ISO 4217 format.
+	Currency *string `json:"currency,omitempty"`
+	// The fees charged by TikTok Shop at the time of order settlement. An order is deemed settled a certain number of days after delivery (varies by region) if no returns or refunds are pending.  **Note**: Shipping-related costs are excluded, except for local sellers in the SEA region, where they are included.
+	FeeAmount *string `json:"fee_amount,omitempty"`
+	// The statement ID.
+	Id *string `json:"id,omitempty"`
+	// The final revenue amount after seller discounts are deducted. Applicable only for local sellers outside the SEA region.
+	NetSalesAmount *string `json:"net_sales_amount,omitempty"`
+	// The payment ID.
+	PaymentId *string `json:"payment_id,omitempty"`
+	// The payment status, indicating whether payment has been transferred to the seller's bank account. Possible values: - PAID: Payment has been transferred to the seller. - FAILED: Payment transfer failed. - PROCESSING: Payment is currently being processed.
+	PaymentStatus *string `json:"payment_status,omitempty"`
+	// The final revenue amount at the time of order settlement.  Applicable for all regions except UK and US.
+	RevenueAmount *string `json:"revenue_amount,omitempty"`
+	// The settlement amount.
+	SettlementAmount *string `json:"settlement_amount,omitempty"`
+	// The shipping fees. Applicable only for local sellers outside the SEA region.
+	ShippingCostAmount *string `json:"shipping_cost_amount,omitempty"`
+	// The time when the statement was generated. Unix timestamp.  Statements are generated daily at 00:00 UTC, and it includes all transactions from the past day.
+	StatementTime        *int64 `json:"statement_time,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Finance202309GetStatementsResponseDataStatements Finance202309GetStatementsResponseDataStatements
@@ -52,449 +52,449 @@ type _Finance202309GetStatementsResponseDataStatements Finance202309GetStatement
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFinance202309GetStatementsResponseDataStatements() *Finance202309GetStatementsResponseDataStatements {
-    this := Finance202309GetStatementsResponseDataStatements{}
-    return &this
+	this := Finance202309GetStatementsResponseDataStatements{}
+	return &this
 }
 
 // NewFinance202309GetStatementsResponseDataStatementsWithDefaults instantiates a new Finance202309GetStatementsResponseDataStatements object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFinance202309GetStatementsResponseDataStatementsWithDefaults() *Finance202309GetStatementsResponseDataStatements {
-    this := Finance202309GetStatementsResponseDataStatements{}
-    return &this
+	this := Finance202309GetStatementsResponseDataStatements{}
+	return &this
 }
 
 // GetAdjustmentAmount returns the AdjustmentAmount field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetAdjustmentAmount() string {
-    if o == nil || utils.IsNil(o.AdjustmentAmount) {
-        var ret string
-        return ret
-    }
-    return *o.AdjustmentAmount
+	if o == nil || utils.IsNil(o.AdjustmentAmount) {
+		var ret string
+		return ret
+	}
+	return *o.AdjustmentAmount
 }
 
 // GetAdjustmentAmountOk returns a tuple with the AdjustmentAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetAdjustmentAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.AdjustmentAmount) {
-        return nil, false
-    }
-    return o.AdjustmentAmount, true
+	if o == nil || utils.IsNil(o.AdjustmentAmount) {
+		return nil, false
+	}
+	return o.AdjustmentAmount, true
 }
 
 // HasAdjustmentAmount returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasAdjustmentAmount() bool {
-    if o != nil && !utils.IsNil(o.AdjustmentAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AdjustmentAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAdjustmentAmount gets a reference to the given string and assigns it to the AdjustmentAmount field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetAdjustmentAmount(v string) {
-    o.AdjustmentAmount = &v
+	o.AdjustmentAmount = &v
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 // GetFeeAmount returns the FeeAmount field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetFeeAmount() string {
-    if o == nil || utils.IsNil(o.FeeAmount) {
-        var ret string
-        return ret
-    }
-    return *o.FeeAmount
+	if o == nil || utils.IsNil(o.FeeAmount) {
+		var ret string
+		return ret
+	}
+	return *o.FeeAmount
 }
 
 // GetFeeAmountOk returns a tuple with the FeeAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetFeeAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.FeeAmount) {
-        return nil, false
-    }
-    return o.FeeAmount, true
+	if o == nil || utils.IsNil(o.FeeAmount) {
+		return nil, false
+	}
+	return o.FeeAmount, true
 }
 
 // HasFeeAmount returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasFeeAmount() bool {
-    if o != nil && !utils.IsNil(o.FeeAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.FeeAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFeeAmount gets a reference to the given string and assigns it to the FeeAmount field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetFeeAmount(v string) {
-    o.FeeAmount = &v
+	o.FeeAmount = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetNetSalesAmount returns the NetSalesAmount field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetNetSalesAmount() string {
-    if o == nil || utils.IsNil(o.NetSalesAmount) {
-        var ret string
-        return ret
-    }
-    return *o.NetSalesAmount
+	if o == nil || utils.IsNil(o.NetSalesAmount) {
+		var ret string
+		return ret
+	}
+	return *o.NetSalesAmount
 }
 
 // GetNetSalesAmountOk returns a tuple with the NetSalesAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetNetSalesAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NetSalesAmount) {
-        return nil, false
-    }
-    return o.NetSalesAmount, true
+	if o == nil || utils.IsNil(o.NetSalesAmount) {
+		return nil, false
+	}
+	return o.NetSalesAmount, true
 }
 
 // HasNetSalesAmount returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasNetSalesAmount() bool {
-    if o != nil && !utils.IsNil(o.NetSalesAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NetSalesAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNetSalesAmount gets a reference to the given string and assigns it to the NetSalesAmount field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetNetSalesAmount(v string) {
-    o.NetSalesAmount = &v
+	o.NetSalesAmount = &v
 }
 
 // GetPaymentId returns the PaymentId field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetPaymentId() string {
-    if o == nil || utils.IsNil(o.PaymentId) {
-        var ret string
-        return ret
-    }
-    return *o.PaymentId
+	if o == nil || utils.IsNil(o.PaymentId) {
+		var ret string
+		return ret
+	}
+	return *o.PaymentId
 }
 
 // GetPaymentIdOk returns a tuple with the PaymentId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetPaymentIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PaymentId) {
-        return nil, false
-    }
-    return o.PaymentId, true
+	if o == nil || utils.IsNil(o.PaymentId) {
+		return nil, false
+	}
+	return o.PaymentId, true
 }
 
 // HasPaymentId returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasPaymentId() bool {
-    if o != nil && !utils.IsNil(o.PaymentId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PaymentId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPaymentId gets a reference to the given string and assigns it to the PaymentId field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetPaymentId(v string) {
-    o.PaymentId = &v
+	o.PaymentId = &v
 }
 
 // GetPaymentStatus returns the PaymentStatus field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetPaymentStatus() string {
-    if o == nil || utils.IsNil(o.PaymentStatus) {
-        var ret string
-        return ret
-    }
-    return *o.PaymentStatus
+	if o == nil || utils.IsNil(o.PaymentStatus) {
+		var ret string
+		return ret
+	}
+	return *o.PaymentStatus
 }
 
 // GetPaymentStatusOk returns a tuple with the PaymentStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetPaymentStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PaymentStatus) {
-        return nil, false
-    }
-    return o.PaymentStatus, true
+	if o == nil || utils.IsNil(o.PaymentStatus) {
+		return nil, false
+	}
+	return o.PaymentStatus, true
 }
 
 // HasPaymentStatus returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasPaymentStatus() bool {
-    if o != nil && !utils.IsNil(o.PaymentStatus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PaymentStatus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPaymentStatus gets a reference to the given string and assigns it to the PaymentStatus field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetPaymentStatus(v string) {
-    o.PaymentStatus = &v
+	o.PaymentStatus = &v
 }
 
 // GetRevenueAmount returns the RevenueAmount field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetRevenueAmount() string {
-    if o == nil || utils.IsNil(o.RevenueAmount) {
-        var ret string
-        return ret
-    }
-    return *o.RevenueAmount
+	if o == nil || utils.IsNil(o.RevenueAmount) {
+		var ret string
+		return ret
+	}
+	return *o.RevenueAmount
 }
 
 // GetRevenueAmountOk returns a tuple with the RevenueAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetRevenueAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.RevenueAmount) {
-        return nil, false
-    }
-    return o.RevenueAmount, true
+	if o == nil || utils.IsNil(o.RevenueAmount) {
+		return nil, false
+	}
+	return o.RevenueAmount, true
 }
 
 // HasRevenueAmount returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasRevenueAmount() bool {
-    if o != nil && !utils.IsNil(o.RevenueAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RevenueAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRevenueAmount gets a reference to the given string and assigns it to the RevenueAmount field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetRevenueAmount(v string) {
-    o.RevenueAmount = &v
+	o.RevenueAmount = &v
 }
 
 // GetSettlementAmount returns the SettlementAmount field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetSettlementAmount() string {
-    if o == nil || utils.IsNil(o.SettlementAmount) {
-        var ret string
-        return ret
-    }
-    return *o.SettlementAmount
+	if o == nil || utils.IsNil(o.SettlementAmount) {
+		var ret string
+		return ret
+	}
+	return *o.SettlementAmount
 }
 
 // GetSettlementAmountOk returns a tuple with the SettlementAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetSettlementAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SettlementAmount) {
-        return nil, false
-    }
-    return o.SettlementAmount, true
+	if o == nil || utils.IsNil(o.SettlementAmount) {
+		return nil, false
+	}
+	return o.SettlementAmount, true
 }
 
 // HasSettlementAmount returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasSettlementAmount() bool {
-    if o != nil && !utils.IsNil(o.SettlementAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SettlementAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSettlementAmount gets a reference to the given string and assigns it to the SettlementAmount field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetSettlementAmount(v string) {
-    o.SettlementAmount = &v
+	o.SettlementAmount = &v
 }
 
 // GetShippingCostAmount returns the ShippingCostAmount field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetShippingCostAmount() string {
-    if o == nil || utils.IsNil(o.ShippingCostAmount) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingCostAmount
+	if o == nil || utils.IsNil(o.ShippingCostAmount) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingCostAmount
 }
 
 // GetShippingCostAmountOk returns a tuple with the ShippingCostAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetShippingCostAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingCostAmount) {
-        return nil, false
-    }
-    return o.ShippingCostAmount, true
+	if o == nil || utils.IsNil(o.ShippingCostAmount) {
+		return nil, false
+	}
+	return o.ShippingCostAmount, true
 }
 
 // HasShippingCostAmount returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasShippingCostAmount() bool {
-    if o != nil && !utils.IsNil(o.ShippingCostAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingCostAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingCostAmount gets a reference to the given string and assigns it to the ShippingCostAmount field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetShippingCostAmount(v string) {
-    o.ShippingCostAmount = &v
+	o.ShippingCostAmount = &v
 }
 
 // GetStatementTime returns the StatementTime field value if set, zero value otherwise.
 func (o *Finance202309GetStatementsResponseDataStatements) GetStatementTime() int64 {
-    if o == nil || utils.IsNil(o.StatementTime) {
-        var ret int64
-        return ret
-    }
-    return *o.StatementTime
+	if o == nil || utils.IsNil(o.StatementTime) {
+		var ret int64
+		return ret
+	}
+	return *o.StatementTime
 }
 
 // GetStatementTimeOk returns a tuple with the StatementTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) GetStatementTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.StatementTime) {
-        return nil, false
-    }
-    return o.StatementTime, true
+	if o == nil || utils.IsNil(o.StatementTime) {
+		return nil, false
+	}
+	return o.StatementTime, true
 }
 
 // HasStatementTime returns a boolean if a field has been set.
 func (o *Finance202309GetStatementsResponseDataStatements) HasStatementTime() bool {
-    if o != nil && !utils.IsNil(o.StatementTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.StatementTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatementTime gets a reference to the given int64 and assigns it to the StatementTime field.
 func (o *Finance202309GetStatementsResponseDataStatements) SetStatementTime(v int64) {
-    o.StatementTime = &v
+	o.StatementTime = &v
 }
 
 func (o Finance202309GetStatementsResponseDataStatements) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Finance202309GetStatementsResponseDataStatements) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.AdjustmentAmount) {
-        toSerialize["adjustment_amount"] = o.AdjustmentAmount
-    }
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
-    if !utils.IsNil(o.FeeAmount) {
-        toSerialize["fee_amount"] = o.FeeAmount
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.NetSalesAmount) {
-        toSerialize["net_sales_amount"] = o.NetSalesAmount
-    }
-    if !utils.IsNil(o.PaymentId) {
-        toSerialize["payment_id"] = o.PaymentId
-    }
-    if !utils.IsNil(o.PaymentStatus) {
-        toSerialize["payment_status"] = o.PaymentStatus
-    }
-    if !utils.IsNil(o.RevenueAmount) {
-        toSerialize["revenue_amount"] = o.RevenueAmount
-    }
-    if !utils.IsNil(o.SettlementAmount) {
-        toSerialize["settlement_amount"] = o.SettlementAmount
-    }
-    if !utils.IsNil(o.ShippingCostAmount) {
-        toSerialize["shipping_cost_amount"] = o.ShippingCostAmount
-    }
-    if !utils.IsNil(o.StatementTime) {
-        toSerialize["statement_time"] = o.StatementTime
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.AdjustmentAmount) {
+		toSerialize["adjustment_amount"] = o.AdjustmentAmount
+	}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
+	if !utils.IsNil(o.FeeAmount) {
+		toSerialize["fee_amount"] = o.FeeAmount
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.NetSalesAmount) {
+		toSerialize["net_sales_amount"] = o.NetSalesAmount
+	}
+	if !utils.IsNil(o.PaymentId) {
+		toSerialize["payment_id"] = o.PaymentId
+	}
+	if !utils.IsNil(o.PaymentStatus) {
+		toSerialize["payment_status"] = o.PaymentStatus
+	}
+	if !utils.IsNil(o.RevenueAmount) {
+		toSerialize["revenue_amount"] = o.RevenueAmount
+	}
+	if !utils.IsNil(o.SettlementAmount) {
+		toSerialize["settlement_amount"] = o.SettlementAmount
+	}
+	if !utils.IsNil(o.ShippingCostAmount) {
+		toSerialize["shipping_cost_amount"] = o.ShippingCostAmount
+	}
+	if !utils.IsNil(o.StatementTime) {
+		toSerialize["statement_time"] = o.StatementTime
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Finance202309GetStatementsResponseDataStatements) UnmarshalJSON(data []byte) (err error) {
-    varFinance202309GetStatementsResponseDataStatements := _Finance202309GetStatementsResponseDataStatements{}
+	varFinance202309GetStatementsResponseDataStatements := _Finance202309GetStatementsResponseDataStatements{}
 
-    err = json.Unmarshal(data, &varFinance202309GetStatementsResponseDataStatements)
+	err = json.Unmarshal(data, &varFinance202309GetStatementsResponseDataStatements)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Finance202309GetStatementsResponseDataStatements(varFinance202309GetStatementsResponseDataStatements)
+	*o = Finance202309GetStatementsResponseDataStatements(varFinance202309GetStatementsResponseDataStatements)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "adjustment_amount")
-        delete(additionalProperties, "currency")
-        delete(additionalProperties, "fee_amount")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "net_sales_amount")
-        delete(additionalProperties, "payment_id")
-        delete(additionalProperties, "payment_status")
-        delete(additionalProperties, "revenue_amount")
-        delete(additionalProperties, "settlement_amount")
-        delete(additionalProperties, "shipping_cost_amount")
-        delete(additionalProperties, "statement_time")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "adjustment_amount")
+		delete(additionalProperties, "currency")
+		delete(additionalProperties, "fee_amount")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "net_sales_amount")
+		delete(additionalProperties, "payment_id")
+		delete(additionalProperties, "payment_status")
+		delete(additionalProperties, "revenue_amount")
+		delete(additionalProperties, "settlement_amount")
+		delete(additionalProperties, "shipping_cost_amount")
+		delete(additionalProperties, "statement_time")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFinance202309GetStatementsResponseDataStatements struct {
@@ -532,5 +532,3 @@ func (v *NullableFinance202309GetStatementsResponseDataStatements) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

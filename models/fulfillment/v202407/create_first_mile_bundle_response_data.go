@@ -11,22 +11,22 @@ API version: 1.0.0
 package fulfillment_v202407
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202407CreateFirstMileBundleResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202407CreateFirstMileBundleResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202407CreateFirstMileBundleResponseData{}
 
 // Fulfillment202407CreateFirstMileBundleResponseData struct for Fulfillment202407CreateFirstMileBundleResponseData
 type Fulfillment202407CreateFirstMileBundleResponseData struct {
-    // Specific return information (returns multiple errors and reasons)
-    Errors []Fulfillment202407CreateFirstMileBundleResponseDataErrors `json:"errors,omitempty"`
-    // The ID of the first-mile bundle.
-    FirstMileBundleId *string `json:"first_mile_bundle_id,omitempty"`
-    // The returned waybill link.
-    Url *string `json:"url,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Specific return information (returns multiple errors and reasons)
+	Errors []Fulfillment202407CreateFirstMileBundleResponseDataErrors `json:"errors,omitempty"`
+	// The ID of the first-mile bundle.
+	FirstMileBundleId *string `json:"first_mile_bundle_id,omitempty"`
+	// The returned waybill link.
+	Url                  *string `json:"url,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202407CreateFirstMileBundleResponseData Fulfillment202407CreateFirstMileBundleResponseData
@@ -36,161 +36,161 @@ type _Fulfillment202407CreateFirstMileBundleResponseData Fulfillment202407Create
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202407CreateFirstMileBundleResponseData() *Fulfillment202407CreateFirstMileBundleResponseData {
-    this := Fulfillment202407CreateFirstMileBundleResponseData{}
-    return &this
+	this := Fulfillment202407CreateFirstMileBundleResponseData{}
+	return &this
 }
 
 // NewFulfillment202407CreateFirstMileBundleResponseDataWithDefaults instantiates a new Fulfillment202407CreateFirstMileBundleResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202407CreateFirstMileBundleResponseDataWithDefaults() *Fulfillment202407CreateFirstMileBundleResponseData {
-    this := Fulfillment202407CreateFirstMileBundleResponseData{}
-    return &this
+	this := Fulfillment202407CreateFirstMileBundleResponseData{}
+	return &this
 }
 
 // GetErrors returns the Errors field value if set, zero value otherwise.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) GetErrors() []Fulfillment202407CreateFirstMileBundleResponseDataErrors {
-    if o == nil || utils.IsNil(o.Errors) {
-        var ret []Fulfillment202407CreateFirstMileBundleResponseDataErrors
-        return ret
-    }
-    return o.Errors
+	if o == nil || utils.IsNil(o.Errors) {
+		var ret []Fulfillment202407CreateFirstMileBundleResponseDataErrors
+		return ret
+	}
+	return o.Errors
 }
 
 // GetErrorsOk returns a tuple with the Errors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) GetErrorsOk() ([]Fulfillment202407CreateFirstMileBundleResponseDataErrors, bool) {
-    if o == nil || utils.IsNil(o.Errors) {
-        return nil, false
-    }
-    return o.Errors, true
+	if o == nil || utils.IsNil(o.Errors) {
+		return nil, false
+	}
+	return o.Errors, true
 }
 
 // HasErrors returns a boolean if a field has been set.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) HasErrors() bool {
-    if o != nil && !utils.IsNil(o.Errors) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Errors) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetErrors gets a reference to the given []Fulfillment202407CreateFirstMileBundleResponseDataErrors and assigns it to the Errors field.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) SetErrors(v []Fulfillment202407CreateFirstMileBundleResponseDataErrors) {
-    o.Errors = v
+	o.Errors = v
 }
 
 // GetFirstMileBundleId returns the FirstMileBundleId field value if set, zero value otherwise.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) GetFirstMileBundleId() string {
-    if o == nil || utils.IsNil(o.FirstMileBundleId) {
-        var ret string
-        return ret
-    }
-    return *o.FirstMileBundleId
+	if o == nil || utils.IsNil(o.FirstMileBundleId) {
+		var ret string
+		return ret
+	}
+	return *o.FirstMileBundleId
 }
 
 // GetFirstMileBundleIdOk returns a tuple with the FirstMileBundleId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) GetFirstMileBundleIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.FirstMileBundleId) {
-        return nil, false
-    }
-    return o.FirstMileBundleId, true
+	if o == nil || utils.IsNil(o.FirstMileBundleId) {
+		return nil, false
+	}
+	return o.FirstMileBundleId, true
 }
 
 // HasFirstMileBundleId returns a boolean if a field has been set.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) HasFirstMileBundleId() bool {
-    if o != nil && !utils.IsNil(o.FirstMileBundleId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.FirstMileBundleId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFirstMileBundleId gets a reference to the given string and assigns it to the FirstMileBundleId field.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) SetFirstMileBundleId(v string) {
-    o.FirstMileBundleId = &v
+	o.FirstMileBundleId = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) GetUrl() string {
-    if o == nil || utils.IsNil(o.Url) {
-        var ret string
-        return ret
-    }
-    return *o.Url
+	if o == nil || utils.IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
 }
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) GetUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Url) {
-        return nil, false
-    }
-    return o.Url, true
+	if o == nil || utils.IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
 }
 
 // HasUrl returns a boolean if a field has been set.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) HasUrl() bool {
-    if o != nil && !utils.IsNil(o.Url) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Url) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) SetUrl(v string) {
-    o.Url = &v
+	o.Url = &v
 }
 
 func (o Fulfillment202407CreateFirstMileBundleResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202407CreateFirstMileBundleResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Errors) {
-        toSerialize["errors"] = o.Errors
-    }
-    if !utils.IsNil(o.FirstMileBundleId) {
-        toSerialize["first_mile_bundle_id"] = o.FirstMileBundleId
-    }
-    if !utils.IsNil(o.Url) {
-        toSerialize["url"] = o.Url
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Errors) {
+		toSerialize["errors"] = o.Errors
+	}
+	if !utils.IsNil(o.FirstMileBundleId) {
+		toSerialize["first_mile_bundle_id"] = o.FirstMileBundleId
+	}
+	if !utils.IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202407CreateFirstMileBundleResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202407CreateFirstMileBundleResponseData := _Fulfillment202407CreateFirstMileBundleResponseData{}
+	varFulfillment202407CreateFirstMileBundleResponseData := _Fulfillment202407CreateFirstMileBundleResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202407CreateFirstMileBundleResponseData)
+	err = json.Unmarshal(data, &varFulfillment202407CreateFirstMileBundleResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202407CreateFirstMileBundleResponseData(varFulfillment202407CreateFirstMileBundleResponseData)
+	*o = Fulfillment202407CreateFirstMileBundleResponseData(varFulfillment202407CreateFirstMileBundleResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "errors")
-        delete(additionalProperties, "first_mile_bundle_id")
-        delete(additionalProperties, "url")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "errors")
+		delete(additionalProperties, "first_mile_bundle_id")
+		delete(additionalProperties, "url")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202407CreateFirstMileBundleResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullableFulfillment202407CreateFirstMileBundleResponseData) UnmarshalJS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

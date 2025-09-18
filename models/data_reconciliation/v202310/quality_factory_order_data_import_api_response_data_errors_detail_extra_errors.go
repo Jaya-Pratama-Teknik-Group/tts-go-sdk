@@ -11,20 +11,20 @@ API version: 1.0.0
 package data_reconciliation_v202310
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors type satisfies the MappedNullable interface at compile time
+// checks if the DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors{}
 
 // DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors struct for DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors
 type DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors struct {
-    // Business err code 
-    Code *string `json:"code,omitempty"`
-    // Business err message 
-    Message *string `json:"message,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Business err code
+	Code *string `json:"code,omitempty"`
+	// Business err message
+	Message              *string `json:"message,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors
@@ -34,125 +34,125 @@ type _DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrors
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors() *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors {
-    this := DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors{}
-    return &this
+	this := DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors{}
+	return &this
 }
 
 // NewDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrorsWithDefaults instantiates a new DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrorsWithDefaults() *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors {
-    this := DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors{}
-    return &this
+	this := DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors{}
+	return &this
 }
 
 // GetCode returns the Code field value if set, zero value otherwise.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) GetCode() string {
-    if o == nil || utils.IsNil(o.Code) {
-        var ret string
-        return ret
-    }
-    return *o.Code
+	if o == nil || utils.IsNil(o.Code) {
+		var ret string
+		return ret
+	}
+	return *o.Code
 }
 
 // GetCodeOk returns a tuple with the Code field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) GetCodeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Code) {
-        return nil, false
-    }
-    return o.Code, true
+	if o == nil || utils.IsNil(o.Code) {
+		return nil, false
+	}
+	return o.Code, true
 }
 
 // HasCode returns a boolean if a field has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) HasCode() bool {
-    if o != nil && !utils.IsNil(o.Code) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Code) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCode gets a reference to the given string and assigns it to the Code field.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) SetCode(v string) {
-    o.Code = &v
+	o.Code = &v
 }
 
 // GetMessage returns the Message field value if set, zero value otherwise.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) GetMessage() string {
-    if o == nil || utils.IsNil(o.Message) {
-        var ret string
-        return ret
-    }
-    return *o.Message
+	if o == nil || utils.IsNil(o.Message) {
+		var ret string
+		return ret
+	}
+	return *o.Message
 }
 
 // GetMessageOk returns a tuple with the Message field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) GetMessageOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Message) {
-        return nil, false
-    }
-    return o.Message, true
+	if o == nil || utils.IsNil(o.Message) {
+		return nil, false
+	}
+	return o.Message, true
 }
 
 // HasMessage returns a boolean if a field has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) HasMessage() bool {
-    if o != nil && !utils.IsNil(o.Message) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Message) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMessage gets a reference to the given string and assigns it to the Message field.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) SetMessage(v string) {
-    o.Message = &v
+	o.Message = &v
 }
 
 func (o DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Code) {
-        toSerialize["code"] = o.Code
-    }
-    if !utils.IsNil(o.Message) {
-        toSerialize["message"] = o.Message
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Code) {
+		toSerialize["code"] = o.Code
+	}
+	if !utils.IsNil(o.Message) {
+		toSerialize["message"] = o.Message
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) UnmarshalJSON(data []byte) (err error) {
-    varDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors := _DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors{}
+	varDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors := _DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors{}
 
-    err = json.Unmarshal(data, &varDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors)
+	err = json.Unmarshal(data, &varDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors(varDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors)
+	*o = DataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors(varDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "code")
-        delete(additionalProperties, "message")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "code")
+		delete(additionalProperties, "message")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableDataReconciliation202310QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors struct {
@@ -190,5 +190,3 @@ func (v *NullableDataReconciliation202310QualityFactoryOrderDataImportAPIRespons
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,28 +11,28 @@ API version: 1.0.0
 package product_v202312
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202312SearchGlobalProductsResponseDataGlobalProducts type satisfies the MappedNullable interface at compile time
+// checks if the Product202312SearchGlobalProductsResponseDataGlobalProducts type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202312SearchGlobalProductsResponseDataGlobalProducts{}
 
 // Product202312SearchGlobalProductsResponseDataGlobalProducts struct for Product202312SearchGlobalProductsResponseDataGlobalProducts
 type Product202312SearchGlobalProductsResponseDataGlobalProducts struct {
-    // The time when the product is created. Unix timestamp. 
-    CreateTime *int64 `json:"create_time,omitempty"`
-    // The global product ID in TikTok Shop.
-    Id *string `json:"id,omitempty"`
-    // A list of global Stock Keeping Units (SKUs) used to identify distinct variants of the product.
-    Skus []Product202312SearchGlobalProductsResponseDataGlobalProductsSkus `json:"skus,omitempty"`
-    // The status of the product. Possible values: - PUBLISHED - UNPUBLISHED - DRAFT - DELETED
-    Status *string `json:"status,omitempty"`
-    // The product title.
-    Title *string `json:"title,omitempty"`
-    // The time when the product is last updated. Unix timestamp.
-    UpdateTime *int64 `json:"update_time,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The time when the product is created. Unix timestamp.
+	CreateTime *int64 `json:"create_time,omitempty"`
+	// The global product ID in TikTok Shop.
+	Id *string `json:"id,omitempty"`
+	// A list of global Stock Keeping Units (SKUs) used to identify distinct variants of the product.
+	Skus []Product202312SearchGlobalProductsResponseDataGlobalProductsSkus `json:"skus,omitempty"`
+	// The status of the product. Possible values: - PUBLISHED - UNPUBLISHED - DRAFT - DELETED
+	Status *string `json:"status,omitempty"`
+	// The product title.
+	Title *string `json:"title,omitempty"`
+	// The time when the product is last updated. Unix timestamp.
+	UpdateTime           *int64 `json:"update_time,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202312SearchGlobalProductsResponseDataGlobalProducts Product202312SearchGlobalProductsResponseDataGlobalProducts
@@ -42,269 +42,269 @@ type _Product202312SearchGlobalProductsResponseDataGlobalProducts Product202312S
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202312SearchGlobalProductsResponseDataGlobalProducts() *Product202312SearchGlobalProductsResponseDataGlobalProducts {
-    this := Product202312SearchGlobalProductsResponseDataGlobalProducts{}
-    return &this
+	this := Product202312SearchGlobalProductsResponseDataGlobalProducts{}
+	return &this
 }
 
 // NewProduct202312SearchGlobalProductsResponseDataGlobalProductsWithDefaults instantiates a new Product202312SearchGlobalProductsResponseDataGlobalProducts object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202312SearchGlobalProductsResponseDataGlobalProductsWithDefaults() *Product202312SearchGlobalProductsResponseDataGlobalProducts {
-    this := Product202312SearchGlobalProductsResponseDataGlobalProducts{}
-    return &this
+	this := Product202312SearchGlobalProductsResponseDataGlobalProducts{}
+	return &this
 }
 
 // GetCreateTime returns the CreateTime field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetCreateTime() int64 {
-    if o == nil || utils.IsNil(o.CreateTime) {
-        var ret int64
-        return ret
-    }
-    return *o.CreateTime
+	if o == nil || utils.IsNil(o.CreateTime) {
+		var ret int64
+		return ret
+	}
+	return *o.CreateTime
 }
 
 // GetCreateTimeOk returns a tuple with the CreateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetCreateTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.CreateTime) {
-        return nil, false
-    }
-    return o.CreateTime, true
+	if o == nil || utils.IsNil(o.CreateTime) {
+		return nil, false
+	}
+	return o.CreateTime, true
 }
 
 // HasCreateTime returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) HasCreateTime() bool {
-    if o != nil && !utils.IsNil(o.CreateTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CreateTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCreateTime gets a reference to the given int64 and assigns it to the CreateTime field.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) SetCreateTime(v int64) {
-    o.CreateTime = &v
+	o.CreateTime = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetSkus returns the Skus field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetSkus() []Product202312SearchGlobalProductsResponseDataGlobalProductsSkus {
-    if o == nil || utils.IsNil(o.Skus) {
-        var ret []Product202312SearchGlobalProductsResponseDataGlobalProductsSkus
-        return ret
-    }
-    return o.Skus
+	if o == nil || utils.IsNil(o.Skus) {
+		var ret []Product202312SearchGlobalProductsResponseDataGlobalProductsSkus
+		return ret
+	}
+	return o.Skus
 }
 
 // GetSkusOk returns a tuple with the Skus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetSkusOk() ([]Product202312SearchGlobalProductsResponseDataGlobalProductsSkus, bool) {
-    if o == nil || utils.IsNil(o.Skus) {
-        return nil, false
-    }
-    return o.Skus, true
+	if o == nil || utils.IsNil(o.Skus) {
+		return nil, false
+	}
+	return o.Skus, true
 }
 
 // HasSkus returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) HasSkus() bool {
-    if o != nil && !utils.IsNil(o.Skus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Skus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkus gets a reference to the given []Product202312SearchGlobalProductsResponseDataGlobalProductsSkus and assigns it to the Skus field.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) SetSkus(v []Product202312SearchGlobalProductsResponseDataGlobalProductsSkus) {
-    o.Skus = v
+	o.Skus = v
 }
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetStatus() string {
-    if o == nil || utils.IsNil(o.Status) {
-        var ret string
-        return ret
-    }
-    return *o.Status
+	if o == nil || utils.IsNil(o.Status) {
+		var ret string
+		return ret
+	}
+	return *o.Status
 }
 
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Status) {
-        return nil, false
-    }
-    return o.Status, true
+	if o == nil || utils.IsNil(o.Status) {
+		return nil, false
+	}
+	return o.Status, true
 }
 
 // HasStatus returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) HasStatus() bool {
-    if o != nil && !utils.IsNil(o.Status) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Status) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatus gets a reference to the given string and assigns it to the Status field.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) SetStatus(v string) {
-    o.Status = &v
+	o.Status = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetTitle() string {
-    if o == nil || utils.IsNil(o.Title) {
-        var ret string
-        return ret
-    }
-    return *o.Title
+	if o == nil || utils.IsNil(o.Title) {
+		var ret string
+		return ret
+	}
+	return *o.Title
 }
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetTitleOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Title) {
-        return nil, false
-    }
-    return o.Title, true
+	if o == nil || utils.IsNil(o.Title) {
+		return nil, false
+	}
+	return o.Title, true
 }
 
 // HasTitle returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) HasTitle() bool {
-    if o != nil && !utils.IsNil(o.Title) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Title) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) SetTitle(v string) {
-    o.Title = &v
+	o.Title = &v
 }
 
 // GetUpdateTime returns the UpdateTime field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetUpdateTime() int64 {
-    if o == nil || utils.IsNil(o.UpdateTime) {
-        var ret int64
-        return ret
-    }
-    return *o.UpdateTime
+	if o == nil || utils.IsNil(o.UpdateTime) {
+		var ret int64
+		return ret
+	}
+	return *o.UpdateTime
 }
 
 // GetUpdateTimeOk returns a tuple with the UpdateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) GetUpdateTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UpdateTime) {
-        return nil, false
-    }
-    return o.UpdateTime, true
+	if o == nil || utils.IsNil(o.UpdateTime) {
+		return nil, false
+	}
+	return o.UpdateTime, true
 }
 
 // HasUpdateTime returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) HasUpdateTime() bool {
-    if o != nil && !utils.IsNil(o.UpdateTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UpdateTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUpdateTime gets a reference to the given int64 and assigns it to the UpdateTime field.
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) SetUpdateTime(v int64) {
-    o.UpdateTime = &v
+	o.UpdateTime = &v
 }
 
 func (o Product202312SearchGlobalProductsResponseDataGlobalProducts) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202312SearchGlobalProductsResponseDataGlobalProducts) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CreateTime) {
-        toSerialize["create_time"] = o.CreateTime
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Skus) {
-        toSerialize["skus"] = o.Skus
-    }
-    if !utils.IsNil(o.Status) {
-        toSerialize["status"] = o.Status
-    }
-    if !utils.IsNil(o.Title) {
-        toSerialize["title"] = o.Title
-    }
-    if !utils.IsNil(o.UpdateTime) {
-        toSerialize["update_time"] = o.UpdateTime
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CreateTime) {
+		toSerialize["create_time"] = o.CreateTime
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Skus) {
+		toSerialize["skus"] = o.Skus
+	}
+	if !utils.IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !utils.IsNil(o.Title) {
+		toSerialize["title"] = o.Title
+	}
+	if !utils.IsNil(o.UpdateTime) {
+		toSerialize["update_time"] = o.UpdateTime
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202312SearchGlobalProductsResponseDataGlobalProducts) UnmarshalJSON(data []byte) (err error) {
-    varProduct202312SearchGlobalProductsResponseDataGlobalProducts := _Product202312SearchGlobalProductsResponseDataGlobalProducts{}
+	varProduct202312SearchGlobalProductsResponseDataGlobalProducts := _Product202312SearchGlobalProductsResponseDataGlobalProducts{}
 
-    err = json.Unmarshal(data, &varProduct202312SearchGlobalProductsResponseDataGlobalProducts)
+	err = json.Unmarshal(data, &varProduct202312SearchGlobalProductsResponseDataGlobalProducts)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202312SearchGlobalProductsResponseDataGlobalProducts(varProduct202312SearchGlobalProductsResponseDataGlobalProducts)
+	*o = Product202312SearchGlobalProductsResponseDataGlobalProducts(varProduct202312SearchGlobalProductsResponseDataGlobalProducts)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "create_time")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "skus")
-        delete(additionalProperties, "status")
-        delete(additionalProperties, "title")
-        delete(additionalProperties, "update_time")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "create_time")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "skus")
+		delete(additionalProperties, "status")
+		delete(additionalProperties, "title")
+		delete(additionalProperties, "update_time")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202312SearchGlobalProductsResponseDataGlobalProducts struct {
@@ -342,5 +342,3 @@ func (v *NullableProduct202312SearchGlobalProductsResponseDataGlobalProducts) Un
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

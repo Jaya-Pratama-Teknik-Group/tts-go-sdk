@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_PromotionV202406APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_PromotionV202406APIService(t *testing.T) {
 
 	t.Run("Test PromotionV202406APIService Promotion202406CouponsCouponIdGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var couponId string
 
@@ -38,7 +38,7 @@ func Test_sdk_golang_PromotionV202406APIService(t *testing.T) {
 
 	t.Run("Test PromotionV202406APIService Promotion202406CouponsSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PromotionV202406API.Promotion202406CouponsSearchPost(context.Background()).Execute()
 

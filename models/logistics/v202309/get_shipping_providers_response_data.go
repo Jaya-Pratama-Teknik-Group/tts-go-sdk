@@ -11,18 +11,18 @@ API version: 1.0.0
 package logistics_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Logistics202309GetShippingProvidersResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Logistics202309GetShippingProvidersResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Logistics202309GetShippingProvidersResponseData{}
 
 // Logistics202309GetShippingProvidersResponseData struct for Logistics202309GetShippingProvidersResponseData
 type Logistics202309GetShippingProvidersResponseData struct {
-    // shipping provider list
-    ShippingProviders []Logistics202309GetShippingProvidersResponseDataShippingProviders `json:"shipping_providers,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// shipping provider list
+	ShippingProviders    []Logistics202309GetShippingProvidersResponseDataShippingProviders `json:"shipping_providers,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Logistics202309GetShippingProvidersResponseData Logistics202309GetShippingProvidersResponseData
@@ -32,89 +32,89 @@ type _Logistics202309GetShippingProvidersResponseData Logistics202309GetShipping
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewLogistics202309GetShippingProvidersResponseData() *Logistics202309GetShippingProvidersResponseData {
-    this := Logistics202309GetShippingProvidersResponseData{}
-    return &this
+	this := Logistics202309GetShippingProvidersResponseData{}
+	return &this
 }
 
 // NewLogistics202309GetShippingProvidersResponseDataWithDefaults instantiates a new Logistics202309GetShippingProvidersResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewLogistics202309GetShippingProvidersResponseDataWithDefaults() *Logistics202309GetShippingProvidersResponseData {
-    this := Logistics202309GetShippingProvidersResponseData{}
-    return &this
+	this := Logistics202309GetShippingProvidersResponseData{}
+	return &this
 }
 
 // GetShippingProviders returns the ShippingProviders field value if set, zero value otherwise.
 func (o *Logistics202309GetShippingProvidersResponseData) GetShippingProviders() []Logistics202309GetShippingProvidersResponseDataShippingProviders {
-    if o == nil || utils.IsNil(o.ShippingProviders) {
-        var ret []Logistics202309GetShippingProvidersResponseDataShippingProviders
-        return ret
-    }
-    return o.ShippingProviders
+	if o == nil || utils.IsNil(o.ShippingProviders) {
+		var ret []Logistics202309GetShippingProvidersResponseDataShippingProviders
+		return ret
+	}
+	return o.ShippingProviders
 }
 
 // GetShippingProvidersOk returns a tuple with the ShippingProviders field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetShippingProvidersResponseData) GetShippingProvidersOk() ([]Logistics202309GetShippingProvidersResponseDataShippingProviders, bool) {
-    if o == nil || utils.IsNil(o.ShippingProviders) {
-        return nil, false
-    }
-    return o.ShippingProviders, true
+	if o == nil || utils.IsNil(o.ShippingProviders) {
+		return nil, false
+	}
+	return o.ShippingProviders, true
 }
 
 // HasShippingProviders returns a boolean if a field has been set.
 func (o *Logistics202309GetShippingProvidersResponseData) HasShippingProviders() bool {
-    if o != nil && !utils.IsNil(o.ShippingProviders) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingProviders) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingProviders gets a reference to the given []Logistics202309GetShippingProvidersResponseDataShippingProviders and assigns it to the ShippingProviders field.
 func (o *Logistics202309GetShippingProvidersResponseData) SetShippingProviders(v []Logistics202309GetShippingProvidersResponseDataShippingProviders) {
-    o.ShippingProviders = v
+	o.ShippingProviders = v
 }
 
 func (o Logistics202309GetShippingProvidersResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Logistics202309GetShippingProvidersResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ShippingProviders) {
-        toSerialize["shipping_providers"] = o.ShippingProviders
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ShippingProviders) {
+		toSerialize["shipping_providers"] = o.ShippingProviders
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Logistics202309GetShippingProvidersResponseData) UnmarshalJSON(data []byte) (err error) {
-    varLogistics202309GetShippingProvidersResponseData := _Logistics202309GetShippingProvidersResponseData{}
+	varLogistics202309GetShippingProvidersResponseData := _Logistics202309GetShippingProvidersResponseData{}
 
-    err = json.Unmarshal(data, &varLogistics202309GetShippingProvidersResponseData)
+	err = json.Unmarshal(data, &varLogistics202309GetShippingProvidersResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Logistics202309GetShippingProvidersResponseData(varLogistics202309GetShippingProvidersResponseData)
+	*o = Logistics202309GetShippingProvidersResponseData(varLogistics202309GetShippingProvidersResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "shipping_providers")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "shipping_providers")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableLogistics202309GetShippingProvidersResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableLogistics202309GetShippingProvidersResponseData) UnmarshalJSON(
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

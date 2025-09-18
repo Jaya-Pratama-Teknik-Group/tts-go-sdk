@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CheckProductListingResponseDataDiagnosesSuggestions type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CheckProductListingResponseDataDiagnosesSuggestions type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CheckProductListingResponseDataDiagnosesSuggestions{}
 
 // Product202309CheckProductListingResponseDataDiagnosesSuggestions struct for Product202309CheckProductListingResponseDataDiagnosesSuggestions
 type Product202309CheckProductListingResponseDataDiagnosesSuggestions struct {
-    // The optimized main image. Only the first image in the main image set will be optimized.
-    Images []Product202309CheckProductListingResponseDataDiagnosesSuggestionsImages `json:"images,omitempty"`
-    // The SEO keyword suggestions if `diagnoses.field` is \"TITLE\".
-    SeoWords []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSeoWords `json:"seo_words,omitempty"`
-    // The intelligent text suggestions for titles and descriptions.
-    SmartTexts []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSmartTexts `json:"smart_texts,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The optimized main image. Only the first image in the main image set will be optimized.
+	Images []Product202309CheckProductListingResponseDataDiagnosesSuggestionsImages `json:"images,omitempty"`
+	// The SEO keyword suggestions if `diagnoses.field` is \"TITLE\".
+	SeoWords []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSeoWords `json:"seo_words,omitempty"`
+	// The intelligent text suggestions for titles and descriptions.
+	SmartTexts           []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSmartTexts `json:"smart_texts,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CheckProductListingResponseDataDiagnosesSuggestions Product202309CheckProductListingResponseDataDiagnosesSuggestions
@@ -36,161 +36,161 @@ type _Product202309CheckProductListingResponseDataDiagnosesSuggestions Product20
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CheckProductListingResponseDataDiagnosesSuggestions() *Product202309CheckProductListingResponseDataDiagnosesSuggestions {
-    this := Product202309CheckProductListingResponseDataDiagnosesSuggestions{}
-    return &this
+	this := Product202309CheckProductListingResponseDataDiagnosesSuggestions{}
+	return &this
 }
 
 // NewProduct202309CheckProductListingResponseDataDiagnosesSuggestionsWithDefaults instantiates a new Product202309CheckProductListingResponseDataDiagnosesSuggestions object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CheckProductListingResponseDataDiagnosesSuggestionsWithDefaults() *Product202309CheckProductListingResponseDataDiagnosesSuggestions {
-    this := Product202309CheckProductListingResponseDataDiagnosesSuggestions{}
-    return &this
+	this := Product202309CheckProductListingResponseDataDiagnosesSuggestions{}
+	return &this
 }
 
 // GetImages returns the Images field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) GetImages() []Product202309CheckProductListingResponseDataDiagnosesSuggestionsImages {
-    if o == nil || utils.IsNil(o.Images) {
-        var ret []Product202309CheckProductListingResponseDataDiagnosesSuggestionsImages
-        return ret
-    }
-    return o.Images
+	if o == nil || utils.IsNil(o.Images) {
+		var ret []Product202309CheckProductListingResponseDataDiagnosesSuggestionsImages
+		return ret
+	}
+	return o.Images
 }
 
 // GetImagesOk returns a tuple with the Images field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) GetImagesOk() ([]Product202309CheckProductListingResponseDataDiagnosesSuggestionsImages, bool) {
-    if o == nil || utils.IsNil(o.Images) {
-        return nil, false
-    }
-    return o.Images, true
+	if o == nil || utils.IsNil(o.Images) {
+		return nil, false
+	}
+	return o.Images, true
 }
 
 // HasImages returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) HasImages() bool {
-    if o != nil && !utils.IsNil(o.Images) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Images) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImages gets a reference to the given []Product202309CheckProductListingResponseDataDiagnosesSuggestionsImages and assigns it to the Images field.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) SetImages(v []Product202309CheckProductListingResponseDataDiagnosesSuggestionsImages) {
-    o.Images = v
+	o.Images = v
 }
 
 // GetSeoWords returns the SeoWords field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) GetSeoWords() []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSeoWords {
-    if o == nil || utils.IsNil(o.SeoWords) {
-        var ret []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSeoWords
-        return ret
-    }
-    return o.SeoWords
+	if o == nil || utils.IsNil(o.SeoWords) {
+		var ret []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSeoWords
+		return ret
+	}
+	return o.SeoWords
 }
 
 // GetSeoWordsOk returns a tuple with the SeoWords field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) GetSeoWordsOk() ([]Product202309CheckProductListingResponseDataDiagnosesSuggestionsSeoWords, bool) {
-    if o == nil || utils.IsNil(o.SeoWords) {
-        return nil, false
-    }
-    return o.SeoWords, true
+	if o == nil || utils.IsNil(o.SeoWords) {
+		return nil, false
+	}
+	return o.SeoWords, true
 }
 
 // HasSeoWords returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) HasSeoWords() bool {
-    if o != nil && !utils.IsNil(o.SeoWords) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SeoWords) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSeoWords gets a reference to the given []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSeoWords and assigns it to the SeoWords field.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) SetSeoWords(v []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSeoWords) {
-    o.SeoWords = v
+	o.SeoWords = v
 }
 
 // GetSmartTexts returns the SmartTexts field value if set, zero value otherwise.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) GetSmartTexts() []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSmartTexts {
-    if o == nil || utils.IsNil(o.SmartTexts) {
-        var ret []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSmartTexts
-        return ret
-    }
-    return o.SmartTexts
+	if o == nil || utils.IsNil(o.SmartTexts) {
+		var ret []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSmartTexts
+		return ret
+	}
+	return o.SmartTexts
 }
 
 // GetSmartTextsOk returns a tuple with the SmartTexts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) GetSmartTextsOk() ([]Product202309CheckProductListingResponseDataDiagnosesSuggestionsSmartTexts, bool) {
-    if o == nil || utils.IsNil(o.SmartTexts) {
-        return nil, false
-    }
-    return o.SmartTexts, true
+	if o == nil || utils.IsNil(o.SmartTexts) {
+		return nil, false
+	}
+	return o.SmartTexts, true
 }
 
 // HasSmartTexts returns a boolean if a field has been set.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) HasSmartTexts() bool {
-    if o != nil && !utils.IsNil(o.SmartTexts) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SmartTexts) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSmartTexts gets a reference to the given []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSmartTexts and assigns it to the SmartTexts field.
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) SetSmartTexts(v []Product202309CheckProductListingResponseDataDiagnosesSuggestionsSmartTexts) {
-    o.SmartTexts = v
+	o.SmartTexts = v
 }
 
 func (o Product202309CheckProductListingResponseDataDiagnosesSuggestions) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CheckProductListingResponseDataDiagnosesSuggestions) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Images) {
-        toSerialize["images"] = o.Images
-    }
-    if !utils.IsNil(o.SeoWords) {
-        toSerialize["seo_words"] = o.SeoWords
-    }
-    if !utils.IsNil(o.SmartTexts) {
-        toSerialize["smart_texts"] = o.SmartTexts
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Images) {
+		toSerialize["images"] = o.Images
+	}
+	if !utils.IsNil(o.SeoWords) {
+		toSerialize["seo_words"] = o.SeoWords
+	}
+	if !utils.IsNil(o.SmartTexts) {
+		toSerialize["smart_texts"] = o.SmartTexts
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CheckProductListingResponseDataDiagnosesSuggestions) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CheckProductListingResponseDataDiagnosesSuggestions := _Product202309CheckProductListingResponseDataDiagnosesSuggestions{}
+	varProduct202309CheckProductListingResponseDataDiagnosesSuggestions := _Product202309CheckProductListingResponseDataDiagnosesSuggestions{}
 
-    err = json.Unmarshal(data, &varProduct202309CheckProductListingResponseDataDiagnosesSuggestions)
+	err = json.Unmarshal(data, &varProduct202309CheckProductListingResponseDataDiagnosesSuggestions)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CheckProductListingResponseDataDiagnosesSuggestions(varProduct202309CheckProductListingResponseDataDiagnosesSuggestions)
+	*o = Product202309CheckProductListingResponseDataDiagnosesSuggestions(varProduct202309CheckProductListingResponseDataDiagnosesSuggestions)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "images")
-        delete(additionalProperties, "seo_words")
-        delete(additionalProperties, "smart_texts")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "images")
+		delete(additionalProperties, "seo_words")
+		delete(additionalProperties, "smart_texts")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CheckProductListingResponseDataDiagnosesSuggestions struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202309CheckProductListingResponseDataDiagnosesSuggestion
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

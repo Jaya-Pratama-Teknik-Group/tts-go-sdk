@@ -11,22 +11,22 @@ API version: 1.0.0
 package finance_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Finance202309GetTransactionsbyOrderResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Finance202309GetTransactionsbyOrderResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Finance202309GetTransactionsbyOrderResponseData{}
 
 // Finance202309GetTransactionsbyOrderResponseData struct for Finance202309GetTransactionsbyOrderResponseData
 type Finance202309GetTransactionsbyOrderResponseData struct {
-    // The creation time of the order. Unix timestamp.
-    OrderCreateTime *int64 `json:"order_create_time,omitempty"`
-    // The order ID in TikTok Shop.
-    OrderId *string `json:"order_id,omitempty"`
-    // The list of statement transactions associated with the order.
-    StatementTransactions []Finance202309GetTransactionsbyOrderResponseDataStatementTransactions `json:"statement_transactions,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The creation time of the order. Unix timestamp.
+	OrderCreateTime *int64 `json:"order_create_time,omitempty"`
+	// The order ID in TikTok Shop.
+	OrderId *string `json:"order_id,omitempty"`
+	// The list of statement transactions associated with the order.
+	StatementTransactions []Finance202309GetTransactionsbyOrderResponseDataStatementTransactions `json:"statement_transactions,omitempty"`
+	AdditionalProperties  map[string]interface{}
 }
 
 type _Finance202309GetTransactionsbyOrderResponseData Finance202309GetTransactionsbyOrderResponseData
@@ -36,161 +36,161 @@ type _Finance202309GetTransactionsbyOrderResponseData Finance202309GetTransactio
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFinance202309GetTransactionsbyOrderResponseData() *Finance202309GetTransactionsbyOrderResponseData {
-    this := Finance202309GetTransactionsbyOrderResponseData{}
-    return &this
+	this := Finance202309GetTransactionsbyOrderResponseData{}
+	return &this
 }
 
 // NewFinance202309GetTransactionsbyOrderResponseDataWithDefaults instantiates a new Finance202309GetTransactionsbyOrderResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFinance202309GetTransactionsbyOrderResponseDataWithDefaults() *Finance202309GetTransactionsbyOrderResponseData {
-    this := Finance202309GetTransactionsbyOrderResponseData{}
-    return &this
+	this := Finance202309GetTransactionsbyOrderResponseData{}
+	return &this
 }
 
 // GetOrderCreateTime returns the OrderCreateTime field value if set, zero value otherwise.
 func (o *Finance202309GetTransactionsbyOrderResponseData) GetOrderCreateTime() int64 {
-    if o == nil || utils.IsNil(o.OrderCreateTime) {
-        var ret int64
-        return ret
-    }
-    return *o.OrderCreateTime
+	if o == nil || utils.IsNil(o.OrderCreateTime) {
+		var ret int64
+		return ret
+	}
+	return *o.OrderCreateTime
 }
 
 // GetOrderCreateTimeOk returns a tuple with the OrderCreateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetTransactionsbyOrderResponseData) GetOrderCreateTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.OrderCreateTime) {
-        return nil, false
-    }
-    return o.OrderCreateTime, true
+	if o == nil || utils.IsNil(o.OrderCreateTime) {
+		return nil, false
+	}
+	return o.OrderCreateTime, true
 }
 
 // HasOrderCreateTime returns a boolean if a field has been set.
 func (o *Finance202309GetTransactionsbyOrderResponseData) HasOrderCreateTime() bool {
-    if o != nil && !utils.IsNil(o.OrderCreateTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderCreateTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderCreateTime gets a reference to the given int64 and assigns it to the OrderCreateTime field.
 func (o *Finance202309GetTransactionsbyOrderResponseData) SetOrderCreateTime(v int64) {
-    o.OrderCreateTime = &v
+	o.OrderCreateTime = &v
 }
 
 // GetOrderId returns the OrderId field value if set, zero value otherwise.
 func (o *Finance202309GetTransactionsbyOrderResponseData) GetOrderId() string {
-    if o == nil || utils.IsNil(o.OrderId) {
-        var ret string
-        return ret
-    }
-    return *o.OrderId
+	if o == nil || utils.IsNil(o.OrderId) {
+		var ret string
+		return ret
+	}
+	return *o.OrderId
 }
 
 // GetOrderIdOk returns a tuple with the OrderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetTransactionsbyOrderResponseData) GetOrderIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.OrderId) {
-        return nil, false
-    }
-    return o.OrderId, true
+	if o == nil || utils.IsNil(o.OrderId) {
+		return nil, false
+	}
+	return o.OrderId, true
 }
 
 // HasOrderId returns a boolean if a field has been set.
 func (o *Finance202309GetTransactionsbyOrderResponseData) HasOrderId() bool {
-    if o != nil && !utils.IsNil(o.OrderId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderId gets a reference to the given string and assigns it to the OrderId field.
 func (o *Finance202309GetTransactionsbyOrderResponseData) SetOrderId(v string) {
-    o.OrderId = &v
+	o.OrderId = &v
 }
 
 // GetStatementTransactions returns the StatementTransactions field value if set, zero value otherwise.
 func (o *Finance202309GetTransactionsbyOrderResponseData) GetStatementTransactions() []Finance202309GetTransactionsbyOrderResponseDataStatementTransactions {
-    if o == nil || utils.IsNil(o.StatementTransactions) {
-        var ret []Finance202309GetTransactionsbyOrderResponseDataStatementTransactions
-        return ret
-    }
-    return o.StatementTransactions
+	if o == nil || utils.IsNil(o.StatementTransactions) {
+		var ret []Finance202309GetTransactionsbyOrderResponseDataStatementTransactions
+		return ret
+	}
+	return o.StatementTransactions
 }
 
 // GetStatementTransactionsOk returns a tuple with the StatementTransactions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetTransactionsbyOrderResponseData) GetStatementTransactionsOk() ([]Finance202309GetTransactionsbyOrderResponseDataStatementTransactions, bool) {
-    if o == nil || utils.IsNil(o.StatementTransactions) {
-        return nil, false
-    }
-    return o.StatementTransactions, true
+	if o == nil || utils.IsNil(o.StatementTransactions) {
+		return nil, false
+	}
+	return o.StatementTransactions, true
 }
 
 // HasStatementTransactions returns a boolean if a field has been set.
 func (o *Finance202309GetTransactionsbyOrderResponseData) HasStatementTransactions() bool {
-    if o != nil && !utils.IsNil(o.StatementTransactions) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.StatementTransactions) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatementTransactions gets a reference to the given []Finance202309GetTransactionsbyOrderResponseDataStatementTransactions and assigns it to the StatementTransactions field.
 func (o *Finance202309GetTransactionsbyOrderResponseData) SetStatementTransactions(v []Finance202309GetTransactionsbyOrderResponseDataStatementTransactions) {
-    o.StatementTransactions = v
+	o.StatementTransactions = v
 }
 
 func (o Finance202309GetTransactionsbyOrderResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Finance202309GetTransactionsbyOrderResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.OrderCreateTime) {
-        toSerialize["order_create_time"] = o.OrderCreateTime
-    }
-    if !utils.IsNil(o.OrderId) {
-        toSerialize["order_id"] = o.OrderId
-    }
-    if !utils.IsNil(o.StatementTransactions) {
-        toSerialize["statement_transactions"] = o.StatementTransactions
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.OrderCreateTime) {
+		toSerialize["order_create_time"] = o.OrderCreateTime
+	}
+	if !utils.IsNil(o.OrderId) {
+		toSerialize["order_id"] = o.OrderId
+	}
+	if !utils.IsNil(o.StatementTransactions) {
+		toSerialize["statement_transactions"] = o.StatementTransactions
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Finance202309GetTransactionsbyOrderResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFinance202309GetTransactionsbyOrderResponseData := _Finance202309GetTransactionsbyOrderResponseData{}
+	varFinance202309GetTransactionsbyOrderResponseData := _Finance202309GetTransactionsbyOrderResponseData{}
 
-    err = json.Unmarshal(data, &varFinance202309GetTransactionsbyOrderResponseData)
+	err = json.Unmarshal(data, &varFinance202309GetTransactionsbyOrderResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Finance202309GetTransactionsbyOrderResponseData(varFinance202309GetTransactionsbyOrderResponseData)
+	*o = Finance202309GetTransactionsbyOrderResponseData(varFinance202309GetTransactionsbyOrderResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "order_create_time")
-        delete(additionalProperties, "order_id")
-        delete(additionalProperties, "statement_transactions")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "order_create_time")
+		delete(additionalProperties, "order_id")
+		delete(additionalProperties, "statement_transactions")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFinance202309GetTransactionsbyOrderResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullableFinance202309GetTransactionsbyOrderResponseData) UnmarshalJSON(
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

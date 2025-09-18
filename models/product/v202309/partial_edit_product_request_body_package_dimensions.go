@@ -11,24 +11,24 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309PartialEditProductRequestBodyPackageDimensions type satisfies the MappedNullable interface at compile time
+// checks if the Product202309PartialEditProductRequestBodyPackageDimensions type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309PartialEditProductRequestBodyPackageDimensions{}
 
 // Product202309PartialEditProductRequestBodyPackageDimensions struct for Product202309PartialEditProductRequestBodyPackageDimensions
 type Product202309PartialEditProductRequestBodyPackageDimensions struct {
-    // The package height. A positive whole number. **Note**: For the BR market, decimal values using `.` or `,` as separators are also accepted but will be rounded to the nearest whole number.
-    Height *string `json:"height,omitempty"`
-    // The package length. A positive whole number. **Note**: For the BR market, decimal values using `.` or `,` as separators are also accepted but will be rounded to the nearest whole number.
-    Length *string `json:"length,omitempty"`
-    // The unit for the package dimensions. Possible values based on region: - US: CENTIMETER, INCH - Other regions: CENTIMETER    **Note**: You must use the same system of measurement (metric system or imperial system) for `package_weight` and `package_dimensions`. In other words, if you are using KILOGRAM for the weight, you must use CENTIMETER for the dimensions.
-    Unit *string `json:"unit,omitempty"`
-    // The package width. A positive whole number. **Note**: For the BR market, decimal values using `.` or `,` as separators are also accepted but will be rounded to the nearest whole number.
-    Width *string `json:"width,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The package height. A positive whole number. **Note**: For the BR market, decimal values using `.` or `,` as separators are also accepted but will be rounded to the nearest whole number.
+	Height *string `json:"height,omitempty"`
+	// The package length. A positive whole number. **Note**: For the BR market, decimal values using `.` or `,` as separators are also accepted but will be rounded to the nearest whole number.
+	Length *string `json:"length,omitempty"`
+	// The unit for the package dimensions. Possible values based on region: - US: CENTIMETER, INCH - Other regions: CENTIMETER    **Note**: You must use the same system of measurement (metric system or imperial system) for `package_weight` and `package_dimensions`. In other words, if you are using KILOGRAM for the weight, you must use CENTIMETER for the dimensions.
+	Unit *string `json:"unit,omitempty"`
+	// The package width. A positive whole number. **Note**: For the BR market, decimal values using `.` or `,` as separators are also accepted but will be rounded to the nearest whole number.
+	Width                *string `json:"width,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309PartialEditProductRequestBodyPackageDimensions Product202309PartialEditProductRequestBodyPackageDimensions
@@ -38,197 +38,197 @@ type _Product202309PartialEditProductRequestBodyPackageDimensions Product202309P
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309PartialEditProductRequestBodyPackageDimensions() *Product202309PartialEditProductRequestBodyPackageDimensions {
-    this := Product202309PartialEditProductRequestBodyPackageDimensions{}
-    return &this
+	this := Product202309PartialEditProductRequestBodyPackageDimensions{}
+	return &this
 }
 
 // NewProduct202309PartialEditProductRequestBodyPackageDimensionsWithDefaults instantiates a new Product202309PartialEditProductRequestBodyPackageDimensions object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309PartialEditProductRequestBodyPackageDimensionsWithDefaults() *Product202309PartialEditProductRequestBodyPackageDimensions {
-    this := Product202309PartialEditProductRequestBodyPackageDimensions{}
-    return &this
+	this := Product202309PartialEditProductRequestBodyPackageDimensions{}
+	return &this
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) GetHeight() string {
-    if o == nil || utils.IsNil(o.Height) {
-        var ret string
-        return ret
-    }
-    return *o.Height
+	if o == nil || utils.IsNil(o.Height) {
+		var ret string
+		return ret
+	}
+	return *o.Height
 }
 
 // GetHeightOk returns a tuple with the Height field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) GetHeightOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Height) {
-        return nil, false
-    }
-    return o.Height, true
+	if o == nil || utils.IsNil(o.Height) {
+		return nil, false
+	}
+	return o.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) HasHeight() bool {
-    if o != nil && !utils.IsNil(o.Height) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Height) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHeight gets a reference to the given string and assigns it to the Height field.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) SetHeight(v string) {
-    o.Height = &v
+	o.Height = &v
 }
 
 // GetLength returns the Length field value if set, zero value otherwise.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) GetLength() string {
-    if o == nil || utils.IsNil(o.Length) {
-        var ret string
-        return ret
-    }
-    return *o.Length
+	if o == nil || utils.IsNil(o.Length) {
+		var ret string
+		return ret
+	}
+	return *o.Length
 }
 
 // GetLengthOk returns a tuple with the Length field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) GetLengthOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Length) {
-        return nil, false
-    }
-    return o.Length, true
+	if o == nil || utils.IsNil(o.Length) {
+		return nil, false
+	}
+	return o.Length, true
 }
 
 // HasLength returns a boolean if a field has been set.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) HasLength() bool {
-    if o != nil && !utils.IsNil(o.Length) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Length) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLength gets a reference to the given string and assigns it to the Length field.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) SetLength(v string) {
-    o.Length = &v
+	o.Length = &v
 }
 
 // GetUnit returns the Unit field value if set, zero value otherwise.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) GetUnit() string {
-    if o == nil || utils.IsNil(o.Unit) {
-        var ret string
-        return ret
-    }
-    return *o.Unit
+	if o == nil || utils.IsNil(o.Unit) {
+		var ret string
+		return ret
+	}
+	return *o.Unit
 }
 
 // GetUnitOk returns a tuple with the Unit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) GetUnitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Unit) {
-        return nil, false
-    }
-    return o.Unit, true
+	if o == nil || utils.IsNil(o.Unit) {
+		return nil, false
+	}
+	return o.Unit, true
 }
 
 // HasUnit returns a boolean if a field has been set.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) HasUnit() bool {
-    if o != nil && !utils.IsNil(o.Unit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Unit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnit gets a reference to the given string and assigns it to the Unit field.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) SetUnit(v string) {
-    o.Unit = &v
+	o.Unit = &v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) GetWidth() string {
-    if o == nil || utils.IsNil(o.Width) {
-        var ret string
-        return ret
-    }
-    return *o.Width
+	if o == nil || utils.IsNil(o.Width) {
+		var ret string
+		return ret
+	}
+	return *o.Width
 }
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) GetWidthOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Width) {
-        return nil, false
-    }
-    return o.Width, true
+	if o == nil || utils.IsNil(o.Width) {
+		return nil, false
+	}
+	return o.Width, true
 }
 
 // HasWidth returns a boolean if a field has been set.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) HasWidth() bool {
-    if o != nil && !utils.IsNil(o.Width) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Width) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWidth gets a reference to the given string and assigns it to the Width field.
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) SetWidth(v string) {
-    o.Width = &v
+	o.Width = &v
 }
 
 func (o Product202309PartialEditProductRequestBodyPackageDimensions) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309PartialEditProductRequestBodyPackageDimensions) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Height) {
-        toSerialize["height"] = o.Height
-    }
-    if !utils.IsNil(o.Length) {
-        toSerialize["length"] = o.Length
-    }
-    if !utils.IsNil(o.Unit) {
-        toSerialize["unit"] = o.Unit
-    }
-    if !utils.IsNil(o.Width) {
-        toSerialize["width"] = o.Width
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Height) {
+		toSerialize["height"] = o.Height
+	}
+	if !utils.IsNil(o.Length) {
+		toSerialize["length"] = o.Length
+	}
+	if !utils.IsNil(o.Unit) {
+		toSerialize["unit"] = o.Unit
+	}
+	if !utils.IsNil(o.Width) {
+		toSerialize["width"] = o.Width
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309PartialEditProductRequestBodyPackageDimensions) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309PartialEditProductRequestBodyPackageDimensions := _Product202309PartialEditProductRequestBodyPackageDimensions{}
+	varProduct202309PartialEditProductRequestBodyPackageDimensions := _Product202309PartialEditProductRequestBodyPackageDimensions{}
 
-    err = json.Unmarshal(data, &varProduct202309PartialEditProductRequestBodyPackageDimensions)
+	err = json.Unmarshal(data, &varProduct202309PartialEditProductRequestBodyPackageDimensions)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309PartialEditProductRequestBodyPackageDimensions(varProduct202309PartialEditProductRequestBodyPackageDimensions)
+	*o = Product202309PartialEditProductRequestBodyPackageDimensions(varProduct202309PartialEditProductRequestBodyPackageDimensions)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "height")
-        delete(additionalProperties, "length")
-        delete(additionalProperties, "unit")
-        delete(additionalProperties, "width")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "height")
+		delete(additionalProperties, "length")
+		delete(additionalProperties, "unit")
+		delete(additionalProperties, "width")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309PartialEditProductRequestBodyPackageDimensions struct {
@@ -266,5 +266,3 @@ func (v *NullableProduct202309PartialEditProductRequestBodyPackageDimensions) Un
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

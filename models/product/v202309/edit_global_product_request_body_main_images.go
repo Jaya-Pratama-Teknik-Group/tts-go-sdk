@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309EditGlobalProductRequestBodyMainImages type satisfies the MappedNullable interface at compile time
+// checks if the Product202309EditGlobalProductRequestBodyMainImages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309EditGlobalProductRequestBodyMainImages{}
 
 // Product202309EditGlobalProductRequestBodyMainImages struct for Product202309EditGlobalProductRequestBodyMainImages
 type Product202309EditGlobalProductRequestBodyMainImages struct {
-    // The URI of the image.  Obtain this URI by uploading the images through the [Upload Product Image API](6509df95defece02be598a22)  with `use_case=MAIN_IMAGE`. You can use the returned URI directly, or process it through the [Optimize Images API](665692b35d39dc02deb49a97) first and use the resulting URI.
-    Uri *string `json:"uri,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The URI of the image.  Obtain this URI by uploading the images through the [Upload Product Image API](6509df95defece02be598a22)  with `use_case=MAIN_IMAGE`. You can use the returned URI directly, or process it through the [Optimize Images API](665692b35d39dc02deb49a97) first and use the resulting URI.
+	Uri                  *string `json:"uri,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309EditGlobalProductRequestBodyMainImages Product202309EditGlobalProductRequestBodyMainImages
@@ -32,89 +32,89 @@ type _Product202309EditGlobalProductRequestBodyMainImages Product202309EditGloba
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309EditGlobalProductRequestBodyMainImages() *Product202309EditGlobalProductRequestBodyMainImages {
-    this := Product202309EditGlobalProductRequestBodyMainImages{}
-    return &this
+	this := Product202309EditGlobalProductRequestBodyMainImages{}
+	return &this
 }
 
 // NewProduct202309EditGlobalProductRequestBodyMainImagesWithDefaults instantiates a new Product202309EditGlobalProductRequestBodyMainImages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309EditGlobalProductRequestBodyMainImagesWithDefaults() *Product202309EditGlobalProductRequestBodyMainImages {
-    this := Product202309EditGlobalProductRequestBodyMainImages{}
-    return &this
+	this := Product202309EditGlobalProductRequestBodyMainImages{}
+	return &this
 }
 
 // GetUri returns the Uri field value if set, zero value otherwise.
 func (o *Product202309EditGlobalProductRequestBodyMainImages) GetUri() string {
-    if o == nil || utils.IsNil(o.Uri) {
-        var ret string
-        return ret
-    }
-    return *o.Uri
+	if o == nil || utils.IsNil(o.Uri) {
+		var ret string
+		return ret
+	}
+	return *o.Uri
 }
 
 // GetUriOk returns a tuple with the Uri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309EditGlobalProductRequestBodyMainImages) GetUriOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Uri) {
-        return nil, false
-    }
-    return o.Uri, true
+	if o == nil || utils.IsNil(o.Uri) {
+		return nil, false
+	}
+	return o.Uri, true
 }
 
 // HasUri returns a boolean if a field has been set.
 func (o *Product202309EditGlobalProductRequestBodyMainImages) HasUri() bool {
-    if o != nil && !utils.IsNil(o.Uri) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Uri) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUri gets a reference to the given string and assigns it to the Uri field.
 func (o *Product202309EditGlobalProductRequestBodyMainImages) SetUri(v string) {
-    o.Uri = &v
+	o.Uri = &v
 }
 
 func (o Product202309EditGlobalProductRequestBodyMainImages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309EditGlobalProductRequestBodyMainImages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Uri) {
-        toSerialize["uri"] = o.Uri
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Uri) {
+		toSerialize["uri"] = o.Uri
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309EditGlobalProductRequestBodyMainImages) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309EditGlobalProductRequestBodyMainImages := _Product202309EditGlobalProductRequestBodyMainImages{}
+	varProduct202309EditGlobalProductRequestBodyMainImages := _Product202309EditGlobalProductRequestBodyMainImages{}
 
-    err = json.Unmarshal(data, &varProduct202309EditGlobalProductRequestBodyMainImages)
+	err = json.Unmarshal(data, &varProduct202309EditGlobalProductRequestBodyMainImages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309EditGlobalProductRequestBodyMainImages(varProduct202309EditGlobalProductRequestBodyMainImages)
+	*o = Product202309EditGlobalProductRequestBodyMainImages(varProduct202309EditGlobalProductRequestBodyMainImages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "uri")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "uri")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309EditGlobalProductRequestBodyMainImages struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309EditGlobalProductRequestBodyMainImages) UnmarshalJ
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

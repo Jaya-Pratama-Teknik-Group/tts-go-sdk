@@ -11,20 +11,20 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309CreateActivityRequestBodyDiscountGiftDiscount type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309CreateActivityRequestBodyDiscountGiftDiscount type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309CreateActivityRequestBodyDiscountGiftDiscount{}
 
 // Promotion202309CreateActivityRequestBodyDiscountGiftDiscount struct for Promotion202309CreateActivityRequestBodyDiscountGiftDiscount
 type Promotion202309CreateActivityRequestBodyDiscountGiftDiscount struct {
-    // Configurations regarding Gift With Purchase (GWP) promotions.  A maximum of two `tier`s are permitted in SEA and UK. Only one `tier` is permitted in US. And `threshold_type` must be the same across all `tier`s. 
-    GiftInfos []Promotion202309CreateActivityRequestBodyDiscountGiftDiscountGiftInfos `json:"gift_infos,omitempty"`
-    // The receiving type of gift. Currently only supports one type: `ALL_RECEIVE` -`ALL_RECEIVE`: All gifts configured in the promotion can be collected.
-    GiftReceivingType *string `json:"gift_receiving_type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Configurations regarding Gift With Purchase (GWP) promotions.  A maximum of two `tier`s are permitted in SEA and UK. Only one `tier` is permitted in US. And `threshold_type` must be the same across all `tier`s.
+	GiftInfos []Promotion202309CreateActivityRequestBodyDiscountGiftDiscountGiftInfos `json:"gift_infos,omitempty"`
+	// The receiving type of gift. Currently only supports one type: `ALL_RECEIVE` -`ALL_RECEIVE`: All gifts configured in the promotion can be collected.
+	GiftReceivingType    *string `json:"gift_receiving_type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309CreateActivityRequestBodyDiscountGiftDiscount Promotion202309CreateActivityRequestBodyDiscountGiftDiscount
@@ -34,125 +34,125 @@ type _Promotion202309CreateActivityRequestBodyDiscountGiftDiscount Promotion2023
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309CreateActivityRequestBodyDiscountGiftDiscount() *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount {
-    this := Promotion202309CreateActivityRequestBodyDiscountGiftDiscount{}
-    return &this
+	this := Promotion202309CreateActivityRequestBodyDiscountGiftDiscount{}
+	return &this
 }
 
 // NewPromotion202309CreateActivityRequestBodyDiscountGiftDiscountWithDefaults instantiates a new Promotion202309CreateActivityRequestBodyDiscountGiftDiscount object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309CreateActivityRequestBodyDiscountGiftDiscountWithDefaults() *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount {
-    this := Promotion202309CreateActivityRequestBodyDiscountGiftDiscount{}
-    return &this
+	this := Promotion202309CreateActivityRequestBodyDiscountGiftDiscount{}
+	return &this
 }
 
 // GetGiftInfos returns the GiftInfos field value if set, zero value otherwise.
 func (o *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) GetGiftInfos() []Promotion202309CreateActivityRequestBodyDiscountGiftDiscountGiftInfos {
-    if o == nil || utils.IsNil(o.GiftInfos) {
-        var ret []Promotion202309CreateActivityRequestBodyDiscountGiftDiscountGiftInfos
-        return ret
-    }
-    return o.GiftInfos
+	if o == nil || utils.IsNil(o.GiftInfos) {
+		var ret []Promotion202309CreateActivityRequestBodyDiscountGiftDiscountGiftInfos
+		return ret
+	}
+	return o.GiftInfos
 }
 
 // GetGiftInfosOk returns a tuple with the GiftInfos field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) GetGiftInfosOk() ([]Promotion202309CreateActivityRequestBodyDiscountGiftDiscountGiftInfos, bool) {
-    if o == nil || utils.IsNil(o.GiftInfos) {
-        return nil, false
-    }
-    return o.GiftInfos, true
+	if o == nil || utils.IsNil(o.GiftInfos) {
+		return nil, false
+	}
+	return o.GiftInfos, true
 }
 
 // HasGiftInfos returns a boolean if a field has been set.
 func (o *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) HasGiftInfos() bool {
-    if o != nil && !utils.IsNil(o.GiftInfos) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.GiftInfos) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGiftInfos gets a reference to the given []Promotion202309CreateActivityRequestBodyDiscountGiftDiscountGiftInfos and assigns it to the GiftInfos field.
 func (o *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) SetGiftInfos(v []Promotion202309CreateActivityRequestBodyDiscountGiftDiscountGiftInfos) {
-    o.GiftInfos = v
+	o.GiftInfos = v
 }
 
 // GetGiftReceivingType returns the GiftReceivingType field value if set, zero value otherwise.
 func (o *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) GetGiftReceivingType() string {
-    if o == nil || utils.IsNil(o.GiftReceivingType) {
-        var ret string
-        return ret
-    }
-    return *o.GiftReceivingType
+	if o == nil || utils.IsNil(o.GiftReceivingType) {
+		var ret string
+		return ret
+	}
+	return *o.GiftReceivingType
 }
 
 // GetGiftReceivingTypeOk returns a tuple with the GiftReceivingType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) GetGiftReceivingTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.GiftReceivingType) {
-        return nil, false
-    }
-    return o.GiftReceivingType, true
+	if o == nil || utils.IsNil(o.GiftReceivingType) {
+		return nil, false
+	}
+	return o.GiftReceivingType, true
 }
 
 // HasGiftReceivingType returns a boolean if a field has been set.
 func (o *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) HasGiftReceivingType() bool {
-    if o != nil && !utils.IsNil(o.GiftReceivingType) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.GiftReceivingType) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGiftReceivingType gets a reference to the given string and assigns it to the GiftReceivingType field.
 func (o *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) SetGiftReceivingType(v string) {
-    o.GiftReceivingType = &v
+	o.GiftReceivingType = &v
 }
 
 func (o Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.GiftInfos) {
-        toSerialize["gift_infos"] = o.GiftInfos
-    }
-    if !utils.IsNil(o.GiftReceivingType) {
-        toSerialize["gift_receiving_type"] = o.GiftReceivingType
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.GiftInfos) {
+		toSerialize["gift_infos"] = o.GiftInfos
+	}
+	if !utils.IsNil(o.GiftReceivingType) {
+		toSerialize["gift_receiving_type"] = o.GiftReceivingType
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309CreateActivityRequestBodyDiscountGiftDiscount) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309CreateActivityRequestBodyDiscountGiftDiscount := _Promotion202309CreateActivityRequestBodyDiscountGiftDiscount{}
+	varPromotion202309CreateActivityRequestBodyDiscountGiftDiscount := _Promotion202309CreateActivityRequestBodyDiscountGiftDiscount{}
 
-    err = json.Unmarshal(data, &varPromotion202309CreateActivityRequestBodyDiscountGiftDiscount)
+	err = json.Unmarshal(data, &varPromotion202309CreateActivityRequestBodyDiscountGiftDiscount)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309CreateActivityRequestBodyDiscountGiftDiscount(varPromotion202309CreateActivityRequestBodyDiscountGiftDiscount)
+	*o = Promotion202309CreateActivityRequestBodyDiscountGiftDiscount(varPromotion202309CreateActivityRequestBodyDiscountGiftDiscount)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "gift_infos")
-        delete(additionalProperties, "gift_receiving_type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "gift_infos")
+		delete(additionalProperties, "gift_receiving_type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309CreateActivityRequestBodyDiscountGiftDiscount struct {
@@ -190,5 +190,3 @@ func (v *NullablePromotion202309CreateActivityRequestBodyDiscountGiftDiscount) U
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

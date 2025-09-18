@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202502
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202502SearchProductsResponseDataProductsSkusStatusInfo type satisfies the MappedNullable interface at compile time
+// checks if the Product202502SearchProductsResponseDataProductsSkusStatusInfo type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202502SearchProductsResponseDataProductsSkusStatusInfo{}
 
 // Product202502SearchProductsResponseDataProductsSkusStatusInfo struct for Product202502SearchProductsResponseDataProductsSkusStatusInfo
 type Product202502SearchProductsResponseDataProductsSkusStatusInfo struct {
-    // The deactivation source of the SKU with `DEACTIVATED` status. Possible values: - SELLER: Indicates that the seller deactivated the SKU - PLATFORM: Indicates that the platform de-activated the SKU due to violation reasons - COMBO_RELATION: Indicates that the platform de-activated the combined-SKU due to the deactivation of sub-SKU.
-    DeactivationSource *string `json:"deactivation_source,omitempty"`
-    // The SKU status in TikTok Shop. Possible values:  - NORMAL - DEACTIVATED
-    Status *string `json:"status,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The deactivation source of the SKU with `DEACTIVATED` status. Possible values: - SELLER: Indicates that the seller deactivated the SKU - PLATFORM: Indicates that the platform de-activated the SKU due to violation reasons - COMBO_RELATION: Indicates that the platform de-activated the combined-SKU due to the deactivation of sub-SKU.
+	DeactivationSource *string `json:"deactivation_source,omitempty"`
+	// The SKU status in TikTok Shop. Possible values:  - NORMAL - DEACTIVATED
+	Status               *string `json:"status,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202502SearchProductsResponseDataProductsSkusStatusInfo Product202502SearchProductsResponseDataProductsSkusStatusInfo
@@ -34,125 +34,125 @@ type _Product202502SearchProductsResponseDataProductsSkusStatusInfo Product20250
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202502SearchProductsResponseDataProductsSkusStatusInfo() *Product202502SearchProductsResponseDataProductsSkusStatusInfo {
-    this := Product202502SearchProductsResponseDataProductsSkusStatusInfo{}
-    return &this
+	this := Product202502SearchProductsResponseDataProductsSkusStatusInfo{}
+	return &this
 }
 
 // NewProduct202502SearchProductsResponseDataProductsSkusStatusInfoWithDefaults instantiates a new Product202502SearchProductsResponseDataProductsSkusStatusInfo object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202502SearchProductsResponseDataProductsSkusStatusInfoWithDefaults() *Product202502SearchProductsResponseDataProductsSkusStatusInfo {
-    this := Product202502SearchProductsResponseDataProductsSkusStatusInfo{}
-    return &this
+	this := Product202502SearchProductsResponseDataProductsSkusStatusInfo{}
+	return &this
 }
 
 // GetDeactivationSource returns the DeactivationSource field value if set, zero value otherwise.
 func (o *Product202502SearchProductsResponseDataProductsSkusStatusInfo) GetDeactivationSource() string {
-    if o == nil || utils.IsNil(o.DeactivationSource) {
-        var ret string
-        return ret
-    }
-    return *o.DeactivationSource
+	if o == nil || utils.IsNil(o.DeactivationSource) {
+		var ret string
+		return ret
+	}
+	return *o.DeactivationSource
 }
 
 // GetDeactivationSourceOk returns a tuple with the DeactivationSource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusStatusInfo) GetDeactivationSourceOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.DeactivationSource) {
-        return nil, false
-    }
-    return o.DeactivationSource, true
+	if o == nil || utils.IsNil(o.DeactivationSource) {
+		return nil, false
+	}
+	return o.DeactivationSource, true
 }
 
 // HasDeactivationSource returns a boolean if a field has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusStatusInfo) HasDeactivationSource() bool {
-    if o != nil && !utils.IsNil(o.DeactivationSource) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DeactivationSource) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDeactivationSource gets a reference to the given string and assigns it to the DeactivationSource field.
 func (o *Product202502SearchProductsResponseDataProductsSkusStatusInfo) SetDeactivationSource(v string) {
-    o.DeactivationSource = &v
+	o.DeactivationSource = &v
 }
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *Product202502SearchProductsResponseDataProductsSkusStatusInfo) GetStatus() string {
-    if o == nil || utils.IsNil(o.Status) {
-        var ret string
-        return ret
-    }
-    return *o.Status
+	if o == nil || utils.IsNil(o.Status) {
+		var ret string
+		return ret
+	}
+	return *o.Status
 }
 
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusStatusInfo) GetStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Status) {
-        return nil, false
-    }
-    return o.Status, true
+	if o == nil || utils.IsNil(o.Status) {
+		return nil, false
+	}
+	return o.Status, true
 }
 
 // HasStatus returns a boolean if a field has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusStatusInfo) HasStatus() bool {
-    if o != nil && !utils.IsNil(o.Status) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Status) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatus gets a reference to the given string and assigns it to the Status field.
 func (o *Product202502SearchProductsResponseDataProductsSkusStatusInfo) SetStatus(v string) {
-    o.Status = &v
+	o.Status = &v
 }
 
 func (o Product202502SearchProductsResponseDataProductsSkusStatusInfo) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202502SearchProductsResponseDataProductsSkusStatusInfo) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.DeactivationSource) {
-        toSerialize["deactivation_source"] = o.DeactivationSource
-    }
-    if !utils.IsNil(o.Status) {
-        toSerialize["status"] = o.Status
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.DeactivationSource) {
+		toSerialize["deactivation_source"] = o.DeactivationSource
+	}
+	if !utils.IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202502SearchProductsResponseDataProductsSkusStatusInfo) UnmarshalJSON(data []byte) (err error) {
-    varProduct202502SearchProductsResponseDataProductsSkusStatusInfo := _Product202502SearchProductsResponseDataProductsSkusStatusInfo{}
+	varProduct202502SearchProductsResponseDataProductsSkusStatusInfo := _Product202502SearchProductsResponseDataProductsSkusStatusInfo{}
 
-    err = json.Unmarshal(data, &varProduct202502SearchProductsResponseDataProductsSkusStatusInfo)
+	err = json.Unmarshal(data, &varProduct202502SearchProductsResponseDataProductsSkusStatusInfo)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202502SearchProductsResponseDataProductsSkusStatusInfo(varProduct202502SearchProductsResponseDataProductsSkusStatusInfo)
+	*o = Product202502SearchProductsResponseDataProductsSkusStatusInfo(varProduct202502SearchProductsResponseDataProductsSkusStatusInfo)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "deactivation_source")
-        delete(additionalProperties, "status")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "deactivation_source")
+		delete(additionalProperties, "status")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202502SearchProductsResponseDataProductsSkusStatusInfo struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202502SearchProductsResponseDataProductsSkusStatusInfo) 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

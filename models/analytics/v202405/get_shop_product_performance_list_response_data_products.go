@@ -11,25 +11,25 @@ API version: 1.0.0
 package analytics_v202405
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Analytics202405GetShopProductPerformanceListResponseDataProducts type satisfies the MappedNullable interface at compile time
+// checks if the Analytics202405GetShopProductPerformanceListResponseDataProducts type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Analytics202405GetShopProductPerformanceListResponseDataProducts{}
 
 // Analytics202405GetShopProductPerformanceListResponseDataProducts struct for Analytics202405GetShopProductPerformanceListResponseDataProducts
 type Analytics202405GetShopProductPerformanceListResponseDataProducts struct {
-    // Ratio of the number of product clicks compared to number of product impressions in raw decimal format. To calculate the percentage, multiple it by 100%. Example: 0.0528 <=> 5.28%
-    ClickThroughRate *string `json:"click_through_rate,omitempty"`
-    Gmv *Analytics202405GetShopProductPerformanceListResponseDataProductsGmv `json:"gmv,omitempty"`
-    // Product ID
-    Id *int64 `json:"id,omitempty"`
-    // Total (sum of all) orders for the product.
-    Orders *int64 `json:"orders,omitempty"`
-    // Number of units sold for the product.
-    UnitsSold *int64 `json:"units_sold,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Ratio of the number of product clicks compared to number of product impressions in raw decimal format. To calculate the percentage, multiple it by 100%. Example: 0.0528 <=> 5.28%
+	ClickThroughRate *string                                                              `json:"click_through_rate,omitempty"`
+	Gmv              *Analytics202405GetShopProductPerformanceListResponseDataProductsGmv `json:"gmv,omitempty"`
+	// Product ID
+	Id *int64 `json:"id,omitempty"`
+	// Total (sum of all) orders for the product.
+	Orders *int64 `json:"orders,omitempty"`
+	// Number of units sold for the product.
+	UnitsSold            *int64 `json:"units_sold,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Analytics202405GetShopProductPerformanceListResponseDataProducts Analytics202405GetShopProductPerformanceListResponseDataProducts
@@ -39,233 +39,233 @@ type _Analytics202405GetShopProductPerformanceListResponseDataProducts Analytics
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAnalytics202405GetShopProductPerformanceListResponseDataProducts() *Analytics202405GetShopProductPerformanceListResponseDataProducts {
-    this := Analytics202405GetShopProductPerformanceListResponseDataProducts{}
-    return &this
+	this := Analytics202405GetShopProductPerformanceListResponseDataProducts{}
+	return &this
 }
 
 // NewAnalytics202405GetShopProductPerformanceListResponseDataProductsWithDefaults instantiates a new Analytics202405GetShopProductPerformanceListResponseDataProducts object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAnalytics202405GetShopProductPerformanceListResponseDataProductsWithDefaults() *Analytics202405GetShopProductPerformanceListResponseDataProducts {
-    this := Analytics202405GetShopProductPerformanceListResponseDataProducts{}
-    return &this
+	this := Analytics202405GetShopProductPerformanceListResponseDataProducts{}
+	return &this
 }
 
 // GetClickThroughRate returns the ClickThroughRate field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetClickThroughRate() string {
-    if o == nil || utils.IsNil(o.ClickThroughRate) {
-        var ret string
-        return ret
-    }
-    return *o.ClickThroughRate
+	if o == nil || utils.IsNil(o.ClickThroughRate) {
+		var ret string
+		return ret
+	}
+	return *o.ClickThroughRate
 }
 
 // GetClickThroughRateOk returns a tuple with the ClickThroughRate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetClickThroughRateOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ClickThroughRate) {
-        return nil, false
-    }
-    return o.ClickThroughRate, true
+	if o == nil || utils.IsNil(o.ClickThroughRate) {
+		return nil, false
+	}
+	return o.ClickThroughRate, true
 }
 
 // HasClickThroughRate returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) HasClickThroughRate() bool {
-    if o != nil && !utils.IsNil(o.ClickThroughRate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ClickThroughRate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetClickThroughRate gets a reference to the given string and assigns it to the ClickThroughRate field.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) SetClickThroughRate(v string) {
-    o.ClickThroughRate = &v
+	o.ClickThroughRate = &v
 }
 
 // GetGmv returns the Gmv field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetGmv() Analytics202405GetShopProductPerformanceListResponseDataProductsGmv {
-    if o == nil || utils.IsNil(o.Gmv) {
-        var ret Analytics202405GetShopProductPerformanceListResponseDataProductsGmv
-        return ret
-    }
-    return *o.Gmv
+	if o == nil || utils.IsNil(o.Gmv) {
+		var ret Analytics202405GetShopProductPerformanceListResponseDataProductsGmv
+		return ret
+	}
+	return *o.Gmv
 }
 
 // GetGmvOk returns a tuple with the Gmv field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetGmvOk() (*Analytics202405GetShopProductPerformanceListResponseDataProductsGmv, bool) {
-    if o == nil || utils.IsNil(o.Gmv) {
-        return nil, false
-    }
-    return o.Gmv, true
+	if o == nil || utils.IsNil(o.Gmv) {
+		return nil, false
+	}
+	return o.Gmv, true
 }
 
 // HasGmv returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) HasGmv() bool {
-    if o != nil && !utils.IsNil(o.Gmv) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Gmv) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGmv gets a reference to the given Analytics202405GetShopProductPerformanceListResponseDataProductsGmv and assigns it to the Gmv field.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) SetGmv(v Analytics202405GetShopProductPerformanceListResponseDataProductsGmv) {
-    o.Gmv = &v
+	o.Gmv = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetId() int64 {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret int64
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret int64
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetIdOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given int64 and assigns it to the Id field.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) SetId(v int64) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetOrders returns the Orders field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetOrders() int64 {
-    if o == nil || utils.IsNil(o.Orders) {
-        var ret int64
-        return ret
-    }
-    return *o.Orders
+	if o == nil || utils.IsNil(o.Orders) {
+		var ret int64
+		return ret
+	}
+	return *o.Orders
 }
 
 // GetOrdersOk returns a tuple with the Orders field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetOrdersOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Orders) {
-        return nil, false
-    }
-    return o.Orders, true
+	if o == nil || utils.IsNil(o.Orders) {
+		return nil, false
+	}
+	return o.Orders, true
 }
 
 // HasOrders returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) HasOrders() bool {
-    if o != nil && !utils.IsNil(o.Orders) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Orders) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrders gets a reference to the given int64 and assigns it to the Orders field.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) SetOrders(v int64) {
-    o.Orders = &v
+	o.Orders = &v
 }
 
 // GetUnitsSold returns the UnitsSold field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetUnitsSold() int64 {
-    if o == nil || utils.IsNil(o.UnitsSold) {
-        var ret int64
-        return ret
-    }
-    return *o.UnitsSold
+	if o == nil || utils.IsNil(o.UnitsSold) {
+		var ret int64
+		return ret
+	}
+	return *o.UnitsSold
 }
 
 // GetUnitsSoldOk returns a tuple with the UnitsSold field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) GetUnitsSoldOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UnitsSold) {
-        return nil, false
-    }
-    return o.UnitsSold, true
+	if o == nil || utils.IsNil(o.UnitsSold) {
+		return nil, false
+	}
+	return o.UnitsSold, true
 }
 
 // HasUnitsSold returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) HasUnitsSold() bool {
-    if o != nil && !utils.IsNil(o.UnitsSold) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UnitsSold) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnitsSold gets a reference to the given int64 and assigns it to the UnitsSold field.
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) SetUnitsSold(v int64) {
-    o.UnitsSold = &v
+	o.UnitsSold = &v
 }
 
 func (o Analytics202405GetShopProductPerformanceListResponseDataProducts) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Analytics202405GetShopProductPerformanceListResponseDataProducts) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ClickThroughRate) {
-        toSerialize["click_through_rate"] = o.ClickThroughRate
-    }
-    if !utils.IsNil(o.Gmv) {
-        toSerialize["gmv"] = o.Gmv
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Orders) {
-        toSerialize["orders"] = o.Orders
-    }
-    if !utils.IsNil(o.UnitsSold) {
-        toSerialize["units_sold"] = o.UnitsSold
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ClickThroughRate) {
+		toSerialize["click_through_rate"] = o.ClickThroughRate
+	}
+	if !utils.IsNil(o.Gmv) {
+		toSerialize["gmv"] = o.Gmv
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Orders) {
+		toSerialize["orders"] = o.Orders
+	}
+	if !utils.IsNil(o.UnitsSold) {
+		toSerialize["units_sold"] = o.UnitsSold
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Analytics202405GetShopProductPerformanceListResponseDataProducts) UnmarshalJSON(data []byte) (err error) {
-    varAnalytics202405GetShopProductPerformanceListResponseDataProducts := _Analytics202405GetShopProductPerformanceListResponseDataProducts{}
+	varAnalytics202405GetShopProductPerformanceListResponseDataProducts := _Analytics202405GetShopProductPerformanceListResponseDataProducts{}
 
-    err = json.Unmarshal(data, &varAnalytics202405GetShopProductPerformanceListResponseDataProducts)
+	err = json.Unmarshal(data, &varAnalytics202405GetShopProductPerformanceListResponseDataProducts)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Analytics202405GetShopProductPerformanceListResponseDataProducts(varAnalytics202405GetShopProductPerformanceListResponseDataProducts)
+	*o = Analytics202405GetShopProductPerformanceListResponseDataProducts(varAnalytics202405GetShopProductPerformanceListResponseDataProducts)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "click_through_rate")
-        delete(additionalProperties, "gmv")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "orders")
-        delete(additionalProperties, "units_sold")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "click_through_rate")
+		delete(additionalProperties, "gmv")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "orders")
+		delete(additionalProperties, "units_sold")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAnalytics202405GetShopProductPerformanceListResponseDataProducts struct {
@@ -303,5 +303,3 @@ func (v *NullableAnalytics202405GetShopProductPerformanceListResponseDataProduct
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

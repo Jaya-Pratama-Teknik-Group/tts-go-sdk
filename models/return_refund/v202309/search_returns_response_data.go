@@ -11,22 +11,22 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309SearchReturnsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309SearchReturnsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309SearchReturnsResponseData{}
 
 // ReturnRefund202309SearchReturnsResponseData struct for ReturnRefund202309SearchReturnsResponseData
 type ReturnRefund202309SearchReturnsResponseData struct {
-    // An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
-    NextPageToken *string `json:"next_page_token,omitempty"`
-    // List of returns.
-    ReturnOrders []ReturnRefund202309SearchReturnsResponseDataReturnOrders `json:"return_orders,omitempty"`
-    // The number of returns that meet the query conditions.
-    TotalCount *int32 `json:"total_count,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
+	NextPageToken *string `json:"next_page_token,omitempty"`
+	// List of returns.
+	ReturnOrders []ReturnRefund202309SearchReturnsResponseDataReturnOrders `json:"return_orders,omitempty"`
+	// The number of returns that meet the query conditions.
+	TotalCount           *int32 `json:"total_count,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309SearchReturnsResponseData ReturnRefund202309SearchReturnsResponseData
@@ -36,161 +36,161 @@ type _ReturnRefund202309SearchReturnsResponseData ReturnRefund202309SearchReturn
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309SearchReturnsResponseData() *ReturnRefund202309SearchReturnsResponseData {
-    this := ReturnRefund202309SearchReturnsResponseData{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseData{}
+	return &this
 }
 
 // NewReturnRefund202309SearchReturnsResponseDataWithDefaults instantiates a new ReturnRefund202309SearchReturnsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309SearchReturnsResponseDataWithDefaults() *ReturnRefund202309SearchReturnsResponseData {
-    this := ReturnRefund202309SearchReturnsResponseData{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseData{}
+	return &this
 }
 
 // GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseData) GetNextPageToken() string {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        var ret string
-        return ret
-    }
-    return *o.NextPageToken
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		var ret string
+		return ret
+	}
+	return *o.NextPageToken
 }
 
 // GetNextPageTokenOk returns a tuple with the NextPageToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseData) GetNextPageTokenOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        return nil, false
-    }
-    return o.NextPageToken, true
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		return nil, false
+	}
+	return o.NextPageToken, true
 }
 
 // HasNextPageToken returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseData) HasNextPageToken() bool {
-    if o != nil && !utils.IsNil(o.NextPageToken) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NextPageToken) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNextPageToken gets a reference to the given string and assigns it to the NextPageToken field.
 func (o *ReturnRefund202309SearchReturnsResponseData) SetNextPageToken(v string) {
-    o.NextPageToken = &v
+	o.NextPageToken = &v
 }
 
 // GetReturnOrders returns the ReturnOrders field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseData) GetReturnOrders() []ReturnRefund202309SearchReturnsResponseDataReturnOrders {
-    if o == nil || utils.IsNil(o.ReturnOrders) {
-        var ret []ReturnRefund202309SearchReturnsResponseDataReturnOrders
-        return ret
-    }
-    return o.ReturnOrders
+	if o == nil || utils.IsNil(o.ReturnOrders) {
+		var ret []ReturnRefund202309SearchReturnsResponseDataReturnOrders
+		return ret
+	}
+	return o.ReturnOrders
 }
 
 // GetReturnOrdersOk returns a tuple with the ReturnOrders field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseData) GetReturnOrdersOk() ([]ReturnRefund202309SearchReturnsResponseDataReturnOrders, bool) {
-    if o == nil || utils.IsNil(o.ReturnOrders) {
-        return nil, false
-    }
-    return o.ReturnOrders, true
+	if o == nil || utils.IsNil(o.ReturnOrders) {
+		return nil, false
+	}
+	return o.ReturnOrders, true
 }
 
 // HasReturnOrders returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseData) HasReturnOrders() bool {
-    if o != nil && !utils.IsNil(o.ReturnOrders) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ReturnOrders) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReturnOrders gets a reference to the given []ReturnRefund202309SearchReturnsResponseDataReturnOrders and assigns it to the ReturnOrders field.
 func (o *ReturnRefund202309SearchReturnsResponseData) SetReturnOrders(v []ReturnRefund202309SearchReturnsResponseDataReturnOrders) {
-    o.ReturnOrders = v
+	o.ReturnOrders = v
 }
 
 // GetTotalCount returns the TotalCount field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseData) GetTotalCount() int32 {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        var ret int32
-        return ret
-    }
-    return *o.TotalCount
+	if o == nil || utils.IsNil(o.TotalCount) {
+		var ret int32
+		return ret
+	}
+	return *o.TotalCount
 }
 
 // GetTotalCountOk returns a tuple with the TotalCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseData) GetTotalCountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        return nil, false
-    }
-    return o.TotalCount, true
+	if o == nil || utils.IsNil(o.TotalCount) {
+		return nil, false
+	}
+	return o.TotalCount, true
 }
 
 // HasTotalCount returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseData) HasTotalCount() bool {
-    if o != nil && !utils.IsNil(o.TotalCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalCount gets a reference to the given int32 and assigns it to the TotalCount field.
 func (o *ReturnRefund202309SearchReturnsResponseData) SetTotalCount(v int32) {
-    o.TotalCount = &v
+	o.TotalCount = &v
 }
 
 func (o ReturnRefund202309SearchReturnsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309SearchReturnsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.NextPageToken) {
-        toSerialize["next_page_token"] = o.NextPageToken
-    }
-    if !utils.IsNil(o.ReturnOrders) {
-        toSerialize["return_orders"] = o.ReturnOrders
-    }
-    if !utils.IsNil(o.TotalCount) {
-        toSerialize["total_count"] = o.TotalCount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.NextPageToken) {
+		toSerialize["next_page_token"] = o.NextPageToken
+	}
+	if !utils.IsNil(o.ReturnOrders) {
+		toSerialize["return_orders"] = o.ReturnOrders
+	}
+	if !utils.IsNil(o.TotalCount) {
+		toSerialize["total_count"] = o.TotalCount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309SearchReturnsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309SearchReturnsResponseData := _ReturnRefund202309SearchReturnsResponseData{}
+	varReturnRefund202309SearchReturnsResponseData := _ReturnRefund202309SearchReturnsResponseData{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseData)
+	err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309SearchReturnsResponseData(varReturnRefund202309SearchReturnsResponseData)
+	*o = ReturnRefund202309SearchReturnsResponseData(varReturnRefund202309SearchReturnsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "next_page_token")
-        delete(additionalProperties, "return_orders")
-        delete(additionalProperties, "total_count")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "next_page_token")
+		delete(additionalProperties, "return_orders")
+		delete(additionalProperties, "total_count")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309SearchReturnsResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullableReturnRefund202309SearchReturnsResponseData) UnmarshalJSON(src 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

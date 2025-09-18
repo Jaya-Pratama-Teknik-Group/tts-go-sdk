@@ -11,18 +11,18 @@ API version: 1.0.0
 package fulfillment_v202502
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202502UploadInvoiceRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202502UploadInvoiceRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202502UploadInvoiceRequestBody{}
 
 // Fulfillment202502UploadInvoiceRequestBody struct for Fulfillment202502UploadInvoiceRequestBody
 type Fulfillment202502UploadInvoiceRequestBody struct {
-    // The list of invoices to upload.
-    Invoices []Fulfillment202502UploadInvoiceRequestBodyInvoices `json:"invoices,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of invoices to upload.
+	Invoices             []Fulfillment202502UploadInvoiceRequestBodyInvoices `json:"invoices,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202502UploadInvoiceRequestBody Fulfillment202502UploadInvoiceRequestBody
@@ -32,89 +32,89 @@ type _Fulfillment202502UploadInvoiceRequestBody Fulfillment202502UploadInvoiceRe
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202502UploadInvoiceRequestBody() *Fulfillment202502UploadInvoiceRequestBody {
-    this := Fulfillment202502UploadInvoiceRequestBody{}
-    return &this
+	this := Fulfillment202502UploadInvoiceRequestBody{}
+	return &this
 }
 
 // NewFulfillment202502UploadInvoiceRequestBodyWithDefaults instantiates a new Fulfillment202502UploadInvoiceRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202502UploadInvoiceRequestBodyWithDefaults() *Fulfillment202502UploadInvoiceRequestBody {
-    this := Fulfillment202502UploadInvoiceRequestBody{}
-    return &this
+	this := Fulfillment202502UploadInvoiceRequestBody{}
+	return &this
 }
 
 // GetInvoices returns the Invoices field value if set, zero value otherwise.
 func (o *Fulfillment202502UploadInvoiceRequestBody) GetInvoices() []Fulfillment202502UploadInvoiceRequestBodyInvoices {
-    if o == nil || utils.IsNil(o.Invoices) {
-        var ret []Fulfillment202502UploadInvoiceRequestBodyInvoices
-        return ret
-    }
-    return o.Invoices
+	if o == nil || utils.IsNil(o.Invoices) {
+		var ret []Fulfillment202502UploadInvoiceRequestBodyInvoices
+		return ret
+	}
+	return o.Invoices
 }
 
 // GetInvoicesOk returns a tuple with the Invoices field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBody) GetInvoicesOk() ([]Fulfillment202502UploadInvoiceRequestBodyInvoices, bool) {
-    if o == nil || utils.IsNil(o.Invoices) {
-        return nil, false
-    }
-    return o.Invoices, true
+	if o == nil || utils.IsNil(o.Invoices) {
+		return nil, false
+	}
+	return o.Invoices, true
 }
 
 // HasInvoices returns a boolean if a field has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBody) HasInvoices() bool {
-    if o != nil && !utils.IsNil(o.Invoices) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Invoices) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetInvoices gets a reference to the given []Fulfillment202502UploadInvoiceRequestBodyInvoices and assigns it to the Invoices field.
 func (o *Fulfillment202502UploadInvoiceRequestBody) SetInvoices(v []Fulfillment202502UploadInvoiceRequestBodyInvoices) {
-    o.Invoices = v
+	o.Invoices = v
 }
 
 func (o Fulfillment202502UploadInvoiceRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202502UploadInvoiceRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Invoices) {
-        toSerialize["invoices"] = o.Invoices
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Invoices) {
+		toSerialize["invoices"] = o.Invoices
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202502UploadInvoiceRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202502UploadInvoiceRequestBody := _Fulfillment202502UploadInvoiceRequestBody{}
+	varFulfillment202502UploadInvoiceRequestBody := _Fulfillment202502UploadInvoiceRequestBody{}
 
-    err = json.Unmarshal(data, &varFulfillment202502UploadInvoiceRequestBody)
+	err = json.Unmarshal(data, &varFulfillment202502UploadInvoiceRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202502UploadInvoiceRequestBody(varFulfillment202502UploadInvoiceRequestBody)
+	*o = Fulfillment202502UploadInvoiceRequestBody(varFulfillment202502UploadInvoiceRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "invoices")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "invoices")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202502UploadInvoiceRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableFulfillment202502UploadInvoiceRequestBody) UnmarshalJSON(src []
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

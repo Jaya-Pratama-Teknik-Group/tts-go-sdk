@@ -11,20 +11,20 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309CombinePackageRequestBodyCombinablePackages type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309CombinePackageRequestBodyCombinablePackages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309CombinePackageRequestBodyCombinablePackages{}
 
 // Fulfillment202309CombinePackageRequestBodyCombinablePackages struct for Fulfillment202309CombinePackageRequestBodyCombinablePackages
 type Fulfillment202309CombinePackageRequestBodyCombinablePackages struct {
-    // The package ID.
-    Id *string `json:"id,omitempty"`
-    // The list of order IDs corresponding to a package ID.
-    OrderIds []string `json:"order_ids,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The package ID.
+	Id *string `json:"id,omitempty"`
+	// The list of order IDs corresponding to a package ID.
+	OrderIds             []string `json:"order_ids,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309CombinePackageRequestBodyCombinablePackages Fulfillment202309CombinePackageRequestBodyCombinablePackages
@@ -34,125 +34,125 @@ type _Fulfillment202309CombinePackageRequestBodyCombinablePackages Fulfillment20
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309CombinePackageRequestBodyCombinablePackages() *Fulfillment202309CombinePackageRequestBodyCombinablePackages {
-    this := Fulfillment202309CombinePackageRequestBodyCombinablePackages{}
-    return &this
+	this := Fulfillment202309CombinePackageRequestBodyCombinablePackages{}
+	return &this
 }
 
 // NewFulfillment202309CombinePackageRequestBodyCombinablePackagesWithDefaults instantiates a new Fulfillment202309CombinePackageRequestBodyCombinablePackages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309CombinePackageRequestBodyCombinablePackagesWithDefaults() *Fulfillment202309CombinePackageRequestBodyCombinablePackages {
-    this := Fulfillment202309CombinePackageRequestBodyCombinablePackages{}
-    return &this
+	this := Fulfillment202309CombinePackageRequestBodyCombinablePackages{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Fulfillment202309CombinePackageRequestBodyCombinablePackages) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CombinePackageRequestBodyCombinablePackages) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Fulfillment202309CombinePackageRequestBodyCombinablePackages) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Fulfillment202309CombinePackageRequestBodyCombinablePackages) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetOrderIds returns the OrderIds field value if set, zero value otherwise.
 func (o *Fulfillment202309CombinePackageRequestBodyCombinablePackages) GetOrderIds() []string {
-    if o == nil || utils.IsNil(o.OrderIds) {
-        var ret []string
-        return ret
-    }
-    return o.OrderIds
+	if o == nil || utils.IsNil(o.OrderIds) {
+		var ret []string
+		return ret
+	}
+	return o.OrderIds
 }
 
 // GetOrderIdsOk returns a tuple with the OrderIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CombinePackageRequestBodyCombinablePackages) GetOrderIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.OrderIds) {
-        return nil, false
-    }
-    return o.OrderIds, true
+	if o == nil || utils.IsNil(o.OrderIds) {
+		return nil, false
+	}
+	return o.OrderIds, true
 }
 
 // HasOrderIds returns a boolean if a field has been set.
 func (o *Fulfillment202309CombinePackageRequestBodyCombinablePackages) HasOrderIds() bool {
-    if o != nil && !utils.IsNil(o.OrderIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderIds gets a reference to the given []string and assigns it to the OrderIds field.
 func (o *Fulfillment202309CombinePackageRequestBodyCombinablePackages) SetOrderIds(v []string) {
-    o.OrderIds = v
+	o.OrderIds = v
 }
 
 func (o Fulfillment202309CombinePackageRequestBodyCombinablePackages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309CombinePackageRequestBodyCombinablePackages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.OrderIds) {
-        toSerialize["order_ids"] = o.OrderIds
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.OrderIds) {
+		toSerialize["order_ids"] = o.OrderIds
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309CombinePackageRequestBodyCombinablePackages) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309CombinePackageRequestBodyCombinablePackages := _Fulfillment202309CombinePackageRequestBodyCombinablePackages{}
+	varFulfillment202309CombinePackageRequestBodyCombinablePackages := _Fulfillment202309CombinePackageRequestBodyCombinablePackages{}
 
-    err = json.Unmarshal(data, &varFulfillment202309CombinePackageRequestBodyCombinablePackages)
+	err = json.Unmarshal(data, &varFulfillment202309CombinePackageRequestBodyCombinablePackages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309CombinePackageRequestBodyCombinablePackages(varFulfillment202309CombinePackageRequestBodyCombinablePackages)
+	*o = Fulfillment202309CombinePackageRequestBodyCombinablePackages(varFulfillment202309CombinePackageRequestBodyCombinablePackages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "order_ids")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "order_ids")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309CombinePackageRequestBodyCombinablePackages struct {
@@ -190,5 +190,3 @@ func (v *NullableFulfillment202309CombinePackageRequestBodyCombinablePackages) U
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

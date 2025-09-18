@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202407
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202407SearchSizeChartsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202407SearchSizeChartsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202407SearchSizeChartsResponseData{}
 
 // Product202407SearchSizeChartsResponseData struct for Product202407SearchSizeChartsResponseData
 type Product202407SearchSizeChartsResponseData struct {
-    // An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
-    NextPageToken *string `json:"next_page_token,omitempty"`
-    // The list of size charts that meet the query conditions.
-    SizeChart []Product202407SearchSizeChartsResponseDataSizeChart `json:"size_chart,omitempty"`
-    // The number of size charts that meet the query conditions.
-    TotalCount *int64 `json:"total_count,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
+	NextPageToken *string `json:"next_page_token,omitempty"`
+	// The list of size charts that meet the query conditions.
+	SizeChart []Product202407SearchSizeChartsResponseDataSizeChart `json:"size_chart,omitempty"`
+	// The number of size charts that meet the query conditions.
+	TotalCount           *int64 `json:"total_count,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202407SearchSizeChartsResponseData Product202407SearchSizeChartsResponseData
@@ -36,161 +36,161 @@ type _Product202407SearchSizeChartsResponseData Product202407SearchSizeChartsRes
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202407SearchSizeChartsResponseData() *Product202407SearchSizeChartsResponseData {
-    this := Product202407SearchSizeChartsResponseData{}
-    return &this
+	this := Product202407SearchSizeChartsResponseData{}
+	return &this
 }
 
 // NewProduct202407SearchSizeChartsResponseDataWithDefaults instantiates a new Product202407SearchSizeChartsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202407SearchSizeChartsResponseDataWithDefaults() *Product202407SearchSizeChartsResponseData {
-    this := Product202407SearchSizeChartsResponseData{}
-    return &this
+	this := Product202407SearchSizeChartsResponseData{}
+	return &this
 }
 
 // GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
 func (o *Product202407SearchSizeChartsResponseData) GetNextPageToken() string {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        var ret string
-        return ret
-    }
-    return *o.NextPageToken
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		var ret string
+		return ret
+	}
+	return *o.NextPageToken
 }
 
 // GetNextPageTokenOk returns a tuple with the NextPageToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407SearchSizeChartsResponseData) GetNextPageTokenOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        return nil, false
-    }
-    return o.NextPageToken, true
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		return nil, false
+	}
+	return o.NextPageToken, true
 }
 
 // HasNextPageToken returns a boolean if a field has been set.
 func (o *Product202407SearchSizeChartsResponseData) HasNextPageToken() bool {
-    if o != nil && !utils.IsNil(o.NextPageToken) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NextPageToken) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNextPageToken gets a reference to the given string and assigns it to the NextPageToken field.
 func (o *Product202407SearchSizeChartsResponseData) SetNextPageToken(v string) {
-    o.NextPageToken = &v
+	o.NextPageToken = &v
 }
 
 // GetSizeChart returns the SizeChart field value if set, zero value otherwise.
 func (o *Product202407SearchSizeChartsResponseData) GetSizeChart() []Product202407SearchSizeChartsResponseDataSizeChart {
-    if o == nil || utils.IsNil(o.SizeChart) {
-        var ret []Product202407SearchSizeChartsResponseDataSizeChart
-        return ret
-    }
-    return o.SizeChart
+	if o == nil || utils.IsNil(o.SizeChart) {
+		var ret []Product202407SearchSizeChartsResponseDataSizeChart
+		return ret
+	}
+	return o.SizeChart
 }
 
 // GetSizeChartOk returns a tuple with the SizeChart field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407SearchSizeChartsResponseData) GetSizeChartOk() ([]Product202407SearchSizeChartsResponseDataSizeChart, bool) {
-    if o == nil || utils.IsNil(o.SizeChart) {
-        return nil, false
-    }
-    return o.SizeChart, true
+	if o == nil || utils.IsNil(o.SizeChart) {
+		return nil, false
+	}
+	return o.SizeChart, true
 }
 
 // HasSizeChart returns a boolean if a field has been set.
 func (o *Product202407SearchSizeChartsResponseData) HasSizeChart() bool {
-    if o != nil && !utils.IsNil(o.SizeChart) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SizeChart) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSizeChart gets a reference to the given []Product202407SearchSizeChartsResponseDataSizeChart and assigns it to the SizeChart field.
 func (o *Product202407SearchSizeChartsResponseData) SetSizeChart(v []Product202407SearchSizeChartsResponseDataSizeChart) {
-    o.SizeChart = v
+	o.SizeChart = v
 }
 
 // GetTotalCount returns the TotalCount field value if set, zero value otherwise.
 func (o *Product202407SearchSizeChartsResponseData) GetTotalCount() int64 {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        var ret int64
-        return ret
-    }
-    return *o.TotalCount
+	if o == nil || utils.IsNil(o.TotalCount) {
+		var ret int64
+		return ret
+	}
+	return *o.TotalCount
 }
 
 // GetTotalCountOk returns a tuple with the TotalCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407SearchSizeChartsResponseData) GetTotalCountOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        return nil, false
-    }
-    return o.TotalCount, true
+	if o == nil || utils.IsNil(o.TotalCount) {
+		return nil, false
+	}
+	return o.TotalCount, true
 }
 
 // HasTotalCount returns a boolean if a field has been set.
 func (o *Product202407SearchSizeChartsResponseData) HasTotalCount() bool {
-    if o != nil && !utils.IsNil(o.TotalCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalCount gets a reference to the given int64 and assigns it to the TotalCount field.
 func (o *Product202407SearchSizeChartsResponseData) SetTotalCount(v int64) {
-    o.TotalCount = &v
+	o.TotalCount = &v
 }
 
 func (o Product202407SearchSizeChartsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202407SearchSizeChartsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.NextPageToken) {
-        toSerialize["next_page_token"] = o.NextPageToken
-    }
-    if !utils.IsNil(o.SizeChart) {
-        toSerialize["size_chart"] = o.SizeChart
-    }
-    if !utils.IsNil(o.TotalCount) {
-        toSerialize["total_count"] = o.TotalCount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.NextPageToken) {
+		toSerialize["next_page_token"] = o.NextPageToken
+	}
+	if !utils.IsNil(o.SizeChart) {
+		toSerialize["size_chart"] = o.SizeChart
+	}
+	if !utils.IsNil(o.TotalCount) {
+		toSerialize["total_count"] = o.TotalCount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202407SearchSizeChartsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202407SearchSizeChartsResponseData := _Product202407SearchSizeChartsResponseData{}
+	varProduct202407SearchSizeChartsResponseData := _Product202407SearchSizeChartsResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202407SearchSizeChartsResponseData)
+	err = json.Unmarshal(data, &varProduct202407SearchSizeChartsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202407SearchSizeChartsResponseData(varProduct202407SearchSizeChartsResponseData)
+	*o = Product202407SearchSizeChartsResponseData(varProduct202407SearchSizeChartsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "next_page_token")
-        delete(additionalProperties, "size_chart")
-        delete(additionalProperties, "total_count")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "next_page_token")
+		delete(additionalProperties, "size_chart")
+		delete(additionalProperties, "total_count")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202407SearchSizeChartsResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202407SearchSizeChartsResponseData) UnmarshalJSON(src []
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

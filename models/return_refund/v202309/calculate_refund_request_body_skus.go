@@ -11,20 +11,20 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309CalculateRefundRequestBodySkus type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309CalculateRefundRequestBodySkus type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309CalculateRefundRequestBodySkus{}
 
 // ReturnRefund202309CalculateRefundRequestBodySkus struct for ReturnRefund202309CalculateRefundRequestBodySkus
 type ReturnRefund202309CalculateRefundRequestBodySkus struct {
-    // Sku id seller wants to create a return request.
-    Quantity *int32 `json:"quantity,omitempty"`
-    // Quantity seller wants to create a return request.
-    SkuId *string `json:"sku_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Sku id seller wants to create a return request.
+	Quantity *int32 `json:"quantity,omitempty"`
+	// Quantity seller wants to create a return request.
+	SkuId                *string `json:"sku_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309CalculateRefundRequestBodySkus ReturnRefund202309CalculateRefundRequestBodySkus
@@ -34,125 +34,125 @@ type _ReturnRefund202309CalculateRefundRequestBodySkus ReturnRefund202309Calcula
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309CalculateRefundRequestBodySkus() *ReturnRefund202309CalculateRefundRequestBodySkus {
-    this := ReturnRefund202309CalculateRefundRequestBodySkus{}
-    return &this
+	this := ReturnRefund202309CalculateRefundRequestBodySkus{}
+	return &this
 }
 
 // NewReturnRefund202309CalculateRefundRequestBodySkusWithDefaults instantiates a new ReturnRefund202309CalculateRefundRequestBodySkus object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309CalculateRefundRequestBodySkusWithDefaults() *ReturnRefund202309CalculateRefundRequestBodySkus {
-    this := ReturnRefund202309CalculateRefundRequestBodySkus{}
-    return &this
+	this := ReturnRefund202309CalculateRefundRequestBodySkus{}
+	return &this
 }
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
 func (o *ReturnRefund202309CalculateRefundRequestBodySkus) GetQuantity() int32 {
-    if o == nil || utils.IsNil(o.Quantity) {
-        var ret int32
-        return ret
-    }
-    return *o.Quantity
+	if o == nil || utils.IsNil(o.Quantity) {
+		var ret int32
+		return ret
+	}
+	return *o.Quantity
 }
 
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309CalculateRefundRequestBodySkus) GetQuantityOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Quantity) {
-        return nil, false
-    }
-    return o.Quantity, true
+	if o == nil || utils.IsNil(o.Quantity) {
+		return nil, false
+	}
+	return o.Quantity, true
 }
 
 // HasQuantity returns a boolean if a field has been set.
 func (o *ReturnRefund202309CalculateRefundRequestBodySkus) HasQuantity() bool {
-    if o != nil && !utils.IsNil(o.Quantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Quantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantity gets a reference to the given int32 and assigns it to the Quantity field.
 func (o *ReturnRefund202309CalculateRefundRequestBodySkus) SetQuantity(v int32) {
-    o.Quantity = &v
+	o.Quantity = &v
 }
 
 // GetSkuId returns the SkuId field value if set, zero value otherwise.
 func (o *ReturnRefund202309CalculateRefundRequestBodySkus) GetSkuId() string {
-    if o == nil || utils.IsNil(o.SkuId) {
-        var ret string
-        return ret
-    }
-    return *o.SkuId
+	if o == nil || utils.IsNil(o.SkuId) {
+		var ret string
+		return ret
+	}
+	return *o.SkuId
 }
 
 // GetSkuIdOk returns a tuple with the SkuId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309CalculateRefundRequestBodySkus) GetSkuIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SkuId) {
-        return nil, false
-    }
-    return o.SkuId, true
+	if o == nil || utils.IsNil(o.SkuId) {
+		return nil, false
+	}
+	return o.SkuId, true
 }
 
 // HasSkuId returns a boolean if a field has been set.
 func (o *ReturnRefund202309CalculateRefundRequestBodySkus) HasSkuId() bool {
-    if o != nil && !utils.IsNil(o.SkuId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuId gets a reference to the given string and assigns it to the SkuId field.
 func (o *ReturnRefund202309CalculateRefundRequestBodySkus) SetSkuId(v string) {
-    o.SkuId = &v
+	o.SkuId = &v
 }
 
 func (o ReturnRefund202309CalculateRefundRequestBodySkus) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309CalculateRefundRequestBodySkus) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Quantity) {
-        toSerialize["quantity"] = o.Quantity
-    }
-    if !utils.IsNil(o.SkuId) {
-        toSerialize["sku_id"] = o.SkuId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Quantity) {
+		toSerialize["quantity"] = o.Quantity
+	}
+	if !utils.IsNil(o.SkuId) {
+		toSerialize["sku_id"] = o.SkuId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309CalculateRefundRequestBodySkus) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309CalculateRefundRequestBodySkus := _ReturnRefund202309CalculateRefundRequestBodySkus{}
+	varReturnRefund202309CalculateRefundRequestBodySkus := _ReturnRefund202309CalculateRefundRequestBodySkus{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309CalculateRefundRequestBodySkus)
+	err = json.Unmarshal(data, &varReturnRefund202309CalculateRefundRequestBodySkus)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309CalculateRefundRequestBodySkus(varReturnRefund202309CalculateRefundRequestBodySkus)
+	*o = ReturnRefund202309CalculateRefundRequestBodySkus(varReturnRefund202309CalculateRefundRequestBodySkus)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "quantity")
-        delete(additionalProperties, "sku_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "quantity")
+		delete(additionalProperties, "sku_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309CalculateRefundRequestBodySkus struct {
@@ -190,5 +190,3 @@ func (v *NullableReturnRefund202309CalculateRefundRequestBodySkus) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

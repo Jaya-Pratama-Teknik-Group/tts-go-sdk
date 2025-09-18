@@ -11,20 +11,20 @@ API version: 1.0.0
 package logistics_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Logistics202309GetShippingProvidersResponseDataShippingProviders type satisfies the MappedNullable interface at compile time
+// checks if the Logistics202309GetShippingProvidersResponseDataShippingProviders type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Logistics202309GetShippingProvidersResponseDataShippingProviders{}
 
 // Logistics202309GetShippingProvidersResponseDataShippingProviders struct for Logistics202309GetShippingProvidersResponseDataShippingProviders
 type Logistics202309GetShippingProvidersResponseDataShippingProviders struct {
-    // shipping provider id
-    Id *string `json:"id,omitempty"`
-    // shipping provider name
-    Name *string `json:"name,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// shipping provider id
+	Id *string `json:"id,omitempty"`
+	// shipping provider name
+	Name                 *string `json:"name,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Logistics202309GetShippingProvidersResponseDataShippingProviders Logistics202309GetShippingProvidersResponseDataShippingProviders
@@ -34,125 +34,125 @@ type _Logistics202309GetShippingProvidersResponseDataShippingProviders Logistics
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewLogistics202309GetShippingProvidersResponseDataShippingProviders() *Logistics202309GetShippingProvidersResponseDataShippingProviders {
-    this := Logistics202309GetShippingProvidersResponseDataShippingProviders{}
-    return &this
+	this := Logistics202309GetShippingProvidersResponseDataShippingProviders{}
+	return &this
 }
 
 // NewLogistics202309GetShippingProvidersResponseDataShippingProvidersWithDefaults instantiates a new Logistics202309GetShippingProvidersResponseDataShippingProviders object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewLogistics202309GetShippingProvidersResponseDataShippingProvidersWithDefaults() *Logistics202309GetShippingProvidersResponseDataShippingProviders {
-    this := Logistics202309GetShippingProvidersResponseDataShippingProviders{}
-    return &this
+	this := Logistics202309GetShippingProvidersResponseDataShippingProviders{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Logistics202309GetShippingProvidersResponseDataShippingProviders) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetShippingProvidersResponseDataShippingProviders) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Logistics202309GetShippingProvidersResponseDataShippingProviders) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Logistics202309GetShippingProvidersResponseDataShippingProviders) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Logistics202309GetShippingProvidersResponseDataShippingProviders) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetShippingProvidersResponseDataShippingProviders) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Logistics202309GetShippingProvidersResponseDataShippingProviders) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Logistics202309GetShippingProvidersResponseDataShippingProviders) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 func (o Logistics202309GetShippingProvidersResponseDataShippingProviders) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Logistics202309GetShippingProvidersResponseDataShippingProviders) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Logistics202309GetShippingProvidersResponseDataShippingProviders) UnmarshalJSON(data []byte) (err error) {
-    varLogistics202309GetShippingProvidersResponseDataShippingProviders := _Logistics202309GetShippingProvidersResponseDataShippingProviders{}
+	varLogistics202309GetShippingProvidersResponseDataShippingProviders := _Logistics202309GetShippingProvidersResponseDataShippingProviders{}
 
-    err = json.Unmarshal(data, &varLogistics202309GetShippingProvidersResponseDataShippingProviders)
+	err = json.Unmarshal(data, &varLogistics202309GetShippingProvidersResponseDataShippingProviders)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Logistics202309GetShippingProvidersResponseDataShippingProviders(varLogistics202309GetShippingProvidersResponseDataShippingProviders)
+	*o = Logistics202309GetShippingProvidersResponseDataShippingProviders(varLogistics202309GetShippingProvidersResponseDataShippingProviders)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "name")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "name")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableLogistics202309GetShippingProvidersResponseDataShippingProviders struct {
@@ -190,5 +190,3 @@ func (v *NullableLogistics202309GetShippingProvidersResponseDataShippingProvider
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

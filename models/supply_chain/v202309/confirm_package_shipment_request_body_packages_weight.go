@@ -11,20 +11,20 @@ API version: 1.0.0
 package supply_chain_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight type satisfies the MappedNullable interface at compile time
+// checks if the SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight{}
 
 // SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight struct for SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight
 type SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight struct {
-    // Package weight unit Possible values: - KILOGRAM - GRAM - MILLIGRAM - POUND - OUNCE
-    Unit *string `json:"unit,omitempty"`
-    // Package weight value
-    Value *int64 `json:"value,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Package weight unit Possible values: - KILOGRAM - GRAM - MILLIGRAM - POUND - OUNCE
+	Unit *string `json:"unit,omitempty"`
+	// Package weight value
+	Value                *int64 `json:"value,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight
@@ -34,125 +34,125 @@ type _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight SupplyCha
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight() *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight {
-    this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight{}
+	return &this
 }
 
 // NewSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeightWithDefaults instantiates a new SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeightWithDefaults() *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight {
-    this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight{}
+	return &this
 }
 
 // GetUnit returns the Unit field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) GetUnit() string {
-    if o == nil || utils.IsNil(o.Unit) {
-        var ret string
-        return ret
-    }
-    return *o.Unit
+	if o == nil || utils.IsNil(o.Unit) {
+		var ret string
+		return ret
+	}
+	return *o.Unit
 }
 
 // GetUnitOk returns a tuple with the Unit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) GetUnitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Unit) {
-        return nil, false
-    }
-    return o.Unit, true
+	if o == nil || utils.IsNil(o.Unit) {
+		return nil, false
+	}
+	return o.Unit, true
 }
 
 // HasUnit returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) HasUnit() bool {
-    if o != nil && !utils.IsNil(o.Unit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Unit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnit gets a reference to the given string and assigns it to the Unit field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) SetUnit(v string) {
-    o.Unit = &v
+	o.Unit = &v
 }
 
 // GetValue returns the Value field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) GetValue() int64 {
-    if o == nil || utils.IsNil(o.Value) {
-        var ret int64
-        return ret
-    }
-    return *o.Value
+	if o == nil || utils.IsNil(o.Value) {
+		var ret int64
+		return ret
+	}
+	return *o.Value
 }
 
 // GetValueOk returns a tuple with the Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) GetValueOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Value) {
-        return nil, false
-    }
-    return o.Value, true
+	if o == nil || utils.IsNil(o.Value) {
+		return nil, false
+	}
+	return o.Value, true
 }
 
 // HasValue returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) HasValue() bool {
-    if o != nil && !utils.IsNil(o.Value) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Value) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetValue gets a reference to the given int64 and assigns it to the Value field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) SetValue(v int64) {
-    o.Value = &v
+	o.Value = &v
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Unit) {
-        toSerialize["unit"] = o.Unit
-    }
-    if !utils.IsNil(o.Value) {
-        toSerialize["value"] = o.Value
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Unit) {
+		toSerialize["unit"] = o.Unit
+	}
+	if !utils.IsNil(o.Value) {
+		toSerialize["value"] = o.Value
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight) UnmarshalJSON(data []byte) (err error) {
-    varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight := _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight{}
+	varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight := _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight{}
 
-    err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight)
+	err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight(varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight)
+	*o = SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight(varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "unit")
-        delete(additionalProperties, "value")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "unit")
+		delete(additionalProperties, "value")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeight struct {
@@ -190,5 +190,3 @@ func (v *NullableSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesWeigh
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

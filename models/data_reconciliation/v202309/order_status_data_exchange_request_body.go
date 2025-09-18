@@ -11,18 +11,18 @@ API version: 1.0.0
 package data_reconciliation_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the DataReconciliation202309OrderStatusDataExchangeRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the DataReconciliation202309OrderStatusDataExchangeRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &DataReconciliation202309OrderStatusDataExchangeRequestBody{}
 
 // DataReconciliation202309OrderStatusDataExchangeRequestBody struct for DataReconciliation202309OrderStatusDataExchangeRequestBody
 type DataReconciliation202309OrderStatusDataExchangeRequestBody struct {
-    // The exchange order list
-    Orders []DataReconciliation202309OrderStatusDataExchangeRequestBodyOrders `json:"orders,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The exchange order list
+	Orders               []DataReconciliation202309OrderStatusDataExchangeRequestBodyOrders `json:"orders,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _DataReconciliation202309OrderStatusDataExchangeRequestBody DataReconciliation202309OrderStatusDataExchangeRequestBody
@@ -32,89 +32,89 @@ type _DataReconciliation202309OrderStatusDataExchangeRequestBody DataReconciliat
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewDataReconciliation202309OrderStatusDataExchangeRequestBody() *DataReconciliation202309OrderStatusDataExchangeRequestBody {
-    this := DataReconciliation202309OrderStatusDataExchangeRequestBody{}
-    return &this
+	this := DataReconciliation202309OrderStatusDataExchangeRequestBody{}
+	return &this
 }
 
 // NewDataReconciliation202309OrderStatusDataExchangeRequestBodyWithDefaults instantiates a new DataReconciliation202309OrderStatusDataExchangeRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewDataReconciliation202309OrderStatusDataExchangeRequestBodyWithDefaults() *DataReconciliation202309OrderStatusDataExchangeRequestBody {
-    this := DataReconciliation202309OrderStatusDataExchangeRequestBody{}
-    return &this
+	this := DataReconciliation202309OrderStatusDataExchangeRequestBody{}
+	return &this
 }
 
 // GetOrders returns the Orders field value if set, zero value otherwise.
 func (o *DataReconciliation202309OrderStatusDataExchangeRequestBody) GetOrders() []DataReconciliation202309OrderStatusDataExchangeRequestBodyOrders {
-    if o == nil || utils.IsNil(o.Orders) {
-        var ret []DataReconciliation202309OrderStatusDataExchangeRequestBodyOrders
-        return ret
-    }
-    return o.Orders
+	if o == nil || utils.IsNil(o.Orders) {
+		var ret []DataReconciliation202309OrderStatusDataExchangeRequestBodyOrders
+		return ret
+	}
+	return o.Orders
 }
 
 // GetOrdersOk returns a tuple with the Orders field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202309OrderStatusDataExchangeRequestBody) GetOrdersOk() ([]DataReconciliation202309OrderStatusDataExchangeRequestBodyOrders, bool) {
-    if o == nil || utils.IsNil(o.Orders) {
-        return nil, false
-    }
-    return o.Orders, true
+	if o == nil || utils.IsNil(o.Orders) {
+		return nil, false
+	}
+	return o.Orders, true
 }
 
 // HasOrders returns a boolean if a field has been set.
 func (o *DataReconciliation202309OrderStatusDataExchangeRequestBody) HasOrders() bool {
-    if o != nil && !utils.IsNil(o.Orders) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Orders) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrders gets a reference to the given []DataReconciliation202309OrderStatusDataExchangeRequestBodyOrders and assigns it to the Orders field.
 func (o *DataReconciliation202309OrderStatusDataExchangeRequestBody) SetOrders(v []DataReconciliation202309OrderStatusDataExchangeRequestBodyOrders) {
-    o.Orders = v
+	o.Orders = v
 }
 
 func (o DataReconciliation202309OrderStatusDataExchangeRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o DataReconciliation202309OrderStatusDataExchangeRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Orders) {
-        toSerialize["orders"] = o.Orders
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Orders) {
+		toSerialize["orders"] = o.Orders
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *DataReconciliation202309OrderStatusDataExchangeRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varDataReconciliation202309OrderStatusDataExchangeRequestBody := _DataReconciliation202309OrderStatusDataExchangeRequestBody{}
+	varDataReconciliation202309OrderStatusDataExchangeRequestBody := _DataReconciliation202309OrderStatusDataExchangeRequestBody{}
 
-    err = json.Unmarshal(data, &varDataReconciliation202309OrderStatusDataExchangeRequestBody)
+	err = json.Unmarshal(data, &varDataReconciliation202309OrderStatusDataExchangeRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = DataReconciliation202309OrderStatusDataExchangeRequestBody(varDataReconciliation202309OrderStatusDataExchangeRequestBody)
+	*o = DataReconciliation202309OrderStatusDataExchangeRequestBody(varDataReconciliation202309OrderStatusDataExchangeRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "orders")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "orders")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableDataReconciliation202309OrderStatusDataExchangeRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableDataReconciliation202309OrderStatusDataExchangeRequestBody) Unm
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

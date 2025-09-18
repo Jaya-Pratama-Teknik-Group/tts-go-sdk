@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309InventorySearchResponseDataInventorySkusWarehouseInventory type satisfies the MappedNullable interface at compile time
+// checks if the Product202309InventorySearchResponseDataInventorySkusWarehouseInventory type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309InventorySearchResponseDataInventorySkusWarehouseInventory{}
 
 // Product202309InventorySearchResponseDataInventorySkusWarehouseInventory struct for Product202309InventorySearchResponseDataInventorySkusWarehouseInventory
 type Product202309InventorySearchResponseDataInventorySkusWarehouseInventory struct {
-    // The total number of units available for ordering in this warehouse. This is equivalent to the `inventory.quantity` value returned in the [Get Product API](https://partner.tiktokshop.com/docv2/page/6509d85b4a0bb702c057fdda).
-    AvailableQuantity *int32 `json:"available_quantity,omitempty"`
-    // The total number of units reserved by existing customer orders in this warehouse (and therefore not available for ordering).
-    CommittedQuantity *int32 `json:"committed_quantity,omitempty"`
-    // The ID of the warehouse where the SKU is stored.  Retrieve details of the warehouse from the  [Get Warehouse List API](https://partner.tiktokshop.com/docv2/page/650aa418defece02be6e66b6).
-    WarehouseId *string `json:"warehouse_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The total number of units available for ordering in this warehouse. This is equivalent to the `inventory.quantity` value returned in the [Get Product API](https://partner.tiktokshop.com/docv2/page/6509d85b4a0bb702c057fdda).
+	AvailableQuantity *int32 `json:"available_quantity,omitempty"`
+	// The total number of units reserved by existing customer orders in this warehouse (and therefore not available for ordering).
+	CommittedQuantity *int32 `json:"committed_quantity,omitempty"`
+	// The ID of the warehouse where the SKU is stored.  Retrieve details of the warehouse from the  [Get Warehouse List API](https://partner.tiktokshop.com/docv2/page/650aa418defece02be6e66b6).
+	WarehouseId          *string `json:"warehouse_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309InventorySearchResponseDataInventorySkusWarehouseInventory Product202309InventorySearchResponseDataInventorySkusWarehouseInventory
@@ -36,161 +36,161 @@ type _Product202309InventorySearchResponseDataInventorySkusWarehouseInventory Pr
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309InventorySearchResponseDataInventorySkusWarehouseInventory() *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory {
-    this := Product202309InventorySearchResponseDataInventorySkusWarehouseInventory{}
-    return &this
+	this := Product202309InventorySearchResponseDataInventorySkusWarehouseInventory{}
+	return &this
 }
 
 // NewProduct202309InventorySearchResponseDataInventorySkusWarehouseInventoryWithDefaults instantiates a new Product202309InventorySearchResponseDataInventorySkusWarehouseInventory object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309InventorySearchResponseDataInventorySkusWarehouseInventoryWithDefaults() *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory {
-    this := Product202309InventorySearchResponseDataInventorySkusWarehouseInventory{}
-    return &this
+	this := Product202309InventorySearchResponseDataInventorySkusWarehouseInventory{}
+	return &this
 }
 
 // GetAvailableQuantity returns the AvailableQuantity field value if set, zero value otherwise.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) GetAvailableQuantity() int32 {
-    if o == nil || utils.IsNil(o.AvailableQuantity) {
-        var ret int32
-        return ret
-    }
-    return *o.AvailableQuantity
+	if o == nil || utils.IsNil(o.AvailableQuantity) {
+		var ret int32
+		return ret
+	}
+	return *o.AvailableQuantity
 }
 
 // GetAvailableQuantityOk returns a tuple with the AvailableQuantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) GetAvailableQuantityOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.AvailableQuantity) {
-        return nil, false
-    }
-    return o.AvailableQuantity, true
+	if o == nil || utils.IsNil(o.AvailableQuantity) {
+		return nil, false
+	}
+	return o.AvailableQuantity, true
 }
 
 // HasAvailableQuantity returns a boolean if a field has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) HasAvailableQuantity() bool {
-    if o != nil && !utils.IsNil(o.AvailableQuantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AvailableQuantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAvailableQuantity gets a reference to the given int32 and assigns it to the AvailableQuantity field.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) SetAvailableQuantity(v int32) {
-    o.AvailableQuantity = &v
+	o.AvailableQuantity = &v
 }
 
 // GetCommittedQuantity returns the CommittedQuantity field value if set, zero value otherwise.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) GetCommittedQuantity() int32 {
-    if o == nil || utils.IsNil(o.CommittedQuantity) {
-        var ret int32
-        return ret
-    }
-    return *o.CommittedQuantity
+	if o == nil || utils.IsNil(o.CommittedQuantity) {
+		var ret int32
+		return ret
+	}
+	return *o.CommittedQuantity
 }
 
 // GetCommittedQuantityOk returns a tuple with the CommittedQuantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) GetCommittedQuantityOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.CommittedQuantity) {
-        return nil, false
-    }
-    return o.CommittedQuantity, true
+	if o == nil || utils.IsNil(o.CommittedQuantity) {
+		return nil, false
+	}
+	return o.CommittedQuantity, true
 }
 
 // HasCommittedQuantity returns a boolean if a field has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) HasCommittedQuantity() bool {
-    if o != nil && !utils.IsNil(o.CommittedQuantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CommittedQuantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCommittedQuantity gets a reference to the given int32 and assigns it to the CommittedQuantity field.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) SetCommittedQuantity(v int32) {
-    o.CommittedQuantity = &v
+	o.CommittedQuantity = &v
 }
 
 // GetWarehouseId returns the WarehouseId field value if set, zero value otherwise.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) GetWarehouseId() string {
-    if o == nil || utils.IsNil(o.WarehouseId) {
-        var ret string
-        return ret
-    }
-    return *o.WarehouseId
+	if o == nil || utils.IsNil(o.WarehouseId) {
+		var ret string
+		return ret
+	}
+	return *o.WarehouseId
 }
 
 // GetWarehouseIdOk returns a tuple with the WarehouseId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) GetWarehouseIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.WarehouseId) {
-        return nil, false
-    }
-    return o.WarehouseId, true
+	if o == nil || utils.IsNil(o.WarehouseId) {
+		return nil, false
+	}
+	return o.WarehouseId, true
 }
 
 // HasWarehouseId returns a boolean if a field has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) HasWarehouseId() bool {
-    if o != nil && !utils.IsNil(o.WarehouseId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.WarehouseId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWarehouseId gets a reference to the given string and assigns it to the WarehouseId field.
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) SetWarehouseId(v string) {
-    o.WarehouseId = &v
+	o.WarehouseId = &v
 }
 
 func (o Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.AvailableQuantity) {
-        toSerialize["available_quantity"] = o.AvailableQuantity
-    }
-    if !utils.IsNil(o.CommittedQuantity) {
-        toSerialize["committed_quantity"] = o.CommittedQuantity
-    }
-    if !utils.IsNil(o.WarehouseId) {
-        toSerialize["warehouse_id"] = o.WarehouseId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.AvailableQuantity) {
+		toSerialize["available_quantity"] = o.AvailableQuantity
+	}
+	if !utils.IsNil(o.CommittedQuantity) {
+		toSerialize["committed_quantity"] = o.CommittedQuantity
+	}
+	if !utils.IsNil(o.WarehouseId) {
+		toSerialize["warehouse_id"] = o.WarehouseId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309InventorySearchResponseDataInventorySkusWarehouseInventory) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309InventorySearchResponseDataInventorySkusWarehouseInventory := _Product202309InventorySearchResponseDataInventorySkusWarehouseInventory{}
+	varProduct202309InventorySearchResponseDataInventorySkusWarehouseInventory := _Product202309InventorySearchResponseDataInventorySkusWarehouseInventory{}
 
-    err = json.Unmarshal(data, &varProduct202309InventorySearchResponseDataInventorySkusWarehouseInventory)
+	err = json.Unmarshal(data, &varProduct202309InventorySearchResponseDataInventorySkusWarehouseInventory)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309InventorySearchResponseDataInventorySkusWarehouseInventory(varProduct202309InventorySearchResponseDataInventorySkusWarehouseInventory)
+	*o = Product202309InventorySearchResponseDataInventorySkusWarehouseInventory(varProduct202309InventorySearchResponseDataInventorySkusWarehouseInventory)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "available_quantity")
-        delete(additionalProperties, "committed_quantity")
-        delete(additionalProperties, "warehouse_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "available_quantity")
+		delete(additionalProperties, "committed_quantity")
+		delete(additionalProperties, "warehouse_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309InventorySearchResponseDataInventorySkusWarehouseInventory struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202309InventorySearchResponseDataInventorySkusWarehouseI
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

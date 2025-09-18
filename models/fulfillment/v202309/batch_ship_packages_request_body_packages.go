@@ -11,22 +11,22 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309BatchShipPackagesRequestBodyPackages type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309BatchShipPackagesRequestBodyPackages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309BatchShipPackagesRequestBodyPackages{}
 
 // Fulfillment202309BatchShipPackagesRequestBodyPackages struct for Fulfillment202309BatchShipPackagesRequestBodyPackages
 type Fulfillment202309BatchShipPackagesRequestBodyPackages struct {
-    // Possible values: - `PICKUP`: A shipping provider will pickup the package(s) from the seller's pickup address. - `DROP_OFF`: The seller will need to drop off the package(s) at a designated location.
-    HandoverMethod *string `json:"handover_method,omitempty"`
-    // Package ID.
-    Id *string `json:"id,omitempty"`
-    PickupSlot *Fulfillment202309BatchShipPackagesRequestBodyPackagesPickupSlot `json:"pickup_slot,omitempty"`
-    SelfShipment *Fulfillment202309BatchShipPackagesRequestBodyPackagesSelfShipment `json:"self_shipment,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Possible values: - `PICKUP`: A shipping provider will pickup the package(s) from the seller's pickup address. - `DROP_OFF`: The seller will need to drop off the package(s) at a designated location.
+	HandoverMethod *string `json:"handover_method,omitempty"`
+	// Package ID.
+	Id                   *string                                                            `json:"id,omitempty"`
+	PickupSlot           *Fulfillment202309BatchShipPackagesRequestBodyPackagesPickupSlot   `json:"pickup_slot,omitempty"`
+	SelfShipment         *Fulfillment202309BatchShipPackagesRequestBodyPackagesSelfShipment `json:"self_shipment,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309BatchShipPackagesRequestBodyPackages Fulfillment202309BatchShipPackagesRequestBodyPackages
@@ -36,197 +36,197 @@ type _Fulfillment202309BatchShipPackagesRequestBodyPackages Fulfillment202309Bat
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309BatchShipPackagesRequestBodyPackages() *Fulfillment202309BatchShipPackagesRequestBodyPackages {
-    this := Fulfillment202309BatchShipPackagesRequestBodyPackages{}
-    return &this
+	this := Fulfillment202309BatchShipPackagesRequestBodyPackages{}
+	return &this
 }
 
 // NewFulfillment202309BatchShipPackagesRequestBodyPackagesWithDefaults instantiates a new Fulfillment202309BatchShipPackagesRequestBodyPackages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309BatchShipPackagesRequestBodyPackagesWithDefaults() *Fulfillment202309BatchShipPackagesRequestBodyPackages {
-    this := Fulfillment202309BatchShipPackagesRequestBodyPackages{}
-    return &this
+	this := Fulfillment202309BatchShipPackagesRequestBodyPackages{}
+	return &this
 }
 
 // GetHandoverMethod returns the HandoverMethod field value if set, zero value otherwise.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) GetHandoverMethod() string {
-    if o == nil || utils.IsNil(o.HandoverMethod) {
-        var ret string
-        return ret
-    }
-    return *o.HandoverMethod
+	if o == nil || utils.IsNil(o.HandoverMethod) {
+		var ret string
+		return ret
+	}
+	return *o.HandoverMethod
 }
 
 // GetHandoverMethodOk returns a tuple with the HandoverMethod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) GetHandoverMethodOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.HandoverMethod) {
-        return nil, false
-    }
-    return o.HandoverMethod, true
+	if o == nil || utils.IsNil(o.HandoverMethod) {
+		return nil, false
+	}
+	return o.HandoverMethod, true
 }
 
 // HasHandoverMethod returns a boolean if a field has been set.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) HasHandoverMethod() bool {
-    if o != nil && !utils.IsNil(o.HandoverMethod) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.HandoverMethod) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHandoverMethod gets a reference to the given string and assigns it to the HandoverMethod field.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) SetHandoverMethod(v string) {
-    o.HandoverMethod = &v
+	o.HandoverMethod = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetPickupSlot returns the PickupSlot field value if set, zero value otherwise.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) GetPickupSlot() Fulfillment202309BatchShipPackagesRequestBodyPackagesPickupSlot {
-    if o == nil || utils.IsNil(o.PickupSlot) {
-        var ret Fulfillment202309BatchShipPackagesRequestBodyPackagesPickupSlot
-        return ret
-    }
-    return *o.PickupSlot
+	if o == nil || utils.IsNil(o.PickupSlot) {
+		var ret Fulfillment202309BatchShipPackagesRequestBodyPackagesPickupSlot
+		return ret
+	}
+	return *o.PickupSlot
 }
 
 // GetPickupSlotOk returns a tuple with the PickupSlot field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) GetPickupSlotOk() (*Fulfillment202309BatchShipPackagesRequestBodyPackagesPickupSlot, bool) {
-    if o == nil || utils.IsNil(o.PickupSlot) {
-        return nil, false
-    }
-    return o.PickupSlot, true
+	if o == nil || utils.IsNil(o.PickupSlot) {
+		return nil, false
+	}
+	return o.PickupSlot, true
 }
 
 // HasPickupSlot returns a boolean if a field has been set.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) HasPickupSlot() bool {
-    if o != nil && !utils.IsNil(o.PickupSlot) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PickupSlot) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPickupSlot gets a reference to the given Fulfillment202309BatchShipPackagesRequestBodyPackagesPickupSlot and assigns it to the PickupSlot field.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) SetPickupSlot(v Fulfillment202309BatchShipPackagesRequestBodyPackagesPickupSlot) {
-    o.PickupSlot = &v
+	o.PickupSlot = &v
 }
 
 // GetSelfShipment returns the SelfShipment field value if set, zero value otherwise.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) GetSelfShipment() Fulfillment202309BatchShipPackagesRequestBodyPackagesSelfShipment {
-    if o == nil || utils.IsNil(o.SelfShipment) {
-        var ret Fulfillment202309BatchShipPackagesRequestBodyPackagesSelfShipment
-        return ret
-    }
-    return *o.SelfShipment
+	if o == nil || utils.IsNil(o.SelfShipment) {
+		var ret Fulfillment202309BatchShipPackagesRequestBodyPackagesSelfShipment
+		return ret
+	}
+	return *o.SelfShipment
 }
 
 // GetSelfShipmentOk returns a tuple with the SelfShipment field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) GetSelfShipmentOk() (*Fulfillment202309BatchShipPackagesRequestBodyPackagesSelfShipment, bool) {
-    if o == nil || utils.IsNil(o.SelfShipment) {
-        return nil, false
-    }
-    return o.SelfShipment, true
+	if o == nil || utils.IsNil(o.SelfShipment) {
+		return nil, false
+	}
+	return o.SelfShipment, true
 }
 
 // HasSelfShipment returns a boolean if a field has been set.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) HasSelfShipment() bool {
-    if o != nil && !utils.IsNil(o.SelfShipment) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SelfShipment) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSelfShipment gets a reference to the given Fulfillment202309BatchShipPackagesRequestBodyPackagesSelfShipment and assigns it to the SelfShipment field.
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) SetSelfShipment(v Fulfillment202309BatchShipPackagesRequestBodyPackagesSelfShipment) {
-    o.SelfShipment = &v
+	o.SelfShipment = &v
 }
 
 func (o Fulfillment202309BatchShipPackagesRequestBodyPackages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309BatchShipPackagesRequestBodyPackages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.HandoverMethod) {
-        toSerialize["handover_method"] = o.HandoverMethod
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.PickupSlot) {
-        toSerialize["pickup_slot"] = o.PickupSlot
-    }
-    if !utils.IsNil(o.SelfShipment) {
-        toSerialize["self_shipment"] = o.SelfShipment
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.HandoverMethod) {
+		toSerialize["handover_method"] = o.HandoverMethod
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.PickupSlot) {
+		toSerialize["pickup_slot"] = o.PickupSlot
+	}
+	if !utils.IsNil(o.SelfShipment) {
+		toSerialize["self_shipment"] = o.SelfShipment
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309BatchShipPackagesRequestBodyPackages) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309BatchShipPackagesRequestBodyPackages := _Fulfillment202309BatchShipPackagesRequestBodyPackages{}
+	varFulfillment202309BatchShipPackagesRequestBodyPackages := _Fulfillment202309BatchShipPackagesRequestBodyPackages{}
 
-    err = json.Unmarshal(data, &varFulfillment202309BatchShipPackagesRequestBodyPackages)
+	err = json.Unmarshal(data, &varFulfillment202309BatchShipPackagesRequestBodyPackages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309BatchShipPackagesRequestBodyPackages(varFulfillment202309BatchShipPackagesRequestBodyPackages)
+	*o = Fulfillment202309BatchShipPackagesRequestBodyPackages(varFulfillment202309BatchShipPackagesRequestBodyPackages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "handover_method")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "pickup_slot")
-        delete(additionalProperties, "self_shipment")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "handover_method")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "pickup_slot")
+		delete(additionalProperties, "self_shipment")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309BatchShipPackagesRequestBodyPackages struct {
@@ -264,5 +264,3 @@ func (v *NullableFulfillment202309BatchShipPackagesRequestBodyPackages) Unmarsha
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

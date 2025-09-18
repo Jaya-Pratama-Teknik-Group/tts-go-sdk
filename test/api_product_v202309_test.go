@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309BrandsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309BrandsGet(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309BrandsPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309BrandsPost(context.Background()).Execute()
 
@@ -48,7 +48,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309CategoriesCategoryIdAttributesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var categoryId string
 
@@ -62,7 +62,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309CategoriesCategoryIdGlobalAttributesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var categoryId string
 
@@ -76,7 +76,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309CategoriesCategoryIdGlobalRulesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var categoryId string
 
@@ -90,7 +90,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309CategoriesCategoryIdRulesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var categoryId string
 
@@ -104,7 +104,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309CategoriesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309CategoriesGet(context.Background()).Execute()
 
@@ -116,7 +116,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309CategoriesRecommendPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309CategoriesRecommendPost(context.Background()).Execute()
 
@@ -128,7 +128,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309FilesUploadPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309FilesUploadPost(context.Background()).Execute()
 
@@ -140,7 +140,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309GlobalCategoriesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309GlobalCategoriesGet(context.Background()).Execute()
 
@@ -152,7 +152,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309GlobalCategoriesRecommendPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309GlobalCategoriesRecommendPost(context.Background()).Execute()
 
@@ -164,7 +164,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309GlobalProductsDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309GlobalProductsDelete(context.Background()).Execute()
 
@@ -176,7 +176,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309GlobalProductsGlobalProductIdGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var globalProductId string
 
@@ -190,7 +190,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309GlobalProductsGlobalProductIdInventoryUpdatePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var globalProductId string
 
@@ -204,7 +204,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309GlobalProductsGlobalProductIdPublishPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var globalProductId string
 
@@ -218,7 +218,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309GlobalProductsGlobalProductIdPut", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var globalProductId string
 
@@ -232,7 +232,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309GlobalProductsPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309GlobalProductsPost(context.Background()).Execute()
 
@@ -244,7 +244,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309GlobalProductsSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309GlobalProductsSearchPost(context.Background()).Execute()
 
@@ -256,7 +256,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ImagesUploadPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309ImagesUploadPost(context.Background()).Execute()
 
@@ -268,7 +268,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309InventorySearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309InventorySearchPost(context.Background()).Execute()
 
@@ -280,7 +280,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309PrerequisitesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309PrerequisitesGet(context.Background()).Execute()
 
@@ -292,7 +292,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsActivatePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309ProductsActivatePost(context.Background()).Execute()
 
@@ -304,7 +304,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsDeactivatePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309ProductsDeactivatePost(context.Background()).Execute()
 
@@ -316,7 +316,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309ProductsDelete(context.Background()).Execute()
 
@@ -328,7 +328,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsListingCheckPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309ProductsListingCheckPost(context.Background()).Execute()
 
@@ -340,7 +340,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309ProductsPost(context.Background()).Execute()
 
@@ -352,7 +352,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsProductIdGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var productId string
 
@@ -366,7 +366,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsProductIdInventoryUpdatePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var productId string
 
@@ -380,7 +380,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsProductIdPartialEditPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var productId string
 
@@ -394,7 +394,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsProductIdPricesUpdatePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var productId string
 
@@ -408,7 +408,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsProductIdPut", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var productId string
 
@@ -422,7 +422,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsRecoverPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309ProductsRecoverPost(context.Background()).Execute()
 
@@ -434,7 +434,7 @@ func Test_sdk_golang_ProductV202309APIService(t *testing.T) {
 
 	t.Run("Test ProductV202309APIService Product202309ProductsSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202309API.Product202309ProductsSearchPost(context.Background()).Execute()
 

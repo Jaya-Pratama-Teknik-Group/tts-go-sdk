@@ -11,24 +11,24 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309CreatePackagesResponseDataDimension type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309CreatePackagesResponseDataDimension type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309CreatePackagesResponseDataDimension{}
 
 // Fulfillment202309CreatePackagesResponseDataDimension struct for Fulfillment202309CreatePackagesResponseDataDimension
 type Fulfillment202309CreatePackagesResponseDataDimension struct {
-    // Package height.
-    Height *string `json:"height,omitempty"`
-    // Package length.
-    Length *string `json:"length,omitempty"`
-    // The unit of measurement for the package dimensions.  Available values: - `CM` - `INCH`
-    Unit *string `json:"unit,omitempty"`
-    // Package width.
-    Width *string `json:"width,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Package height.
+	Height *string `json:"height,omitempty"`
+	// Package length.
+	Length *string `json:"length,omitempty"`
+	// The unit of measurement for the package dimensions.  Available values: - `CM` - `INCH`
+	Unit *string `json:"unit,omitempty"`
+	// Package width.
+	Width                *string `json:"width,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309CreatePackagesResponseDataDimension Fulfillment202309CreatePackagesResponseDataDimension
@@ -38,197 +38,197 @@ type _Fulfillment202309CreatePackagesResponseDataDimension Fulfillment202309Crea
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309CreatePackagesResponseDataDimension() *Fulfillment202309CreatePackagesResponseDataDimension {
-    this := Fulfillment202309CreatePackagesResponseDataDimension{}
-    return &this
+	this := Fulfillment202309CreatePackagesResponseDataDimension{}
+	return &this
 }
 
 // NewFulfillment202309CreatePackagesResponseDataDimensionWithDefaults instantiates a new Fulfillment202309CreatePackagesResponseDataDimension object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309CreatePackagesResponseDataDimensionWithDefaults() *Fulfillment202309CreatePackagesResponseDataDimension {
-    this := Fulfillment202309CreatePackagesResponseDataDimension{}
-    return &this
+	this := Fulfillment202309CreatePackagesResponseDataDimension{}
+	return &this
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) GetHeight() string {
-    if o == nil || utils.IsNil(o.Height) {
-        var ret string
-        return ret
-    }
-    return *o.Height
+	if o == nil || utils.IsNil(o.Height) {
+		var ret string
+		return ret
+	}
+	return *o.Height
 }
 
 // GetHeightOk returns a tuple with the Height field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) GetHeightOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Height) {
-        return nil, false
-    }
-    return o.Height, true
+	if o == nil || utils.IsNil(o.Height) {
+		return nil, false
+	}
+	return o.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) HasHeight() bool {
-    if o != nil && !utils.IsNil(o.Height) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Height) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHeight gets a reference to the given string and assigns it to the Height field.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) SetHeight(v string) {
-    o.Height = &v
+	o.Height = &v
 }
 
 // GetLength returns the Length field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) GetLength() string {
-    if o == nil || utils.IsNil(o.Length) {
-        var ret string
-        return ret
-    }
-    return *o.Length
+	if o == nil || utils.IsNil(o.Length) {
+		var ret string
+		return ret
+	}
+	return *o.Length
 }
 
 // GetLengthOk returns a tuple with the Length field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) GetLengthOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Length) {
-        return nil, false
-    }
-    return o.Length, true
+	if o == nil || utils.IsNil(o.Length) {
+		return nil, false
+	}
+	return o.Length, true
 }
 
 // HasLength returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) HasLength() bool {
-    if o != nil && !utils.IsNil(o.Length) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Length) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLength gets a reference to the given string and assigns it to the Length field.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) SetLength(v string) {
-    o.Length = &v
+	o.Length = &v
 }
 
 // GetUnit returns the Unit field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) GetUnit() string {
-    if o == nil || utils.IsNil(o.Unit) {
-        var ret string
-        return ret
-    }
-    return *o.Unit
+	if o == nil || utils.IsNil(o.Unit) {
+		var ret string
+		return ret
+	}
+	return *o.Unit
 }
 
 // GetUnitOk returns a tuple with the Unit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) GetUnitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Unit) {
-        return nil, false
-    }
-    return o.Unit, true
+	if o == nil || utils.IsNil(o.Unit) {
+		return nil, false
+	}
+	return o.Unit, true
 }
 
 // HasUnit returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) HasUnit() bool {
-    if o != nil && !utils.IsNil(o.Unit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Unit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnit gets a reference to the given string and assigns it to the Unit field.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) SetUnit(v string) {
-    o.Unit = &v
+	o.Unit = &v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) GetWidth() string {
-    if o == nil || utils.IsNil(o.Width) {
-        var ret string
-        return ret
-    }
-    return *o.Width
+	if o == nil || utils.IsNil(o.Width) {
+		var ret string
+		return ret
+	}
+	return *o.Width
 }
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) GetWidthOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Width) {
-        return nil, false
-    }
-    return o.Width, true
+	if o == nil || utils.IsNil(o.Width) {
+		return nil, false
+	}
+	return o.Width, true
 }
 
 // HasWidth returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) HasWidth() bool {
-    if o != nil && !utils.IsNil(o.Width) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Width) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWidth gets a reference to the given string and assigns it to the Width field.
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) SetWidth(v string) {
-    o.Width = &v
+	o.Width = &v
 }
 
 func (o Fulfillment202309CreatePackagesResponseDataDimension) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309CreatePackagesResponseDataDimension) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Height) {
-        toSerialize["height"] = o.Height
-    }
-    if !utils.IsNil(o.Length) {
-        toSerialize["length"] = o.Length
-    }
-    if !utils.IsNil(o.Unit) {
-        toSerialize["unit"] = o.Unit
-    }
-    if !utils.IsNil(o.Width) {
-        toSerialize["width"] = o.Width
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Height) {
+		toSerialize["height"] = o.Height
+	}
+	if !utils.IsNil(o.Length) {
+		toSerialize["length"] = o.Length
+	}
+	if !utils.IsNil(o.Unit) {
+		toSerialize["unit"] = o.Unit
+	}
+	if !utils.IsNil(o.Width) {
+		toSerialize["width"] = o.Width
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309CreatePackagesResponseDataDimension) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309CreatePackagesResponseDataDimension := _Fulfillment202309CreatePackagesResponseDataDimension{}
+	varFulfillment202309CreatePackagesResponseDataDimension := _Fulfillment202309CreatePackagesResponseDataDimension{}
 
-    err = json.Unmarshal(data, &varFulfillment202309CreatePackagesResponseDataDimension)
+	err = json.Unmarshal(data, &varFulfillment202309CreatePackagesResponseDataDimension)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309CreatePackagesResponseDataDimension(varFulfillment202309CreatePackagesResponseDataDimension)
+	*o = Fulfillment202309CreatePackagesResponseDataDimension(varFulfillment202309CreatePackagesResponseDataDimension)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "height")
-        delete(additionalProperties, "length")
-        delete(additionalProperties, "unit")
-        delete(additionalProperties, "width")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "height")
+		delete(additionalProperties, "length")
+		delete(additionalProperties, "unit")
+		delete(additionalProperties, "width")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309CreatePackagesResponseDataDimension struct {
@@ -266,5 +266,3 @@ func (v *NullableFulfillment202309CreatePackagesResponseDataDimension) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

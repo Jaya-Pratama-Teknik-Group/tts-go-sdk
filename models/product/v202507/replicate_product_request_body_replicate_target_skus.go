@@ -11,21 +11,21 @@ API version: 1.0.0
 package product_v202507
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202507ReplicateProductRequestBodyReplicateTargetSkus type satisfies the MappedNullable interface at compile time
+// checks if the Product202507ReplicateProductRequestBodyReplicateTargetSkus type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202507ReplicateProductRequestBodyReplicateTargetSkus{}
 
 // Product202507ReplicateProductRequestBodyReplicateTargetSkus struct for Product202507ReplicateProductRequestBodyReplicateTargetSkus
 type Product202507ReplicateProductRequestBodyReplicateTargetSkus struct {
-    // SKU inventory information per warehouse. This field is only required if the inventory allocation mode for the warehouse is MANUAL. Otherwise, it is optional.
-    Inventory []Product202507ReplicateProductRequestBodyReplicateTargetSkusInventory `json:"inventory,omitempty"`
-    Price *Product202507ReplicateProductRequestBodyReplicateTargetSkusPrice `json:"price,omitempty"`
-    // The ID of the SKU being replicated
-    SourceSkuId *string `json:"source_sku_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// SKU inventory information per warehouse. This field is only required if the inventory allocation mode for the warehouse is MANUAL. Otherwise, it is optional.
+	Inventory []Product202507ReplicateProductRequestBodyReplicateTargetSkusInventory `json:"inventory,omitempty"`
+	Price     *Product202507ReplicateProductRequestBodyReplicateTargetSkusPrice      `json:"price,omitempty"`
+	// The ID of the SKU being replicated
+	SourceSkuId          *string `json:"source_sku_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202507ReplicateProductRequestBodyReplicateTargetSkus Product202507ReplicateProductRequestBodyReplicateTargetSkus
@@ -35,161 +35,161 @@ type _Product202507ReplicateProductRequestBodyReplicateTargetSkus Product202507R
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202507ReplicateProductRequestBodyReplicateTargetSkus() *Product202507ReplicateProductRequestBodyReplicateTargetSkus {
-    this := Product202507ReplicateProductRequestBodyReplicateTargetSkus{}
-    return &this
+	this := Product202507ReplicateProductRequestBodyReplicateTargetSkus{}
+	return &this
 }
 
 // NewProduct202507ReplicateProductRequestBodyReplicateTargetSkusWithDefaults instantiates a new Product202507ReplicateProductRequestBodyReplicateTargetSkus object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202507ReplicateProductRequestBodyReplicateTargetSkusWithDefaults() *Product202507ReplicateProductRequestBodyReplicateTargetSkus {
-    this := Product202507ReplicateProductRequestBodyReplicateTargetSkus{}
-    return &this
+	this := Product202507ReplicateProductRequestBodyReplicateTargetSkus{}
+	return &this
 }
 
 // GetInventory returns the Inventory field value if set, zero value otherwise.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) GetInventory() []Product202507ReplicateProductRequestBodyReplicateTargetSkusInventory {
-    if o == nil || utils.IsNil(o.Inventory) {
-        var ret []Product202507ReplicateProductRequestBodyReplicateTargetSkusInventory
-        return ret
-    }
-    return o.Inventory
+	if o == nil || utils.IsNil(o.Inventory) {
+		var ret []Product202507ReplicateProductRequestBodyReplicateTargetSkusInventory
+		return ret
+	}
+	return o.Inventory
 }
 
 // GetInventoryOk returns a tuple with the Inventory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) GetInventoryOk() ([]Product202507ReplicateProductRequestBodyReplicateTargetSkusInventory, bool) {
-    if o == nil || utils.IsNil(o.Inventory) {
-        return nil, false
-    }
-    return o.Inventory, true
+	if o == nil || utils.IsNil(o.Inventory) {
+		return nil, false
+	}
+	return o.Inventory, true
 }
 
 // HasInventory returns a boolean if a field has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) HasInventory() bool {
-    if o != nil && !utils.IsNil(o.Inventory) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Inventory) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetInventory gets a reference to the given []Product202507ReplicateProductRequestBodyReplicateTargetSkusInventory and assigns it to the Inventory field.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) SetInventory(v []Product202507ReplicateProductRequestBodyReplicateTargetSkusInventory) {
-    o.Inventory = v
+	o.Inventory = v
 }
 
 // GetPrice returns the Price field value if set, zero value otherwise.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) GetPrice() Product202507ReplicateProductRequestBodyReplicateTargetSkusPrice {
-    if o == nil || utils.IsNil(o.Price) {
-        var ret Product202507ReplicateProductRequestBodyReplicateTargetSkusPrice
-        return ret
-    }
-    return *o.Price
+	if o == nil || utils.IsNil(o.Price) {
+		var ret Product202507ReplicateProductRequestBodyReplicateTargetSkusPrice
+		return ret
+	}
+	return *o.Price
 }
 
 // GetPriceOk returns a tuple with the Price field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) GetPriceOk() (*Product202507ReplicateProductRequestBodyReplicateTargetSkusPrice, bool) {
-    if o == nil || utils.IsNil(o.Price) {
-        return nil, false
-    }
-    return o.Price, true
+	if o == nil || utils.IsNil(o.Price) {
+		return nil, false
+	}
+	return o.Price, true
 }
 
 // HasPrice returns a boolean if a field has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) HasPrice() bool {
-    if o != nil && !utils.IsNil(o.Price) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Price) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPrice gets a reference to the given Product202507ReplicateProductRequestBodyReplicateTargetSkusPrice and assigns it to the Price field.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) SetPrice(v Product202507ReplicateProductRequestBodyReplicateTargetSkusPrice) {
-    o.Price = &v
+	o.Price = &v
 }
 
 // GetSourceSkuId returns the SourceSkuId field value if set, zero value otherwise.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) GetSourceSkuId() string {
-    if o == nil || utils.IsNil(o.SourceSkuId) {
-        var ret string
-        return ret
-    }
-    return *o.SourceSkuId
+	if o == nil || utils.IsNil(o.SourceSkuId) {
+		var ret string
+		return ret
+	}
+	return *o.SourceSkuId
 }
 
 // GetSourceSkuIdOk returns a tuple with the SourceSkuId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) GetSourceSkuIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SourceSkuId) {
-        return nil, false
-    }
-    return o.SourceSkuId, true
+	if o == nil || utils.IsNil(o.SourceSkuId) {
+		return nil, false
+	}
+	return o.SourceSkuId, true
 }
 
 // HasSourceSkuId returns a boolean if a field has been set.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) HasSourceSkuId() bool {
-    if o != nil && !utils.IsNil(o.SourceSkuId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SourceSkuId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSourceSkuId gets a reference to the given string and assigns it to the SourceSkuId field.
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) SetSourceSkuId(v string) {
-    o.SourceSkuId = &v
+	o.SourceSkuId = &v
 }
 
 func (o Product202507ReplicateProductRequestBodyReplicateTargetSkus) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202507ReplicateProductRequestBodyReplicateTargetSkus) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Inventory) {
-        toSerialize["inventory"] = o.Inventory
-    }
-    if !utils.IsNil(o.Price) {
-        toSerialize["price"] = o.Price
-    }
-    if !utils.IsNil(o.SourceSkuId) {
-        toSerialize["source_sku_id"] = o.SourceSkuId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Inventory) {
+		toSerialize["inventory"] = o.Inventory
+	}
+	if !utils.IsNil(o.Price) {
+		toSerialize["price"] = o.Price
+	}
+	if !utils.IsNil(o.SourceSkuId) {
+		toSerialize["source_sku_id"] = o.SourceSkuId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202507ReplicateProductRequestBodyReplicateTargetSkus) UnmarshalJSON(data []byte) (err error) {
-    varProduct202507ReplicateProductRequestBodyReplicateTargetSkus := _Product202507ReplicateProductRequestBodyReplicateTargetSkus{}
+	varProduct202507ReplicateProductRequestBodyReplicateTargetSkus := _Product202507ReplicateProductRequestBodyReplicateTargetSkus{}
 
-    err = json.Unmarshal(data, &varProduct202507ReplicateProductRequestBodyReplicateTargetSkus)
+	err = json.Unmarshal(data, &varProduct202507ReplicateProductRequestBodyReplicateTargetSkus)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202507ReplicateProductRequestBodyReplicateTargetSkus(varProduct202507ReplicateProductRequestBodyReplicateTargetSkus)
+	*o = Product202507ReplicateProductRequestBodyReplicateTargetSkus(varProduct202507ReplicateProductRequestBodyReplicateTargetSkus)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "inventory")
-        delete(additionalProperties, "price")
-        delete(additionalProperties, "source_sku_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "inventory")
+		delete(additionalProperties, "price")
+		delete(additionalProperties, "source_sku_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202507ReplicateProductRequestBodyReplicateTargetSkus struct {
@@ -227,5 +227,3 @@ func (v *NullableProduct202507ReplicateProductRequestBodyReplicateTargetSkus) Un
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309GetReturnRecordsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309GetReturnRecordsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309GetReturnRecordsResponseData{}
 
 // ReturnRefund202309GetReturnRecordsResponseData struct for ReturnRefund202309GetReturnRecordsResponseData
 type ReturnRefund202309GetReturnRecordsResponseData struct {
-    // A list of return records.
-    Records []ReturnRefund202309GetReturnRecordsResponseDataRecords `json:"records,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A list of return records.
+	Records              []ReturnRefund202309GetReturnRecordsResponseDataRecords `json:"records,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309GetReturnRecordsResponseData ReturnRefund202309GetReturnRecordsResponseData
@@ -32,89 +32,89 @@ type _ReturnRefund202309GetReturnRecordsResponseData ReturnRefund202309GetReturn
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309GetReturnRecordsResponseData() *ReturnRefund202309GetReturnRecordsResponseData {
-    this := ReturnRefund202309GetReturnRecordsResponseData{}
-    return &this
+	this := ReturnRefund202309GetReturnRecordsResponseData{}
+	return &this
 }
 
 // NewReturnRefund202309GetReturnRecordsResponseDataWithDefaults instantiates a new ReturnRefund202309GetReturnRecordsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309GetReturnRecordsResponseDataWithDefaults() *ReturnRefund202309GetReturnRecordsResponseData {
-    this := ReturnRefund202309GetReturnRecordsResponseData{}
-    return &this
+	this := ReturnRefund202309GetReturnRecordsResponseData{}
+	return &this
 }
 
 // GetRecords returns the Records field value if set, zero value otherwise.
 func (o *ReturnRefund202309GetReturnRecordsResponseData) GetRecords() []ReturnRefund202309GetReturnRecordsResponseDataRecords {
-    if o == nil || utils.IsNil(o.Records) {
-        var ret []ReturnRefund202309GetReturnRecordsResponseDataRecords
-        return ret
-    }
-    return o.Records
+	if o == nil || utils.IsNil(o.Records) {
+		var ret []ReturnRefund202309GetReturnRecordsResponseDataRecords
+		return ret
+	}
+	return o.Records
 }
 
 // GetRecordsOk returns a tuple with the Records field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309GetReturnRecordsResponseData) GetRecordsOk() ([]ReturnRefund202309GetReturnRecordsResponseDataRecords, bool) {
-    if o == nil || utils.IsNil(o.Records) {
-        return nil, false
-    }
-    return o.Records, true
+	if o == nil || utils.IsNil(o.Records) {
+		return nil, false
+	}
+	return o.Records, true
 }
 
 // HasRecords returns a boolean if a field has been set.
 func (o *ReturnRefund202309GetReturnRecordsResponseData) HasRecords() bool {
-    if o != nil && !utils.IsNil(o.Records) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Records) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRecords gets a reference to the given []ReturnRefund202309GetReturnRecordsResponseDataRecords and assigns it to the Records field.
 func (o *ReturnRefund202309GetReturnRecordsResponseData) SetRecords(v []ReturnRefund202309GetReturnRecordsResponseDataRecords) {
-    o.Records = v
+	o.Records = v
 }
 
 func (o ReturnRefund202309GetReturnRecordsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309GetReturnRecordsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Records) {
-        toSerialize["records"] = o.Records
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Records) {
+		toSerialize["records"] = o.Records
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309GetReturnRecordsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309GetReturnRecordsResponseData := _ReturnRefund202309GetReturnRecordsResponseData{}
+	varReturnRefund202309GetReturnRecordsResponseData := _ReturnRefund202309GetReturnRecordsResponseData{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309GetReturnRecordsResponseData)
+	err = json.Unmarshal(data, &varReturnRefund202309GetReturnRecordsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309GetReturnRecordsResponseData(varReturnRefund202309GetReturnRecordsResponseData)
+	*o = ReturnRefund202309GetReturnRecordsResponseData(varReturnRefund202309GetReturnRecordsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "records")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "records")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309GetReturnRecordsResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableReturnRefund202309GetReturnRecordsResponseData) UnmarshalJSON(s
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

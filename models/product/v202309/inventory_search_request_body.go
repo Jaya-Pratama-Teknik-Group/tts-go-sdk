@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309InventorySearchRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Product202309InventorySearchRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309InventorySearchRequestBody{}
 
 // Product202309InventorySearchRequestBody struct for Product202309InventorySearchRequestBody
 type Product202309InventorySearchRequestBody struct {
-    // A list of product IDs used to search for inventory information. Max IDs: 100
-    ProductIds []string `json:"product_ids,omitempty"`
-    // A list of SKU IDs used to search for inventory information. Max IDs: 600  **Note**: If both `sku_ids` and `product_ids` are passed, `sku_ids` will take precedence.
-    SkuIds []string `json:"sku_ids,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A list of product IDs used to search for inventory information. Max IDs: 100
+	ProductIds []string `json:"product_ids,omitempty"`
+	// A list of SKU IDs used to search for inventory information. Max IDs: 600  **Note**: If both `sku_ids` and `product_ids` are passed, `sku_ids` will take precedence.
+	SkuIds               []string `json:"sku_ids,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309InventorySearchRequestBody Product202309InventorySearchRequestBody
@@ -34,125 +34,125 @@ type _Product202309InventorySearchRequestBody Product202309InventorySearchReques
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309InventorySearchRequestBody() *Product202309InventorySearchRequestBody {
-    this := Product202309InventorySearchRequestBody{}
-    return &this
+	this := Product202309InventorySearchRequestBody{}
+	return &this
 }
 
 // NewProduct202309InventorySearchRequestBodyWithDefaults instantiates a new Product202309InventorySearchRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309InventorySearchRequestBodyWithDefaults() *Product202309InventorySearchRequestBody {
-    this := Product202309InventorySearchRequestBody{}
-    return &this
+	this := Product202309InventorySearchRequestBody{}
+	return &this
 }
 
 // GetProductIds returns the ProductIds field value if set, zero value otherwise.
 func (o *Product202309InventorySearchRequestBody) GetProductIds() []string {
-    if o == nil || utils.IsNil(o.ProductIds) {
-        var ret []string
-        return ret
-    }
-    return o.ProductIds
+	if o == nil || utils.IsNil(o.ProductIds) {
+		var ret []string
+		return ret
+	}
+	return o.ProductIds
 }
 
 // GetProductIdsOk returns a tuple with the ProductIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309InventorySearchRequestBody) GetProductIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.ProductIds) {
-        return nil, false
-    }
-    return o.ProductIds, true
+	if o == nil || utils.IsNil(o.ProductIds) {
+		return nil, false
+	}
+	return o.ProductIds, true
 }
 
 // HasProductIds returns a boolean if a field has been set.
 func (o *Product202309InventorySearchRequestBody) HasProductIds() bool {
-    if o != nil && !utils.IsNil(o.ProductIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductIds gets a reference to the given []string and assigns it to the ProductIds field.
 func (o *Product202309InventorySearchRequestBody) SetProductIds(v []string) {
-    o.ProductIds = v
+	o.ProductIds = v
 }
 
 // GetSkuIds returns the SkuIds field value if set, zero value otherwise.
 func (o *Product202309InventorySearchRequestBody) GetSkuIds() []string {
-    if o == nil || utils.IsNil(o.SkuIds) {
-        var ret []string
-        return ret
-    }
-    return o.SkuIds
+	if o == nil || utils.IsNil(o.SkuIds) {
+		var ret []string
+		return ret
+	}
+	return o.SkuIds
 }
 
 // GetSkuIdsOk returns a tuple with the SkuIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309InventorySearchRequestBody) GetSkuIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.SkuIds) {
-        return nil, false
-    }
-    return o.SkuIds, true
+	if o == nil || utils.IsNil(o.SkuIds) {
+		return nil, false
+	}
+	return o.SkuIds, true
 }
 
 // HasSkuIds returns a boolean if a field has been set.
 func (o *Product202309InventorySearchRequestBody) HasSkuIds() bool {
-    if o != nil && !utils.IsNil(o.SkuIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuIds gets a reference to the given []string and assigns it to the SkuIds field.
 func (o *Product202309InventorySearchRequestBody) SetSkuIds(v []string) {
-    o.SkuIds = v
+	o.SkuIds = v
 }
 
 func (o Product202309InventorySearchRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309InventorySearchRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ProductIds) {
-        toSerialize["product_ids"] = o.ProductIds
-    }
-    if !utils.IsNil(o.SkuIds) {
-        toSerialize["sku_ids"] = o.SkuIds
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ProductIds) {
+		toSerialize["product_ids"] = o.ProductIds
+	}
+	if !utils.IsNil(o.SkuIds) {
+		toSerialize["sku_ids"] = o.SkuIds
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309InventorySearchRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309InventorySearchRequestBody := _Product202309InventorySearchRequestBody{}
+	varProduct202309InventorySearchRequestBody := _Product202309InventorySearchRequestBody{}
 
-    err = json.Unmarshal(data, &varProduct202309InventorySearchRequestBody)
+	err = json.Unmarshal(data, &varProduct202309InventorySearchRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309InventorySearchRequestBody(varProduct202309InventorySearchRequestBody)
+	*o = Product202309InventorySearchRequestBody(varProduct202309InventorySearchRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "product_ids")
-        delete(additionalProperties, "sku_ids")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "product_ids")
+		delete(additionalProperties, "sku_ids")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309InventorySearchRequestBody struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309InventorySearchRequestBody) UnmarshalJSON(src []by
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

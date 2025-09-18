@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory type satisfies the MappedNullable interface at compile time
+// checks if the Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory{}
 
 // Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory struct for Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory
 type Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory struct {
-    // The name of the associated campaign.
-    CampaignName *string `json:"campaign_name,omitempty"`
-    // The number of units allocated.
-    Quantity *int32 `json:"quantity,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The name of the associated campaign.
+	CampaignName *string `json:"campaign_name,omitempty"`
+	// The number of units allocated.
+	Quantity             *int32 `json:"quantity,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory
@@ -34,125 +34,125 @@ type _Product202309InventorySearchResponseDataInventorySkusTotalAvailableInvento
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory() *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory {
-    this := Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory{}
-    return &this
+	this := Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory{}
+	return &this
 }
 
 // NewProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventoryWithDefaults instantiates a new Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventoryWithDefaults() *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory {
-    this := Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory{}
-    return &this
+	this := Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory{}
+	return &this
 }
 
 // GetCampaignName returns the CampaignName field value if set, zero value otherwise.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) GetCampaignName() string {
-    if o == nil || utils.IsNil(o.CampaignName) {
-        var ret string
-        return ret
-    }
-    return *o.CampaignName
+	if o == nil || utils.IsNil(o.CampaignName) {
+		var ret string
+		return ret
+	}
+	return *o.CampaignName
 }
 
 // GetCampaignNameOk returns a tuple with the CampaignName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) GetCampaignNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.CampaignName) {
-        return nil, false
-    }
-    return o.CampaignName, true
+	if o == nil || utils.IsNil(o.CampaignName) {
+		return nil, false
+	}
+	return o.CampaignName, true
 }
 
 // HasCampaignName returns a boolean if a field has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) HasCampaignName() bool {
-    if o != nil && !utils.IsNil(o.CampaignName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CampaignName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCampaignName gets a reference to the given string and assigns it to the CampaignName field.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) SetCampaignName(v string) {
-    o.CampaignName = &v
+	o.CampaignName = &v
 }
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) GetQuantity() int32 {
-    if o == nil || utils.IsNil(o.Quantity) {
-        var ret int32
-        return ret
-    }
-    return *o.Quantity
+	if o == nil || utils.IsNil(o.Quantity) {
+		var ret int32
+		return ret
+	}
+	return *o.Quantity
 }
 
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) GetQuantityOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Quantity) {
-        return nil, false
-    }
-    return o.Quantity, true
+	if o == nil || utils.IsNil(o.Quantity) {
+		return nil, false
+	}
+	return o.Quantity, true
 }
 
 // HasQuantity returns a boolean if a field has been set.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) HasQuantity() bool {
-    if o != nil && !utils.IsNil(o.Quantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Quantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantity gets a reference to the given int32 and assigns it to the Quantity field.
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) SetQuantity(v int32) {
-    o.Quantity = &v
+	o.Quantity = &v
 }
 
 func (o Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CampaignName) {
-        toSerialize["campaign_name"] = o.CampaignName
-    }
-    if !utils.IsNil(o.Quantity) {
-        toSerialize["quantity"] = o.Quantity
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CampaignName) {
+		toSerialize["campaign_name"] = o.CampaignName
+	}
+	if !utils.IsNil(o.Quantity) {
+		toSerialize["quantity"] = o.Quantity
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory := _Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory{}
+	varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory := _Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory{}
 
-    err = json.Unmarshal(data, &varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory)
+	err = json.Unmarshal(data, &varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory(varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory)
+	*o = Product202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory(varProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "campaign_name")
-        delete(additionalProperties, "quantity")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "campaign_name")
+		delete(additionalProperties, "quantity")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309InventorySearchResponseDataInventorySkusTotalAvailableInventoryDistributionCampaignInventory struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309InventorySearchResponseDataInventorySkusTotalAvail
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

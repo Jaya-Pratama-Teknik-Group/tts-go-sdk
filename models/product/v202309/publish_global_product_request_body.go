@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309PublishGlobalProductRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Product202309PublishGlobalProductRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309PublishGlobalProductRequestBody{}
 
 // Product202309PublishGlobalProductRequestBody struct for Product202309PublishGlobalProductRequestBody
 type Product202309PublishGlobalProductRequestBody struct {
-    // Target markets for publishing global products. 
-    PublishTarget []Product202309PublishGlobalProductRequestBodyPublishTarget `json:"publish_target,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Target markets for publishing global products.
+	PublishTarget        []Product202309PublishGlobalProductRequestBodyPublishTarget `json:"publish_target,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309PublishGlobalProductRequestBody Product202309PublishGlobalProductRequestBody
@@ -32,89 +32,89 @@ type _Product202309PublishGlobalProductRequestBody Product202309PublishGlobalPro
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309PublishGlobalProductRequestBody() *Product202309PublishGlobalProductRequestBody {
-    this := Product202309PublishGlobalProductRequestBody{}
-    return &this
+	this := Product202309PublishGlobalProductRequestBody{}
+	return &this
 }
 
 // NewProduct202309PublishGlobalProductRequestBodyWithDefaults instantiates a new Product202309PublishGlobalProductRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309PublishGlobalProductRequestBodyWithDefaults() *Product202309PublishGlobalProductRequestBody {
-    this := Product202309PublishGlobalProductRequestBody{}
-    return &this
+	this := Product202309PublishGlobalProductRequestBody{}
+	return &this
 }
 
 // GetPublishTarget returns the PublishTarget field value if set, zero value otherwise.
 func (o *Product202309PublishGlobalProductRequestBody) GetPublishTarget() []Product202309PublishGlobalProductRequestBodyPublishTarget {
-    if o == nil || utils.IsNil(o.PublishTarget) {
-        var ret []Product202309PublishGlobalProductRequestBodyPublishTarget
-        return ret
-    }
-    return o.PublishTarget
+	if o == nil || utils.IsNil(o.PublishTarget) {
+		var ret []Product202309PublishGlobalProductRequestBodyPublishTarget
+		return ret
+	}
+	return o.PublishTarget
 }
 
 // GetPublishTargetOk returns a tuple with the PublishTarget field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PublishGlobalProductRequestBody) GetPublishTargetOk() ([]Product202309PublishGlobalProductRequestBodyPublishTarget, bool) {
-    if o == nil || utils.IsNil(o.PublishTarget) {
-        return nil, false
-    }
-    return o.PublishTarget, true
+	if o == nil || utils.IsNil(o.PublishTarget) {
+		return nil, false
+	}
+	return o.PublishTarget, true
 }
 
 // HasPublishTarget returns a boolean if a field has been set.
 func (o *Product202309PublishGlobalProductRequestBody) HasPublishTarget() bool {
-    if o != nil && !utils.IsNil(o.PublishTarget) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PublishTarget) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPublishTarget gets a reference to the given []Product202309PublishGlobalProductRequestBodyPublishTarget and assigns it to the PublishTarget field.
 func (o *Product202309PublishGlobalProductRequestBody) SetPublishTarget(v []Product202309PublishGlobalProductRequestBodyPublishTarget) {
-    o.PublishTarget = v
+	o.PublishTarget = v
 }
 
 func (o Product202309PublishGlobalProductRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309PublishGlobalProductRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.PublishTarget) {
-        toSerialize["publish_target"] = o.PublishTarget
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.PublishTarget) {
+		toSerialize["publish_target"] = o.PublishTarget
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309PublishGlobalProductRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309PublishGlobalProductRequestBody := _Product202309PublishGlobalProductRequestBody{}
+	varProduct202309PublishGlobalProductRequestBody := _Product202309PublishGlobalProductRequestBody{}
 
-    err = json.Unmarshal(data, &varProduct202309PublishGlobalProductRequestBody)
+	err = json.Unmarshal(data, &varProduct202309PublishGlobalProductRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309PublishGlobalProductRequestBody(varProduct202309PublishGlobalProductRequestBody)
+	*o = Product202309PublishGlobalProductRequestBody(varProduct202309PublishGlobalProductRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "publish_target")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "publish_target")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309PublishGlobalProductRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309PublishGlobalProductRequestBody) UnmarshalJSON(src
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

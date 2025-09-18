@@ -11,20 +11,20 @@ API version: 1.0.0
 package event_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Event202309GetShopWebhooksResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Event202309GetShopWebhooksResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Event202309GetShopWebhooksResponseData{}
 
 // Event202309GetShopWebhooksResponseData struct for Event202309GetShopWebhooksResponseData
 type Event202309GetShopWebhooksResponseData struct {
-    // The total number of webhooks returned.
-    TotalCount *int64 `json:"total_count,omitempty"`
-    // The list of webhooks configured for the shop.
-    Webhooks []Event202309GetShopWebhooksResponseDataWebhooks `json:"webhooks,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The total number of webhooks returned.
+	TotalCount *int64 `json:"total_count,omitempty"`
+	// The list of webhooks configured for the shop.
+	Webhooks             []Event202309GetShopWebhooksResponseDataWebhooks `json:"webhooks,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Event202309GetShopWebhooksResponseData Event202309GetShopWebhooksResponseData
@@ -34,125 +34,125 @@ type _Event202309GetShopWebhooksResponseData Event202309GetShopWebhooksResponseD
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewEvent202309GetShopWebhooksResponseData() *Event202309GetShopWebhooksResponseData {
-    this := Event202309GetShopWebhooksResponseData{}
-    return &this
+	this := Event202309GetShopWebhooksResponseData{}
+	return &this
 }
 
 // NewEvent202309GetShopWebhooksResponseDataWithDefaults instantiates a new Event202309GetShopWebhooksResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewEvent202309GetShopWebhooksResponseDataWithDefaults() *Event202309GetShopWebhooksResponseData {
-    this := Event202309GetShopWebhooksResponseData{}
-    return &this
+	this := Event202309GetShopWebhooksResponseData{}
+	return &this
 }
 
 // GetTotalCount returns the TotalCount field value if set, zero value otherwise.
 func (o *Event202309GetShopWebhooksResponseData) GetTotalCount() int64 {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        var ret int64
-        return ret
-    }
-    return *o.TotalCount
+	if o == nil || utils.IsNil(o.TotalCount) {
+		var ret int64
+		return ret
+	}
+	return *o.TotalCount
 }
 
 // GetTotalCountOk returns a tuple with the TotalCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Event202309GetShopWebhooksResponseData) GetTotalCountOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        return nil, false
-    }
-    return o.TotalCount, true
+	if o == nil || utils.IsNil(o.TotalCount) {
+		return nil, false
+	}
+	return o.TotalCount, true
 }
 
 // HasTotalCount returns a boolean if a field has been set.
 func (o *Event202309GetShopWebhooksResponseData) HasTotalCount() bool {
-    if o != nil && !utils.IsNil(o.TotalCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalCount gets a reference to the given int64 and assigns it to the TotalCount field.
 func (o *Event202309GetShopWebhooksResponseData) SetTotalCount(v int64) {
-    o.TotalCount = &v
+	o.TotalCount = &v
 }
 
 // GetWebhooks returns the Webhooks field value if set, zero value otherwise.
 func (o *Event202309GetShopWebhooksResponseData) GetWebhooks() []Event202309GetShopWebhooksResponseDataWebhooks {
-    if o == nil || utils.IsNil(o.Webhooks) {
-        var ret []Event202309GetShopWebhooksResponseDataWebhooks
-        return ret
-    }
-    return o.Webhooks
+	if o == nil || utils.IsNil(o.Webhooks) {
+		var ret []Event202309GetShopWebhooksResponseDataWebhooks
+		return ret
+	}
+	return o.Webhooks
 }
 
 // GetWebhooksOk returns a tuple with the Webhooks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Event202309GetShopWebhooksResponseData) GetWebhooksOk() ([]Event202309GetShopWebhooksResponseDataWebhooks, bool) {
-    if o == nil || utils.IsNil(o.Webhooks) {
-        return nil, false
-    }
-    return o.Webhooks, true
+	if o == nil || utils.IsNil(o.Webhooks) {
+		return nil, false
+	}
+	return o.Webhooks, true
 }
 
 // HasWebhooks returns a boolean if a field has been set.
 func (o *Event202309GetShopWebhooksResponseData) HasWebhooks() bool {
-    if o != nil && !utils.IsNil(o.Webhooks) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Webhooks) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWebhooks gets a reference to the given []Event202309GetShopWebhooksResponseDataWebhooks and assigns it to the Webhooks field.
 func (o *Event202309GetShopWebhooksResponseData) SetWebhooks(v []Event202309GetShopWebhooksResponseDataWebhooks) {
-    o.Webhooks = v
+	o.Webhooks = v
 }
 
 func (o Event202309GetShopWebhooksResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Event202309GetShopWebhooksResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.TotalCount) {
-        toSerialize["total_count"] = o.TotalCount
-    }
-    if !utils.IsNil(o.Webhooks) {
-        toSerialize["webhooks"] = o.Webhooks
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.TotalCount) {
+		toSerialize["total_count"] = o.TotalCount
+	}
+	if !utils.IsNil(o.Webhooks) {
+		toSerialize["webhooks"] = o.Webhooks
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Event202309GetShopWebhooksResponseData) UnmarshalJSON(data []byte) (err error) {
-    varEvent202309GetShopWebhooksResponseData := _Event202309GetShopWebhooksResponseData{}
+	varEvent202309GetShopWebhooksResponseData := _Event202309GetShopWebhooksResponseData{}
 
-    err = json.Unmarshal(data, &varEvent202309GetShopWebhooksResponseData)
+	err = json.Unmarshal(data, &varEvent202309GetShopWebhooksResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Event202309GetShopWebhooksResponseData(varEvent202309GetShopWebhooksResponseData)
+	*o = Event202309GetShopWebhooksResponseData(varEvent202309GetShopWebhooksResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "total_count")
-        delete(additionalProperties, "webhooks")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "total_count")
+		delete(additionalProperties, "webhooks")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableEvent202309GetShopWebhooksResponseData struct {
@@ -190,5 +190,3 @@ func (v *NullableEvent202309GetShopWebhooksResponseData) UnmarshalJSON(src []byt
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

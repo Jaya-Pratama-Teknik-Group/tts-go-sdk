@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_ProductV202405APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_ProductV202405APIService(t *testing.T) {
 
 	t.Run("Test ProductV202405APIService Product202405ProductsDiagnosesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202405API.Product202405ProductsDiagnosesGet(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_sdk_golang_ProductV202405APIService(t *testing.T) {
 
 	t.Run("Test ProductV202405APIService Product202405ProductsSeoWordsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202405API.Product202405ProductsSeoWordsGet(context.Background()).Execute()
 
@@ -48,7 +48,7 @@ func Test_sdk_golang_ProductV202405APIService(t *testing.T) {
 
 	t.Run("Test ProductV202405APIService Product202405ProductsSuggestionsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202405API.Product202405ProductsSuggestionsGet(context.Background()).Execute()
 

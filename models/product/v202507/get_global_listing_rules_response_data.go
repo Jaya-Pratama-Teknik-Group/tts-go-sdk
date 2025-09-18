@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202507
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202507GetGlobalListingRulesResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202507GetGlobalListingRulesResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202507GetGlobalListingRulesResponseData{}
 
 // Product202507GetGlobalListingRulesResponseData struct for Product202507GetGlobalListingRulesResponseData
 type Product202507GetGlobalListingRulesResponseData struct {
-    // A list of inventory allocation rules for all warehouses linked to the shop.
-    InventoryRules []Product202507GetGlobalListingRulesResponseDataInventoryRules `json:"inventory_rules,omitempty"`
-    // The methods at which sellers can list products in this shop. Possible values: - GLOBAL_PUBLISHING: Create a global product, then publish it to target local markets. - LOCAL_REPLICATION: Create local product, then replicate it to other target local markets.
-    ListingMethods []string `json:"listing_methods,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A list of inventory allocation rules for all warehouses linked to the shop.
+	InventoryRules []Product202507GetGlobalListingRulesResponseDataInventoryRules `json:"inventory_rules,omitempty"`
+	// The methods at which sellers can list products in this shop. Possible values: - GLOBAL_PUBLISHING: Create a global product, then publish it to target local markets. - LOCAL_REPLICATION: Create local product, then replicate it to other target local markets.
+	ListingMethods       []string `json:"listing_methods,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202507GetGlobalListingRulesResponseData Product202507GetGlobalListingRulesResponseData
@@ -34,125 +34,125 @@ type _Product202507GetGlobalListingRulesResponseData Product202507GetGlobalListi
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202507GetGlobalListingRulesResponseData() *Product202507GetGlobalListingRulesResponseData {
-    this := Product202507GetGlobalListingRulesResponseData{}
-    return &this
+	this := Product202507GetGlobalListingRulesResponseData{}
+	return &this
 }
 
 // NewProduct202507GetGlobalListingRulesResponseDataWithDefaults instantiates a new Product202507GetGlobalListingRulesResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202507GetGlobalListingRulesResponseDataWithDefaults() *Product202507GetGlobalListingRulesResponseData {
-    this := Product202507GetGlobalListingRulesResponseData{}
-    return &this
+	this := Product202507GetGlobalListingRulesResponseData{}
+	return &this
 }
 
 // GetInventoryRules returns the InventoryRules field value if set, zero value otherwise.
 func (o *Product202507GetGlobalListingRulesResponseData) GetInventoryRules() []Product202507GetGlobalListingRulesResponseDataInventoryRules {
-    if o == nil || utils.IsNil(o.InventoryRules) {
-        var ret []Product202507GetGlobalListingRulesResponseDataInventoryRules
-        return ret
-    }
-    return o.InventoryRules
+	if o == nil || utils.IsNil(o.InventoryRules) {
+		var ret []Product202507GetGlobalListingRulesResponseDataInventoryRules
+		return ret
+	}
+	return o.InventoryRules
 }
 
 // GetInventoryRulesOk returns a tuple with the InventoryRules field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507GetGlobalListingRulesResponseData) GetInventoryRulesOk() ([]Product202507GetGlobalListingRulesResponseDataInventoryRules, bool) {
-    if o == nil || utils.IsNil(o.InventoryRules) {
-        return nil, false
-    }
-    return o.InventoryRules, true
+	if o == nil || utils.IsNil(o.InventoryRules) {
+		return nil, false
+	}
+	return o.InventoryRules, true
 }
 
 // HasInventoryRules returns a boolean if a field has been set.
 func (o *Product202507GetGlobalListingRulesResponseData) HasInventoryRules() bool {
-    if o != nil && !utils.IsNil(o.InventoryRules) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.InventoryRules) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetInventoryRules gets a reference to the given []Product202507GetGlobalListingRulesResponseDataInventoryRules and assigns it to the InventoryRules field.
 func (o *Product202507GetGlobalListingRulesResponseData) SetInventoryRules(v []Product202507GetGlobalListingRulesResponseDataInventoryRules) {
-    o.InventoryRules = v
+	o.InventoryRules = v
 }
 
 // GetListingMethods returns the ListingMethods field value if set, zero value otherwise.
 func (o *Product202507GetGlobalListingRulesResponseData) GetListingMethods() []string {
-    if o == nil || utils.IsNil(o.ListingMethods) {
-        var ret []string
-        return ret
-    }
-    return o.ListingMethods
+	if o == nil || utils.IsNil(o.ListingMethods) {
+		var ret []string
+		return ret
+	}
+	return o.ListingMethods
 }
 
 // GetListingMethodsOk returns a tuple with the ListingMethods field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507GetGlobalListingRulesResponseData) GetListingMethodsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.ListingMethods) {
-        return nil, false
-    }
-    return o.ListingMethods, true
+	if o == nil || utils.IsNil(o.ListingMethods) {
+		return nil, false
+	}
+	return o.ListingMethods, true
 }
 
 // HasListingMethods returns a boolean if a field has been set.
 func (o *Product202507GetGlobalListingRulesResponseData) HasListingMethods() bool {
-    if o != nil && !utils.IsNil(o.ListingMethods) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ListingMethods) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetListingMethods gets a reference to the given []string and assigns it to the ListingMethods field.
 func (o *Product202507GetGlobalListingRulesResponseData) SetListingMethods(v []string) {
-    o.ListingMethods = v
+	o.ListingMethods = v
 }
 
 func (o Product202507GetGlobalListingRulesResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202507GetGlobalListingRulesResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.InventoryRules) {
-        toSerialize["inventory_rules"] = o.InventoryRules
-    }
-    if !utils.IsNil(o.ListingMethods) {
-        toSerialize["listing_methods"] = o.ListingMethods
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.InventoryRules) {
+		toSerialize["inventory_rules"] = o.InventoryRules
+	}
+	if !utils.IsNil(o.ListingMethods) {
+		toSerialize["listing_methods"] = o.ListingMethods
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202507GetGlobalListingRulesResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202507GetGlobalListingRulesResponseData := _Product202507GetGlobalListingRulesResponseData{}
+	varProduct202507GetGlobalListingRulesResponseData := _Product202507GetGlobalListingRulesResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202507GetGlobalListingRulesResponseData)
+	err = json.Unmarshal(data, &varProduct202507GetGlobalListingRulesResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202507GetGlobalListingRulesResponseData(varProduct202507GetGlobalListingRulesResponseData)
+	*o = Product202507GetGlobalListingRulesResponseData(varProduct202507GetGlobalListingRulesResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "inventory_rules")
-        delete(additionalProperties, "listing_methods")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "inventory_rules")
+		delete(additionalProperties, "listing_methods")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202507GetGlobalListingRulesResponseData struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202507GetGlobalListingRulesResponseData) UnmarshalJSON(s
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

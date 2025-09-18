@@ -11,18 +11,18 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309CombinePackageRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309CombinePackageRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309CombinePackageRequestBody{}
 
 // Fulfillment202309CombinePackageRequestBody struct for Fulfillment202309CombinePackageRequestBody
 type Fulfillment202309CombinePackageRequestBody struct {
-    // Input list of combinable packages.
-    CombinablePackages []Fulfillment202309CombinePackageRequestBodyCombinablePackages `json:"combinable_packages,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Input list of combinable packages.
+	CombinablePackages   []Fulfillment202309CombinePackageRequestBodyCombinablePackages `json:"combinable_packages,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309CombinePackageRequestBody Fulfillment202309CombinePackageRequestBody
@@ -32,89 +32,89 @@ type _Fulfillment202309CombinePackageRequestBody Fulfillment202309CombinePackage
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309CombinePackageRequestBody() *Fulfillment202309CombinePackageRequestBody {
-    this := Fulfillment202309CombinePackageRequestBody{}
-    return &this
+	this := Fulfillment202309CombinePackageRequestBody{}
+	return &this
 }
 
 // NewFulfillment202309CombinePackageRequestBodyWithDefaults instantiates a new Fulfillment202309CombinePackageRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309CombinePackageRequestBodyWithDefaults() *Fulfillment202309CombinePackageRequestBody {
-    this := Fulfillment202309CombinePackageRequestBody{}
-    return &this
+	this := Fulfillment202309CombinePackageRequestBody{}
+	return &this
 }
 
 // GetCombinablePackages returns the CombinablePackages field value if set, zero value otherwise.
 func (o *Fulfillment202309CombinePackageRequestBody) GetCombinablePackages() []Fulfillment202309CombinePackageRequestBodyCombinablePackages {
-    if o == nil || utils.IsNil(o.CombinablePackages) {
-        var ret []Fulfillment202309CombinePackageRequestBodyCombinablePackages
-        return ret
-    }
-    return o.CombinablePackages
+	if o == nil || utils.IsNil(o.CombinablePackages) {
+		var ret []Fulfillment202309CombinePackageRequestBodyCombinablePackages
+		return ret
+	}
+	return o.CombinablePackages
 }
 
 // GetCombinablePackagesOk returns a tuple with the CombinablePackages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CombinePackageRequestBody) GetCombinablePackagesOk() ([]Fulfillment202309CombinePackageRequestBodyCombinablePackages, bool) {
-    if o == nil || utils.IsNil(o.CombinablePackages) {
-        return nil, false
-    }
-    return o.CombinablePackages, true
+	if o == nil || utils.IsNil(o.CombinablePackages) {
+		return nil, false
+	}
+	return o.CombinablePackages, true
 }
 
 // HasCombinablePackages returns a boolean if a field has been set.
 func (o *Fulfillment202309CombinePackageRequestBody) HasCombinablePackages() bool {
-    if o != nil && !utils.IsNil(o.CombinablePackages) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CombinablePackages) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCombinablePackages gets a reference to the given []Fulfillment202309CombinePackageRequestBodyCombinablePackages and assigns it to the CombinablePackages field.
 func (o *Fulfillment202309CombinePackageRequestBody) SetCombinablePackages(v []Fulfillment202309CombinePackageRequestBodyCombinablePackages) {
-    o.CombinablePackages = v
+	o.CombinablePackages = v
 }
 
 func (o Fulfillment202309CombinePackageRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309CombinePackageRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CombinablePackages) {
-        toSerialize["combinable_packages"] = o.CombinablePackages
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CombinablePackages) {
+		toSerialize["combinable_packages"] = o.CombinablePackages
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309CombinePackageRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309CombinePackageRequestBody := _Fulfillment202309CombinePackageRequestBody{}
+	varFulfillment202309CombinePackageRequestBody := _Fulfillment202309CombinePackageRequestBody{}
 
-    err = json.Unmarshal(data, &varFulfillment202309CombinePackageRequestBody)
+	err = json.Unmarshal(data, &varFulfillment202309CombinePackageRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309CombinePackageRequestBody(varFulfillment202309CombinePackageRequestBody)
+	*o = Fulfillment202309CombinePackageRequestBody(varFulfillment202309CombinePackageRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "combinable_packages")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "combinable_packages")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309CombinePackageRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableFulfillment202309CombinePackageRequestBody) UnmarshalJSON(src [
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

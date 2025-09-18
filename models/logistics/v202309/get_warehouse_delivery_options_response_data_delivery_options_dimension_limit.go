@@ -11,24 +11,24 @@ API version: 1.0.0
 package logistics_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit type satisfies the MappedNullable interface at compile time
+// checks if the Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit{}
 
 // Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit struct for Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit
 type Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit struct {
-    // Maximum height limit.
-    MaxHeight *int64 `json:"max_height,omitempty"`
-    // Maximum length limit.
-    MaxLength *int64 `json:"max_length,omitempty"`
-    // Maximum width limit.
-    MaxWidth *int64 `json:"max_width,omitempty"`
-    // The unit of measurement for the dimensions, with possible values: - CM - INCH
-    Unit *string `json:"unit,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Maximum height limit.
+	MaxHeight *int64 `json:"max_height,omitempty"`
+	// Maximum length limit.
+	MaxLength *int64 `json:"max_length,omitempty"`
+	// Maximum width limit.
+	MaxWidth *int64 `json:"max_width,omitempty"`
+	// The unit of measurement for the dimensions, with possible values: - CM - INCH
+	Unit                 *string `json:"unit,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit
@@ -38,197 +38,197 @@ type _Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimen
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit() *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit {
-    this := Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit{}
-    return &this
+	this := Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit{}
+	return &this
 }
 
 // NewLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimitWithDefaults instantiates a new Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimitWithDefaults() *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit {
-    this := Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit{}
-    return &this
+	this := Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit{}
+	return &this
 }
 
 // GetMaxHeight returns the MaxHeight field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) GetMaxHeight() int64 {
-    if o == nil || utils.IsNil(o.MaxHeight) {
-        var ret int64
-        return ret
-    }
-    return *o.MaxHeight
+	if o == nil || utils.IsNil(o.MaxHeight) {
+		var ret int64
+		return ret
+	}
+	return *o.MaxHeight
 }
 
 // GetMaxHeightOk returns a tuple with the MaxHeight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) GetMaxHeightOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.MaxHeight) {
-        return nil, false
-    }
-    return o.MaxHeight, true
+	if o == nil || utils.IsNil(o.MaxHeight) {
+		return nil, false
+	}
+	return o.MaxHeight, true
 }
 
 // HasMaxHeight returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) HasMaxHeight() bool {
-    if o != nil && !utils.IsNil(o.MaxHeight) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MaxHeight) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMaxHeight gets a reference to the given int64 and assigns it to the MaxHeight field.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) SetMaxHeight(v int64) {
-    o.MaxHeight = &v
+	o.MaxHeight = &v
 }
 
 // GetMaxLength returns the MaxLength field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) GetMaxLength() int64 {
-    if o == nil || utils.IsNil(o.MaxLength) {
-        var ret int64
-        return ret
-    }
-    return *o.MaxLength
+	if o == nil || utils.IsNil(o.MaxLength) {
+		var ret int64
+		return ret
+	}
+	return *o.MaxLength
 }
 
 // GetMaxLengthOk returns a tuple with the MaxLength field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) GetMaxLengthOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.MaxLength) {
-        return nil, false
-    }
-    return o.MaxLength, true
+	if o == nil || utils.IsNil(o.MaxLength) {
+		return nil, false
+	}
+	return o.MaxLength, true
 }
 
 // HasMaxLength returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) HasMaxLength() bool {
-    if o != nil && !utils.IsNil(o.MaxLength) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MaxLength) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMaxLength gets a reference to the given int64 and assigns it to the MaxLength field.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) SetMaxLength(v int64) {
-    o.MaxLength = &v
+	o.MaxLength = &v
 }
 
 // GetMaxWidth returns the MaxWidth field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) GetMaxWidth() int64 {
-    if o == nil || utils.IsNil(o.MaxWidth) {
-        var ret int64
-        return ret
-    }
-    return *o.MaxWidth
+	if o == nil || utils.IsNil(o.MaxWidth) {
+		var ret int64
+		return ret
+	}
+	return *o.MaxWidth
 }
 
 // GetMaxWidthOk returns a tuple with the MaxWidth field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) GetMaxWidthOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.MaxWidth) {
-        return nil, false
-    }
-    return o.MaxWidth, true
+	if o == nil || utils.IsNil(o.MaxWidth) {
+		return nil, false
+	}
+	return o.MaxWidth, true
 }
 
 // HasMaxWidth returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) HasMaxWidth() bool {
-    if o != nil && !utils.IsNil(o.MaxWidth) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MaxWidth) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMaxWidth gets a reference to the given int64 and assigns it to the MaxWidth field.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) SetMaxWidth(v int64) {
-    o.MaxWidth = &v
+	o.MaxWidth = &v
 }
 
 // GetUnit returns the Unit field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) GetUnit() string {
-    if o == nil || utils.IsNil(o.Unit) {
-        var ret string
-        return ret
-    }
-    return *o.Unit
+	if o == nil || utils.IsNil(o.Unit) {
+		var ret string
+		return ret
+	}
+	return *o.Unit
 }
 
 // GetUnitOk returns a tuple with the Unit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) GetUnitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Unit) {
-        return nil, false
-    }
-    return o.Unit, true
+	if o == nil || utils.IsNil(o.Unit) {
+		return nil, false
+	}
+	return o.Unit, true
 }
 
 // HasUnit returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) HasUnit() bool {
-    if o != nil && !utils.IsNil(o.Unit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Unit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnit gets a reference to the given string and assigns it to the Unit field.
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) SetUnit(v string) {
-    o.Unit = &v
+	o.Unit = &v
 }
 
 func (o Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.MaxHeight) {
-        toSerialize["max_height"] = o.MaxHeight
-    }
-    if !utils.IsNil(o.MaxLength) {
-        toSerialize["max_length"] = o.MaxLength
-    }
-    if !utils.IsNil(o.MaxWidth) {
-        toSerialize["max_width"] = o.MaxWidth
-    }
-    if !utils.IsNil(o.Unit) {
-        toSerialize["unit"] = o.Unit
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.MaxHeight) {
+		toSerialize["max_height"] = o.MaxHeight
+	}
+	if !utils.IsNil(o.MaxLength) {
+		toSerialize["max_length"] = o.MaxLength
+	}
+	if !utils.IsNil(o.MaxWidth) {
+		toSerialize["max_width"] = o.MaxWidth
+	}
+	if !utils.IsNil(o.Unit) {
+		toSerialize["unit"] = o.Unit
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit) UnmarshalJSON(data []byte) (err error) {
-    varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit := _Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit{}
+	varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit := _Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit{}
 
-    err = json.Unmarshal(data, &varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit)
+	err = json.Unmarshal(data, &varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit(varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit)
+	*o = Logistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit(varLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "max_height")
-        delete(additionalProperties, "max_length")
-        delete(additionalProperties, "max_width")
-        delete(additionalProperties, "unit")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "max_height")
+		delete(additionalProperties, "max_length")
+		delete(additionalProperties, "max_width")
+		delete(additionalProperties, "unit")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryOptionsDimensionLimit struct {
@@ -266,5 +266,3 @@ func (v *NullableLogistics202309GetWarehouseDeliveryOptionsResponseDataDeliveryO
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

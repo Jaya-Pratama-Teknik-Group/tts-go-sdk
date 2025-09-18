@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetProductResponseDataGlobalProductAssociation type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetProductResponseDataGlobalProductAssociation type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetProductResponseDataGlobalProductAssociation{}
 
 // Product202309GetProductResponseDataGlobalProductAssociation struct for Product202309GetProductResponseDataGlobalProductAssociation
 type Product202309GetProductResponseDataGlobalProductAssociation struct {
-    // The global product ID in TikTok Shop.
-    GlobalProductId *string `json:"global_product_id,omitempty"`
-    // The list of sku mappings between the global and local products.
-    SkuMappings []Product202309GetProductResponseDataGlobalProductAssociationSkuMappings `json:"sku_mappings,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The global product ID in TikTok Shop.
+	GlobalProductId *string `json:"global_product_id,omitempty"`
+	// The list of sku mappings between the global and local products.
+	SkuMappings          []Product202309GetProductResponseDataGlobalProductAssociationSkuMappings `json:"sku_mappings,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetProductResponseDataGlobalProductAssociation Product202309GetProductResponseDataGlobalProductAssociation
@@ -34,125 +34,125 @@ type _Product202309GetProductResponseDataGlobalProductAssociation Product202309G
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetProductResponseDataGlobalProductAssociation() *Product202309GetProductResponseDataGlobalProductAssociation {
-    this := Product202309GetProductResponseDataGlobalProductAssociation{}
-    return &this
+	this := Product202309GetProductResponseDataGlobalProductAssociation{}
+	return &this
 }
 
 // NewProduct202309GetProductResponseDataGlobalProductAssociationWithDefaults instantiates a new Product202309GetProductResponseDataGlobalProductAssociation object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetProductResponseDataGlobalProductAssociationWithDefaults() *Product202309GetProductResponseDataGlobalProductAssociation {
-    this := Product202309GetProductResponseDataGlobalProductAssociation{}
-    return &this
+	this := Product202309GetProductResponseDataGlobalProductAssociation{}
+	return &this
 }
 
 // GetGlobalProductId returns the GlobalProductId field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataGlobalProductAssociation) GetGlobalProductId() string {
-    if o == nil || utils.IsNil(o.GlobalProductId) {
-        var ret string
-        return ret
-    }
-    return *o.GlobalProductId
+	if o == nil || utils.IsNil(o.GlobalProductId) {
+		var ret string
+		return ret
+	}
+	return *o.GlobalProductId
 }
 
 // GetGlobalProductIdOk returns a tuple with the GlobalProductId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociation) GetGlobalProductIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.GlobalProductId) {
-        return nil, false
-    }
-    return o.GlobalProductId, true
+	if o == nil || utils.IsNil(o.GlobalProductId) {
+		return nil, false
+	}
+	return o.GlobalProductId, true
 }
 
 // HasGlobalProductId returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociation) HasGlobalProductId() bool {
-    if o != nil && !utils.IsNil(o.GlobalProductId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.GlobalProductId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGlobalProductId gets a reference to the given string and assigns it to the GlobalProductId field.
 func (o *Product202309GetProductResponseDataGlobalProductAssociation) SetGlobalProductId(v string) {
-    o.GlobalProductId = &v
+	o.GlobalProductId = &v
 }
 
 // GetSkuMappings returns the SkuMappings field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataGlobalProductAssociation) GetSkuMappings() []Product202309GetProductResponseDataGlobalProductAssociationSkuMappings {
-    if o == nil || utils.IsNil(o.SkuMappings) {
-        var ret []Product202309GetProductResponseDataGlobalProductAssociationSkuMappings
-        return ret
-    }
-    return o.SkuMappings
+	if o == nil || utils.IsNil(o.SkuMappings) {
+		var ret []Product202309GetProductResponseDataGlobalProductAssociationSkuMappings
+		return ret
+	}
+	return o.SkuMappings
 }
 
 // GetSkuMappingsOk returns a tuple with the SkuMappings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociation) GetSkuMappingsOk() ([]Product202309GetProductResponseDataGlobalProductAssociationSkuMappings, bool) {
-    if o == nil || utils.IsNil(o.SkuMappings) {
-        return nil, false
-    }
-    return o.SkuMappings, true
+	if o == nil || utils.IsNil(o.SkuMappings) {
+		return nil, false
+	}
+	return o.SkuMappings, true
 }
 
 // HasSkuMappings returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociation) HasSkuMappings() bool {
-    if o != nil && !utils.IsNil(o.SkuMappings) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuMappings) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuMappings gets a reference to the given []Product202309GetProductResponseDataGlobalProductAssociationSkuMappings and assigns it to the SkuMappings field.
 func (o *Product202309GetProductResponseDataGlobalProductAssociation) SetSkuMappings(v []Product202309GetProductResponseDataGlobalProductAssociationSkuMappings) {
-    o.SkuMappings = v
+	o.SkuMappings = v
 }
 
 func (o Product202309GetProductResponseDataGlobalProductAssociation) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetProductResponseDataGlobalProductAssociation) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.GlobalProductId) {
-        toSerialize["global_product_id"] = o.GlobalProductId
-    }
-    if !utils.IsNil(o.SkuMappings) {
-        toSerialize["sku_mappings"] = o.SkuMappings
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.GlobalProductId) {
+		toSerialize["global_product_id"] = o.GlobalProductId
+	}
+	if !utils.IsNil(o.SkuMappings) {
+		toSerialize["sku_mappings"] = o.SkuMappings
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetProductResponseDataGlobalProductAssociation) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetProductResponseDataGlobalProductAssociation := _Product202309GetProductResponseDataGlobalProductAssociation{}
+	varProduct202309GetProductResponseDataGlobalProductAssociation := _Product202309GetProductResponseDataGlobalProductAssociation{}
 
-    err = json.Unmarshal(data, &varProduct202309GetProductResponseDataGlobalProductAssociation)
+	err = json.Unmarshal(data, &varProduct202309GetProductResponseDataGlobalProductAssociation)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetProductResponseDataGlobalProductAssociation(varProduct202309GetProductResponseDataGlobalProductAssociation)
+	*o = Product202309GetProductResponseDataGlobalProductAssociation(varProduct202309GetProductResponseDataGlobalProductAssociation)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "global_product_id")
-        delete(additionalProperties, "sku_mappings")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "global_product_id")
+		delete(additionalProperties, "sku_mappings")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetProductResponseDataGlobalProductAssociation struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309GetProductResponseDataGlobalProductAssociation) Un
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

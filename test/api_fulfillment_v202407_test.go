@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_FulfillmentV202407APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_FulfillmentV202407APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202407APIService Fulfillment202407BundlesPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202407API.Fulfillment202407BundlesPost(context.Background()).Execute()
 

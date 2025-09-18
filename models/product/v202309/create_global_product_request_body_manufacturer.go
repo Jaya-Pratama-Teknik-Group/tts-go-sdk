@@ -11,24 +11,24 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CreateGlobalProductRequestBodyManufacturer type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CreateGlobalProductRequestBodyManufacturer type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CreateGlobalProductRequestBodyManufacturer{}
 
 // Product202309CreateGlobalProductRequestBodyManufacturer struct for Product202309CreateGlobalProductRequestBodyManufacturer
 type Product202309CreateGlobalProductRequestBodyManufacturer struct {
-    // The address of the manufacturer.
-    Address *string `json:"address,omitempty"`
-    // The email address of the manufacturer.
-    Email *string `json:"email,omitempty"`
-    // The name of the manufacturer.
-    Name *string `json:"name,omitempty"`
-    // The phone number of the manufacturer, prefixed by a plus `+` symbol.  There must be a space or hyphen between the country code and the local phone number.
-    PhoneNumber *string `json:"phone_number,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The address of the manufacturer.
+	Address *string `json:"address,omitempty"`
+	// The email address of the manufacturer.
+	Email *string `json:"email,omitempty"`
+	// The name of the manufacturer.
+	Name *string `json:"name,omitempty"`
+	// The phone number of the manufacturer, prefixed by a plus `+` symbol.  There must be a space or hyphen between the country code and the local phone number.
+	PhoneNumber          *string `json:"phone_number,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CreateGlobalProductRequestBodyManufacturer Product202309CreateGlobalProductRequestBodyManufacturer
@@ -38,197 +38,197 @@ type _Product202309CreateGlobalProductRequestBodyManufacturer Product202309Creat
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CreateGlobalProductRequestBodyManufacturer() *Product202309CreateGlobalProductRequestBodyManufacturer {
-    this := Product202309CreateGlobalProductRequestBodyManufacturer{}
-    return &this
+	this := Product202309CreateGlobalProductRequestBodyManufacturer{}
+	return &this
 }
 
 // NewProduct202309CreateGlobalProductRequestBodyManufacturerWithDefaults instantiates a new Product202309CreateGlobalProductRequestBodyManufacturer object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CreateGlobalProductRequestBodyManufacturerWithDefaults() *Product202309CreateGlobalProductRequestBodyManufacturer {
-    this := Product202309CreateGlobalProductRequestBodyManufacturer{}
-    return &this
+	this := Product202309CreateGlobalProductRequestBodyManufacturer{}
+	return &this
 }
 
 // GetAddress returns the Address field value if set, zero value otherwise.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) GetAddress() string {
-    if o == nil || utils.IsNil(o.Address) {
-        var ret string
-        return ret
-    }
-    return *o.Address
+	if o == nil || utils.IsNil(o.Address) {
+		var ret string
+		return ret
+	}
+	return *o.Address
 }
 
 // GetAddressOk returns a tuple with the Address field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) GetAddressOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Address) {
-        return nil, false
-    }
-    return o.Address, true
+	if o == nil || utils.IsNil(o.Address) {
+		return nil, false
+	}
+	return o.Address, true
 }
 
 // HasAddress returns a boolean if a field has been set.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) HasAddress() bool {
-    if o != nil && !utils.IsNil(o.Address) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Address) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddress gets a reference to the given string and assigns it to the Address field.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) SetAddress(v string) {
-    o.Address = &v
+	o.Address = &v
 }
 
 // GetEmail returns the Email field value if set, zero value otherwise.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) GetEmail() string {
-    if o == nil || utils.IsNil(o.Email) {
-        var ret string
-        return ret
-    }
-    return *o.Email
+	if o == nil || utils.IsNil(o.Email) {
+		var ret string
+		return ret
+	}
+	return *o.Email
 }
 
 // GetEmailOk returns a tuple with the Email field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) GetEmailOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Email) {
-        return nil, false
-    }
-    return o.Email, true
+	if o == nil || utils.IsNil(o.Email) {
+		return nil, false
+	}
+	return o.Email, true
 }
 
 // HasEmail returns a boolean if a field has been set.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) HasEmail() bool {
-    if o != nil && !utils.IsNil(o.Email) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Email) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetEmail gets a reference to the given string and assigns it to the Email field.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) SetEmail(v string) {
-    o.Email = &v
+	o.Email = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 // GetPhoneNumber returns the PhoneNumber field value if set, zero value otherwise.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) GetPhoneNumber() string {
-    if o == nil || utils.IsNil(o.PhoneNumber) {
-        var ret string
-        return ret
-    }
-    return *o.PhoneNumber
+	if o == nil || utils.IsNil(o.PhoneNumber) {
+		var ret string
+		return ret
+	}
+	return *o.PhoneNumber
 }
 
 // GetPhoneNumberOk returns a tuple with the PhoneNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) GetPhoneNumberOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PhoneNumber) {
-        return nil, false
-    }
-    return o.PhoneNumber, true
+	if o == nil || utils.IsNil(o.PhoneNumber) {
+		return nil, false
+	}
+	return o.PhoneNumber, true
 }
 
 // HasPhoneNumber returns a boolean if a field has been set.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) HasPhoneNumber() bool {
-    if o != nil && !utils.IsNil(o.PhoneNumber) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PhoneNumber) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPhoneNumber gets a reference to the given string and assigns it to the PhoneNumber field.
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) SetPhoneNumber(v string) {
-    o.PhoneNumber = &v
+	o.PhoneNumber = &v
 }
 
 func (o Product202309CreateGlobalProductRequestBodyManufacturer) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CreateGlobalProductRequestBodyManufacturer) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Address) {
-        toSerialize["address"] = o.Address
-    }
-    if !utils.IsNil(o.Email) {
-        toSerialize["email"] = o.Email
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
-    if !utils.IsNil(o.PhoneNumber) {
-        toSerialize["phone_number"] = o.PhoneNumber
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Address) {
+		toSerialize["address"] = o.Address
+	}
+	if !utils.IsNil(o.Email) {
+		toSerialize["email"] = o.Email
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !utils.IsNil(o.PhoneNumber) {
+		toSerialize["phone_number"] = o.PhoneNumber
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CreateGlobalProductRequestBodyManufacturer) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CreateGlobalProductRequestBodyManufacturer := _Product202309CreateGlobalProductRequestBodyManufacturer{}
+	varProduct202309CreateGlobalProductRequestBodyManufacturer := _Product202309CreateGlobalProductRequestBodyManufacturer{}
 
-    err = json.Unmarshal(data, &varProduct202309CreateGlobalProductRequestBodyManufacturer)
+	err = json.Unmarshal(data, &varProduct202309CreateGlobalProductRequestBodyManufacturer)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CreateGlobalProductRequestBodyManufacturer(varProduct202309CreateGlobalProductRequestBodyManufacturer)
+	*o = Product202309CreateGlobalProductRequestBodyManufacturer(varProduct202309CreateGlobalProductRequestBodyManufacturer)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "address")
-        delete(additionalProperties, "email")
-        delete(additionalProperties, "name")
-        delete(additionalProperties, "phone_number")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "address")
+		delete(additionalProperties, "email")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "phone_number")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CreateGlobalProductRequestBodyManufacturer struct {
@@ -266,5 +266,3 @@ func (v *NullableProduct202309CreateGlobalProductRequestBodyManufacturer) Unmars
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

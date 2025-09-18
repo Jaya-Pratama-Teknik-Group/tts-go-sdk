@@ -11,18 +11,18 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309UncombinePackagesResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309UncombinePackagesResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309UncombinePackagesResponseData{}
 
 // Fulfillment202309UncombinePackagesResponseData struct for Fulfillment202309UncombinePackagesResponseData
 type Fulfillment202309UncombinePackagesResponseData struct {
-    // Return list of packages after being uncombined.
-    Packages []Fulfillment202309UncombinePackagesResponseDataPackages `json:"packages,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Return list of packages after being uncombined.
+	Packages             []Fulfillment202309UncombinePackagesResponseDataPackages `json:"packages,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309UncombinePackagesResponseData Fulfillment202309UncombinePackagesResponseData
@@ -32,89 +32,89 @@ type _Fulfillment202309UncombinePackagesResponseData Fulfillment202309UncombineP
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309UncombinePackagesResponseData() *Fulfillment202309UncombinePackagesResponseData {
-    this := Fulfillment202309UncombinePackagesResponseData{}
-    return &this
+	this := Fulfillment202309UncombinePackagesResponseData{}
+	return &this
 }
 
 // NewFulfillment202309UncombinePackagesResponseDataWithDefaults instantiates a new Fulfillment202309UncombinePackagesResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309UncombinePackagesResponseDataWithDefaults() *Fulfillment202309UncombinePackagesResponseData {
-    this := Fulfillment202309UncombinePackagesResponseData{}
-    return &this
+	this := Fulfillment202309UncombinePackagesResponseData{}
+	return &this
 }
 
 // GetPackages returns the Packages field value if set, zero value otherwise.
 func (o *Fulfillment202309UncombinePackagesResponseData) GetPackages() []Fulfillment202309UncombinePackagesResponseDataPackages {
-    if o == nil || utils.IsNil(o.Packages) {
-        var ret []Fulfillment202309UncombinePackagesResponseDataPackages
-        return ret
-    }
-    return o.Packages
+	if o == nil || utils.IsNil(o.Packages) {
+		var ret []Fulfillment202309UncombinePackagesResponseDataPackages
+		return ret
+	}
+	return o.Packages
 }
 
 // GetPackagesOk returns a tuple with the Packages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309UncombinePackagesResponseData) GetPackagesOk() ([]Fulfillment202309UncombinePackagesResponseDataPackages, bool) {
-    if o == nil || utils.IsNil(o.Packages) {
-        return nil, false
-    }
-    return o.Packages, true
+	if o == nil || utils.IsNil(o.Packages) {
+		return nil, false
+	}
+	return o.Packages, true
 }
 
 // HasPackages returns a boolean if a field has been set.
 func (o *Fulfillment202309UncombinePackagesResponseData) HasPackages() bool {
-    if o != nil && !utils.IsNil(o.Packages) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Packages) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPackages gets a reference to the given []Fulfillment202309UncombinePackagesResponseDataPackages and assigns it to the Packages field.
 func (o *Fulfillment202309UncombinePackagesResponseData) SetPackages(v []Fulfillment202309UncombinePackagesResponseDataPackages) {
-    o.Packages = v
+	o.Packages = v
 }
 
 func (o Fulfillment202309UncombinePackagesResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309UncombinePackagesResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Packages) {
-        toSerialize["packages"] = o.Packages
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Packages) {
+		toSerialize["packages"] = o.Packages
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309UncombinePackagesResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309UncombinePackagesResponseData := _Fulfillment202309UncombinePackagesResponseData{}
+	varFulfillment202309UncombinePackagesResponseData := _Fulfillment202309UncombinePackagesResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202309UncombinePackagesResponseData)
+	err = json.Unmarshal(data, &varFulfillment202309UncombinePackagesResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309UncombinePackagesResponseData(varFulfillment202309UncombinePackagesResponseData)
+	*o = Fulfillment202309UncombinePackagesResponseData(varFulfillment202309UncombinePackagesResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "packages")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "packages")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309UncombinePackagesResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableFulfillment202309UncombinePackagesResponseData) UnmarshalJSON(s
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,22 +11,22 @@ API version: 1.0.0
 package promotion_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202406SearchCouponsRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202406SearchCouponsRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202406SearchCouponsRequestBody{}
 
 // Promotion202406SearchCouponsRequestBody struct for Promotion202406SearchCouponsRequestBody
 type Promotion202406SearchCouponsRequestBody struct {
-    // The display type of coupons. Values: - `REGULAR`: Regular coupons which are displayed to TikTok users across all display locations available in TTS, including PLPs, PDPs, TikTok Videos, LIVE Rooms, Creator Showcases, and may be shared via TTS Customer Support instant messages. Includes coupons which target select customer segments. - `LIVE`: Coupons which are only displayed to TikTok users in LIVE Rooms. - `CREATOR_EXCLUSIVE`: Coupons that can be claimed through the display channels of the specified creator, such as their LIVE Rooms, and their Creator Showcase. - `CHAT`: Exclusive coupons that may be sent to customers via TTS customer support chat messages, but are not displayed in other display locations. - `PROMO_CODE`: Promo codes do not have dedicated display locations on TikTok, but may be shared with customers in LIVEs, in TikTok videos, or other social media platforms. They can be claimed by customers entering a claim code at checkout or by customers that use a custom promo code landing page URL.
-    DisplayType []string `json:"display_type,omitempty"`
-    // Coupon's promotion status. Values: - `NOT_START`: Not available to TikTok users until the coupon's configured start time. - `ONGOING`: Available to TikTok users. - `EXPIRED`: Not available to TikTok users because it has expired. - `DEACTIVATED`: Deactivated by the seller and is not available to TikTok users.
-    Status []string `json:"status,omitempty"`
-    // Keywords in the coupon titles to search for. The range of the length is `(0, 100]`. Fuzzy matching not supported.
-    TitleKeyword *string `json:"title_keyword,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The display type of coupons. Values: - `REGULAR`: Regular coupons which are displayed to TikTok users across all display locations available in TTS, including PLPs, PDPs, TikTok Videos, LIVE Rooms, Creator Showcases, and may be shared via TTS Customer Support instant messages. Includes coupons which target select customer segments. - `LIVE`: Coupons which are only displayed to TikTok users in LIVE Rooms. - `CREATOR_EXCLUSIVE`: Coupons that can be claimed through the display channels of the specified creator, such as their LIVE Rooms, and their Creator Showcase. - `CHAT`: Exclusive coupons that may be sent to customers via TTS customer support chat messages, but are not displayed in other display locations. - `PROMO_CODE`: Promo codes do not have dedicated display locations on TikTok, but may be shared with customers in LIVEs, in TikTok videos, or other social media platforms. They can be claimed by customers entering a claim code at checkout or by customers that use a custom promo code landing page URL.
+	DisplayType []string `json:"display_type,omitempty"`
+	// Coupon's promotion status. Values: - `NOT_START`: Not available to TikTok users until the coupon's configured start time. - `ONGOING`: Available to TikTok users. - `EXPIRED`: Not available to TikTok users because it has expired. - `DEACTIVATED`: Deactivated by the seller and is not available to TikTok users.
+	Status []string `json:"status,omitempty"`
+	// Keywords in the coupon titles to search for. The range of the length is `(0, 100]`. Fuzzy matching not supported.
+	TitleKeyword         *string `json:"title_keyword,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202406SearchCouponsRequestBody Promotion202406SearchCouponsRequestBody
@@ -36,161 +36,161 @@ type _Promotion202406SearchCouponsRequestBody Promotion202406SearchCouponsReques
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202406SearchCouponsRequestBody() *Promotion202406SearchCouponsRequestBody {
-    this := Promotion202406SearchCouponsRequestBody{}
-    return &this
+	this := Promotion202406SearchCouponsRequestBody{}
+	return &this
 }
 
 // NewPromotion202406SearchCouponsRequestBodyWithDefaults instantiates a new Promotion202406SearchCouponsRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202406SearchCouponsRequestBodyWithDefaults() *Promotion202406SearchCouponsRequestBody {
-    this := Promotion202406SearchCouponsRequestBody{}
-    return &this
+	this := Promotion202406SearchCouponsRequestBody{}
+	return &this
 }
 
 // GetDisplayType returns the DisplayType field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsRequestBody) GetDisplayType() []string {
-    if o == nil || utils.IsNil(o.DisplayType) {
-        var ret []string
-        return ret
-    }
-    return o.DisplayType
+	if o == nil || utils.IsNil(o.DisplayType) {
+		var ret []string
+		return ret
+	}
+	return o.DisplayType
 }
 
 // GetDisplayTypeOk returns a tuple with the DisplayType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsRequestBody) GetDisplayTypeOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.DisplayType) {
-        return nil, false
-    }
-    return o.DisplayType, true
+	if o == nil || utils.IsNil(o.DisplayType) {
+		return nil, false
+	}
+	return o.DisplayType, true
 }
 
 // HasDisplayType returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsRequestBody) HasDisplayType() bool {
-    if o != nil && !utils.IsNil(o.DisplayType) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DisplayType) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDisplayType gets a reference to the given []string and assigns it to the DisplayType field.
 func (o *Promotion202406SearchCouponsRequestBody) SetDisplayType(v []string) {
-    o.DisplayType = v
+	o.DisplayType = v
 }
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsRequestBody) GetStatus() []string {
-    if o == nil || utils.IsNil(o.Status) {
-        var ret []string
-        return ret
-    }
-    return o.Status
+	if o == nil || utils.IsNil(o.Status) {
+		var ret []string
+		return ret
+	}
+	return o.Status
 }
 
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsRequestBody) GetStatusOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.Status) {
-        return nil, false
-    }
-    return o.Status, true
+	if o == nil || utils.IsNil(o.Status) {
+		return nil, false
+	}
+	return o.Status, true
 }
 
 // HasStatus returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsRequestBody) HasStatus() bool {
-    if o != nil && !utils.IsNil(o.Status) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Status) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatus gets a reference to the given []string and assigns it to the Status field.
 func (o *Promotion202406SearchCouponsRequestBody) SetStatus(v []string) {
-    o.Status = v
+	o.Status = v
 }
 
 // GetTitleKeyword returns the TitleKeyword field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsRequestBody) GetTitleKeyword() string {
-    if o == nil || utils.IsNil(o.TitleKeyword) {
-        var ret string
-        return ret
-    }
-    return *o.TitleKeyword
+	if o == nil || utils.IsNil(o.TitleKeyword) {
+		var ret string
+		return ret
+	}
+	return *o.TitleKeyword
 }
 
 // GetTitleKeywordOk returns a tuple with the TitleKeyword field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsRequestBody) GetTitleKeywordOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TitleKeyword) {
-        return nil, false
-    }
-    return o.TitleKeyword, true
+	if o == nil || utils.IsNil(o.TitleKeyword) {
+		return nil, false
+	}
+	return o.TitleKeyword, true
 }
 
 // HasTitleKeyword returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsRequestBody) HasTitleKeyword() bool {
-    if o != nil && !utils.IsNil(o.TitleKeyword) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TitleKeyword) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTitleKeyword gets a reference to the given string and assigns it to the TitleKeyword field.
 func (o *Promotion202406SearchCouponsRequestBody) SetTitleKeyword(v string) {
-    o.TitleKeyword = &v
+	o.TitleKeyword = &v
 }
 
 func (o Promotion202406SearchCouponsRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202406SearchCouponsRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.DisplayType) {
-        toSerialize["display_type"] = o.DisplayType
-    }
-    if !utils.IsNil(o.Status) {
-        toSerialize["status"] = o.Status
-    }
-    if !utils.IsNil(o.TitleKeyword) {
-        toSerialize["title_keyword"] = o.TitleKeyword
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.DisplayType) {
+		toSerialize["display_type"] = o.DisplayType
+	}
+	if !utils.IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !utils.IsNil(o.TitleKeyword) {
+		toSerialize["title_keyword"] = o.TitleKeyword
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202406SearchCouponsRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202406SearchCouponsRequestBody := _Promotion202406SearchCouponsRequestBody{}
+	varPromotion202406SearchCouponsRequestBody := _Promotion202406SearchCouponsRequestBody{}
 
-    err = json.Unmarshal(data, &varPromotion202406SearchCouponsRequestBody)
+	err = json.Unmarshal(data, &varPromotion202406SearchCouponsRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202406SearchCouponsRequestBody(varPromotion202406SearchCouponsRequestBody)
+	*o = Promotion202406SearchCouponsRequestBody(varPromotion202406SearchCouponsRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "display_type")
-        delete(additionalProperties, "status")
-        delete(additionalProperties, "title_keyword")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "display_type")
+		delete(additionalProperties, "status")
+		delete(additionalProperties, "title_keyword")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202406SearchCouponsRequestBody struct {
@@ -228,5 +228,3 @@ func (v *NullablePromotion202406SearchCouponsRequestBody) UnmarshalJSON(src []by
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

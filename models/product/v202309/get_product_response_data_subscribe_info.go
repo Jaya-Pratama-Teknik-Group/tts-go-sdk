@@ -11,24 +11,24 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetProductResponseDataSubscribeInfo type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetProductResponseDataSubscribeInfo type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetProductResponseDataSubscribeInfo{}
 
 // Product202309GetProductResponseDataSubscribeInfo struct for Product202309GetProductResponseDataSubscribeInfo
 type Product202309GetProductResponseDataSubscribeInfo struct {
-    // All of the Save and Subscribe discount details.
-    SubscribeDiscountDetails []Product202309GetProductResponseDataSubscribeInfoSubscribeDiscountDetails `json:"subscribe_discount_details,omitempty"`
-    // A subscription configuration specific to the seller. It outlines the different types of promotions and associated constraints that are available for use.
-    SubscribePromotionConfig []Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig `json:"subscribe_promotion_config,omitempty"`
-    // An enum outlining whether the given product has an active Subscribe and Save promotion: - ENABLED - NOT_ENABLED
-    SubscribeStatus *string `json:"subscribe_status,omitempty"`
-    // A flag outlining whether the seller and given product support Subscribe and Save promotions.
-    SupportSubscribe *bool `json:"support_subscribe,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// All of the Save and Subscribe discount details.
+	SubscribeDiscountDetails []Product202309GetProductResponseDataSubscribeInfoSubscribeDiscountDetails `json:"subscribe_discount_details,omitempty"`
+	// A subscription configuration specific to the seller. It outlines the different types of promotions and associated constraints that are available for use.
+	SubscribePromotionConfig []Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig `json:"subscribe_promotion_config,omitempty"`
+	// An enum outlining whether the given product has an active Subscribe and Save promotion: - ENABLED - NOT_ENABLED
+	SubscribeStatus *string `json:"subscribe_status,omitempty"`
+	// A flag outlining whether the seller and given product support Subscribe and Save promotions.
+	SupportSubscribe     *bool `json:"support_subscribe,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetProductResponseDataSubscribeInfo Product202309GetProductResponseDataSubscribeInfo
@@ -38,197 +38,197 @@ type _Product202309GetProductResponseDataSubscribeInfo Product202309GetProductRe
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetProductResponseDataSubscribeInfo() *Product202309GetProductResponseDataSubscribeInfo {
-    this := Product202309GetProductResponseDataSubscribeInfo{}
-    return &this
+	this := Product202309GetProductResponseDataSubscribeInfo{}
+	return &this
 }
 
 // NewProduct202309GetProductResponseDataSubscribeInfoWithDefaults instantiates a new Product202309GetProductResponseDataSubscribeInfo object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetProductResponseDataSubscribeInfoWithDefaults() *Product202309GetProductResponseDataSubscribeInfo {
-    this := Product202309GetProductResponseDataSubscribeInfo{}
-    return &this
+	this := Product202309GetProductResponseDataSubscribeInfo{}
+	return &this
 }
 
 // GetSubscribeDiscountDetails returns the SubscribeDiscountDetails field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSubscribeInfo) GetSubscribeDiscountDetails() []Product202309GetProductResponseDataSubscribeInfoSubscribeDiscountDetails {
-    if o == nil || utils.IsNil(o.SubscribeDiscountDetails) {
-        var ret []Product202309GetProductResponseDataSubscribeInfoSubscribeDiscountDetails
-        return ret
-    }
-    return o.SubscribeDiscountDetails
+	if o == nil || utils.IsNil(o.SubscribeDiscountDetails) {
+		var ret []Product202309GetProductResponseDataSubscribeInfoSubscribeDiscountDetails
+		return ret
+	}
+	return o.SubscribeDiscountDetails
 }
 
 // GetSubscribeDiscountDetailsOk returns a tuple with the SubscribeDiscountDetails field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfo) GetSubscribeDiscountDetailsOk() ([]Product202309GetProductResponseDataSubscribeInfoSubscribeDiscountDetails, bool) {
-    if o == nil || utils.IsNil(o.SubscribeDiscountDetails) {
-        return nil, false
-    }
-    return o.SubscribeDiscountDetails, true
+	if o == nil || utils.IsNil(o.SubscribeDiscountDetails) {
+		return nil, false
+	}
+	return o.SubscribeDiscountDetails, true
 }
 
 // HasSubscribeDiscountDetails returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfo) HasSubscribeDiscountDetails() bool {
-    if o != nil && !utils.IsNil(o.SubscribeDiscountDetails) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SubscribeDiscountDetails) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSubscribeDiscountDetails gets a reference to the given []Product202309GetProductResponseDataSubscribeInfoSubscribeDiscountDetails and assigns it to the SubscribeDiscountDetails field.
 func (o *Product202309GetProductResponseDataSubscribeInfo) SetSubscribeDiscountDetails(v []Product202309GetProductResponseDataSubscribeInfoSubscribeDiscountDetails) {
-    o.SubscribeDiscountDetails = v
+	o.SubscribeDiscountDetails = v
 }
 
 // GetSubscribePromotionConfig returns the SubscribePromotionConfig field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSubscribeInfo) GetSubscribePromotionConfig() []Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig {
-    if o == nil || utils.IsNil(o.SubscribePromotionConfig) {
-        var ret []Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig
-        return ret
-    }
-    return o.SubscribePromotionConfig
+	if o == nil || utils.IsNil(o.SubscribePromotionConfig) {
+		var ret []Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig
+		return ret
+	}
+	return o.SubscribePromotionConfig
 }
 
 // GetSubscribePromotionConfigOk returns a tuple with the SubscribePromotionConfig field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfo) GetSubscribePromotionConfigOk() ([]Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig, bool) {
-    if o == nil || utils.IsNil(o.SubscribePromotionConfig) {
-        return nil, false
-    }
-    return o.SubscribePromotionConfig, true
+	if o == nil || utils.IsNil(o.SubscribePromotionConfig) {
+		return nil, false
+	}
+	return o.SubscribePromotionConfig, true
 }
 
 // HasSubscribePromotionConfig returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfo) HasSubscribePromotionConfig() bool {
-    if o != nil && !utils.IsNil(o.SubscribePromotionConfig) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SubscribePromotionConfig) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSubscribePromotionConfig gets a reference to the given []Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig and assigns it to the SubscribePromotionConfig field.
 func (o *Product202309GetProductResponseDataSubscribeInfo) SetSubscribePromotionConfig(v []Product202309GetProductResponseDataSubscribeInfoSubscribePromotionConfig) {
-    o.SubscribePromotionConfig = v
+	o.SubscribePromotionConfig = v
 }
 
 // GetSubscribeStatus returns the SubscribeStatus field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSubscribeInfo) GetSubscribeStatus() string {
-    if o == nil || utils.IsNil(o.SubscribeStatus) {
-        var ret string
-        return ret
-    }
-    return *o.SubscribeStatus
+	if o == nil || utils.IsNil(o.SubscribeStatus) {
+		var ret string
+		return ret
+	}
+	return *o.SubscribeStatus
 }
 
 // GetSubscribeStatusOk returns a tuple with the SubscribeStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfo) GetSubscribeStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SubscribeStatus) {
-        return nil, false
-    }
-    return o.SubscribeStatus, true
+	if o == nil || utils.IsNil(o.SubscribeStatus) {
+		return nil, false
+	}
+	return o.SubscribeStatus, true
 }
 
 // HasSubscribeStatus returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfo) HasSubscribeStatus() bool {
-    if o != nil && !utils.IsNil(o.SubscribeStatus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SubscribeStatus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSubscribeStatus gets a reference to the given string and assigns it to the SubscribeStatus field.
 func (o *Product202309GetProductResponseDataSubscribeInfo) SetSubscribeStatus(v string) {
-    o.SubscribeStatus = &v
+	o.SubscribeStatus = &v
 }
 
 // GetSupportSubscribe returns the SupportSubscribe field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSubscribeInfo) GetSupportSubscribe() bool {
-    if o == nil || utils.IsNil(o.SupportSubscribe) {
-        var ret bool
-        return ret
-    }
-    return *o.SupportSubscribe
+	if o == nil || utils.IsNil(o.SupportSubscribe) {
+		var ret bool
+		return ret
+	}
+	return *o.SupportSubscribe
 }
 
 // GetSupportSubscribeOk returns a tuple with the SupportSubscribe field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfo) GetSupportSubscribeOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.SupportSubscribe) {
-        return nil, false
-    }
-    return o.SupportSubscribe, true
+	if o == nil || utils.IsNil(o.SupportSubscribe) {
+		return nil, false
+	}
+	return o.SupportSubscribe, true
 }
 
 // HasSupportSubscribe returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSubscribeInfo) HasSupportSubscribe() bool {
-    if o != nil && !utils.IsNil(o.SupportSubscribe) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SupportSubscribe) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSupportSubscribe gets a reference to the given bool and assigns it to the SupportSubscribe field.
 func (o *Product202309GetProductResponseDataSubscribeInfo) SetSupportSubscribe(v bool) {
-    o.SupportSubscribe = &v
+	o.SupportSubscribe = &v
 }
 
 func (o Product202309GetProductResponseDataSubscribeInfo) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetProductResponseDataSubscribeInfo) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.SubscribeDiscountDetails) {
-        toSerialize["subscribe_discount_details"] = o.SubscribeDiscountDetails
-    }
-    if !utils.IsNil(o.SubscribePromotionConfig) {
-        toSerialize["subscribe_promotion_config"] = o.SubscribePromotionConfig
-    }
-    if !utils.IsNil(o.SubscribeStatus) {
-        toSerialize["subscribe_status"] = o.SubscribeStatus
-    }
-    if !utils.IsNil(o.SupportSubscribe) {
-        toSerialize["support_subscribe"] = o.SupportSubscribe
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.SubscribeDiscountDetails) {
+		toSerialize["subscribe_discount_details"] = o.SubscribeDiscountDetails
+	}
+	if !utils.IsNil(o.SubscribePromotionConfig) {
+		toSerialize["subscribe_promotion_config"] = o.SubscribePromotionConfig
+	}
+	if !utils.IsNil(o.SubscribeStatus) {
+		toSerialize["subscribe_status"] = o.SubscribeStatus
+	}
+	if !utils.IsNil(o.SupportSubscribe) {
+		toSerialize["support_subscribe"] = o.SupportSubscribe
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetProductResponseDataSubscribeInfo) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetProductResponseDataSubscribeInfo := _Product202309GetProductResponseDataSubscribeInfo{}
+	varProduct202309GetProductResponseDataSubscribeInfo := _Product202309GetProductResponseDataSubscribeInfo{}
 
-    err = json.Unmarshal(data, &varProduct202309GetProductResponseDataSubscribeInfo)
+	err = json.Unmarshal(data, &varProduct202309GetProductResponseDataSubscribeInfo)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetProductResponseDataSubscribeInfo(varProduct202309GetProductResponseDataSubscribeInfo)
+	*o = Product202309GetProductResponseDataSubscribeInfo(varProduct202309GetProductResponseDataSubscribeInfo)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "subscribe_discount_details")
-        delete(additionalProperties, "subscribe_promotion_config")
-        delete(additionalProperties, "subscribe_status")
-        delete(additionalProperties, "support_subscribe")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "subscribe_discount_details")
+		delete(additionalProperties, "subscribe_promotion_config")
+		delete(additionalProperties, "subscribe_status")
+		delete(additionalProperties, "support_subscribe")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetProductResponseDataSubscribeInfo struct {
@@ -266,5 +266,3 @@ func (v *NullableProduct202309GetProductResponseDataSubscribeInfo) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

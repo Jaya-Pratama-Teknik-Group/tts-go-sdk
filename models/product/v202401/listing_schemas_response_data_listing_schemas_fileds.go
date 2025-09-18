@@ -11,26 +11,26 @@ API version: 1.0.0
 package product_v202401
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202401ListingSchemasResponseDataListingSchemasFileds type satisfies the MappedNullable interface at compile time
+// checks if the Product202401ListingSchemasResponseDataListingSchemasFileds type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202401ListingSchemasResponseDataListingSchemasFileds{}
 
 // Product202401ListingSchemasResponseDataListingSchemasFileds struct for Product202401ListingSchemasResponseDataListingSchemasFileds
 type Product202401ListingSchemasResponseDataListingSchemasFileds struct {
-    // List of complex subfield values
-    ComplexValues []Product202401ListingSchemasResponseDataListingSchemasFiledsComplexValues `json:"complex_values,omitempty"`
-    // The id of the listing fields. The fields include: title,category, brand, product_attributes, sku.sale_attributes, sku.identifier_code, package_dimensions.
-    Id *string `json:"id,omitempty"`
-    // The fields display name.
-    Name *string `json:"name,omitempty"`
-    // The list of field options. For optional fields, return all the available options.
-    Options []Product202401ListingSchemasResponseDataListingSchemasFiledsOptions `json:"options,omitempty"`
-    // The rules of the schema's fields are used to describe the requirements of the product.
-    Rules []Product202401ListingSchemasResponseDataListingSchemasFiledsRules `json:"rules,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// List of complex subfield values
+	ComplexValues []Product202401ListingSchemasResponseDataListingSchemasFiledsComplexValues `json:"complex_values,omitempty"`
+	// The id of the listing fields. The fields include: title,category, brand, product_attributes, sku.sale_attributes, sku.identifier_code, package_dimensions.
+	Id *string `json:"id,omitempty"`
+	// The fields display name.
+	Name *string `json:"name,omitempty"`
+	// The list of field options. For optional fields, return all the available options.
+	Options []Product202401ListingSchemasResponseDataListingSchemasFiledsOptions `json:"options,omitempty"`
+	// The rules of the schema's fields are used to describe the requirements of the product.
+	Rules                []Product202401ListingSchemasResponseDataListingSchemasFiledsRules `json:"rules,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202401ListingSchemasResponseDataListingSchemasFileds Product202401ListingSchemasResponseDataListingSchemasFileds
@@ -40,233 +40,233 @@ type _Product202401ListingSchemasResponseDataListingSchemasFileds Product202401L
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202401ListingSchemasResponseDataListingSchemasFileds() *Product202401ListingSchemasResponseDataListingSchemasFileds {
-    this := Product202401ListingSchemasResponseDataListingSchemasFileds{}
-    return &this
+	this := Product202401ListingSchemasResponseDataListingSchemasFileds{}
+	return &this
 }
 
 // NewProduct202401ListingSchemasResponseDataListingSchemasFiledsWithDefaults instantiates a new Product202401ListingSchemasResponseDataListingSchemasFileds object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202401ListingSchemasResponseDataListingSchemasFiledsWithDefaults() *Product202401ListingSchemasResponseDataListingSchemasFileds {
-    this := Product202401ListingSchemasResponseDataListingSchemasFileds{}
-    return &this
+	this := Product202401ListingSchemasResponseDataListingSchemasFileds{}
+	return &this
 }
 
 // GetComplexValues returns the ComplexValues field value if set, zero value otherwise.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetComplexValues() []Product202401ListingSchemasResponseDataListingSchemasFiledsComplexValues {
-    if o == nil || utils.IsNil(o.ComplexValues) {
-        var ret []Product202401ListingSchemasResponseDataListingSchemasFiledsComplexValues
-        return ret
-    }
-    return o.ComplexValues
+	if o == nil || utils.IsNil(o.ComplexValues) {
+		var ret []Product202401ListingSchemasResponseDataListingSchemasFiledsComplexValues
+		return ret
+	}
+	return o.ComplexValues
 }
 
 // GetComplexValuesOk returns a tuple with the ComplexValues field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetComplexValuesOk() ([]Product202401ListingSchemasResponseDataListingSchemasFiledsComplexValues, bool) {
-    if o == nil || utils.IsNil(o.ComplexValues) {
-        return nil, false
-    }
-    return o.ComplexValues, true
+	if o == nil || utils.IsNil(o.ComplexValues) {
+		return nil, false
+	}
+	return o.ComplexValues, true
 }
 
 // HasComplexValues returns a boolean if a field has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) HasComplexValues() bool {
-    if o != nil && !utils.IsNil(o.ComplexValues) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ComplexValues) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetComplexValues gets a reference to the given []Product202401ListingSchemasResponseDataListingSchemasFiledsComplexValues and assigns it to the ComplexValues field.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) SetComplexValues(v []Product202401ListingSchemasResponseDataListingSchemasFiledsComplexValues) {
-    o.ComplexValues = v
+	o.ComplexValues = v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 // GetOptions returns the Options field value if set, zero value otherwise.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetOptions() []Product202401ListingSchemasResponseDataListingSchemasFiledsOptions {
-    if o == nil || utils.IsNil(o.Options) {
-        var ret []Product202401ListingSchemasResponseDataListingSchemasFiledsOptions
-        return ret
-    }
-    return o.Options
+	if o == nil || utils.IsNil(o.Options) {
+		var ret []Product202401ListingSchemasResponseDataListingSchemasFiledsOptions
+		return ret
+	}
+	return o.Options
 }
 
 // GetOptionsOk returns a tuple with the Options field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetOptionsOk() ([]Product202401ListingSchemasResponseDataListingSchemasFiledsOptions, bool) {
-    if o == nil || utils.IsNil(o.Options) {
-        return nil, false
-    }
-    return o.Options, true
+	if o == nil || utils.IsNil(o.Options) {
+		return nil, false
+	}
+	return o.Options, true
 }
 
 // HasOptions returns a boolean if a field has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) HasOptions() bool {
-    if o != nil && !utils.IsNil(o.Options) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Options) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOptions gets a reference to the given []Product202401ListingSchemasResponseDataListingSchemasFiledsOptions and assigns it to the Options field.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) SetOptions(v []Product202401ListingSchemasResponseDataListingSchemasFiledsOptions) {
-    o.Options = v
+	o.Options = v
 }
 
 // GetRules returns the Rules field value if set, zero value otherwise.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetRules() []Product202401ListingSchemasResponseDataListingSchemasFiledsRules {
-    if o == nil || utils.IsNil(o.Rules) {
-        var ret []Product202401ListingSchemasResponseDataListingSchemasFiledsRules
-        return ret
-    }
-    return o.Rules
+	if o == nil || utils.IsNil(o.Rules) {
+		var ret []Product202401ListingSchemasResponseDataListingSchemasFiledsRules
+		return ret
+	}
+	return o.Rules
 }
 
 // GetRulesOk returns a tuple with the Rules field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) GetRulesOk() ([]Product202401ListingSchemasResponseDataListingSchemasFiledsRules, bool) {
-    if o == nil || utils.IsNil(o.Rules) {
-        return nil, false
-    }
-    return o.Rules, true
+	if o == nil || utils.IsNil(o.Rules) {
+		return nil, false
+	}
+	return o.Rules, true
 }
 
 // HasRules returns a boolean if a field has been set.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) HasRules() bool {
-    if o != nil && !utils.IsNil(o.Rules) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Rules) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRules gets a reference to the given []Product202401ListingSchemasResponseDataListingSchemasFiledsRules and assigns it to the Rules field.
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) SetRules(v []Product202401ListingSchemasResponseDataListingSchemasFiledsRules) {
-    o.Rules = v
+	o.Rules = v
 }
 
 func (o Product202401ListingSchemasResponseDataListingSchemasFileds) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202401ListingSchemasResponseDataListingSchemasFileds) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ComplexValues) {
-        toSerialize["complex_values"] = o.ComplexValues
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
-    if !utils.IsNil(o.Options) {
-        toSerialize["options"] = o.Options
-    }
-    if !utils.IsNil(o.Rules) {
-        toSerialize["rules"] = o.Rules
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ComplexValues) {
+		toSerialize["complex_values"] = o.ComplexValues
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !utils.IsNil(o.Options) {
+		toSerialize["options"] = o.Options
+	}
+	if !utils.IsNil(o.Rules) {
+		toSerialize["rules"] = o.Rules
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202401ListingSchemasResponseDataListingSchemasFileds) UnmarshalJSON(data []byte) (err error) {
-    varProduct202401ListingSchemasResponseDataListingSchemasFileds := _Product202401ListingSchemasResponseDataListingSchemasFileds{}
+	varProduct202401ListingSchemasResponseDataListingSchemasFileds := _Product202401ListingSchemasResponseDataListingSchemasFileds{}
 
-    err = json.Unmarshal(data, &varProduct202401ListingSchemasResponseDataListingSchemasFileds)
+	err = json.Unmarshal(data, &varProduct202401ListingSchemasResponseDataListingSchemasFileds)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202401ListingSchemasResponseDataListingSchemasFileds(varProduct202401ListingSchemasResponseDataListingSchemasFileds)
+	*o = Product202401ListingSchemasResponseDataListingSchemasFileds(varProduct202401ListingSchemasResponseDataListingSchemasFileds)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "complex_values")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "name")
-        delete(additionalProperties, "options")
-        delete(additionalProperties, "rules")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "complex_values")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "options")
+		delete(additionalProperties, "rules")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202401ListingSchemasResponseDataListingSchemasFileds struct {
@@ -304,5 +304,3 @@ func (v *NullableProduct202401ListingSchemasResponseDataListingSchemasFileds) Un
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

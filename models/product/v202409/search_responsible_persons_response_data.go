@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202409
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202409SearchResponsiblePersonsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202409SearchResponsiblePersonsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202409SearchResponsiblePersonsResponseData{}
 
 // Product202409SearchResponsiblePersonsResponseData struct for Product202409SearchResponsiblePersonsResponseData
 type Product202409SearchResponsiblePersonsResponseData struct {
-    // An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
-    NextPageToken *string `json:"next_page_token,omitempty"`
-    // The list of responsible persons that meet the query conditions.
-    ResponsiblePersons []Product202409SearchResponsiblePersonsResponseDataResponsiblePersons `json:"responsible_persons,omitempty"`
-    // The number of responsible persons that meet the query conditions.
-    TotalCount *int64 `json:"total_count,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
+	NextPageToken *string `json:"next_page_token,omitempty"`
+	// The list of responsible persons that meet the query conditions.
+	ResponsiblePersons []Product202409SearchResponsiblePersonsResponseDataResponsiblePersons `json:"responsible_persons,omitempty"`
+	// The number of responsible persons that meet the query conditions.
+	TotalCount           *int64 `json:"total_count,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202409SearchResponsiblePersonsResponseData Product202409SearchResponsiblePersonsResponseData
@@ -36,161 +36,161 @@ type _Product202409SearchResponsiblePersonsResponseData Product202409SearchRespo
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202409SearchResponsiblePersonsResponseData() *Product202409SearchResponsiblePersonsResponseData {
-    this := Product202409SearchResponsiblePersonsResponseData{}
-    return &this
+	this := Product202409SearchResponsiblePersonsResponseData{}
+	return &this
 }
 
 // NewProduct202409SearchResponsiblePersonsResponseDataWithDefaults instantiates a new Product202409SearchResponsiblePersonsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202409SearchResponsiblePersonsResponseDataWithDefaults() *Product202409SearchResponsiblePersonsResponseData {
-    this := Product202409SearchResponsiblePersonsResponseData{}
-    return &this
+	this := Product202409SearchResponsiblePersonsResponseData{}
+	return &this
 }
 
 // GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
 func (o *Product202409SearchResponsiblePersonsResponseData) GetNextPageToken() string {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        var ret string
-        return ret
-    }
-    return *o.NextPageToken
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		var ret string
+		return ret
+	}
+	return *o.NextPageToken
 }
 
 // GetNextPageTokenOk returns a tuple with the NextPageToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409SearchResponsiblePersonsResponseData) GetNextPageTokenOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        return nil, false
-    }
-    return o.NextPageToken, true
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		return nil, false
+	}
+	return o.NextPageToken, true
 }
 
 // HasNextPageToken returns a boolean if a field has been set.
 func (o *Product202409SearchResponsiblePersonsResponseData) HasNextPageToken() bool {
-    if o != nil && !utils.IsNil(o.NextPageToken) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NextPageToken) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNextPageToken gets a reference to the given string and assigns it to the NextPageToken field.
 func (o *Product202409SearchResponsiblePersonsResponseData) SetNextPageToken(v string) {
-    o.NextPageToken = &v
+	o.NextPageToken = &v
 }
 
 // GetResponsiblePersons returns the ResponsiblePersons field value if set, zero value otherwise.
 func (o *Product202409SearchResponsiblePersonsResponseData) GetResponsiblePersons() []Product202409SearchResponsiblePersonsResponseDataResponsiblePersons {
-    if o == nil || utils.IsNil(o.ResponsiblePersons) {
-        var ret []Product202409SearchResponsiblePersonsResponseDataResponsiblePersons
-        return ret
-    }
-    return o.ResponsiblePersons
+	if o == nil || utils.IsNil(o.ResponsiblePersons) {
+		var ret []Product202409SearchResponsiblePersonsResponseDataResponsiblePersons
+		return ret
+	}
+	return o.ResponsiblePersons
 }
 
 // GetResponsiblePersonsOk returns a tuple with the ResponsiblePersons field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409SearchResponsiblePersonsResponseData) GetResponsiblePersonsOk() ([]Product202409SearchResponsiblePersonsResponseDataResponsiblePersons, bool) {
-    if o == nil || utils.IsNil(o.ResponsiblePersons) {
-        return nil, false
-    }
-    return o.ResponsiblePersons, true
+	if o == nil || utils.IsNil(o.ResponsiblePersons) {
+		return nil, false
+	}
+	return o.ResponsiblePersons, true
 }
 
 // HasResponsiblePersons returns a boolean if a field has been set.
 func (o *Product202409SearchResponsiblePersonsResponseData) HasResponsiblePersons() bool {
-    if o != nil && !utils.IsNil(o.ResponsiblePersons) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ResponsiblePersons) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetResponsiblePersons gets a reference to the given []Product202409SearchResponsiblePersonsResponseDataResponsiblePersons and assigns it to the ResponsiblePersons field.
 func (o *Product202409SearchResponsiblePersonsResponseData) SetResponsiblePersons(v []Product202409SearchResponsiblePersonsResponseDataResponsiblePersons) {
-    o.ResponsiblePersons = v
+	o.ResponsiblePersons = v
 }
 
 // GetTotalCount returns the TotalCount field value if set, zero value otherwise.
 func (o *Product202409SearchResponsiblePersonsResponseData) GetTotalCount() int64 {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        var ret int64
-        return ret
-    }
-    return *o.TotalCount
+	if o == nil || utils.IsNil(o.TotalCount) {
+		var ret int64
+		return ret
+	}
+	return *o.TotalCount
 }
 
 // GetTotalCountOk returns a tuple with the TotalCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409SearchResponsiblePersonsResponseData) GetTotalCountOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        return nil, false
-    }
-    return o.TotalCount, true
+	if o == nil || utils.IsNil(o.TotalCount) {
+		return nil, false
+	}
+	return o.TotalCount, true
 }
 
 // HasTotalCount returns a boolean if a field has been set.
 func (o *Product202409SearchResponsiblePersonsResponseData) HasTotalCount() bool {
-    if o != nil && !utils.IsNil(o.TotalCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalCount gets a reference to the given int64 and assigns it to the TotalCount field.
 func (o *Product202409SearchResponsiblePersonsResponseData) SetTotalCount(v int64) {
-    o.TotalCount = &v
+	o.TotalCount = &v
 }
 
 func (o Product202409SearchResponsiblePersonsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202409SearchResponsiblePersonsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.NextPageToken) {
-        toSerialize["next_page_token"] = o.NextPageToken
-    }
-    if !utils.IsNil(o.ResponsiblePersons) {
-        toSerialize["responsible_persons"] = o.ResponsiblePersons
-    }
-    if !utils.IsNil(o.TotalCount) {
-        toSerialize["total_count"] = o.TotalCount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.NextPageToken) {
+		toSerialize["next_page_token"] = o.NextPageToken
+	}
+	if !utils.IsNil(o.ResponsiblePersons) {
+		toSerialize["responsible_persons"] = o.ResponsiblePersons
+	}
+	if !utils.IsNil(o.TotalCount) {
+		toSerialize["total_count"] = o.TotalCount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202409SearchResponsiblePersonsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202409SearchResponsiblePersonsResponseData := _Product202409SearchResponsiblePersonsResponseData{}
+	varProduct202409SearchResponsiblePersonsResponseData := _Product202409SearchResponsiblePersonsResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202409SearchResponsiblePersonsResponseData)
+	err = json.Unmarshal(data, &varProduct202409SearchResponsiblePersonsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202409SearchResponsiblePersonsResponseData(varProduct202409SearchResponsiblePersonsResponseData)
+	*o = Product202409SearchResponsiblePersonsResponseData(varProduct202409SearchResponsiblePersonsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "next_page_token")
-        delete(additionalProperties, "responsible_persons")
-        delete(additionalProperties, "total_count")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "next_page_token")
+		delete(additionalProperties, "responsible_persons")
+		delete(additionalProperties, "total_count")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202409SearchResponsiblePersonsResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202409SearchResponsiblePersonsResponseData) UnmarshalJSO
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

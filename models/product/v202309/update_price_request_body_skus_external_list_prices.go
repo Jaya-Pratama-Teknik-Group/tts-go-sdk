@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309UpdatePriceRequestBodySkusExternalListPrices type satisfies the MappedNullable interface at compile time
+// checks if the Product202309UpdatePriceRequestBodySkusExternalListPrices type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309UpdatePriceRequestBodySkusExternalListPrices{}
 
 // Product202309UpdatePriceRequestBodySkusExternalListPrices struct for Product202309UpdatePriceRequestBodySkusExternalListPrices
 type Product202309UpdatePriceRequestBodySkusExternalListPrices struct {
-    // The price amount. Valid range: [0.01, 7600]
-    Amount *string `json:"amount,omitempty"`
-    // The currency. Possible values: USD
-    Currency *string `json:"currency,omitempty"`
-    // The external ecommerce platform from which the price is sourced. Possible values: - SHOPIFY_COMPARE_AT_PRICE: The compare_at_price in Shopify.
-    Source *string `json:"source,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The price amount. Valid range: [0.01, 7600]
+	Amount *string `json:"amount,omitempty"`
+	// The currency. Possible values: USD
+	Currency *string `json:"currency,omitempty"`
+	// The external ecommerce platform from which the price is sourced. Possible values: - SHOPIFY_COMPARE_AT_PRICE: The compare_at_price in Shopify.
+	Source               *string `json:"source,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309UpdatePriceRequestBodySkusExternalListPrices Product202309UpdatePriceRequestBodySkusExternalListPrices
@@ -36,161 +36,161 @@ type _Product202309UpdatePriceRequestBodySkusExternalListPrices Product202309Upd
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309UpdatePriceRequestBodySkusExternalListPrices() *Product202309UpdatePriceRequestBodySkusExternalListPrices {
-    this := Product202309UpdatePriceRequestBodySkusExternalListPrices{}
-    return &this
+	this := Product202309UpdatePriceRequestBodySkusExternalListPrices{}
+	return &this
 }
 
 // NewProduct202309UpdatePriceRequestBodySkusExternalListPricesWithDefaults instantiates a new Product202309UpdatePriceRequestBodySkusExternalListPrices object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309UpdatePriceRequestBodySkusExternalListPricesWithDefaults() *Product202309UpdatePriceRequestBodySkusExternalListPrices {
-    this := Product202309UpdatePriceRequestBodySkusExternalListPrices{}
-    return &this
+	this := Product202309UpdatePriceRequestBodySkusExternalListPrices{}
+	return &this
 }
 
 // GetAmount returns the Amount field value if set, zero value otherwise.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) GetAmount() string {
-    if o == nil || utils.IsNil(o.Amount) {
-        var ret string
-        return ret
-    }
-    return *o.Amount
+	if o == nil || utils.IsNil(o.Amount) {
+		var ret string
+		return ret
+	}
+	return *o.Amount
 }
 
 // GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) GetAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Amount) {
-        return nil, false
-    }
-    return o.Amount, true
+	if o == nil || utils.IsNil(o.Amount) {
+		return nil, false
+	}
+	return o.Amount, true
 }
 
 // HasAmount returns a boolean if a field has been set.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) HasAmount() bool {
-    if o != nil && !utils.IsNil(o.Amount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Amount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAmount gets a reference to the given string and assigns it to the Amount field.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) SetAmount(v string) {
-    o.Amount = &v
+	o.Amount = &v
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 // GetSource returns the Source field value if set, zero value otherwise.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) GetSource() string {
-    if o == nil || utils.IsNil(o.Source) {
-        var ret string
-        return ret
-    }
-    return *o.Source
+	if o == nil || utils.IsNil(o.Source) {
+		var ret string
+		return ret
+	}
+	return *o.Source
 }
 
 // GetSourceOk returns a tuple with the Source field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) GetSourceOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Source) {
-        return nil, false
-    }
-    return o.Source, true
+	if o == nil || utils.IsNil(o.Source) {
+		return nil, false
+	}
+	return o.Source, true
 }
 
 // HasSource returns a boolean if a field has been set.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) HasSource() bool {
-    if o != nil && !utils.IsNil(o.Source) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Source) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSource gets a reference to the given string and assigns it to the Source field.
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) SetSource(v string) {
-    o.Source = &v
+	o.Source = &v
 }
 
 func (o Product202309UpdatePriceRequestBodySkusExternalListPrices) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309UpdatePriceRequestBodySkusExternalListPrices) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Amount) {
-        toSerialize["amount"] = o.Amount
-    }
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
-    if !utils.IsNil(o.Source) {
-        toSerialize["source"] = o.Source
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
+	}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
+	if !utils.IsNil(o.Source) {
+		toSerialize["source"] = o.Source
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309UpdatePriceRequestBodySkusExternalListPrices) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309UpdatePriceRequestBodySkusExternalListPrices := _Product202309UpdatePriceRequestBodySkusExternalListPrices{}
+	varProduct202309UpdatePriceRequestBodySkusExternalListPrices := _Product202309UpdatePriceRequestBodySkusExternalListPrices{}
 
-    err = json.Unmarshal(data, &varProduct202309UpdatePriceRequestBodySkusExternalListPrices)
+	err = json.Unmarshal(data, &varProduct202309UpdatePriceRequestBodySkusExternalListPrices)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309UpdatePriceRequestBodySkusExternalListPrices(varProduct202309UpdatePriceRequestBodySkusExternalListPrices)
+	*o = Product202309UpdatePriceRequestBodySkusExternalListPrices(varProduct202309UpdatePriceRequestBodySkusExternalListPrices)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "amount")
-        delete(additionalProperties, "currency")
-        delete(additionalProperties, "source")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "amount")
+		delete(additionalProperties, "currency")
+		delete(additionalProperties, "source")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309UpdatePriceRequestBodySkusExternalListPrices struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202309UpdatePriceRequestBodySkusExternalListPrices) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

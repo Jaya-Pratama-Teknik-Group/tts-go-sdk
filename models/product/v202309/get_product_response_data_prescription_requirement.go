@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetProductResponseDataPrescriptionRequirement type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetProductResponseDataPrescriptionRequirement type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetProductResponseDataPrescriptionRequirement{}
 
 // Product202309GetProductResponseDataPrescriptionRequirement struct for Product202309GetProductResponseDataPrescriptionRequirement
 type Product202309GetProductResponseDataPrescriptionRequirement struct {
-    // A flag to indicate whether a prescription is required to purchase this pharmacy product.
-    NeedsPrescription *bool `json:"needs_prescription,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A flag to indicate whether a prescription is required to purchase this pharmacy product.
+	NeedsPrescription    *bool `json:"needs_prescription,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetProductResponseDataPrescriptionRequirement Product202309GetProductResponseDataPrescriptionRequirement
@@ -32,89 +32,89 @@ type _Product202309GetProductResponseDataPrescriptionRequirement Product202309Ge
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetProductResponseDataPrescriptionRequirement() *Product202309GetProductResponseDataPrescriptionRequirement {
-    this := Product202309GetProductResponseDataPrescriptionRequirement{}
-    return &this
+	this := Product202309GetProductResponseDataPrescriptionRequirement{}
+	return &this
 }
 
 // NewProduct202309GetProductResponseDataPrescriptionRequirementWithDefaults instantiates a new Product202309GetProductResponseDataPrescriptionRequirement object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetProductResponseDataPrescriptionRequirementWithDefaults() *Product202309GetProductResponseDataPrescriptionRequirement {
-    this := Product202309GetProductResponseDataPrescriptionRequirement{}
-    return &this
+	this := Product202309GetProductResponseDataPrescriptionRequirement{}
+	return &this
 }
 
 // GetNeedsPrescription returns the NeedsPrescription field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataPrescriptionRequirement) GetNeedsPrescription() bool {
-    if o == nil || utils.IsNil(o.NeedsPrescription) {
-        var ret bool
-        return ret
-    }
-    return *o.NeedsPrescription
+	if o == nil || utils.IsNil(o.NeedsPrescription) {
+		var ret bool
+		return ret
+	}
+	return *o.NeedsPrescription
 }
 
 // GetNeedsPrescriptionOk returns a tuple with the NeedsPrescription field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataPrescriptionRequirement) GetNeedsPrescriptionOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.NeedsPrescription) {
-        return nil, false
-    }
-    return o.NeedsPrescription, true
+	if o == nil || utils.IsNil(o.NeedsPrescription) {
+		return nil, false
+	}
+	return o.NeedsPrescription, true
 }
 
 // HasNeedsPrescription returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataPrescriptionRequirement) HasNeedsPrescription() bool {
-    if o != nil && !utils.IsNil(o.NeedsPrescription) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NeedsPrescription) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNeedsPrescription gets a reference to the given bool and assigns it to the NeedsPrescription field.
 func (o *Product202309GetProductResponseDataPrescriptionRequirement) SetNeedsPrescription(v bool) {
-    o.NeedsPrescription = &v
+	o.NeedsPrescription = &v
 }
 
 func (o Product202309GetProductResponseDataPrescriptionRequirement) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetProductResponseDataPrescriptionRequirement) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.NeedsPrescription) {
-        toSerialize["needs_prescription"] = o.NeedsPrescription
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.NeedsPrescription) {
+		toSerialize["needs_prescription"] = o.NeedsPrescription
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetProductResponseDataPrescriptionRequirement) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetProductResponseDataPrescriptionRequirement := _Product202309GetProductResponseDataPrescriptionRequirement{}
+	varProduct202309GetProductResponseDataPrescriptionRequirement := _Product202309GetProductResponseDataPrescriptionRequirement{}
 
-    err = json.Unmarshal(data, &varProduct202309GetProductResponseDataPrescriptionRequirement)
+	err = json.Unmarshal(data, &varProduct202309GetProductResponseDataPrescriptionRequirement)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetProductResponseDataPrescriptionRequirement(varProduct202309GetProductResponseDataPrescriptionRequirement)
+	*o = Product202309GetProductResponseDataPrescriptionRequirement(varProduct202309GetProductResponseDataPrescriptionRequirement)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "needs_prescription")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "needs_prescription")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetProductResponseDataPrescriptionRequirement struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309GetProductResponseDataPrescriptionRequirement) Unm
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

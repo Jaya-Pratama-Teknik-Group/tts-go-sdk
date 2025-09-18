@@ -11,20 +11,20 @@ API version: 1.0.0
 package supply_chain_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus type satisfies the MappedNullable interface at compile time
+// checks if the SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus{}
 
 // SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus struct for SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus
 type SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus struct {
-    // TikTok Shop SKU ID
-    Id *string `json:"id,omitempty"`
-    // The quantity of each SKU
-    Quantity *int64 `json:"quantity,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// TikTok Shop SKU ID
+	Id *string `json:"id,omitempty"`
+	// The quantity of each SKU
+	Quantity             *int64 `json:"quantity,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus
@@ -34,125 +34,125 @@ type _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus SupplyChain
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus() *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus {
-    this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus{}
+	return &this
 }
 
 // NewSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkusWithDefaults instantiates a new SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkusWithDefaults() *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus {
-    this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) GetQuantity() int64 {
-    if o == nil || utils.IsNil(o.Quantity) {
-        var ret int64
-        return ret
-    }
-    return *o.Quantity
+	if o == nil || utils.IsNil(o.Quantity) {
+		var ret int64
+		return ret
+	}
+	return *o.Quantity
 }
 
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) GetQuantityOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Quantity) {
-        return nil, false
-    }
-    return o.Quantity, true
+	if o == nil || utils.IsNil(o.Quantity) {
+		return nil, false
+	}
+	return o.Quantity, true
 }
 
 // HasQuantity returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) HasQuantity() bool {
-    if o != nil && !utils.IsNil(o.Quantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Quantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantity gets a reference to the given int64 and assigns it to the Quantity field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) SetQuantity(v int64) {
-    o.Quantity = &v
+	o.Quantity = &v
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Quantity) {
-        toSerialize["quantity"] = o.Quantity
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Quantity) {
+		toSerialize["quantity"] = o.Quantity
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus) UnmarshalJSON(data []byte) (err error) {
-    varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus := _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus{}
+	varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus := _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus{}
 
-    err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus)
+	err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus(varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus)
+	*o = SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus(varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "quantity")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "quantity")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus struct {
@@ -190,5 +190,3 @@ func (v *NullableSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesSkus)
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

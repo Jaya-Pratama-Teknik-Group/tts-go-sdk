@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CheckListingPrerequisitesResponseDataShopGne type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CheckListingPrerequisitesResponseDataShopGne type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CheckListingPrerequisitesResponseDataShopGne{}
 
 // Product202309CheckListingPrerequisitesResponseDataShopGne struct for Product202309CheckListingPrerequisitesResponseDataShopGne
 type Product202309CheckListingPrerequisitesResponseDataShopGne struct {
-    // Listing Prerequisites check: Whether the shop has configured extended producer responsibility(EPR) registration numbers. If it is not prepared, return a check failure and do not allow listing product.   Detailed explanation of JSON return results： - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met, and the detailed failure reasons will be returned through the \"fail_reasons\" field.
-    Epr *string `json:"epr,omitempty"`
-    // Check if the number of product listings exceeds the limit.  Detailed explanation of JSON return results： - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met, and the detailed failure reasons will be returned through the \"fail_reasons\" field. 
-    ProductQuantityLimit *string `json:"product_quantity_limit,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Listing Prerequisites check: Whether the shop has configured extended producer responsibility(EPR) registration numbers. If it is not prepared, return a check failure and do not allow listing product.   Detailed explanation of JSON return results： - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met, and the detailed failure reasons will be returned through the \"fail_reasons\" field.
+	Epr *string `json:"epr,omitempty"`
+	// Check if the number of product listings exceeds the limit.  Detailed explanation of JSON return results： - \"check_result\" returns the result of the prerequisite check.  - If \"is_failed\" is true, it indicates that the requirements for listing have not been met, and the detailed failure reasons will be returned through the \"fail_reasons\" field.
+	ProductQuantityLimit *string `json:"product_quantity_limit,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CheckListingPrerequisitesResponseDataShopGne Product202309CheckListingPrerequisitesResponseDataShopGne
@@ -34,125 +34,125 @@ type _Product202309CheckListingPrerequisitesResponseDataShopGne Product202309Che
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CheckListingPrerequisitesResponseDataShopGne() *Product202309CheckListingPrerequisitesResponseDataShopGne {
-    this := Product202309CheckListingPrerequisitesResponseDataShopGne{}
-    return &this
+	this := Product202309CheckListingPrerequisitesResponseDataShopGne{}
+	return &this
 }
 
 // NewProduct202309CheckListingPrerequisitesResponseDataShopGneWithDefaults instantiates a new Product202309CheckListingPrerequisitesResponseDataShopGne object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CheckListingPrerequisitesResponseDataShopGneWithDefaults() *Product202309CheckListingPrerequisitesResponseDataShopGne {
-    this := Product202309CheckListingPrerequisitesResponseDataShopGne{}
-    return &this
+	this := Product202309CheckListingPrerequisitesResponseDataShopGne{}
+	return &this
 }
 
 // GetEpr returns the Epr field value if set, zero value otherwise.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopGne) GetEpr() string {
-    if o == nil || utils.IsNil(o.Epr) {
-        var ret string
-        return ret
-    }
-    return *o.Epr
+	if o == nil || utils.IsNil(o.Epr) {
+		var ret string
+		return ret
+	}
+	return *o.Epr
 }
 
 // GetEprOk returns a tuple with the Epr field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopGne) GetEprOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Epr) {
-        return nil, false
-    }
-    return o.Epr, true
+	if o == nil || utils.IsNil(o.Epr) {
+		return nil, false
+	}
+	return o.Epr, true
 }
 
 // HasEpr returns a boolean if a field has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopGne) HasEpr() bool {
-    if o != nil && !utils.IsNil(o.Epr) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Epr) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetEpr gets a reference to the given string and assigns it to the Epr field.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopGne) SetEpr(v string) {
-    o.Epr = &v
+	o.Epr = &v
 }
 
 // GetProductQuantityLimit returns the ProductQuantityLimit field value if set, zero value otherwise.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopGne) GetProductQuantityLimit() string {
-    if o == nil || utils.IsNil(o.ProductQuantityLimit) {
-        var ret string
-        return ret
-    }
-    return *o.ProductQuantityLimit
+	if o == nil || utils.IsNil(o.ProductQuantityLimit) {
+		var ret string
+		return ret
+	}
+	return *o.ProductQuantityLimit
 }
 
 // GetProductQuantityLimitOk returns a tuple with the ProductQuantityLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopGne) GetProductQuantityLimitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ProductQuantityLimit) {
-        return nil, false
-    }
-    return o.ProductQuantityLimit, true
+	if o == nil || utils.IsNil(o.ProductQuantityLimit) {
+		return nil, false
+	}
+	return o.ProductQuantityLimit, true
 }
 
 // HasProductQuantityLimit returns a boolean if a field has been set.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopGne) HasProductQuantityLimit() bool {
-    if o != nil && !utils.IsNil(o.ProductQuantityLimit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductQuantityLimit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductQuantityLimit gets a reference to the given string and assigns it to the ProductQuantityLimit field.
 func (o *Product202309CheckListingPrerequisitesResponseDataShopGne) SetProductQuantityLimit(v string) {
-    o.ProductQuantityLimit = &v
+	o.ProductQuantityLimit = &v
 }
 
 func (o Product202309CheckListingPrerequisitesResponseDataShopGne) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CheckListingPrerequisitesResponseDataShopGne) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Epr) {
-        toSerialize["epr"] = o.Epr
-    }
-    if !utils.IsNil(o.ProductQuantityLimit) {
-        toSerialize["product_quantity_limit"] = o.ProductQuantityLimit
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Epr) {
+		toSerialize["epr"] = o.Epr
+	}
+	if !utils.IsNil(o.ProductQuantityLimit) {
+		toSerialize["product_quantity_limit"] = o.ProductQuantityLimit
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CheckListingPrerequisitesResponseDataShopGne) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CheckListingPrerequisitesResponseDataShopGne := _Product202309CheckListingPrerequisitesResponseDataShopGne{}
+	varProduct202309CheckListingPrerequisitesResponseDataShopGne := _Product202309CheckListingPrerequisitesResponseDataShopGne{}
 
-    err = json.Unmarshal(data, &varProduct202309CheckListingPrerequisitesResponseDataShopGne)
+	err = json.Unmarshal(data, &varProduct202309CheckListingPrerequisitesResponseDataShopGne)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CheckListingPrerequisitesResponseDataShopGne(varProduct202309CheckListingPrerequisitesResponseDataShopGne)
+	*o = Product202309CheckListingPrerequisitesResponseDataShopGne(varProduct202309CheckListingPrerequisitesResponseDataShopGne)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "epr")
-        delete(additionalProperties, "product_quantity_limit")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "epr")
+		delete(additionalProperties, "product_quantity_limit")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CheckListingPrerequisitesResponseDataShopGne struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309CheckListingPrerequisitesResponseDataShopGne) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

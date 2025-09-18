@@ -11,24 +11,24 @@ API version: 1.0.0
 package data_reconciliation_v202401
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail type satisfies the MappedNullable interface at compile time
+// checks if the DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail{}
 
 // DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail struct for DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail
 type DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail struct {
-    // Failed channel order id 
-    ChannelOrderId *string `json:"channel_order_id,omitempty"`
-    // Failed channel type 
-    ChannelType *string `json:"channel_type,omitempty"`
-    // Failed order reasons
-    ExtraErrors []DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors `json:"extra_errors,omitempty"`
-    // Failed Tiktok Shop order id 
-    OrderId *string `json:"order_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Failed channel order id
+	ChannelOrderId *string `json:"channel_order_id,omitempty"`
+	// Failed channel type
+	ChannelType *string `json:"channel_type,omitempty"`
+	// Failed order reasons
+	ExtraErrors []DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors `json:"extra_errors,omitempty"`
+	// Failed Tiktok Shop order id
+	OrderId              *string `json:"order_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail
@@ -38,197 +38,197 @@ type _DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrors
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail() *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail {
-    this := DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail{}
-    return &this
+	this := DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail{}
+	return &this
 }
 
 // NewDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailWithDefaults instantiates a new DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailWithDefaults() *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail {
-    this := DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail{}
-    return &this
+	this := DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail{}
+	return &this
 }
 
 // GetChannelOrderId returns the ChannelOrderId field value if set, zero value otherwise.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) GetChannelOrderId() string {
-    if o == nil || utils.IsNil(o.ChannelOrderId) {
-        var ret string
-        return ret
-    }
-    return *o.ChannelOrderId
+	if o == nil || utils.IsNil(o.ChannelOrderId) {
+		var ret string
+		return ret
+	}
+	return *o.ChannelOrderId
 }
 
 // GetChannelOrderIdOk returns a tuple with the ChannelOrderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) GetChannelOrderIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ChannelOrderId) {
-        return nil, false
-    }
-    return o.ChannelOrderId, true
+	if o == nil || utils.IsNil(o.ChannelOrderId) {
+		return nil, false
+	}
+	return o.ChannelOrderId, true
 }
 
 // HasChannelOrderId returns a boolean if a field has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) HasChannelOrderId() bool {
-    if o != nil && !utils.IsNil(o.ChannelOrderId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ChannelOrderId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetChannelOrderId gets a reference to the given string and assigns it to the ChannelOrderId field.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) SetChannelOrderId(v string) {
-    o.ChannelOrderId = &v
+	o.ChannelOrderId = &v
 }
 
 // GetChannelType returns the ChannelType field value if set, zero value otherwise.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) GetChannelType() string {
-    if o == nil || utils.IsNil(o.ChannelType) {
-        var ret string
-        return ret
-    }
-    return *o.ChannelType
+	if o == nil || utils.IsNil(o.ChannelType) {
+		var ret string
+		return ret
+	}
+	return *o.ChannelType
 }
 
 // GetChannelTypeOk returns a tuple with the ChannelType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) GetChannelTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ChannelType) {
-        return nil, false
-    }
-    return o.ChannelType, true
+	if o == nil || utils.IsNil(o.ChannelType) {
+		return nil, false
+	}
+	return o.ChannelType, true
 }
 
 // HasChannelType returns a boolean if a field has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) HasChannelType() bool {
-    if o != nil && !utils.IsNil(o.ChannelType) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ChannelType) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetChannelType gets a reference to the given string and assigns it to the ChannelType field.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) SetChannelType(v string) {
-    o.ChannelType = &v
+	o.ChannelType = &v
 }
 
 // GetExtraErrors returns the ExtraErrors field value if set, zero value otherwise.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) GetExtraErrors() []DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors {
-    if o == nil || utils.IsNil(o.ExtraErrors) {
-        var ret []DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors
-        return ret
-    }
-    return o.ExtraErrors
+	if o == nil || utils.IsNil(o.ExtraErrors) {
+		var ret []DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors
+		return ret
+	}
+	return o.ExtraErrors
 }
 
 // GetExtraErrorsOk returns a tuple with the ExtraErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) GetExtraErrorsOk() ([]DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors, bool) {
-    if o == nil || utils.IsNil(o.ExtraErrors) {
-        return nil, false
-    }
-    return o.ExtraErrors, true
+	if o == nil || utils.IsNil(o.ExtraErrors) {
+		return nil, false
+	}
+	return o.ExtraErrors, true
 }
 
 // HasExtraErrors returns a boolean if a field has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) HasExtraErrors() bool {
-    if o != nil && !utils.IsNil(o.ExtraErrors) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ExtraErrors) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetExtraErrors gets a reference to the given []DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors and assigns it to the ExtraErrors field.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) SetExtraErrors(v []DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetailExtraErrors) {
-    o.ExtraErrors = v
+	o.ExtraErrors = v
 }
 
 // GetOrderId returns the OrderId field value if set, zero value otherwise.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) GetOrderId() string {
-    if o == nil || utils.IsNil(o.OrderId) {
-        var ret string
-        return ret
-    }
-    return *o.OrderId
+	if o == nil || utils.IsNil(o.OrderId) {
+		var ret string
+		return ret
+	}
+	return *o.OrderId
 }
 
 // GetOrderIdOk returns a tuple with the OrderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) GetOrderIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.OrderId) {
-        return nil, false
-    }
-    return o.OrderId, true
+	if o == nil || utils.IsNil(o.OrderId) {
+		return nil, false
+	}
+	return o.OrderId, true
 }
 
 // HasOrderId returns a boolean if a field has been set.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) HasOrderId() bool {
-    if o != nil && !utils.IsNil(o.OrderId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderId gets a reference to the given string and assigns it to the OrderId field.
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) SetOrderId(v string) {
-    o.OrderId = &v
+	o.OrderId = &v
 }
 
 func (o DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ChannelOrderId) {
-        toSerialize["channel_order_id"] = o.ChannelOrderId
-    }
-    if !utils.IsNil(o.ChannelType) {
-        toSerialize["channel_type"] = o.ChannelType
-    }
-    if !utils.IsNil(o.ExtraErrors) {
-        toSerialize["extra_errors"] = o.ExtraErrors
-    }
-    if !utils.IsNil(o.OrderId) {
-        toSerialize["order_id"] = o.OrderId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ChannelOrderId) {
+		toSerialize["channel_order_id"] = o.ChannelOrderId
+	}
+	if !utils.IsNil(o.ChannelType) {
+		toSerialize["channel_type"] = o.ChannelType
+	}
+	if !utils.IsNil(o.ExtraErrors) {
+		toSerialize["extra_errors"] = o.ExtraErrors
+	}
+	if !utils.IsNil(o.OrderId) {
+		toSerialize["order_id"] = o.OrderId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail) UnmarshalJSON(data []byte) (err error) {
-    varDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail := _DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail{}
+	varDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail := _DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail{}
 
-    err = json.Unmarshal(data, &varDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail)
+	err = json.Unmarshal(data, &varDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail(varDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail)
+	*o = DataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail(varDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "channel_order_id")
-        delete(additionalProperties, "channel_type")
-        delete(additionalProperties, "extra_errors")
-        delete(additionalProperties, "order_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "channel_order_id")
+		delete(additionalProperties, "channel_type")
+		delete(additionalProperties, "extra_errors")
+		delete(additionalProperties, "order_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableDataReconciliation202401QualityFactoryOrderDataImportAPIResponseDataErrorsDetail struct {
@@ -266,5 +266,3 @@ func (v *NullableDataReconciliation202401QualityFactoryOrderDataImportAPIRespons
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

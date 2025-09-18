@@ -11,24 +11,24 @@ API version: 1.0.0
 package fulfillment_v202502
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202502UploadInvoiceRequestBodyInvoices type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202502UploadInvoiceRequestBodyInvoices type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202502UploadInvoiceRequestBodyInvoices{}
 
 // Fulfillment202502UploadInvoiceRequestBodyInvoices struct for Fulfillment202502UploadInvoiceRequestBodyInvoices
 type Fulfillment202502UploadInvoiceRequestBodyInvoices struct {
-    // Base64 encoding of the invoice file to upload. Max file size: 1MB
-    File *string `json:"file,omitempty"`
-    // The invoice file format. Possible values:  - `XML`
-    FileType *string `json:"file_type,omitempty"`
-    // The list of TikTok Shop order IDs, retrieved from [Get Order List](650aa8094a0bb702c06df242).
-    OrderIds []string `json:"order_ids,omitempty"`
-    // The TikTok Shop package ID, retrieved from [Search Package](650aa592bace3e02b75db748).
-    PackageId *string `json:"package_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Base64 encoding of the invoice file to upload. Max file size: 1MB
+	File *string `json:"file,omitempty"`
+	// The invoice file format. Possible values:  - `XML`
+	FileType *string `json:"file_type,omitempty"`
+	// The list of TikTok Shop order IDs, retrieved from [Get Order List](650aa8094a0bb702c06df242).
+	OrderIds []string `json:"order_ids,omitempty"`
+	// The TikTok Shop package ID, retrieved from [Search Package](650aa592bace3e02b75db748).
+	PackageId            *string `json:"package_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202502UploadInvoiceRequestBodyInvoices Fulfillment202502UploadInvoiceRequestBodyInvoices
@@ -38,197 +38,197 @@ type _Fulfillment202502UploadInvoiceRequestBodyInvoices Fulfillment202502UploadI
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202502UploadInvoiceRequestBodyInvoices() *Fulfillment202502UploadInvoiceRequestBodyInvoices {
-    this := Fulfillment202502UploadInvoiceRequestBodyInvoices{}
-    return &this
+	this := Fulfillment202502UploadInvoiceRequestBodyInvoices{}
+	return &this
 }
 
 // NewFulfillment202502UploadInvoiceRequestBodyInvoicesWithDefaults instantiates a new Fulfillment202502UploadInvoiceRequestBodyInvoices object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202502UploadInvoiceRequestBodyInvoicesWithDefaults() *Fulfillment202502UploadInvoiceRequestBodyInvoices {
-    this := Fulfillment202502UploadInvoiceRequestBodyInvoices{}
-    return &this
+	this := Fulfillment202502UploadInvoiceRequestBodyInvoices{}
+	return &this
 }
 
 // GetFile returns the File field value if set, zero value otherwise.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) GetFile() string {
-    if o == nil || utils.IsNil(o.File) {
-        var ret string
-        return ret
-    }
-    return *o.File
+	if o == nil || utils.IsNil(o.File) {
+		var ret string
+		return ret
+	}
+	return *o.File
 }
 
 // GetFileOk returns a tuple with the File field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) GetFileOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.File) {
-        return nil, false
-    }
-    return o.File, true
+	if o == nil || utils.IsNil(o.File) {
+		return nil, false
+	}
+	return o.File, true
 }
 
 // HasFile returns a boolean if a field has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) HasFile() bool {
-    if o != nil && !utils.IsNil(o.File) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.File) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFile gets a reference to the given string and assigns it to the File field.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) SetFile(v string) {
-    o.File = &v
+	o.File = &v
 }
 
 // GetFileType returns the FileType field value if set, zero value otherwise.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) GetFileType() string {
-    if o == nil || utils.IsNil(o.FileType) {
-        var ret string
-        return ret
-    }
-    return *o.FileType
+	if o == nil || utils.IsNil(o.FileType) {
+		var ret string
+		return ret
+	}
+	return *o.FileType
 }
 
 // GetFileTypeOk returns a tuple with the FileType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) GetFileTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.FileType) {
-        return nil, false
-    }
-    return o.FileType, true
+	if o == nil || utils.IsNil(o.FileType) {
+		return nil, false
+	}
+	return o.FileType, true
 }
 
 // HasFileType returns a boolean if a field has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) HasFileType() bool {
-    if o != nil && !utils.IsNil(o.FileType) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.FileType) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFileType gets a reference to the given string and assigns it to the FileType field.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) SetFileType(v string) {
-    o.FileType = &v
+	o.FileType = &v
 }
 
 // GetOrderIds returns the OrderIds field value if set, zero value otherwise.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) GetOrderIds() []string {
-    if o == nil || utils.IsNil(o.OrderIds) {
-        var ret []string
-        return ret
-    }
-    return o.OrderIds
+	if o == nil || utils.IsNil(o.OrderIds) {
+		var ret []string
+		return ret
+	}
+	return o.OrderIds
 }
 
 // GetOrderIdsOk returns a tuple with the OrderIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) GetOrderIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.OrderIds) {
-        return nil, false
-    }
-    return o.OrderIds, true
+	if o == nil || utils.IsNil(o.OrderIds) {
+		return nil, false
+	}
+	return o.OrderIds, true
 }
 
 // HasOrderIds returns a boolean if a field has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) HasOrderIds() bool {
-    if o != nil && !utils.IsNil(o.OrderIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderIds gets a reference to the given []string and assigns it to the OrderIds field.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) SetOrderIds(v []string) {
-    o.OrderIds = v
+	o.OrderIds = v
 }
 
 // GetPackageId returns the PackageId field value if set, zero value otherwise.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) GetPackageId() string {
-    if o == nil || utils.IsNil(o.PackageId) {
-        var ret string
-        return ret
-    }
-    return *o.PackageId
+	if o == nil || utils.IsNil(o.PackageId) {
+		var ret string
+		return ret
+	}
+	return *o.PackageId
 }
 
 // GetPackageIdOk returns a tuple with the PackageId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) GetPackageIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PackageId) {
-        return nil, false
-    }
-    return o.PackageId, true
+	if o == nil || utils.IsNil(o.PackageId) {
+		return nil, false
+	}
+	return o.PackageId, true
 }
 
 // HasPackageId returns a boolean if a field has been set.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) HasPackageId() bool {
-    if o != nil && !utils.IsNil(o.PackageId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PackageId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPackageId gets a reference to the given string and assigns it to the PackageId field.
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) SetPackageId(v string) {
-    o.PackageId = &v
+	o.PackageId = &v
 }
 
 func (o Fulfillment202502UploadInvoiceRequestBodyInvoices) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202502UploadInvoiceRequestBodyInvoices) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.File) {
-        toSerialize["file"] = o.File
-    }
-    if !utils.IsNil(o.FileType) {
-        toSerialize["file_type"] = o.FileType
-    }
-    if !utils.IsNil(o.OrderIds) {
-        toSerialize["order_ids"] = o.OrderIds
-    }
-    if !utils.IsNil(o.PackageId) {
-        toSerialize["package_id"] = o.PackageId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.File) {
+		toSerialize["file"] = o.File
+	}
+	if !utils.IsNil(o.FileType) {
+		toSerialize["file_type"] = o.FileType
+	}
+	if !utils.IsNil(o.OrderIds) {
+		toSerialize["order_ids"] = o.OrderIds
+	}
+	if !utils.IsNil(o.PackageId) {
+		toSerialize["package_id"] = o.PackageId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202502UploadInvoiceRequestBodyInvoices) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202502UploadInvoiceRequestBodyInvoices := _Fulfillment202502UploadInvoiceRequestBodyInvoices{}
+	varFulfillment202502UploadInvoiceRequestBodyInvoices := _Fulfillment202502UploadInvoiceRequestBodyInvoices{}
 
-    err = json.Unmarshal(data, &varFulfillment202502UploadInvoiceRequestBodyInvoices)
+	err = json.Unmarshal(data, &varFulfillment202502UploadInvoiceRequestBodyInvoices)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202502UploadInvoiceRequestBodyInvoices(varFulfillment202502UploadInvoiceRequestBodyInvoices)
+	*o = Fulfillment202502UploadInvoiceRequestBodyInvoices(varFulfillment202502UploadInvoiceRequestBodyInvoices)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "file")
-        delete(additionalProperties, "file_type")
-        delete(additionalProperties, "order_ids")
-        delete(additionalProperties, "package_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "file")
+		delete(additionalProperties, "file_type")
+		delete(additionalProperties, "order_ids")
+		delete(additionalProperties, "package_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202502UploadInvoiceRequestBodyInvoices struct {
@@ -266,5 +266,3 @@ func (v *NullableFulfillment202502UploadInvoiceRequestBodyInvoices) UnmarshalJSO
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,21 +11,21 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309ApproveReturnRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309ApproveReturnRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309ApproveReturnRequestBody{}
 
 // ReturnRefund202309ApproveReturnRequestBody struct for ReturnRefund202309ApproveReturnRequestBody
 type ReturnRefund202309ApproveReturnRequestBody struct {
-    // If true, the seller will issue a returnless refund. In other words, the seller will refund without requiring the buyer to send the product back to the seller.  Note: Seller's decision for the return request should be APPROVE_RETURN
-    BuyerKeepItem *bool `json:"buyer_keep_item,omitempty"`
-    // Seller's decision for the return request, available values: - APPROVE_REFUND: seller approve  refund request - APPROVE_RETURN: seller approve return request - APPROVE_RECEIVED_PACKAGE: seller approve received package - APPROVE_REPLACEMENT: seller approve replacement request - ISSUE_REPLACEMENT_REFUND: seller decline the replacement request and directly refund to buyer. - OFFER_PARTIAL_REFUND: seller offer partial refund. Partial refund no need buyer to return the product. If buyer accept partial refund, seller only refund the partial amount and buyer keep the item(s).
-    Decision *string `json:"decision,omitempty"`
-    PartialRefund *ReturnRefund202309ApproveReturnRequestBodyPartialRefund `json:"partial_refund,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// If true, the seller will issue a returnless refund. In other words, the seller will refund without requiring the buyer to send the product back to the seller.  Note: Seller's decision for the return request should be APPROVE_RETURN
+	BuyerKeepItem *bool `json:"buyer_keep_item,omitempty"`
+	// Seller's decision for the return request, available values: - APPROVE_REFUND: seller approve  refund request - APPROVE_RETURN: seller approve return request - APPROVE_RECEIVED_PACKAGE: seller approve received package - APPROVE_REPLACEMENT: seller approve replacement request - ISSUE_REPLACEMENT_REFUND: seller decline the replacement request and directly refund to buyer. - OFFER_PARTIAL_REFUND: seller offer partial refund. Partial refund no need buyer to return the product. If buyer accept partial refund, seller only refund the partial amount and buyer keep the item(s).
+	Decision             *string                                                  `json:"decision,omitempty"`
+	PartialRefund        *ReturnRefund202309ApproveReturnRequestBodyPartialRefund `json:"partial_refund,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309ApproveReturnRequestBody ReturnRefund202309ApproveReturnRequestBody
@@ -35,161 +35,161 @@ type _ReturnRefund202309ApproveReturnRequestBody ReturnRefund202309ApproveReturn
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309ApproveReturnRequestBody() *ReturnRefund202309ApproveReturnRequestBody {
-    this := ReturnRefund202309ApproveReturnRequestBody{}
-    return &this
+	this := ReturnRefund202309ApproveReturnRequestBody{}
+	return &this
 }
 
 // NewReturnRefund202309ApproveReturnRequestBodyWithDefaults instantiates a new ReturnRefund202309ApproveReturnRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309ApproveReturnRequestBodyWithDefaults() *ReturnRefund202309ApproveReturnRequestBody {
-    this := ReturnRefund202309ApproveReturnRequestBody{}
-    return &this
+	this := ReturnRefund202309ApproveReturnRequestBody{}
+	return &this
 }
 
 // GetBuyerKeepItem returns the BuyerKeepItem field value if set, zero value otherwise.
 func (o *ReturnRefund202309ApproveReturnRequestBody) GetBuyerKeepItem() bool {
-    if o == nil || utils.IsNil(o.BuyerKeepItem) {
-        var ret bool
-        return ret
-    }
-    return *o.BuyerKeepItem
+	if o == nil || utils.IsNil(o.BuyerKeepItem) {
+		var ret bool
+		return ret
+	}
+	return *o.BuyerKeepItem
 }
 
 // GetBuyerKeepItemOk returns a tuple with the BuyerKeepItem field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309ApproveReturnRequestBody) GetBuyerKeepItemOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.BuyerKeepItem) {
-        return nil, false
-    }
-    return o.BuyerKeepItem, true
+	if o == nil || utils.IsNil(o.BuyerKeepItem) {
+		return nil, false
+	}
+	return o.BuyerKeepItem, true
 }
 
 // HasBuyerKeepItem returns a boolean if a field has been set.
 func (o *ReturnRefund202309ApproveReturnRequestBody) HasBuyerKeepItem() bool {
-    if o != nil && !utils.IsNil(o.BuyerKeepItem) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.BuyerKeepItem) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetBuyerKeepItem gets a reference to the given bool and assigns it to the BuyerKeepItem field.
 func (o *ReturnRefund202309ApproveReturnRequestBody) SetBuyerKeepItem(v bool) {
-    o.BuyerKeepItem = &v
+	o.BuyerKeepItem = &v
 }
 
 // GetDecision returns the Decision field value if set, zero value otherwise.
 func (o *ReturnRefund202309ApproveReturnRequestBody) GetDecision() string {
-    if o == nil || utils.IsNil(o.Decision) {
-        var ret string
-        return ret
-    }
-    return *o.Decision
+	if o == nil || utils.IsNil(o.Decision) {
+		var ret string
+		return ret
+	}
+	return *o.Decision
 }
 
 // GetDecisionOk returns a tuple with the Decision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309ApproveReturnRequestBody) GetDecisionOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Decision) {
-        return nil, false
-    }
-    return o.Decision, true
+	if o == nil || utils.IsNil(o.Decision) {
+		return nil, false
+	}
+	return o.Decision, true
 }
 
 // HasDecision returns a boolean if a field has been set.
 func (o *ReturnRefund202309ApproveReturnRequestBody) HasDecision() bool {
-    if o != nil && !utils.IsNil(o.Decision) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Decision) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDecision gets a reference to the given string and assigns it to the Decision field.
 func (o *ReturnRefund202309ApproveReturnRequestBody) SetDecision(v string) {
-    o.Decision = &v
+	o.Decision = &v
 }
 
 // GetPartialRefund returns the PartialRefund field value if set, zero value otherwise.
 func (o *ReturnRefund202309ApproveReturnRequestBody) GetPartialRefund() ReturnRefund202309ApproveReturnRequestBodyPartialRefund {
-    if o == nil || utils.IsNil(o.PartialRefund) {
-        var ret ReturnRefund202309ApproveReturnRequestBodyPartialRefund
-        return ret
-    }
-    return *o.PartialRefund
+	if o == nil || utils.IsNil(o.PartialRefund) {
+		var ret ReturnRefund202309ApproveReturnRequestBodyPartialRefund
+		return ret
+	}
+	return *o.PartialRefund
 }
 
 // GetPartialRefundOk returns a tuple with the PartialRefund field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309ApproveReturnRequestBody) GetPartialRefundOk() (*ReturnRefund202309ApproveReturnRequestBodyPartialRefund, bool) {
-    if o == nil || utils.IsNil(o.PartialRefund) {
-        return nil, false
-    }
-    return o.PartialRefund, true
+	if o == nil || utils.IsNil(o.PartialRefund) {
+		return nil, false
+	}
+	return o.PartialRefund, true
 }
 
 // HasPartialRefund returns a boolean if a field has been set.
 func (o *ReturnRefund202309ApproveReturnRequestBody) HasPartialRefund() bool {
-    if o != nil && !utils.IsNil(o.PartialRefund) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PartialRefund) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPartialRefund gets a reference to the given ReturnRefund202309ApproveReturnRequestBodyPartialRefund and assigns it to the PartialRefund field.
 func (o *ReturnRefund202309ApproveReturnRequestBody) SetPartialRefund(v ReturnRefund202309ApproveReturnRequestBodyPartialRefund) {
-    o.PartialRefund = &v
+	o.PartialRefund = &v
 }
 
 func (o ReturnRefund202309ApproveReturnRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309ApproveReturnRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.BuyerKeepItem) {
-        toSerialize["buyer_keep_item"] = o.BuyerKeepItem
-    }
-    if !utils.IsNil(o.Decision) {
-        toSerialize["decision"] = o.Decision
-    }
-    if !utils.IsNil(o.PartialRefund) {
-        toSerialize["partial_refund"] = o.PartialRefund
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.BuyerKeepItem) {
+		toSerialize["buyer_keep_item"] = o.BuyerKeepItem
+	}
+	if !utils.IsNil(o.Decision) {
+		toSerialize["decision"] = o.Decision
+	}
+	if !utils.IsNil(o.PartialRefund) {
+		toSerialize["partial_refund"] = o.PartialRefund
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309ApproveReturnRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309ApproveReturnRequestBody := _ReturnRefund202309ApproveReturnRequestBody{}
+	varReturnRefund202309ApproveReturnRequestBody := _ReturnRefund202309ApproveReturnRequestBody{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309ApproveReturnRequestBody)
+	err = json.Unmarshal(data, &varReturnRefund202309ApproveReturnRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309ApproveReturnRequestBody(varReturnRefund202309ApproveReturnRequestBody)
+	*o = ReturnRefund202309ApproveReturnRequestBody(varReturnRefund202309ApproveReturnRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "buyer_keep_item")
-        delete(additionalProperties, "decision")
-        delete(additionalProperties, "partial_refund")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "buyer_keep_item")
+		delete(additionalProperties, "decision")
+		delete(additionalProperties, "partial_refund")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309ApproveReturnRequestBody struct {
@@ -227,5 +227,3 @@ func (v *NullableReturnRefund202309ApproveReturnRequestBody) UnmarshalJSON(src [
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

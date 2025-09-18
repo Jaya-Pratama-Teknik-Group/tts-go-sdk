@@ -11,18 +11,18 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309SplitOrdersRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309SplitOrdersRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309SplitOrdersRequestBody{}
 
 // Fulfillment202309SplitOrdersRequestBody struct for Fulfillment202309SplitOrdersRequestBody
 type Fulfillment202309SplitOrdersRequestBody struct {
-    // Input list of splittable groups.
-    SplittableGroups []Fulfillment202309SplitOrdersRequestBodySplittableGroups `json:"splittable_groups,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Input list of splittable groups.
+	SplittableGroups     []Fulfillment202309SplitOrdersRequestBodySplittableGroups `json:"splittable_groups,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309SplitOrdersRequestBody Fulfillment202309SplitOrdersRequestBody
@@ -32,89 +32,89 @@ type _Fulfillment202309SplitOrdersRequestBody Fulfillment202309SplitOrdersReques
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309SplitOrdersRequestBody() *Fulfillment202309SplitOrdersRequestBody {
-    this := Fulfillment202309SplitOrdersRequestBody{}
-    return &this
+	this := Fulfillment202309SplitOrdersRequestBody{}
+	return &this
 }
 
 // NewFulfillment202309SplitOrdersRequestBodyWithDefaults instantiates a new Fulfillment202309SplitOrdersRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309SplitOrdersRequestBodyWithDefaults() *Fulfillment202309SplitOrdersRequestBody {
-    this := Fulfillment202309SplitOrdersRequestBody{}
-    return &this
+	this := Fulfillment202309SplitOrdersRequestBody{}
+	return &this
 }
 
 // GetSplittableGroups returns the SplittableGroups field value if set, zero value otherwise.
 func (o *Fulfillment202309SplitOrdersRequestBody) GetSplittableGroups() []Fulfillment202309SplitOrdersRequestBodySplittableGroups {
-    if o == nil || utils.IsNil(o.SplittableGroups) {
-        var ret []Fulfillment202309SplitOrdersRequestBodySplittableGroups
-        return ret
-    }
-    return o.SplittableGroups
+	if o == nil || utils.IsNil(o.SplittableGroups) {
+		var ret []Fulfillment202309SplitOrdersRequestBodySplittableGroups
+		return ret
+	}
+	return o.SplittableGroups
 }
 
 // GetSplittableGroupsOk returns a tuple with the SplittableGroups field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309SplitOrdersRequestBody) GetSplittableGroupsOk() ([]Fulfillment202309SplitOrdersRequestBodySplittableGroups, bool) {
-    if o == nil || utils.IsNil(o.SplittableGroups) {
-        return nil, false
-    }
-    return o.SplittableGroups, true
+	if o == nil || utils.IsNil(o.SplittableGroups) {
+		return nil, false
+	}
+	return o.SplittableGroups, true
 }
 
 // HasSplittableGroups returns a boolean if a field has been set.
 func (o *Fulfillment202309SplitOrdersRequestBody) HasSplittableGroups() bool {
-    if o != nil && !utils.IsNil(o.SplittableGroups) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SplittableGroups) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSplittableGroups gets a reference to the given []Fulfillment202309SplitOrdersRequestBodySplittableGroups and assigns it to the SplittableGroups field.
 func (o *Fulfillment202309SplitOrdersRequestBody) SetSplittableGroups(v []Fulfillment202309SplitOrdersRequestBodySplittableGroups) {
-    o.SplittableGroups = v
+	o.SplittableGroups = v
 }
 
 func (o Fulfillment202309SplitOrdersRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309SplitOrdersRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.SplittableGroups) {
-        toSerialize["splittable_groups"] = o.SplittableGroups
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.SplittableGroups) {
+		toSerialize["splittable_groups"] = o.SplittableGroups
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309SplitOrdersRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309SplitOrdersRequestBody := _Fulfillment202309SplitOrdersRequestBody{}
+	varFulfillment202309SplitOrdersRequestBody := _Fulfillment202309SplitOrdersRequestBody{}
 
-    err = json.Unmarshal(data, &varFulfillment202309SplitOrdersRequestBody)
+	err = json.Unmarshal(data, &varFulfillment202309SplitOrdersRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309SplitOrdersRequestBody(varFulfillment202309SplitOrdersRequestBody)
+	*o = Fulfillment202309SplitOrdersRequestBody(varFulfillment202309SplitOrdersRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "splittable_groups")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "splittable_groups")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309SplitOrdersRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableFulfillment202309SplitOrdersRequestBody) UnmarshalJSON(src []by
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

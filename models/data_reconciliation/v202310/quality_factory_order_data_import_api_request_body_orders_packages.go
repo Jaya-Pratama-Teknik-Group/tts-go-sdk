@@ -11,22 +11,22 @@ API version: 1.0.0
 package data_reconciliation_v202310
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages type satisfies the MappedNullable interface at compile time
+// checks if the DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages{}
 
 // DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages struct for DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages
 type DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages struct {
-    // The tracking corresponding Tiktok shop package id 
-    PackageId *string `json:"package_id,omitempty"`
-    // The provider name of tracking info
-    ShippingProviderName *string `json:"shipping_provider_name,omitempty"`
-    // Tracking number of tracking info 
-    TrackingNumber *string `json:"tracking_number,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The tracking corresponding Tiktok shop package id
+	PackageId *string `json:"package_id,omitempty"`
+	// The provider name of tracking info
+	ShippingProviderName *string `json:"shipping_provider_name,omitempty"`
+	// Tracking number of tracking info
+	TrackingNumber       *string `json:"tracking_number,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages
@@ -36,161 +36,161 @@ type _DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersP
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages() *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages {
-    this := DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages{}
-    return &this
+	this := DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages{}
+	return &this
 }
 
 // NewDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackagesWithDefaults instantiates a new DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackagesWithDefaults() *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages {
-    this := DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages{}
-    return &this
+	this := DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages{}
+	return &this
 }
 
 // GetPackageId returns the PackageId field value if set, zero value otherwise.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) GetPackageId() string {
-    if o == nil || utils.IsNil(o.PackageId) {
-        var ret string
-        return ret
-    }
-    return *o.PackageId
+	if o == nil || utils.IsNil(o.PackageId) {
+		var ret string
+		return ret
+	}
+	return *o.PackageId
 }
 
 // GetPackageIdOk returns a tuple with the PackageId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) GetPackageIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PackageId) {
-        return nil, false
-    }
-    return o.PackageId, true
+	if o == nil || utils.IsNil(o.PackageId) {
+		return nil, false
+	}
+	return o.PackageId, true
 }
 
 // HasPackageId returns a boolean if a field has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) HasPackageId() bool {
-    if o != nil && !utils.IsNil(o.PackageId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PackageId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPackageId gets a reference to the given string and assigns it to the PackageId field.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) SetPackageId(v string) {
-    o.PackageId = &v
+	o.PackageId = &v
 }
 
 // GetShippingProviderName returns the ShippingProviderName field value if set, zero value otherwise.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) GetShippingProviderName() string {
-    if o == nil || utils.IsNil(o.ShippingProviderName) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingProviderName
+	if o == nil || utils.IsNil(o.ShippingProviderName) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingProviderName
 }
 
 // GetShippingProviderNameOk returns a tuple with the ShippingProviderName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) GetShippingProviderNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingProviderName) {
-        return nil, false
-    }
-    return o.ShippingProviderName, true
+	if o == nil || utils.IsNil(o.ShippingProviderName) {
+		return nil, false
+	}
+	return o.ShippingProviderName, true
 }
 
 // HasShippingProviderName returns a boolean if a field has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) HasShippingProviderName() bool {
-    if o != nil && !utils.IsNil(o.ShippingProviderName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingProviderName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingProviderName gets a reference to the given string and assigns it to the ShippingProviderName field.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) SetShippingProviderName(v string) {
-    o.ShippingProviderName = &v
+	o.ShippingProviderName = &v
 }
 
 // GetTrackingNumber returns the TrackingNumber field value if set, zero value otherwise.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) GetTrackingNumber() string {
-    if o == nil || utils.IsNil(o.TrackingNumber) {
-        var ret string
-        return ret
-    }
-    return *o.TrackingNumber
+	if o == nil || utils.IsNil(o.TrackingNumber) {
+		var ret string
+		return ret
+	}
+	return *o.TrackingNumber
 }
 
 // GetTrackingNumberOk returns a tuple with the TrackingNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) GetTrackingNumberOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TrackingNumber) {
-        return nil, false
-    }
-    return o.TrackingNumber, true
+	if o == nil || utils.IsNil(o.TrackingNumber) {
+		return nil, false
+	}
+	return o.TrackingNumber, true
 }
 
 // HasTrackingNumber returns a boolean if a field has been set.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) HasTrackingNumber() bool {
-    if o != nil && !utils.IsNil(o.TrackingNumber) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TrackingNumber) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTrackingNumber gets a reference to the given string and assigns it to the TrackingNumber field.
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) SetTrackingNumber(v string) {
-    o.TrackingNumber = &v
+	o.TrackingNumber = &v
 }
 
 func (o DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.PackageId) {
-        toSerialize["package_id"] = o.PackageId
-    }
-    if !utils.IsNil(o.ShippingProviderName) {
-        toSerialize["shipping_provider_name"] = o.ShippingProviderName
-    }
-    if !utils.IsNil(o.TrackingNumber) {
-        toSerialize["tracking_number"] = o.TrackingNumber
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.PackageId) {
+		toSerialize["package_id"] = o.PackageId
+	}
+	if !utils.IsNil(o.ShippingProviderName) {
+		toSerialize["shipping_provider_name"] = o.ShippingProviderName
+	}
+	if !utils.IsNil(o.TrackingNumber) {
+		toSerialize["tracking_number"] = o.TrackingNumber
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages) UnmarshalJSON(data []byte) (err error) {
-    varDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages := _DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages{}
+	varDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages := _DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages{}
 
-    err = json.Unmarshal(data, &varDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages)
+	err = json.Unmarshal(data, &varDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages(varDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages)
+	*o = DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages(varDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "package_id")
-        delete(additionalProperties, "shipping_provider_name")
-        delete(additionalProperties, "tracking_number")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "package_id")
+		delete(additionalProperties, "shipping_provider_name")
+		delete(additionalProperties, "tracking_number")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableDataReconciliation202310QualityFactoryOrderDataImportAPIRequestBodyOrdersPackages struct {
@@ -228,5 +228,3 @@ func (v *NullableDataReconciliation202310QualityFactoryOrderDataImportAPIRequest
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

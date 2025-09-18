@@ -11,18 +11,18 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309MarkPackageAsShippedResponseDataWarning type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309MarkPackageAsShippedResponseDataWarning type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309MarkPackageAsShippedResponseDataWarning{}
 
 // Fulfillment202309MarkPackageAsShippedResponseDataWarning struct for Fulfillment202309MarkPackageAsShippedResponseDataWarning
 type Fulfillment202309MarkPackageAsShippedResponseDataWarning struct {
-    // Specific warning information.
-    Message *string `json:"message,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Specific warning information.
+	Message              *string `json:"message,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309MarkPackageAsShippedResponseDataWarning Fulfillment202309MarkPackageAsShippedResponseDataWarning
@@ -32,89 +32,89 @@ type _Fulfillment202309MarkPackageAsShippedResponseDataWarning Fulfillment202309
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309MarkPackageAsShippedResponseDataWarning() *Fulfillment202309MarkPackageAsShippedResponseDataWarning {
-    this := Fulfillment202309MarkPackageAsShippedResponseDataWarning{}
-    return &this
+	this := Fulfillment202309MarkPackageAsShippedResponseDataWarning{}
+	return &this
 }
 
 // NewFulfillment202309MarkPackageAsShippedResponseDataWarningWithDefaults instantiates a new Fulfillment202309MarkPackageAsShippedResponseDataWarning object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309MarkPackageAsShippedResponseDataWarningWithDefaults() *Fulfillment202309MarkPackageAsShippedResponseDataWarning {
-    this := Fulfillment202309MarkPackageAsShippedResponseDataWarning{}
-    return &this
+	this := Fulfillment202309MarkPackageAsShippedResponseDataWarning{}
+	return &this
 }
 
 // GetMessage returns the Message field value if set, zero value otherwise.
 func (o *Fulfillment202309MarkPackageAsShippedResponseDataWarning) GetMessage() string {
-    if o == nil || utils.IsNil(o.Message) {
-        var ret string
-        return ret
-    }
-    return *o.Message
+	if o == nil || utils.IsNil(o.Message) {
+		var ret string
+		return ret
+	}
+	return *o.Message
 }
 
 // GetMessageOk returns a tuple with the Message field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309MarkPackageAsShippedResponseDataWarning) GetMessageOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Message) {
-        return nil, false
-    }
-    return o.Message, true
+	if o == nil || utils.IsNil(o.Message) {
+		return nil, false
+	}
+	return o.Message, true
 }
 
 // HasMessage returns a boolean if a field has been set.
 func (o *Fulfillment202309MarkPackageAsShippedResponseDataWarning) HasMessage() bool {
-    if o != nil && !utils.IsNil(o.Message) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Message) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMessage gets a reference to the given string and assigns it to the Message field.
 func (o *Fulfillment202309MarkPackageAsShippedResponseDataWarning) SetMessage(v string) {
-    o.Message = &v
+	o.Message = &v
 }
 
 func (o Fulfillment202309MarkPackageAsShippedResponseDataWarning) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309MarkPackageAsShippedResponseDataWarning) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Message) {
-        toSerialize["message"] = o.Message
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Message) {
+		toSerialize["message"] = o.Message
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309MarkPackageAsShippedResponseDataWarning) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309MarkPackageAsShippedResponseDataWarning := _Fulfillment202309MarkPackageAsShippedResponseDataWarning{}
+	varFulfillment202309MarkPackageAsShippedResponseDataWarning := _Fulfillment202309MarkPackageAsShippedResponseDataWarning{}
 
-    err = json.Unmarshal(data, &varFulfillment202309MarkPackageAsShippedResponseDataWarning)
+	err = json.Unmarshal(data, &varFulfillment202309MarkPackageAsShippedResponseDataWarning)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309MarkPackageAsShippedResponseDataWarning(varFulfillment202309MarkPackageAsShippedResponseDataWarning)
+	*o = Fulfillment202309MarkPackageAsShippedResponseDataWarning(varFulfillment202309MarkPackageAsShippedResponseDataWarning)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "message")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "message")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309MarkPackageAsShippedResponseDataWarning struct {
@@ -152,5 +152,3 @@ func (v *NullableFulfillment202309MarkPackageAsShippedResponseDataWarning) Unmar
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

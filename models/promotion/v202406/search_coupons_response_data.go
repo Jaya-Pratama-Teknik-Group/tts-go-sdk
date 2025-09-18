@@ -11,22 +11,22 @@ API version: 1.0.0
 package promotion_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202406SearchCouponsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202406SearchCouponsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202406SearchCouponsResponseData{}
 
 // Promotion202406SearchCouponsResponseData struct for Promotion202406SearchCouponsResponseData
 type Promotion202406SearchCouponsResponseData struct {
-    // Coupons.
-    Coupons []Promotion202406SearchCouponsResponseDataCoupons `json:"coupons,omitempty"`
-    // Page cursor for next request. The last page returns \"\".
-    NextPageToken *string `json:"next_page_token,omitempty"`
-    // Total coupon count.
-    TotalCount *int32 `json:"total_count,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Coupons.
+	Coupons []Promotion202406SearchCouponsResponseDataCoupons `json:"coupons,omitempty"`
+	// Page cursor for next request. The last page returns \"\".
+	NextPageToken *string `json:"next_page_token,omitempty"`
+	// Total coupon count.
+	TotalCount           *int32 `json:"total_count,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202406SearchCouponsResponseData Promotion202406SearchCouponsResponseData
@@ -36,161 +36,161 @@ type _Promotion202406SearchCouponsResponseData Promotion202406SearchCouponsRespo
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202406SearchCouponsResponseData() *Promotion202406SearchCouponsResponseData {
-    this := Promotion202406SearchCouponsResponseData{}
-    return &this
+	this := Promotion202406SearchCouponsResponseData{}
+	return &this
 }
 
 // NewPromotion202406SearchCouponsResponseDataWithDefaults instantiates a new Promotion202406SearchCouponsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202406SearchCouponsResponseDataWithDefaults() *Promotion202406SearchCouponsResponseData {
-    this := Promotion202406SearchCouponsResponseData{}
-    return &this
+	this := Promotion202406SearchCouponsResponseData{}
+	return &this
 }
 
 // GetCoupons returns the Coupons field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseData) GetCoupons() []Promotion202406SearchCouponsResponseDataCoupons {
-    if o == nil || utils.IsNil(o.Coupons) {
-        var ret []Promotion202406SearchCouponsResponseDataCoupons
-        return ret
-    }
-    return o.Coupons
+	if o == nil || utils.IsNil(o.Coupons) {
+		var ret []Promotion202406SearchCouponsResponseDataCoupons
+		return ret
+	}
+	return o.Coupons
 }
 
 // GetCouponsOk returns a tuple with the Coupons field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseData) GetCouponsOk() ([]Promotion202406SearchCouponsResponseDataCoupons, bool) {
-    if o == nil || utils.IsNil(o.Coupons) {
-        return nil, false
-    }
-    return o.Coupons, true
+	if o == nil || utils.IsNil(o.Coupons) {
+		return nil, false
+	}
+	return o.Coupons, true
 }
 
 // HasCoupons returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseData) HasCoupons() bool {
-    if o != nil && !utils.IsNil(o.Coupons) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Coupons) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCoupons gets a reference to the given []Promotion202406SearchCouponsResponseDataCoupons and assigns it to the Coupons field.
 func (o *Promotion202406SearchCouponsResponseData) SetCoupons(v []Promotion202406SearchCouponsResponseDataCoupons) {
-    o.Coupons = v
+	o.Coupons = v
 }
 
 // GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseData) GetNextPageToken() string {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        var ret string
-        return ret
-    }
-    return *o.NextPageToken
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		var ret string
+		return ret
+	}
+	return *o.NextPageToken
 }
 
 // GetNextPageTokenOk returns a tuple with the NextPageToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseData) GetNextPageTokenOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        return nil, false
-    }
-    return o.NextPageToken, true
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		return nil, false
+	}
+	return o.NextPageToken, true
 }
 
 // HasNextPageToken returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseData) HasNextPageToken() bool {
-    if o != nil && !utils.IsNil(o.NextPageToken) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NextPageToken) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNextPageToken gets a reference to the given string and assigns it to the NextPageToken field.
 func (o *Promotion202406SearchCouponsResponseData) SetNextPageToken(v string) {
-    o.NextPageToken = &v
+	o.NextPageToken = &v
 }
 
 // GetTotalCount returns the TotalCount field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseData) GetTotalCount() int32 {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        var ret int32
-        return ret
-    }
-    return *o.TotalCount
+	if o == nil || utils.IsNil(o.TotalCount) {
+		var ret int32
+		return ret
+	}
+	return *o.TotalCount
 }
 
 // GetTotalCountOk returns a tuple with the TotalCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseData) GetTotalCountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        return nil, false
-    }
-    return o.TotalCount, true
+	if o == nil || utils.IsNil(o.TotalCount) {
+		return nil, false
+	}
+	return o.TotalCount, true
 }
 
 // HasTotalCount returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseData) HasTotalCount() bool {
-    if o != nil && !utils.IsNil(o.TotalCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalCount gets a reference to the given int32 and assigns it to the TotalCount field.
 func (o *Promotion202406SearchCouponsResponseData) SetTotalCount(v int32) {
-    o.TotalCount = &v
+	o.TotalCount = &v
 }
 
 func (o Promotion202406SearchCouponsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202406SearchCouponsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Coupons) {
-        toSerialize["coupons"] = o.Coupons
-    }
-    if !utils.IsNil(o.NextPageToken) {
-        toSerialize["next_page_token"] = o.NextPageToken
-    }
-    if !utils.IsNil(o.TotalCount) {
-        toSerialize["total_count"] = o.TotalCount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Coupons) {
+		toSerialize["coupons"] = o.Coupons
+	}
+	if !utils.IsNil(o.NextPageToken) {
+		toSerialize["next_page_token"] = o.NextPageToken
+	}
+	if !utils.IsNil(o.TotalCount) {
+		toSerialize["total_count"] = o.TotalCount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202406SearchCouponsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202406SearchCouponsResponseData := _Promotion202406SearchCouponsResponseData{}
+	varPromotion202406SearchCouponsResponseData := _Promotion202406SearchCouponsResponseData{}
 
-    err = json.Unmarshal(data, &varPromotion202406SearchCouponsResponseData)
+	err = json.Unmarshal(data, &varPromotion202406SearchCouponsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202406SearchCouponsResponseData(varPromotion202406SearchCouponsResponseData)
+	*o = Promotion202406SearchCouponsResponseData(varPromotion202406SearchCouponsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "coupons")
-        delete(additionalProperties, "next_page_token")
-        delete(additionalProperties, "total_count")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "coupons")
+		delete(additionalProperties, "next_page_token")
+		delete(additionalProperties, "total_count")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202406SearchCouponsResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullablePromotion202406SearchCouponsResponseData) UnmarshalJSON(src []b
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,22 +11,22 @@ API version: 1.0.0
 package order_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Order202309GetOrderListResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Order202309GetOrderListResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Order202309GetOrderListResponseData{}
 
 // Order202309GetOrderListResponseData struct for Order202309GetOrderListResponseData
 type Order202309GetOrderListResponseData struct {
-    // An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
-    NextPageToken *string `json:"next_page_token,omitempty"`
-    // Order information.
-    Orders []Order202309GetOrderListResponseDataOrders `json:"orders,omitempty"`
-    // Total number of orders in the search result.
-    TotalCount *int32 `json:"total_count,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
+	NextPageToken *string `json:"next_page_token,omitempty"`
+	// Order information.
+	Orders []Order202309GetOrderListResponseDataOrders `json:"orders,omitempty"`
+	// Total number of orders in the search result.
+	TotalCount           *int32 `json:"total_count,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Order202309GetOrderListResponseData Order202309GetOrderListResponseData
@@ -36,161 +36,161 @@ type _Order202309GetOrderListResponseData Order202309GetOrderListResponseData
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewOrder202309GetOrderListResponseData() *Order202309GetOrderListResponseData {
-    this := Order202309GetOrderListResponseData{}
-    return &this
+	this := Order202309GetOrderListResponseData{}
+	return &this
 }
 
 // NewOrder202309GetOrderListResponseDataWithDefaults instantiates a new Order202309GetOrderListResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewOrder202309GetOrderListResponseDataWithDefaults() *Order202309GetOrderListResponseData {
-    this := Order202309GetOrderListResponseData{}
-    return &this
+	this := Order202309GetOrderListResponseData{}
+	return &this
 }
 
 // GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
 func (o *Order202309GetOrderListResponseData) GetNextPageToken() string {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        var ret string
-        return ret
-    }
-    return *o.NextPageToken
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		var ret string
+		return ret
+	}
+	return *o.NextPageToken
 }
 
 // GetNextPageTokenOk returns a tuple with the NextPageToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderListResponseData) GetNextPageTokenOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        return nil, false
-    }
-    return o.NextPageToken, true
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		return nil, false
+	}
+	return o.NextPageToken, true
 }
 
 // HasNextPageToken returns a boolean if a field has been set.
 func (o *Order202309GetOrderListResponseData) HasNextPageToken() bool {
-    if o != nil && !utils.IsNil(o.NextPageToken) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NextPageToken) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNextPageToken gets a reference to the given string and assigns it to the NextPageToken field.
 func (o *Order202309GetOrderListResponseData) SetNextPageToken(v string) {
-    o.NextPageToken = &v
+	o.NextPageToken = &v
 }
 
 // GetOrders returns the Orders field value if set, zero value otherwise.
 func (o *Order202309GetOrderListResponseData) GetOrders() []Order202309GetOrderListResponseDataOrders {
-    if o == nil || utils.IsNil(o.Orders) {
-        var ret []Order202309GetOrderListResponseDataOrders
-        return ret
-    }
-    return o.Orders
+	if o == nil || utils.IsNil(o.Orders) {
+		var ret []Order202309GetOrderListResponseDataOrders
+		return ret
+	}
+	return o.Orders
 }
 
 // GetOrdersOk returns a tuple with the Orders field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderListResponseData) GetOrdersOk() ([]Order202309GetOrderListResponseDataOrders, bool) {
-    if o == nil || utils.IsNil(o.Orders) {
-        return nil, false
-    }
-    return o.Orders, true
+	if o == nil || utils.IsNil(o.Orders) {
+		return nil, false
+	}
+	return o.Orders, true
 }
 
 // HasOrders returns a boolean if a field has been set.
 func (o *Order202309GetOrderListResponseData) HasOrders() bool {
-    if o != nil && !utils.IsNil(o.Orders) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Orders) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrders gets a reference to the given []Order202309GetOrderListResponseDataOrders and assigns it to the Orders field.
 func (o *Order202309GetOrderListResponseData) SetOrders(v []Order202309GetOrderListResponseDataOrders) {
-    o.Orders = v
+	o.Orders = v
 }
 
 // GetTotalCount returns the TotalCount field value if set, zero value otherwise.
 func (o *Order202309GetOrderListResponseData) GetTotalCount() int32 {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        var ret int32
-        return ret
-    }
-    return *o.TotalCount
+	if o == nil || utils.IsNil(o.TotalCount) {
+		var ret int32
+		return ret
+	}
+	return *o.TotalCount
 }
 
 // GetTotalCountOk returns a tuple with the TotalCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderListResponseData) GetTotalCountOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        return nil, false
-    }
-    return o.TotalCount, true
+	if o == nil || utils.IsNil(o.TotalCount) {
+		return nil, false
+	}
+	return o.TotalCount, true
 }
 
 // HasTotalCount returns a boolean if a field has been set.
 func (o *Order202309GetOrderListResponseData) HasTotalCount() bool {
-    if o != nil && !utils.IsNil(o.TotalCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalCount gets a reference to the given int32 and assigns it to the TotalCount field.
 func (o *Order202309GetOrderListResponseData) SetTotalCount(v int32) {
-    o.TotalCount = &v
+	o.TotalCount = &v
 }
 
 func (o Order202309GetOrderListResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Order202309GetOrderListResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.NextPageToken) {
-        toSerialize["next_page_token"] = o.NextPageToken
-    }
-    if !utils.IsNil(o.Orders) {
-        toSerialize["orders"] = o.Orders
-    }
-    if !utils.IsNil(o.TotalCount) {
-        toSerialize["total_count"] = o.TotalCount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.NextPageToken) {
+		toSerialize["next_page_token"] = o.NextPageToken
+	}
+	if !utils.IsNil(o.Orders) {
+		toSerialize["orders"] = o.Orders
+	}
+	if !utils.IsNil(o.TotalCount) {
+		toSerialize["total_count"] = o.TotalCount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Order202309GetOrderListResponseData) UnmarshalJSON(data []byte) (err error) {
-    varOrder202309GetOrderListResponseData := _Order202309GetOrderListResponseData{}
+	varOrder202309GetOrderListResponseData := _Order202309GetOrderListResponseData{}
 
-    err = json.Unmarshal(data, &varOrder202309GetOrderListResponseData)
+	err = json.Unmarshal(data, &varOrder202309GetOrderListResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Order202309GetOrderListResponseData(varOrder202309GetOrderListResponseData)
+	*o = Order202309GetOrderListResponseData(varOrder202309GetOrderListResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "next_page_token")
-        delete(additionalProperties, "orders")
-        delete(additionalProperties, "total_count")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "next_page_token")
+		delete(additionalProperties, "orders")
+		delete(additionalProperties, "total_count")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableOrder202309GetOrderListResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullableOrder202309GetOrderListResponseData) UnmarshalJSON(src []byte) 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_AnalyticsV202508APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_AnalyticsV202508APIService(t *testing.T) {
 
 	t.Run("Test AnalyticsV202508APIService Analytics202508ShopLivesOverviewPerformanceGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.AnalyticsV202508API.Analytics202508ShopLivesOverviewPerformanceGet(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_sdk_golang_AnalyticsV202508APIService(t *testing.T) {
 
 	t.Run("Test AnalyticsV202508APIService Analytics202508ShopLivesPerformanceGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.AnalyticsV202508API.Analytics202508ShopLivesPerformanceGet(context.Background()).Execute()
 

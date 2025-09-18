@@ -11,17 +11,17 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CheckListingPrerequisitesResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CheckListingPrerequisitesResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CheckListingPrerequisitesResponseData{}
 
 // Product202309CheckListingPrerequisitesResponseData struct for Product202309CheckListingPrerequisitesResponseData
 type Product202309CheckListingPrerequisitesResponseData struct {
-    Shop *Product202309CheckListingPrerequisitesResponseDataShop `json:"shop,omitempty"`
-    AdditionalProperties map[string]interface{}
+	Shop                 *Product202309CheckListingPrerequisitesResponseDataShop `json:"shop,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CheckListingPrerequisitesResponseData Product202309CheckListingPrerequisitesResponseData
@@ -31,89 +31,89 @@ type _Product202309CheckListingPrerequisitesResponseData Product202309CheckListi
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CheckListingPrerequisitesResponseData() *Product202309CheckListingPrerequisitesResponseData {
-    this := Product202309CheckListingPrerequisitesResponseData{}
-    return &this
+	this := Product202309CheckListingPrerequisitesResponseData{}
+	return &this
 }
 
 // NewProduct202309CheckListingPrerequisitesResponseDataWithDefaults instantiates a new Product202309CheckListingPrerequisitesResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CheckListingPrerequisitesResponseDataWithDefaults() *Product202309CheckListingPrerequisitesResponseData {
-    this := Product202309CheckListingPrerequisitesResponseData{}
-    return &this
+	this := Product202309CheckListingPrerequisitesResponseData{}
+	return &this
 }
 
 // GetShop returns the Shop field value if set, zero value otherwise.
 func (o *Product202309CheckListingPrerequisitesResponseData) GetShop() Product202309CheckListingPrerequisitesResponseDataShop {
-    if o == nil || utils.IsNil(o.Shop) {
-        var ret Product202309CheckListingPrerequisitesResponseDataShop
-        return ret
-    }
-    return *o.Shop
+	if o == nil || utils.IsNil(o.Shop) {
+		var ret Product202309CheckListingPrerequisitesResponseDataShop
+		return ret
+	}
+	return *o.Shop
 }
 
 // GetShopOk returns a tuple with the Shop field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CheckListingPrerequisitesResponseData) GetShopOk() (*Product202309CheckListingPrerequisitesResponseDataShop, bool) {
-    if o == nil || utils.IsNil(o.Shop) {
-        return nil, false
-    }
-    return o.Shop, true
+	if o == nil || utils.IsNil(o.Shop) {
+		return nil, false
+	}
+	return o.Shop, true
 }
 
 // HasShop returns a boolean if a field has been set.
 func (o *Product202309CheckListingPrerequisitesResponseData) HasShop() bool {
-    if o != nil && !utils.IsNil(o.Shop) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Shop) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShop gets a reference to the given Product202309CheckListingPrerequisitesResponseDataShop and assigns it to the Shop field.
 func (o *Product202309CheckListingPrerequisitesResponseData) SetShop(v Product202309CheckListingPrerequisitesResponseDataShop) {
-    o.Shop = &v
+	o.Shop = &v
 }
 
 func (o Product202309CheckListingPrerequisitesResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CheckListingPrerequisitesResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Shop) {
-        toSerialize["shop"] = o.Shop
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Shop) {
+		toSerialize["shop"] = o.Shop
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CheckListingPrerequisitesResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CheckListingPrerequisitesResponseData := _Product202309CheckListingPrerequisitesResponseData{}
+	varProduct202309CheckListingPrerequisitesResponseData := _Product202309CheckListingPrerequisitesResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202309CheckListingPrerequisitesResponseData)
+	err = json.Unmarshal(data, &varProduct202309CheckListingPrerequisitesResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CheckListingPrerequisitesResponseData(varProduct202309CheckListingPrerequisitesResponseData)
+	*o = Product202309CheckListingPrerequisitesResponseData(varProduct202309CheckListingPrerequisitesResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "shop")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "shop")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CheckListingPrerequisitesResponseData struct {
@@ -151,5 +151,3 @@ func (v *NullableProduct202309CheckListingPrerequisitesResponseData) UnmarshalJS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

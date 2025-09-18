@@ -11,26 +11,26 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetGlobalCategoriesResponseDataCategories type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetGlobalCategoriesResponseDataCategories type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetGlobalCategoriesResponseDataCategories{}
 
 // Product202309GetGlobalCategoriesResponseDataCategories struct for Product202309GetGlobalCategoriesResponseDataCategories
 type Product202309GetGlobalCategoriesResponseDataCategories struct {
-    // The category ID.
-    Id *string `json:"id,omitempty"`
-    // A flag to indicate if the category is a leaf category.  **Note**: You can only create or edit products that belong to a leaf category.
-    IsLeaf *bool `json:"is_leaf,omitempty"`
-    // The name of the category.
-    LocalName *string `json:"local_name,omitempty"`
-    // The parent category ID.  For the root category, the parent ID is `0`.
-    ParentId *string `json:"parent_id,omitempty"`
-    // The shop's permission status for this category. Possible values: - AVAILABLE: You have the permission to create products in this category. - NON_MAIN_CATEGORY: This category is out of scope for this seller, and you do not have permission to use it.  Contact your account manager for assistance.
-    PermissionStatuses []string `json:"permission_statuses,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The category ID.
+	Id *string `json:"id,omitempty"`
+	// A flag to indicate if the category is a leaf category.  **Note**: You can only create or edit products that belong to a leaf category.
+	IsLeaf *bool `json:"is_leaf,omitempty"`
+	// The name of the category.
+	LocalName *string `json:"local_name,omitempty"`
+	// The parent category ID.  For the root category, the parent ID is `0`.
+	ParentId *string `json:"parent_id,omitempty"`
+	// The shop's permission status for this category. Possible values: - AVAILABLE: You have the permission to create products in this category. - NON_MAIN_CATEGORY: This category is out of scope for this seller, and you do not have permission to use it.  Contact your account manager for assistance.
+	PermissionStatuses   []string `json:"permission_statuses,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetGlobalCategoriesResponseDataCategories Product202309GetGlobalCategoriesResponseDataCategories
@@ -40,233 +40,233 @@ type _Product202309GetGlobalCategoriesResponseDataCategories Product202309GetGlo
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetGlobalCategoriesResponseDataCategories() *Product202309GetGlobalCategoriesResponseDataCategories {
-    this := Product202309GetGlobalCategoriesResponseDataCategories{}
-    return &this
+	this := Product202309GetGlobalCategoriesResponseDataCategories{}
+	return &this
 }
 
 // NewProduct202309GetGlobalCategoriesResponseDataCategoriesWithDefaults instantiates a new Product202309GetGlobalCategoriesResponseDataCategories object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetGlobalCategoriesResponseDataCategoriesWithDefaults() *Product202309GetGlobalCategoriesResponseDataCategories {
-    this := Product202309GetGlobalCategoriesResponseDataCategories{}
-    return &this
+	this := Product202309GetGlobalCategoriesResponseDataCategories{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetIsLeaf returns the IsLeaf field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetIsLeaf() bool {
-    if o == nil || utils.IsNil(o.IsLeaf) {
-        var ret bool
-        return ret
-    }
-    return *o.IsLeaf
+	if o == nil || utils.IsNil(o.IsLeaf) {
+		var ret bool
+		return ret
+	}
+	return *o.IsLeaf
 }
 
 // GetIsLeafOk returns a tuple with the IsLeaf field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetIsLeafOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.IsLeaf) {
-        return nil, false
-    }
-    return o.IsLeaf, true
+	if o == nil || utils.IsNil(o.IsLeaf) {
+		return nil, false
+	}
+	return o.IsLeaf, true
 }
 
 // HasIsLeaf returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) HasIsLeaf() bool {
-    if o != nil && !utils.IsNil(o.IsLeaf) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.IsLeaf) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIsLeaf gets a reference to the given bool and assigns it to the IsLeaf field.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) SetIsLeaf(v bool) {
-    o.IsLeaf = &v
+	o.IsLeaf = &v
 }
 
 // GetLocalName returns the LocalName field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetLocalName() string {
-    if o == nil || utils.IsNil(o.LocalName) {
-        var ret string
-        return ret
-    }
-    return *o.LocalName
+	if o == nil || utils.IsNil(o.LocalName) {
+		var ret string
+		return ret
+	}
+	return *o.LocalName
 }
 
 // GetLocalNameOk returns a tuple with the LocalName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetLocalNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.LocalName) {
-        return nil, false
-    }
-    return o.LocalName, true
+	if o == nil || utils.IsNil(o.LocalName) {
+		return nil, false
+	}
+	return o.LocalName, true
 }
 
 // HasLocalName returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) HasLocalName() bool {
-    if o != nil && !utils.IsNil(o.LocalName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LocalName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocalName gets a reference to the given string and assigns it to the LocalName field.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) SetLocalName(v string) {
-    o.LocalName = &v
+	o.LocalName = &v
 }
 
 // GetParentId returns the ParentId field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetParentId() string {
-    if o == nil || utils.IsNil(o.ParentId) {
-        var ret string
-        return ret
-    }
-    return *o.ParentId
+	if o == nil || utils.IsNil(o.ParentId) {
+		var ret string
+		return ret
+	}
+	return *o.ParentId
 }
 
 // GetParentIdOk returns a tuple with the ParentId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetParentIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ParentId) {
-        return nil, false
-    }
-    return o.ParentId, true
+	if o == nil || utils.IsNil(o.ParentId) {
+		return nil, false
+	}
+	return o.ParentId, true
 }
 
 // HasParentId returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) HasParentId() bool {
-    if o != nil && !utils.IsNil(o.ParentId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ParentId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetParentId gets a reference to the given string and assigns it to the ParentId field.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) SetParentId(v string) {
-    o.ParentId = &v
+	o.ParentId = &v
 }
 
 // GetPermissionStatuses returns the PermissionStatuses field value if set, zero value otherwise.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetPermissionStatuses() []string {
-    if o == nil || utils.IsNil(o.PermissionStatuses) {
-        var ret []string
-        return ret
-    }
-    return o.PermissionStatuses
+	if o == nil || utils.IsNil(o.PermissionStatuses) {
+		var ret []string
+		return ret
+	}
+	return o.PermissionStatuses
 }
 
 // GetPermissionStatusesOk returns a tuple with the PermissionStatuses field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) GetPermissionStatusesOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.PermissionStatuses) {
-        return nil, false
-    }
-    return o.PermissionStatuses, true
+	if o == nil || utils.IsNil(o.PermissionStatuses) {
+		return nil, false
+	}
+	return o.PermissionStatuses, true
 }
 
 // HasPermissionStatuses returns a boolean if a field has been set.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) HasPermissionStatuses() bool {
-    if o != nil && !utils.IsNil(o.PermissionStatuses) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PermissionStatuses) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPermissionStatuses gets a reference to the given []string and assigns it to the PermissionStatuses field.
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) SetPermissionStatuses(v []string) {
-    o.PermissionStatuses = v
+	o.PermissionStatuses = v
 }
 
 func (o Product202309GetGlobalCategoriesResponseDataCategories) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetGlobalCategoriesResponseDataCategories) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.IsLeaf) {
-        toSerialize["is_leaf"] = o.IsLeaf
-    }
-    if !utils.IsNil(o.LocalName) {
-        toSerialize["local_name"] = o.LocalName
-    }
-    if !utils.IsNil(o.ParentId) {
-        toSerialize["parent_id"] = o.ParentId
-    }
-    if !utils.IsNil(o.PermissionStatuses) {
-        toSerialize["permission_statuses"] = o.PermissionStatuses
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.IsLeaf) {
+		toSerialize["is_leaf"] = o.IsLeaf
+	}
+	if !utils.IsNil(o.LocalName) {
+		toSerialize["local_name"] = o.LocalName
+	}
+	if !utils.IsNil(o.ParentId) {
+		toSerialize["parent_id"] = o.ParentId
+	}
+	if !utils.IsNil(o.PermissionStatuses) {
+		toSerialize["permission_statuses"] = o.PermissionStatuses
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetGlobalCategoriesResponseDataCategories) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetGlobalCategoriesResponseDataCategories := _Product202309GetGlobalCategoriesResponseDataCategories{}
+	varProduct202309GetGlobalCategoriesResponseDataCategories := _Product202309GetGlobalCategoriesResponseDataCategories{}
 
-    err = json.Unmarshal(data, &varProduct202309GetGlobalCategoriesResponseDataCategories)
+	err = json.Unmarshal(data, &varProduct202309GetGlobalCategoriesResponseDataCategories)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetGlobalCategoriesResponseDataCategories(varProduct202309GetGlobalCategoriesResponseDataCategories)
+	*o = Product202309GetGlobalCategoriesResponseDataCategories(varProduct202309GetGlobalCategoriesResponseDataCategories)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "is_leaf")
-        delete(additionalProperties, "local_name")
-        delete(additionalProperties, "parent_id")
-        delete(additionalProperties, "permission_statuses")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "is_leaf")
+		delete(additionalProperties, "local_name")
+		delete(additionalProperties, "parent_id")
+		delete(additionalProperties, "permission_statuses")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetGlobalCategoriesResponseDataCategories struct {
@@ -304,5 +304,3 @@ func (v *NullableProduct202309GetGlobalCategoriesResponseDataCategories) Unmarsh
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

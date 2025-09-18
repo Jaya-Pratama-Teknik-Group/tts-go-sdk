@@ -11,18 +11,18 @@ API version: 1.0.0
 package finance_v202501
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown type satisfies the MappedNullable interface at compile time
+// checks if the Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown{}
 
 // Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown struct for Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown
 type Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown struct {
-    Fee *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownFee `json:"fee,omitempty"`
-    Tax *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownTax `json:"tax,omitempty"`
-    AdditionalProperties map[string]interface{}
+	Fee                  *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownFee `json:"fee,omitempty"`
+	Tax                  *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownTax `json:"tax,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown
@@ -32,125 +32,125 @@ type _Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreak
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown() *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown {
-    this := Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown{}
-    return &this
+	this := Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown{}
+	return &this
 }
 
 // NewFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownWithDefaults instantiates a new Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownWithDefaults() *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown {
-    this := Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown{}
-    return &this
+	this := Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown{}
+	return &this
 }
 
 // GetFee returns the Fee field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) GetFee() Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownFee {
-    if o == nil || utils.IsNil(o.Fee) {
-        var ret Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownFee
-        return ret
-    }
-    return *o.Fee
+	if o == nil || utils.IsNil(o.Fee) {
+		var ret Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownFee
+		return ret
+	}
+	return *o.Fee
 }
 
 // GetFeeOk returns a tuple with the Fee field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) GetFeeOk() (*Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownFee, bool) {
-    if o == nil || utils.IsNil(o.Fee) {
-        return nil, false
-    }
-    return o.Fee, true
+	if o == nil || utils.IsNil(o.Fee) {
+		return nil, false
+	}
+	return o.Fee, true
 }
 
 // HasFee returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) HasFee() bool {
-    if o != nil && !utils.IsNil(o.Fee) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Fee) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFee gets a reference to the given Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownFee and assigns it to the Fee field.
 func (o *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) SetFee(v Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownFee) {
-    o.Fee = &v
+	o.Fee = &v
 }
 
 // GetTax returns the Tax field value if set, zero value otherwise.
 func (o *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) GetTax() Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownTax {
-    if o == nil || utils.IsNil(o.Tax) {
-        var ret Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownTax
-        return ret
-    }
-    return *o.Tax
+	if o == nil || utils.IsNil(o.Tax) {
+		var ret Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownTax
+		return ret
+	}
+	return *o.Tax
 }
 
 // GetTaxOk returns a tuple with the Tax field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) GetTaxOk() (*Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownTax, bool) {
-    if o == nil || utils.IsNil(o.Tax) {
-        return nil, false
-    }
-    return o.Tax, true
+	if o == nil || utils.IsNil(o.Tax) {
+		return nil, false
+	}
+	return o.Tax, true
 }
 
 // HasTax returns a boolean if a field has been set.
 func (o *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) HasTax() bool {
-    if o != nil && !utils.IsNil(o.Tax) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Tax) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTax gets a reference to the given Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownTax and assigns it to the Tax field.
 func (o *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) SetTax(v Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdownTax) {
-    o.Tax = &v
+	o.Tax = &v
 }
 
 func (o Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Fee) {
-        toSerialize["fee"] = o.Fee
-    }
-    if !utils.IsNil(o.Tax) {
-        toSerialize["tax"] = o.Tax
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Fee) {
+		toSerialize["fee"] = o.Fee
+	}
+	if !utils.IsNil(o.Tax) {
+		toSerialize["tax"] = o.Tax
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown) UnmarshalJSON(data []byte) (err error) {
-    varFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown := _Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown{}
+	varFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown := _Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown{}
 
-    err = json.Unmarshal(data, &varFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown)
+	err = json.Unmarshal(data, &varFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown(varFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown)
+	*o = Finance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown(varFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "fee")
-        delete(additionalProperties, "tax")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "fee")
+		delete(additionalProperties, "tax")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFinance202501GetTransactionsbyStatementResponseDataTransactionsFeeTaxBreakdown struct {
@@ -188,5 +188,3 @@ func (v *NullableFinance202501GetTransactionsbyStatementResponseDataTransactions
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

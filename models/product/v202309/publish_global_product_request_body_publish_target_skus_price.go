@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice type satisfies the MappedNullable interface at compile time
+// checks if the Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice{}
 
 // Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice struct for Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice
 type Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice struct {
-    // The SKU's **local pre-tax price**. This excludes any applicable charges such as cross-border shipping costs, taxes, and other fees, and therefore does not appear on the product page. Refer to [Product Pricing](https://partner.tiktokshop.com/docv2/page/67e1288d76cfee049d9af858) for the allowed price ranges in each market.  **Note**:  Not applicable for JP and US shops using China warehouses, please use `price.sale_price` instead.
-    Amount *string `json:"amount,omitempty"`
-    // The currency. You can use the local currency or USD. Possible values: - EUR: France, Germany, Ireland, Italy, Spain - GBP: United Kingdom - IDR: Indonesia - JPY: Japanese - MYR: Malaysia - PHP: Philippines - SGD: Singapore - THB: Thailand - USD: United States - VND: Vietnam - MXN: Mexico
-    Currency *string `json:"currency,omitempty"`
-    // The SKU's **local display price** shown on the product page before any discounts.  Refer to [Product Pricing](https://partner.tiktokshop.com/docv2/page/67e1288d76cfee049d9af858) for the allowed price ranges in each market.  **Note**:  -  Required for JP and US shops using China warehouses, optional for others. - This is the definitive final price shown on the product page, all other prices will be ignored.
-    SalePrice *string `json:"sale_price,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The SKU's **local pre-tax price**. This excludes any applicable charges such as cross-border shipping costs, taxes, and other fees, and therefore does not appear on the product page. Refer to [Product Pricing](https://partner.tiktokshop.com/docv2/page/67e1288d76cfee049d9af858) for the allowed price ranges in each market.  **Note**:  Not applicable for JP and US shops using China warehouses, please use `price.sale_price` instead.
+	Amount *string `json:"amount,omitempty"`
+	// The currency. You can use the local currency or USD. Possible values: - EUR: France, Germany, Ireland, Italy, Spain - GBP: United Kingdom - IDR: Indonesia - JPY: Japanese - MYR: Malaysia - PHP: Philippines - SGD: Singapore - THB: Thailand - USD: United States - VND: Vietnam - MXN: Mexico
+	Currency *string `json:"currency,omitempty"`
+	// The SKU's **local display price** shown on the product page before any discounts.  Refer to [Product Pricing](https://partner.tiktokshop.com/docv2/page/67e1288d76cfee049d9af858) for the allowed price ranges in each market.  **Note**:  -  Required for JP and US shops using China warehouses, optional for others. - This is the definitive final price shown on the product page, all other prices will be ignored.
+	SalePrice            *string `json:"sale_price,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice
@@ -36,161 +36,161 @@ type _Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice Product
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPrice() *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice {
-    this := Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice{}
-    return &this
+	this := Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice{}
+	return &this
 }
 
 // NewProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPriceWithDefaults instantiates a new Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPriceWithDefaults() *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice {
-    this := Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice{}
-    return &this
+	this := Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice{}
+	return &this
 }
 
 // GetAmount returns the Amount field value if set, zero value otherwise.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) GetAmount() string {
-    if o == nil || utils.IsNil(o.Amount) {
-        var ret string
-        return ret
-    }
-    return *o.Amount
+	if o == nil || utils.IsNil(o.Amount) {
+		var ret string
+		return ret
+	}
+	return *o.Amount
 }
 
 // GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) GetAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Amount) {
-        return nil, false
-    }
-    return o.Amount, true
+	if o == nil || utils.IsNil(o.Amount) {
+		return nil, false
+	}
+	return o.Amount, true
 }
 
 // HasAmount returns a boolean if a field has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) HasAmount() bool {
-    if o != nil && !utils.IsNil(o.Amount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Amount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAmount gets a reference to the given string and assigns it to the Amount field.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) SetAmount(v string) {
-    o.Amount = &v
+	o.Amount = &v
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 // GetSalePrice returns the SalePrice field value if set, zero value otherwise.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) GetSalePrice() string {
-    if o == nil || utils.IsNil(o.SalePrice) {
-        var ret string
-        return ret
-    }
-    return *o.SalePrice
+	if o == nil || utils.IsNil(o.SalePrice) {
+		var ret string
+		return ret
+	}
+	return *o.SalePrice
 }
 
 // GetSalePriceOk returns a tuple with the SalePrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) GetSalePriceOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SalePrice) {
-        return nil, false
-    }
-    return o.SalePrice, true
+	if o == nil || utils.IsNil(o.SalePrice) {
+		return nil, false
+	}
+	return o.SalePrice, true
 }
 
 // HasSalePrice returns a boolean if a field has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) HasSalePrice() bool {
-    if o != nil && !utils.IsNil(o.SalePrice) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SalePrice) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSalePrice gets a reference to the given string and assigns it to the SalePrice field.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) SetSalePrice(v string) {
-    o.SalePrice = &v
+	o.SalePrice = &v
 }
 
 func (o Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Amount) {
-        toSerialize["amount"] = o.Amount
-    }
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
-    if !utils.IsNil(o.SalePrice) {
-        toSerialize["sale_price"] = o.SalePrice
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
+	}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
+	if !utils.IsNil(o.SalePrice) {
+		toSerialize["sale_price"] = o.SalePrice
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPrice := _Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice{}
+	varProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPrice := _Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice{}
 
-    err = json.Unmarshal(data, &varProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPrice)
+	err = json.Unmarshal(data, &varProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPrice)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice(varProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPrice)
+	*o = Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice(varProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPrice)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "amount")
-        delete(additionalProperties, "currency")
-        delete(additionalProperties, "sale_price")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "amount")
+		delete(additionalProperties, "currency")
+		delete(additionalProperties, "sale_price")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPrice struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202309PublishGlobalProductRequestBodyPublishTargetSkusPr
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

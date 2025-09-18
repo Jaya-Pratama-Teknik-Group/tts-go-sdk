@@ -11,22 +11,22 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails{}
 
 // Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails struct for Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails
 type Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails struct {
-    // TikTok Shop product id of gift.
-    ProductId *string `json:"product_id,omitempty"`
-    // TikTok Shop sku id of gift.
-    SkuId *string `json:"sku_id,omitempty"`
-    // The quantity limit of the gift sku which is involved in the activity. The range is [1, 99999].  If you are updating the value of an existing sku, the value cannot be decreased.
-    TotalClaimLimit *string `json:"total_claim_limit,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// TikTok Shop product id of gift.
+	ProductId *string `json:"product_id,omitempty"`
+	// TikTok Shop sku id of gift.
+	SkuId *string `json:"sku_id,omitempty"`
+	// The quantity limit of the gift sku which is involved in the activity. The range is [1, 99999].  If you are updating the value of an existing sku, the value cannot be decreased.
+	TotalClaimLimit      *string `json:"total_claim_limit,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails
@@ -36,161 +36,161 @@ type _Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountG
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails() *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails {
-    this := Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails{}
-    return &this
+	this := Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails{}
+	return &this
 }
 
 // NewPromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetailsWithDefaults instantiates a new Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetailsWithDefaults() *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails {
-    this := Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails{}
-    return &this
+	this := Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails{}
+	return &this
 }
 
 // GetProductId returns the ProductId field value if set, zero value otherwise.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) GetProductId() string {
-    if o == nil || utils.IsNil(o.ProductId) {
-        var ret string
-        return ret
-    }
-    return *o.ProductId
+	if o == nil || utils.IsNil(o.ProductId) {
+		var ret string
+		return ret
+	}
+	return *o.ProductId
 }
 
 // GetProductIdOk returns a tuple with the ProductId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) GetProductIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ProductId) {
-        return nil, false
-    }
-    return o.ProductId, true
+	if o == nil || utils.IsNil(o.ProductId) {
+		return nil, false
+	}
+	return o.ProductId, true
 }
 
 // HasProductId returns a boolean if a field has been set.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) HasProductId() bool {
-    if o != nil && !utils.IsNil(o.ProductId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ProductId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProductId gets a reference to the given string and assigns it to the ProductId field.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) SetProductId(v string) {
-    o.ProductId = &v
+	o.ProductId = &v
 }
 
 // GetSkuId returns the SkuId field value if set, zero value otherwise.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) GetSkuId() string {
-    if o == nil || utils.IsNil(o.SkuId) {
-        var ret string
-        return ret
-    }
-    return *o.SkuId
+	if o == nil || utils.IsNil(o.SkuId) {
+		var ret string
+		return ret
+	}
+	return *o.SkuId
 }
 
 // GetSkuIdOk returns a tuple with the SkuId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) GetSkuIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SkuId) {
-        return nil, false
-    }
-    return o.SkuId, true
+	if o == nil || utils.IsNil(o.SkuId) {
+		return nil, false
+	}
+	return o.SkuId, true
 }
 
 // HasSkuId returns a boolean if a field has been set.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) HasSkuId() bool {
-    if o != nil && !utils.IsNil(o.SkuId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuId gets a reference to the given string and assigns it to the SkuId field.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) SetSkuId(v string) {
-    o.SkuId = &v
+	o.SkuId = &v
 }
 
 // GetTotalClaimLimit returns the TotalClaimLimit field value if set, zero value otherwise.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) GetTotalClaimLimit() string {
-    if o == nil || utils.IsNil(o.TotalClaimLimit) {
-        var ret string
-        return ret
-    }
-    return *o.TotalClaimLimit
+	if o == nil || utils.IsNil(o.TotalClaimLimit) {
+		var ret string
+		return ret
+	}
+	return *o.TotalClaimLimit
 }
 
 // GetTotalClaimLimitOk returns a tuple with the TotalClaimLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) GetTotalClaimLimitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TotalClaimLimit) {
-        return nil, false
-    }
-    return o.TotalClaimLimit, true
+	if o == nil || utils.IsNil(o.TotalClaimLimit) {
+		return nil, false
+	}
+	return o.TotalClaimLimit, true
 }
 
 // HasTotalClaimLimit returns a boolean if a field has been set.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) HasTotalClaimLimit() bool {
-    if o != nil && !utils.IsNil(o.TotalClaimLimit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalClaimLimit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalClaimLimit gets a reference to the given string and assigns it to the TotalClaimLimit field.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) SetTotalClaimLimit(v string) {
-    o.TotalClaimLimit = &v
+	o.TotalClaimLimit = &v
 }
 
 func (o Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ProductId) {
-        toSerialize["product_id"] = o.ProductId
-    }
-    if !utils.IsNil(o.SkuId) {
-        toSerialize["sku_id"] = o.SkuId
-    }
-    if !utils.IsNil(o.TotalClaimLimit) {
-        toSerialize["total_claim_limit"] = o.TotalClaimLimit
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ProductId) {
+		toSerialize["product_id"] = o.ProductId
+	}
+	if !utils.IsNil(o.SkuId) {
+		toSerialize["sku_id"] = o.SkuId
+	}
+	if !utils.IsNil(o.TotalClaimLimit) {
+		toSerialize["total_claim_limit"] = o.TotalClaimLimit
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails := _Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails{}
+	varPromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails := _Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails{}
 
-    err = json.Unmarshal(data, &varPromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails)
+	err = json.Unmarshal(data, &varPromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails(varPromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails)
+	*o = Promotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails(varPromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "product_id")
-        delete(additionalProperties, "sku_id")
-        delete(additionalProperties, "total_claim_limit")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "product_id")
+		delete(additionalProperties, "sku_id")
+		delete(additionalProperties, "total_claim_limit")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309SearchActivitiesResponseDataActivitiesDiscountGiftDiscountGiftInfosGiftDetails struct {
@@ -228,5 +228,3 @@ func (v *NullablePromotion202309SearchActivitiesResponseDataActivitiesDiscountGi
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

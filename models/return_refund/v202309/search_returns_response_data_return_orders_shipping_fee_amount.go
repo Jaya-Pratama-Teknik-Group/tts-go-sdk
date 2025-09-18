@@ -11,24 +11,24 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount{}
 
 // ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount struct for ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount
 type ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount struct {
-    // The amount of return shipping fee buyer paid.
-    BuyerPaidReturnShippingFee *string `json:"buyer_paid_return_shipping_fee,omitempty"`
-    // Return shipping fee currency.
-    Currency *string `json:"currency,omitempty"`
-    // The amount of return shipping fee platform paid.
-    PlatformPaidReturnShippingFee *string `json:"platform_paid_return_shipping_fee,omitempty"`
-    // The amount of return shipping fee seller paid.
-    SellerPaidReturnShippingFee *string `json:"seller_paid_return_shipping_fee,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The amount of return shipping fee buyer paid.
+	BuyerPaidReturnShippingFee *string `json:"buyer_paid_return_shipping_fee,omitempty"`
+	// Return shipping fee currency.
+	Currency *string `json:"currency,omitempty"`
+	// The amount of return shipping fee platform paid.
+	PlatformPaidReturnShippingFee *string `json:"platform_paid_return_shipping_fee,omitempty"`
+	// The amount of return shipping fee seller paid.
+	SellerPaidReturnShippingFee *string `json:"seller_paid_return_shipping_fee,omitempty"`
+	AdditionalProperties        map[string]interface{}
 }
 
 type _ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount
@@ -38,197 +38,197 @@ type _ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount R
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount() *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount {
-    this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount{}
+	return &this
 }
 
 // NewReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmountWithDefaults instantiates a new ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmountWithDefaults() *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount {
-    this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount{}
-    return &this
+	this := ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount{}
+	return &this
 }
 
 // GetBuyerPaidReturnShippingFee returns the BuyerPaidReturnShippingFee field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) GetBuyerPaidReturnShippingFee() string {
-    if o == nil || utils.IsNil(o.BuyerPaidReturnShippingFee) {
-        var ret string
-        return ret
-    }
-    return *o.BuyerPaidReturnShippingFee
+	if o == nil || utils.IsNil(o.BuyerPaidReturnShippingFee) {
+		var ret string
+		return ret
+	}
+	return *o.BuyerPaidReturnShippingFee
 }
 
 // GetBuyerPaidReturnShippingFeeOk returns a tuple with the BuyerPaidReturnShippingFee field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) GetBuyerPaidReturnShippingFeeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.BuyerPaidReturnShippingFee) {
-        return nil, false
-    }
-    return o.BuyerPaidReturnShippingFee, true
+	if o == nil || utils.IsNil(o.BuyerPaidReturnShippingFee) {
+		return nil, false
+	}
+	return o.BuyerPaidReturnShippingFee, true
 }
 
 // HasBuyerPaidReturnShippingFee returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) HasBuyerPaidReturnShippingFee() bool {
-    if o != nil && !utils.IsNil(o.BuyerPaidReturnShippingFee) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.BuyerPaidReturnShippingFee) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetBuyerPaidReturnShippingFee gets a reference to the given string and assigns it to the BuyerPaidReturnShippingFee field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) SetBuyerPaidReturnShippingFee(v string) {
-    o.BuyerPaidReturnShippingFee = &v
+	o.BuyerPaidReturnShippingFee = &v
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 // GetPlatformPaidReturnShippingFee returns the PlatformPaidReturnShippingFee field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) GetPlatformPaidReturnShippingFee() string {
-    if o == nil || utils.IsNil(o.PlatformPaidReturnShippingFee) {
-        var ret string
-        return ret
-    }
-    return *o.PlatformPaidReturnShippingFee
+	if o == nil || utils.IsNil(o.PlatformPaidReturnShippingFee) {
+		var ret string
+		return ret
+	}
+	return *o.PlatformPaidReturnShippingFee
 }
 
 // GetPlatformPaidReturnShippingFeeOk returns a tuple with the PlatformPaidReturnShippingFee field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) GetPlatformPaidReturnShippingFeeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PlatformPaidReturnShippingFee) {
-        return nil, false
-    }
-    return o.PlatformPaidReturnShippingFee, true
+	if o == nil || utils.IsNil(o.PlatformPaidReturnShippingFee) {
+		return nil, false
+	}
+	return o.PlatformPaidReturnShippingFee, true
 }
 
 // HasPlatformPaidReturnShippingFee returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) HasPlatformPaidReturnShippingFee() bool {
-    if o != nil && !utils.IsNil(o.PlatformPaidReturnShippingFee) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PlatformPaidReturnShippingFee) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPlatformPaidReturnShippingFee gets a reference to the given string and assigns it to the PlatformPaidReturnShippingFee field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) SetPlatformPaidReturnShippingFee(v string) {
-    o.PlatformPaidReturnShippingFee = &v
+	o.PlatformPaidReturnShippingFee = &v
 }
 
 // GetSellerPaidReturnShippingFee returns the SellerPaidReturnShippingFee field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) GetSellerPaidReturnShippingFee() string {
-    if o == nil || utils.IsNil(o.SellerPaidReturnShippingFee) {
-        var ret string
-        return ret
-    }
-    return *o.SellerPaidReturnShippingFee
+	if o == nil || utils.IsNil(o.SellerPaidReturnShippingFee) {
+		var ret string
+		return ret
+	}
+	return *o.SellerPaidReturnShippingFee
 }
 
 // GetSellerPaidReturnShippingFeeOk returns a tuple with the SellerPaidReturnShippingFee field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) GetSellerPaidReturnShippingFeeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SellerPaidReturnShippingFee) {
-        return nil, false
-    }
-    return o.SellerPaidReturnShippingFee, true
+	if o == nil || utils.IsNil(o.SellerPaidReturnShippingFee) {
+		return nil, false
+	}
+	return o.SellerPaidReturnShippingFee, true
 }
 
 // HasSellerPaidReturnShippingFee returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) HasSellerPaidReturnShippingFee() bool {
-    if o != nil && !utils.IsNil(o.SellerPaidReturnShippingFee) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SellerPaidReturnShippingFee) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSellerPaidReturnShippingFee gets a reference to the given string and assigns it to the SellerPaidReturnShippingFee field.
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) SetSellerPaidReturnShippingFee(v string) {
-    o.SellerPaidReturnShippingFee = &v
+	o.SellerPaidReturnShippingFee = &v
 }
 
 func (o ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.BuyerPaidReturnShippingFee) {
-        toSerialize["buyer_paid_return_shipping_fee"] = o.BuyerPaidReturnShippingFee
-    }
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
-    if !utils.IsNil(o.PlatformPaidReturnShippingFee) {
-        toSerialize["platform_paid_return_shipping_fee"] = o.PlatformPaidReturnShippingFee
-    }
-    if !utils.IsNil(o.SellerPaidReturnShippingFee) {
-        toSerialize["seller_paid_return_shipping_fee"] = o.SellerPaidReturnShippingFee
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.BuyerPaidReturnShippingFee) {
+		toSerialize["buyer_paid_return_shipping_fee"] = o.BuyerPaidReturnShippingFee
+	}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
+	if !utils.IsNil(o.PlatformPaidReturnShippingFee) {
+		toSerialize["platform_paid_return_shipping_fee"] = o.PlatformPaidReturnShippingFee
+	}
+	if !utils.IsNil(o.SellerPaidReturnShippingFee) {
+		toSerialize["seller_paid_return_shipping_fee"] = o.SellerPaidReturnShippingFee
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount := _ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount{}
+	varReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount := _ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount)
+	err = json.Unmarshal(data, &varReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount(varReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount)
+	*o = ReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount(varReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "buyer_paid_return_shipping_fee")
-        delete(additionalProperties, "currency")
-        delete(additionalProperties, "platform_paid_return_shipping_fee")
-        delete(additionalProperties, "seller_paid_return_shipping_fee")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "buyer_paid_return_shipping_fee")
+		delete(additionalProperties, "currency")
+		delete(additionalProperties, "platform_paid_return_shipping_fee")
+		delete(additionalProperties, "seller_paid_return_shipping_fee")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309SearchReturnsResponseDataReturnOrdersShippingFeeAmount struct {
@@ -266,5 +266,3 @@ func (v *NullableReturnRefund202309SearchReturnsResponseDataReturnOrdersShipping
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

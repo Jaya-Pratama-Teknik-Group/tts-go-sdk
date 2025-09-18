@@ -11,24 +11,24 @@ API version: 1.0.0
 package supply_chain_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension type satisfies the MappedNullable interface at compile time
+// checks if the SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension{}
 
 // SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension struct for SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension
 type SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension struct {
-    // Package height value
-    Height *int64 `json:"height,omitempty"`
-    // Package length value
-    Length *int64 `json:"length,omitempty"`
-    // Package dimension unit Possible values: - METER - CENTIMETER - MILLIMETER - MICRON - FOOT - INCH
-    Unit *string `json:"unit,omitempty"`
-    // Package width value
-    Width *int64 `json:"width,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Package height value
+	Height *int64 `json:"height,omitempty"`
+	// Package length value
+	Length *int64 `json:"length,omitempty"`
+	// Package dimension unit Possible values: - METER - CENTIMETER - MILLIMETER - MICRON - FOOT - INCH
+	Unit *string `json:"unit,omitempty"`
+	// Package width value
+	Width                *int64 `json:"width,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension
@@ -38,197 +38,197 @@ type _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension Supply
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension() *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension {
-    this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension{}
+	return &this
 }
 
 // NewSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimensionWithDefaults instantiates a new SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimensionWithDefaults() *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension {
-    this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension{}
+	return &this
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) GetHeight() int64 {
-    if o == nil || utils.IsNil(o.Height) {
-        var ret int64
-        return ret
-    }
-    return *o.Height
+	if o == nil || utils.IsNil(o.Height) {
+		var ret int64
+		return ret
+	}
+	return *o.Height
 }
 
 // GetHeightOk returns a tuple with the Height field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) GetHeightOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Height) {
-        return nil, false
-    }
-    return o.Height, true
+	if o == nil || utils.IsNil(o.Height) {
+		return nil, false
+	}
+	return o.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) HasHeight() bool {
-    if o != nil && !utils.IsNil(o.Height) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Height) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHeight gets a reference to the given int64 and assigns it to the Height field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) SetHeight(v int64) {
-    o.Height = &v
+	o.Height = &v
 }
 
 // GetLength returns the Length field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) GetLength() int64 {
-    if o == nil || utils.IsNil(o.Length) {
-        var ret int64
-        return ret
-    }
-    return *o.Length
+	if o == nil || utils.IsNil(o.Length) {
+		var ret int64
+		return ret
+	}
+	return *o.Length
 }
 
 // GetLengthOk returns a tuple with the Length field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) GetLengthOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Length) {
-        return nil, false
-    }
-    return o.Length, true
+	if o == nil || utils.IsNil(o.Length) {
+		return nil, false
+	}
+	return o.Length, true
 }
 
 // HasLength returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) HasLength() bool {
-    if o != nil && !utils.IsNil(o.Length) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Length) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLength gets a reference to the given int64 and assigns it to the Length field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) SetLength(v int64) {
-    o.Length = &v
+	o.Length = &v
 }
 
 // GetUnit returns the Unit field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) GetUnit() string {
-    if o == nil || utils.IsNil(o.Unit) {
-        var ret string
-        return ret
-    }
-    return *o.Unit
+	if o == nil || utils.IsNil(o.Unit) {
+		var ret string
+		return ret
+	}
+	return *o.Unit
 }
 
 // GetUnitOk returns a tuple with the Unit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) GetUnitOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Unit) {
-        return nil, false
-    }
-    return o.Unit, true
+	if o == nil || utils.IsNil(o.Unit) {
+		return nil, false
+	}
+	return o.Unit, true
 }
 
 // HasUnit returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) HasUnit() bool {
-    if o != nil && !utils.IsNil(o.Unit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Unit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnit gets a reference to the given string and assigns it to the Unit field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) SetUnit(v string) {
-    o.Unit = &v
+	o.Unit = &v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) GetWidth() int64 {
-    if o == nil || utils.IsNil(o.Width) {
-        var ret int64
-        return ret
-    }
-    return *o.Width
+	if o == nil || utils.IsNil(o.Width) {
+		var ret int64
+		return ret
+	}
+	return *o.Width
 }
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) GetWidthOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Width) {
-        return nil, false
-    }
-    return o.Width, true
+	if o == nil || utils.IsNil(o.Width) {
+		return nil, false
+	}
+	return o.Width, true
 }
 
 // HasWidth returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) HasWidth() bool {
-    if o != nil && !utils.IsNil(o.Width) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Width) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWidth gets a reference to the given int64 and assigns it to the Width field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) SetWidth(v int64) {
-    o.Width = &v
+	o.Width = &v
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Height) {
-        toSerialize["height"] = o.Height
-    }
-    if !utils.IsNil(o.Length) {
-        toSerialize["length"] = o.Length
-    }
-    if !utils.IsNil(o.Unit) {
-        toSerialize["unit"] = o.Unit
-    }
-    if !utils.IsNil(o.Width) {
-        toSerialize["width"] = o.Width
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Height) {
+		toSerialize["height"] = o.Height
+	}
+	if !utils.IsNil(o.Length) {
+		toSerialize["length"] = o.Length
+	}
+	if !utils.IsNil(o.Unit) {
+		toSerialize["unit"] = o.Unit
+	}
+	if !utils.IsNil(o.Width) {
+		toSerialize["width"] = o.Width
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension) UnmarshalJSON(data []byte) (err error) {
-    varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension := _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension{}
+	varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension := _SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension{}
 
-    err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension)
+	err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension(varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension)
+	*o = SupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension(varSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "height")
-        delete(additionalProperties, "length")
-        delete(additionalProperties, "unit")
-        delete(additionalProperties, "width")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "height")
+		delete(additionalProperties, "length")
+		delete(additionalProperties, "unit")
+		delete(additionalProperties, "width")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimension struct {
@@ -266,5 +266,3 @@ func (v *NullableSupplyChain202309ConfirmPackageShipmentRequestBodyPackagesDimen
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

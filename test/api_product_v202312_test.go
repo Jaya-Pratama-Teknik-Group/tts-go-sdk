@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_ProductV202312APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_ProductV202312APIService(t *testing.T) {
 
 	t.Run("Test ProductV202312APIService Product202312GlobalProductsSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202312API.Product202312GlobalProductsSearchPost(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_sdk_golang_ProductV202312APIService(t *testing.T) {
 
 	t.Run("Test ProductV202312APIService Product202312PrerequisitesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202312API.Product202312PrerequisitesGet(context.Background()).Execute()
 
@@ -48,7 +48,7 @@ func Test_sdk_golang_ProductV202312APIService(t *testing.T) {
 
 	t.Run("Test ProductV202312APIService Product202312ProductsSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202312API.Product202312ProductsSearchPost(context.Background()).Execute()
 

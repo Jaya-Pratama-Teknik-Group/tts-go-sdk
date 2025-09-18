@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202407
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202407SearchSizeChartsResponseDataSizeChartImages type satisfies the MappedNullable interface at compile time
+// checks if the Product202407SearchSizeChartsResponseDataSizeChartImages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202407SearchSizeChartsResponseDataSizeChartImages{}
 
 // Product202407SearchSizeChartsResponseDataSizeChartImages struct for Product202407SearchSizeChartsResponseDataSizeChartImages
 type Product202407SearchSizeChartsResponseDataSizeChartImages struct {
-    // The language of the size chart image.
-    Locale *string `json:"locale,omitempty"`
-    // The URI to identify the image in API requests and responses.
-    Uri *string `json:"uri,omitempty"`
-    // The URL to access and view the image.
-    Url *string `json:"url,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The language of the size chart image.
+	Locale *string `json:"locale,omitempty"`
+	// The URI to identify the image in API requests and responses.
+	Uri *string `json:"uri,omitempty"`
+	// The URL to access and view the image.
+	Url                  *string `json:"url,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202407SearchSizeChartsResponseDataSizeChartImages Product202407SearchSizeChartsResponseDataSizeChartImages
@@ -36,161 +36,161 @@ type _Product202407SearchSizeChartsResponseDataSizeChartImages Product202407Sear
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202407SearchSizeChartsResponseDataSizeChartImages() *Product202407SearchSizeChartsResponseDataSizeChartImages {
-    this := Product202407SearchSizeChartsResponseDataSizeChartImages{}
-    return &this
+	this := Product202407SearchSizeChartsResponseDataSizeChartImages{}
+	return &this
 }
 
 // NewProduct202407SearchSizeChartsResponseDataSizeChartImagesWithDefaults instantiates a new Product202407SearchSizeChartsResponseDataSizeChartImages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202407SearchSizeChartsResponseDataSizeChartImagesWithDefaults() *Product202407SearchSizeChartsResponseDataSizeChartImages {
-    this := Product202407SearchSizeChartsResponseDataSizeChartImages{}
-    return &this
+	this := Product202407SearchSizeChartsResponseDataSizeChartImages{}
+	return &this
 }
 
 // GetLocale returns the Locale field value if set, zero value otherwise.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) GetLocale() string {
-    if o == nil || utils.IsNil(o.Locale) {
-        var ret string
-        return ret
-    }
-    return *o.Locale
+	if o == nil || utils.IsNil(o.Locale) {
+		var ret string
+		return ret
+	}
+	return *o.Locale
 }
 
 // GetLocaleOk returns a tuple with the Locale field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) GetLocaleOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Locale) {
-        return nil, false
-    }
-    return o.Locale, true
+	if o == nil || utils.IsNil(o.Locale) {
+		return nil, false
+	}
+	return o.Locale, true
 }
 
 // HasLocale returns a boolean if a field has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) HasLocale() bool {
-    if o != nil && !utils.IsNil(o.Locale) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Locale) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocale gets a reference to the given string and assigns it to the Locale field.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) SetLocale(v string) {
-    o.Locale = &v
+	o.Locale = &v
 }
 
 // GetUri returns the Uri field value if set, zero value otherwise.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) GetUri() string {
-    if o == nil || utils.IsNil(o.Uri) {
-        var ret string
-        return ret
-    }
-    return *o.Uri
+	if o == nil || utils.IsNil(o.Uri) {
+		var ret string
+		return ret
+	}
+	return *o.Uri
 }
 
 // GetUriOk returns a tuple with the Uri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) GetUriOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Uri) {
-        return nil, false
-    }
-    return o.Uri, true
+	if o == nil || utils.IsNil(o.Uri) {
+		return nil, false
+	}
+	return o.Uri, true
 }
 
 // HasUri returns a boolean if a field has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) HasUri() bool {
-    if o != nil && !utils.IsNil(o.Uri) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Uri) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUri gets a reference to the given string and assigns it to the Uri field.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) SetUri(v string) {
-    o.Uri = &v
+	o.Uri = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) GetUrl() string {
-    if o == nil || utils.IsNil(o.Url) {
-        var ret string
-        return ret
-    }
-    return *o.Url
+	if o == nil || utils.IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
 }
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) GetUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Url) {
-        return nil, false
-    }
-    return o.Url, true
+	if o == nil || utils.IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
 }
 
 // HasUrl returns a boolean if a field has been set.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) HasUrl() bool {
-    if o != nil && !utils.IsNil(o.Url) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Url) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) SetUrl(v string) {
-    o.Url = &v
+	o.Url = &v
 }
 
 func (o Product202407SearchSizeChartsResponseDataSizeChartImages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202407SearchSizeChartsResponseDataSizeChartImages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Locale) {
-        toSerialize["locale"] = o.Locale
-    }
-    if !utils.IsNil(o.Uri) {
-        toSerialize["uri"] = o.Uri
-    }
-    if !utils.IsNil(o.Url) {
-        toSerialize["url"] = o.Url
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Locale) {
+		toSerialize["locale"] = o.Locale
+	}
+	if !utils.IsNil(o.Uri) {
+		toSerialize["uri"] = o.Uri
+	}
+	if !utils.IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202407SearchSizeChartsResponseDataSizeChartImages) UnmarshalJSON(data []byte) (err error) {
-    varProduct202407SearchSizeChartsResponseDataSizeChartImages := _Product202407SearchSizeChartsResponseDataSizeChartImages{}
+	varProduct202407SearchSizeChartsResponseDataSizeChartImages := _Product202407SearchSizeChartsResponseDataSizeChartImages{}
 
-    err = json.Unmarshal(data, &varProduct202407SearchSizeChartsResponseDataSizeChartImages)
+	err = json.Unmarshal(data, &varProduct202407SearchSizeChartsResponseDataSizeChartImages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202407SearchSizeChartsResponseDataSizeChartImages(varProduct202407SearchSizeChartsResponseDataSizeChartImages)
+	*o = Product202407SearchSizeChartsResponseDataSizeChartImages(varProduct202407SearchSizeChartsResponseDataSizeChartImages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "locale")
-        delete(additionalProperties, "uri")
-        delete(additionalProperties, "url")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "locale")
+		delete(additionalProperties, "uri")
+		delete(additionalProperties, "url")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202407SearchSizeChartsResponseDataSizeChartImages struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202407SearchSizeChartsResponseDataSizeChartImages) Unmar
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

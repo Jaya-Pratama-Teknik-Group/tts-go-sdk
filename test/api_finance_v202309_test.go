@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_FinanceV202309APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_FinanceV202309APIService(t *testing.T) {
 
 	t.Run("Test FinanceV202309APIService Finance202309OrdersOrderIdStatementTransactionsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orderId string
 
@@ -38,7 +38,7 @@ func Test_sdk_golang_FinanceV202309APIService(t *testing.T) {
 
 	t.Run("Test FinanceV202309APIService Finance202309PaymentsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FinanceV202309API.Finance202309PaymentsGet(context.Background()).Execute()
 
@@ -50,7 +50,7 @@ func Test_sdk_golang_FinanceV202309APIService(t *testing.T) {
 
 	t.Run("Test FinanceV202309APIService Finance202309StatementsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FinanceV202309API.Finance202309StatementsGet(context.Background()).Execute()
 
@@ -62,7 +62,7 @@ func Test_sdk_golang_FinanceV202309APIService(t *testing.T) {
 
 	t.Run("Test FinanceV202309APIService Finance202309StatementsStatementIdStatementTransactionsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var statementId string
 
@@ -76,7 +76,7 @@ func Test_sdk_golang_FinanceV202309APIService(t *testing.T) {
 
 	t.Run("Test FinanceV202309APIService Finance202309WithdrawalsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FinanceV202309API.Finance202309WithdrawalsGet(context.Background()).Execute()
 

@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202502
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202502SearchProductsResponseDataProductsSkusListPrice type satisfies the MappedNullable interface at compile time
+// checks if the Product202502SearchProductsResponseDataProductsSkusListPrice type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202502SearchProductsResponseDataProductsSkusListPrice{}
 
 // Product202502SearchProductsResponseDataProductsSkusListPrice struct for Product202502SearchProductsResponseDataProductsSkusListPrice
 type Product202502SearchProductsResponseDataProductsSkusListPrice struct {
-    // The price amount.
-    Amount *string `json:"amount,omitempty"`
-    // The currency. Possible values: USD
-    Currency *string `json:"currency,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The price amount.
+	Amount *string `json:"amount,omitempty"`
+	// The currency. Possible values: USD
+	Currency             *string `json:"currency,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202502SearchProductsResponseDataProductsSkusListPrice Product202502SearchProductsResponseDataProductsSkusListPrice
@@ -34,125 +34,125 @@ type _Product202502SearchProductsResponseDataProductsSkusListPrice Product202502
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202502SearchProductsResponseDataProductsSkusListPrice() *Product202502SearchProductsResponseDataProductsSkusListPrice {
-    this := Product202502SearchProductsResponseDataProductsSkusListPrice{}
-    return &this
+	this := Product202502SearchProductsResponseDataProductsSkusListPrice{}
+	return &this
 }
 
 // NewProduct202502SearchProductsResponseDataProductsSkusListPriceWithDefaults instantiates a new Product202502SearchProductsResponseDataProductsSkusListPrice object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202502SearchProductsResponseDataProductsSkusListPriceWithDefaults() *Product202502SearchProductsResponseDataProductsSkusListPrice {
-    this := Product202502SearchProductsResponseDataProductsSkusListPrice{}
-    return &this
+	this := Product202502SearchProductsResponseDataProductsSkusListPrice{}
+	return &this
 }
 
 // GetAmount returns the Amount field value if set, zero value otherwise.
 func (o *Product202502SearchProductsResponseDataProductsSkusListPrice) GetAmount() string {
-    if o == nil || utils.IsNil(o.Amount) {
-        var ret string
-        return ret
-    }
-    return *o.Amount
+	if o == nil || utils.IsNil(o.Amount) {
+		var ret string
+		return ret
+	}
+	return *o.Amount
 }
 
 // GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusListPrice) GetAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Amount) {
-        return nil, false
-    }
-    return o.Amount, true
+	if o == nil || utils.IsNil(o.Amount) {
+		return nil, false
+	}
+	return o.Amount, true
 }
 
 // HasAmount returns a boolean if a field has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusListPrice) HasAmount() bool {
-    if o != nil && !utils.IsNil(o.Amount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Amount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAmount gets a reference to the given string and assigns it to the Amount field.
 func (o *Product202502SearchProductsResponseDataProductsSkusListPrice) SetAmount(v string) {
-    o.Amount = &v
+	o.Amount = &v
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *Product202502SearchProductsResponseDataProductsSkusListPrice) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusListPrice) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *Product202502SearchProductsResponseDataProductsSkusListPrice) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *Product202502SearchProductsResponseDataProductsSkusListPrice) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 func (o Product202502SearchProductsResponseDataProductsSkusListPrice) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202502SearchProductsResponseDataProductsSkusListPrice) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Amount) {
-        toSerialize["amount"] = o.Amount
-    }
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
+	}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202502SearchProductsResponseDataProductsSkusListPrice) UnmarshalJSON(data []byte) (err error) {
-    varProduct202502SearchProductsResponseDataProductsSkusListPrice := _Product202502SearchProductsResponseDataProductsSkusListPrice{}
+	varProduct202502SearchProductsResponseDataProductsSkusListPrice := _Product202502SearchProductsResponseDataProductsSkusListPrice{}
 
-    err = json.Unmarshal(data, &varProduct202502SearchProductsResponseDataProductsSkusListPrice)
+	err = json.Unmarshal(data, &varProduct202502SearchProductsResponseDataProductsSkusListPrice)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202502SearchProductsResponseDataProductsSkusListPrice(varProduct202502SearchProductsResponseDataProductsSkusListPrice)
+	*o = Product202502SearchProductsResponseDataProductsSkusListPrice(varProduct202502SearchProductsResponseDataProductsSkusListPrice)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "amount")
-        delete(additionalProperties, "currency")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "amount")
+		delete(additionalProperties, "currency")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202502SearchProductsResponseDataProductsSkusListPrice struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202502SearchProductsResponseDataProductsSkusListPrice) U
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

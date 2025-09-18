@@ -11,20 +11,20 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309UpdateActivityProductRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309UpdateActivityProductRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309UpdateActivityProductRequestBody{}
 
 // Promotion202309UpdateActivityProductRequestBody struct for Promotion202309UpdateActivityProductRequestBody
 type Promotion202309UpdateActivityProductRequestBody struct {
-    // A unique ID that identifies activities. You cannot update the products in `DEACTIVATED` or `EXPIRED` activities.
-    ActivityId *string `json:"activity_id,omitempty"`
-    // The items to add to the list or the existing items in the list of promotion activity to edit. The length must not exceed `300`.
-    Products []Promotion202309UpdateActivityProductRequestBodyProducts `json:"products,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A unique ID that identifies activities. You cannot update the products in `DEACTIVATED` or `EXPIRED` activities.
+	ActivityId *string `json:"activity_id,omitempty"`
+	// The items to add to the list or the existing items in the list of promotion activity to edit. The length must not exceed `300`.
+	Products             []Promotion202309UpdateActivityProductRequestBodyProducts `json:"products,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309UpdateActivityProductRequestBody Promotion202309UpdateActivityProductRequestBody
@@ -34,125 +34,125 @@ type _Promotion202309UpdateActivityProductRequestBody Promotion202309UpdateActiv
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309UpdateActivityProductRequestBody() *Promotion202309UpdateActivityProductRequestBody {
-    this := Promotion202309UpdateActivityProductRequestBody{}
-    return &this
+	this := Promotion202309UpdateActivityProductRequestBody{}
+	return &this
 }
 
 // NewPromotion202309UpdateActivityProductRequestBodyWithDefaults instantiates a new Promotion202309UpdateActivityProductRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309UpdateActivityProductRequestBodyWithDefaults() *Promotion202309UpdateActivityProductRequestBody {
-    this := Promotion202309UpdateActivityProductRequestBody{}
-    return &this
+	this := Promotion202309UpdateActivityProductRequestBody{}
+	return &this
 }
 
 // GetActivityId returns the ActivityId field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityProductRequestBody) GetActivityId() string {
-    if o == nil || utils.IsNil(o.ActivityId) {
-        var ret string
-        return ret
-    }
-    return *o.ActivityId
+	if o == nil || utils.IsNil(o.ActivityId) {
+		var ret string
+		return ret
+	}
+	return *o.ActivityId
 }
 
 // GetActivityIdOk returns a tuple with the ActivityId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityProductRequestBody) GetActivityIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ActivityId) {
-        return nil, false
-    }
-    return o.ActivityId, true
+	if o == nil || utils.IsNil(o.ActivityId) {
+		return nil, false
+	}
+	return o.ActivityId, true
 }
 
 // HasActivityId returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityProductRequestBody) HasActivityId() bool {
-    if o != nil && !utils.IsNil(o.ActivityId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ActivityId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetActivityId gets a reference to the given string and assigns it to the ActivityId field.
 func (o *Promotion202309UpdateActivityProductRequestBody) SetActivityId(v string) {
-    o.ActivityId = &v
+	o.ActivityId = &v
 }
 
 // GetProducts returns the Products field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityProductRequestBody) GetProducts() []Promotion202309UpdateActivityProductRequestBodyProducts {
-    if o == nil || utils.IsNil(o.Products) {
-        var ret []Promotion202309UpdateActivityProductRequestBodyProducts
-        return ret
-    }
-    return o.Products
+	if o == nil || utils.IsNil(o.Products) {
+		var ret []Promotion202309UpdateActivityProductRequestBodyProducts
+		return ret
+	}
+	return o.Products
 }
 
 // GetProductsOk returns a tuple with the Products field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityProductRequestBody) GetProductsOk() ([]Promotion202309UpdateActivityProductRequestBodyProducts, bool) {
-    if o == nil || utils.IsNil(o.Products) {
-        return nil, false
-    }
-    return o.Products, true
+	if o == nil || utils.IsNil(o.Products) {
+		return nil, false
+	}
+	return o.Products, true
 }
 
 // HasProducts returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityProductRequestBody) HasProducts() bool {
-    if o != nil && !utils.IsNil(o.Products) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Products) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetProducts gets a reference to the given []Promotion202309UpdateActivityProductRequestBodyProducts and assigns it to the Products field.
 func (o *Promotion202309UpdateActivityProductRequestBody) SetProducts(v []Promotion202309UpdateActivityProductRequestBodyProducts) {
-    o.Products = v
+	o.Products = v
 }
 
 func (o Promotion202309UpdateActivityProductRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309UpdateActivityProductRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ActivityId) {
-        toSerialize["activity_id"] = o.ActivityId
-    }
-    if !utils.IsNil(o.Products) {
-        toSerialize["products"] = o.Products
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ActivityId) {
+		toSerialize["activity_id"] = o.ActivityId
+	}
+	if !utils.IsNil(o.Products) {
+		toSerialize["products"] = o.Products
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309UpdateActivityProductRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309UpdateActivityProductRequestBody := _Promotion202309UpdateActivityProductRequestBody{}
+	varPromotion202309UpdateActivityProductRequestBody := _Promotion202309UpdateActivityProductRequestBody{}
 
-    err = json.Unmarshal(data, &varPromotion202309UpdateActivityProductRequestBody)
+	err = json.Unmarshal(data, &varPromotion202309UpdateActivityProductRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309UpdateActivityProductRequestBody(varPromotion202309UpdateActivityProductRequestBody)
+	*o = Promotion202309UpdateActivityProductRequestBody(varPromotion202309UpdateActivityProductRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "activity_id")
-        delete(additionalProperties, "products")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "activity_id")
+		delete(additionalProperties, "products")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309UpdateActivityProductRequestBody struct {
@@ -190,5 +190,3 @@ func (v *NullablePromotion202309UpdateActivityProductRequestBody) UnmarshalJSON(
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

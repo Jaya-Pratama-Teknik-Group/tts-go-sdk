@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309PublishGlobalProductRequestBodyPublishTargetSkus type satisfies the MappedNullable interface at compile time
+// checks if the Product202309PublishGlobalProductRequestBodyPublishTargetSkus type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309PublishGlobalProductRequestBodyPublishTargetSkus{}
 
 // Product202309PublishGlobalProductRequestBodyPublishTargetSkus struct for Product202309PublishGlobalProductRequestBodyPublishTargetSkus
 type Product202309PublishGlobalProductRequestBodyPublishTargetSkus struct {
-    Inventory *Product202309PublishGlobalProductRequestBodyPublishTargetSkusInventory `json:"inventory,omitempty"`
-    Price *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice `json:"price,omitempty"`
-    // The global SKU ID to be published. After publishing, a corresponding local product SKU will be created and linked to the global SKU.
-    RelatedGlobalSkuId *string `json:"related_global_sku_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	Inventory *Product202309PublishGlobalProductRequestBodyPublishTargetSkusInventory `json:"inventory,omitempty"`
+	Price     *Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice     `json:"price,omitempty"`
+	// The global SKU ID to be published. After publishing, a corresponding local product SKU will be created and linked to the global SKU.
+	RelatedGlobalSkuId   *string `json:"related_global_sku_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309PublishGlobalProductRequestBodyPublishTargetSkus Product202309PublishGlobalProductRequestBodyPublishTargetSkus
@@ -34,161 +34,161 @@ type _Product202309PublishGlobalProductRequestBodyPublishTargetSkus Product20230
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309PublishGlobalProductRequestBodyPublishTargetSkus() *Product202309PublishGlobalProductRequestBodyPublishTargetSkus {
-    this := Product202309PublishGlobalProductRequestBodyPublishTargetSkus{}
-    return &this
+	this := Product202309PublishGlobalProductRequestBodyPublishTargetSkus{}
+	return &this
 }
 
 // NewProduct202309PublishGlobalProductRequestBodyPublishTargetSkusWithDefaults instantiates a new Product202309PublishGlobalProductRequestBodyPublishTargetSkus object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309PublishGlobalProductRequestBodyPublishTargetSkusWithDefaults() *Product202309PublishGlobalProductRequestBodyPublishTargetSkus {
-    this := Product202309PublishGlobalProductRequestBodyPublishTargetSkus{}
-    return &this
+	this := Product202309PublishGlobalProductRequestBodyPublishTargetSkus{}
+	return &this
 }
 
 // GetInventory returns the Inventory field value if set, zero value otherwise.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) GetInventory() Product202309PublishGlobalProductRequestBodyPublishTargetSkusInventory {
-    if o == nil || utils.IsNil(o.Inventory) {
-        var ret Product202309PublishGlobalProductRequestBodyPublishTargetSkusInventory
-        return ret
-    }
-    return *o.Inventory
+	if o == nil || utils.IsNil(o.Inventory) {
+		var ret Product202309PublishGlobalProductRequestBodyPublishTargetSkusInventory
+		return ret
+	}
+	return *o.Inventory
 }
 
 // GetInventoryOk returns a tuple with the Inventory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) GetInventoryOk() (*Product202309PublishGlobalProductRequestBodyPublishTargetSkusInventory, bool) {
-    if o == nil || utils.IsNil(o.Inventory) {
-        return nil, false
-    }
-    return o.Inventory, true
+	if o == nil || utils.IsNil(o.Inventory) {
+		return nil, false
+	}
+	return o.Inventory, true
 }
 
 // HasInventory returns a boolean if a field has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) HasInventory() bool {
-    if o != nil && !utils.IsNil(o.Inventory) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Inventory) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetInventory gets a reference to the given Product202309PublishGlobalProductRequestBodyPublishTargetSkusInventory and assigns it to the Inventory field.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) SetInventory(v Product202309PublishGlobalProductRequestBodyPublishTargetSkusInventory) {
-    o.Inventory = &v
+	o.Inventory = &v
 }
 
 // GetPrice returns the Price field value if set, zero value otherwise.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) GetPrice() Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice {
-    if o == nil || utils.IsNil(o.Price) {
-        var ret Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice
-        return ret
-    }
-    return *o.Price
+	if o == nil || utils.IsNil(o.Price) {
+		var ret Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice
+		return ret
+	}
+	return *o.Price
 }
 
 // GetPriceOk returns a tuple with the Price field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) GetPriceOk() (*Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice, bool) {
-    if o == nil || utils.IsNil(o.Price) {
-        return nil, false
-    }
-    return o.Price, true
+	if o == nil || utils.IsNil(o.Price) {
+		return nil, false
+	}
+	return o.Price, true
 }
 
 // HasPrice returns a boolean if a field has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) HasPrice() bool {
-    if o != nil && !utils.IsNil(o.Price) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Price) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPrice gets a reference to the given Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice and assigns it to the Price field.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) SetPrice(v Product202309PublishGlobalProductRequestBodyPublishTargetSkusPrice) {
-    o.Price = &v
+	o.Price = &v
 }
 
 // GetRelatedGlobalSkuId returns the RelatedGlobalSkuId field value if set, zero value otherwise.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) GetRelatedGlobalSkuId() string {
-    if o == nil || utils.IsNil(o.RelatedGlobalSkuId) {
-        var ret string
-        return ret
-    }
-    return *o.RelatedGlobalSkuId
+	if o == nil || utils.IsNil(o.RelatedGlobalSkuId) {
+		var ret string
+		return ret
+	}
+	return *o.RelatedGlobalSkuId
 }
 
 // GetRelatedGlobalSkuIdOk returns a tuple with the RelatedGlobalSkuId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) GetRelatedGlobalSkuIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.RelatedGlobalSkuId) {
-        return nil, false
-    }
-    return o.RelatedGlobalSkuId, true
+	if o == nil || utils.IsNil(o.RelatedGlobalSkuId) {
+		return nil, false
+	}
+	return o.RelatedGlobalSkuId, true
 }
 
 // HasRelatedGlobalSkuId returns a boolean if a field has been set.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) HasRelatedGlobalSkuId() bool {
-    if o != nil && !utils.IsNil(o.RelatedGlobalSkuId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RelatedGlobalSkuId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRelatedGlobalSkuId gets a reference to the given string and assigns it to the RelatedGlobalSkuId field.
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) SetRelatedGlobalSkuId(v string) {
-    o.RelatedGlobalSkuId = &v
+	o.RelatedGlobalSkuId = &v
 }
 
 func (o Product202309PublishGlobalProductRequestBodyPublishTargetSkus) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309PublishGlobalProductRequestBodyPublishTargetSkus) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Inventory) {
-        toSerialize["inventory"] = o.Inventory
-    }
-    if !utils.IsNil(o.Price) {
-        toSerialize["price"] = o.Price
-    }
-    if !utils.IsNil(o.RelatedGlobalSkuId) {
-        toSerialize["related_global_sku_id"] = o.RelatedGlobalSkuId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Inventory) {
+		toSerialize["inventory"] = o.Inventory
+	}
+	if !utils.IsNil(o.Price) {
+		toSerialize["price"] = o.Price
+	}
+	if !utils.IsNil(o.RelatedGlobalSkuId) {
+		toSerialize["related_global_sku_id"] = o.RelatedGlobalSkuId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309PublishGlobalProductRequestBodyPublishTargetSkus) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309PublishGlobalProductRequestBodyPublishTargetSkus := _Product202309PublishGlobalProductRequestBodyPublishTargetSkus{}
+	varProduct202309PublishGlobalProductRequestBodyPublishTargetSkus := _Product202309PublishGlobalProductRequestBodyPublishTargetSkus{}
 
-    err = json.Unmarshal(data, &varProduct202309PublishGlobalProductRequestBodyPublishTargetSkus)
+	err = json.Unmarshal(data, &varProduct202309PublishGlobalProductRequestBodyPublishTargetSkus)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309PublishGlobalProductRequestBodyPublishTargetSkus(varProduct202309PublishGlobalProductRequestBodyPublishTargetSkus)
+	*o = Product202309PublishGlobalProductRequestBodyPublishTargetSkus(varProduct202309PublishGlobalProductRequestBodyPublishTargetSkus)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "inventory")
-        delete(additionalProperties, "price")
-        delete(additionalProperties, "related_global_sku_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "inventory")
+		delete(additionalProperties, "price")
+		delete(additionalProperties, "related_global_sku_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309PublishGlobalProductRequestBodyPublishTargetSkus struct {
@@ -226,5 +226,3 @@ func (v *NullableProduct202309PublishGlobalProductRequestBodyPublishTargetSkus) 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

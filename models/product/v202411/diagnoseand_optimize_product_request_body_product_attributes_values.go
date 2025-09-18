@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202411
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues type satisfies the MappedNullable interface at compile time
+// checks if the Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues{}
 
 // Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues struct for Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues
 type Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues struct {
-    // The ID of a built-in product attribute value, retrieved from the [Get Attributes API](https://partner.tiktokshop.com/docv2/page/6509c5784a0bb702c0561cc8).
-    Id *string `json:"id,omitempty"`
-    // A self-defined custom product attribute value if the built-in values do not satisfy your needs. The system will auto-generate an ID after listing. **Note**: - No duplicates allowed under the same attribute. - Max length: 500 characters
-    Name *string `json:"name,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The ID of a built-in product attribute value, retrieved from the [Get Attributes API](https://partner.tiktokshop.com/docv2/page/6509c5784a0bb702c0561cc8).
+	Id *string `json:"id,omitempty"`
+	// A self-defined custom product attribute value if the built-in values do not satisfy your needs. The system will auto-generate an ID after listing. **Note**: - No duplicates allowed under the same attribute. - Max length: 500 characters
+	Name                 *string `json:"name,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues
@@ -34,125 +34,125 @@ type _Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues 
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues() *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues {
-    this := Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues{}
-    return &this
+	this := Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues{}
+	return &this
 }
 
 // NewProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValuesWithDefaults instantiates a new Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValuesWithDefaults() *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues {
-    this := Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues{}
-    return &this
+	this := Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 func (o Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues) UnmarshalJSON(data []byte) (err error) {
-    varProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues := _Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues{}
+	varProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues := _Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues{}
 
-    err = json.Unmarshal(data, &varProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues)
+	err = json.Unmarshal(data, &varProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues(varProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues)
+	*o = Product202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues(varProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "name")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "name")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202411DiagnoseandOptimizeProductRequestBodyProductAttributesValues struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202411DiagnoseandOptimizeProductRequestBodyProductAttrib
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,20 +11,20 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse{}
 
 // ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse struct for ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse
 type ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse struct {
-    // Seller's next action. Possible values: - SELLER_RESPOND_CANCEL
-    Action *string `json:"action,omitempty"`
-    // Unix timestamp indicating the deadline for when the seller must perform the next action.
-    Deadline *int64 `json:"deadline,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Seller's next action. Possible values: - SELLER_RESPOND_CANCEL
+	Action *string `json:"action,omitempty"`
+	// Unix timestamp indicating the deadline for when the seller must perform the next action.
+	Deadline             *int64 `json:"deadline,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse
@@ -34,125 +34,125 @@ type _ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextAc
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse() *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse {
-    this := ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse{}
-    return &this
+	this := ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse{}
+	return &this
 }
 
 // NewReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponseWithDefaults instantiates a new ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponseWithDefaults() *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse {
-    this := ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse{}
-    return &this
+	this := ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse{}
+	return &this
 }
 
 // GetAction returns the Action field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) GetAction() string {
-    if o == nil || utils.IsNil(o.Action) {
-        var ret string
-        return ret
-    }
-    return *o.Action
+	if o == nil || utils.IsNil(o.Action) {
+		var ret string
+		return ret
+	}
+	return *o.Action
 }
 
 // GetActionOk returns a tuple with the Action field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) GetActionOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Action) {
-        return nil, false
-    }
-    return o.Action, true
+	if o == nil || utils.IsNil(o.Action) {
+		return nil, false
+	}
+	return o.Action, true
 }
 
 // HasAction returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) HasAction() bool {
-    if o != nil && !utils.IsNil(o.Action) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Action) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAction gets a reference to the given string and assigns it to the Action field.
 func (o *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) SetAction(v string) {
-    o.Action = &v
+	o.Action = &v
 }
 
 // GetDeadline returns the Deadline field value if set, zero value otherwise.
 func (o *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) GetDeadline() int64 {
-    if o == nil || utils.IsNil(o.Deadline) {
-        var ret int64
-        return ret
-    }
-    return *o.Deadline
+	if o == nil || utils.IsNil(o.Deadline) {
+		var ret int64
+		return ret
+	}
+	return *o.Deadline
 }
 
 // GetDeadlineOk returns a tuple with the Deadline field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) GetDeadlineOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Deadline) {
-        return nil, false
-    }
-    return o.Deadline, true
+	if o == nil || utils.IsNil(o.Deadline) {
+		return nil, false
+	}
+	return o.Deadline, true
 }
 
 // HasDeadline returns a boolean if a field has been set.
 func (o *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) HasDeadline() bool {
-    if o != nil && !utils.IsNil(o.Deadline) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Deadline) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDeadline gets a reference to the given int64 and assigns it to the Deadline field.
 func (o *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) SetDeadline(v int64) {
-    o.Deadline = &v
+	o.Deadline = &v
 }
 
 func (o ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Action) {
-        toSerialize["action"] = o.Action
-    }
-    if !utils.IsNil(o.Deadline) {
-        toSerialize["deadline"] = o.Deadline
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Action) {
+		toSerialize["action"] = o.Action
+	}
+	if !utils.IsNil(o.Deadline) {
+		toSerialize["deadline"] = o.Deadline
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse := _ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse{}
+	varReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse := _ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse)
+	err = json.Unmarshal(data, &varReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse(varReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse)
+	*o = ReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse(varReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "action")
-        delete(additionalProperties, "deadline")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "action")
+		delete(additionalProperties, "deadline")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309SearchCancellationsResponseDataCancellationsSellerNextActionResponse struct {
@@ -190,5 +190,3 @@ func (v *NullableReturnRefund202309SearchCancellationsResponseDataCancellationsS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetOrderSplitAttributesResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetOrderSplitAttributesResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetOrderSplitAttributesResponseData{}
 
 // Fulfillment202309GetOrderSplitAttributesResponseData struct for Fulfillment202309GetOrderSplitAttributesResponseData
 type Fulfillment202309GetOrderSplitAttributesResponseData struct {
-    // Specific return information (can return multiple TikTok Shop order IDs).
-    SplitAttributes []Fulfillment202309GetOrderSplitAttributesResponseDataSplitAttributes `json:"split_attributes,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Specific return information (can return multiple TikTok Shop order IDs).
+	SplitAttributes      []Fulfillment202309GetOrderSplitAttributesResponseDataSplitAttributes `json:"split_attributes,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetOrderSplitAttributesResponseData Fulfillment202309GetOrderSplitAttributesResponseData
@@ -32,89 +32,89 @@ type _Fulfillment202309GetOrderSplitAttributesResponseData Fulfillment202309GetO
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetOrderSplitAttributesResponseData() *Fulfillment202309GetOrderSplitAttributesResponseData {
-    this := Fulfillment202309GetOrderSplitAttributesResponseData{}
-    return &this
+	this := Fulfillment202309GetOrderSplitAttributesResponseData{}
+	return &this
 }
 
 // NewFulfillment202309GetOrderSplitAttributesResponseDataWithDefaults instantiates a new Fulfillment202309GetOrderSplitAttributesResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetOrderSplitAttributesResponseDataWithDefaults() *Fulfillment202309GetOrderSplitAttributesResponseData {
-    this := Fulfillment202309GetOrderSplitAttributesResponseData{}
-    return &this
+	this := Fulfillment202309GetOrderSplitAttributesResponseData{}
+	return &this
 }
 
 // GetSplitAttributes returns the SplitAttributes field value if set, zero value otherwise.
 func (o *Fulfillment202309GetOrderSplitAttributesResponseData) GetSplitAttributes() []Fulfillment202309GetOrderSplitAttributesResponseDataSplitAttributes {
-    if o == nil || utils.IsNil(o.SplitAttributes) {
-        var ret []Fulfillment202309GetOrderSplitAttributesResponseDataSplitAttributes
-        return ret
-    }
-    return o.SplitAttributes
+	if o == nil || utils.IsNil(o.SplitAttributes) {
+		var ret []Fulfillment202309GetOrderSplitAttributesResponseDataSplitAttributes
+		return ret
+	}
+	return o.SplitAttributes
 }
 
 // GetSplitAttributesOk returns a tuple with the SplitAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponseData) GetSplitAttributesOk() ([]Fulfillment202309GetOrderSplitAttributesResponseDataSplitAttributes, bool) {
-    if o == nil || utils.IsNil(o.SplitAttributes) {
-        return nil, false
-    }
-    return o.SplitAttributes, true
+	if o == nil || utils.IsNil(o.SplitAttributes) {
+		return nil, false
+	}
+	return o.SplitAttributes, true
 }
 
 // HasSplitAttributes returns a boolean if a field has been set.
 func (o *Fulfillment202309GetOrderSplitAttributesResponseData) HasSplitAttributes() bool {
-    if o != nil && !utils.IsNil(o.SplitAttributes) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SplitAttributes) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSplitAttributes gets a reference to the given []Fulfillment202309GetOrderSplitAttributesResponseDataSplitAttributes and assigns it to the SplitAttributes field.
 func (o *Fulfillment202309GetOrderSplitAttributesResponseData) SetSplitAttributes(v []Fulfillment202309GetOrderSplitAttributesResponseDataSplitAttributes) {
-    o.SplitAttributes = v
+	o.SplitAttributes = v
 }
 
 func (o Fulfillment202309GetOrderSplitAttributesResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetOrderSplitAttributesResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.SplitAttributes) {
-        toSerialize["split_attributes"] = o.SplitAttributes
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.SplitAttributes) {
+		toSerialize["split_attributes"] = o.SplitAttributes
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetOrderSplitAttributesResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetOrderSplitAttributesResponseData := _Fulfillment202309GetOrderSplitAttributesResponseData{}
+	varFulfillment202309GetOrderSplitAttributesResponseData := _Fulfillment202309GetOrderSplitAttributesResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetOrderSplitAttributesResponseData)
+	err = json.Unmarshal(data, &varFulfillment202309GetOrderSplitAttributesResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetOrderSplitAttributesResponseData(varFulfillment202309GetOrderSplitAttributesResponseData)
+	*o = Fulfillment202309GetOrderSplitAttributesResponseData(varFulfillment202309GetOrderSplitAttributesResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "split_attributes")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "split_attributes")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetOrderSplitAttributesResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableFulfillment202309GetOrderSplitAttributesResponseData) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

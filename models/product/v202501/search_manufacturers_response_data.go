@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202501
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202501SearchManufacturersResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202501SearchManufacturersResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202501SearchManufacturersResponseData{}
 
 // Product202501SearchManufacturersResponseData struct for Product202501SearchManufacturersResponseData
 type Product202501SearchManufacturersResponseData struct {
-    // The list of manufacturers that meet the query conditions.
-    Manufacturers []Product202501SearchManufacturersResponseDataManufacturers `json:"manufacturers,omitempty"`
-    // An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
-    NextPageToken *string `json:"next_page_token,omitempty"`
-    // The number of manufacturers that meet the query conditions.
-    TotalCount *int64 `json:"total_count,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of manufacturers that meet the query conditions.
+	Manufacturers []Product202501SearchManufacturersResponseDataManufacturers `json:"manufacturers,omitempty"`
+	// An opaque token used to retrieve the next page of a paginated result set. Provide this value in the `page_token` parameter of your request if the current response does not return all the results.
+	NextPageToken *string `json:"next_page_token,omitempty"`
+	// The number of manufacturers that meet the query conditions.
+	TotalCount           *int64 `json:"total_count,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202501SearchManufacturersResponseData Product202501SearchManufacturersResponseData
@@ -36,161 +36,161 @@ type _Product202501SearchManufacturersResponseData Product202501SearchManufactur
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202501SearchManufacturersResponseData() *Product202501SearchManufacturersResponseData {
-    this := Product202501SearchManufacturersResponseData{}
-    return &this
+	this := Product202501SearchManufacturersResponseData{}
+	return &this
 }
 
 // NewProduct202501SearchManufacturersResponseDataWithDefaults instantiates a new Product202501SearchManufacturersResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202501SearchManufacturersResponseDataWithDefaults() *Product202501SearchManufacturersResponseData {
-    this := Product202501SearchManufacturersResponseData{}
-    return &this
+	this := Product202501SearchManufacturersResponseData{}
+	return &this
 }
 
 // GetManufacturers returns the Manufacturers field value if set, zero value otherwise.
 func (o *Product202501SearchManufacturersResponseData) GetManufacturers() []Product202501SearchManufacturersResponseDataManufacturers {
-    if o == nil || utils.IsNil(o.Manufacturers) {
-        var ret []Product202501SearchManufacturersResponseDataManufacturers
-        return ret
-    }
-    return o.Manufacturers
+	if o == nil || utils.IsNil(o.Manufacturers) {
+		var ret []Product202501SearchManufacturersResponseDataManufacturers
+		return ret
+	}
+	return o.Manufacturers
 }
 
 // GetManufacturersOk returns a tuple with the Manufacturers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchManufacturersResponseData) GetManufacturersOk() ([]Product202501SearchManufacturersResponseDataManufacturers, bool) {
-    if o == nil || utils.IsNil(o.Manufacturers) {
-        return nil, false
-    }
-    return o.Manufacturers, true
+	if o == nil || utils.IsNil(o.Manufacturers) {
+		return nil, false
+	}
+	return o.Manufacturers, true
 }
 
 // HasManufacturers returns a boolean if a field has been set.
 func (o *Product202501SearchManufacturersResponseData) HasManufacturers() bool {
-    if o != nil && !utils.IsNil(o.Manufacturers) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Manufacturers) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetManufacturers gets a reference to the given []Product202501SearchManufacturersResponseDataManufacturers and assigns it to the Manufacturers field.
 func (o *Product202501SearchManufacturersResponseData) SetManufacturers(v []Product202501SearchManufacturersResponseDataManufacturers) {
-    o.Manufacturers = v
+	o.Manufacturers = v
 }
 
 // GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
 func (o *Product202501SearchManufacturersResponseData) GetNextPageToken() string {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        var ret string
-        return ret
-    }
-    return *o.NextPageToken
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		var ret string
+		return ret
+	}
+	return *o.NextPageToken
 }
 
 // GetNextPageTokenOk returns a tuple with the NextPageToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchManufacturersResponseData) GetNextPageTokenOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NextPageToken) {
-        return nil, false
-    }
-    return o.NextPageToken, true
+	if o == nil || utils.IsNil(o.NextPageToken) {
+		return nil, false
+	}
+	return o.NextPageToken, true
 }
 
 // HasNextPageToken returns a boolean if a field has been set.
 func (o *Product202501SearchManufacturersResponseData) HasNextPageToken() bool {
-    if o != nil && !utils.IsNil(o.NextPageToken) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NextPageToken) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNextPageToken gets a reference to the given string and assigns it to the NextPageToken field.
 func (o *Product202501SearchManufacturersResponseData) SetNextPageToken(v string) {
-    o.NextPageToken = &v
+	o.NextPageToken = &v
 }
 
 // GetTotalCount returns the TotalCount field value if set, zero value otherwise.
 func (o *Product202501SearchManufacturersResponseData) GetTotalCount() int64 {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        var ret int64
-        return ret
-    }
-    return *o.TotalCount
+	if o == nil || utils.IsNil(o.TotalCount) {
+		var ret int64
+		return ret
+	}
+	return *o.TotalCount
 }
 
 // GetTotalCountOk returns a tuple with the TotalCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202501SearchManufacturersResponseData) GetTotalCountOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.TotalCount) {
-        return nil, false
-    }
-    return o.TotalCount, true
+	if o == nil || utils.IsNil(o.TotalCount) {
+		return nil, false
+	}
+	return o.TotalCount, true
 }
 
 // HasTotalCount returns a boolean if a field has been set.
 func (o *Product202501SearchManufacturersResponseData) HasTotalCount() bool {
-    if o != nil && !utils.IsNil(o.TotalCount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalCount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalCount gets a reference to the given int64 and assigns it to the TotalCount field.
 func (o *Product202501SearchManufacturersResponseData) SetTotalCount(v int64) {
-    o.TotalCount = &v
+	o.TotalCount = &v
 }
 
 func (o Product202501SearchManufacturersResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202501SearchManufacturersResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Manufacturers) {
-        toSerialize["manufacturers"] = o.Manufacturers
-    }
-    if !utils.IsNil(o.NextPageToken) {
-        toSerialize["next_page_token"] = o.NextPageToken
-    }
-    if !utils.IsNil(o.TotalCount) {
-        toSerialize["total_count"] = o.TotalCount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Manufacturers) {
+		toSerialize["manufacturers"] = o.Manufacturers
+	}
+	if !utils.IsNil(o.NextPageToken) {
+		toSerialize["next_page_token"] = o.NextPageToken
+	}
+	if !utils.IsNil(o.TotalCount) {
+		toSerialize["total_count"] = o.TotalCount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202501SearchManufacturersResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202501SearchManufacturersResponseData := _Product202501SearchManufacturersResponseData{}
+	varProduct202501SearchManufacturersResponseData := _Product202501SearchManufacturersResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202501SearchManufacturersResponseData)
+	err = json.Unmarshal(data, &varProduct202501SearchManufacturersResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202501SearchManufacturersResponseData(varProduct202501SearchManufacturersResponseData)
+	*o = Product202501SearchManufacturersResponseData(varProduct202501SearchManufacturersResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "manufacturers")
-        delete(additionalProperties, "next_page_token")
-        delete(additionalProperties, "total_count")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "manufacturers")
+		delete(additionalProperties, "next_page_token")
+		delete(additionalProperties, "total_count")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202501SearchManufacturersResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202501SearchManufacturersResponseData) UnmarshalJSON(src
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

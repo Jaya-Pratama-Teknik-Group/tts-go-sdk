@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetGlobalAttributesResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetGlobalAttributesResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetGlobalAttributesResponseData{}
 
 // Product202309GetGlobalAttributesResponseData struct for Product202309GetGlobalAttributesResponseData
 type Product202309GetGlobalAttributesResponseData struct {
-    // The list of standard built-in product and sales attributes that are bound to the specified category.
-    Attributes []Product202309GetGlobalAttributesResponseDataAttributes `json:"attributes,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of standard built-in product and sales attributes that are bound to the specified category.
+	Attributes           []Product202309GetGlobalAttributesResponseDataAttributes `json:"attributes,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetGlobalAttributesResponseData Product202309GetGlobalAttributesResponseData
@@ -32,89 +32,89 @@ type _Product202309GetGlobalAttributesResponseData Product202309GetGlobalAttribu
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetGlobalAttributesResponseData() *Product202309GetGlobalAttributesResponseData {
-    this := Product202309GetGlobalAttributesResponseData{}
-    return &this
+	this := Product202309GetGlobalAttributesResponseData{}
+	return &this
 }
 
 // NewProduct202309GetGlobalAttributesResponseDataWithDefaults instantiates a new Product202309GetGlobalAttributesResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetGlobalAttributesResponseDataWithDefaults() *Product202309GetGlobalAttributesResponseData {
-    this := Product202309GetGlobalAttributesResponseData{}
-    return &this
+	this := Product202309GetGlobalAttributesResponseData{}
+	return &this
 }
 
 // GetAttributes returns the Attributes field value if set, zero value otherwise.
 func (o *Product202309GetGlobalAttributesResponseData) GetAttributes() []Product202309GetGlobalAttributesResponseDataAttributes {
-    if o == nil || utils.IsNil(o.Attributes) {
-        var ret []Product202309GetGlobalAttributesResponseDataAttributes
-        return ret
-    }
-    return o.Attributes
+	if o == nil || utils.IsNil(o.Attributes) {
+		var ret []Product202309GetGlobalAttributesResponseDataAttributes
+		return ret
+	}
+	return o.Attributes
 }
 
 // GetAttributesOk returns a tuple with the Attributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetGlobalAttributesResponseData) GetAttributesOk() ([]Product202309GetGlobalAttributesResponseDataAttributes, bool) {
-    if o == nil || utils.IsNil(o.Attributes) {
-        return nil, false
-    }
-    return o.Attributes, true
+	if o == nil || utils.IsNil(o.Attributes) {
+		return nil, false
+	}
+	return o.Attributes, true
 }
 
 // HasAttributes returns a boolean if a field has been set.
 func (o *Product202309GetGlobalAttributesResponseData) HasAttributes() bool {
-    if o != nil && !utils.IsNil(o.Attributes) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Attributes) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAttributes gets a reference to the given []Product202309GetGlobalAttributesResponseDataAttributes and assigns it to the Attributes field.
 func (o *Product202309GetGlobalAttributesResponseData) SetAttributes(v []Product202309GetGlobalAttributesResponseDataAttributes) {
-    o.Attributes = v
+	o.Attributes = v
 }
 
 func (o Product202309GetGlobalAttributesResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetGlobalAttributesResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Attributes) {
-        toSerialize["attributes"] = o.Attributes
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Attributes) {
+		toSerialize["attributes"] = o.Attributes
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetGlobalAttributesResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetGlobalAttributesResponseData := _Product202309GetGlobalAttributesResponseData{}
+	varProduct202309GetGlobalAttributesResponseData := _Product202309GetGlobalAttributesResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202309GetGlobalAttributesResponseData)
+	err = json.Unmarshal(data, &varProduct202309GetGlobalAttributesResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetGlobalAttributesResponseData(varProduct202309GetGlobalAttributesResponseData)
+	*o = Product202309GetGlobalAttributesResponseData(varProduct202309GetGlobalAttributesResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "attributes")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "attributes")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetGlobalAttributesResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309GetGlobalAttributesResponseData) UnmarshalJSON(src
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

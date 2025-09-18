@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309CombinablePackagesSearchGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309CombinablePackagesSearchGet(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309FilesUploadPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309FilesUploadPost(context.Background()).Execute()
 
@@ -48,7 +48,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309ImagesUploadPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309ImagesUploadPost(context.Background()).Execute()
 
@@ -60,7 +60,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309OrdersOrderIdHandoverTimeSlotsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orderId string
 
@@ -74,7 +74,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309OrdersOrderIdPackagesPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orderId string
 
@@ -88,7 +88,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309OrdersOrderIdShippingInfoUpdatePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orderId string
 
@@ -102,7 +102,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309OrdersOrderIdShippingServicesQueryPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orderId string
 
@@ -116,7 +116,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309OrdersOrderIdSplitPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orderId string
 
@@ -130,7 +130,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309OrdersOrderIdTrackingGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orderId string
 
@@ -144,7 +144,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309OrdersSplitAttributesGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309OrdersSplitAttributesGet(context.Background()).Execute()
 
@@ -156,7 +156,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesCombinePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309PackagesCombinePost(context.Background()).Execute()
 
@@ -168,7 +168,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesDeliverPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309PackagesDeliverPost(context.Background()).Execute()
 
@@ -180,7 +180,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesPackageIdGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var packageId string
 
@@ -194,7 +194,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesPackageIdHandoverTimeSlotsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var packageId string
 
@@ -208,7 +208,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesPackageIdShipPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var packageId string
 
@@ -222,7 +222,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesPackageIdShippingDocumentsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var packageId string
 
@@ -236,7 +236,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesPackageIdShippingInfoUpdatePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var packageId string
 
@@ -250,7 +250,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesPackageIdUncombinePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var packageId string
 
@@ -264,7 +264,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309PackagesPost(context.Background()).Execute()
 
@@ -276,7 +276,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesSchedulePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309PackagesSchedulePost(context.Background()).Execute()
 
@@ -288,7 +288,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309PackagesSearchPost(context.Background()).Execute()
 
@@ -300,7 +300,7 @@ func Test_sdk_golang_FulfillmentV202309APIService(t *testing.T) {
 
 	t.Run("Test FulfillmentV202309APIService Fulfillment202309PackagesShipPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.FulfillmentV202309API.Fulfillment202309PackagesShipPost(context.Background()).Execute()
 

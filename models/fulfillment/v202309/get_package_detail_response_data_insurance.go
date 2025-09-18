@@ -11,24 +11,24 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetPackageDetailResponseDataInsurance type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetPackageDetailResponseDataInsurance type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetPackageDetailResponseDataInsurance{}
 
 // Fulfillment202309GetPackageDetailResponseDataInsurance struct for Fulfillment202309GetPackageDetailResponseDataInsurance
 type Fulfillment202309GetPackageDetailResponseDataInsurance struct {
-    // The insurance claim status. Available values: - `NOT_STARTED`: Claim has not been initiated for this package. - `CLAIM_PENDING`: Claim is currently under review. - `APPROVED`: Claim has been approved. - `DECLINED`: Claim has been declined.
-    ClaimStatus *string `json:"claim_status,omitempty"`
-    // The insurance coverage amount for the package. Units: USD.
-    CoverageAmount *string `json:"coverage_amount,omitempty"`
-    // Whether the order is eligible for an insurance claim, based on eligible refund reasons.
-    IsClaimEligible *bool `json:"is_claim_eligible,omitempty"`
-    // Whether insurance has been purchased for the package.
-    IsPurchased *bool `json:"is_purchased,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The insurance claim status. Available values: - `NOT_STARTED`: Claim has not been initiated for this package. - `CLAIM_PENDING`: Claim is currently under review. - `APPROVED`: Claim has been approved. - `DECLINED`: Claim has been declined.
+	ClaimStatus *string `json:"claim_status,omitempty"`
+	// The insurance coverage amount for the package. Units: USD.
+	CoverageAmount *string `json:"coverage_amount,omitempty"`
+	// Whether the order is eligible for an insurance claim, based on eligible refund reasons.
+	IsClaimEligible *bool `json:"is_claim_eligible,omitempty"`
+	// Whether insurance has been purchased for the package.
+	IsPurchased          *bool `json:"is_purchased,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetPackageDetailResponseDataInsurance Fulfillment202309GetPackageDetailResponseDataInsurance
@@ -38,197 +38,197 @@ type _Fulfillment202309GetPackageDetailResponseDataInsurance Fulfillment202309Ge
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetPackageDetailResponseDataInsurance() *Fulfillment202309GetPackageDetailResponseDataInsurance {
-    this := Fulfillment202309GetPackageDetailResponseDataInsurance{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseDataInsurance{}
+	return &this
 }
 
 // NewFulfillment202309GetPackageDetailResponseDataInsuranceWithDefaults instantiates a new Fulfillment202309GetPackageDetailResponseDataInsurance object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetPackageDetailResponseDataInsuranceWithDefaults() *Fulfillment202309GetPackageDetailResponseDataInsurance {
-    this := Fulfillment202309GetPackageDetailResponseDataInsurance{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseDataInsurance{}
+	return &this
 }
 
 // GetClaimStatus returns the ClaimStatus field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) GetClaimStatus() string {
-    if o == nil || utils.IsNil(o.ClaimStatus) {
-        var ret string
-        return ret
-    }
-    return *o.ClaimStatus
+	if o == nil || utils.IsNil(o.ClaimStatus) {
+		var ret string
+		return ret
+	}
+	return *o.ClaimStatus
 }
 
 // GetClaimStatusOk returns a tuple with the ClaimStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) GetClaimStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ClaimStatus) {
-        return nil, false
-    }
-    return o.ClaimStatus, true
+	if o == nil || utils.IsNil(o.ClaimStatus) {
+		return nil, false
+	}
+	return o.ClaimStatus, true
 }
 
 // HasClaimStatus returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) HasClaimStatus() bool {
-    if o != nil && !utils.IsNil(o.ClaimStatus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ClaimStatus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetClaimStatus gets a reference to the given string and assigns it to the ClaimStatus field.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) SetClaimStatus(v string) {
-    o.ClaimStatus = &v
+	o.ClaimStatus = &v
 }
 
 // GetCoverageAmount returns the CoverageAmount field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) GetCoverageAmount() string {
-    if o == nil || utils.IsNil(o.CoverageAmount) {
-        var ret string
-        return ret
-    }
-    return *o.CoverageAmount
+	if o == nil || utils.IsNil(o.CoverageAmount) {
+		var ret string
+		return ret
+	}
+	return *o.CoverageAmount
 }
 
 // GetCoverageAmountOk returns a tuple with the CoverageAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) GetCoverageAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.CoverageAmount) {
-        return nil, false
-    }
-    return o.CoverageAmount, true
+	if o == nil || utils.IsNil(o.CoverageAmount) {
+		return nil, false
+	}
+	return o.CoverageAmount, true
 }
 
 // HasCoverageAmount returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) HasCoverageAmount() bool {
-    if o != nil && !utils.IsNil(o.CoverageAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CoverageAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCoverageAmount gets a reference to the given string and assigns it to the CoverageAmount field.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) SetCoverageAmount(v string) {
-    o.CoverageAmount = &v
+	o.CoverageAmount = &v
 }
 
 // GetIsClaimEligible returns the IsClaimEligible field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) GetIsClaimEligible() bool {
-    if o == nil || utils.IsNil(o.IsClaimEligible) {
-        var ret bool
-        return ret
-    }
-    return *o.IsClaimEligible
+	if o == nil || utils.IsNil(o.IsClaimEligible) {
+		var ret bool
+		return ret
+	}
+	return *o.IsClaimEligible
 }
 
 // GetIsClaimEligibleOk returns a tuple with the IsClaimEligible field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) GetIsClaimEligibleOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.IsClaimEligible) {
-        return nil, false
-    }
-    return o.IsClaimEligible, true
+	if o == nil || utils.IsNil(o.IsClaimEligible) {
+		return nil, false
+	}
+	return o.IsClaimEligible, true
 }
 
 // HasIsClaimEligible returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) HasIsClaimEligible() bool {
-    if o != nil && !utils.IsNil(o.IsClaimEligible) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.IsClaimEligible) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIsClaimEligible gets a reference to the given bool and assigns it to the IsClaimEligible field.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) SetIsClaimEligible(v bool) {
-    o.IsClaimEligible = &v
+	o.IsClaimEligible = &v
 }
 
 // GetIsPurchased returns the IsPurchased field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) GetIsPurchased() bool {
-    if o == nil || utils.IsNil(o.IsPurchased) {
-        var ret bool
-        return ret
-    }
-    return *o.IsPurchased
+	if o == nil || utils.IsNil(o.IsPurchased) {
+		var ret bool
+		return ret
+	}
+	return *o.IsPurchased
 }
 
 // GetIsPurchasedOk returns a tuple with the IsPurchased field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) GetIsPurchasedOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.IsPurchased) {
-        return nil, false
-    }
-    return o.IsPurchased, true
+	if o == nil || utils.IsNil(o.IsPurchased) {
+		return nil, false
+	}
+	return o.IsPurchased, true
 }
 
 // HasIsPurchased returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) HasIsPurchased() bool {
-    if o != nil && !utils.IsNil(o.IsPurchased) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.IsPurchased) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIsPurchased gets a reference to the given bool and assigns it to the IsPurchased field.
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) SetIsPurchased(v bool) {
-    o.IsPurchased = &v
+	o.IsPurchased = &v
 }
 
 func (o Fulfillment202309GetPackageDetailResponseDataInsurance) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetPackageDetailResponseDataInsurance) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ClaimStatus) {
-        toSerialize["claim_status"] = o.ClaimStatus
-    }
-    if !utils.IsNil(o.CoverageAmount) {
-        toSerialize["coverage_amount"] = o.CoverageAmount
-    }
-    if !utils.IsNil(o.IsClaimEligible) {
-        toSerialize["is_claim_eligible"] = o.IsClaimEligible
-    }
-    if !utils.IsNil(o.IsPurchased) {
-        toSerialize["is_purchased"] = o.IsPurchased
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ClaimStatus) {
+		toSerialize["claim_status"] = o.ClaimStatus
+	}
+	if !utils.IsNil(o.CoverageAmount) {
+		toSerialize["coverage_amount"] = o.CoverageAmount
+	}
+	if !utils.IsNil(o.IsClaimEligible) {
+		toSerialize["is_claim_eligible"] = o.IsClaimEligible
+	}
+	if !utils.IsNil(o.IsPurchased) {
+		toSerialize["is_purchased"] = o.IsPurchased
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetPackageDetailResponseDataInsurance) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetPackageDetailResponseDataInsurance := _Fulfillment202309GetPackageDetailResponseDataInsurance{}
+	varFulfillment202309GetPackageDetailResponseDataInsurance := _Fulfillment202309GetPackageDetailResponseDataInsurance{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseDataInsurance)
+	err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseDataInsurance)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetPackageDetailResponseDataInsurance(varFulfillment202309GetPackageDetailResponseDataInsurance)
+	*o = Fulfillment202309GetPackageDetailResponseDataInsurance(varFulfillment202309GetPackageDetailResponseDataInsurance)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "claim_status")
-        delete(additionalProperties, "coverage_amount")
-        delete(additionalProperties, "is_claim_eligible")
-        delete(additionalProperties, "is_purchased")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "claim_status")
+		delete(additionalProperties, "coverage_amount")
+		delete(additionalProperties, "is_claim_eligible")
+		delete(additionalProperties, "is_purchased")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetPackageDetailResponseDataInsurance struct {
@@ -266,5 +266,3 @@ func (v *NullableFulfillment202309GetPackageDetailResponseDataInsurance) Unmarsh
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

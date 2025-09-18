@@ -11,22 +11,22 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots{}
 
 // Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots struct for Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots
 type Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots struct {
-    // Whether an appointment be made for this time slot.
-    Avaliable *bool `json:"avaliable,omitempty"`
-    // The end date and time of the package pick up time slot. Unix timestamp.
-    EndTime *int64 `json:"end_time,omitempty"`
-    // The start date and time of the package pick up time slot. Unix timestamp.
-    StartTime *int64 `json:"start_time,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Whether an appointment be made for this time slot.
+	Avaliable *bool `json:"avaliable,omitempty"`
+	// The end date and time of the package pick up time slot. Unix timestamp.
+	EndTime *int64 `json:"end_time,omitempty"`
+	// The start date and time of the package pick up time slot. Unix timestamp.
+	StartTime            *int64 `json:"start_time,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots
@@ -36,161 +36,161 @@ type _Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots Fulfil
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots() *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots {
-    this := Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots{}
-    return &this
+	this := Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots{}
+	return &this
 }
 
 // NewFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlotsWithDefaults instantiates a new Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlotsWithDefaults() *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots {
-    this := Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots{}
-    return &this
+	this := Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots{}
+	return &this
 }
 
 // GetAvaliable returns the Avaliable field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) GetAvaliable() bool {
-    if o == nil || utils.IsNil(o.Avaliable) {
-        var ret bool
-        return ret
-    }
-    return *o.Avaliable
+	if o == nil || utils.IsNil(o.Avaliable) {
+		var ret bool
+		return ret
+	}
+	return *o.Avaliable
 }
 
 // GetAvaliableOk returns a tuple with the Avaliable field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) GetAvaliableOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.Avaliable) {
-        return nil, false
-    }
-    return o.Avaliable, true
+	if o == nil || utils.IsNil(o.Avaliable) {
+		return nil, false
+	}
+	return o.Avaliable, true
 }
 
 // HasAvaliable returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) HasAvaliable() bool {
-    if o != nil && !utils.IsNil(o.Avaliable) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Avaliable) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAvaliable gets a reference to the given bool and assigns it to the Avaliable field.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) SetAvaliable(v bool) {
-    o.Avaliable = &v
+	o.Avaliable = &v
 }
 
 // GetEndTime returns the EndTime field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) GetEndTime() int64 {
-    if o == nil || utils.IsNil(o.EndTime) {
-        var ret int64
-        return ret
-    }
-    return *o.EndTime
+	if o == nil || utils.IsNil(o.EndTime) {
+		var ret int64
+		return ret
+	}
+	return *o.EndTime
 }
 
 // GetEndTimeOk returns a tuple with the EndTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) GetEndTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.EndTime) {
-        return nil, false
-    }
-    return o.EndTime, true
+	if o == nil || utils.IsNil(o.EndTime) {
+		return nil, false
+	}
+	return o.EndTime, true
 }
 
 // HasEndTime returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) HasEndTime() bool {
-    if o != nil && !utils.IsNil(o.EndTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.EndTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetEndTime gets a reference to the given int64 and assigns it to the EndTime field.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) SetEndTime(v int64) {
-    o.EndTime = &v
+	o.EndTime = &v
 }
 
 // GetStartTime returns the StartTime field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) GetStartTime() int64 {
-    if o == nil || utils.IsNil(o.StartTime) {
-        var ret int64
-        return ret
-    }
-    return *o.StartTime
+	if o == nil || utils.IsNil(o.StartTime) {
+		var ret int64
+		return ret
+	}
+	return *o.StartTime
 }
 
 // GetStartTimeOk returns a tuple with the StartTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) GetStartTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.StartTime) {
-        return nil, false
-    }
-    return o.StartTime, true
+	if o == nil || utils.IsNil(o.StartTime) {
+		return nil, false
+	}
+	return o.StartTime, true
 }
 
 // HasStartTime returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) HasStartTime() bool {
-    if o != nil && !utils.IsNil(o.StartTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.StartTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStartTime gets a reference to the given int64 and assigns it to the StartTime field.
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) SetStartTime(v int64) {
-    o.StartTime = &v
+	o.StartTime = &v
 }
 
 func (o Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Avaliable) {
-        toSerialize["avaliable"] = o.Avaliable
-    }
-    if !utils.IsNil(o.EndTime) {
-        toSerialize["end_time"] = o.EndTime
-    }
-    if !utils.IsNil(o.StartTime) {
-        toSerialize["start_time"] = o.StartTime
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Avaliable) {
+		toSerialize["avaliable"] = o.Avaliable
+	}
+	if !utils.IsNil(o.EndTime) {
+		toSerialize["end_time"] = o.EndTime
+	}
+	if !utils.IsNil(o.StartTime) {
+		toSerialize["start_time"] = o.StartTime
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots := _Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots{}
+	varFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots := _Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots)
+	err = json.Unmarshal(data, &varFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots(varFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots)
+	*o = Fulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots(varFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "avaliable")
-        delete(additionalProperties, "end_time")
-        delete(additionalProperties, "start_time")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "avaliable")
+		delete(additionalProperties, "end_time")
+		delete(additionalProperties, "start_time")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupSlots struct {
@@ -228,5 +228,3 @@ func (v *NullableFulfillment202309GetPackageHandoverTimeSlotsResponseDataPickupS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

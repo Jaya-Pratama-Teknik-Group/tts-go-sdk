@@ -11,22 +11,22 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309UpdateActivityResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309UpdateActivityResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309UpdateActivityResponseData{}
 
 // Promotion202309UpdateActivityResponseData struct for Promotion202309UpdateActivityResponseData
 type Promotion202309UpdateActivityResponseData struct {
-    // A unique ID that identifies different activities.
-    ActivityId *string `json:"activity_id,omitempty"`
-    // Activity name set by the seller.
-    Title *string `json:"title,omitempty"`
-    // Last update time. UNIX timestamp.
-    UpdateTime *int64 `json:"update_time,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A unique ID that identifies different activities.
+	ActivityId *string `json:"activity_id,omitempty"`
+	// Activity name set by the seller.
+	Title *string `json:"title,omitempty"`
+	// Last update time. UNIX timestamp.
+	UpdateTime           *int64 `json:"update_time,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309UpdateActivityResponseData Promotion202309UpdateActivityResponseData
@@ -36,161 +36,161 @@ type _Promotion202309UpdateActivityResponseData Promotion202309UpdateActivityRes
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309UpdateActivityResponseData() *Promotion202309UpdateActivityResponseData {
-    this := Promotion202309UpdateActivityResponseData{}
-    return &this
+	this := Promotion202309UpdateActivityResponseData{}
+	return &this
 }
 
 // NewPromotion202309UpdateActivityResponseDataWithDefaults instantiates a new Promotion202309UpdateActivityResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309UpdateActivityResponseDataWithDefaults() *Promotion202309UpdateActivityResponseData {
-    this := Promotion202309UpdateActivityResponseData{}
-    return &this
+	this := Promotion202309UpdateActivityResponseData{}
+	return &this
 }
 
 // GetActivityId returns the ActivityId field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityResponseData) GetActivityId() string {
-    if o == nil || utils.IsNil(o.ActivityId) {
-        var ret string
-        return ret
-    }
-    return *o.ActivityId
+	if o == nil || utils.IsNil(o.ActivityId) {
+		var ret string
+		return ret
+	}
+	return *o.ActivityId
 }
 
 // GetActivityIdOk returns a tuple with the ActivityId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityResponseData) GetActivityIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ActivityId) {
-        return nil, false
-    }
-    return o.ActivityId, true
+	if o == nil || utils.IsNil(o.ActivityId) {
+		return nil, false
+	}
+	return o.ActivityId, true
 }
 
 // HasActivityId returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityResponseData) HasActivityId() bool {
-    if o != nil && !utils.IsNil(o.ActivityId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ActivityId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetActivityId gets a reference to the given string and assigns it to the ActivityId field.
 func (o *Promotion202309UpdateActivityResponseData) SetActivityId(v string) {
-    o.ActivityId = &v
+	o.ActivityId = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityResponseData) GetTitle() string {
-    if o == nil || utils.IsNil(o.Title) {
-        var ret string
-        return ret
-    }
-    return *o.Title
+	if o == nil || utils.IsNil(o.Title) {
+		var ret string
+		return ret
+	}
+	return *o.Title
 }
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityResponseData) GetTitleOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Title) {
-        return nil, false
-    }
-    return o.Title, true
+	if o == nil || utils.IsNil(o.Title) {
+		return nil, false
+	}
+	return o.Title, true
 }
 
 // HasTitle returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityResponseData) HasTitle() bool {
-    if o != nil && !utils.IsNil(o.Title) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Title) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
 func (o *Promotion202309UpdateActivityResponseData) SetTitle(v string) {
-    o.Title = &v
+	o.Title = &v
 }
 
 // GetUpdateTime returns the UpdateTime field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityResponseData) GetUpdateTime() int64 {
-    if o == nil || utils.IsNil(o.UpdateTime) {
-        var ret int64
-        return ret
-    }
-    return *o.UpdateTime
+	if o == nil || utils.IsNil(o.UpdateTime) {
+		var ret int64
+		return ret
+	}
+	return *o.UpdateTime
 }
 
 // GetUpdateTimeOk returns a tuple with the UpdateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityResponseData) GetUpdateTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UpdateTime) {
-        return nil, false
-    }
-    return o.UpdateTime, true
+	if o == nil || utils.IsNil(o.UpdateTime) {
+		return nil, false
+	}
+	return o.UpdateTime, true
 }
 
 // HasUpdateTime returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityResponseData) HasUpdateTime() bool {
-    if o != nil && !utils.IsNil(o.UpdateTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UpdateTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUpdateTime gets a reference to the given int64 and assigns it to the UpdateTime field.
 func (o *Promotion202309UpdateActivityResponseData) SetUpdateTime(v int64) {
-    o.UpdateTime = &v
+	o.UpdateTime = &v
 }
 
 func (o Promotion202309UpdateActivityResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309UpdateActivityResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ActivityId) {
-        toSerialize["activity_id"] = o.ActivityId
-    }
-    if !utils.IsNil(o.Title) {
-        toSerialize["title"] = o.Title
-    }
-    if !utils.IsNil(o.UpdateTime) {
-        toSerialize["update_time"] = o.UpdateTime
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ActivityId) {
+		toSerialize["activity_id"] = o.ActivityId
+	}
+	if !utils.IsNil(o.Title) {
+		toSerialize["title"] = o.Title
+	}
+	if !utils.IsNil(o.UpdateTime) {
+		toSerialize["update_time"] = o.UpdateTime
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309UpdateActivityResponseData) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309UpdateActivityResponseData := _Promotion202309UpdateActivityResponseData{}
+	varPromotion202309UpdateActivityResponseData := _Promotion202309UpdateActivityResponseData{}
 
-    err = json.Unmarshal(data, &varPromotion202309UpdateActivityResponseData)
+	err = json.Unmarshal(data, &varPromotion202309UpdateActivityResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309UpdateActivityResponseData(varPromotion202309UpdateActivityResponseData)
+	*o = Promotion202309UpdateActivityResponseData(varPromotion202309UpdateActivityResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "activity_id")
-        delete(additionalProperties, "title")
-        delete(additionalProperties, "update_time")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "activity_id")
+		delete(additionalProperties, "title")
+		delete(additionalProperties, "update_time")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309UpdateActivityResponseData struct {
@@ -228,5 +228,3 @@ func (v *NullablePromotion202309UpdateActivityResponseData) UnmarshalJSON(src []
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

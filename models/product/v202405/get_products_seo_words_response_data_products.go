@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202405
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202405GetProductsSEOWordsResponseDataProducts type satisfies the MappedNullable interface at compile time
+// checks if the Product202405GetProductsSEOWordsResponseDataProducts type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202405GetProductsSEOWordsResponseDataProducts{}
 
 // Product202405GetProductsSEOWordsResponseDataProducts struct for Product202405GetProductsSEOWordsResponseDataProducts
 type Product202405GetProductsSEOWordsResponseDataProducts struct {
-    // The product ID.
-    Id *string `json:"id,omitempty"`
-    // The list of SEO keyword suggestions for the product title.
-    SeoWords []Product202405GetProductsSEOWordsResponseDataProductsSeoWords `json:"seo_words,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The product ID.
+	Id *string `json:"id,omitempty"`
+	// The list of SEO keyword suggestions for the product title.
+	SeoWords             []Product202405GetProductsSEOWordsResponseDataProductsSeoWords `json:"seo_words,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202405GetProductsSEOWordsResponseDataProducts Product202405GetProductsSEOWordsResponseDataProducts
@@ -34,125 +34,125 @@ type _Product202405GetProductsSEOWordsResponseDataProducts Product202405GetProdu
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202405GetProductsSEOWordsResponseDataProducts() *Product202405GetProductsSEOWordsResponseDataProducts {
-    this := Product202405GetProductsSEOWordsResponseDataProducts{}
-    return &this
+	this := Product202405GetProductsSEOWordsResponseDataProducts{}
+	return &this
 }
 
 // NewProduct202405GetProductsSEOWordsResponseDataProductsWithDefaults instantiates a new Product202405GetProductsSEOWordsResponseDataProducts object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202405GetProductsSEOWordsResponseDataProductsWithDefaults() *Product202405GetProductsSEOWordsResponseDataProducts {
-    this := Product202405GetProductsSEOWordsResponseDataProducts{}
-    return &this
+	this := Product202405GetProductsSEOWordsResponseDataProducts{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202405GetProductsSEOWordsResponseDataProducts) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202405GetProductsSEOWordsResponseDataProducts) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202405GetProductsSEOWordsResponseDataProducts) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202405GetProductsSEOWordsResponseDataProducts) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetSeoWords returns the SeoWords field value if set, zero value otherwise.
 func (o *Product202405GetProductsSEOWordsResponseDataProducts) GetSeoWords() []Product202405GetProductsSEOWordsResponseDataProductsSeoWords {
-    if o == nil || utils.IsNil(o.SeoWords) {
-        var ret []Product202405GetProductsSEOWordsResponseDataProductsSeoWords
-        return ret
-    }
-    return o.SeoWords
+	if o == nil || utils.IsNil(o.SeoWords) {
+		var ret []Product202405GetProductsSEOWordsResponseDataProductsSeoWords
+		return ret
+	}
+	return o.SeoWords
 }
 
 // GetSeoWordsOk returns a tuple with the SeoWords field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202405GetProductsSEOWordsResponseDataProducts) GetSeoWordsOk() ([]Product202405GetProductsSEOWordsResponseDataProductsSeoWords, bool) {
-    if o == nil || utils.IsNil(o.SeoWords) {
-        return nil, false
-    }
-    return o.SeoWords, true
+	if o == nil || utils.IsNil(o.SeoWords) {
+		return nil, false
+	}
+	return o.SeoWords, true
 }
 
 // HasSeoWords returns a boolean if a field has been set.
 func (o *Product202405GetProductsSEOWordsResponseDataProducts) HasSeoWords() bool {
-    if o != nil && !utils.IsNil(o.SeoWords) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SeoWords) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSeoWords gets a reference to the given []Product202405GetProductsSEOWordsResponseDataProductsSeoWords and assigns it to the SeoWords field.
 func (o *Product202405GetProductsSEOWordsResponseDataProducts) SetSeoWords(v []Product202405GetProductsSEOWordsResponseDataProductsSeoWords) {
-    o.SeoWords = v
+	o.SeoWords = v
 }
 
 func (o Product202405GetProductsSEOWordsResponseDataProducts) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202405GetProductsSEOWordsResponseDataProducts) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.SeoWords) {
-        toSerialize["seo_words"] = o.SeoWords
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.SeoWords) {
+		toSerialize["seo_words"] = o.SeoWords
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202405GetProductsSEOWordsResponseDataProducts) UnmarshalJSON(data []byte) (err error) {
-    varProduct202405GetProductsSEOWordsResponseDataProducts := _Product202405GetProductsSEOWordsResponseDataProducts{}
+	varProduct202405GetProductsSEOWordsResponseDataProducts := _Product202405GetProductsSEOWordsResponseDataProducts{}
 
-    err = json.Unmarshal(data, &varProduct202405GetProductsSEOWordsResponseDataProducts)
+	err = json.Unmarshal(data, &varProduct202405GetProductsSEOWordsResponseDataProducts)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202405GetProductsSEOWordsResponseDataProducts(varProduct202405GetProductsSEOWordsResponseDataProducts)
+	*o = Product202405GetProductsSEOWordsResponseDataProducts(varProduct202405GetProductsSEOWordsResponseDataProducts)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "seo_words")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "seo_words")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202405GetProductsSEOWordsResponseDataProducts struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202405GetProductsSEOWordsResponseDataProducts) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

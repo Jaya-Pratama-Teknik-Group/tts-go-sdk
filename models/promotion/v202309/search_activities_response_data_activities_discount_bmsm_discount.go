@@ -11,18 +11,18 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount{}
 
 // Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount struct for Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount
 type Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount struct {
-    // Configurations regarding BMSM promotions.  A maximum of two `tier`s are permitted. `details.threshold_type` and `details.discount_type` must be the same across all `tier`s.
-    Details []Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountDetails `json:"details,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Configurations regarding BMSM promotions.  A maximum of two `tier`s are permitted. `details.threshold_type` and `details.discount_type` must be the same across all `tier`s.
+	Details              []Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountDetails `json:"details,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount
@@ -32,89 +32,89 @@ type _Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount 
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount() *Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount {
-    this := Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount{}
-    return &this
+	this := Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount{}
+	return &this
 }
 
 // NewPromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountWithDefaults instantiates a new Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountWithDefaults() *Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount {
-    this := Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount{}
-    return &this
+	this := Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount{}
+	return &this
 }
 
 // GetDetails returns the Details field value if set, zero value otherwise.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount) GetDetails() []Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountDetails {
-    if o == nil || utils.IsNil(o.Details) {
-        var ret []Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountDetails
-        return ret
-    }
-    return o.Details
+	if o == nil || utils.IsNil(o.Details) {
+		var ret []Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountDetails
+		return ret
+	}
+	return o.Details
 }
 
 // GetDetailsOk returns a tuple with the Details field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount) GetDetailsOk() ([]Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountDetails, bool) {
-    if o == nil || utils.IsNil(o.Details) {
-        return nil, false
-    }
-    return o.Details, true
+	if o == nil || utils.IsNil(o.Details) {
+		return nil, false
+	}
+	return o.Details, true
 }
 
 // HasDetails returns a boolean if a field has been set.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount) HasDetails() bool {
-    if o != nil && !utils.IsNil(o.Details) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Details) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDetails gets a reference to the given []Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountDetails and assigns it to the Details field.
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount) SetDetails(v []Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscountDetails) {
-    o.Details = v
+	o.Details = v
 }
 
 func (o Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Details) {
-        toSerialize["details"] = o.Details
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Details) {
+		toSerialize["details"] = o.Details
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount := _Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount{}
+	varPromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount := _Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount{}
 
-    err = json.Unmarshal(data, &varPromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount)
+	err = json.Unmarshal(data, &varPromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount(varPromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount)
+	*o = Promotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount(varPromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "details")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "details")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309SearchActivitiesResponseDataActivitiesDiscountBmsmDiscount struct {
@@ -152,5 +152,3 @@ func (v *NullablePromotion202309SearchActivitiesResponseDataActivitiesDiscountBm
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

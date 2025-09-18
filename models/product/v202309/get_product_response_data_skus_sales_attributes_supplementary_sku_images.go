@@ -11,26 +11,26 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages{}
 
 // Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages struct for Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages
 type Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages struct {
-    // The image height. Unit: px
-    Height *int32 `json:"height,omitempty"`
-    // The URLs to view the image thumbnails.
-    ThumbUrls []string `json:"thumb_urls,omitempty"`
-    // The URI of the image.
-    Uri *string `json:"uri,omitempty"`
-    // The URLs to view the images.
-    Urls []string `json:"urls,omitempty"`
-    // The image width. Unit: px
-    Width *int32 `json:"width,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The image height. Unit: px
+	Height *int32 `json:"height,omitempty"`
+	// The URLs to view the image thumbnails.
+	ThumbUrls []string `json:"thumb_urls,omitempty"`
+	// The URI of the image.
+	Uri *string `json:"uri,omitempty"`
+	// The URLs to view the images.
+	Urls []string `json:"urls,omitempty"`
+	// The image width. Unit: px
+	Width                *int32 `json:"width,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages
@@ -40,233 +40,233 @@ type _Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImag
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages() *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages {
-    this := Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages{}
-    return &this
+	this := Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages{}
+	return &this
 }
 
 // NewProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImagesWithDefaults instantiates a new Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImagesWithDefaults() *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages {
-    this := Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages{}
-    return &this
+	this := Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages{}
+	return &this
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetHeight() int32 {
-    if o == nil || utils.IsNil(o.Height) {
-        var ret int32
-        return ret
-    }
-    return *o.Height
+	if o == nil || utils.IsNil(o.Height) {
+		var ret int32
+		return ret
+	}
+	return *o.Height
 }
 
 // GetHeightOk returns a tuple with the Height field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetHeightOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Height) {
-        return nil, false
-    }
-    return o.Height, true
+	if o == nil || utils.IsNil(o.Height) {
+		return nil, false
+	}
+	return o.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) HasHeight() bool {
-    if o != nil && !utils.IsNil(o.Height) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Height) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHeight gets a reference to the given int32 and assigns it to the Height field.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) SetHeight(v int32) {
-    o.Height = &v
+	o.Height = &v
 }
 
 // GetThumbUrls returns the ThumbUrls field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetThumbUrls() []string {
-    if o == nil || utils.IsNil(o.ThumbUrls) {
-        var ret []string
-        return ret
-    }
-    return o.ThumbUrls
+	if o == nil || utils.IsNil(o.ThumbUrls) {
+		var ret []string
+		return ret
+	}
+	return o.ThumbUrls
 }
 
 // GetThumbUrlsOk returns a tuple with the ThumbUrls field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetThumbUrlsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.ThumbUrls) {
-        return nil, false
-    }
-    return o.ThumbUrls, true
+	if o == nil || utils.IsNil(o.ThumbUrls) {
+		return nil, false
+	}
+	return o.ThumbUrls, true
 }
 
 // HasThumbUrls returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) HasThumbUrls() bool {
-    if o != nil && !utils.IsNil(o.ThumbUrls) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ThumbUrls) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetThumbUrls gets a reference to the given []string and assigns it to the ThumbUrls field.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) SetThumbUrls(v []string) {
-    o.ThumbUrls = v
+	o.ThumbUrls = v
 }
 
 // GetUri returns the Uri field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetUri() string {
-    if o == nil || utils.IsNil(o.Uri) {
-        var ret string
-        return ret
-    }
-    return *o.Uri
+	if o == nil || utils.IsNil(o.Uri) {
+		var ret string
+		return ret
+	}
+	return *o.Uri
 }
 
 // GetUriOk returns a tuple with the Uri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetUriOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Uri) {
-        return nil, false
-    }
-    return o.Uri, true
+	if o == nil || utils.IsNil(o.Uri) {
+		return nil, false
+	}
+	return o.Uri, true
 }
 
 // HasUri returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) HasUri() bool {
-    if o != nil && !utils.IsNil(o.Uri) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Uri) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUri gets a reference to the given string and assigns it to the Uri field.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) SetUri(v string) {
-    o.Uri = &v
+	o.Uri = &v
 }
 
 // GetUrls returns the Urls field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetUrls() []string {
-    if o == nil || utils.IsNil(o.Urls) {
-        var ret []string
-        return ret
-    }
-    return o.Urls
+	if o == nil || utils.IsNil(o.Urls) {
+		var ret []string
+		return ret
+	}
+	return o.Urls
 }
 
 // GetUrlsOk returns a tuple with the Urls field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetUrlsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.Urls) {
-        return nil, false
-    }
-    return o.Urls, true
+	if o == nil || utils.IsNil(o.Urls) {
+		return nil, false
+	}
+	return o.Urls, true
 }
 
 // HasUrls returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) HasUrls() bool {
-    if o != nil && !utils.IsNil(o.Urls) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Urls) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUrls gets a reference to the given []string and assigns it to the Urls field.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) SetUrls(v []string) {
-    o.Urls = v
+	o.Urls = v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetWidth() int32 {
-    if o == nil || utils.IsNil(o.Width) {
-        var ret int32
-        return ret
-    }
-    return *o.Width
+	if o == nil || utils.IsNil(o.Width) {
+		var ret int32
+		return ret
+	}
+	return *o.Width
 }
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) GetWidthOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Width) {
-        return nil, false
-    }
-    return o.Width, true
+	if o == nil || utils.IsNil(o.Width) {
+		return nil, false
+	}
+	return o.Width, true
 }
 
 // HasWidth returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) HasWidth() bool {
-    if o != nil && !utils.IsNil(o.Width) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Width) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWidth gets a reference to the given int32 and assigns it to the Width field.
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) SetWidth(v int32) {
-    o.Width = &v
+	o.Width = &v
 }
 
 func (o Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Height) {
-        toSerialize["height"] = o.Height
-    }
-    if !utils.IsNil(o.ThumbUrls) {
-        toSerialize["thumb_urls"] = o.ThumbUrls
-    }
-    if !utils.IsNil(o.Uri) {
-        toSerialize["uri"] = o.Uri
-    }
-    if !utils.IsNil(o.Urls) {
-        toSerialize["urls"] = o.Urls
-    }
-    if !utils.IsNil(o.Width) {
-        toSerialize["width"] = o.Width
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Height) {
+		toSerialize["height"] = o.Height
+	}
+	if !utils.IsNil(o.ThumbUrls) {
+		toSerialize["thumb_urls"] = o.ThumbUrls
+	}
+	if !utils.IsNil(o.Uri) {
+		toSerialize["uri"] = o.Uri
+	}
+	if !utils.IsNil(o.Urls) {
+		toSerialize["urls"] = o.Urls
+	}
+	if !utils.IsNil(o.Width) {
+		toSerialize["width"] = o.Width
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages := _Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages{}
+	varProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages := _Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages{}
 
-    err = json.Unmarshal(data, &varProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages)
+	err = json.Unmarshal(data, &varProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages(varProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages)
+	*o = Product202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages(varProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "height")
-        delete(additionalProperties, "thumb_urls")
-        delete(additionalProperties, "uri")
-        delete(additionalProperties, "urls")
-        delete(additionalProperties, "width")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "height")
+		delete(additionalProperties, "thumb_urls")
+		delete(additionalProperties, "uri")
+		delete(additionalProperties, "urls")
+		delete(additionalProperties, "width")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetProductResponseDataSkusSalesAttributesSupplementarySkuImages struct {
@@ -304,5 +304,3 @@ func (v *NullableProduct202309GetProductResponseDataSkusSalesAttributesSupplemen
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_ProductV202409APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_ProductV202409APIService(t *testing.T) {
 
 	t.Run("Test ProductV202409APIService Product202409ComplianceManufacturersManufacturerIdPartialEditPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var manufacturerId string
 
@@ -38,7 +38,7 @@ func Test_sdk_golang_ProductV202409APIService(t *testing.T) {
 
 	t.Run("Test ProductV202409APIService Product202409ComplianceManufacturersPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202409API.Product202409ComplianceManufacturersPost(context.Background()).Execute()
 
@@ -50,7 +50,7 @@ func Test_sdk_golang_ProductV202409APIService(t *testing.T) {
 
 	t.Run("Test ProductV202409APIService Product202409ComplianceManufacturersSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202409API.Product202409ComplianceManufacturersSearchPost(context.Background()).Execute()
 
@@ -62,7 +62,7 @@ func Test_sdk_golang_ProductV202409APIService(t *testing.T) {
 
 	t.Run("Test ProductV202409APIService Product202409ComplianceResponsiblePersonsPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202409API.Product202409ComplianceResponsiblePersonsPost(context.Background()).Execute()
 
@@ -74,7 +74,7 @@ func Test_sdk_golang_ProductV202409APIService(t *testing.T) {
 
 	t.Run("Test ProductV202409APIService Product202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var responsiblePersonId string
 
@@ -88,7 +88,7 @@ func Test_sdk_golang_ProductV202409APIService(t *testing.T) {
 
 	t.Run("Test ProductV202409APIService Product202409ComplianceResponsiblePersonsSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ProductV202409API.Product202409ComplianceResponsiblePersonsSearchPost(context.Background()).Execute()
 

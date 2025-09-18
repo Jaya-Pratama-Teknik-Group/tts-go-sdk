@@ -11,25 +11,25 @@ API version: 1.0.0
 package analytics_v202409
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Analytics202409GetShopVideoProductPerformanceListResponseDataProducts type satisfies the MappedNullable interface at compile time
+// checks if the Analytics202409GetShopVideoProductPerformanceListResponseDataProducts type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Analytics202409GetShopVideoProductPerformanceListResponseDataProducts{}
 
 // Analytics202409GetShopVideoProductPerformanceListResponseDataProducts struct for Analytics202409GetShopVideoProductPerformanceListResponseDataProducts
 type Analytics202409GetShopVideoProductPerformanceListResponseDataProducts struct {
-    // Average number of buyers per day for the current product.
-    DailyAvgBuyers *string `json:"daily_avg_buyers,omitempty"`
-    Gmv *Analytics202409GetShopVideoProductPerformanceListResponseDataProductsGmv `json:"gmv,omitempty"`
-    // Product ID
-    Id *string `json:"id,omitempty"`
-    // Product Name
-    Name *string `json:"name,omitempty"`
-    // Number of units sold for the current product.
-    UnitsSold *int64 `json:"units_sold,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Average number of buyers per day for the current product.
+	DailyAvgBuyers *string                                                                   `json:"daily_avg_buyers,omitempty"`
+	Gmv            *Analytics202409GetShopVideoProductPerformanceListResponseDataProductsGmv `json:"gmv,omitempty"`
+	// Product ID
+	Id *string `json:"id,omitempty"`
+	// Product Name
+	Name *string `json:"name,omitempty"`
+	// Number of units sold for the current product.
+	UnitsSold            *int64 `json:"units_sold,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Analytics202409GetShopVideoProductPerformanceListResponseDataProducts Analytics202409GetShopVideoProductPerformanceListResponseDataProducts
@@ -39,233 +39,233 @@ type _Analytics202409GetShopVideoProductPerformanceListResponseDataProducts Anal
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAnalytics202409GetShopVideoProductPerformanceListResponseDataProducts() *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts {
-    this := Analytics202409GetShopVideoProductPerformanceListResponseDataProducts{}
-    return &this
+	this := Analytics202409GetShopVideoProductPerformanceListResponseDataProducts{}
+	return &this
 }
 
 // NewAnalytics202409GetShopVideoProductPerformanceListResponseDataProductsWithDefaults instantiates a new Analytics202409GetShopVideoProductPerformanceListResponseDataProducts object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAnalytics202409GetShopVideoProductPerformanceListResponseDataProductsWithDefaults() *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts {
-    this := Analytics202409GetShopVideoProductPerformanceListResponseDataProducts{}
-    return &this
+	this := Analytics202409GetShopVideoProductPerformanceListResponseDataProducts{}
+	return &this
 }
 
 // GetDailyAvgBuyers returns the DailyAvgBuyers field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetDailyAvgBuyers() string {
-    if o == nil || utils.IsNil(o.DailyAvgBuyers) {
-        var ret string
-        return ret
-    }
-    return *o.DailyAvgBuyers
+	if o == nil || utils.IsNil(o.DailyAvgBuyers) {
+		var ret string
+		return ret
+	}
+	return *o.DailyAvgBuyers
 }
 
 // GetDailyAvgBuyersOk returns a tuple with the DailyAvgBuyers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetDailyAvgBuyersOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.DailyAvgBuyers) {
-        return nil, false
-    }
-    return o.DailyAvgBuyers, true
+	if o == nil || utils.IsNil(o.DailyAvgBuyers) {
+		return nil, false
+	}
+	return o.DailyAvgBuyers, true
 }
 
 // HasDailyAvgBuyers returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) HasDailyAvgBuyers() bool {
-    if o != nil && !utils.IsNil(o.DailyAvgBuyers) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.DailyAvgBuyers) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDailyAvgBuyers gets a reference to the given string and assigns it to the DailyAvgBuyers field.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) SetDailyAvgBuyers(v string) {
-    o.DailyAvgBuyers = &v
+	o.DailyAvgBuyers = &v
 }
 
 // GetGmv returns the Gmv field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetGmv() Analytics202409GetShopVideoProductPerformanceListResponseDataProductsGmv {
-    if o == nil || utils.IsNil(o.Gmv) {
-        var ret Analytics202409GetShopVideoProductPerformanceListResponseDataProductsGmv
-        return ret
-    }
-    return *o.Gmv
+	if o == nil || utils.IsNil(o.Gmv) {
+		var ret Analytics202409GetShopVideoProductPerformanceListResponseDataProductsGmv
+		return ret
+	}
+	return *o.Gmv
 }
 
 // GetGmvOk returns a tuple with the Gmv field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetGmvOk() (*Analytics202409GetShopVideoProductPerformanceListResponseDataProductsGmv, bool) {
-    if o == nil || utils.IsNil(o.Gmv) {
-        return nil, false
-    }
-    return o.Gmv, true
+	if o == nil || utils.IsNil(o.Gmv) {
+		return nil, false
+	}
+	return o.Gmv, true
 }
 
 // HasGmv returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) HasGmv() bool {
-    if o != nil && !utils.IsNil(o.Gmv) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Gmv) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGmv gets a reference to the given Analytics202409GetShopVideoProductPerformanceListResponseDataProductsGmv and assigns it to the Gmv field.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) SetGmv(v Analytics202409GetShopVideoProductPerformanceListResponseDataProductsGmv) {
-    o.Gmv = &v
+	o.Gmv = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 // GetUnitsSold returns the UnitsSold field value if set, zero value otherwise.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetUnitsSold() int64 {
-    if o == nil || utils.IsNil(o.UnitsSold) {
-        var ret int64
-        return ret
-    }
-    return *o.UnitsSold
+	if o == nil || utils.IsNil(o.UnitsSold) {
+		var ret int64
+		return ret
+	}
+	return *o.UnitsSold
 }
 
 // GetUnitsSoldOk returns a tuple with the UnitsSold field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) GetUnitsSoldOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UnitsSold) {
-        return nil, false
-    }
-    return o.UnitsSold, true
+	if o == nil || utils.IsNil(o.UnitsSold) {
+		return nil, false
+	}
+	return o.UnitsSold, true
 }
 
 // HasUnitsSold returns a boolean if a field has been set.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) HasUnitsSold() bool {
-    if o != nil && !utils.IsNil(o.UnitsSold) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UnitsSold) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUnitsSold gets a reference to the given int64 and assigns it to the UnitsSold field.
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) SetUnitsSold(v int64) {
-    o.UnitsSold = &v
+	o.UnitsSold = &v
 }
 
 func (o Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.DailyAvgBuyers) {
-        toSerialize["daily_avg_buyers"] = o.DailyAvgBuyers
-    }
-    if !utils.IsNil(o.Gmv) {
-        toSerialize["gmv"] = o.Gmv
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
-    if !utils.IsNil(o.UnitsSold) {
-        toSerialize["units_sold"] = o.UnitsSold
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.DailyAvgBuyers) {
+		toSerialize["daily_avg_buyers"] = o.DailyAvgBuyers
+	}
+	if !utils.IsNil(o.Gmv) {
+		toSerialize["gmv"] = o.Gmv
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !utils.IsNil(o.UnitsSold) {
+		toSerialize["units_sold"] = o.UnitsSold
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Analytics202409GetShopVideoProductPerformanceListResponseDataProducts) UnmarshalJSON(data []byte) (err error) {
-    varAnalytics202409GetShopVideoProductPerformanceListResponseDataProducts := _Analytics202409GetShopVideoProductPerformanceListResponseDataProducts{}
+	varAnalytics202409GetShopVideoProductPerformanceListResponseDataProducts := _Analytics202409GetShopVideoProductPerformanceListResponseDataProducts{}
 
-    err = json.Unmarshal(data, &varAnalytics202409GetShopVideoProductPerformanceListResponseDataProducts)
+	err = json.Unmarshal(data, &varAnalytics202409GetShopVideoProductPerformanceListResponseDataProducts)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Analytics202409GetShopVideoProductPerformanceListResponseDataProducts(varAnalytics202409GetShopVideoProductPerformanceListResponseDataProducts)
+	*o = Analytics202409GetShopVideoProductPerformanceListResponseDataProducts(varAnalytics202409GetShopVideoProductPerformanceListResponseDataProducts)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "daily_avg_buyers")
-        delete(additionalProperties, "gmv")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "name")
-        delete(additionalProperties, "units_sold")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "daily_avg_buyers")
+		delete(additionalProperties, "gmv")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "units_sold")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAnalytics202409GetShopVideoProductPerformanceListResponseDataProducts struct {
@@ -303,5 +303,3 @@ func (v *NullableAnalytics202409GetShopVideoProductPerformanceListResponseDataPr
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

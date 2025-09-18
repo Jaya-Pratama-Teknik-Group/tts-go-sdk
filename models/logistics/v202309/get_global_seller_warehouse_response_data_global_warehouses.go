@@ -11,22 +11,22 @@ API version: 1.0.0
 package logistics_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses type satisfies the MappedNullable interface at compile time
+// checks if the Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses{}
 
 // Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses struct for Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses
 type Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses struct {
-    // Global warehouse ID, a unique and immutable primary key, used for all global warehouse logistics.
-    Id *string `json:"id,omitempty"`
-    // Global warehouse name. This name is not unique across the TikTok Shop system.
-    Name *string `json:"name,omitempty"`
-    // Possible values: - SELLER: Warehouse owned by the seller.  - PLATFORM_COOPERATION: Warehouse owned by TikTok Shop.  
-    Ownership *string `json:"ownership,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Global warehouse ID, a unique and immutable primary key, used for all global warehouse logistics.
+	Id *string `json:"id,omitempty"`
+	// Global warehouse name. This name is not unique across the TikTok Shop system.
+	Name *string `json:"name,omitempty"`
+	// Possible values: - SELLER: Warehouse owned by the seller.  - PLATFORM_COOPERATION: Warehouse owned by TikTok Shop.
+	Ownership            *string `json:"ownership,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses
@@ -36,161 +36,161 @@ type _Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses Logist
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses() *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses {
-    this := Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses{}
-    return &this
+	this := Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses{}
+	return &this
 }
 
 // NewLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehousesWithDefaults instantiates a new Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehousesWithDefaults() *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses {
-    this := Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses{}
-    return &this
+	this := Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 // GetOwnership returns the Ownership field value if set, zero value otherwise.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) GetOwnership() string {
-    if o == nil || utils.IsNil(o.Ownership) {
-        var ret string
-        return ret
-    }
-    return *o.Ownership
+	if o == nil || utils.IsNil(o.Ownership) {
+		var ret string
+		return ret
+	}
+	return *o.Ownership
 }
 
 // GetOwnershipOk returns a tuple with the Ownership field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) GetOwnershipOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Ownership) {
-        return nil, false
-    }
-    return o.Ownership, true
+	if o == nil || utils.IsNil(o.Ownership) {
+		return nil, false
+	}
+	return o.Ownership, true
 }
 
 // HasOwnership returns a boolean if a field has been set.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) HasOwnership() bool {
-    if o != nil && !utils.IsNil(o.Ownership) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Ownership) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOwnership gets a reference to the given string and assigns it to the Ownership field.
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) SetOwnership(v string) {
-    o.Ownership = &v
+	o.Ownership = &v
 }
 
 func (o Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
-    if !utils.IsNil(o.Ownership) {
-        toSerialize["ownership"] = o.Ownership
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !utils.IsNil(o.Ownership) {
+		toSerialize["ownership"] = o.Ownership
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses) UnmarshalJSON(data []byte) (err error) {
-    varLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses := _Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses{}
+	varLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses := _Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses{}
 
-    err = json.Unmarshal(data, &varLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses)
+	err = json.Unmarshal(data, &varLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses(varLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses)
+	*o = Logistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses(varLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "name")
-        delete(additionalProperties, "ownership")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "ownership")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWarehouses struct {
@@ -228,5 +228,3 @@ func (v *NullableLogistics202309GetGlobalSellerWarehouseResponseDataGlobalWareho
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

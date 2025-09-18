@@ -11,19 +11,19 @@ API version: 1.0.0
 package analytics_v202405
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Analytics202405GetShopProductPerformanceResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Analytics202405GetShopProductPerformanceResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Analytics202405GetShopProductPerformanceResponseData{}
 
 // Analytics202405GetShopProductPerformanceResponseData struct for Analytics202405GetShopProductPerformanceResponseData
 type Analytics202405GetShopProductPerformanceResponseData struct {
-    // Latest date in local timezone where data is ready (ISO 8601 format).
-    LatestAvailableDate *string `json:"latest_available_date,omitempty"`
-    Performance *Analytics202405GetShopProductPerformanceResponseDataPerformance `json:"performance,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Latest date in local timezone where data is ready (ISO 8601 format).
+	LatestAvailableDate  *string                                                          `json:"latest_available_date,omitempty"`
+	Performance          *Analytics202405GetShopProductPerformanceResponseDataPerformance `json:"performance,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Analytics202405GetShopProductPerformanceResponseData Analytics202405GetShopProductPerformanceResponseData
@@ -33,125 +33,125 @@ type _Analytics202405GetShopProductPerformanceResponseData Analytics202405GetSho
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAnalytics202405GetShopProductPerformanceResponseData() *Analytics202405GetShopProductPerformanceResponseData {
-    this := Analytics202405GetShopProductPerformanceResponseData{}
-    return &this
+	this := Analytics202405GetShopProductPerformanceResponseData{}
+	return &this
 }
 
 // NewAnalytics202405GetShopProductPerformanceResponseDataWithDefaults instantiates a new Analytics202405GetShopProductPerformanceResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAnalytics202405GetShopProductPerformanceResponseDataWithDefaults() *Analytics202405GetShopProductPerformanceResponseData {
-    this := Analytics202405GetShopProductPerformanceResponseData{}
-    return &this
+	this := Analytics202405GetShopProductPerformanceResponseData{}
+	return &this
 }
 
 // GetLatestAvailableDate returns the LatestAvailableDate field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceResponseData) GetLatestAvailableDate() string {
-    if o == nil || utils.IsNil(o.LatestAvailableDate) {
-        var ret string
-        return ret
-    }
-    return *o.LatestAvailableDate
+	if o == nil || utils.IsNil(o.LatestAvailableDate) {
+		var ret string
+		return ret
+	}
+	return *o.LatestAvailableDate
 }
 
 // GetLatestAvailableDateOk returns a tuple with the LatestAvailableDate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseData) GetLatestAvailableDateOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.LatestAvailableDate) {
-        return nil, false
-    }
-    return o.LatestAvailableDate, true
+	if o == nil || utils.IsNil(o.LatestAvailableDate) {
+		return nil, false
+	}
+	return o.LatestAvailableDate, true
 }
 
 // HasLatestAvailableDate returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseData) HasLatestAvailableDate() bool {
-    if o != nil && !utils.IsNil(o.LatestAvailableDate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LatestAvailableDate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLatestAvailableDate gets a reference to the given string and assigns it to the LatestAvailableDate field.
 func (o *Analytics202405GetShopProductPerformanceResponseData) SetLatestAvailableDate(v string) {
-    o.LatestAvailableDate = &v
+	o.LatestAvailableDate = &v
 }
 
 // GetPerformance returns the Performance field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceResponseData) GetPerformance() Analytics202405GetShopProductPerformanceResponseDataPerformance {
-    if o == nil || utils.IsNil(o.Performance) {
-        var ret Analytics202405GetShopProductPerformanceResponseDataPerformance
-        return ret
-    }
-    return *o.Performance
+	if o == nil || utils.IsNil(o.Performance) {
+		var ret Analytics202405GetShopProductPerformanceResponseDataPerformance
+		return ret
+	}
+	return *o.Performance
 }
 
 // GetPerformanceOk returns a tuple with the Performance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseData) GetPerformanceOk() (*Analytics202405GetShopProductPerformanceResponseDataPerformance, bool) {
-    if o == nil || utils.IsNil(o.Performance) {
-        return nil, false
-    }
-    return o.Performance, true
+	if o == nil || utils.IsNil(o.Performance) {
+		return nil, false
+	}
+	return o.Performance, true
 }
 
 // HasPerformance returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseData) HasPerformance() bool {
-    if o != nil && !utils.IsNil(o.Performance) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Performance) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPerformance gets a reference to the given Analytics202405GetShopProductPerformanceResponseDataPerformance and assigns it to the Performance field.
 func (o *Analytics202405GetShopProductPerformanceResponseData) SetPerformance(v Analytics202405GetShopProductPerformanceResponseDataPerformance) {
-    o.Performance = &v
+	o.Performance = &v
 }
 
 func (o Analytics202405GetShopProductPerformanceResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Analytics202405GetShopProductPerformanceResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.LatestAvailableDate) {
-        toSerialize["latest_available_date"] = o.LatestAvailableDate
-    }
-    if !utils.IsNil(o.Performance) {
-        toSerialize["performance"] = o.Performance
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.LatestAvailableDate) {
+		toSerialize["latest_available_date"] = o.LatestAvailableDate
+	}
+	if !utils.IsNil(o.Performance) {
+		toSerialize["performance"] = o.Performance
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Analytics202405GetShopProductPerformanceResponseData) UnmarshalJSON(data []byte) (err error) {
-    varAnalytics202405GetShopProductPerformanceResponseData := _Analytics202405GetShopProductPerformanceResponseData{}
+	varAnalytics202405GetShopProductPerformanceResponseData := _Analytics202405GetShopProductPerformanceResponseData{}
 
-    err = json.Unmarshal(data, &varAnalytics202405GetShopProductPerformanceResponseData)
+	err = json.Unmarshal(data, &varAnalytics202405GetShopProductPerformanceResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Analytics202405GetShopProductPerformanceResponseData(varAnalytics202405GetShopProductPerformanceResponseData)
+	*o = Analytics202405GetShopProductPerformanceResponseData(varAnalytics202405GetShopProductPerformanceResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "latest_available_date")
-        delete(additionalProperties, "performance")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "latest_available_date")
+		delete(additionalProperties, "performance")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAnalytics202405GetShopProductPerformanceResponseData struct {
@@ -189,5 +189,3 @@ func (v *NullableAnalytics202405GetShopProductPerformanceResponseData) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

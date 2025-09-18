@@ -11,45 +11,44 @@ API version: 1.0.0
 package apis
 
 import (
-    "bytes"
-    "context"
-    "io"
-    "net/http"
-    "net/url"
-    "strings"
+	"bytes"
+	"context"
+	"io"
+	"net/http"
+	"net/url"
+	"strings"
 
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202409"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202409"
 )
-
 
 // ProductV202409APIService ProductV202409API service
 type ProductV202409APIService service
 
 type ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest struct {
-    ctx context.Context
-    ApiService *ProductV202409APIService
-    manufacturerId string
-    xTtsAccessToken *string
-    contentType *string
-    product202409PartialEditManufacturerRequestBody *product_v202409.Product202409PartialEditManufacturerRequestBody
+	ctx                                             context.Context
+	ApiService                                      *ProductV202409APIService
+	manufacturerId                                  string
+	xTtsAccessToken                                 *string
+	contentType                                     *string
+	product202409PartialEditManufacturerRequestBody *product_v202409.Product202409PartialEditManufacturerRequestBody
 }
 
-// 
 func (r ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest) ContentType(contentType string) ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
 func (r ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest) Product202409PartialEditManufacturerRequestBody(product202409PartialEditManufacturerRequestBody product_v202409.Product202409PartialEditManufacturerRequestBody) ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest {
-    r.product202409PartialEditManufacturerRequestBody = &product202409PartialEditManufacturerRequestBody
-    return r
+	r.product202409PartialEditManufacturerRequestBody = &product202409PartialEditManufacturerRequestBody
+	return r
 }
 func (r ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest) Execute() (*product_v202409.Product202409PartialEditManufacturerResponse, *http.Response, error) {
-    return r.ApiService.Product202409ComplianceManufacturersManufacturerIdPartialEditPostExecute(r)
+	return r.ApiService.Product202409ComplianceManufacturersManufacturerIdPartialEditPostExecute(r)
 }
 
 /*
@@ -66,123 +65,124 @@ Target seller: Local sellers operating in EU countries
 @return ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest
 */
 func (a *ProductV202409APIService) Product202409ComplianceManufacturersManufacturerIdPartialEditPost(ctx context.Context, manufacturerId string) ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest {
-    return ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest{
-        ApiService: a,
-        ctx: ctx,
-        manufacturerId: manufacturerId,
-    }
+	return ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest{
+		ApiService:     a,
+		ctx:            ctx,
+		manufacturerId: manufacturerId,
+	}
 }
 
 // Execute executes the request
-//  @return Product202409PartialEditManufacturerResponse
+//
+//	@return Product202409PartialEditManufacturerResponse
 func (a *ProductV202409APIService) Product202409ComplianceManufacturersManufacturerIdPartialEditPostExecute(r ApiProduct202409ComplianceManufacturersManufacturerIdPartialEditPostRequest) (*product_v202409.Product202409PartialEditManufacturerResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202409.Product202409PartialEditManufacturerResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202409.Product202409PartialEditManufacturerResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceManufacturersManufacturerIdPartialEditPost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceManufacturersManufacturerIdPartialEditPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202409/compliance/manufacturers/{manufacturer_id}/partial_edit"
-    localVarPath = strings.Replace(localVarPath, "{"+"manufacturer_id"+"}", url.PathEscape(parameterValueToString(r.manufacturerId, "manufacturerId")), -1)
+	localVarPath := localBasePath + "/product/202409/compliance/manufacturers/{manufacturer_id}/partial_edit"
+	localVarPath = strings.Replace(localVarPath, "{"+"manufacturer_id"+"}", url.PathEscape(parameterValueToString(r.manufacturerId, "manufacturerId")), -1)
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.product202409PartialEditManufacturerRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.product202409PartialEditManufacturerRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiProduct202409ComplianceManufacturersPostRequest struct {
-    ctx context.Context
-    ApiService *ProductV202409APIService
-    xTtsAccessToken *string
-    contentType *string
-    product202409CreateManufacturerRequestBody *product_v202409.Product202409CreateManufacturerRequestBody
+	ctx                                        context.Context
+	ApiService                                 *ProductV202409APIService
+	xTtsAccessToken                            *string
+	contentType                                *string
+	product202409CreateManufacturerRequestBody *product_v202409.Product202409CreateManufacturerRequestBody
 }
 
-// 
 func (r ApiProduct202409ComplianceManufacturersPostRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202409ComplianceManufacturersPostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202409ComplianceManufacturersPostRequest) ContentType(contentType string) ApiProduct202409ComplianceManufacturersPostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
 func (r ApiProduct202409ComplianceManufacturersPostRequest) Product202409CreateManufacturerRequestBody(product202409CreateManufacturerRequestBody product_v202409.Product202409CreateManufacturerRequestBody) ApiProduct202409ComplianceManufacturersPostRequest {
-    r.product202409CreateManufacturerRequestBody = &product202409CreateManufacturerRequestBody
-    return r
+	r.product202409CreateManufacturerRequestBody = &product202409CreateManufacturerRequestBody
+	return r
 }
 func (r ApiProduct202409ComplianceManufacturersPostRequest) Execute() (*product_v202409.Product202409CreateManufacturerResponse, *http.Response, error) {
-    return r.ApiService.Product202409ComplianceManufacturersPostExecute(r)
+	return r.ApiService.Product202409ComplianceManufacturersPostExecute(r)
 }
 
 /*
@@ -197,133 +197,136 @@ Target seller: Local sellers operating in EU countries
 @return ApiProduct202409ComplianceManufacturersPostRequest
 */
 func (a *ProductV202409APIService) Product202409ComplianceManufacturersPost(ctx context.Context) ApiProduct202409ComplianceManufacturersPostRequest {
-    return ApiProduct202409ComplianceManufacturersPostRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiProduct202409ComplianceManufacturersPostRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Product202409CreateManufacturerResponse
+//
+//	@return Product202409CreateManufacturerResponse
 func (a *ProductV202409APIService) Product202409ComplianceManufacturersPostExecute(r ApiProduct202409ComplianceManufacturersPostRequest) (*product_v202409.Product202409CreateManufacturerResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202409.Product202409CreateManufacturerResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202409.Product202409CreateManufacturerResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceManufacturersPost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceManufacturersPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202409/compliance/manufacturers"
+	localVarPath := localBasePath + "/product/202409/compliance/manufacturers"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.product202409CreateManufacturerRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.product202409CreateManufacturerRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiProduct202409ComplianceManufacturersSearchPostRequest struct {
-    ctx context.Context
-    ApiService *ProductV202409APIService
-    pageSize *int64
-    xTtsAccessToken *string
-    contentType *string
-    pageToken *string
-    product202409SearchManufacturersRequestBody *product_v202409.Product202409SearchManufacturersRequestBody
+	ctx                                         context.Context
+	ApiService                                  *ProductV202409APIService
+	pageSize                                    *int64
+	xTtsAccessToken                             *string
+	contentType                                 *string
+	pageToken                                   *string
+	product202409SearchManufacturersRequestBody *product_v202409.Product202409SearchManufacturersRequestBody
 }
 
 // The number of results to be returned per page.  Valid range: [1-100]
 func (r ApiProduct202409ComplianceManufacturersSearchPostRequest) PageSize(pageSize int64) ApiProduct202409ComplianceManufacturersSearchPostRequest {
-    r.pageSize = &pageSize
-    return r
+	r.pageSize = &pageSize
+	return r
 }
-// 
+
 func (r ApiProduct202409ComplianceManufacturersSearchPostRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202409ComplianceManufacturersSearchPostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202409ComplianceManufacturersSearchPostRequest) ContentType(contentType string) ApiProduct202409ComplianceManufacturersSearchPostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
+
 // An opaque token used to retrieve the next page of a paginated result set. Retrieve this value from the result of the &#x60;next_page_token&#x60; from a previous response. It is not needed for the first page.
 func (r ApiProduct202409ComplianceManufacturersSearchPostRequest) PageToken(pageToken string) ApiProduct202409ComplianceManufacturersSearchPostRequest {
-    r.pageToken = &pageToken
-    return r
+	r.pageToken = &pageToken
+	return r
 }
 func (r ApiProduct202409ComplianceManufacturersSearchPostRequest) Product202409SearchManufacturersRequestBody(product202409SearchManufacturersRequestBody product_v202409.Product202409SearchManufacturersRequestBody) ApiProduct202409ComplianceManufacturersSearchPostRequest {
-    r.product202409SearchManufacturersRequestBody = &product202409SearchManufacturersRequestBody
-    return r
+	r.product202409SearchManufacturersRequestBody = &product202409SearchManufacturersRequestBody
+	return r
 }
 func (r ApiProduct202409ComplianceManufacturersSearchPostRequest) Execute() (*product_v202409.Product202409SearchManufacturersResponse, *http.Response, error) {
-    return r.ApiService.Product202409ComplianceManufacturersSearchPostExecute(r)
+	return r.ApiService.Product202409ComplianceManufacturersSearchPostExecute(r)
 }
 
 /*
@@ -336,128 +339,129 @@ Target seller: Local sellers operating in EU countries
 @return ApiProduct202409ComplianceManufacturersSearchPostRequest
 */
 func (a *ProductV202409APIService) Product202409ComplianceManufacturersSearchPost(ctx context.Context) ApiProduct202409ComplianceManufacturersSearchPostRequest {
-    return ApiProduct202409ComplianceManufacturersSearchPostRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiProduct202409ComplianceManufacturersSearchPostRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Product202409SearchManufacturersResponse
+//
+//	@return Product202409SearchManufacturersResponse
 func (a *ProductV202409APIService) Product202409ComplianceManufacturersSearchPostExecute(r ApiProduct202409ComplianceManufacturersSearchPostRequest) (*product_v202409.Product202409SearchManufacturersResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202409.Product202409SearchManufacturersResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202409.Product202409SearchManufacturersResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceManufacturersSearchPost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceManufacturersSearchPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202409/compliance/manufacturers/search"
+	localVarPath := localBasePath + "/product/202409/compliance/manufacturers/search"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.pageSize == nil {
-        return localVarReturnValue, nil, reportError("pageSize is required and must be specified")
-    }
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.pageSize == nil {
+		return localVarReturnValue, nil, reportError("pageSize is required and must be specified")
+	}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    parameterAddToHeaderOrQuery(localVarQueryParams, "page_size", r.pageSize, "")
-    if r.pageToken != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "page_token", r.pageToken, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "page_size", r.pageSize, "")
+	if r.pageToken != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page_token", r.pageToken, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.product202409SearchManufacturersRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.product202409SearchManufacturersRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiProduct202409ComplianceResponsiblePersonsPostRequest struct {
-    ctx context.Context
-    ApiService *ProductV202409APIService
-    xTtsAccessToken *string
-    contentType *string
-    product202409CreateResponsiblePersonRequestBody *product_v202409.Product202409CreateResponsiblePersonRequestBody
+	ctx                                             context.Context
+	ApiService                                      *ProductV202409APIService
+	xTtsAccessToken                                 *string
+	contentType                                     *string
+	product202409CreateResponsiblePersonRequestBody *product_v202409.Product202409CreateResponsiblePersonRequestBody
 }
 
-// 
 func (r ApiProduct202409ComplianceResponsiblePersonsPostRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202409ComplianceResponsiblePersonsPostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202409ComplianceResponsiblePersonsPostRequest) ContentType(contentType string) ApiProduct202409ComplianceResponsiblePersonsPostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
 func (r ApiProduct202409ComplianceResponsiblePersonsPostRequest) Product202409CreateResponsiblePersonRequestBody(product202409CreateResponsiblePersonRequestBody product_v202409.Product202409CreateResponsiblePersonRequestBody) ApiProduct202409ComplianceResponsiblePersonsPostRequest {
-    r.product202409CreateResponsiblePersonRequestBody = &product202409CreateResponsiblePersonRequestBody
-    return r
+	r.product202409CreateResponsiblePersonRequestBody = &product202409CreateResponsiblePersonRequestBody
+	return r
 }
 func (r ApiProduct202409ComplianceResponsiblePersonsPostRequest) Execute() (*product_v202409.Product202409CreateResponsiblePersonResponse, *http.Response, error) {
-    return r.ApiService.Product202409ComplianceResponsiblePersonsPostExecute(r)
+	return r.ApiService.Product202409ComplianceResponsiblePersonsPostExecute(r)
 }
 
 /*
@@ -473,122 +477,123 @@ Target seller: Local sellers operating in EU countries
 @return ApiProduct202409ComplianceResponsiblePersonsPostRequest
 */
 func (a *ProductV202409APIService) Product202409ComplianceResponsiblePersonsPost(ctx context.Context) ApiProduct202409ComplianceResponsiblePersonsPostRequest {
-    return ApiProduct202409ComplianceResponsiblePersonsPostRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiProduct202409ComplianceResponsiblePersonsPostRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Product202409CreateResponsiblePersonResponse
+//
+//	@return Product202409CreateResponsiblePersonResponse
 func (a *ProductV202409APIService) Product202409ComplianceResponsiblePersonsPostExecute(r ApiProduct202409ComplianceResponsiblePersonsPostRequest) (*product_v202409.Product202409CreateResponsiblePersonResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202409.Product202409CreateResponsiblePersonResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202409.Product202409CreateResponsiblePersonResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceResponsiblePersonsPost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceResponsiblePersonsPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202409/compliance/responsible_persons"
+	localVarPath := localBasePath + "/product/202409/compliance/responsible_persons"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.product202409CreateResponsiblePersonRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.product202409CreateResponsiblePersonRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest struct {
-    ctx context.Context
-    ApiService *ProductV202409APIService
-    responsiblePersonId string
-    xTtsAccessToken *string
-    contentType *string
-    product202409PartialEditResponsiblePersonRequestBody *product_v202409.Product202409PartialEditResponsiblePersonRequestBody
+	ctx                                                  context.Context
+	ApiService                                           *ProductV202409APIService
+	responsiblePersonId                                  string
+	xTtsAccessToken                                      *string
+	contentType                                          *string
+	product202409PartialEditResponsiblePersonRequestBody *product_v202409.Product202409PartialEditResponsiblePersonRequestBody
 }
 
-// 
 func (r ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest) ContentType(contentType string) ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
 func (r ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest) Product202409PartialEditResponsiblePersonRequestBody(product202409PartialEditResponsiblePersonRequestBody product_v202409.Product202409PartialEditResponsiblePersonRequestBody) ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest {
-    r.product202409PartialEditResponsiblePersonRequestBody = &product202409PartialEditResponsiblePersonRequestBody
-    return r
+	r.product202409PartialEditResponsiblePersonRequestBody = &product202409PartialEditResponsiblePersonRequestBody
+	return r
 }
 func (r ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest) Execute() (*product_v202409.Product202409PartialEditResponsiblePersonResponse, *http.Response, error) {
-    return r.ApiService.Product202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostExecute(r)
+	return r.ApiService.Product202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostExecute(r)
 }
 
 /*
@@ -605,135 +610,138 @@ Target seller: Local sellers operating in EU countries
 @return ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest
 */
 func (a *ProductV202409APIService) Product202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPost(ctx context.Context, responsiblePersonId string) ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest {
-    return ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest{
-        ApiService: a,
-        ctx: ctx,
-        responsiblePersonId: responsiblePersonId,
-    }
+	return ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest{
+		ApiService:          a,
+		ctx:                 ctx,
+		responsiblePersonId: responsiblePersonId,
+	}
 }
 
 // Execute executes the request
-//  @return Product202409PartialEditResponsiblePersonResponse
+//
+//	@return Product202409PartialEditResponsiblePersonResponse
 func (a *ProductV202409APIService) Product202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostExecute(r ApiProduct202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPostRequest) (*product_v202409.Product202409PartialEditResponsiblePersonResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202409.Product202409PartialEditResponsiblePersonResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202409.Product202409PartialEditResponsiblePersonResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceResponsiblePersonsResponsiblePersonIdPartialEditPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202409/compliance/responsible_persons/{responsible_person_id}/partial_edit"
-    localVarPath = strings.Replace(localVarPath, "{"+"responsible_person_id"+"}", url.PathEscape(parameterValueToString(r.responsiblePersonId, "responsiblePersonId")), -1)
+	localVarPath := localBasePath + "/product/202409/compliance/responsible_persons/{responsible_person_id}/partial_edit"
+	localVarPath = strings.Replace(localVarPath, "{"+"responsible_person_id"+"}", url.PathEscape(parameterValueToString(r.responsiblePersonId, "responsiblePersonId")), -1)
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.product202409PartialEditResponsiblePersonRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.product202409PartialEditResponsiblePersonRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest struct {
-    ctx context.Context
-    ApiService *ProductV202409APIService
-    pageSize *int64
-    xTtsAccessToken *string
-    contentType *string
-    pageToken *string
-    product202409SearchResponsiblePersonsRequestBody *product_v202409.Product202409SearchResponsiblePersonsRequestBody
+	ctx                                              context.Context
+	ApiService                                       *ProductV202409APIService
+	pageSize                                         *int64
+	xTtsAccessToken                                  *string
+	contentType                                      *string
+	pageToken                                        *string
+	product202409SearchResponsiblePersonsRequestBody *product_v202409.Product202409SearchResponsiblePersonsRequestBody
 }
 
 // The number of results to be returned per page.  Valid range: [1-100]
 func (r ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest) PageSize(pageSize int64) ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest {
-    r.pageSize = &pageSize
-    return r
+	r.pageSize = &pageSize
+	return r
 }
-// 
+
 func (r ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest) ContentType(contentType string) ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
+
 // An opaque token used to retrieve the next page of a paginated result set. Retrieve this value from the result of the &#x60;next_page_token&#x60; from a previous response. It is not needed for the first page.
 func (r ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest) PageToken(pageToken string) ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest {
-    r.pageToken = &pageToken
-    return r
+	r.pageToken = &pageToken
+	return r
 }
 func (r ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest) Product202409SearchResponsiblePersonsRequestBody(product202409SearchResponsiblePersonsRequestBody product_v202409.Product202409SearchResponsiblePersonsRequestBody) ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest {
-    r.product202409SearchResponsiblePersonsRequestBody = &product202409SearchResponsiblePersonsRequestBody
-    return r
+	r.product202409SearchResponsiblePersonsRequestBody = &product202409SearchResponsiblePersonsRequestBody
+	return r
 }
 func (r ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest) Execute() (*product_v202409.Product202409SearchResponsiblePersonsResponse, *http.Response, error) {
-    return r.ApiService.Product202409ComplianceResponsiblePersonsSearchPostExecute(r)
+	return r.ApiService.Product202409ComplianceResponsiblePersonsSearchPostExecute(r)
 }
 
 /*
@@ -746,100 +754,101 @@ Target seller: Local sellers operating in EU countries
 @return ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest
 */
 func (a *ProductV202409APIService) Product202409ComplianceResponsiblePersonsSearchPost(ctx context.Context) ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest {
-    return ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Product202409SearchResponsiblePersonsResponse
+//
+//	@return Product202409SearchResponsiblePersonsResponse
 func (a *ProductV202409APIService) Product202409ComplianceResponsiblePersonsSearchPostExecute(r ApiProduct202409ComplianceResponsiblePersonsSearchPostRequest) (*product_v202409.Product202409SearchResponsiblePersonsResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202409.Product202409SearchResponsiblePersonsResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202409.Product202409SearchResponsiblePersonsResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceResponsiblePersonsSearchPost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202409APIService.Product202409ComplianceResponsiblePersonsSearchPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202409/compliance/responsible_persons/search"
+	localVarPath := localBasePath + "/product/202409/compliance/responsible_persons/search"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.pageSize == nil {
-        return localVarReturnValue, nil, reportError("pageSize is required and must be specified")
-    }
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.pageSize == nil {
+		return localVarReturnValue, nil, reportError("pageSize is required and must be specified")
+	}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    parameterAddToHeaderOrQuery(localVarQueryParams, "page_size", r.pageSize, "")
-    if r.pageToken != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "page_token", r.pageToken, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "page_size", r.pageSize, "")
+	if r.pageToken != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page_token", r.pageToken, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.product202409SearchResponsiblePersonsRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.product202409SearchResponsiblePersonsRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }

@@ -11,22 +11,22 @@ API version: 1.0.0
 package order_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax type satisfies the MappedNullable interface at compile time
+// checks if the Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax{}
 
 // Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax struct for Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax
 type Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax struct {
-    // Tax amount.
-    TaxAmount *string `json:"tax_amount,omitempty"`
-    // Tax rate.
-    TaxRate *string `json:"tax_rate,omitempty"`
-    // Tax type. - `SALES_TAX` (US market sales tax) Currently only sales tax is available.
-    TaxType *string `json:"tax_type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Tax amount.
+	TaxAmount *string `json:"tax_amount,omitempty"`
+	// Tax rate.
+	TaxRate *string `json:"tax_rate,omitempty"`
+	// Tax type. - `SALES_TAX` (US market sales tax) Currently only sales tax is available.
+	TaxType              *string `json:"tax_type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax
@@ -36,161 +36,161 @@ type _Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax Order202309Get
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTax() *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax {
-    this := Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax{}
-    return &this
+	this := Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax{}
+	return &this
 }
 
 // NewOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTaxWithDefaults instantiates a new Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTaxWithDefaults() *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax {
-    this := Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax{}
-    return &this
+	this := Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax{}
+	return &this
 }
 
 // GetTaxAmount returns the TaxAmount field value if set, zero value otherwise.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) GetTaxAmount() string {
-    if o == nil || utils.IsNil(o.TaxAmount) {
-        var ret string
-        return ret
-    }
-    return *o.TaxAmount
+	if o == nil || utils.IsNil(o.TaxAmount) {
+		var ret string
+		return ret
+	}
+	return *o.TaxAmount
 }
 
 // GetTaxAmountOk returns a tuple with the TaxAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) GetTaxAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TaxAmount) {
-        return nil, false
-    }
-    return o.TaxAmount, true
+	if o == nil || utils.IsNil(o.TaxAmount) {
+		return nil, false
+	}
+	return o.TaxAmount, true
 }
 
 // HasTaxAmount returns a boolean if a field has been set.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) HasTaxAmount() bool {
-    if o != nil && !utils.IsNil(o.TaxAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TaxAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTaxAmount gets a reference to the given string and assigns it to the TaxAmount field.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) SetTaxAmount(v string) {
-    o.TaxAmount = &v
+	o.TaxAmount = &v
 }
 
 // GetTaxRate returns the TaxRate field value if set, zero value otherwise.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) GetTaxRate() string {
-    if o == nil || utils.IsNil(o.TaxRate) {
-        var ret string
-        return ret
-    }
-    return *o.TaxRate
+	if o == nil || utils.IsNil(o.TaxRate) {
+		var ret string
+		return ret
+	}
+	return *o.TaxRate
 }
 
 // GetTaxRateOk returns a tuple with the TaxRate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) GetTaxRateOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TaxRate) {
-        return nil, false
-    }
-    return o.TaxRate, true
+	if o == nil || utils.IsNil(o.TaxRate) {
+		return nil, false
+	}
+	return o.TaxRate, true
 }
 
 // HasTaxRate returns a boolean if a field has been set.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) HasTaxRate() bool {
-    if o != nil && !utils.IsNil(o.TaxRate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TaxRate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTaxRate gets a reference to the given string and assigns it to the TaxRate field.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) SetTaxRate(v string) {
-    o.TaxRate = &v
+	o.TaxRate = &v
 }
 
 // GetTaxType returns the TaxType field value if set, zero value otherwise.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) GetTaxType() string {
-    if o == nil || utils.IsNil(o.TaxType) {
-        var ret string
-        return ret
-    }
-    return *o.TaxType
+	if o == nil || utils.IsNil(o.TaxType) {
+		var ret string
+		return ret
+	}
+	return *o.TaxType
 }
 
 // GetTaxTypeOk returns a tuple with the TaxType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) GetTaxTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TaxType) {
-        return nil, false
-    }
-    return o.TaxType, true
+	if o == nil || utils.IsNil(o.TaxType) {
+		return nil, false
+	}
+	return o.TaxType, true
 }
 
 // HasTaxType returns a boolean if a field has been set.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) HasTaxType() bool {
-    if o != nil && !utils.IsNil(o.TaxType) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TaxType) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTaxType gets a reference to the given string and assigns it to the TaxType field.
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) SetTaxType(v string) {
-    o.TaxType = &v
+	o.TaxType = &v
 }
 
 func (o Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.TaxAmount) {
-        toSerialize["tax_amount"] = o.TaxAmount
-    }
-    if !utils.IsNil(o.TaxRate) {
-        toSerialize["tax_rate"] = o.TaxRate
-    }
-    if !utils.IsNil(o.TaxType) {
-        toSerialize["tax_type"] = o.TaxType
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.TaxAmount) {
+		toSerialize["tax_amount"] = o.TaxAmount
+	}
+	if !utils.IsNil(o.TaxRate) {
+		toSerialize["tax_rate"] = o.TaxRate
+	}
+	if !utils.IsNil(o.TaxType) {
+		toSerialize["tax_type"] = o.TaxType
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax) UnmarshalJSON(data []byte) (err error) {
-    varOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTax := _Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax{}
+	varOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTax := _Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax{}
 
-    err = json.Unmarshal(data, &varOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTax)
+	err = json.Unmarshal(data, &varOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTax)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax(varOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTax)
+	*o = Order202309GetOrderDetailResponseDataOrdersLineItemsItemTax(varOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTax)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "tax_amount")
-        delete(additionalProperties, "tax_rate")
-        delete(additionalProperties, "tax_type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tax_amount")
+		delete(additionalProperties, "tax_rate")
+		delete(additionalProperties, "tax_type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTax struct {
@@ -228,5 +228,3 @@ func (v *NullableOrder202309GetOrderDetailResponseDataOrdersLineItemsItemTax) Un
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

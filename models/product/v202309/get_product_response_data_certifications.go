@@ -11,26 +11,26 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetProductResponseDataCertifications type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetProductResponseDataCertifications type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetProductResponseDataCertifications{}
 
 // Product202309GetProductResponseDataCertifications struct for Product202309GetProductResponseDataCertifications
 type Product202309GetProductResponseDataCertifications struct {
-    // The expiration date of this certification expressed in unix timestamp (seconds) UTC+0.
-    ExpirationDate *int64 `json:"expiration_date,omitempty"`
-    // A list of certification related files.
-    Files []Product202309GetProductResponseDataCertificationsFiles `json:"files,omitempty"`
-    // The ID to identify the type of certification required for the product.
-    Id *string `json:"id,omitempty"`
-    // A list of certification related images.
-    Images []Product202309GetProductResponseDataCertificationsImages `json:"images,omitempty"`
-    // The title of the certification type.
-    Title *string `json:"title,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The expiration date of this certification expressed in unix timestamp (seconds) UTC+0.
+	ExpirationDate *int64 `json:"expiration_date,omitempty"`
+	// A list of certification related files.
+	Files []Product202309GetProductResponseDataCertificationsFiles `json:"files,omitempty"`
+	// The ID to identify the type of certification required for the product.
+	Id *string `json:"id,omitempty"`
+	// A list of certification related images.
+	Images []Product202309GetProductResponseDataCertificationsImages `json:"images,omitempty"`
+	// The title of the certification type.
+	Title                *string `json:"title,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetProductResponseDataCertifications Product202309GetProductResponseDataCertifications
@@ -40,233 +40,233 @@ type _Product202309GetProductResponseDataCertifications Product202309GetProductR
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetProductResponseDataCertifications() *Product202309GetProductResponseDataCertifications {
-    this := Product202309GetProductResponseDataCertifications{}
-    return &this
+	this := Product202309GetProductResponseDataCertifications{}
+	return &this
 }
 
 // NewProduct202309GetProductResponseDataCertificationsWithDefaults instantiates a new Product202309GetProductResponseDataCertifications object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetProductResponseDataCertificationsWithDefaults() *Product202309GetProductResponseDataCertifications {
-    this := Product202309GetProductResponseDataCertifications{}
-    return &this
+	this := Product202309GetProductResponseDataCertifications{}
+	return &this
 }
 
 // GetExpirationDate returns the ExpirationDate field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataCertifications) GetExpirationDate() int64 {
-    if o == nil || utils.IsNil(o.ExpirationDate) {
-        var ret int64
-        return ret
-    }
-    return *o.ExpirationDate
+	if o == nil || utils.IsNil(o.ExpirationDate) {
+		var ret int64
+		return ret
+	}
+	return *o.ExpirationDate
 }
 
 // GetExpirationDateOk returns a tuple with the ExpirationDate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataCertifications) GetExpirationDateOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.ExpirationDate) {
-        return nil, false
-    }
-    return o.ExpirationDate, true
+	if o == nil || utils.IsNil(o.ExpirationDate) {
+		return nil, false
+	}
+	return o.ExpirationDate, true
 }
 
 // HasExpirationDate returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataCertifications) HasExpirationDate() bool {
-    if o != nil && !utils.IsNil(o.ExpirationDate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ExpirationDate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetExpirationDate gets a reference to the given int64 and assigns it to the ExpirationDate field.
 func (o *Product202309GetProductResponseDataCertifications) SetExpirationDate(v int64) {
-    o.ExpirationDate = &v
+	o.ExpirationDate = &v
 }
 
 // GetFiles returns the Files field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataCertifications) GetFiles() []Product202309GetProductResponseDataCertificationsFiles {
-    if o == nil || utils.IsNil(o.Files) {
-        var ret []Product202309GetProductResponseDataCertificationsFiles
-        return ret
-    }
-    return o.Files
+	if o == nil || utils.IsNil(o.Files) {
+		var ret []Product202309GetProductResponseDataCertificationsFiles
+		return ret
+	}
+	return o.Files
 }
 
 // GetFilesOk returns a tuple with the Files field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataCertifications) GetFilesOk() ([]Product202309GetProductResponseDataCertificationsFiles, bool) {
-    if o == nil || utils.IsNil(o.Files) {
-        return nil, false
-    }
-    return o.Files, true
+	if o == nil || utils.IsNil(o.Files) {
+		return nil, false
+	}
+	return o.Files, true
 }
 
 // HasFiles returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataCertifications) HasFiles() bool {
-    if o != nil && !utils.IsNil(o.Files) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Files) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFiles gets a reference to the given []Product202309GetProductResponseDataCertificationsFiles and assigns it to the Files field.
 func (o *Product202309GetProductResponseDataCertifications) SetFiles(v []Product202309GetProductResponseDataCertificationsFiles) {
-    o.Files = v
+	o.Files = v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataCertifications) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataCertifications) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataCertifications) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202309GetProductResponseDataCertifications) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetImages returns the Images field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataCertifications) GetImages() []Product202309GetProductResponseDataCertificationsImages {
-    if o == nil || utils.IsNil(o.Images) {
-        var ret []Product202309GetProductResponseDataCertificationsImages
-        return ret
-    }
-    return o.Images
+	if o == nil || utils.IsNil(o.Images) {
+		var ret []Product202309GetProductResponseDataCertificationsImages
+		return ret
+	}
+	return o.Images
 }
 
 // GetImagesOk returns a tuple with the Images field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataCertifications) GetImagesOk() ([]Product202309GetProductResponseDataCertificationsImages, bool) {
-    if o == nil || utils.IsNil(o.Images) {
-        return nil, false
-    }
-    return o.Images, true
+	if o == nil || utils.IsNil(o.Images) {
+		return nil, false
+	}
+	return o.Images, true
 }
 
 // HasImages returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataCertifications) HasImages() bool {
-    if o != nil && !utils.IsNil(o.Images) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Images) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImages gets a reference to the given []Product202309GetProductResponseDataCertificationsImages and assigns it to the Images field.
 func (o *Product202309GetProductResponseDataCertifications) SetImages(v []Product202309GetProductResponseDataCertificationsImages) {
-    o.Images = v
+	o.Images = v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataCertifications) GetTitle() string {
-    if o == nil || utils.IsNil(o.Title) {
-        var ret string
-        return ret
-    }
-    return *o.Title
+	if o == nil || utils.IsNil(o.Title) {
+		var ret string
+		return ret
+	}
+	return *o.Title
 }
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataCertifications) GetTitleOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Title) {
-        return nil, false
-    }
-    return o.Title, true
+	if o == nil || utils.IsNil(o.Title) {
+		return nil, false
+	}
+	return o.Title, true
 }
 
 // HasTitle returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataCertifications) HasTitle() bool {
-    if o != nil && !utils.IsNil(o.Title) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Title) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
 func (o *Product202309GetProductResponseDataCertifications) SetTitle(v string) {
-    o.Title = &v
+	o.Title = &v
 }
 
 func (o Product202309GetProductResponseDataCertifications) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetProductResponseDataCertifications) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ExpirationDate) {
-        toSerialize["expiration_date"] = o.ExpirationDate
-    }
-    if !utils.IsNil(o.Files) {
-        toSerialize["files"] = o.Files
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.Images) {
-        toSerialize["images"] = o.Images
-    }
-    if !utils.IsNil(o.Title) {
-        toSerialize["title"] = o.Title
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ExpirationDate) {
+		toSerialize["expiration_date"] = o.ExpirationDate
+	}
+	if !utils.IsNil(o.Files) {
+		toSerialize["files"] = o.Files
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.Images) {
+		toSerialize["images"] = o.Images
+	}
+	if !utils.IsNil(o.Title) {
+		toSerialize["title"] = o.Title
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetProductResponseDataCertifications) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetProductResponseDataCertifications := _Product202309GetProductResponseDataCertifications{}
+	varProduct202309GetProductResponseDataCertifications := _Product202309GetProductResponseDataCertifications{}
 
-    err = json.Unmarshal(data, &varProduct202309GetProductResponseDataCertifications)
+	err = json.Unmarshal(data, &varProduct202309GetProductResponseDataCertifications)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetProductResponseDataCertifications(varProduct202309GetProductResponseDataCertifications)
+	*o = Product202309GetProductResponseDataCertifications(varProduct202309GetProductResponseDataCertifications)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "expiration_date")
-        delete(additionalProperties, "files")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "images")
-        delete(additionalProperties, "title")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "expiration_date")
+		delete(additionalProperties, "files")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "images")
+		delete(additionalProperties, "title")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetProductResponseDataCertifications struct {
@@ -304,5 +304,3 @@ func (v *NullableProduct202309GetProductResponseDataCertifications) UnmarshalJSO
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

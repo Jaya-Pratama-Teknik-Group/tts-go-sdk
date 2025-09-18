@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202404
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202404OptimizedImagesRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Product202404OptimizedImagesRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202404OptimizedImagesRequestBody{}
 
 // Product202404OptimizedImagesRequestBody struct for Product202404OptimizedImagesRequestBody
 type Product202404OptimizedImagesRequestBody struct {
-    // The list of images to be optimized.  Use the [Upload Product Image API](https://partner.tiktokshop.com/docv2/page/6509df95defece02be598a22) to upload the images first and obtain the corresponding image URIs. Max count: 200
-    Images []Product202404OptimizedImagesRequestBodyImages `json:"images,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of images to be optimized.  Use the [Upload Product Image API](https://partner.tiktokshop.com/docv2/page/6509df95defece02be598a22) to upload the images first and obtain the corresponding image URIs. Max count: 200
+	Images               []Product202404OptimizedImagesRequestBodyImages `json:"images,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202404OptimizedImagesRequestBody Product202404OptimizedImagesRequestBody
@@ -32,89 +32,89 @@ type _Product202404OptimizedImagesRequestBody Product202404OptimizedImagesReques
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202404OptimizedImagesRequestBody() *Product202404OptimizedImagesRequestBody {
-    this := Product202404OptimizedImagesRequestBody{}
-    return &this
+	this := Product202404OptimizedImagesRequestBody{}
+	return &this
 }
 
 // NewProduct202404OptimizedImagesRequestBodyWithDefaults instantiates a new Product202404OptimizedImagesRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202404OptimizedImagesRequestBodyWithDefaults() *Product202404OptimizedImagesRequestBody {
-    this := Product202404OptimizedImagesRequestBody{}
-    return &this
+	this := Product202404OptimizedImagesRequestBody{}
+	return &this
 }
 
 // GetImages returns the Images field value if set, zero value otherwise.
 func (o *Product202404OptimizedImagesRequestBody) GetImages() []Product202404OptimizedImagesRequestBodyImages {
-    if o == nil || utils.IsNil(o.Images) {
-        var ret []Product202404OptimizedImagesRequestBodyImages
-        return ret
-    }
-    return o.Images
+	if o == nil || utils.IsNil(o.Images) {
+		var ret []Product202404OptimizedImagesRequestBodyImages
+		return ret
+	}
+	return o.Images
 }
 
 // GetImagesOk returns a tuple with the Images field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202404OptimizedImagesRequestBody) GetImagesOk() ([]Product202404OptimizedImagesRequestBodyImages, bool) {
-    if o == nil || utils.IsNil(o.Images) {
-        return nil, false
-    }
-    return o.Images, true
+	if o == nil || utils.IsNil(o.Images) {
+		return nil, false
+	}
+	return o.Images, true
 }
 
 // HasImages returns a boolean if a field has been set.
 func (o *Product202404OptimizedImagesRequestBody) HasImages() bool {
-    if o != nil && !utils.IsNil(o.Images) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Images) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImages gets a reference to the given []Product202404OptimizedImagesRequestBodyImages and assigns it to the Images field.
 func (o *Product202404OptimizedImagesRequestBody) SetImages(v []Product202404OptimizedImagesRequestBodyImages) {
-    o.Images = v
+	o.Images = v
 }
 
 func (o Product202404OptimizedImagesRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202404OptimizedImagesRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Images) {
-        toSerialize["images"] = o.Images
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Images) {
+		toSerialize["images"] = o.Images
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202404OptimizedImagesRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varProduct202404OptimizedImagesRequestBody := _Product202404OptimizedImagesRequestBody{}
+	varProduct202404OptimizedImagesRequestBody := _Product202404OptimizedImagesRequestBody{}
 
-    err = json.Unmarshal(data, &varProduct202404OptimizedImagesRequestBody)
+	err = json.Unmarshal(data, &varProduct202404OptimizedImagesRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202404OptimizedImagesRequestBody(varProduct202404OptimizedImagesRequestBody)
+	*o = Product202404OptimizedImagesRequestBody(varProduct202404OptimizedImagesRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "images")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "images")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202404OptimizedImagesRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202404OptimizedImagesRequestBody) UnmarshalJSON(src []by
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

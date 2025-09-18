@@ -11,28 +11,28 @@ API version: 1.0.0
 package product_v202411
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages type satisfies the MappedNullable interface at compile time
+// checks if the Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages{}
 
 // Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages struct for Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages
 type Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages struct {
-    // The image height after optimization. 
-    Height *int32 `json:"height,omitempty"`
-    // The URI of the image after optimization. 
-    OptimizedUri *string `json:"optimized_uri,omitempty"`
-    // The URL of the image after optimization. 
-    OptimizedUrl *string `json:"optimized_url,omitempty"`
-    // The original URI of the image. 
-    Uri *string `json:"uri,omitempty"`
-    // The original URL of the image. 
-    Url *string `json:"url,omitempty"`
-    // The image width after optimization. 
-    Width *int32 `json:"width,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The image height after optimization.
+	Height *int32 `json:"height,omitempty"`
+	// The URI of the image after optimization.
+	OptimizedUri *string `json:"optimized_uri,omitempty"`
+	// The URL of the image after optimization.
+	OptimizedUrl *string `json:"optimized_url,omitempty"`
+	// The original URI of the image.
+	Uri *string `json:"uri,omitempty"`
+	// The original URL of the image.
+	Url *string `json:"url,omitempty"`
+	// The image width after optimization.
+	Width                *int32 `json:"width,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages
@@ -42,269 +42,269 @@ type _Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImag
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages() *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages {
-    this := Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages{}
-    return &this
+	this := Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages{}
+	return &this
 }
 
 // NewProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImagesWithDefaults instantiates a new Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImagesWithDefaults() *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages {
-    this := Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages{}
-    return &this
+	this := Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages{}
+	return &this
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetHeight() int32 {
-    if o == nil || utils.IsNil(o.Height) {
-        var ret int32
-        return ret
-    }
-    return *o.Height
+	if o == nil || utils.IsNil(o.Height) {
+		var ret int32
+		return ret
+	}
+	return *o.Height
 }
 
 // GetHeightOk returns a tuple with the Height field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetHeightOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Height) {
-        return nil, false
-    }
-    return o.Height, true
+	if o == nil || utils.IsNil(o.Height) {
+		return nil, false
+	}
+	return o.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) HasHeight() bool {
-    if o != nil && !utils.IsNil(o.Height) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Height) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHeight gets a reference to the given int32 and assigns it to the Height field.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) SetHeight(v int32) {
-    o.Height = &v
+	o.Height = &v
 }
 
 // GetOptimizedUri returns the OptimizedUri field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetOptimizedUri() string {
-    if o == nil || utils.IsNil(o.OptimizedUri) {
-        var ret string
-        return ret
-    }
-    return *o.OptimizedUri
+	if o == nil || utils.IsNil(o.OptimizedUri) {
+		var ret string
+		return ret
+	}
+	return *o.OptimizedUri
 }
 
 // GetOptimizedUriOk returns a tuple with the OptimizedUri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetOptimizedUriOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.OptimizedUri) {
-        return nil, false
-    }
-    return o.OptimizedUri, true
+	if o == nil || utils.IsNil(o.OptimizedUri) {
+		return nil, false
+	}
+	return o.OptimizedUri, true
 }
 
 // HasOptimizedUri returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) HasOptimizedUri() bool {
-    if o != nil && !utils.IsNil(o.OptimizedUri) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OptimizedUri) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOptimizedUri gets a reference to the given string and assigns it to the OptimizedUri field.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) SetOptimizedUri(v string) {
-    o.OptimizedUri = &v
+	o.OptimizedUri = &v
 }
 
 // GetOptimizedUrl returns the OptimizedUrl field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetOptimizedUrl() string {
-    if o == nil || utils.IsNil(o.OptimizedUrl) {
-        var ret string
-        return ret
-    }
-    return *o.OptimizedUrl
+	if o == nil || utils.IsNil(o.OptimizedUrl) {
+		var ret string
+		return ret
+	}
+	return *o.OptimizedUrl
 }
 
 // GetOptimizedUrlOk returns a tuple with the OptimizedUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetOptimizedUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.OptimizedUrl) {
-        return nil, false
-    }
-    return o.OptimizedUrl, true
+	if o == nil || utils.IsNil(o.OptimizedUrl) {
+		return nil, false
+	}
+	return o.OptimizedUrl, true
 }
 
 // HasOptimizedUrl returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) HasOptimizedUrl() bool {
-    if o != nil && !utils.IsNil(o.OptimizedUrl) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OptimizedUrl) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOptimizedUrl gets a reference to the given string and assigns it to the OptimizedUrl field.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) SetOptimizedUrl(v string) {
-    o.OptimizedUrl = &v
+	o.OptimizedUrl = &v
 }
 
 // GetUri returns the Uri field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetUri() string {
-    if o == nil || utils.IsNil(o.Uri) {
-        var ret string
-        return ret
-    }
-    return *o.Uri
+	if o == nil || utils.IsNil(o.Uri) {
+		var ret string
+		return ret
+	}
+	return *o.Uri
 }
 
 // GetUriOk returns a tuple with the Uri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetUriOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Uri) {
-        return nil, false
-    }
-    return o.Uri, true
+	if o == nil || utils.IsNil(o.Uri) {
+		return nil, false
+	}
+	return o.Uri, true
 }
 
 // HasUri returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) HasUri() bool {
-    if o != nil && !utils.IsNil(o.Uri) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Uri) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUri gets a reference to the given string and assigns it to the Uri field.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) SetUri(v string) {
-    o.Uri = &v
+	o.Uri = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetUrl() string {
-    if o == nil || utils.IsNil(o.Url) {
-        var ret string
-        return ret
-    }
-    return *o.Url
+	if o == nil || utils.IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
 }
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Url) {
-        return nil, false
-    }
-    return o.Url, true
+	if o == nil || utils.IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
 }
 
 // HasUrl returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) HasUrl() bool {
-    if o != nil && !utils.IsNil(o.Url) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Url) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) SetUrl(v string) {
-    o.Url = &v
+	o.Url = &v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetWidth() int32 {
-    if o == nil || utils.IsNil(o.Width) {
-        var ret int32
-        return ret
-    }
-    return *o.Width
+	if o == nil || utils.IsNil(o.Width) {
+		var ret int32
+		return ret
+	}
+	return *o.Width
 }
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) GetWidthOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Width) {
-        return nil, false
-    }
-    return o.Width, true
+	if o == nil || utils.IsNil(o.Width) {
+		return nil, false
+	}
+	return o.Width, true
 }
 
 // HasWidth returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) HasWidth() bool {
-    if o != nil && !utils.IsNil(o.Width) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Width) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWidth gets a reference to the given int32 and assigns it to the Width field.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) SetWidth(v int32) {
-    o.Width = &v
+	o.Width = &v
 }
 
 func (o Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Height) {
-        toSerialize["height"] = o.Height
-    }
-    if !utils.IsNil(o.OptimizedUri) {
-        toSerialize["optimized_uri"] = o.OptimizedUri
-    }
-    if !utils.IsNil(o.OptimizedUrl) {
-        toSerialize["optimized_url"] = o.OptimizedUrl
-    }
-    if !utils.IsNil(o.Uri) {
-        toSerialize["uri"] = o.Uri
-    }
-    if !utils.IsNil(o.Url) {
-        toSerialize["url"] = o.Url
-    }
-    if !utils.IsNil(o.Width) {
-        toSerialize["width"] = o.Width
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Height) {
+		toSerialize["height"] = o.Height
+	}
+	if !utils.IsNil(o.OptimizedUri) {
+		toSerialize["optimized_uri"] = o.OptimizedUri
+	}
+	if !utils.IsNil(o.OptimizedUrl) {
+		toSerialize["optimized_url"] = o.OptimizedUrl
+	}
+	if !utils.IsNil(o.Uri) {
+		toSerialize["uri"] = o.Uri
+	}
+	if !utils.IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
+	if !utils.IsNil(o.Width) {
+		toSerialize["width"] = o.Width
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) UnmarshalJSON(data []byte) (err error) {
-    varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages := _Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages{}
+	varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages := _Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages{}
 
-    err = json.Unmarshal(data, &varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages)
+	err = json.Unmarshal(data, &varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages(varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages)
+	*o = Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages(varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "height")
-        delete(additionalProperties, "optimized_uri")
-        delete(additionalProperties, "optimized_url")
-        delete(additionalProperties, "uri")
-        delete(additionalProperties, "url")
-        delete(additionalProperties, "width")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "height")
+		delete(additionalProperties, "optimized_uri")
+		delete(additionalProperties, "optimized_url")
+		delete(additionalProperties, "uri")
+		delete(additionalProperties, "url")
+		delete(additionalProperties, "width")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages struct {
@@ -342,5 +342,3 @@ func (v *NullableProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSug
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

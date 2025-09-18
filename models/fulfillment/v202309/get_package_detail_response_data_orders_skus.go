@@ -11,24 +11,24 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetPackageDetailResponseDataOrdersSkus type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetPackageDetailResponseDataOrdersSkus type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetPackageDetailResponseDataOrdersSkus{}
 
 // Fulfillment202309GetPackageDetailResponseDataOrdersSkus struct for Fulfillment202309GetPackageDetailResponseDataOrdersSkus
 type Fulfillment202309GetPackageDetailResponseDataOrdersSkus struct {
-    // SKU ID.
-    Id *string `json:"id,omitempty"`
-    // SKU image in order snapshot.
-    ImageUrl *string `json:"image_url,omitempty"`
-    // SKU name. 
-    Name *string `json:"name,omitempty"`
-    // SKU quantity.
-    Quantity *int64 `json:"quantity,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// SKU ID.
+	Id *string `json:"id,omitempty"`
+	// SKU image in order snapshot.
+	ImageUrl *string `json:"image_url,omitempty"`
+	// SKU name.
+	Name *string `json:"name,omitempty"`
+	// SKU quantity.
+	Quantity             *int64 `json:"quantity,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetPackageDetailResponseDataOrdersSkus Fulfillment202309GetPackageDetailResponseDataOrdersSkus
@@ -38,197 +38,197 @@ type _Fulfillment202309GetPackageDetailResponseDataOrdersSkus Fulfillment202309G
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetPackageDetailResponseDataOrdersSkus() *Fulfillment202309GetPackageDetailResponseDataOrdersSkus {
-    this := Fulfillment202309GetPackageDetailResponseDataOrdersSkus{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseDataOrdersSkus{}
+	return &this
 }
 
 // NewFulfillment202309GetPackageDetailResponseDataOrdersSkusWithDefaults instantiates a new Fulfillment202309GetPackageDetailResponseDataOrdersSkus object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetPackageDetailResponseDataOrdersSkusWithDefaults() *Fulfillment202309GetPackageDetailResponseDataOrdersSkus {
-    this := Fulfillment202309GetPackageDetailResponseDataOrdersSkus{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseDataOrdersSkus{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetImageUrl returns the ImageUrl field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) GetImageUrl() string {
-    if o == nil || utils.IsNil(o.ImageUrl) {
-        var ret string
-        return ret
-    }
-    return *o.ImageUrl
+	if o == nil || utils.IsNil(o.ImageUrl) {
+		var ret string
+		return ret
+	}
+	return *o.ImageUrl
 }
 
 // GetImageUrlOk returns a tuple with the ImageUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) GetImageUrlOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ImageUrl) {
-        return nil, false
-    }
-    return o.ImageUrl, true
+	if o == nil || utils.IsNil(o.ImageUrl) {
+		return nil, false
+	}
+	return o.ImageUrl, true
 }
 
 // HasImageUrl returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) HasImageUrl() bool {
-    if o != nil && !utils.IsNil(o.ImageUrl) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ImageUrl) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImageUrl gets a reference to the given string and assigns it to the ImageUrl field.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) SetImageUrl(v string) {
-    o.ImageUrl = &v
+	o.ImageUrl = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) GetQuantity() int64 {
-    if o == nil || utils.IsNil(o.Quantity) {
-        var ret int64
-        return ret
-    }
-    return *o.Quantity
+	if o == nil || utils.IsNil(o.Quantity) {
+		var ret int64
+		return ret
+	}
+	return *o.Quantity
 }
 
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) GetQuantityOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.Quantity) {
-        return nil, false
-    }
-    return o.Quantity, true
+	if o == nil || utils.IsNil(o.Quantity) {
+		return nil, false
+	}
+	return o.Quantity, true
 }
 
 // HasQuantity returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) HasQuantity() bool {
-    if o != nil && !utils.IsNil(o.Quantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Quantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantity gets a reference to the given int64 and assigns it to the Quantity field.
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) SetQuantity(v int64) {
-    o.Quantity = &v
+	o.Quantity = &v
 }
 
 func (o Fulfillment202309GetPackageDetailResponseDataOrdersSkus) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetPackageDetailResponseDataOrdersSkus) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.ImageUrl) {
-        toSerialize["image_url"] = o.ImageUrl
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
-    if !utils.IsNil(o.Quantity) {
-        toSerialize["quantity"] = o.Quantity
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.ImageUrl) {
+		toSerialize["image_url"] = o.ImageUrl
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !utils.IsNil(o.Quantity) {
+		toSerialize["quantity"] = o.Quantity
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetPackageDetailResponseDataOrdersSkus) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetPackageDetailResponseDataOrdersSkus := _Fulfillment202309GetPackageDetailResponseDataOrdersSkus{}
+	varFulfillment202309GetPackageDetailResponseDataOrdersSkus := _Fulfillment202309GetPackageDetailResponseDataOrdersSkus{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseDataOrdersSkus)
+	err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseDataOrdersSkus)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetPackageDetailResponseDataOrdersSkus(varFulfillment202309GetPackageDetailResponseDataOrdersSkus)
+	*o = Fulfillment202309GetPackageDetailResponseDataOrdersSkus(varFulfillment202309GetPackageDetailResponseDataOrdersSkus)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "image_url")
-        delete(additionalProperties, "name")
-        delete(additionalProperties, "quantity")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "image_url")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "quantity")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetPackageDetailResponseDataOrdersSkus struct {
@@ -266,5 +266,3 @@ func (v *NullableFulfillment202309GetPackageDetailResponseDataOrdersSkus) Unmars
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

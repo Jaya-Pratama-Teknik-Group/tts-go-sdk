@@ -11,27 +11,27 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309CreatePackagesResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309CreatePackagesResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309CreatePackagesResponseData{}
 
 // Fulfillment202309CreatePackagesResponseData struct for Fulfillment202309CreatePackagesResponseData
 type Fulfillment202309CreatePackagesResponseData struct {
-    // The time when the product was created. Unix timestamp.
-    CreateTime *int64 `json:"create_time,omitempty"`
-    Dimension *Fulfillment202309CreatePackagesResponseDataDimension `json:"dimension,omitempty"`
-    // TikTok Shop order ID.  
-    OrderId *string `json:"order_id,omitempty"`
-    // List of order line item IDs.
-    OrderLineItemIds []string `json:"order_line_item_ids,omitempty"`
-    // Package ID.
-    PackageId *string `json:"package_id,omitempty"`
-    ShippingServiceInfo *Fulfillment202309CreatePackagesResponseDataShippingServiceInfo `json:"shipping_service_info,omitempty"`
-    Weight *Fulfillment202309CreatePackagesResponseDataWeight `json:"weight,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The time when the product was created. Unix timestamp.
+	CreateTime *int64                                                `json:"create_time,omitempty"`
+	Dimension  *Fulfillment202309CreatePackagesResponseDataDimension `json:"dimension,omitempty"`
+	// TikTok Shop order ID.
+	OrderId *string `json:"order_id,omitempty"`
+	// List of order line item IDs.
+	OrderLineItemIds []string `json:"order_line_item_ids,omitempty"`
+	// Package ID.
+	PackageId            *string                                                         `json:"package_id,omitempty"`
+	ShippingServiceInfo  *Fulfillment202309CreatePackagesResponseDataShippingServiceInfo `json:"shipping_service_info,omitempty"`
+	Weight               *Fulfillment202309CreatePackagesResponseDataWeight              `json:"weight,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309CreatePackagesResponseData Fulfillment202309CreatePackagesResponseData
@@ -41,305 +41,305 @@ type _Fulfillment202309CreatePackagesResponseData Fulfillment202309CreatePackage
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309CreatePackagesResponseData() *Fulfillment202309CreatePackagesResponseData {
-    this := Fulfillment202309CreatePackagesResponseData{}
-    return &this
+	this := Fulfillment202309CreatePackagesResponseData{}
+	return &this
 }
 
 // NewFulfillment202309CreatePackagesResponseDataWithDefaults instantiates a new Fulfillment202309CreatePackagesResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309CreatePackagesResponseDataWithDefaults() *Fulfillment202309CreatePackagesResponseData {
-    this := Fulfillment202309CreatePackagesResponseData{}
-    return &this
+	this := Fulfillment202309CreatePackagesResponseData{}
+	return &this
 }
 
 // GetCreateTime returns the CreateTime field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseData) GetCreateTime() int64 {
-    if o == nil || utils.IsNil(o.CreateTime) {
-        var ret int64
-        return ret
-    }
-    return *o.CreateTime
+	if o == nil || utils.IsNil(o.CreateTime) {
+		var ret int64
+		return ret
+	}
+	return *o.CreateTime
 }
 
 // GetCreateTimeOk returns a tuple with the CreateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) GetCreateTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.CreateTime) {
-        return nil, false
-    }
-    return o.CreateTime, true
+	if o == nil || utils.IsNil(o.CreateTime) {
+		return nil, false
+	}
+	return o.CreateTime, true
 }
 
 // HasCreateTime returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) HasCreateTime() bool {
-    if o != nil && !utils.IsNil(o.CreateTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CreateTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCreateTime gets a reference to the given int64 and assigns it to the CreateTime field.
 func (o *Fulfillment202309CreatePackagesResponseData) SetCreateTime(v int64) {
-    o.CreateTime = &v
+	o.CreateTime = &v
 }
 
 // GetDimension returns the Dimension field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseData) GetDimension() Fulfillment202309CreatePackagesResponseDataDimension {
-    if o == nil || utils.IsNil(o.Dimension) {
-        var ret Fulfillment202309CreatePackagesResponseDataDimension
-        return ret
-    }
-    return *o.Dimension
+	if o == nil || utils.IsNil(o.Dimension) {
+		var ret Fulfillment202309CreatePackagesResponseDataDimension
+		return ret
+	}
+	return *o.Dimension
 }
 
 // GetDimensionOk returns a tuple with the Dimension field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) GetDimensionOk() (*Fulfillment202309CreatePackagesResponseDataDimension, bool) {
-    if o == nil || utils.IsNil(o.Dimension) {
-        return nil, false
-    }
-    return o.Dimension, true
+	if o == nil || utils.IsNil(o.Dimension) {
+		return nil, false
+	}
+	return o.Dimension, true
 }
 
 // HasDimension returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) HasDimension() bool {
-    if o != nil && !utils.IsNil(o.Dimension) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Dimension) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDimension gets a reference to the given Fulfillment202309CreatePackagesResponseDataDimension and assigns it to the Dimension field.
 func (o *Fulfillment202309CreatePackagesResponseData) SetDimension(v Fulfillment202309CreatePackagesResponseDataDimension) {
-    o.Dimension = &v
+	o.Dimension = &v
 }
 
 // GetOrderId returns the OrderId field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseData) GetOrderId() string {
-    if o == nil || utils.IsNil(o.OrderId) {
-        var ret string
-        return ret
-    }
-    return *o.OrderId
+	if o == nil || utils.IsNil(o.OrderId) {
+		var ret string
+		return ret
+	}
+	return *o.OrderId
 }
 
 // GetOrderIdOk returns a tuple with the OrderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) GetOrderIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.OrderId) {
-        return nil, false
-    }
-    return o.OrderId, true
+	if o == nil || utils.IsNil(o.OrderId) {
+		return nil, false
+	}
+	return o.OrderId, true
 }
 
 // HasOrderId returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) HasOrderId() bool {
-    if o != nil && !utils.IsNil(o.OrderId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderId gets a reference to the given string and assigns it to the OrderId field.
 func (o *Fulfillment202309CreatePackagesResponseData) SetOrderId(v string) {
-    o.OrderId = &v
+	o.OrderId = &v
 }
 
 // GetOrderLineItemIds returns the OrderLineItemIds field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseData) GetOrderLineItemIds() []string {
-    if o == nil || utils.IsNil(o.OrderLineItemIds) {
-        var ret []string
-        return ret
-    }
-    return o.OrderLineItemIds
+	if o == nil || utils.IsNil(o.OrderLineItemIds) {
+		var ret []string
+		return ret
+	}
+	return o.OrderLineItemIds
 }
 
 // GetOrderLineItemIdsOk returns a tuple with the OrderLineItemIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) GetOrderLineItemIdsOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.OrderLineItemIds) {
-        return nil, false
-    }
-    return o.OrderLineItemIds, true
+	if o == nil || utils.IsNil(o.OrderLineItemIds) {
+		return nil, false
+	}
+	return o.OrderLineItemIds, true
 }
 
 // HasOrderLineItemIds returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) HasOrderLineItemIds() bool {
-    if o != nil && !utils.IsNil(o.OrderLineItemIds) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderLineItemIds) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderLineItemIds gets a reference to the given []string and assigns it to the OrderLineItemIds field.
 func (o *Fulfillment202309CreatePackagesResponseData) SetOrderLineItemIds(v []string) {
-    o.OrderLineItemIds = v
+	o.OrderLineItemIds = v
 }
 
 // GetPackageId returns the PackageId field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseData) GetPackageId() string {
-    if o == nil || utils.IsNil(o.PackageId) {
-        var ret string
-        return ret
-    }
-    return *o.PackageId
+	if o == nil || utils.IsNil(o.PackageId) {
+		var ret string
+		return ret
+	}
+	return *o.PackageId
 }
 
 // GetPackageIdOk returns a tuple with the PackageId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) GetPackageIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PackageId) {
-        return nil, false
-    }
-    return o.PackageId, true
+	if o == nil || utils.IsNil(o.PackageId) {
+		return nil, false
+	}
+	return o.PackageId, true
 }
 
 // HasPackageId returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) HasPackageId() bool {
-    if o != nil && !utils.IsNil(o.PackageId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PackageId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPackageId gets a reference to the given string and assigns it to the PackageId field.
 func (o *Fulfillment202309CreatePackagesResponseData) SetPackageId(v string) {
-    o.PackageId = &v
+	o.PackageId = &v
 }
 
 // GetShippingServiceInfo returns the ShippingServiceInfo field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseData) GetShippingServiceInfo() Fulfillment202309CreatePackagesResponseDataShippingServiceInfo {
-    if o == nil || utils.IsNil(o.ShippingServiceInfo) {
-        var ret Fulfillment202309CreatePackagesResponseDataShippingServiceInfo
-        return ret
-    }
-    return *o.ShippingServiceInfo
+	if o == nil || utils.IsNil(o.ShippingServiceInfo) {
+		var ret Fulfillment202309CreatePackagesResponseDataShippingServiceInfo
+		return ret
+	}
+	return *o.ShippingServiceInfo
 }
 
 // GetShippingServiceInfoOk returns a tuple with the ShippingServiceInfo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) GetShippingServiceInfoOk() (*Fulfillment202309CreatePackagesResponseDataShippingServiceInfo, bool) {
-    if o == nil || utils.IsNil(o.ShippingServiceInfo) {
-        return nil, false
-    }
-    return o.ShippingServiceInfo, true
+	if o == nil || utils.IsNil(o.ShippingServiceInfo) {
+		return nil, false
+	}
+	return o.ShippingServiceInfo, true
 }
 
 // HasShippingServiceInfo returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) HasShippingServiceInfo() bool {
-    if o != nil && !utils.IsNil(o.ShippingServiceInfo) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingServiceInfo) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingServiceInfo gets a reference to the given Fulfillment202309CreatePackagesResponseDataShippingServiceInfo and assigns it to the ShippingServiceInfo field.
 func (o *Fulfillment202309CreatePackagesResponseData) SetShippingServiceInfo(v Fulfillment202309CreatePackagesResponseDataShippingServiceInfo) {
-    o.ShippingServiceInfo = &v
+	o.ShippingServiceInfo = &v
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
 func (o *Fulfillment202309CreatePackagesResponseData) GetWeight() Fulfillment202309CreatePackagesResponseDataWeight {
-    if o == nil || utils.IsNil(o.Weight) {
-        var ret Fulfillment202309CreatePackagesResponseDataWeight
-        return ret
-    }
-    return *o.Weight
+	if o == nil || utils.IsNil(o.Weight) {
+		var ret Fulfillment202309CreatePackagesResponseDataWeight
+		return ret
+	}
+	return *o.Weight
 }
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) GetWeightOk() (*Fulfillment202309CreatePackagesResponseDataWeight, bool) {
-    if o == nil || utils.IsNil(o.Weight) {
-        return nil, false
-    }
-    return o.Weight, true
+	if o == nil || utils.IsNil(o.Weight) {
+		return nil, false
+	}
+	return o.Weight, true
 }
 
 // HasWeight returns a boolean if a field has been set.
 func (o *Fulfillment202309CreatePackagesResponseData) HasWeight() bool {
-    if o != nil && !utils.IsNil(o.Weight) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Weight) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWeight gets a reference to the given Fulfillment202309CreatePackagesResponseDataWeight and assigns it to the Weight field.
 func (o *Fulfillment202309CreatePackagesResponseData) SetWeight(v Fulfillment202309CreatePackagesResponseDataWeight) {
-    o.Weight = &v
+	o.Weight = &v
 }
 
 func (o Fulfillment202309CreatePackagesResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309CreatePackagesResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CreateTime) {
-        toSerialize["create_time"] = o.CreateTime
-    }
-    if !utils.IsNil(o.Dimension) {
-        toSerialize["dimension"] = o.Dimension
-    }
-    if !utils.IsNil(o.OrderId) {
-        toSerialize["order_id"] = o.OrderId
-    }
-    if !utils.IsNil(o.OrderLineItemIds) {
-        toSerialize["order_line_item_ids"] = o.OrderLineItemIds
-    }
-    if !utils.IsNil(o.PackageId) {
-        toSerialize["package_id"] = o.PackageId
-    }
-    if !utils.IsNil(o.ShippingServiceInfo) {
-        toSerialize["shipping_service_info"] = o.ShippingServiceInfo
-    }
-    if !utils.IsNil(o.Weight) {
-        toSerialize["weight"] = o.Weight
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CreateTime) {
+		toSerialize["create_time"] = o.CreateTime
+	}
+	if !utils.IsNil(o.Dimension) {
+		toSerialize["dimension"] = o.Dimension
+	}
+	if !utils.IsNil(o.OrderId) {
+		toSerialize["order_id"] = o.OrderId
+	}
+	if !utils.IsNil(o.OrderLineItemIds) {
+		toSerialize["order_line_item_ids"] = o.OrderLineItemIds
+	}
+	if !utils.IsNil(o.PackageId) {
+		toSerialize["package_id"] = o.PackageId
+	}
+	if !utils.IsNil(o.ShippingServiceInfo) {
+		toSerialize["shipping_service_info"] = o.ShippingServiceInfo
+	}
+	if !utils.IsNil(o.Weight) {
+		toSerialize["weight"] = o.Weight
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309CreatePackagesResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309CreatePackagesResponseData := _Fulfillment202309CreatePackagesResponseData{}
+	varFulfillment202309CreatePackagesResponseData := _Fulfillment202309CreatePackagesResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202309CreatePackagesResponseData)
+	err = json.Unmarshal(data, &varFulfillment202309CreatePackagesResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309CreatePackagesResponseData(varFulfillment202309CreatePackagesResponseData)
+	*o = Fulfillment202309CreatePackagesResponseData(varFulfillment202309CreatePackagesResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "create_time")
-        delete(additionalProperties, "dimension")
-        delete(additionalProperties, "order_id")
-        delete(additionalProperties, "order_line_item_ids")
-        delete(additionalProperties, "package_id")
-        delete(additionalProperties, "shipping_service_info")
-        delete(additionalProperties, "weight")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "create_time")
+		delete(additionalProperties, "dimension")
+		delete(additionalProperties, "order_id")
+		delete(additionalProperties, "order_line_item_ids")
+		delete(additionalProperties, "package_id")
+		delete(additionalProperties, "shipping_service_info")
+		delete(additionalProperties, "weight")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309CreatePackagesResponseData struct {
@@ -377,5 +377,3 @@ func (v *NullableFulfillment202309CreatePackagesResponseData) UnmarshalJSON(src 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

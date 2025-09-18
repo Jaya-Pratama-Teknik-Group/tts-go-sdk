@@ -11,26 +11,26 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309UpdateActivityProductRequestBodyProductsSkus type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309UpdateActivityProductRequestBodyProductsSkus type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309UpdateActivityProductRequestBodyProductsSkus{}
 
 // Promotion202309UpdateActivityProductRequestBodyProductsSkus struct for Promotion202309UpdateActivityProductRequestBodyProductsSkus
 type Promotion202309UpdateActivityProductRequestBodyProductsSkus struct {
-    // Deal price.  You must specify the value when `product_level==VARIATION` and `activity_type==FIXED_PRICE / FLASHSALE`. The currency of activity price is the same as that of SKU price.
-    ActivityPriceAmount *string `json:"activity_price_amount,omitempty"`
-    // Discount value. If the SKU is 10% off, the value is `10`. You must specify the value when `product_level==VARIATION` and `activity_type==DIRECT_DISCOUNT`.
-    Discount *string `json:"discount,omitempty"`
-    // SKU ID
-    Id *string `json:"id,omitempty"`
-    // The quantity limit of the SKU involved in the activity. The range is `[1, 99]`, or you can use `-1` for unlimited. If you are updating the value of an existing SKU, the value cannot be decreased.
-    QuantityLimit *int32 `json:"quantity_limit,omitempty"`
-    // Limit of SKU purchase per buyer. The range is `[1, 99]`, or you can use `-1` for unlimited. If you are updating the value of an existing SKU, the value cannot be decreased.
-    QuantityPerUser *int32 `json:"quantity_per_user,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Deal price.  You must specify the value when `product_level==VARIATION` and `activity_type==FIXED_PRICE / FLASHSALE`. The currency of activity price is the same as that of SKU price.
+	ActivityPriceAmount *string `json:"activity_price_amount,omitempty"`
+	// Discount value. If the SKU is 10% off, the value is `10`. You must specify the value when `product_level==VARIATION` and `activity_type==DIRECT_DISCOUNT`.
+	Discount *string `json:"discount,omitempty"`
+	// SKU ID
+	Id *string `json:"id,omitempty"`
+	// The quantity limit of the SKU involved in the activity. The range is `[1, 99]`, or you can use `-1` for unlimited. If you are updating the value of an existing SKU, the value cannot be decreased.
+	QuantityLimit *int32 `json:"quantity_limit,omitempty"`
+	// Limit of SKU purchase per buyer. The range is `[1, 99]`, or you can use `-1` for unlimited. If you are updating the value of an existing SKU, the value cannot be decreased.
+	QuantityPerUser      *int32 `json:"quantity_per_user,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309UpdateActivityProductRequestBodyProductsSkus Promotion202309UpdateActivityProductRequestBodyProductsSkus
@@ -40,233 +40,233 @@ type _Promotion202309UpdateActivityProductRequestBodyProductsSkus Promotion20230
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309UpdateActivityProductRequestBodyProductsSkus() *Promotion202309UpdateActivityProductRequestBodyProductsSkus {
-    this := Promotion202309UpdateActivityProductRequestBodyProductsSkus{}
-    return &this
+	this := Promotion202309UpdateActivityProductRequestBodyProductsSkus{}
+	return &this
 }
 
 // NewPromotion202309UpdateActivityProductRequestBodyProductsSkusWithDefaults instantiates a new Promotion202309UpdateActivityProductRequestBodyProductsSkus object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309UpdateActivityProductRequestBodyProductsSkusWithDefaults() *Promotion202309UpdateActivityProductRequestBodyProductsSkus {
-    this := Promotion202309UpdateActivityProductRequestBodyProductsSkus{}
-    return &this
+	this := Promotion202309UpdateActivityProductRequestBodyProductsSkus{}
+	return &this
 }
 
 // GetActivityPriceAmount returns the ActivityPriceAmount field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetActivityPriceAmount() string {
-    if o == nil || utils.IsNil(o.ActivityPriceAmount) {
-        var ret string
-        return ret
-    }
-    return *o.ActivityPriceAmount
+	if o == nil || utils.IsNil(o.ActivityPriceAmount) {
+		var ret string
+		return ret
+	}
+	return *o.ActivityPriceAmount
 }
 
 // GetActivityPriceAmountOk returns a tuple with the ActivityPriceAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetActivityPriceAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ActivityPriceAmount) {
-        return nil, false
-    }
-    return o.ActivityPriceAmount, true
+	if o == nil || utils.IsNil(o.ActivityPriceAmount) {
+		return nil, false
+	}
+	return o.ActivityPriceAmount, true
 }
 
 // HasActivityPriceAmount returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) HasActivityPriceAmount() bool {
-    if o != nil && !utils.IsNil(o.ActivityPriceAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ActivityPriceAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetActivityPriceAmount gets a reference to the given string and assigns it to the ActivityPriceAmount field.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) SetActivityPriceAmount(v string) {
-    o.ActivityPriceAmount = &v
+	o.ActivityPriceAmount = &v
 }
 
 // GetDiscount returns the Discount field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetDiscount() string {
-    if o == nil || utils.IsNil(o.Discount) {
-        var ret string
-        return ret
-    }
-    return *o.Discount
+	if o == nil || utils.IsNil(o.Discount) {
+		var ret string
+		return ret
+	}
+	return *o.Discount
 }
 
 // GetDiscountOk returns a tuple with the Discount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetDiscountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Discount) {
-        return nil, false
-    }
-    return o.Discount, true
+	if o == nil || utils.IsNil(o.Discount) {
+		return nil, false
+	}
+	return o.Discount, true
 }
 
 // HasDiscount returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) HasDiscount() bool {
-    if o != nil && !utils.IsNil(o.Discount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Discount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetDiscount gets a reference to the given string and assigns it to the Discount field.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) SetDiscount(v string) {
-    o.Discount = &v
+	o.Discount = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetQuantityLimit returns the QuantityLimit field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetQuantityLimit() int32 {
-    if o == nil || utils.IsNil(o.QuantityLimit) {
-        var ret int32
-        return ret
-    }
-    return *o.QuantityLimit
+	if o == nil || utils.IsNil(o.QuantityLimit) {
+		var ret int32
+		return ret
+	}
+	return *o.QuantityLimit
 }
 
 // GetQuantityLimitOk returns a tuple with the QuantityLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetQuantityLimitOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.QuantityLimit) {
-        return nil, false
-    }
-    return o.QuantityLimit, true
+	if o == nil || utils.IsNil(o.QuantityLimit) {
+		return nil, false
+	}
+	return o.QuantityLimit, true
 }
 
 // HasQuantityLimit returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) HasQuantityLimit() bool {
-    if o != nil && !utils.IsNil(o.QuantityLimit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.QuantityLimit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantityLimit gets a reference to the given int32 and assigns it to the QuantityLimit field.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) SetQuantityLimit(v int32) {
-    o.QuantityLimit = &v
+	o.QuantityLimit = &v
 }
 
 // GetQuantityPerUser returns the QuantityPerUser field value if set, zero value otherwise.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetQuantityPerUser() int32 {
-    if o == nil || utils.IsNil(o.QuantityPerUser) {
-        var ret int32
-        return ret
-    }
-    return *o.QuantityPerUser
+	if o == nil || utils.IsNil(o.QuantityPerUser) {
+		var ret int32
+		return ret
+	}
+	return *o.QuantityPerUser
 }
 
 // GetQuantityPerUserOk returns a tuple with the QuantityPerUser field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) GetQuantityPerUserOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.QuantityPerUser) {
-        return nil, false
-    }
-    return o.QuantityPerUser, true
+	if o == nil || utils.IsNil(o.QuantityPerUser) {
+		return nil, false
+	}
+	return o.QuantityPerUser, true
 }
 
 // HasQuantityPerUser returns a boolean if a field has been set.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) HasQuantityPerUser() bool {
-    if o != nil && !utils.IsNil(o.QuantityPerUser) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.QuantityPerUser) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantityPerUser gets a reference to the given int32 and assigns it to the QuantityPerUser field.
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) SetQuantityPerUser(v int32) {
-    o.QuantityPerUser = &v
+	o.QuantityPerUser = &v
 }
 
 func (o Promotion202309UpdateActivityProductRequestBodyProductsSkus) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309UpdateActivityProductRequestBodyProductsSkus) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ActivityPriceAmount) {
-        toSerialize["activity_price_amount"] = o.ActivityPriceAmount
-    }
-    if !utils.IsNil(o.Discount) {
-        toSerialize["discount"] = o.Discount
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.QuantityLimit) {
-        toSerialize["quantity_limit"] = o.QuantityLimit
-    }
-    if !utils.IsNil(o.QuantityPerUser) {
-        toSerialize["quantity_per_user"] = o.QuantityPerUser
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ActivityPriceAmount) {
+		toSerialize["activity_price_amount"] = o.ActivityPriceAmount
+	}
+	if !utils.IsNil(o.Discount) {
+		toSerialize["discount"] = o.Discount
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.QuantityLimit) {
+		toSerialize["quantity_limit"] = o.QuantityLimit
+	}
+	if !utils.IsNil(o.QuantityPerUser) {
+		toSerialize["quantity_per_user"] = o.QuantityPerUser
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309UpdateActivityProductRequestBodyProductsSkus) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309UpdateActivityProductRequestBodyProductsSkus := _Promotion202309UpdateActivityProductRequestBodyProductsSkus{}
+	varPromotion202309UpdateActivityProductRequestBodyProductsSkus := _Promotion202309UpdateActivityProductRequestBodyProductsSkus{}
 
-    err = json.Unmarshal(data, &varPromotion202309UpdateActivityProductRequestBodyProductsSkus)
+	err = json.Unmarshal(data, &varPromotion202309UpdateActivityProductRequestBodyProductsSkus)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309UpdateActivityProductRequestBodyProductsSkus(varPromotion202309UpdateActivityProductRequestBodyProductsSkus)
+	*o = Promotion202309UpdateActivityProductRequestBodyProductsSkus(varPromotion202309UpdateActivityProductRequestBodyProductsSkus)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "activity_price_amount")
-        delete(additionalProperties, "discount")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "quantity_limit")
-        delete(additionalProperties, "quantity_per_user")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "activity_price_amount")
+		delete(additionalProperties, "discount")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "quantity_limit")
+		delete(additionalProperties, "quantity_per_user")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309UpdateActivityProductRequestBodyProductsSkus struct {
@@ -304,5 +304,3 @@ func (v *NullablePromotion202309UpdateActivityProductRequestBodyProductsSkus) Un
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

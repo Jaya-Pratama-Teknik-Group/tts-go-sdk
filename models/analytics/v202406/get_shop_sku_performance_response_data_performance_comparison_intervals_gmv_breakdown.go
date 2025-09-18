@@ -11,22 +11,22 @@ API version: 1.0.0
 package analytics_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown type satisfies the MappedNullable interface at compile time
+// checks if the Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown{}
 
 // Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown struct for Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown
 type Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown struct {
-    // GMV amount for the corresponding type and currency.
-    Amount *string `json:"amount,omitempty"`
-    // GMV currency code (ISO 4217 standard). If LOCAL currency is requested, the value will be the local currency code of where the shop is registered (e.g. GBP).
-    Currency *string `json:"currency,omitempty"`
-    // Breakdown type. Possible values: LIVE, VIDEO, PRODUCT_CARD
-    Type *string `json:"type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// GMV amount for the corresponding type and currency.
+	Amount *string `json:"amount,omitempty"`
+	// GMV currency code (ISO 4217 standard). If LOCAL currency is requested, the value will be the local currency code of where the shop is registered (e.g. GBP).
+	Currency *string `json:"currency,omitempty"`
+	// Breakdown type. Possible values: LIVE, VIDEO, PRODUCT_CARD
+	Type                 *string `json:"type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown
@@ -36,161 +36,161 @@ type _Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonInter
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown() *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown {
-    this := Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown{}
-    return &this
+	this := Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown{}
+	return &this
 }
 
 // NewAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdownWithDefaults instantiates a new Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdownWithDefaults() *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown {
-    this := Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown{}
-    return &this
+	this := Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown{}
+	return &this
 }
 
 // GetAmount returns the Amount field value if set, zero value otherwise.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) GetAmount() string {
-    if o == nil || utils.IsNil(o.Amount) {
-        var ret string
-        return ret
-    }
-    return *o.Amount
+	if o == nil || utils.IsNil(o.Amount) {
+		var ret string
+		return ret
+	}
+	return *o.Amount
 }
 
 // GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) GetAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Amount) {
-        return nil, false
-    }
-    return o.Amount, true
+	if o == nil || utils.IsNil(o.Amount) {
+		return nil, false
+	}
+	return o.Amount, true
 }
 
 // HasAmount returns a boolean if a field has been set.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) HasAmount() bool {
-    if o != nil && !utils.IsNil(o.Amount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Amount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAmount gets a reference to the given string and assigns it to the Amount field.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) SetAmount(v string) {
-    o.Amount = &v
+	o.Amount = &v
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) GetType() string {
-    if o == nil || utils.IsNil(o.Type) {
-        var ret string
-        return ret
-    }
-    return *o.Type
+	if o == nil || utils.IsNil(o.Type) {
+		var ret string
+		return ret
+	}
+	return *o.Type
 }
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) GetTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Type) {
-        return nil, false
-    }
-    return o.Type, true
+	if o == nil || utils.IsNil(o.Type) {
+		return nil, false
+	}
+	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) HasType() bool {
-    if o != nil && !utils.IsNil(o.Type) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Type) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) SetType(v string) {
-    o.Type = &v
+	o.Type = &v
 }
 
 func (o Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Amount) {
-        toSerialize["amount"] = o.Amount
-    }
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
-    if !utils.IsNil(o.Type) {
-        toSerialize["type"] = o.Type
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
+	}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
+	if !utils.IsNil(o.Type) {
+		toSerialize["type"] = o.Type
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown) UnmarshalJSON(data []byte) (err error) {
-    varAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown := _Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown{}
+	varAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown := _Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown{}
 
-    err = json.Unmarshal(data, &varAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown)
+	err = json.Unmarshal(data, &varAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown(varAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown)
+	*o = Analytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown(varAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "amount")
-        delete(additionalProperties, "currency")
-        delete(additionalProperties, "type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "amount")
+		delete(additionalProperties, "currency")
+		delete(additionalProperties, "type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComparisonIntervalsGmvBreakdown struct {
@@ -228,5 +228,3 @@ func (v *NullableAnalytics202406GetShopSKUPerformanceResponseDataPerformanceComp
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

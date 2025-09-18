@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CreateCustomBrandsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CreateCustomBrandsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CreateCustomBrandsResponseData{}
 
 // Product202309CreateCustomBrandsResponseData struct for Product202309CreateCustomBrandsResponseData
 type Product202309CreateCustomBrandsResponseData struct {
-    // A unique ID that identifies the brand in TikTok Shop.
-    Id *string `json:"id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A unique ID that identifies the brand in TikTok Shop.
+	Id                   *string `json:"id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CreateCustomBrandsResponseData Product202309CreateCustomBrandsResponseData
@@ -32,89 +32,89 @@ type _Product202309CreateCustomBrandsResponseData Product202309CreateCustomBrand
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CreateCustomBrandsResponseData() *Product202309CreateCustomBrandsResponseData {
-    this := Product202309CreateCustomBrandsResponseData{}
-    return &this
+	this := Product202309CreateCustomBrandsResponseData{}
+	return &this
 }
 
 // NewProduct202309CreateCustomBrandsResponseDataWithDefaults instantiates a new Product202309CreateCustomBrandsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CreateCustomBrandsResponseDataWithDefaults() *Product202309CreateCustomBrandsResponseData {
-    this := Product202309CreateCustomBrandsResponseData{}
-    return &this
+	this := Product202309CreateCustomBrandsResponseData{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202309CreateCustomBrandsResponseData) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CreateCustomBrandsResponseData) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202309CreateCustomBrandsResponseData) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202309CreateCustomBrandsResponseData) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 func (o Product202309CreateCustomBrandsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CreateCustomBrandsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CreateCustomBrandsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CreateCustomBrandsResponseData := _Product202309CreateCustomBrandsResponseData{}
+	varProduct202309CreateCustomBrandsResponseData := _Product202309CreateCustomBrandsResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202309CreateCustomBrandsResponseData)
+	err = json.Unmarshal(data, &varProduct202309CreateCustomBrandsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CreateCustomBrandsResponseData(varProduct202309CreateCustomBrandsResponseData)
+	*o = Product202309CreateCustomBrandsResponseData(varProduct202309CreateCustomBrandsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CreateCustomBrandsResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309CreateCustomBrandsResponseData) UnmarshalJSON(src 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

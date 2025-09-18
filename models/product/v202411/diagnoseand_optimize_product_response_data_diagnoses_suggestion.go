@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202411
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion type satisfies the MappedNullable interface at compile time
+// checks if the Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion{}
 
 // Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion struct for Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion
 type Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion struct {
-    // The optimized main image. Only the first image in the main image set will be optimized. 
-    Images []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages `json:"images,omitempty"`
-    // The SEO keyword suggestions if `diagnoses.field` is \"TITLE\". 
-    SeoWords []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSeoWords `json:"seo_words,omitempty"`
-    // The intelligent text suggestions for titles and descriptions. 
-    SmartTexts []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSmartTexts `json:"smart_texts,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The optimized main image. Only the first image in the main image set will be optimized.
+	Images []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages `json:"images,omitempty"`
+	// The SEO keyword suggestions if `diagnoses.field` is \"TITLE\".
+	SeoWords []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSeoWords `json:"seo_words,omitempty"`
+	// The intelligent text suggestions for titles and descriptions.
+	SmartTexts           []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSmartTexts `json:"smart_texts,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion
@@ -36,161 +36,161 @@ type _Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion Pro
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion() *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion {
-    this := Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion{}
-    return &this
+	this := Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion{}
+	return &this
 }
 
 // NewProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionWithDefaults instantiates a new Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionWithDefaults() *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion {
-    this := Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion{}
-    return &this
+	this := Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion{}
+	return &this
 }
 
 // GetImages returns the Images field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) GetImages() []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages {
-    if o == nil || utils.IsNil(o.Images) {
-        var ret []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages
-        return ret
-    }
-    return o.Images
+	if o == nil || utils.IsNil(o.Images) {
+		var ret []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages
+		return ret
+	}
+	return o.Images
 }
 
 // GetImagesOk returns a tuple with the Images field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) GetImagesOk() ([]Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages, bool) {
-    if o == nil || utils.IsNil(o.Images) {
-        return nil, false
-    }
-    return o.Images, true
+	if o == nil || utils.IsNil(o.Images) {
+		return nil, false
+	}
+	return o.Images, true
 }
 
 // HasImages returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) HasImages() bool {
-    if o != nil && !utils.IsNil(o.Images) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Images) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImages gets a reference to the given []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages and assigns it to the Images field.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) SetImages(v []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionImages) {
-    o.Images = v
+	o.Images = v
 }
 
 // GetSeoWords returns the SeoWords field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) GetSeoWords() []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSeoWords {
-    if o == nil || utils.IsNil(o.SeoWords) {
-        var ret []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSeoWords
-        return ret
-    }
-    return o.SeoWords
+	if o == nil || utils.IsNil(o.SeoWords) {
+		var ret []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSeoWords
+		return ret
+	}
+	return o.SeoWords
 }
 
 // GetSeoWordsOk returns a tuple with the SeoWords field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) GetSeoWordsOk() ([]Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSeoWords, bool) {
-    if o == nil || utils.IsNil(o.SeoWords) {
-        return nil, false
-    }
-    return o.SeoWords, true
+	if o == nil || utils.IsNil(o.SeoWords) {
+		return nil, false
+	}
+	return o.SeoWords, true
 }
 
 // HasSeoWords returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) HasSeoWords() bool {
-    if o != nil && !utils.IsNil(o.SeoWords) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SeoWords) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSeoWords gets a reference to the given []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSeoWords and assigns it to the SeoWords field.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) SetSeoWords(v []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSeoWords) {
-    o.SeoWords = v
+	o.SeoWords = v
 }
 
 // GetSmartTexts returns the SmartTexts field value if set, zero value otherwise.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) GetSmartTexts() []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSmartTexts {
-    if o == nil || utils.IsNil(o.SmartTexts) {
-        var ret []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSmartTexts
-        return ret
-    }
-    return o.SmartTexts
+	if o == nil || utils.IsNil(o.SmartTexts) {
+		var ret []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSmartTexts
+		return ret
+	}
+	return o.SmartTexts
 }
 
 // GetSmartTextsOk returns a tuple with the SmartTexts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) GetSmartTextsOk() ([]Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSmartTexts, bool) {
-    if o == nil || utils.IsNil(o.SmartTexts) {
-        return nil, false
-    }
-    return o.SmartTexts, true
+	if o == nil || utils.IsNil(o.SmartTexts) {
+		return nil, false
+	}
+	return o.SmartTexts, true
 }
 
 // HasSmartTexts returns a boolean if a field has been set.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) HasSmartTexts() bool {
-    if o != nil && !utils.IsNil(o.SmartTexts) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SmartTexts) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSmartTexts gets a reference to the given []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSmartTexts and assigns it to the SmartTexts field.
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) SetSmartTexts(v []Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestionSmartTexts) {
-    o.SmartTexts = v
+	o.SmartTexts = v
 }
 
 func (o Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Images) {
-        toSerialize["images"] = o.Images
-    }
-    if !utils.IsNil(o.SeoWords) {
-        toSerialize["seo_words"] = o.SeoWords
-    }
-    if !utils.IsNil(o.SmartTexts) {
-        toSerialize["smart_texts"] = o.SmartTexts
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Images) {
+		toSerialize["images"] = o.Images
+	}
+	if !utils.IsNil(o.SeoWords) {
+		toSerialize["seo_words"] = o.SeoWords
+	}
+	if !utils.IsNil(o.SmartTexts) {
+		toSerialize["smart_texts"] = o.SmartTexts
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion) UnmarshalJSON(data []byte) (err error) {
-    varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion := _Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion{}
+	varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion := _Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion{}
 
-    err = json.Unmarshal(data, &varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion)
+	err = json.Unmarshal(data, &varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion(varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion)
+	*o = Product202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion(varProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "images")
-        delete(additionalProperties, "seo_words")
-        delete(additionalProperties, "smart_texts")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "images")
+		delete(additionalProperties, "seo_words")
+		delete(additionalProperties, "smart_texts")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSuggestion struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202411DiagnoseandOptimizeProductResponseDataDiagnosesSug
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

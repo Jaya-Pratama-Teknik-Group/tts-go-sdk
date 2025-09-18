@@ -11,20 +11,20 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309GetActivityResponseDataProductsSkusActivityPrice type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309GetActivityResponseDataProductsSkusActivityPrice type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309GetActivityResponseDataProductsSkusActivityPrice{}
 
 // Promotion202309GetActivityResponseDataProductsSkusActivityPrice struct for Promotion202309GetActivityResponseDataProductsSkusActivityPrice
 type Promotion202309GetActivityResponseDataProductsSkusActivityPrice struct {
-    // Activity price amount.
-    Amount *string `json:"amount,omitempty"`
-    // Currency unit of an activity price.
-    Currency *string `json:"currency,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Activity price amount.
+	Amount *string `json:"amount,omitempty"`
+	// Currency unit of an activity price.
+	Currency             *string `json:"currency,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309GetActivityResponseDataProductsSkusActivityPrice Promotion202309GetActivityResponseDataProductsSkusActivityPrice
@@ -34,125 +34,125 @@ type _Promotion202309GetActivityResponseDataProductsSkusActivityPrice Promotion2
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309GetActivityResponseDataProductsSkusActivityPrice() *Promotion202309GetActivityResponseDataProductsSkusActivityPrice {
-    this := Promotion202309GetActivityResponseDataProductsSkusActivityPrice{}
-    return &this
+	this := Promotion202309GetActivityResponseDataProductsSkusActivityPrice{}
+	return &this
 }
 
 // NewPromotion202309GetActivityResponseDataProductsSkusActivityPriceWithDefaults instantiates a new Promotion202309GetActivityResponseDataProductsSkusActivityPrice object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309GetActivityResponseDataProductsSkusActivityPriceWithDefaults() *Promotion202309GetActivityResponseDataProductsSkusActivityPrice {
-    this := Promotion202309GetActivityResponseDataProductsSkusActivityPrice{}
-    return &this
+	this := Promotion202309GetActivityResponseDataProductsSkusActivityPrice{}
+	return &this
 }
 
 // GetAmount returns the Amount field value if set, zero value otherwise.
 func (o *Promotion202309GetActivityResponseDataProductsSkusActivityPrice) GetAmount() string {
-    if o == nil || utils.IsNil(o.Amount) {
-        var ret string
-        return ret
-    }
-    return *o.Amount
+	if o == nil || utils.IsNil(o.Amount) {
+		var ret string
+		return ret
+	}
+	return *o.Amount
 }
 
 // GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309GetActivityResponseDataProductsSkusActivityPrice) GetAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Amount) {
-        return nil, false
-    }
-    return o.Amount, true
+	if o == nil || utils.IsNil(o.Amount) {
+		return nil, false
+	}
+	return o.Amount, true
 }
 
 // HasAmount returns a boolean if a field has been set.
 func (o *Promotion202309GetActivityResponseDataProductsSkusActivityPrice) HasAmount() bool {
-    if o != nil && !utils.IsNil(o.Amount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Amount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAmount gets a reference to the given string and assigns it to the Amount field.
 func (o *Promotion202309GetActivityResponseDataProductsSkusActivityPrice) SetAmount(v string) {
-    o.Amount = &v
+	o.Amount = &v
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *Promotion202309GetActivityResponseDataProductsSkusActivityPrice) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309GetActivityResponseDataProductsSkusActivityPrice) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *Promotion202309GetActivityResponseDataProductsSkusActivityPrice) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *Promotion202309GetActivityResponseDataProductsSkusActivityPrice) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 func (o Promotion202309GetActivityResponseDataProductsSkusActivityPrice) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309GetActivityResponseDataProductsSkusActivityPrice) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Amount) {
-        toSerialize["amount"] = o.Amount
-    }
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
+	}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309GetActivityResponseDataProductsSkusActivityPrice) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309GetActivityResponseDataProductsSkusActivityPrice := _Promotion202309GetActivityResponseDataProductsSkusActivityPrice{}
+	varPromotion202309GetActivityResponseDataProductsSkusActivityPrice := _Promotion202309GetActivityResponseDataProductsSkusActivityPrice{}
 
-    err = json.Unmarshal(data, &varPromotion202309GetActivityResponseDataProductsSkusActivityPrice)
+	err = json.Unmarshal(data, &varPromotion202309GetActivityResponseDataProductsSkusActivityPrice)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309GetActivityResponseDataProductsSkusActivityPrice(varPromotion202309GetActivityResponseDataProductsSkusActivityPrice)
+	*o = Promotion202309GetActivityResponseDataProductsSkusActivityPrice(varPromotion202309GetActivityResponseDataProductsSkusActivityPrice)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "amount")
-        delete(additionalProperties, "currency")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "amount")
+		delete(additionalProperties, "currency")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309GetActivityResponseDataProductsSkusActivityPrice struct {
@@ -190,5 +190,3 @@ func (v *NullablePromotion202309GetActivityResponseDataProductsSkusActivityPrice
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

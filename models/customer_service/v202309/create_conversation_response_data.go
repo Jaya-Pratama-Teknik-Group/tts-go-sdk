@@ -11,18 +11,18 @@ API version: 1.0.0
 package customer_service_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the CustomerService202309CreateConversationResponseData type satisfies the MappedNullable interface at compile time
+// checks if the CustomerService202309CreateConversationResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &CustomerService202309CreateConversationResponseData{}
 
 // CustomerService202309CreateConversationResponseData struct for CustomerService202309CreateConversationResponseData
 type CustomerService202309CreateConversationResponseData struct {
-    // Converstaion ID. The unique identifier for a conversation between the buyer and a shop.
-    ConversationId *string `json:"conversation_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Converstaion ID. The unique identifier for a conversation between the buyer and a shop.
+	ConversationId       *string `json:"conversation_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _CustomerService202309CreateConversationResponseData CustomerService202309CreateConversationResponseData
@@ -32,89 +32,89 @@ type _CustomerService202309CreateConversationResponseData CustomerService202309C
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewCustomerService202309CreateConversationResponseData() *CustomerService202309CreateConversationResponseData {
-    this := CustomerService202309CreateConversationResponseData{}
-    return &this
+	this := CustomerService202309CreateConversationResponseData{}
+	return &this
 }
 
 // NewCustomerService202309CreateConversationResponseDataWithDefaults instantiates a new CustomerService202309CreateConversationResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewCustomerService202309CreateConversationResponseDataWithDefaults() *CustomerService202309CreateConversationResponseData {
-    this := CustomerService202309CreateConversationResponseData{}
-    return &this
+	this := CustomerService202309CreateConversationResponseData{}
+	return &this
 }
 
 // GetConversationId returns the ConversationId field value if set, zero value otherwise.
 func (o *CustomerService202309CreateConversationResponseData) GetConversationId() string {
-    if o == nil || utils.IsNil(o.ConversationId) {
-        var ret string
-        return ret
-    }
-    return *o.ConversationId
+	if o == nil || utils.IsNil(o.ConversationId) {
+		var ret string
+		return ret
+	}
+	return *o.ConversationId
 }
 
 // GetConversationIdOk returns a tuple with the ConversationId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomerService202309CreateConversationResponseData) GetConversationIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ConversationId) {
-        return nil, false
-    }
-    return o.ConversationId, true
+	if o == nil || utils.IsNil(o.ConversationId) {
+		return nil, false
+	}
+	return o.ConversationId, true
 }
 
 // HasConversationId returns a boolean if a field has been set.
 func (o *CustomerService202309CreateConversationResponseData) HasConversationId() bool {
-    if o != nil && !utils.IsNil(o.ConversationId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ConversationId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetConversationId gets a reference to the given string and assigns it to the ConversationId field.
 func (o *CustomerService202309CreateConversationResponseData) SetConversationId(v string) {
-    o.ConversationId = &v
+	o.ConversationId = &v
 }
 
 func (o CustomerService202309CreateConversationResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o CustomerService202309CreateConversationResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ConversationId) {
-        toSerialize["conversation_id"] = o.ConversationId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ConversationId) {
+		toSerialize["conversation_id"] = o.ConversationId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *CustomerService202309CreateConversationResponseData) UnmarshalJSON(data []byte) (err error) {
-    varCustomerService202309CreateConversationResponseData := _CustomerService202309CreateConversationResponseData{}
+	varCustomerService202309CreateConversationResponseData := _CustomerService202309CreateConversationResponseData{}
 
-    err = json.Unmarshal(data, &varCustomerService202309CreateConversationResponseData)
+	err = json.Unmarshal(data, &varCustomerService202309CreateConversationResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = CustomerService202309CreateConversationResponseData(varCustomerService202309CreateConversationResponseData)
+	*o = CustomerService202309CreateConversationResponseData(varCustomerService202309CreateConversationResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "conversation_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "conversation_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableCustomerService202309CreateConversationResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableCustomerService202309CreateConversationResponseData) UnmarshalJ
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

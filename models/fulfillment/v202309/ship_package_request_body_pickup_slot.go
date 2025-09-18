@@ -11,20 +11,20 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309ShipPackageRequestBodyPickupSlot type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309ShipPackageRequestBodyPickupSlot type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309ShipPackageRequestBodyPickupSlot{}
 
 // Fulfillment202309ShipPackageRequestBodyPickupSlot struct for Fulfillment202309ShipPackageRequestBodyPickupSlot
 type Fulfillment202309ShipPackageRequestBodyPickupSlot struct {
-    // The end date and time of the package pickup time slot. Unix timestamp.
-    EndTime *int64 `json:"end_time,omitempty"`
-    // The start date and time of the package pickup time slot. Unix timestamp.
-    StartTime *int64 `json:"start_time,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The end date and time of the package pickup time slot. Unix timestamp.
+	EndTime *int64 `json:"end_time,omitempty"`
+	// The start date and time of the package pickup time slot. Unix timestamp.
+	StartTime            *int64 `json:"start_time,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309ShipPackageRequestBodyPickupSlot Fulfillment202309ShipPackageRequestBodyPickupSlot
@@ -34,125 +34,125 @@ type _Fulfillment202309ShipPackageRequestBodyPickupSlot Fulfillment202309ShipPac
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309ShipPackageRequestBodyPickupSlot() *Fulfillment202309ShipPackageRequestBodyPickupSlot {
-    this := Fulfillment202309ShipPackageRequestBodyPickupSlot{}
-    return &this
+	this := Fulfillment202309ShipPackageRequestBodyPickupSlot{}
+	return &this
 }
 
 // NewFulfillment202309ShipPackageRequestBodyPickupSlotWithDefaults instantiates a new Fulfillment202309ShipPackageRequestBodyPickupSlot object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309ShipPackageRequestBodyPickupSlotWithDefaults() *Fulfillment202309ShipPackageRequestBodyPickupSlot {
-    this := Fulfillment202309ShipPackageRequestBodyPickupSlot{}
-    return &this
+	this := Fulfillment202309ShipPackageRequestBodyPickupSlot{}
+	return &this
 }
 
 // GetEndTime returns the EndTime field value if set, zero value otherwise.
 func (o *Fulfillment202309ShipPackageRequestBodyPickupSlot) GetEndTime() int64 {
-    if o == nil || utils.IsNil(o.EndTime) {
-        var ret int64
-        return ret
-    }
-    return *o.EndTime
+	if o == nil || utils.IsNil(o.EndTime) {
+		var ret int64
+		return ret
+	}
+	return *o.EndTime
 }
 
 // GetEndTimeOk returns a tuple with the EndTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309ShipPackageRequestBodyPickupSlot) GetEndTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.EndTime) {
-        return nil, false
-    }
-    return o.EndTime, true
+	if o == nil || utils.IsNil(o.EndTime) {
+		return nil, false
+	}
+	return o.EndTime, true
 }
 
 // HasEndTime returns a boolean if a field has been set.
 func (o *Fulfillment202309ShipPackageRequestBodyPickupSlot) HasEndTime() bool {
-    if o != nil && !utils.IsNil(o.EndTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.EndTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetEndTime gets a reference to the given int64 and assigns it to the EndTime field.
 func (o *Fulfillment202309ShipPackageRequestBodyPickupSlot) SetEndTime(v int64) {
-    o.EndTime = &v
+	o.EndTime = &v
 }
 
 // GetStartTime returns the StartTime field value if set, zero value otherwise.
 func (o *Fulfillment202309ShipPackageRequestBodyPickupSlot) GetStartTime() int64 {
-    if o == nil || utils.IsNil(o.StartTime) {
-        var ret int64
-        return ret
-    }
-    return *o.StartTime
+	if o == nil || utils.IsNil(o.StartTime) {
+		var ret int64
+		return ret
+	}
+	return *o.StartTime
 }
 
 // GetStartTimeOk returns a tuple with the StartTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309ShipPackageRequestBodyPickupSlot) GetStartTimeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.StartTime) {
-        return nil, false
-    }
-    return o.StartTime, true
+	if o == nil || utils.IsNil(o.StartTime) {
+		return nil, false
+	}
+	return o.StartTime, true
 }
 
 // HasStartTime returns a boolean if a field has been set.
 func (o *Fulfillment202309ShipPackageRequestBodyPickupSlot) HasStartTime() bool {
-    if o != nil && !utils.IsNil(o.StartTime) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.StartTime) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStartTime gets a reference to the given int64 and assigns it to the StartTime field.
 func (o *Fulfillment202309ShipPackageRequestBodyPickupSlot) SetStartTime(v int64) {
-    o.StartTime = &v
+	o.StartTime = &v
 }
 
 func (o Fulfillment202309ShipPackageRequestBodyPickupSlot) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309ShipPackageRequestBodyPickupSlot) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.EndTime) {
-        toSerialize["end_time"] = o.EndTime
-    }
-    if !utils.IsNil(o.StartTime) {
-        toSerialize["start_time"] = o.StartTime
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.EndTime) {
+		toSerialize["end_time"] = o.EndTime
+	}
+	if !utils.IsNil(o.StartTime) {
+		toSerialize["start_time"] = o.StartTime
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309ShipPackageRequestBodyPickupSlot) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309ShipPackageRequestBodyPickupSlot := _Fulfillment202309ShipPackageRequestBodyPickupSlot{}
+	varFulfillment202309ShipPackageRequestBodyPickupSlot := _Fulfillment202309ShipPackageRequestBodyPickupSlot{}
 
-    err = json.Unmarshal(data, &varFulfillment202309ShipPackageRequestBodyPickupSlot)
+	err = json.Unmarshal(data, &varFulfillment202309ShipPackageRequestBodyPickupSlot)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309ShipPackageRequestBodyPickupSlot(varFulfillment202309ShipPackageRequestBodyPickupSlot)
+	*o = Fulfillment202309ShipPackageRequestBodyPickupSlot(varFulfillment202309ShipPackageRequestBodyPickupSlot)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "end_time")
-        delete(additionalProperties, "start_time")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "end_time")
+		delete(additionalProperties, "start_time")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309ShipPackageRequestBodyPickupSlot struct {
@@ -190,5 +190,3 @@ func (v *NullableFulfillment202309ShipPackageRequestBodyPickupSlot) UnmarshalJSO
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309DeleteGlobalProductsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202309DeleteGlobalProductsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309DeleteGlobalProductsResponseData{}
 
 // Product202309DeleteGlobalProductsResponseData struct for Product202309DeleteGlobalProductsResponseData
 type Product202309DeleteGlobalProductsResponseData struct {
-    // The list of errors that occurred.
-    Errors []Product202309DeleteGlobalProductsResponseDataErrors `json:"errors,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of errors that occurred.
+	Errors               []Product202309DeleteGlobalProductsResponseDataErrors `json:"errors,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309DeleteGlobalProductsResponseData Product202309DeleteGlobalProductsResponseData
@@ -32,89 +32,89 @@ type _Product202309DeleteGlobalProductsResponseData Product202309DeleteGlobalPro
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309DeleteGlobalProductsResponseData() *Product202309DeleteGlobalProductsResponseData {
-    this := Product202309DeleteGlobalProductsResponseData{}
-    return &this
+	this := Product202309DeleteGlobalProductsResponseData{}
+	return &this
 }
 
 // NewProduct202309DeleteGlobalProductsResponseDataWithDefaults instantiates a new Product202309DeleteGlobalProductsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309DeleteGlobalProductsResponseDataWithDefaults() *Product202309DeleteGlobalProductsResponseData {
-    this := Product202309DeleteGlobalProductsResponseData{}
-    return &this
+	this := Product202309DeleteGlobalProductsResponseData{}
+	return &this
 }
 
 // GetErrors returns the Errors field value if set, zero value otherwise.
 func (o *Product202309DeleteGlobalProductsResponseData) GetErrors() []Product202309DeleteGlobalProductsResponseDataErrors {
-    if o == nil || utils.IsNil(o.Errors) {
-        var ret []Product202309DeleteGlobalProductsResponseDataErrors
-        return ret
-    }
-    return o.Errors
+	if o == nil || utils.IsNil(o.Errors) {
+		var ret []Product202309DeleteGlobalProductsResponseDataErrors
+		return ret
+	}
+	return o.Errors
 }
 
 // GetErrorsOk returns a tuple with the Errors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309DeleteGlobalProductsResponseData) GetErrorsOk() ([]Product202309DeleteGlobalProductsResponseDataErrors, bool) {
-    if o == nil || utils.IsNil(o.Errors) {
-        return nil, false
-    }
-    return o.Errors, true
+	if o == nil || utils.IsNil(o.Errors) {
+		return nil, false
+	}
+	return o.Errors, true
 }
 
 // HasErrors returns a boolean if a field has been set.
 func (o *Product202309DeleteGlobalProductsResponseData) HasErrors() bool {
-    if o != nil && !utils.IsNil(o.Errors) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Errors) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetErrors gets a reference to the given []Product202309DeleteGlobalProductsResponseDataErrors and assigns it to the Errors field.
 func (o *Product202309DeleteGlobalProductsResponseData) SetErrors(v []Product202309DeleteGlobalProductsResponseDataErrors) {
-    o.Errors = v
+	o.Errors = v
 }
 
 func (o Product202309DeleteGlobalProductsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309DeleteGlobalProductsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Errors) {
-        toSerialize["errors"] = o.Errors
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Errors) {
+		toSerialize["errors"] = o.Errors
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309DeleteGlobalProductsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309DeleteGlobalProductsResponseData := _Product202309DeleteGlobalProductsResponseData{}
+	varProduct202309DeleteGlobalProductsResponseData := _Product202309DeleteGlobalProductsResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202309DeleteGlobalProductsResponseData)
+	err = json.Unmarshal(data, &varProduct202309DeleteGlobalProductsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309DeleteGlobalProductsResponseData(varProduct202309DeleteGlobalProductsResponseData)
+	*o = Product202309DeleteGlobalProductsResponseData(varProduct202309DeleteGlobalProductsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "errors")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "errors")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309DeleteGlobalProductsResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309DeleteGlobalProductsResponseData) UnmarshalJSON(sr
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

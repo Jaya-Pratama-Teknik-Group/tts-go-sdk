@@ -11,22 +11,22 @@ API version: 1.0.0
 package promotion_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202406SearchCouponsResponseDataCouponsDiscount type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202406SearchCouponsResponseDataCouponsDiscount type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202406SearchCouponsResponseDataCouponsDiscount{}
 
 // Promotion202406SearchCouponsResponseDataCouponsDiscount struct for Promotion202406SearchCouponsResponseDataCouponsDiscount
 type Promotion202406SearchCouponsResponseDataCouponsDiscount struct {
-    MaxDiscount *Promotion202406SearchCouponsResponseDataCouponsDiscountMaxDiscount `json:"max_discount,omitempty"`
-    // The discount offered by the coupon, in percentage points. Will appear when `type == PERCENT_OFF'`.
-    Percentage *string `json:"percentage,omitempty"`
-    ReductionAmount *Promotion202406SearchCouponsResponseDataCouponsDiscountReductionAmount `json:"reduction_amount,omitempty"`
-    // The type of discount offered by the coupon. Possible enumerations are: - `AMOUNT_OFF`: Reduces the final price of the item by the specified `reduction_amount` - `PERCENT_OFF`: Reduces the final price by the specified `percentage`.
-    Type *string `json:"type,omitempty"`
-    AdditionalProperties map[string]interface{}
+	MaxDiscount *Promotion202406SearchCouponsResponseDataCouponsDiscountMaxDiscount `json:"max_discount,omitempty"`
+	// The discount offered by the coupon, in percentage points. Will appear when `type == PERCENT_OFF'`.
+	Percentage      *string                                                                 `json:"percentage,omitempty"`
+	ReductionAmount *Promotion202406SearchCouponsResponseDataCouponsDiscountReductionAmount `json:"reduction_amount,omitempty"`
+	// The type of discount offered by the coupon. Possible enumerations are: - `AMOUNT_OFF`: Reduces the final price of the item by the specified `reduction_amount` - `PERCENT_OFF`: Reduces the final price by the specified `percentage`.
+	Type                 *string `json:"type,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202406SearchCouponsResponseDataCouponsDiscount Promotion202406SearchCouponsResponseDataCouponsDiscount
@@ -36,197 +36,197 @@ type _Promotion202406SearchCouponsResponseDataCouponsDiscount Promotion202406Sea
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202406SearchCouponsResponseDataCouponsDiscount() *Promotion202406SearchCouponsResponseDataCouponsDiscount {
-    this := Promotion202406SearchCouponsResponseDataCouponsDiscount{}
-    return &this
+	this := Promotion202406SearchCouponsResponseDataCouponsDiscount{}
+	return &this
 }
 
 // NewPromotion202406SearchCouponsResponseDataCouponsDiscountWithDefaults instantiates a new Promotion202406SearchCouponsResponseDataCouponsDiscount object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202406SearchCouponsResponseDataCouponsDiscountWithDefaults() *Promotion202406SearchCouponsResponseDataCouponsDiscount {
-    this := Promotion202406SearchCouponsResponseDataCouponsDiscount{}
-    return &this
+	this := Promotion202406SearchCouponsResponseDataCouponsDiscount{}
+	return &this
 }
 
 // GetMaxDiscount returns the MaxDiscount field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) GetMaxDiscount() Promotion202406SearchCouponsResponseDataCouponsDiscountMaxDiscount {
-    if o == nil || utils.IsNil(o.MaxDiscount) {
-        var ret Promotion202406SearchCouponsResponseDataCouponsDiscountMaxDiscount
-        return ret
-    }
-    return *o.MaxDiscount
+	if o == nil || utils.IsNil(o.MaxDiscount) {
+		var ret Promotion202406SearchCouponsResponseDataCouponsDiscountMaxDiscount
+		return ret
+	}
+	return *o.MaxDiscount
 }
 
 // GetMaxDiscountOk returns a tuple with the MaxDiscount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) GetMaxDiscountOk() (*Promotion202406SearchCouponsResponseDataCouponsDiscountMaxDiscount, bool) {
-    if o == nil || utils.IsNil(o.MaxDiscount) {
-        return nil, false
-    }
-    return o.MaxDiscount, true
+	if o == nil || utils.IsNil(o.MaxDiscount) {
+		return nil, false
+	}
+	return o.MaxDiscount, true
 }
 
 // HasMaxDiscount returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) HasMaxDiscount() bool {
-    if o != nil && !utils.IsNil(o.MaxDiscount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.MaxDiscount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMaxDiscount gets a reference to the given Promotion202406SearchCouponsResponseDataCouponsDiscountMaxDiscount and assigns it to the MaxDiscount field.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) SetMaxDiscount(v Promotion202406SearchCouponsResponseDataCouponsDiscountMaxDiscount) {
-    o.MaxDiscount = &v
+	o.MaxDiscount = &v
 }
 
 // GetPercentage returns the Percentage field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) GetPercentage() string {
-    if o == nil || utils.IsNil(o.Percentage) {
-        var ret string
-        return ret
-    }
-    return *o.Percentage
+	if o == nil || utils.IsNil(o.Percentage) {
+		var ret string
+		return ret
+	}
+	return *o.Percentage
 }
 
 // GetPercentageOk returns a tuple with the Percentage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) GetPercentageOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Percentage) {
-        return nil, false
-    }
-    return o.Percentage, true
+	if o == nil || utils.IsNil(o.Percentage) {
+		return nil, false
+	}
+	return o.Percentage, true
 }
 
 // HasPercentage returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) HasPercentage() bool {
-    if o != nil && !utils.IsNil(o.Percentage) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Percentage) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPercentage gets a reference to the given string and assigns it to the Percentage field.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) SetPercentage(v string) {
-    o.Percentage = &v
+	o.Percentage = &v
 }
 
 // GetReductionAmount returns the ReductionAmount field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) GetReductionAmount() Promotion202406SearchCouponsResponseDataCouponsDiscountReductionAmount {
-    if o == nil || utils.IsNil(o.ReductionAmount) {
-        var ret Promotion202406SearchCouponsResponseDataCouponsDiscountReductionAmount
-        return ret
-    }
-    return *o.ReductionAmount
+	if o == nil || utils.IsNil(o.ReductionAmount) {
+		var ret Promotion202406SearchCouponsResponseDataCouponsDiscountReductionAmount
+		return ret
+	}
+	return *o.ReductionAmount
 }
 
 // GetReductionAmountOk returns a tuple with the ReductionAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) GetReductionAmountOk() (*Promotion202406SearchCouponsResponseDataCouponsDiscountReductionAmount, bool) {
-    if o == nil || utils.IsNil(o.ReductionAmount) {
-        return nil, false
-    }
-    return o.ReductionAmount, true
+	if o == nil || utils.IsNil(o.ReductionAmount) {
+		return nil, false
+	}
+	return o.ReductionAmount, true
 }
 
 // HasReductionAmount returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) HasReductionAmount() bool {
-    if o != nil && !utils.IsNil(o.ReductionAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ReductionAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReductionAmount gets a reference to the given Promotion202406SearchCouponsResponseDataCouponsDiscountReductionAmount and assigns it to the ReductionAmount field.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) SetReductionAmount(v Promotion202406SearchCouponsResponseDataCouponsDiscountReductionAmount) {
-    o.ReductionAmount = &v
+	o.ReductionAmount = &v
 }
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) GetType() string {
-    if o == nil || utils.IsNil(o.Type) {
-        var ret string
-        return ret
-    }
-    return *o.Type
+	if o == nil || utils.IsNil(o.Type) {
+		var ret string
+		return ret
+	}
+	return *o.Type
 }
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) GetTypeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Type) {
-        return nil, false
-    }
-    return o.Type, true
+	if o == nil || utils.IsNil(o.Type) {
+		return nil, false
+	}
+	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) HasType() bool {
-    if o != nil && !utils.IsNil(o.Type) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Type) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) SetType(v string) {
-    o.Type = &v
+	o.Type = &v
 }
 
 func (o Promotion202406SearchCouponsResponseDataCouponsDiscount) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202406SearchCouponsResponseDataCouponsDiscount) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.MaxDiscount) {
-        toSerialize["max_discount"] = o.MaxDiscount
-    }
-    if !utils.IsNil(o.Percentage) {
-        toSerialize["percentage"] = o.Percentage
-    }
-    if !utils.IsNil(o.ReductionAmount) {
-        toSerialize["reduction_amount"] = o.ReductionAmount
-    }
-    if !utils.IsNil(o.Type) {
-        toSerialize["type"] = o.Type
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.MaxDiscount) {
+		toSerialize["max_discount"] = o.MaxDiscount
+	}
+	if !utils.IsNil(o.Percentage) {
+		toSerialize["percentage"] = o.Percentage
+	}
+	if !utils.IsNil(o.ReductionAmount) {
+		toSerialize["reduction_amount"] = o.ReductionAmount
+	}
+	if !utils.IsNil(o.Type) {
+		toSerialize["type"] = o.Type
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202406SearchCouponsResponseDataCouponsDiscount) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202406SearchCouponsResponseDataCouponsDiscount := _Promotion202406SearchCouponsResponseDataCouponsDiscount{}
+	varPromotion202406SearchCouponsResponseDataCouponsDiscount := _Promotion202406SearchCouponsResponseDataCouponsDiscount{}
 
-    err = json.Unmarshal(data, &varPromotion202406SearchCouponsResponseDataCouponsDiscount)
+	err = json.Unmarshal(data, &varPromotion202406SearchCouponsResponseDataCouponsDiscount)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202406SearchCouponsResponseDataCouponsDiscount(varPromotion202406SearchCouponsResponseDataCouponsDiscount)
+	*o = Promotion202406SearchCouponsResponseDataCouponsDiscount(varPromotion202406SearchCouponsResponseDataCouponsDiscount)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "max_discount")
-        delete(additionalProperties, "percentage")
-        delete(additionalProperties, "reduction_amount")
-        delete(additionalProperties, "type")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "max_discount")
+		delete(additionalProperties, "percentage")
+		delete(additionalProperties, "reduction_amount")
+		delete(additionalProperties, "type")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202406SearchCouponsResponseDataCouponsDiscount struct {
@@ -264,5 +264,3 @@ func (v *NullablePromotion202406SearchCouponsResponseDataCouponsDiscount) Unmars
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

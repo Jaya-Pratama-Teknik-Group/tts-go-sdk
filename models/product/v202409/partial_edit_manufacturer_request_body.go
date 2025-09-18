@@ -11,27 +11,27 @@ API version: 1.0.0
 package product_v202409
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202409PartialEditManufacturerRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Product202409PartialEditManufacturerRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202409PartialEditManufacturerRequestBody{}
 
 // Product202409PartialEditManufacturerRequestBody struct for Product202409PartialEditManufacturerRequestBody
 type Product202409PartialEditManufacturerRequestBody struct {
-    // The postal address of the manufacturer. Max length: 500 characters
-    Address *string `json:"address,omitempty"`
-    // The email address of the manufacturer.
-    Email *string `json:"email,omitempty"`
-    // The BCP-47 locale code representing the language used for specifying the responsible person information. Possible values: - de-DE - en-IE - es-ES - fr-FR - it-IT Default: The locale of the seller's registered business address.  **Note**: The information provided will be automatically translated into all EU languages supported by TikTok Shop. Ensure the locale matches the language used in field values to avoid inaccurate translations.
-    Locale *string `json:"locale,omitempty"`
-    // The manufacturer name. Max length: 255 characters
-    Name *string `json:"name,omitempty"`
-    PhoneNumber *Product202409PartialEditManufacturerRequestBodyPhoneNumber `json:"phone_number,omitempty"`
-    // The registered trade name of the manufacturer. Max length: 200 characters
-    RegisteredTradeName *string `json:"registered_trade_name,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The postal address of the manufacturer. Max length: 500 characters
+	Address *string `json:"address,omitempty"`
+	// The email address of the manufacturer.
+	Email *string `json:"email,omitempty"`
+	// The BCP-47 locale code representing the language used for specifying the responsible person information. Possible values: - de-DE - en-IE - es-ES - fr-FR - it-IT Default: The locale of the seller's registered business address.  **Note**: The information provided will be automatically translated into all EU languages supported by TikTok Shop. Ensure the locale matches the language used in field values to avoid inaccurate translations.
+	Locale *string `json:"locale,omitempty"`
+	// The manufacturer name. Max length: 255 characters
+	Name        *string                                                     `json:"name,omitempty"`
+	PhoneNumber *Product202409PartialEditManufacturerRequestBodyPhoneNumber `json:"phone_number,omitempty"`
+	// The registered trade name of the manufacturer. Max length: 200 characters
+	RegisteredTradeName  *string `json:"registered_trade_name,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202409PartialEditManufacturerRequestBody Product202409PartialEditManufacturerRequestBody
@@ -41,269 +41,269 @@ type _Product202409PartialEditManufacturerRequestBody Product202409PartialEditMa
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202409PartialEditManufacturerRequestBody() *Product202409PartialEditManufacturerRequestBody {
-    this := Product202409PartialEditManufacturerRequestBody{}
-    return &this
+	this := Product202409PartialEditManufacturerRequestBody{}
+	return &this
 }
 
 // NewProduct202409PartialEditManufacturerRequestBodyWithDefaults instantiates a new Product202409PartialEditManufacturerRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202409PartialEditManufacturerRequestBodyWithDefaults() *Product202409PartialEditManufacturerRequestBody {
-    this := Product202409PartialEditManufacturerRequestBody{}
-    return &this
+	this := Product202409PartialEditManufacturerRequestBody{}
+	return &this
 }
 
 // GetAddress returns the Address field value if set, zero value otherwise.
 func (o *Product202409PartialEditManufacturerRequestBody) GetAddress() string {
-    if o == nil || utils.IsNil(o.Address) {
-        var ret string
-        return ret
-    }
-    return *o.Address
+	if o == nil || utils.IsNil(o.Address) {
+		var ret string
+		return ret
+	}
+	return *o.Address
 }
 
 // GetAddressOk returns a tuple with the Address field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) GetAddressOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Address) {
-        return nil, false
-    }
-    return o.Address, true
+	if o == nil || utils.IsNil(o.Address) {
+		return nil, false
+	}
+	return o.Address, true
 }
 
 // HasAddress returns a boolean if a field has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) HasAddress() bool {
-    if o != nil && !utils.IsNil(o.Address) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Address) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddress gets a reference to the given string and assigns it to the Address field.
 func (o *Product202409PartialEditManufacturerRequestBody) SetAddress(v string) {
-    o.Address = &v
+	o.Address = &v
 }
 
 // GetEmail returns the Email field value if set, zero value otherwise.
 func (o *Product202409PartialEditManufacturerRequestBody) GetEmail() string {
-    if o == nil || utils.IsNil(o.Email) {
-        var ret string
-        return ret
-    }
-    return *o.Email
+	if o == nil || utils.IsNil(o.Email) {
+		var ret string
+		return ret
+	}
+	return *o.Email
 }
 
 // GetEmailOk returns a tuple with the Email field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) GetEmailOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Email) {
-        return nil, false
-    }
-    return o.Email, true
+	if o == nil || utils.IsNil(o.Email) {
+		return nil, false
+	}
+	return o.Email, true
 }
 
 // HasEmail returns a boolean if a field has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) HasEmail() bool {
-    if o != nil && !utils.IsNil(o.Email) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Email) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetEmail gets a reference to the given string and assigns it to the Email field.
 func (o *Product202409PartialEditManufacturerRequestBody) SetEmail(v string) {
-    o.Email = &v
+	o.Email = &v
 }
 
 // GetLocale returns the Locale field value if set, zero value otherwise.
 func (o *Product202409PartialEditManufacturerRequestBody) GetLocale() string {
-    if o == nil || utils.IsNil(o.Locale) {
-        var ret string
-        return ret
-    }
-    return *o.Locale
+	if o == nil || utils.IsNil(o.Locale) {
+		var ret string
+		return ret
+	}
+	return *o.Locale
 }
 
 // GetLocaleOk returns a tuple with the Locale field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) GetLocaleOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Locale) {
-        return nil, false
-    }
-    return o.Locale, true
+	if o == nil || utils.IsNil(o.Locale) {
+		return nil, false
+	}
+	return o.Locale, true
 }
 
 // HasLocale returns a boolean if a field has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) HasLocale() bool {
-    if o != nil && !utils.IsNil(o.Locale) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Locale) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocale gets a reference to the given string and assigns it to the Locale field.
 func (o *Product202409PartialEditManufacturerRequestBody) SetLocale(v string) {
-    o.Locale = &v
+	o.Locale = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Product202409PartialEditManufacturerRequestBody) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Product202409PartialEditManufacturerRequestBody) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 // GetPhoneNumber returns the PhoneNumber field value if set, zero value otherwise.
 func (o *Product202409PartialEditManufacturerRequestBody) GetPhoneNumber() Product202409PartialEditManufacturerRequestBodyPhoneNumber {
-    if o == nil || utils.IsNil(o.PhoneNumber) {
-        var ret Product202409PartialEditManufacturerRequestBodyPhoneNumber
-        return ret
-    }
-    return *o.PhoneNumber
+	if o == nil || utils.IsNil(o.PhoneNumber) {
+		var ret Product202409PartialEditManufacturerRequestBodyPhoneNumber
+		return ret
+	}
+	return *o.PhoneNumber
 }
 
 // GetPhoneNumberOk returns a tuple with the PhoneNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) GetPhoneNumberOk() (*Product202409PartialEditManufacturerRequestBodyPhoneNumber, bool) {
-    if o == nil || utils.IsNil(o.PhoneNumber) {
-        return nil, false
-    }
-    return o.PhoneNumber, true
+	if o == nil || utils.IsNil(o.PhoneNumber) {
+		return nil, false
+	}
+	return o.PhoneNumber, true
 }
 
 // HasPhoneNumber returns a boolean if a field has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) HasPhoneNumber() bool {
-    if o != nil && !utils.IsNil(o.PhoneNumber) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PhoneNumber) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPhoneNumber gets a reference to the given Product202409PartialEditManufacturerRequestBodyPhoneNumber and assigns it to the PhoneNumber field.
 func (o *Product202409PartialEditManufacturerRequestBody) SetPhoneNumber(v Product202409PartialEditManufacturerRequestBodyPhoneNumber) {
-    o.PhoneNumber = &v
+	o.PhoneNumber = &v
 }
 
 // GetRegisteredTradeName returns the RegisteredTradeName field value if set, zero value otherwise.
 func (o *Product202409PartialEditManufacturerRequestBody) GetRegisteredTradeName() string {
-    if o == nil || utils.IsNil(o.RegisteredTradeName) {
-        var ret string
-        return ret
-    }
-    return *o.RegisteredTradeName
+	if o == nil || utils.IsNil(o.RegisteredTradeName) {
+		var ret string
+		return ret
+	}
+	return *o.RegisteredTradeName
 }
 
 // GetRegisteredTradeNameOk returns a tuple with the RegisteredTradeName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) GetRegisteredTradeNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.RegisteredTradeName) {
-        return nil, false
-    }
-    return o.RegisteredTradeName, true
+	if o == nil || utils.IsNil(o.RegisteredTradeName) {
+		return nil, false
+	}
+	return o.RegisteredTradeName, true
 }
 
 // HasRegisteredTradeName returns a boolean if a field has been set.
 func (o *Product202409PartialEditManufacturerRequestBody) HasRegisteredTradeName() bool {
-    if o != nil && !utils.IsNil(o.RegisteredTradeName) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RegisteredTradeName) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRegisteredTradeName gets a reference to the given string and assigns it to the RegisteredTradeName field.
 func (o *Product202409PartialEditManufacturerRequestBody) SetRegisteredTradeName(v string) {
-    o.RegisteredTradeName = &v
+	o.RegisteredTradeName = &v
 }
 
 func (o Product202409PartialEditManufacturerRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202409PartialEditManufacturerRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Address) {
-        toSerialize["address"] = o.Address
-    }
-    if !utils.IsNil(o.Email) {
-        toSerialize["email"] = o.Email
-    }
-    if !utils.IsNil(o.Locale) {
-        toSerialize["locale"] = o.Locale
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
-    if !utils.IsNil(o.PhoneNumber) {
-        toSerialize["phone_number"] = o.PhoneNumber
-    }
-    if !utils.IsNil(o.RegisteredTradeName) {
-        toSerialize["registered_trade_name"] = o.RegisteredTradeName
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Address) {
+		toSerialize["address"] = o.Address
+	}
+	if !utils.IsNil(o.Email) {
+		toSerialize["email"] = o.Email
+	}
+	if !utils.IsNil(o.Locale) {
+		toSerialize["locale"] = o.Locale
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !utils.IsNil(o.PhoneNumber) {
+		toSerialize["phone_number"] = o.PhoneNumber
+	}
+	if !utils.IsNil(o.RegisteredTradeName) {
+		toSerialize["registered_trade_name"] = o.RegisteredTradeName
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202409PartialEditManufacturerRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varProduct202409PartialEditManufacturerRequestBody := _Product202409PartialEditManufacturerRequestBody{}
+	varProduct202409PartialEditManufacturerRequestBody := _Product202409PartialEditManufacturerRequestBody{}
 
-    err = json.Unmarshal(data, &varProduct202409PartialEditManufacturerRequestBody)
+	err = json.Unmarshal(data, &varProduct202409PartialEditManufacturerRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202409PartialEditManufacturerRequestBody(varProduct202409PartialEditManufacturerRequestBody)
+	*o = Product202409PartialEditManufacturerRequestBody(varProduct202409PartialEditManufacturerRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "address")
-        delete(additionalProperties, "email")
-        delete(additionalProperties, "locale")
-        delete(additionalProperties, "name")
-        delete(additionalProperties, "phone_number")
-        delete(additionalProperties, "registered_trade_name")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "address")
+		delete(additionalProperties, "email")
+		delete(additionalProperties, "locale")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "phone_number")
+		delete(additionalProperties, "registered_trade_name")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202409PartialEditManufacturerRequestBody struct {
@@ -341,5 +341,3 @@ func (v *NullableProduct202409PartialEditManufacturerRequestBody) UnmarshalJSON(
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

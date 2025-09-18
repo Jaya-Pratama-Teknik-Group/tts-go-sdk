@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309EditProductRequestBodySizeChartTemplate type satisfies the MappedNullable interface at compile time
+// checks if the Product202309EditProductRequestBodySizeChartTemplate type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309EditProductRequestBodySizeChartTemplate{}
 
 // Product202309EditProductRequestBodySizeChartTemplate struct for Product202309EditProductRequestBodySizeChartTemplate
 type Product202309EditProductRequestBodySizeChartTemplate struct {
-    // The size chart template ID.
-    Id *string `json:"id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The size chart template ID.
+	Id                   *string `json:"id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309EditProductRequestBodySizeChartTemplate Product202309EditProductRequestBodySizeChartTemplate
@@ -32,89 +32,89 @@ type _Product202309EditProductRequestBodySizeChartTemplate Product202309EditProd
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309EditProductRequestBodySizeChartTemplate() *Product202309EditProductRequestBodySizeChartTemplate {
-    this := Product202309EditProductRequestBodySizeChartTemplate{}
-    return &this
+	this := Product202309EditProductRequestBodySizeChartTemplate{}
+	return &this
 }
 
 // NewProduct202309EditProductRequestBodySizeChartTemplateWithDefaults instantiates a new Product202309EditProductRequestBodySizeChartTemplate object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309EditProductRequestBodySizeChartTemplateWithDefaults() *Product202309EditProductRequestBodySizeChartTemplate {
-    this := Product202309EditProductRequestBodySizeChartTemplate{}
-    return &this
+	this := Product202309EditProductRequestBodySizeChartTemplate{}
+	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Product202309EditProductRequestBodySizeChartTemplate) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309EditProductRequestBodySizeChartTemplate) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Product202309EditProductRequestBodySizeChartTemplate) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Product202309EditProductRequestBodySizeChartTemplate) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 func (o Product202309EditProductRequestBodySizeChartTemplate) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309EditProductRequestBodySizeChartTemplate) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309EditProductRequestBodySizeChartTemplate) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309EditProductRequestBodySizeChartTemplate := _Product202309EditProductRequestBodySizeChartTemplate{}
+	varProduct202309EditProductRequestBodySizeChartTemplate := _Product202309EditProductRequestBodySizeChartTemplate{}
 
-    err = json.Unmarshal(data, &varProduct202309EditProductRequestBodySizeChartTemplate)
+	err = json.Unmarshal(data, &varProduct202309EditProductRequestBodySizeChartTemplate)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309EditProductRequestBodySizeChartTemplate(varProduct202309EditProductRequestBodySizeChartTemplate)
+	*o = Product202309EditProductRequestBodySizeChartTemplate(varProduct202309EditProductRequestBodySizeChartTemplate)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309EditProductRequestBodySizeChartTemplate struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309EditProductRequestBodySizeChartTemplate) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

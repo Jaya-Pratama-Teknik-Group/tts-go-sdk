@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetCategoryRulesResponseDataCod type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetCategoryRulesResponseDataCod type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetCategoryRulesResponseDataCod{}
 
 // Product202309GetCategoryRulesResponseDataCod struct for Product202309GetCategoryRulesResponseDataCod
 type Product202309GetCategoryRulesResponseDataCod struct {
-    // A flag to indicate whether COD is supported.  **Note**: If COD is not supported, but you set `is_cod_allowed=true` when creating or editing a product, the listing will fail.
-    IsSupported *bool `json:"is_supported,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A flag to indicate whether COD is supported.  **Note**: If COD is not supported, but you set `is_cod_allowed=true` when creating or editing a product, the listing will fail.
+	IsSupported          *bool `json:"is_supported,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetCategoryRulesResponseDataCod Product202309GetCategoryRulesResponseDataCod
@@ -32,89 +32,89 @@ type _Product202309GetCategoryRulesResponseDataCod Product202309GetCategoryRules
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetCategoryRulesResponseDataCod() *Product202309GetCategoryRulesResponseDataCod {
-    this := Product202309GetCategoryRulesResponseDataCod{}
-    return &this
+	this := Product202309GetCategoryRulesResponseDataCod{}
+	return &this
 }
 
 // NewProduct202309GetCategoryRulesResponseDataCodWithDefaults instantiates a new Product202309GetCategoryRulesResponseDataCod object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetCategoryRulesResponseDataCodWithDefaults() *Product202309GetCategoryRulesResponseDataCod {
-    this := Product202309GetCategoryRulesResponseDataCod{}
-    return &this
+	this := Product202309GetCategoryRulesResponseDataCod{}
+	return &this
 }
 
 // GetIsSupported returns the IsSupported field value if set, zero value otherwise.
 func (o *Product202309GetCategoryRulesResponseDataCod) GetIsSupported() bool {
-    if o == nil || utils.IsNil(o.IsSupported) {
-        var ret bool
-        return ret
-    }
-    return *o.IsSupported
+	if o == nil || utils.IsNil(o.IsSupported) {
+		var ret bool
+		return ret
+	}
+	return *o.IsSupported
 }
 
 // GetIsSupportedOk returns a tuple with the IsSupported field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetCategoryRulesResponseDataCod) GetIsSupportedOk() (*bool, bool) {
-    if o == nil || utils.IsNil(o.IsSupported) {
-        return nil, false
-    }
-    return o.IsSupported, true
+	if o == nil || utils.IsNil(o.IsSupported) {
+		return nil, false
+	}
+	return o.IsSupported, true
 }
 
 // HasIsSupported returns a boolean if a field has been set.
 func (o *Product202309GetCategoryRulesResponseDataCod) HasIsSupported() bool {
-    if o != nil && !utils.IsNil(o.IsSupported) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.IsSupported) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIsSupported gets a reference to the given bool and assigns it to the IsSupported field.
 func (o *Product202309GetCategoryRulesResponseDataCod) SetIsSupported(v bool) {
-    o.IsSupported = &v
+	o.IsSupported = &v
 }
 
 func (o Product202309GetCategoryRulesResponseDataCod) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetCategoryRulesResponseDataCod) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.IsSupported) {
-        toSerialize["is_supported"] = o.IsSupported
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.IsSupported) {
+		toSerialize["is_supported"] = o.IsSupported
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetCategoryRulesResponseDataCod) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetCategoryRulesResponseDataCod := _Product202309GetCategoryRulesResponseDataCod{}
+	varProduct202309GetCategoryRulesResponseDataCod := _Product202309GetCategoryRulesResponseDataCod{}
 
-    err = json.Unmarshal(data, &varProduct202309GetCategoryRulesResponseDataCod)
+	err = json.Unmarshal(data, &varProduct202309GetCategoryRulesResponseDataCod)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetCategoryRulesResponseDataCod(varProduct202309GetCategoryRulesResponseDataCod)
+	*o = Product202309GetCategoryRulesResponseDataCod(varProduct202309GetCategoryRulesResponseDataCod)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "is_supported")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "is_supported")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetCategoryRulesResponseDataCod struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309GetCategoryRulesResponseDataCod) UnmarshalJSON(src
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

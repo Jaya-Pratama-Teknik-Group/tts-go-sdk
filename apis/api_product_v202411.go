@@ -11,49 +11,48 @@ API version: 1.0.0
 package apis
 
 import (
-    "bytes"
-    "context"
-    "io"
-    "net/http"
-    "net/url"
+	"bytes"
+	"context"
+	"io"
+	"net/http"
+	"net/url"
 
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202411"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202411"
 )
-
 
 // ProductV202411APIService ProductV202411API service
 type ProductV202411APIService service
 
 type ApiProduct202411ProductsDiagnoseOptimizePostRequest struct {
-    ctx context.Context
-    ApiService *ProductV202411APIService
-    xTtsAccessToken *string
-    contentType *string
-    shopCipher *string
-    product202411DiagnoseandOptimizeProductRequestBody *product_v202411.Product202411DiagnoseandOptimizeProductRequestBody
+	ctx                                                context.Context
+	ApiService                                         *ProductV202411APIService
+	xTtsAccessToken                                    *string
+	contentType                                        *string
+	shopCipher                                         *string
+	product202411DiagnoseandOptimizeProductRequestBody *product_v202411.Product202411DiagnoseandOptimizeProductRequestBody
 }
 
-// 
 func (r ApiProduct202411ProductsDiagnoseOptimizePostRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202411ProductsDiagnoseOptimizePostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202411ProductsDiagnoseOptimizePostRequest) ContentType(contentType string) ApiProduct202411ProductsDiagnoseOptimizePostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
-// 
+
 func (r ApiProduct202411ProductsDiagnoseOptimizePostRequest) ShopCipher(shopCipher string) ApiProduct202411ProductsDiagnoseOptimizePostRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiProduct202411ProductsDiagnoseOptimizePostRequest) Product202411DiagnoseandOptimizeProductRequestBody(product202411DiagnoseandOptimizeProductRequestBody product_v202411.Product202411DiagnoseandOptimizeProductRequestBody) ApiProduct202411ProductsDiagnoseOptimizePostRequest {
-    r.product202411DiagnoseandOptimizeProductRequestBody = &product202411DiagnoseandOptimizeProductRequestBody
-    return r
+	r.product202411DiagnoseandOptimizeProductRequestBody = &product202411DiagnoseandOptimizeProductRequestBody
+	return r
 }
 func (r ApiProduct202411ProductsDiagnoseOptimizePostRequest) Execute() (*product_v202411.Product202411DiagnoseandOptimizeProductResponse, *http.Response, error) {
-    return r.ApiService.Product202411ProductsDiagnoseOptimizePostExecute(r)
+	return r.ApiService.Product202411ProductsDiagnoseOptimizePostExecute(r)
 }
 
 /*
@@ -66,7 +65,7 @@ This API enables you to diagnose both live products (status: `ACTIVATE`)  and br
 - To diagnose a **live product**, provide the `product_id` and `category_id` and leave all other product details blank.
 - To diagnose a **brand-new product** not yet listed in TikTok Shop, omit the `product_id` and provide the product details as necessary.
 - To diagnose a **product similar to an existing one**, provide the `product_id` and `category_id`, along with any new details. The diagnosis will combine the existing product's information with the new details you provide. For example, if you provide a new `title`, the diagnosis will use the new title instead of the existing one while keeping the other values from the product ID.
-**Note**: 
+**Note**:
 - To diagnose multiple live products, use the [Product Information Issue Diagnosis API](665048f380b6b302e73917d9).
 - This API focuses solely on optimizing product visibility and does not evaluate whether your product meets listing requirements. Quality issues identified by this API do not block your product from being listed. To verify listing requirements, use the [Check Product Listing API](650a0ee8f1fd3102b91c6493).
 
@@ -74,96 +73,97 @@ This API enables you to diagnose both live products (status: `ACTIVATE`)  and br
 @return ApiProduct202411ProductsDiagnoseOptimizePostRequest
 */
 func (a *ProductV202411APIService) Product202411ProductsDiagnoseOptimizePost(ctx context.Context) ApiProduct202411ProductsDiagnoseOptimizePostRequest {
-    return ApiProduct202411ProductsDiagnoseOptimizePostRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiProduct202411ProductsDiagnoseOptimizePostRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Product202411DiagnoseandOptimizeProductResponse
+//
+//	@return Product202411DiagnoseandOptimizeProductResponse
 func (a *ProductV202411APIService) Product202411ProductsDiagnoseOptimizePostExecute(r ApiProduct202411ProductsDiagnoseOptimizePostRequest) (*product_v202411.Product202411DiagnoseandOptimizeProductResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202411.Product202411DiagnoseandOptimizeProductResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202411.Product202411DiagnoseandOptimizeProductResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202411APIService.Product202411ProductsDiagnoseOptimizePost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202411APIService.Product202411ProductsDiagnoseOptimizePost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202411/products/diagnose_optimize"
+	localVarPath := localBasePath + "/product/202411/products/diagnose_optimize"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.product202411DiagnoseandOptimizeProductRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.product202411DiagnoseandOptimizeProductRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }

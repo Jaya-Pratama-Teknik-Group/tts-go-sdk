@@ -11,20 +11,20 @@ API version: 1.0.0
 package analytics_v202405
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Analytics202405GetShopProductPerformanceResponseDataPerformance type satisfies the MappedNullable interface at compile time
+// checks if the Analytics202405GetShopProductPerformanceResponseDataPerformance type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Analytics202405GetShopProductPerformanceResponseDataPerformance{}
 
 // Analytics202405GetShopProductPerformanceResponseDataPerformance struct for Analytics202405GetShopProductPerformanceResponseDataPerformance
 type Analytics202405GetShopProductPerformanceResponseDataPerformance struct {
-    // Same structure as \"intervals\" It contains data for the previous time range with the same range length and granularity of the current time range Example, if current time range (represented in start_time_ge and end_time_lt) is from 2024-04-01 to 2024-04-08) with granularity \"ALL\", the previous_intervals will contain data from 2024-03-25 to 2024-04-01 with granularity \"ALL\"
-    ComparisonIntervals []Analytics202405GetShopProductPerformanceResponseDataPerformanceComparisonIntervals `json:"comparison_intervals,omitempty"`
-    // Interval data for the requested time range. The time range of each interval is determined by the granularity.
-    Intervals []Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervals `json:"intervals,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Same structure as \"intervals\" It contains data for the previous time range with the same range length and granularity of the current time range Example, if current time range (represented in start_time_ge and end_time_lt) is from 2024-04-01 to 2024-04-08) with granularity \"ALL\", the previous_intervals will contain data from 2024-03-25 to 2024-04-01 with granularity \"ALL\"
+	ComparisonIntervals []Analytics202405GetShopProductPerformanceResponseDataPerformanceComparisonIntervals `json:"comparison_intervals,omitempty"`
+	// Interval data for the requested time range. The time range of each interval is determined by the granularity.
+	Intervals            []Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervals `json:"intervals,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Analytics202405GetShopProductPerformanceResponseDataPerformance Analytics202405GetShopProductPerformanceResponseDataPerformance
@@ -34,125 +34,125 @@ type _Analytics202405GetShopProductPerformanceResponseDataPerformance Analytics2
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAnalytics202405GetShopProductPerformanceResponseDataPerformance() *Analytics202405GetShopProductPerformanceResponseDataPerformance {
-    this := Analytics202405GetShopProductPerformanceResponseDataPerformance{}
-    return &this
+	this := Analytics202405GetShopProductPerformanceResponseDataPerformance{}
+	return &this
 }
 
 // NewAnalytics202405GetShopProductPerformanceResponseDataPerformanceWithDefaults instantiates a new Analytics202405GetShopProductPerformanceResponseDataPerformance object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAnalytics202405GetShopProductPerformanceResponseDataPerformanceWithDefaults() *Analytics202405GetShopProductPerformanceResponseDataPerformance {
-    this := Analytics202405GetShopProductPerformanceResponseDataPerformance{}
-    return &this
+	this := Analytics202405GetShopProductPerformanceResponseDataPerformance{}
+	return &this
 }
 
 // GetComparisonIntervals returns the ComparisonIntervals field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformance) GetComparisonIntervals() []Analytics202405GetShopProductPerformanceResponseDataPerformanceComparisonIntervals {
-    if o == nil || utils.IsNil(o.ComparisonIntervals) {
-        var ret []Analytics202405GetShopProductPerformanceResponseDataPerformanceComparisonIntervals
-        return ret
-    }
-    return o.ComparisonIntervals
+	if o == nil || utils.IsNil(o.ComparisonIntervals) {
+		var ret []Analytics202405GetShopProductPerformanceResponseDataPerformanceComparisonIntervals
+		return ret
+	}
+	return o.ComparisonIntervals
 }
 
 // GetComparisonIntervalsOk returns a tuple with the ComparisonIntervals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformance) GetComparisonIntervalsOk() ([]Analytics202405GetShopProductPerformanceResponseDataPerformanceComparisonIntervals, bool) {
-    if o == nil || utils.IsNil(o.ComparisonIntervals) {
-        return nil, false
-    }
-    return o.ComparisonIntervals, true
+	if o == nil || utils.IsNil(o.ComparisonIntervals) {
+		return nil, false
+	}
+	return o.ComparisonIntervals, true
 }
 
 // HasComparisonIntervals returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformance) HasComparisonIntervals() bool {
-    if o != nil && !utils.IsNil(o.ComparisonIntervals) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ComparisonIntervals) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetComparisonIntervals gets a reference to the given []Analytics202405GetShopProductPerformanceResponseDataPerformanceComparisonIntervals and assigns it to the ComparisonIntervals field.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformance) SetComparisonIntervals(v []Analytics202405GetShopProductPerformanceResponseDataPerformanceComparisonIntervals) {
-    o.ComparisonIntervals = v
+	o.ComparisonIntervals = v
 }
 
 // GetIntervals returns the Intervals field value if set, zero value otherwise.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformance) GetIntervals() []Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervals {
-    if o == nil || utils.IsNil(o.Intervals) {
-        var ret []Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervals
-        return ret
-    }
-    return o.Intervals
+	if o == nil || utils.IsNil(o.Intervals) {
+		var ret []Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervals
+		return ret
+	}
+	return o.Intervals
 }
 
 // GetIntervalsOk returns a tuple with the Intervals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformance) GetIntervalsOk() ([]Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervals, bool) {
-    if o == nil || utils.IsNil(o.Intervals) {
-        return nil, false
-    }
-    return o.Intervals, true
+	if o == nil || utils.IsNil(o.Intervals) {
+		return nil, false
+	}
+	return o.Intervals, true
 }
 
 // HasIntervals returns a boolean if a field has been set.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformance) HasIntervals() bool {
-    if o != nil && !utils.IsNil(o.Intervals) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Intervals) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetIntervals gets a reference to the given []Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervals and assigns it to the Intervals field.
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformance) SetIntervals(v []Analytics202405GetShopProductPerformanceResponseDataPerformanceIntervals) {
-    o.Intervals = v
+	o.Intervals = v
 }
 
 func (o Analytics202405GetShopProductPerformanceResponseDataPerformance) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Analytics202405GetShopProductPerformanceResponseDataPerformance) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ComparisonIntervals) {
-        toSerialize["comparison_intervals"] = o.ComparisonIntervals
-    }
-    if !utils.IsNil(o.Intervals) {
-        toSerialize["intervals"] = o.Intervals
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ComparisonIntervals) {
+		toSerialize["comparison_intervals"] = o.ComparisonIntervals
+	}
+	if !utils.IsNil(o.Intervals) {
+		toSerialize["intervals"] = o.Intervals
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Analytics202405GetShopProductPerformanceResponseDataPerformance) UnmarshalJSON(data []byte) (err error) {
-    varAnalytics202405GetShopProductPerformanceResponseDataPerformance := _Analytics202405GetShopProductPerformanceResponseDataPerformance{}
+	varAnalytics202405GetShopProductPerformanceResponseDataPerformance := _Analytics202405GetShopProductPerformanceResponseDataPerformance{}
 
-    err = json.Unmarshal(data, &varAnalytics202405GetShopProductPerformanceResponseDataPerformance)
+	err = json.Unmarshal(data, &varAnalytics202405GetShopProductPerformanceResponseDataPerformance)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Analytics202405GetShopProductPerformanceResponseDataPerformance(varAnalytics202405GetShopProductPerformanceResponseDataPerformance)
+	*o = Analytics202405GetShopProductPerformanceResponseDataPerformance(varAnalytics202405GetShopProductPerformanceResponseDataPerformance)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "comparison_intervals")
-        delete(additionalProperties, "intervals")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "comparison_intervals")
+		delete(additionalProperties, "intervals")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAnalytics202405GetShopProductPerformanceResponseDataPerformance struct {
@@ -190,5 +190,3 @@ func (v *NullableAnalytics202405GetShopProductPerformanceResponseDataPerformance
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

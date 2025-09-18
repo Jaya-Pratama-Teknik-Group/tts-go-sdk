@@ -11,22 +11,22 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309RejectCancellationRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309RejectCancellationRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309RejectCancellationRequestBody{}
 
 // ReturnRefund202309RejectCancellationRequestBody struct for ReturnRefund202309RejectCancellationRequestBody
 type ReturnRefund202309RejectCancellationRequestBody struct {
-    // Seller's comment on rejection decision. This is where a seller will provide more information about rejecting the request. 
-    Comment *string `json:"comment,omitempty"`
-    // List of images provided by the seller to support seller's decision to reject the order cancellation request. 
-    Images []ReturnRefund202309RejectCancellationRequestBodyImages `json:"images,omitempty"`
-    // Seller's reason to reject buyer's order cancellation request.   Please visit our [cancel reason appendix ](650b28280fcef602bf435096) to see a list of possible rejection reasons.
-    RejectReason *string `json:"reject_reason,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Seller's comment on rejection decision. This is where a seller will provide more information about rejecting the request.
+	Comment *string `json:"comment,omitempty"`
+	// List of images provided by the seller to support seller's decision to reject the order cancellation request.
+	Images []ReturnRefund202309RejectCancellationRequestBodyImages `json:"images,omitempty"`
+	// Seller's reason to reject buyer's order cancellation request.   Please visit our [cancel reason appendix ](650b28280fcef602bf435096) to see a list of possible rejection reasons.
+	RejectReason         *string `json:"reject_reason,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309RejectCancellationRequestBody ReturnRefund202309RejectCancellationRequestBody
@@ -36,161 +36,161 @@ type _ReturnRefund202309RejectCancellationRequestBody ReturnRefund202309RejectCa
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309RejectCancellationRequestBody() *ReturnRefund202309RejectCancellationRequestBody {
-    this := ReturnRefund202309RejectCancellationRequestBody{}
-    return &this
+	this := ReturnRefund202309RejectCancellationRequestBody{}
+	return &this
 }
 
 // NewReturnRefund202309RejectCancellationRequestBodyWithDefaults instantiates a new ReturnRefund202309RejectCancellationRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309RejectCancellationRequestBodyWithDefaults() *ReturnRefund202309RejectCancellationRequestBody {
-    this := ReturnRefund202309RejectCancellationRequestBody{}
-    return &this
+	this := ReturnRefund202309RejectCancellationRequestBody{}
+	return &this
 }
 
 // GetComment returns the Comment field value if set, zero value otherwise.
 func (o *ReturnRefund202309RejectCancellationRequestBody) GetComment() string {
-    if o == nil || utils.IsNil(o.Comment) {
-        var ret string
-        return ret
-    }
-    return *o.Comment
+	if o == nil || utils.IsNil(o.Comment) {
+		var ret string
+		return ret
+	}
+	return *o.Comment
 }
 
 // GetCommentOk returns a tuple with the Comment field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBody) GetCommentOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Comment) {
-        return nil, false
-    }
-    return o.Comment, true
+	if o == nil || utils.IsNil(o.Comment) {
+		return nil, false
+	}
+	return o.Comment, true
 }
 
 // HasComment returns a boolean if a field has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBody) HasComment() bool {
-    if o != nil && !utils.IsNil(o.Comment) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Comment) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetComment gets a reference to the given string and assigns it to the Comment field.
 func (o *ReturnRefund202309RejectCancellationRequestBody) SetComment(v string) {
-    o.Comment = &v
+	o.Comment = &v
 }
 
 // GetImages returns the Images field value if set, zero value otherwise.
 func (o *ReturnRefund202309RejectCancellationRequestBody) GetImages() []ReturnRefund202309RejectCancellationRequestBodyImages {
-    if o == nil || utils.IsNil(o.Images) {
-        var ret []ReturnRefund202309RejectCancellationRequestBodyImages
-        return ret
-    }
-    return o.Images
+	if o == nil || utils.IsNil(o.Images) {
+		var ret []ReturnRefund202309RejectCancellationRequestBodyImages
+		return ret
+	}
+	return o.Images
 }
 
 // GetImagesOk returns a tuple with the Images field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBody) GetImagesOk() ([]ReturnRefund202309RejectCancellationRequestBodyImages, bool) {
-    if o == nil || utils.IsNil(o.Images) {
-        return nil, false
-    }
-    return o.Images, true
+	if o == nil || utils.IsNil(o.Images) {
+		return nil, false
+	}
+	return o.Images, true
 }
 
 // HasImages returns a boolean if a field has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBody) HasImages() bool {
-    if o != nil && !utils.IsNil(o.Images) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Images) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImages gets a reference to the given []ReturnRefund202309RejectCancellationRequestBodyImages and assigns it to the Images field.
 func (o *ReturnRefund202309RejectCancellationRequestBody) SetImages(v []ReturnRefund202309RejectCancellationRequestBodyImages) {
-    o.Images = v
+	o.Images = v
 }
 
 // GetRejectReason returns the RejectReason field value if set, zero value otherwise.
 func (o *ReturnRefund202309RejectCancellationRequestBody) GetRejectReason() string {
-    if o == nil || utils.IsNil(o.RejectReason) {
-        var ret string
-        return ret
-    }
-    return *o.RejectReason
+	if o == nil || utils.IsNil(o.RejectReason) {
+		var ret string
+		return ret
+	}
+	return *o.RejectReason
 }
 
 // GetRejectReasonOk returns a tuple with the RejectReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBody) GetRejectReasonOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.RejectReason) {
-        return nil, false
-    }
-    return o.RejectReason, true
+	if o == nil || utils.IsNil(o.RejectReason) {
+		return nil, false
+	}
+	return o.RejectReason, true
 }
 
 // HasRejectReason returns a boolean if a field has been set.
 func (o *ReturnRefund202309RejectCancellationRequestBody) HasRejectReason() bool {
-    if o != nil && !utils.IsNil(o.RejectReason) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RejectReason) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRejectReason gets a reference to the given string and assigns it to the RejectReason field.
 func (o *ReturnRefund202309RejectCancellationRequestBody) SetRejectReason(v string) {
-    o.RejectReason = &v
+	o.RejectReason = &v
 }
 
 func (o ReturnRefund202309RejectCancellationRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309RejectCancellationRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Comment) {
-        toSerialize["comment"] = o.Comment
-    }
-    if !utils.IsNil(o.Images) {
-        toSerialize["images"] = o.Images
-    }
-    if !utils.IsNil(o.RejectReason) {
-        toSerialize["reject_reason"] = o.RejectReason
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Comment) {
+		toSerialize["comment"] = o.Comment
+	}
+	if !utils.IsNil(o.Images) {
+		toSerialize["images"] = o.Images
+	}
+	if !utils.IsNil(o.RejectReason) {
+		toSerialize["reject_reason"] = o.RejectReason
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309RejectCancellationRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309RejectCancellationRequestBody := _ReturnRefund202309RejectCancellationRequestBody{}
+	varReturnRefund202309RejectCancellationRequestBody := _ReturnRefund202309RejectCancellationRequestBody{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309RejectCancellationRequestBody)
+	err = json.Unmarshal(data, &varReturnRefund202309RejectCancellationRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309RejectCancellationRequestBody(varReturnRefund202309RejectCancellationRequestBody)
+	*o = ReturnRefund202309RejectCancellationRequestBody(varReturnRefund202309RejectCancellationRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "comment")
-        delete(additionalProperties, "images")
-        delete(additionalProperties, "reject_reason")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "comment")
+		delete(additionalProperties, "images")
+		delete(additionalProperties, "reject_reason")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309RejectCancellationRequestBody struct {
@@ -228,5 +228,3 @@ func (v *NullableReturnRefund202309RejectCancellationRequestBody) UnmarshalJSON(
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,18 +11,18 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309GetRejectReasonsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309GetRejectReasonsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309GetRejectReasonsResponseData{}
 
 // ReturnRefund202309GetRejectReasonsResponseData struct for ReturnRefund202309GetRejectReasonsResponseData
 type ReturnRefund202309GetRejectReasonsResponseData struct {
-    // The list of rejection reasons the seller has provided.
-    Reasons []ReturnRefund202309GetRejectReasonsResponseDataReasons `json:"reasons,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of rejection reasons the seller has provided.
+	Reasons              []ReturnRefund202309GetRejectReasonsResponseDataReasons `json:"reasons,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309GetRejectReasonsResponseData ReturnRefund202309GetRejectReasonsResponseData
@@ -32,89 +32,89 @@ type _ReturnRefund202309GetRejectReasonsResponseData ReturnRefund202309GetReject
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309GetRejectReasonsResponseData() *ReturnRefund202309GetRejectReasonsResponseData {
-    this := ReturnRefund202309GetRejectReasonsResponseData{}
-    return &this
+	this := ReturnRefund202309GetRejectReasonsResponseData{}
+	return &this
 }
 
 // NewReturnRefund202309GetRejectReasonsResponseDataWithDefaults instantiates a new ReturnRefund202309GetRejectReasonsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309GetRejectReasonsResponseDataWithDefaults() *ReturnRefund202309GetRejectReasonsResponseData {
-    this := ReturnRefund202309GetRejectReasonsResponseData{}
-    return &this
+	this := ReturnRefund202309GetRejectReasonsResponseData{}
+	return &this
 }
 
 // GetReasons returns the Reasons field value if set, zero value otherwise.
 func (o *ReturnRefund202309GetRejectReasonsResponseData) GetReasons() []ReturnRefund202309GetRejectReasonsResponseDataReasons {
-    if o == nil || utils.IsNil(o.Reasons) {
-        var ret []ReturnRefund202309GetRejectReasonsResponseDataReasons
-        return ret
-    }
-    return o.Reasons
+	if o == nil || utils.IsNil(o.Reasons) {
+		var ret []ReturnRefund202309GetRejectReasonsResponseDataReasons
+		return ret
+	}
+	return o.Reasons
 }
 
 // GetReasonsOk returns a tuple with the Reasons field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309GetRejectReasonsResponseData) GetReasonsOk() ([]ReturnRefund202309GetRejectReasonsResponseDataReasons, bool) {
-    if o == nil || utils.IsNil(o.Reasons) {
-        return nil, false
-    }
-    return o.Reasons, true
+	if o == nil || utils.IsNil(o.Reasons) {
+		return nil, false
+	}
+	return o.Reasons, true
 }
 
 // HasReasons returns a boolean if a field has been set.
 func (o *ReturnRefund202309GetRejectReasonsResponseData) HasReasons() bool {
-    if o != nil && !utils.IsNil(o.Reasons) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Reasons) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReasons gets a reference to the given []ReturnRefund202309GetRejectReasonsResponseDataReasons and assigns it to the Reasons field.
 func (o *ReturnRefund202309GetRejectReasonsResponseData) SetReasons(v []ReturnRefund202309GetRejectReasonsResponseDataReasons) {
-    o.Reasons = v
+	o.Reasons = v
 }
 
 func (o ReturnRefund202309GetRejectReasonsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309GetRejectReasonsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Reasons) {
-        toSerialize["reasons"] = o.Reasons
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Reasons) {
+		toSerialize["reasons"] = o.Reasons
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309GetRejectReasonsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309GetRejectReasonsResponseData := _ReturnRefund202309GetRejectReasonsResponseData{}
+	varReturnRefund202309GetRejectReasonsResponseData := _ReturnRefund202309GetRejectReasonsResponseData{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309GetRejectReasonsResponseData)
+	err = json.Unmarshal(data, &varReturnRefund202309GetRejectReasonsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309GetRejectReasonsResponseData(varReturnRefund202309GetRejectReasonsResponseData)
+	*o = ReturnRefund202309GetRejectReasonsResponseData(varReturnRefund202309GetRejectReasonsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "reasons")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "reasons")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309GetRejectReasonsResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableReturnRefund202309GetRejectReasonsResponseData) UnmarshalJSON(s
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

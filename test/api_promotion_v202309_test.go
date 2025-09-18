@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_PromotionV202309APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_PromotionV202309APIService(t *testing.T) {
 
 	t.Run("Test PromotionV202309APIService Promotion202309ActivitiesActivityIdDeactivatePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var activityId string
 
@@ -38,7 +38,7 @@ func Test_sdk_golang_PromotionV202309APIService(t *testing.T) {
 
 	t.Run("Test PromotionV202309APIService Promotion202309ActivitiesActivityIdGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var activityId string
 
@@ -52,7 +52,7 @@ func Test_sdk_golang_PromotionV202309APIService(t *testing.T) {
 
 	t.Run("Test PromotionV202309APIService Promotion202309ActivitiesActivityIdProductsDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var activityId string
 
@@ -66,7 +66,7 @@ func Test_sdk_golang_PromotionV202309APIService(t *testing.T) {
 
 	t.Run("Test PromotionV202309APIService Promotion202309ActivitiesActivityIdProductsPut", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var activityId string
 
@@ -80,7 +80,7 @@ func Test_sdk_golang_PromotionV202309APIService(t *testing.T) {
 
 	t.Run("Test PromotionV202309APIService Promotion202309ActivitiesActivityIdPut", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var activityId string
 
@@ -94,7 +94,7 @@ func Test_sdk_golang_PromotionV202309APIService(t *testing.T) {
 
 	t.Run("Test PromotionV202309APIService Promotion202309ActivitiesPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PromotionV202309API.Promotion202309ActivitiesPost(context.Background()).Execute()
 
@@ -106,7 +106,7 @@ func Test_sdk_golang_PromotionV202309APIService(t *testing.T) {
 
 	t.Run("Test PromotionV202309APIService Promotion202309ActivitiesSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PromotionV202309API.Promotion202309ActivitiesSearchPost(context.Background()).Execute()
 

@@ -11,24 +11,24 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings type satisfies the MappedNullable interface at compile time
+// checks if the Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings{}
 
 // Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings struct for Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings
 type Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings struct {
-    // The global sales attribute ID.
-    GlobalAttributeId *string `json:"global_attribute_id,omitempty"`
-    // The global sales attribute value ID.
-    GlobalValueId *string `json:"global_value_id,omitempty"`
-    // The local sales attribute ID.
-    LocalAttributeId *string `json:"local_attribute_id,omitempty"`
-    // The local sales attribute value ID.
-    LocalValueId *string `json:"local_value_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The global sales attribute ID.
+	GlobalAttributeId *string `json:"global_attribute_id,omitempty"`
+	// The global sales attribute value ID.
+	GlobalValueId *string `json:"global_value_id,omitempty"`
+	// The local sales attribute ID.
+	LocalAttributeId *string `json:"local_attribute_id,omitempty"`
+	// The local sales attribute value ID.
+	LocalValueId         *string `json:"local_value_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings
@@ -38,197 +38,197 @@ type _Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSale
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings() *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings {
-    this := Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings{}
-    return &this
+	this := Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings{}
+	return &this
 }
 
 // NewProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappingsWithDefaults instantiates a new Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappingsWithDefaults() *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings {
-    this := Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings{}
-    return &this
+	this := Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings{}
+	return &this
 }
 
 // GetGlobalAttributeId returns the GlobalAttributeId field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) GetGlobalAttributeId() string {
-    if o == nil || utils.IsNil(o.GlobalAttributeId) {
-        var ret string
-        return ret
-    }
-    return *o.GlobalAttributeId
+	if o == nil || utils.IsNil(o.GlobalAttributeId) {
+		var ret string
+		return ret
+	}
+	return *o.GlobalAttributeId
 }
 
 // GetGlobalAttributeIdOk returns a tuple with the GlobalAttributeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) GetGlobalAttributeIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.GlobalAttributeId) {
-        return nil, false
-    }
-    return o.GlobalAttributeId, true
+	if o == nil || utils.IsNil(o.GlobalAttributeId) {
+		return nil, false
+	}
+	return o.GlobalAttributeId, true
 }
 
 // HasGlobalAttributeId returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) HasGlobalAttributeId() bool {
-    if o != nil && !utils.IsNil(o.GlobalAttributeId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.GlobalAttributeId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGlobalAttributeId gets a reference to the given string and assigns it to the GlobalAttributeId field.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) SetGlobalAttributeId(v string) {
-    o.GlobalAttributeId = &v
+	o.GlobalAttributeId = &v
 }
 
 // GetGlobalValueId returns the GlobalValueId field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) GetGlobalValueId() string {
-    if o == nil || utils.IsNil(o.GlobalValueId) {
-        var ret string
-        return ret
-    }
-    return *o.GlobalValueId
+	if o == nil || utils.IsNil(o.GlobalValueId) {
+		var ret string
+		return ret
+	}
+	return *o.GlobalValueId
 }
 
 // GetGlobalValueIdOk returns a tuple with the GlobalValueId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) GetGlobalValueIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.GlobalValueId) {
-        return nil, false
-    }
-    return o.GlobalValueId, true
+	if o == nil || utils.IsNil(o.GlobalValueId) {
+		return nil, false
+	}
+	return o.GlobalValueId, true
 }
 
 // HasGlobalValueId returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) HasGlobalValueId() bool {
-    if o != nil && !utils.IsNil(o.GlobalValueId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.GlobalValueId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGlobalValueId gets a reference to the given string and assigns it to the GlobalValueId field.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) SetGlobalValueId(v string) {
-    o.GlobalValueId = &v
+	o.GlobalValueId = &v
 }
 
 // GetLocalAttributeId returns the LocalAttributeId field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) GetLocalAttributeId() string {
-    if o == nil || utils.IsNil(o.LocalAttributeId) {
-        var ret string
-        return ret
-    }
-    return *o.LocalAttributeId
+	if o == nil || utils.IsNil(o.LocalAttributeId) {
+		var ret string
+		return ret
+	}
+	return *o.LocalAttributeId
 }
 
 // GetLocalAttributeIdOk returns a tuple with the LocalAttributeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) GetLocalAttributeIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.LocalAttributeId) {
-        return nil, false
-    }
-    return o.LocalAttributeId, true
+	if o == nil || utils.IsNil(o.LocalAttributeId) {
+		return nil, false
+	}
+	return o.LocalAttributeId, true
 }
 
 // HasLocalAttributeId returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) HasLocalAttributeId() bool {
-    if o != nil && !utils.IsNil(o.LocalAttributeId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LocalAttributeId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocalAttributeId gets a reference to the given string and assigns it to the LocalAttributeId field.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) SetLocalAttributeId(v string) {
-    o.LocalAttributeId = &v
+	o.LocalAttributeId = &v
 }
 
 // GetLocalValueId returns the LocalValueId field value if set, zero value otherwise.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) GetLocalValueId() string {
-    if o == nil || utils.IsNil(o.LocalValueId) {
-        var ret string
-        return ret
-    }
-    return *o.LocalValueId
+	if o == nil || utils.IsNil(o.LocalValueId) {
+		var ret string
+		return ret
+	}
+	return *o.LocalValueId
 }
 
 // GetLocalValueIdOk returns a tuple with the LocalValueId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) GetLocalValueIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.LocalValueId) {
-        return nil, false
-    }
-    return o.LocalValueId, true
+	if o == nil || utils.IsNil(o.LocalValueId) {
+		return nil, false
+	}
+	return o.LocalValueId, true
 }
 
 // HasLocalValueId returns a boolean if a field has been set.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) HasLocalValueId() bool {
-    if o != nil && !utils.IsNil(o.LocalValueId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.LocalValueId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLocalValueId gets a reference to the given string and assigns it to the LocalValueId field.
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) SetLocalValueId(v string) {
-    o.LocalValueId = &v
+	o.LocalValueId = &v
 }
 
 func (o Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.GlobalAttributeId) {
-        toSerialize["global_attribute_id"] = o.GlobalAttributeId
-    }
-    if !utils.IsNil(o.GlobalValueId) {
-        toSerialize["global_value_id"] = o.GlobalValueId
-    }
-    if !utils.IsNil(o.LocalAttributeId) {
-        toSerialize["local_attribute_id"] = o.LocalAttributeId
-    }
-    if !utils.IsNil(o.LocalValueId) {
-        toSerialize["local_value_id"] = o.LocalValueId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.GlobalAttributeId) {
+		toSerialize["global_attribute_id"] = o.GlobalAttributeId
+	}
+	if !utils.IsNil(o.GlobalValueId) {
+		toSerialize["global_value_id"] = o.GlobalValueId
+	}
+	if !utils.IsNil(o.LocalAttributeId) {
+		toSerialize["local_attribute_id"] = o.LocalAttributeId
+	}
+	if !utils.IsNil(o.LocalValueId) {
+		toSerialize["local_value_id"] = o.LocalValueId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings := _Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings{}
+	varProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings := _Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings{}
 
-    err = json.Unmarshal(data, &varProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings)
+	err = json.Unmarshal(data, &varProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings(varProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings)
+	*o = Product202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings(varProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "global_attribute_id")
-        delete(additionalProperties, "global_value_id")
-        delete(additionalProperties, "local_attribute_id")
-        delete(additionalProperties, "local_value_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "global_attribute_id")
+		delete(additionalProperties, "global_value_id")
+		delete(additionalProperties, "local_attribute_id")
+		delete(additionalProperties, "local_value_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309GetProductResponseDataGlobalProductAssociationSkuMappingsSalesAttributeMappings struct {
@@ -266,5 +266,3 @@ func (v *NullableProduct202309GetProductResponseDataGlobalProductAssociationSkuM
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

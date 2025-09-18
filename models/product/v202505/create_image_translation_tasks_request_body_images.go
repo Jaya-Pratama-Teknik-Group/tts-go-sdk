@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202505
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202505CreateImageTranslationTasksRequestBodyImages type satisfies the MappedNullable interface at compile time
+// checks if the Product202505CreateImageTranslationTasksRequestBodyImages type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202505CreateImageTranslationTasksRequestBodyImages{}
 
 // Product202505CreateImageTranslationTasksRequestBodyImages struct for Product202505CreateImageTranslationTasksRequestBodyImages
 type Product202505CreateImageTranslationTasksRequestBodyImages struct {
-    // The URI of the image, retrieved from the [Upload Product Image API](https://partner.tiktokshop.com/docv2/page/6509df95defece02be598a22)  **Recommendation**: Specify up to 5 images to avoid exceeding the task limit per call.
-    ImageUri *string `json:"image_uri,omitempty"`
-    // The target languages to translate the image into. You can specify multiple target languages for each image. Possible values: - de-DE - en-IE - es-ES - fr-FR - it-IT  **Recommendation**: Specify up to 4 languages to avoid exceeding the task limit per call.
-    TargetLanguages []string `json:"target_languages,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The URI of the image, retrieved from the [Upload Product Image API](https://partner.tiktokshop.com/docv2/page/6509df95defece02be598a22)  **Recommendation**: Specify up to 5 images to avoid exceeding the task limit per call.
+	ImageUri *string `json:"image_uri,omitempty"`
+	// The target languages to translate the image into. You can specify multiple target languages for each image. Possible values: - de-DE - en-IE - es-ES - fr-FR - it-IT  **Recommendation**: Specify up to 4 languages to avoid exceeding the task limit per call.
+	TargetLanguages      []string `json:"target_languages,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202505CreateImageTranslationTasksRequestBodyImages Product202505CreateImageTranslationTasksRequestBodyImages
@@ -34,125 +34,125 @@ type _Product202505CreateImageTranslationTasksRequestBodyImages Product202505Cre
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202505CreateImageTranslationTasksRequestBodyImages() *Product202505CreateImageTranslationTasksRequestBodyImages {
-    this := Product202505CreateImageTranslationTasksRequestBodyImages{}
-    return &this
+	this := Product202505CreateImageTranslationTasksRequestBodyImages{}
+	return &this
 }
 
 // NewProduct202505CreateImageTranslationTasksRequestBodyImagesWithDefaults instantiates a new Product202505CreateImageTranslationTasksRequestBodyImages object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202505CreateImageTranslationTasksRequestBodyImagesWithDefaults() *Product202505CreateImageTranslationTasksRequestBodyImages {
-    this := Product202505CreateImageTranslationTasksRequestBodyImages{}
-    return &this
+	this := Product202505CreateImageTranslationTasksRequestBodyImages{}
+	return &this
 }
 
 // GetImageUri returns the ImageUri field value if set, zero value otherwise.
 func (o *Product202505CreateImageTranslationTasksRequestBodyImages) GetImageUri() string {
-    if o == nil || utils.IsNil(o.ImageUri) {
-        var ret string
-        return ret
-    }
-    return *o.ImageUri
+	if o == nil || utils.IsNil(o.ImageUri) {
+		var ret string
+		return ret
+	}
+	return *o.ImageUri
 }
 
 // GetImageUriOk returns a tuple with the ImageUri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202505CreateImageTranslationTasksRequestBodyImages) GetImageUriOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ImageUri) {
-        return nil, false
-    }
-    return o.ImageUri, true
+	if o == nil || utils.IsNil(o.ImageUri) {
+		return nil, false
+	}
+	return o.ImageUri, true
 }
 
 // HasImageUri returns a boolean if a field has been set.
 func (o *Product202505CreateImageTranslationTasksRequestBodyImages) HasImageUri() bool {
-    if o != nil && !utils.IsNil(o.ImageUri) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ImageUri) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetImageUri gets a reference to the given string and assigns it to the ImageUri field.
 func (o *Product202505CreateImageTranslationTasksRequestBodyImages) SetImageUri(v string) {
-    o.ImageUri = &v
+	o.ImageUri = &v
 }
 
 // GetTargetLanguages returns the TargetLanguages field value if set, zero value otherwise.
 func (o *Product202505CreateImageTranslationTasksRequestBodyImages) GetTargetLanguages() []string {
-    if o == nil || utils.IsNil(o.TargetLanguages) {
-        var ret []string
-        return ret
-    }
-    return o.TargetLanguages
+	if o == nil || utils.IsNil(o.TargetLanguages) {
+		var ret []string
+		return ret
+	}
+	return o.TargetLanguages
 }
 
 // GetTargetLanguagesOk returns a tuple with the TargetLanguages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202505CreateImageTranslationTasksRequestBodyImages) GetTargetLanguagesOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.TargetLanguages) {
-        return nil, false
-    }
-    return o.TargetLanguages, true
+	if o == nil || utils.IsNil(o.TargetLanguages) {
+		return nil, false
+	}
+	return o.TargetLanguages, true
 }
 
 // HasTargetLanguages returns a boolean if a field has been set.
 func (o *Product202505CreateImageTranslationTasksRequestBodyImages) HasTargetLanguages() bool {
-    if o != nil && !utils.IsNil(o.TargetLanguages) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TargetLanguages) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTargetLanguages gets a reference to the given []string and assigns it to the TargetLanguages field.
 func (o *Product202505CreateImageTranslationTasksRequestBodyImages) SetTargetLanguages(v []string) {
-    o.TargetLanguages = v
+	o.TargetLanguages = v
 }
 
 func (o Product202505CreateImageTranslationTasksRequestBodyImages) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202505CreateImageTranslationTasksRequestBodyImages) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ImageUri) {
-        toSerialize["image_uri"] = o.ImageUri
-    }
-    if !utils.IsNil(o.TargetLanguages) {
-        toSerialize["target_languages"] = o.TargetLanguages
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ImageUri) {
+		toSerialize["image_uri"] = o.ImageUri
+	}
+	if !utils.IsNil(o.TargetLanguages) {
+		toSerialize["target_languages"] = o.TargetLanguages
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202505CreateImageTranslationTasksRequestBodyImages) UnmarshalJSON(data []byte) (err error) {
-    varProduct202505CreateImageTranslationTasksRequestBodyImages := _Product202505CreateImageTranslationTasksRequestBodyImages{}
+	varProduct202505CreateImageTranslationTasksRequestBodyImages := _Product202505CreateImageTranslationTasksRequestBodyImages{}
 
-    err = json.Unmarshal(data, &varProduct202505CreateImageTranslationTasksRequestBodyImages)
+	err = json.Unmarshal(data, &varProduct202505CreateImageTranslationTasksRequestBodyImages)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202505CreateImageTranslationTasksRequestBodyImages(varProduct202505CreateImageTranslationTasksRequestBodyImages)
+	*o = Product202505CreateImageTranslationTasksRequestBodyImages(varProduct202505CreateImageTranslationTasksRequestBodyImages)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "image_uri")
-        delete(additionalProperties, "target_languages")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "image_uri")
+		delete(additionalProperties, "target_languages")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202505CreateImageTranslationTasksRequestBodyImages struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202505CreateImageTranslationTasksRequestBodyImages) Unma
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,46 +11,45 @@ API version: 1.0.0
 package apis
 
 import (
-    "bytes"
-    "context"
-    "io"
-    "net/http"
-    "net/url"
-    "strings"
+	"bytes"
+	"context"
+	"io"
+	"net/http"
+	"net/url"
+	"strings"
 
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/logistics/v202309"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/logistics/v202309"
 )
-
 
 // LogisticsV202309APIService LogisticsV202309API service
 type LogisticsV202309APIService service
 
 type ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest struct {
-    ctx context.Context
-    ApiService *LogisticsV202309APIService
-    deliveryOptionId string
-    xTtsAccessToken *string
-    contentType *string
-    shopCipher *string
+	ctx              context.Context
+	ApiService       *LogisticsV202309APIService
+	deliveryOptionId string
+	xTtsAccessToken  *string
+	contentType      *string
+	shopCipher       *string
 }
 
-// 
 func (r ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest) XTtsAccessToken(xTtsAccessToken string) ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest) ContentType(contentType string) ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
-// 
+
 func (r ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest) ShopCipher(shopCipher string) ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest) Execute() (*logistics_v202309.Logistics202309GetShippingProvidersResponse, *http.Response, error) {
-    return r.ApiService.Logistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetExecute(r)
+	return r.ApiService.Logistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetExecute(r)
 }
 
 /*
@@ -62,119 +61,120 @@ This API is used to obtain the shipping provider corresponding to the specified 
 @return ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest
 */
 func (a *LogisticsV202309APIService) Logistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGet(ctx context.Context, deliveryOptionId string) ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest {
-    return ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest{
-        ApiService: a,
-        ctx: ctx,
-        deliveryOptionId: deliveryOptionId,
-    }
+	return ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest{
+		ApiService:       a,
+		ctx:              ctx,
+		deliveryOptionId: deliveryOptionId,
+	}
 }
 
 // Execute executes the request
-//  @return Logistics202309GetShippingProvidersResponse
+//
+//	@return Logistics202309GetShippingProvidersResponse
 func (a *LogisticsV202309APIService) Logistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetExecute(r ApiLogistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGetRequest) (*logistics_v202309.Logistics202309GetShippingProvidersResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodGet
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *logistics_v202309.Logistics202309GetShippingProvidersResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *logistics_v202309.Logistics202309GetShippingProvidersResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LogisticsV202309APIService.Logistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGet")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LogisticsV202309APIService.Logistics202309DeliveryOptionsDeliveryOptionIdShippingProvidersGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/logistics/202309/delivery_options/{delivery_option_id}/shipping_providers"
-    localVarPath = strings.Replace(localVarPath, "{"+"delivery_option_id"+"}", url.PathEscape(parameterValueToString(r.deliveryOptionId, "deliveryOptionId")), -1)
+	localVarPath := localBasePath + "/logistics/202309/delivery_options/{delivery_option_id}/shipping_providers"
+	localVarPath = strings.Replace(localVarPath, "{"+"delivery_option_id"+"}", url.PathEscape(parameterValueToString(r.deliveryOptionId, "deliveryOptionId")), -1)
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiLogistics202309GlobalWarehousesGetRequest struct {
-    ctx context.Context
-    ApiService *LogisticsV202309APIService
-    xTtsAccessToken *string
-    contentType *string
+	ctx             context.Context
+	ApiService      *LogisticsV202309APIService
+	xTtsAccessToken *string
+	contentType     *string
 }
 
-// 
 func (r ApiLogistics202309GlobalWarehousesGetRequest) XTtsAccessToken(xTtsAccessToken string) ApiLogistics202309GlobalWarehousesGetRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiLogistics202309GlobalWarehousesGetRequest) ContentType(contentType string) ApiLogistics202309GlobalWarehousesGetRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
 func (r ApiLogistics202309GlobalWarehousesGetRequest) Execute() (*logistics_v202309.Logistics202309GetGlobalSellerWarehouseResponse, *http.Response, error) {
-    return r.ApiService.Logistics202309GlobalWarehousesGetExecute(r)
+	return r.ApiService.Logistics202309GlobalWarehousesGetExecute(r)
 }
 
 /*
@@ -185,120 +185,121 @@ This API retrieves all global warehouse information associated with the seller. 
 @return ApiLogistics202309GlobalWarehousesGetRequest
 */
 func (a *LogisticsV202309APIService) Logistics202309GlobalWarehousesGet(ctx context.Context) ApiLogistics202309GlobalWarehousesGetRequest {
-    return ApiLogistics202309GlobalWarehousesGetRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiLogistics202309GlobalWarehousesGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Logistics202309GetGlobalSellerWarehouseResponse
+//
+//	@return Logistics202309GetGlobalSellerWarehouseResponse
 func (a *LogisticsV202309APIService) Logistics202309GlobalWarehousesGetExecute(r ApiLogistics202309GlobalWarehousesGetRequest) (*logistics_v202309.Logistics202309GetGlobalSellerWarehouseResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodGet
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *logistics_v202309.Logistics202309GetGlobalSellerWarehouseResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *logistics_v202309.Logistics202309GetGlobalSellerWarehouseResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LogisticsV202309APIService.Logistics202309GlobalWarehousesGet")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LogisticsV202309APIService.Logistics202309GlobalWarehousesGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/logistics/202309/global_warehouses"
+	localVarPath := localBasePath + "/logistics/202309/global_warehouses"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiLogistics202309WarehousesGetRequest struct {
-    ctx context.Context
-    ApiService *LogisticsV202309APIService
-    xTtsAccessToken *string
-    contentType *string
-    shopCipher *string
+	ctx             context.Context
+	ApiService      *LogisticsV202309APIService
+	xTtsAccessToken *string
+	contentType     *string
+	shopCipher      *string
 }
 
-// 
 func (r ApiLogistics202309WarehousesGetRequest) XTtsAccessToken(xTtsAccessToken string) ApiLogistics202309WarehousesGetRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiLogistics202309WarehousesGetRequest) ContentType(contentType string) ApiLogistics202309WarehousesGetRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
-// 
+
 func (r ApiLogistics202309WarehousesGetRequest) ShopCipher(shopCipher string) ApiLogistics202309WarehousesGetRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiLogistics202309WarehousesGetRequest) Execute() (*logistics_v202309.Logistics202309GetWarehouseListResponse, *http.Response, error) {
-    return r.ApiService.Logistics202309WarehousesGetExecute(r)
+	return r.ApiService.Logistics202309WarehousesGetExecute(r)
 }
 
 /*
@@ -309,130 +310,132 @@ This API retrieves all warehouse information associated with the seller. Warehou
 @return ApiLogistics202309WarehousesGetRequest
 */
 func (a *LogisticsV202309APIService) Logistics202309WarehousesGet(ctx context.Context) ApiLogistics202309WarehousesGetRequest {
-    return ApiLogistics202309WarehousesGetRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiLogistics202309WarehousesGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Logistics202309GetWarehouseListResponse
+//
+//	@return Logistics202309GetWarehouseListResponse
 func (a *LogisticsV202309APIService) Logistics202309WarehousesGetExecute(r ApiLogistics202309WarehousesGetRequest) (*logistics_v202309.Logistics202309GetWarehouseListResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodGet
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *logistics_v202309.Logistics202309GetWarehouseListResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *logistics_v202309.Logistics202309GetWarehouseListResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LogisticsV202309APIService.Logistics202309WarehousesGet")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LogisticsV202309APIService.Logistics202309WarehousesGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/logistics/202309/warehouses"
+	localVarPath := localBasePath + "/logistics/202309/warehouses"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest struct {
-    ctx context.Context
-    ApiService *LogisticsV202309APIService
-    warehouseId string
-    xTtsAccessToken *string
-    contentType *string
-    scope *string
-    shopCipher *string
+	ctx             context.Context
+	ApiService      *LogisticsV202309APIService
+	warehouseId     string
+	xTtsAccessToken *string
+	contentType     *string
+	scope           *string
+	shopCipher      *string
 }
 
-// 
 func (r ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest) XTtsAccessToken(xTtsAccessToken string) ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest) ContentType(contentType string) ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
+
 // Specify the scope of delivery options to retrieve. - &#x60;WAREHOUSE&#x60;: Returns all delivery options currently active for the warehouse. By default, orders will be shipped based on these options. - &#x60;PRODUCT&#x60;: Returns the delivery options that can be assigned directly to a product. Use this if you want to enable custom delivery options for a product, overriding the default warehouse options. Only &#x60;delivery_options.id&#x60; and &#x60;delivery_options.name&#x60; will be included in the response when this is specified. Default: &#x60;WAREHOUSE&#x60;
 func (r ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest) Scope(scope string) ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest {
-    r.scope = &scope
-    return r
+	r.scope = &scope
+	return r
 }
-// 
+
 func (r ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest) ShopCipher(shopCipher string) ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest) Execute() (*logistics_v202309.Logistics202309GetWarehouseDeliveryOptionsResponse, *http.Response, error) {
-    return r.ApiService.Logistics202309WarehousesWarehouseIdDeliveryOptionsGetExecute(r)
+	return r.ApiService.Logistics202309WarehousesWarehouseIdDeliveryOptionsGetExecute(r)
 }
 
 /*
@@ -444,99 +447,100 @@ This API is used to obtain a list of delivery options available through the sell
 @return ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest
 */
 func (a *LogisticsV202309APIService) Logistics202309WarehousesWarehouseIdDeliveryOptionsGet(ctx context.Context, warehouseId string) ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest {
-    return ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest{
-        ApiService: a,
-        ctx: ctx,
-        warehouseId: warehouseId,
-    }
+	return ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest{
+		ApiService:  a,
+		ctx:         ctx,
+		warehouseId: warehouseId,
+	}
 }
 
 // Execute executes the request
-//  @return Logistics202309GetWarehouseDeliveryOptionsResponse
+//
+//	@return Logistics202309GetWarehouseDeliveryOptionsResponse
 func (a *LogisticsV202309APIService) Logistics202309WarehousesWarehouseIdDeliveryOptionsGetExecute(r ApiLogistics202309WarehousesWarehouseIdDeliveryOptionsGetRequest) (*logistics_v202309.Logistics202309GetWarehouseDeliveryOptionsResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodGet
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *logistics_v202309.Logistics202309GetWarehouseDeliveryOptionsResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *logistics_v202309.Logistics202309GetWarehouseDeliveryOptionsResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LogisticsV202309APIService.Logistics202309WarehousesWarehouseIdDeliveryOptionsGet")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LogisticsV202309APIService.Logistics202309WarehousesWarehouseIdDeliveryOptionsGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/logistics/202309/warehouses/{warehouse_id}/delivery_options"
-    localVarPath = strings.Replace(localVarPath, "{"+"warehouse_id"+"}", url.PathEscape(parameterValueToString(r.warehouseId, "warehouseId")), -1)
+	localVarPath := localBasePath + "/logistics/202309/warehouses/{warehouse_id}/delivery_options"
+	localVarPath = strings.Replace(localVarPath, "{"+"warehouse_id"+"}", url.PathEscape(parameterValueToString(r.warehouseId, "warehouseId")), -1)
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.scope != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "scope", r.scope, "")
-    }
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{}
+	if r.scope != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "scope", r.scope, "")
+	}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }

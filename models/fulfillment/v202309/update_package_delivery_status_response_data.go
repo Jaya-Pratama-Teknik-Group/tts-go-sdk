@@ -11,18 +11,18 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309UpdatePackageDeliveryStatusResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309UpdatePackageDeliveryStatusResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309UpdatePackageDeliveryStatusResponseData{}
 
 // Fulfillment202309UpdatePackageDeliveryStatusResponseData struct for Fulfillment202309UpdatePackageDeliveryStatusResponseData
 type Fulfillment202309UpdatePackageDeliveryStatusResponseData struct {
-    // Specific return information (returns multiple errors and reasons).
-    Errors []Fulfillment202309UpdatePackageDeliveryStatusResponseDataErrors `json:"errors,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Specific return information (returns multiple errors and reasons).
+	Errors               []Fulfillment202309UpdatePackageDeliveryStatusResponseDataErrors `json:"errors,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309UpdatePackageDeliveryStatusResponseData Fulfillment202309UpdatePackageDeliveryStatusResponseData
@@ -32,89 +32,89 @@ type _Fulfillment202309UpdatePackageDeliveryStatusResponseData Fulfillment202309
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309UpdatePackageDeliveryStatusResponseData() *Fulfillment202309UpdatePackageDeliveryStatusResponseData {
-    this := Fulfillment202309UpdatePackageDeliveryStatusResponseData{}
-    return &this
+	this := Fulfillment202309UpdatePackageDeliveryStatusResponseData{}
+	return &this
 }
 
 // NewFulfillment202309UpdatePackageDeliveryStatusResponseDataWithDefaults instantiates a new Fulfillment202309UpdatePackageDeliveryStatusResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309UpdatePackageDeliveryStatusResponseDataWithDefaults() *Fulfillment202309UpdatePackageDeliveryStatusResponseData {
-    this := Fulfillment202309UpdatePackageDeliveryStatusResponseData{}
-    return &this
+	this := Fulfillment202309UpdatePackageDeliveryStatusResponseData{}
+	return &this
 }
 
 // GetErrors returns the Errors field value if set, zero value otherwise.
 func (o *Fulfillment202309UpdatePackageDeliveryStatusResponseData) GetErrors() []Fulfillment202309UpdatePackageDeliveryStatusResponseDataErrors {
-    if o == nil || utils.IsNil(o.Errors) {
-        var ret []Fulfillment202309UpdatePackageDeliveryStatusResponseDataErrors
-        return ret
-    }
-    return o.Errors
+	if o == nil || utils.IsNil(o.Errors) {
+		var ret []Fulfillment202309UpdatePackageDeliveryStatusResponseDataErrors
+		return ret
+	}
+	return o.Errors
 }
 
 // GetErrorsOk returns a tuple with the Errors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309UpdatePackageDeliveryStatusResponseData) GetErrorsOk() ([]Fulfillment202309UpdatePackageDeliveryStatusResponseDataErrors, bool) {
-    if o == nil || utils.IsNil(o.Errors) {
-        return nil, false
-    }
-    return o.Errors, true
+	if o == nil || utils.IsNil(o.Errors) {
+		return nil, false
+	}
+	return o.Errors, true
 }
 
 // HasErrors returns a boolean if a field has been set.
 func (o *Fulfillment202309UpdatePackageDeliveryStatusResponseData) HasErrors() bool {
-    if o != nil && !utils.IsNil(o.Errors) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Errors) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetErrors gets a reference to the given []Fulfillment202309UpdatePackageDeliveryStatusResponseDataErrors and assigns it to the Errors field.
 func (o *Fulfillment202309UpdatePackageDeliveryStatusResponseData) SetErrors(v []Fulfillment202309UpdatePackageDeliveryStatusResponseDataErrors) {
-    o.Errors = v
+	o.Errors = v
 }
 
 func (o Fulfillment202309UpdatePackageDeliveryStatusResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309UpdatePackageDeliveryStatusResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Errors) {
-        toSerialize["errors"] = o.Errors
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Errors) {
+		toSerialize["errors"] = o.Errors
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309UpdatePackageDeliveryStatusResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309UpdatePackageDeliveryStatusResponseData := _Fulfillment202309UpdatePackageDeliveryStatusResponseData{}
+	varFulfillment202309UpdatePackageDeliveryStatusResponseData := _Fulfillment202309UpdatePackageDeliveryStatusResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202309UpdatePackageDeliveryStatusResponseData)
+	err = json.Unmarshal(data, &varFulfillment202309UpdatePackageDeliveryStatusResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309UpdatePackageDeliveryStatusResponseData(varFulfillment202309UpdatePackageDeliveryStatusResponseData)
+	*o = Fulfillment202309UpdatePackageDeliveryStatusResponseData(varFulfillment202309UpdatePackageDeliveryStatusResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "errors")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "errors")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309UpdatePackageDeliveryStatusResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableFulfillment202309UpdatePackageDeliveryStatusResponseData) Unmar
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

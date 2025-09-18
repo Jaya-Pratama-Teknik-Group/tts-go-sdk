@@ -11,49 +11,48 @@ API version: 1.0.0
 package apis
 
 import (
-    "bytes"
-    "context"
-    "io"
-    "net/http"
-    "net/url"
+	"bytes"
+	"context"
+	"io"
+	"net/http"
+	"net/url"
 
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/data_reconciliation/v202310"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/data_reconciliation/v202310"
 )
-
 
 // DataReconciliationV202310APIService DataReconciliationV202310API service
 type DataReconciliationV202310APIService service
 
 type ApiDataReconciliation202310OrdersImportPostRequest struct {
-    ctx context.Context
-    ApiService *DataReconciliationV202310APIService
-    xTtsAccessToken *string
-    contentType *string
-    shopCipher *string
-    dataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody *data_reconciliation_v202310.DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody
+	ctx                                                                 context.Context
+	ApiService                                                          *DataReconciliationV202310APIService
+	xTtsAccessToken                                                     *string
+	contentType                                                         *string
+	shopCipher                                                          *string
+	dataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody *data_reconciliation_v202310.DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody
 }
 
-// 
 func (r ApiDataReconciliation202310OrdersImportPostRequest) XTtsAccessToken(xTtsAccessToken string) ApiDataReconciliation202310OrdersImportPostRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiDataReconciliation202310OrdersImportPostRequest) ContentType(contentType string) ApiDataReconciliation202310OrdersImportPostRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
-// 
+
 func (r ApiDataReconciliation202310OrdersImportPostRequest) ShopCipher(shopCipher string) ApiDataReconciliation202310OrdersImportPostRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiDataReconciliation202310OrdersImportPostRequest) DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody(dataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody data_reconciliation_v202310.DataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody) ApiDataReconciliation202310OrdersImportPostRequest {
-    r.dataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody = &dataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody
-    return r
+	r.dataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody = &dataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody
+	return r
 }
 func (r ApiDataReconciliation202310OrdersImportPostRequest) Execute() (*data_reconciliation_v202310.DataReconciliation202310QualityFactoryOrderDataImportAPIResponse, *http.Response, error) {
-    return r.ApiService.DataReconciliation202310OrdersImportPostExecute(r)
+	return r.ApiService.DataReconciliation202310OrdersImportPostExecute(r)
 }
 
 /*
@@ -64,96 +63,97 @@ TikTok Shop-Connector exchange order data from DTC(Direct To Consumer) platform 
 @return ApiDataReconciliation202310OrdersImportPostRequest
 */
 func (a *DataReconciliationV202310APIService) DataReconciliation202310OrdersImportPost(ctx context.Context) ApiDataReconciliation202310OrdersImportPostRequest {
-    return ApiDataReconciliation202310OrdersImportPostRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiDataReconciliation202310OrdersImportPostRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return DataReconciliation202310QualityFactoryOrderDataImportAPIResponse
+//
+//	@return DataReconciliation202310QualityFactoryOrderDataImportAPIResponse
 func (a *DataReconciliationV202310APIService) DataReconciliation202310OrdersImportPostExecute(r ApiDataReconciliation202310OrdersImportPostRequest) (*data_reconciliation_v202310.DataReconciliation202310QualityFactoryOrderDataImportAPIResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodPost
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *data_reconciliation_v202310.DataReconciliation202310QualityFactoryOrderDataImportAPIResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *data_reconciliation_v202310.DataReconciliation202310QualityFactoryOrderDataImportAPIResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DataReconciliationV202310APIService.DataReconciliation202310OrdersImportPost")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DataReconciliationV202310APIService.DataReconciliation202310OrdersImportPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/data_reconciliation/202310/orders/import"
+	localVarPath := localBasePath + "/data_reconciliation/202310/orders/import"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{"application/json"}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    // body params
-    localVarPostBody = r.dataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	// body params
+	localVarPostBody = r.dataReconciliation202310QualityFactoryOrderDataImportAPIRequestBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }

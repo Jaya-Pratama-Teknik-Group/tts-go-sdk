@@ -11,51 +11,51 @@ API version: 1.0.0
 package apis
 
 import (
-    "bytes"
-    "context"
-    "io"
-    "net/http"
-    "net/url"
-    "reflect"
+	"bytes"
+	"context"
+	"io"
+	"net/http"
+	"net/url"
+	"reflect"
 
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202506"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202506"
 )
-
 
 // ProductV202506APIService ProductV202506API service
 type ProductV202506APIService service
 
 type ApiProduct202506ImagesTranslationTasksGetRequest struct {
-    ctx context.Context
-    ApiService *ProductV202506APIService
-    xTtsAccessToken *string
-    contentType *string
-    translationTaskIds *[]string
-    shopCipher *string
+	ctx                context.Context
+	ApiService         *ProductV202506APIService
+	xTtsAccessToken    *string
+	contentType        *string
+	translationTaskIds *[]string
+	shopCipher         *string
 }
 
-// 
 func (r ApiProduct202506ImagesTranslationTasksGetRequest) XTtsAccessToken(xTtsAccessToken string) ApiProduct202506ImagesTranslationTasksGetRequest {
-    r.xTtsAccessToken = &xTtsAccessToken
-    return r
+	r.xTtsAccessToken = &xTtsAccessToken
+	return r
 }
+
 // Allowed type: application/json
 func (r ApiProduct202506ImagesTranslationTasksGetRequest) ContentType(contentType string) ApiProduct202506ImagesTranslationTasksGetRequest {
-    r.contentType = &contentType
-    return r
+	r.contentType = &contentType
+	return r
 }
+
 // The image translation task IDs for retrieving translation results. Max count: 20
 func (r ApiProduct202506ImagesTranslationTasksGetRequest) TranslationTaskIds(translationTaskIds []string) ApiProduct202506ImagesTranslationTasksGetRequest {
-    r.translationTaskIds = &translationTaskIds
-    return r
+	r.translationTaskIds = &translationTaskIds
+	return r
 }
-// 
+
 func (r ApiProduct202506ImagesTranslationTasksGetRequest) ShopCipher(shopCipher string) ApiProduct202506ImagesTranslationTasksGetRequest {
-    r.shopCipher = &shopCipher
-    return r
+	r.shopCipher = &shopCipher
+	return r
 }
 func (r ApiProduct202506ImagesTranslationTasksGetRequest) Execute() (*product_v202506.Product202506GetImageTranslationTasksResponse, *http.Response, error) {
-    return r.ApiService.Product202506ImagesTranslationTasksGetExecute(r)
+	return r.ApiService.Product202506ImagesTranslationTasksGetExecute(r)
 }
 
 /*
@@ -68,105 +68,106 @@ Applicable only for sellers that sell across EU.
 @return ApiProduct202506ImagesTranslationTasksGetRequest
 */
 func (a *ProductV202506APIService) Product202506ImagesTranslationTasksGet(ctx context.Context) ApiProduct202506ImagesTranslationTasksGetRequest {
-    return ApiProduct202506ImagesTranslationTasksGetRequest{
-        ApiService: a,
-        ctx: ctx,
-    }
+	return ApiProduct202506ImagesTranslationTasksGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
 }
 
 // Execute executes the request
-//  @return Product202506GetImageTranslationTasksResponse
+//
+//	@return Product202506GetImageTranslationTasksResponse
 func (a *ProductV202506APIService) Product202506ImagesTranslationTasksGetExecute(r ApiProduct202506ImagesTranslationTasksGetRequest) (*product_v202506.Product202506GetImageTranslationTasksResponse, *http.Response, error) {
-    var (
-        localVarHTTPMethod   = http.MethodGet
-        localVarPostBody     interface{}
-        formFiles            []formFile
-        localVarReturnValue  *product_v202506.Product202506GetImageTranslationTasksResponse
-    )
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *product_v202506.Product202506GetImageTranslationTasksResponse
+	)
 
-    localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202506APIService.Product202506ImagesTranslationTasksGet")
-    if err != nil {
-        return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-    }
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProductV202506APIService.Product202506ImagesTranslationTasksGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
 
-    localVarPath := localBasePath + "/product/202506/images/translation_tasks"
+	localVarPath := localBasePath + "/product/202506/images/translation_tasks"
 
-    localVarHeaderParams := make(map[string]string)
-    localVarQueryParams := url.Values{}
-    localVarFormParams := url.Values{}
-    if r.xTtsAccessToken == nil {
-        return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
-    }
-    if r.contentType == nil {
-        return localVarReturnValue, nil, reportError("contentType is required and must be specified")
-    }
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.xTtsAccessToken == nil {
+		return localVarReturnValue, nil, reportError("xTtsAccessToken is required and must be specified")
+	}
+	if r.contentType == nil {
+		return localVarReturnValue, nil, reportError("contentType is required and must be specified")
+	}
 
-    if r.translationTaskIds != nil {
-        t := *r.translationTaskIds
-        if reflect.TypeOf(t).Kind() == reflect.Slice {
-            s := reflect.ValueOf(t)
-            for i := 0; i < s.Len(); i++ {
-                parameterAddToHeaderOrQuery(localVarQueryParams, "translation_task_ids", s.Index(i).Interface(), "multi")
-            }
-        } else {
-            parameterAddToHeaderOrQuery(localVarQueryParams, "translation_task_ids", t, "multi")
-        }
-    }
-    if r.shopCipher != nil {
-    parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
-    }
-    // to determine the Content-Type header
-    localVarHTTPContentTypes := []string{}
+	if r.translationTaskIds != nil {
+		t := *r.translationTaskIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "translation_task_ids", s.Index(i).Interface(), "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "translation_task_ids", t, "multi")
+		}
+	}
+	if r.shopCipher != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shop_cipher", r.shopCipher, "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
 
-    // set Content-Type header
-    localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-    if localVarHTTPContentType != "" {
-        localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-    }
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
 
-    // to determine the Accept header
-    localVarHTTPHeaderAccepts := []string{"application/json"}
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
-    // set Accept header
-    localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-    if localVarHTTPHeaderAccept != "" {
-        localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-    }
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
-    parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
-    req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-    if err != nil {
-        return localVarReturnValue, nil, err
-    }
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "x-tts-access-token", r.xTtsAccessToken, "")
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Content-Type", r.contentType, "")
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
 
-    localVarHTTPResponse, err := a.client.callAPI(req)
-    if err != nil || localVarHTTPResponse == nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-    localVarHTTPResponse.Body.Close()
-    localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-    if err != nil {
-        return localVarReturnValue, localVarHTTPResponse, err
-    }
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
 
-    if localVarHTTPResponse.StatusCode >= 300 {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: localVarHTTPResponse.Status,
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-    if err != nil {
-        newErr := &GenericOpenAPIError{
-            body:  localVarBody,
-            error: err.Error(),
-        }
-        return localVarReturnValue, localVarHTTPResponse, newErr
-    }
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
 
-    return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }

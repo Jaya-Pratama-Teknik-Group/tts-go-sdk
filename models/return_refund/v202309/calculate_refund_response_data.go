@@ -11,17 +11,17 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309CalculateRefundResponseData type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309CalculateRefundResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309CalculateRefundResponseData{}
 
 // ReturnRefund202309CalculateRefundResponseData struct for ReturnRefund202309CalculateRefundResponseData
 type ReturnRefund202309CalculateRefundResponseData struct {
-    OrderRefundAmount *ReturnRefund202309CalculateRefundResponseDataOrderRefundAmount `json:"order_refund_amount,omitempty"`
-    AdditionalProperties map[string]interface{}
+	OrderRefundAmount    *ReturnRefund202309CalculateRefundResponseDataOrderRefundAmount `json:"order_refund_amount,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309CalculateRefundResponseData ReturnRefund202309CalculateRefundResponseData
@@ -31,89 +31,89 @@ type _ReturnRefund202309CalculateRefundResponseData ReturnRefund202309CalculateR
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309CalculateRefundResponseData() *ReturnRefund202309CalculateRefundResponseData {
-    this := ReturnRefund202309CalculateRefundResponseData{}
-    return &this
+	this := ReturnRefund202309CalculateRefundResponseData{}
+	return &this
 }
 
 // NewReturnRefund202309CalculateRefundResponseDataWithDefaults instantiates a new ReturnRefund202309CalculateRefundResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309CalculateRefundResponseDataWithDefaults() *ReturnRefund202309CalculateRefundResponseData {
-    this := ReturnRefund202309CalculateRefundResponseData{}
-    return &this
+	this := ReturnRefund202309CalculateRefundResponseData{}
+	return &this
 }
 
 // GetOrderRefundAmount returns the OrderRefundAmount field value if set, zero value otherwise.
 func (o *ReturnRefund202309CalculateRefundResponseData) GetOrderRefundAmount() ReturnRefund202309CalculateRefundResponseDataOrderRefundAmount {
-    if o == nil || utils.IsNil(o.OrderRefundAmount) {
-        var ret ReturnRefund202309CalculateRefundResponseDataOrderRefundAmount
-        return ret
-    }
-    return *o.OrderRefundAmount
+	if o == nil || utils.IsNil(o.OrderRefundAmount) {
+		var ret ReturnRefund202309CalculateRefundResponseDataOrderRefundAmount
+		return ret
+	}
+	return *o.OrderRefundAmount
 }
 
 // GetOrderRefundAmountOk returns a tuple with the OrderRefundAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309CalculateRefundResponseData) GetOrderRefundAmountOk() (*ReturnRefund202309CalculateRefundResponseDataOrderRefundAmount, bool) {
-    if o == nil || utils.IsNil(o.OrderRefundAmount) {
-        return nil, false
-    }
-    return o.OrderRefundAmount, true
+	if o == nil || utils.IsNil(o.OrderRefundAmount) {
+		return nil, false
+	}
+	return o.OrderRefundAmount, true
 }
 
 // HasOrderRefundAmount returns a boolean if a field has been set.
 func (o *ReturnRefund202309CalculateRefundResponseData) HasOrderRefundAmount() bool {
-    if o != nil && !utils.IsNil(o.OrderRefundAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.OrderRefundAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetOrderRefundAmount gets a reference to the given ReturnRefund202309CalculateRefundResponseDataOrderRefundAmount and assigns it to the OrderRefundAmount field.
 func (o *ReturnRefund202309CalculateRefundResponseData) SetOrderRefundAmount(v ReturnRefund202309CalculateRefundResponseDataOrderRefundAmount) {
-    o.OrderRefundAmount = &v
+	o.OrderRefundAmount = &v
 }
 
 func (o ReturnRefund202309CalculateRefundResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309CalculateRefundResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.OrderRefundAmount) {
-        toSerialize["order_refund_amount"] = o.OrderRefundAmount
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.OrderRefundAmount) {
+		toSerialize["order_refund_amount"] = o.OrderRefundAmount
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309CalculateRefundResponseData) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309CalculateRefundResponseData := _ReturnRefund202309CalculateRefundResponseData{}
+	varReturnRefund202309CalculateRefundResponseData := _ReturnRefund202309CalculateRefundResponseData{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309CalculateRefundResponseData)
+	err = json.Unmarshal(data, &varReturnRefund202309CalculateRefundResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309CalculateRefundResponseData(varReturnRefund202309CalculateRefundResponseData)
+	*o = ReturnRefund202309CalculateRefundResponseData(varReturnRefund202309CalculateRefundResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "order_refund_amount")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "order_refund_amount")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309CalculateRefundResponseData struct {
@@ -151,5 +151,3 @@ func (v *NullableReturnRefund202309CalculateRefundResponseData) UnmarshalJSON(sr
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

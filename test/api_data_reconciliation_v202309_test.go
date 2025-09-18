@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_DataReconciliationV202309APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_DataReconciliationV202309APIService(t *testing.T) {
 
 	t.Run("Test DataReconciliationV202309APIService DataReconciliation202309OrdersSyncPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DataReconciliationV202309API.DataReconciliation202309OrdersSyncPost(context.Background()).Execute()
 

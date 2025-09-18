@@ -11,18 +11,18 @@ API version: 1.0.0
 package authorization_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Authorization202309GetAuthorizedShopsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Authorization202309GetAuthorizedShopsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Authorization202309GetAuthorizedShopsResponseData{}
 
 // Authorization202309GetAuthorizedShopsResponseData struct for Authorization202309GetAuthorizedShopsResponseData
 type Authorization202309GetAuthorizedShopsResponseData struct {
-    // The list of shops that a seller has authorized for the app.
-    Shops []Authorization202309GetAuthorizedShopsResponseDataShops `json:"shops,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The list of shops that a seller has authorized for the app.
+	Shops                []Authorization202309GetAuthorizedShopsResponseDataShops `json:"shops,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Authorization202309GetAuthorizedShopsResponseData Authorization202309GetAuthorizedShopsResponseData
@@ -32,89 +32,89 @@ type _Authorization202309GetAuthorizedShopsResponseData Authorization202309GetAu
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAuthorization202309GetAuthorizedShopsResponseData() *Authorization202309GetAuthorizedShopsResponseData {
-    this := Authorization202309GetAuthorizedShopsResponseData{}
-    return &this
+	this := Authorization202309GetAuthorizedShopsResponseData{}
+	return &this
 }
 
 // NewAuthorization202309GetAuthorizedShopsResponseDataWithDefaults instantiates a new Authorization202309GetAuthorizedShopsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAuthorization202309GetAuthorizedShopsResponseDataWithDefaults() *Authorization202309GetAuthorizedShopsResponseData {
-    this := Authorization202309GetAuthorizedShopsResponseData{}
-    return &this
+	this := Authorization202309GetAuthorizedShopsResponseData{}
+	return &this
 }
 
 // GetShops returns the Shops field value if set, zero value otherwise.
 func (o *Authorization202309GetAuthorizedShopsResponseData) GetShops() []Authorization202309GetAuthorizedShopsResponseDataShops {
-    if o == nil || utils.IsNil(o.Shops) {
-        var ret []Authorization202309GetAuthorizedShopsResponseDataShops
-        return ret
-    }
-    return o.Shops
+	if o == nil || utils.IsNil(o.Shops) {
+		var ret []Authorization202309GetAuthorizedShopsResponseDataShops
+		return ret
+	}
+	return o.Shops
 }
 
 // GetShopsOk returns a tuple with the Shops field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Authorization202309GetAuthorizedShopsResponseData) GetShopsOk() ([]Authorization202309GetAuthorizedShopsResponseDataShops, bool) {
-    if o == nil || utils.IsNil(o.Shops) {
-        return nil, false
-    }
-    return o.Shops, true
+	if o == nil || utils.IsNil(o.Shops) {
+		return nil, false
+	}
+	return o.Shops, true
 }
 
 // HasShops returns a boolean if a field has been set.
 func (o *Authorization202309GetAuthorizedShopsResponseData) HasShops() bool {
-    if o != nil && !utils.IsNil(o.Shops) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Shops) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShops gets a reference to the given []Authorization202309GetAuthorizedShopsResponseDataShops and assigns it to the Shops field.
 func (o *Authorization202309GetAuthorizedShopsResponseData) SetShops(v []Authorization202309GetAuthorizedShopsResponseDataShops) {
-    o.Shops = v
+	o.Shops = v
 }
 
 func (o Authorization202309GetAuthorizedShopsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Authorization202309GetAuthorizedShopsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Shops) {
-        toSerialize["shops"] = o.Shops
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Shops) {
+		toSerialize["shops"] = o.Shops
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Authorization202309GetAuthorizedShopsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varAuthorization202309GetAuthorizedShopsResponseData := _Authorization202309GetAuthorizedShopsResponseData{}
+	varAuthorization202309GetAuthorizedShopsResponseData := _Authorization202309GetAuthorizedShopsResponseData{}
 
-    err = json.Unmarshal(data, &varAuthorization202309GetAuthorizedShopsResponseData)
+	err = json.Unmarshal(data, &varAuthorization202309GetAuthorizedShopsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Authorization202309GetAuthorizedShopsResponseData(varAuthorization202309GetAuthorizedShopsResponseData)
+	*o = Authorization202309GetAuthorizedShopsResponseData(varAuthorization202309GetAuthorizedShopsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "shops")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "shops")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAuthorization202309GetAuthorizedShopsResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableAuthorization202309GetAuthorizedShopsResponseData) UnmarshalJSO
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

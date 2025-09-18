@@ -11,64 +11,64 @@ API version: 1.0.0
 package order_v202407
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Order202407GetPriceDetailResponseDataLineItems type satisfies the MappedNullable interface at compile time
+// checks if the Order202407GetPriceDetailResponseDataLineItems type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Order202407GetPriceDetailResponseDataLineItems{}
 
 // Order202407GetPriceDetailResponseDataLineItems struct for Order202407GetPriceDetailResponseDataLineItems
 type Order202407GetPriceDetailResponseDataLineItems struct {
-    // COD fee charged by shipping aggregators. For regions outside of Saudi Arabia, the value is `0.00`.
-    CodFee *string `json:"cod_fee,omitempty"`
-    // COD fee charged by shipping aggregators including tax. For regions outside of Saudi Arabia, the value is `0.00`.
-    CodFeeAmount *string `json:"cod_fee_amount,omitempty"`
-    // Currency Type. Three-letter code, see [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
-    Currency *string `json:"currency,omitempty"`
-    // corresponding line_item id 
-    Id *string `json:"id,omitempty"`
-    // Price after tax 
-    NetPriceAmount *string `json:"net_price_amount,omitempty"`
-    // Payment of the order from the buyer. Calculation: `sku_sale_price` + `shipping_sale_price` + `tax_amount` + `small_order_fee`
-    Payment *string `json:"payment,omitempty"`
-    // Shipping discount covered by the platform
-    ShippingFeeDeductionPlatform *string `json:"shipping_fee_deduction_platform,omitempty"`
-    // Shipping discount covered by the platform voucher `1010000`: PLATFORM_NEW_USER `1020000`: SELLER_SKU_PRICE `1030000`: PLATFORM_FREE_SHIPPING
-    ShippingFeeDeductionPlatformVoucher *string `json:"shipping_fee_deduction_platform_voucher,omitempty"`
-    // Shipping discount covered by the seller.
-    ShippingFeeDeductionSeller *string `json:"shipping_fee_deduction_seller,omitempty"`
-    // Original shipping price 
-    ShippingListPrice *string `json:"shipping_list_price,omitempty"`
-    // Promotional shipping price Calculation: shipping_list_price - shipping_fee_deduction -shipping_fee_deduction_platform
-    ShippingSalePrice *string `json:"shipping_sale_price,omitempty"`
-    // Original sku list price of the gift product from the seller including tax.
-    SkuGiftNetPrice *string `json:"sku_gift_net_price,omitempty"`
-    // Original sku list price of the gift product from the seller.
-    SkuGiftOriginalPrice *string `json:"sku_gift_original_price,omitempty"`
-    // Total MSRP price of the products.
-    SkuListPrice *string `json:"sku_list_price,omitempty"`
-    // Total promotional sale price of the products. Calculation: `sku_list_price` - `subtotal_deduction_seller` - `subtotal_deduction_platform`
-    SkuSalePrice *string `json:"sku_sale_price,omitempty"`
-    // Total promotional sale price of the products including tax. Calculation: `sku_sale_price` + `subtotal_tax_amount`
-    Subtotal *string `json:"subtotal,omitempty"`
-    // Platform provided price discount on the product 
-    SubtotalDeductionPlatform *string `json:"subtotal_deduction_platform,omitempty"`
-    // Seller provided price discount on the product 
-    SubtotalDeductionSeller *string `json:"subtotal_deduction_seller,omitempty"`
-    // Total tax amount on the product 
-    SubtotalTaxAmount *string `json:"subtotal_tax_amount,omitempty"`
-    // Total tax amount. Calculation: subtotal_tax_amount + shipping_fee_tax（in TaxDetail） + cod_fee_tax（TaxDetail）
-    TaxAmount *string `json:"tax_amount,omitempty"`
-    // Tax rate 
-    TaxRate *string `json:"tax_rate,omitempty"`
-    // Total number of the original price of the order. Calculation: `sku_list_price` + `shipping_list_price`
-    Total *string `json:"total,omitempty"`
-    // Type of the platform-providing discount on the product. Possible values: `1010000`: PLATFORM_NEW_USER, `1020000`: SELLER_SKU_PRICE, `1030000`: PLATFORM_FREE_SHIPPING
-    VoucherDeductionPlatform *string `json:"voucher_deduction_platform,omitempty"`
-    // Type of the seller-providing discount on the product. Possible values: `1010000`: PLATFORM_NEW_USER, `1020000`: SELLER_SKU_PRICE, `1030000`: PLATFORM_FREE_SHIPPING
-    VoucherDeductionSeller *string `json:"voucher_deduction_seller,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// COD fee charged by shipping aggregators. For regions outside of Saudi Arabia, the value is `0.00`.
+	CodFee *string `json:"cod_fee,omitempty"`
+	// COD fee charged by shipping aggregators including tax. For regions outside of Saudi Arabia, the value is `0.00`.
+	CodFeeAmount *string `json:"cod_fee_amount,omitempty"`
+	// Currency Type. Three-letter code, see [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
+	Currency *string `json:"currency,omitempty"`
+	// corresponding line_item id
+	Id *string `json:"id,omitempty"`
+	// Price after tax
+	NetPriceAmount *string `json:"net_price_amount,omitempty"`
+	// Payment of the order from the buyer. Calculation: `sku_sale_price` + `shipping_sale_price` + `tax_amount` + `small_order_fee`
+	Payment *string `json:"payment,omitempty"`
+	// Shipping discount covered by the platform
+	ShippingFeeDeductionPlatform *string `json:"shipping_fee_deduction_platform,omitempty"`
+	// Shipping discount covered by the platform voucher `1010000`: PLATFORM_NEW_USER `1020000`: SELLER_SKU_PRICE `1030000`: PLATFORM_FREE_SHIPPING
+	ShippingFeeDeductionPlatformVoucher *string `json:"shipping_fee_deduction_platform_voucher,omitempty"`
+	// Shipping discount covered by the seller.
+	ShippingFeeDeductionSeller *string `json:"shipping_fee_deduction_seller,omitempty"`
+	// Original shipping price
+	ShippingListPrice *string `json:"shipping_list_price,omitempty"`
+	// Promotional shipping price Calculation: shipping_list_price - shipping_fee_deduction -shipping_fee_deduction_platform
+	ShippingSalePrice *string `json:"shipping_sale_price,omitempty"`
+	// Original sku list price of the gift product from the seller including tax.
+	SkuGiftNetPrice *string `json:"sku_gift_net_price,omitempty"`
+	// Original sku list price of the gift product from the seller.
+	SkuGiftOriginalPrice *string `json:"sku_gift_original_price,omitempty"`
+	// Total MSRP price of the products.
+	SkuListPrice *string `json:"sku_list_price,omitempty"`
+	// Total promotional sale price of the products. Calculation: `sku_list_price` - `subtotal_deduction_seller` - `subtotal_deduction_platform`
+	SkuSalePrice *string `json:"sku_sale_price,omitempty"`
+	// Total promotional sale price of the products including tax. Calculation: `sku_sale_price` + `subtotal_tax_amount`
+	Subtotal *string `json:"subtotal,omitempty"`
+	// Platform provided price discount on the product
+	SubtotalDeductionPlatform *string `json:"subtotal_deduction_platform,omitempty"`
+	// Seller provided price discount on the product
+	SubtotalDeductionSeller *string `json:"subtotal_deduction_seller,omitempty"`
+	// Total tax amount on the product
+	SubtotalTaxAmount *string `json:"subtotal_tax_amount,omitempty"`
+	// Total tax amount. Calculation: subtotal_tax_amount + shipping_fee_tax（in TaxDetail） + cod_fee_tax（TaxDetail）
+	TaxAmount *string `json:"tax_amount,omitempty"`
+	// Tax rate
+	TaxRate *string `json:"tax_rate,omitempty"`
+	// Total number of the original price of the order. Calculation: `sku_list_price` + `shipping_list_price`
+	Total *string `json:"total,omitempty"`
+	// Type of the platform-providing discount on the product. Possible values: `1010000`: PLATFORM_NEW_USER, `1020000`: SELLER_SKU_PRICE, `1030000`: PLATFORM_FREE_SHIPPING
+	VoucherDeductionPlatform *string `json:"voucher_deduction_platform,omitempty"`
+	// Type of the seller-providing discount on the product. Possible values: `1010000`: PLATFORM_NEW_USER, `1020000`: SELLER_SKU_PRICE, `1030000`: PLATFORM_FREE_SHIPPING
+	VoucherDeductionSeller *string `json:"voucher_deduction_seller,omitempty"`
+	AdditionalProperties   map[string]interface{}
 }
 
 type _Order202407GetPriceDetailResponseDataLineItems Order202407GetPriceDetailResponseDataLineItems
@@ -78,917 +78,917 @@ type _Order202407GetPriceDetailResponseDataLineItems Order202407GetPriceDetailRe
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewOrder202407GetPriceDetailResponseDataLineItems() *Order202407GetPriceDetailResponseDataLineItems {
-    this := Order202407GetPriceDetailResponseDataLineItems{}
-    return &this
+	this := Order202407GetPriceDetailResponseDataLineItems{}
+	return &this
 }
 
 // NewOrder202407GetPriceDetailResponseDataLineItemsWithDefaults instantiates a new Order202407GetPriceDetailResponseDataLineItems object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewOrder202407GetPriceDetailResponseDataLineItemsWithDefaults() *Order202407GetPriceDetailResponseDataLineItems {
-    this := Order202407GetPriceDetailResponseDataLineItems{}
-    return &this
+	this := Order202407GetPriceDetailResponseDataLineItems{}
+	return &this
 }
 
 // GetCodFee returns the CodFee field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetCodFee() string {
-    if o == nil || utils.IsNil(o.CodFee) {
-        var ret string
-        return ret
-    }
-    return *o.CodFee
+	if o == nil || utils.IsNil(o.CodFee) {
+		var ret string
+		return ret
+	}
+	return *o.CodFee
 }
 
 // GetCodFeeOk returns a tuple with the CodFee field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetCodFeeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.CodFee) {
-        return nil, false
-    }
-    return o.CodFee, true
+	if o == nil || utils.IsNil(o.CodFee) {
+		return nil, false
+	}
+	return o.CodFee, true
 }
 
 // HasCodFee returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasCodFee() bool {
-    if o != nil && !utils.IsNil(o.CodFee) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CodFee) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCodFee gets a reference to the given string and assigns it to the CodFee field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetCodFee(v string) {
-    o.CodFee = &v
+	o.CodFee = &v
 }
 
 // GetCodFeeAmount returns the CodFeeAmount field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetCodFeeAmount() string {
-    if o == nil || utils.IsNil(o.CodFeeAmount) {
-        var ret string
-        return ret
-    }
-    return *o.CodFeeAmount
+	if o == nil || utils.IsNil(o.CodFeeAmount) {
+		var ret string
+		return ret
+	}
+	return *o.CodFeeAmount
 }
 
 // GetCodFeeAmountOk returns a tuple with the CodFeeAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetCodFeeAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.CodFeeAmount) {
-        return nil, false
-    }
-    return o.CodFeeAmount, true
+	if o == nil || utils.IsNil(o.CodFeeAmount) {
+		return nil, false
+	}
+	return o.CodFeeAmount, true
 }
 
 // HasCodFeeAmount returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasCodFeeAmount() bool {
-    if o != nil && !utils.IsNil(o.CodFeeAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CodFeeAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCodFeeAmount gets a reference to the given string and assigns it to the CodFeeAmount field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetCodFeeAmount(v string) {
-    o.CodFeeAmount = &v
+	o.CodFeeAmount = &v
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetId() string {
-    if o == nil || utils.IsNil(o.Id) {
-        var ret string
-        return ret
-    }
-    return *o.Id
+	if o == nil || utils.IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
 }
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Id) {
-        return nil, false
-    }
-    return o.Id, true
+	if o == nil || utils.IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasId() bool {
-    if o != nil && !utils.IsNil(o.Id) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Id) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetId(v string) {
-    o.Id = &v
+	o.Id = &v
 }
 
 // GetNetPriceAmount returns the NetPriceAmount field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetNetPriceAmount() string {
-    if o == nil || utils.IsNil(o.NetPriceAmount) {
-        var ret string
-        return ret
-    }
-    return *o.NetPriceAmount
+	if o == nil || utils.IsNil(o.NetPriceAmount) {
+		var ret string
+		return ret
+	}
+	return *o.NetPriceAmount
 }
 
 // GetNetPriceAmountOk returns a tuple with the NetPriceAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetNetPriceAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.NetPriceAmount) {
-        return nil, false
-    }
-    return o.NetPriceAmount, true
+	if o == nil || utils.IsNil(o.NetPriceAmount) {
+		return nil, false
+	}
+	return o.NetPriceAmount, true
 }
 
 // HasNetPriceAmount returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasNetPriceAmount() bool {
-    if o != nil && !utils.IsNil(o.NetPriceAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.NetPriceAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetNetPriceAmount gets a reference to the given string and assigns it to the NetPriceAmount field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetNetPriceAmount(v string) {
-    o.NetPriceAmount = &v
+	o.NetPriceAmount = &v
 }
 
 // GetPayment returns the Payment field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetPayment() string {
-    if o == nil || utils.IsNil(o.Payment) {
-        var ret string
-        return ret
-    }
-    return *o.Payment
+	if o == nil || utils.IsNil(o.Payment) {
+		var ret string
+		return ret
+	}
+	return *o.Payment
 }
 
 // GetPaymentOk returns a tuple with the Payment field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetPaymentOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Payment) {
-        return nil, false
-    }
-    return o.Payment, true
+	if o == nil || utils.IsNil(o.Payment) {
+		return nil, false
+	}
+	return o.Payment, true
 }
 
 // HasPayment returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasPayment() bool {
-    if o != nil && !utils.IsNil(o.Payment) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Payment) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPayment gets a reference to the given string and assigns it to the Payment field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetPayment(v string) {
-    o.Payment = &v
+	o.Payment = &v
 }
 
 // GetShippingFeeDeductionPlatform returns the ShippingFeeDeductionPlatform field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingFeeDeductionPlatform() string {
-    if o == nil || utils.IsNil(o.ShippingFeeDeductionPlatform) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingFeeDeductionPlatform
+	if o == nil || utils.IsNil(o.ShippingFeeDeductionPlatform) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingFeeDeductionPlatform
 }
 
 // GetShippingFeeDeductionPlatformOk returns a tuple with the ShippingFeeDeductionPlatform field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingFeeDeductionPlatformOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingFeeDeductionPlatform) {
-        return nil, false
-    }
-    return o.ShippingFeeDeductionPlatform, true
+	if o == nil || utils.IsNil(o.ShippingFeeDeductionPlatform) {
+		return nil, false
+	}
+	return o.ShippingFeeDeductionPlatform, true
 }
 
 // HasShippingFeeDeductionPlatform returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasShippingFeeDeductionPlatform() bool {
-    if o != nil && !utils.IsNil(o.ShippingFeeDeductionPlatform) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingFeeDeductionPlatform) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingFeeDeductionPlatform gets a reference to the given string and assigns it to the ShippingFeeDeductionPlatform field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetShippingFeeDeductionPlatform(v string) {
-    o.ShippingFeeDeductionPlatform = &v
+	o.ShippingFeeDeductionPlatform = &v
 }
 
 // GetShippingFeeDeductionPlatformVoucher returns the ShippingFeeDeductionPlatformVoucher field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingFeeDeductionPlatformVoucher() string {
-    if o == nil || utils.IsNil(o.ShippingFeeDeductionPlatformVoucher) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingFeeDeductionPlatformVoucher
+	if o == nil || utils.IsNil(o.ShippingFeeDeductionPlatformVoucher) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingFeeDeductionPlatformVoucher
 }
 
 // GetShippingFeeDeductionPlatformVoucherOk returns a tuple with the ShippingFeeDeductionPlatformVoucher field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingFeeDeductionPlatformVoucherOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingFeeDeductionPlatformVoucher) {
-        return nil, false
-    }
-    return o.ShippingFeeDeductionPlatformVoucher, true
+	if o == nil || utils.IsNil(o.ShippingFeeDeductionPlatformVoucher) {
+		return nil, false
+	}
+	return o.ShippingFeeDeductionPlatformVoucher, true
 }
 
 // HasShippingFeeDeductionPlatformVoucher returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasShippingFeeDeductionPlatformVoucher() bool {
-    if o != nil && !utils.IsNil(o.ShippingFeeDeductionPlatformVoucher) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingFeeDeductionPlatformVoucher) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingFeeDeductionPlatformVoucher gets a reference to the given string and assigns it to the ShippingFeeDeductionPlatformVoucher field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetShippingFeeDeductionPlatformVoucher(v string) {
-    o.ShippingFeeDeductionPlatformVoucher = &v
+	o.ShippingFeeDeductionPlatformVoucher = &v
 }
 
 // GetShippingFeeDeductionSeller returns the ShippingFeeDeductionSeller field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingFeeDeductionSeller() string {
-    if o == nil || utils.IsNil(o.ShippingFeeDeductionSeller) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingFeeDeductionSeller
+	if o == nil || utils.IsNil(o.ShippingFeeDeductionSeller) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingFeeDeductionSeller
 }
 
 // GetShippingFeeDeductionSellerOk returns a tuple with the ShippingFeeDeductionSeller field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingFeeDeductionSellerOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingFeeDeductionSeller) {
-        return nil, false
-    }
-    return o.ShippingFeeDeductionSeller, true
+	if o == nil || utils.IsNil(o.ShippingFeeDeductionSeller) {
+		return nil, false
+	}
+	return o.ShippingFeeDeductionSeller, true
 }
 
 // HasShippingFeeDeductionSeller returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasShippingFeeDeductionSeller() bool {
-    if o != nil && !utils.IsNil(o.ShippingFeeDeductionSeller) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingFeeDeductionSeller) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingFeeDeductionSeller gets a reference to the given string and assigns it to the ShippingFeeDeductionSeller field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetShippingFeeDeductionSeller(v string) {
-    o.ShippingFeeDeductionSeller = &v
+	o.ShippingFeeDeductionSeller = &v
 }
 
 // GetShippingListPrice returns the ShippingListPrice field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingListPrice() string {
-    if o == nil || utils.IsNil(o.ShippingListPrice) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingListPrice
+	if o == nil || utils.IsNil(o.ShippingListPrice) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingListPrice
 }
 
 // GetShippingListPriceOk returns a tuple with the ShippingListPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingListPriceOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingListPrice) {
-        return nil, false
-    }
-    return o.ShippingListPrice, true
+	if o == nil || utils.IsNil(o.ShippingListPrice) {
+		return nil, false
+	}
+	return o.ShippingListPrice, true
 }
 
 // HasShippingListPrice returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasShippingListPrice() bool {
-    if o != nil && !utils.IsNil(o.ShippingListPrice) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingListPrice) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingListPrice gets a reference to the given string and assigns it to the ShippingListPrice field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetShippingListPrice(v string) {
-    o.ShippingListPrice = &v
+	o.ShippingListPrice = &v
 }
 
 // GetShippingSalePrice returns the ShippingSalePrice field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingSalePrice() string {
-    if o == nil || utils.IsNil(o.ShippingSalePrice) {
-        var ret string
-        return ret
-    }
-    return *o.ShippingSalePrice
+	if o == nil || utils.IsNil(o.ShippingSalePrice) {
+		var ret string
+		return ret
+	}
+	return *o.ShippingSalePrice
 }
 
 // GetShippingSalePriceOk returns a tuple with the ShippingSalePrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetShippingSalePriceOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ShippingSalePrice) {
-        return nil, false
-    }
-    return o.ShippingSalePrice, true
+	if o == nil || utils.IsNil(o.ShippingSalePrice) {
+		return nil, false
+	}
+	return o.ShippingSalePrice, true
 }
 
 // HasShippingSalePrice returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasShippingSalePrice() bool {
-    if o != nil && !utils.IsNil(o.ShippingSalePrice) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ShippingSalePrice) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetShippingSalePrice gets a reference to the given string and assigns it to the ShippingSalePrice field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetShippingSalePrice(v string) {
-    o.ShippingSalePrice = &v
+	o.ShippingSalePrice = &v
 }
 
 // GetSkuGiftNetPrice returns the SkuGiftNetPrice field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSkuGiftNetPrice() string {
-    if o == nil || utils.IsNil(o.SkuGiftNetPrice) {
-        var ret string
-        return ret
-    }
-    return *o.SkuGiftNetPrice
+	if o == nil || utils.IsNil(o.SkuGiftNetPrice) {
+		var ret string
+		return ret
+	}
+	return *o.SkuGiftNetPrice
 }
 
 // GetSkuGiftNetPriceOk returns a tuple with the SkuGiftNetPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSkuGiftNetPriceOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SkuGiftNetPrice) {
-        return nil, false
-    }
-    return o.SkuGiftNetPrice, true
+	if o == nil || utils.IsNil(o.SkuGiftNetPrice) {
+		return nil, false
+	}
+	return o.SkuGiftNetPrice, true
 }
 
 // HasSkuGiftNetPrice returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasSkuGiftNetPrice() bool {
-    if o != nil && !utils.IsNil(o.SkuGiftNetPrice) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuGiftNetPrice) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuGiftNetPrice gets a reference to the given string and assigns it to the SkuGiftNetPrice field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetSkuGiftNetPrice(v string) {
-    o.SkuGiftNetPrice = &v
+	o.SkuGiftNetPrice = &v
 }
 
 // GetSkuGiftOriginalPrice returns the SkuGiftOriginalPrice field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSkuGiftOriginalPrice() string {
-    if o == nil || utils.IsNil(o.SkuGiftOriginalPrice) {
-        var ret string
-        return ret
-    }
-    return *o.SkuGiftOriginalPrice
+	if o == nil || utils.IsNil(o.SkuGiftOriginalPrice) {
+		var ret string
+		return ret
+	}
+	return *o.SkuGiftOriginalPrice
 }
 
 // GetSkuGiftOriginalPriceOk returns a tuple with the SkuGiftOriginalPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSkuGiftOriginalPriceOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SkuGiftOriginalPrice) {
-        return nil, false
-    }
-    return o.SkuGiftOriginalPrice, true
+	if o == nil || utils.IsNil(o.SkuGiftOriginalPrice) {
+		return nil, false
+	}
+	return o.SkuGiftOriginalPrice, true
 }
 
 // HasSkuGiftOriginalPrice returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasSkuGiftOriginalPrice() bool {
-    if o != nil && !utils.IsNil(o.SkuGiftOriginalPrice) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuGiftOriginalPrice) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuGiftOriginalPrice gets a reference to the given string and assigns it to the SkuGiftOriginalPrice field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetSkuGiftOriginalPrice(v string) {
-    o.SkuGiftOriginalPrice = &v
+	o.SkuGiftOriginalPrice = &v
 }
 
 // GetSkuListPrice returns the SkuListPrice field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSkuListPrice() string {
-    if o == nil || utils.IsNil(o.SkuListPrice) {
-        var ret string
-        return ret
-    }
-    return *o.SkuListPrice
+	if o == nil || utils.IsNil(o.SkuListPrice) {
+		var ret string
+		return ret
+	}
+	return *o.SkuListPrice
 }
 
 // GetSkuListPriceOk returns a tuple with the SkuListPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSkuListPriceOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SkuListPrice) {
-        return nil, false
-    }
-    return o.SkuListPrice, true
+	if o == nil || utils.IsNil(o.SkuListPrice) {
+		return nil, false
+	}
+	return o.SkuListPrice, true
 }
 
 // HasSkuListPrice returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasSkuListPrice() bool {
-    if o != nil && !utils.IsNil(o.SkuListPrice) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuListPrice) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuListPrice gets a reference to the given string and assigns it to the SkuListPrice field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetSkuListPrice(v string) {
-    o.SkuListPrice = &v
+	o.SkuListPrice = &v
 }
 
 // GetSkuSalePrice returns the SkuSalePrice field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSkuSalePrice() string {
-    if o == nil || utils.IsNil(o.SkuSalePrice) {
-        var ret string
-        return ret
-    }
-    return *o.SkuSalePrice
+	if o == nil || utils.IsNil(o.SkuSalePrice) {
+		var ret string
+		return ret
+	}
+	return *o.SkuSalePrice
 }
 
 // GetSkuSalePriceOk returns a tuple with the SkuSalePrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSkuSalePriceOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SkuSalePrice) {
-        return nil, false
-    }
-    return o.SkuSalePrice, true
+	if o == nil || utils.IsNil(o.SkuSalePrice) {
+		return nil, false
+	}
+	return o.SkuSalePrice, true
 }
 
 // HasSkuSalePrice returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasSkuSalePrice() bool {
-    if o != nil && !utils.IsNil(o.SkuSalePrice) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SkuSalePrice) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSkuSalePrice gets a reference to the given string and assigns it to the SkuSalePrice field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetSkuSalePrice(v string) {
-    o.SkuSalePrice = &v
+	o.SkuSalePrice = &v
 }
 
 // GetSubtotal returns the Subtotal field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSubtotal() string {
-    if o == nil || utils.IsNil(o.Subtotal) {
-        var ret string
-        return ret
-    }
-    return *o.Subtotal
+	if o == nil || utils.IsNil(o.Subtotal) {
+		var ret string
+		return ret
+	}
+	return *o.Subtotal
 }
 
 // GetSubtotalOk returns a tuple with the Subtotal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSubtotalOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Subtotal) {
-        return nil, false
-    }
-    return o.Subtotal, true
+	if o == nil || utils.IsNil(o.Subtotal) {
+		return nil, false
+	}
+	return o.Subtotal, true
 }
 
 // HasSubtotal returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasSubtotal() bool {
-    if o != nil && !utils.IsNil(o.Subtotal) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Subtotal) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSubtotal gets a reference to the given string and assigns it to the Subtotal field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetSubtotal(v string) {
-    o.Subtotal = &v
+	o.Subtotal = &v
 }
 
 // GetSubtotalDeductionPlatform returns the SubtotalDeductionPlatform field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSubtotalDeductionPlatform() string {
-    if o == nil || utils.IsNil(o.SubtotalDeductionPlatform) {
-        var ret string
-        return ret
-    }
-    return *o.SubtotalDeductionPlatform
+	if o == nil || utils.IsNil(o.SubtotalDeductionPlatform) {
+		var ret string
+		return ret
+	}
+	return *o.SubtotalDeductionPlatform
 }
 
 // GetSubtotalDeductionPlatformOk returns a tuple with the SubtotalDeductionPlatform field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSubtotalDeductionPlatformOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SubtotalDeductionPlatform) {
-        return nil, false
-    }
-    return o.SubtotalDeductionPlatform, true
+	if o == nil || utils.IsNil(o.SubtotalDeductionPlatform) {
+		return nil, false
+	}
+	return o.SubtotalDeductionPlatform, true
 }
 
 // HasSubtotalDeductionPlatform returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasSubtotalDeductionPlatform() bool {
-    if o != nil && !utils.IsNil(o.SubtotalDeductionPlatform) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SubtotalDeductionPlatform) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSubtotalDeductionPlatform gets a reference to the given string and assigns it to the SubtotalDeductionPlatform field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetSubtotalDeductionPlatform(v string) {
-    o.SubtotalDeductionPlatform = &v
+	o.SubtotalDeductionPlatform = &v
 }
 
 // GetSubtotalDeductionSeller returns the SubtotalDeductionSeller field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSubtotalDeductionSeller() string {
-    if o == nil || utils.IsNil(o.SubtotalDeductionSeller) {
-        var ret string
-        return ret
-    }
-    return *o.SubtotalDeductionSeller
+	if o == nil || utils.IsNil(o.SubtotalDeductionSeller) {
+		var ret string
+		return ret
+	}
+	return *o.SubtotalDeductionSeller
 }
 
 // GetSubtotalDeductionSellerOk returns a tuple with the SubtotalDeductionSeller field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSubtotalDeductionSellerOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SubtotalDeductionSeller) {
-        return nil, false
-    }
-    return o.SubtotalDeductionSeller, true
+	if o == nil || utils.IsNil(o.SubtotalDeductionSeller) {
+		return nil, false
+	}
+	return o.SubtotalDeductionSeller, true
 }
 
 // HasSubtotalDeductionSeller returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasSubtotalDeductionSeller() bool {
-    if o != nil && !utils.IsNil(o.SubtotalDeductionSeller) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SubtotalDeductionSeller) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSubtotalDeductionSeller gets a reference to the given string and assigns it to the SubtotalDeductionSeller field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetSubtotalDeductionSeller(v string) {
-    o.SubtotalDeductionSeller = &v
+	o.SubtotalDeductionSeller = &v
 }
 
 // GetSubtotalTaxAmount returns the SubtotalTaxAmount field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSubtotalTaxAmount() string {
-    if o == nil || utils.IsNil(o.SubtotalTaxAmount) {
-        var ret string
-        return ret
-    }
-    return *o.SubtotalTaxAmount
+	if o == nil || utils.IsNil(o.SubtotalTaxAmount) {
+		var ret string
+		return ret
+	}
+	return *o.SubtotalTaxAmount
 }
 
 // GetSubtotalTaxAmountOk returns a tuple with the SubtotalTaxAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetSubtotalTaxAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.SubtotalTaxAmount) {
-        return nil, false
-    }
-    return o.SubtotalTaxAmount, true
+	if o == nil || utils.IsNil(o.SubtotalTaxAmount) {
+		return nil, false
+	}
+	return o.SubtotalTaxAmount, true
 }
 
 // HasSubtotalTaxAmount returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasSubtotalTaxAmount() bool {
-    if o != nil && !utils.IsNil(o.SubtotalTaxAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SubtotalTaxAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSubtotalTaxAmount gets a reference to the given string and assigns it to the SubtotalTaxAmount field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetSubtotalTaxAmount(v string) {
-    o.SubtotalTaxAmount = &v
+	o.SubtotalTaxAmount = &v
 }
 
 // GetTaxAmount returns the TaxAmount field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetTaxAmount() string {
-    if o == nil || utils.IsNil(o.TaxAmount) {
-        var ret string
-        return ret
-    }
-    return *o.TaxAmount
+	if o == nil || utils.IsNil(o.TaxAmount) {
+		var ret string
+		return ret
+	}
+	return *o.TaxAmount
 }
 
 // GetTaxAmountOk returns a tuple with the TaxAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetTaxAmountOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TaxAmount) {
-        return nil, false
-    }
-    return o.TaxAmount, true
+	if o == nil || utils.IsNil(o.TaxAmount) {
+		return nil, false
+	}
+	return o.TaxAmount, true
 }
 
 // HasTaxAmount returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasTaxAmount() bool {
-    if o != nil && !utils.IsNil(o.TaxAmount) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TaxAmount) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTaxAmount gets a reference to the given string and assigns it to the TaxAmount field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetTaxAmount(v string) {
-    o.TaxAmount = &v
+	o.TaxAmount = &v
 }
 
 // GetTaxRate returns the TaxRate field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetTaxRate() string {
-    if o == nil || utils.IsNil(o.TaxRate) {
-        var ret string
-        return ret
-    }
-    return *o.TaxRate
+	if o == nil || utils.IsNil(o.TaxRate) {
+		var ret string
+		return ret
+	}
+	return *o.TaxRate
 }
 
 // GetTaxRateOk returns a tuple with the TaxRate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetTaxRateOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.TaxRate) {
-        return nil, false
-    }
-    return o.TaxRate, true
+	if o == nil || utils.IsNil(o.TaxRate) {
+		return nil, false
+	}
+	return o.TaxRate, true
 }
 
 // HasTaxRate returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasTaxRate() bool {
-    if o != nil && !utils.IsNil(o.TaxRate) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TaxRate) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTaxRate gets a reference to the given string and assigns it to the TaxRate field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetTaxRate(v string) {
-    o.TaxRate = &v
+	o.TaxRate = &v
 }
 
 // GetTotal returns the Total field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetTotal() string {
-    if o == nil || utils.IsNil(o.Total) {
-        var ret string
-        return ret
-    }
-    return *o.Total
+	if o == nil || utils.IsNil(o.Total) {
+		var ret string
+		return ret
+	}
+	return *o.Total
 }
 
 // GetTotalOk returns a tuple with the Total field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetTotalOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Total) {
-        return nil, false
-    }
-    return o.Total, true
+	if o == nil || utils.IsNil(o.Total) {
+		return nil, false
+	}
+	return o.Total, true
 }
 
 // HasTotal returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasTotal() bool {
-    if o != nil && !utils.IsNil(o.Total) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Total) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotal gets a reference to the given string and assigns it to the Total field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetTotal(v string) {
-    o.Total = &v
+	o.Total = &v
 }
 
 // GetVoucherDeductionPlatform returns the VoucherDeductionPlatform field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetVoucherDeductionPlatform() string {
-    if o == nil || utils.IsNil(o.VoucherDeductionPlatform) {
-        var ret string
-        return ret
-    }
-    return *o.VoucherDeductionPlatform
+	if o == nil || utils.IsNil(o.VoucherDeductionPlatform) {
+		var ret string
+		return ret
+	}
+	return *o.VoucherDeductionPlatform
 }
 
 // GetVoucherDeductionPlatformOk returns a tuple with the VoucherDeductionPlatform field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetVoucherDeductionPlatformOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.VoucherDeductionPlatform) {
-        return nil, false
-    }
-    return o.VoucherDeductionPlatform, true
+	if o == nil || utils.IsNil(o.VoucherDeductionPlatform) {
+		return nil, false
+	}
+	return o.VoucherDeductionPlatform, true
 }
 
 // HasVoucherDeductionPlatform returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasVoucherDeductionPlatform() bool {
-    if o != nil && !utils.IsNil(o.VoucherDeductionPlatform) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.VoucherDeductionPlatform) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetVoucherDeductionPlatform gets a reference to the given string and assigns it to the VoucherDeductionPlatform field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetVoucherDeductionPlatform(v string) {
-    o.VoucherDeductionPlatform = &v
+	o.VoucherDeductionPlatform = &v
 }
 
 // GetVoucherDeductionSeller returns the VoucherDeductionSeller field value if set, zero value otherwise.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetVoucherDeductionSeller() string {
-    if o == nil || utils.IsNil(o.VoucherDeductionSeller) {
-        var ret string
-        return ret
-    }
-    return *o.VoucherDeductionSeller
+	if o == nil || utils.IsNil(o.VoucherDeductionSeller) {
+		var ret string
+		return ret
+	}
+	return *o.VoucherDeductionSeller
 }
 
 // GetVoucherDeductionSellerOk returns a tuple with the VoucherDeductionSeller field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) GetVoucherDeductionSellerOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.VoucherDeductionSeller) {
-        return nil, false
-    }
-    return o.VoucherDeductionSeller, true
+	if o == nil || utils.IsNil(o.VoucherDeductionSeller) {
+		return nil, false
+	}
+	return o.VoucherDeductionSeller, true
 }
 
 // HasVoucherDeductionSeller returns a boolean if a field has been set.
 func (o *Order202407GetPriceDetailResponseDataLineItems) HasVoucherDeductionSeller() bool {
-    if o != nil && !utils.IsNil(o.VoucherDeductionSeller) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.VoucherDeductionSeller) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetVoucherDeductionSeller gets a reference to the given string and assigns it to the VoucherDeductionSeller field.
 func (o *Order202407GetPriceDetailResponseDataLineItems) SetVoucherDeductionSeller(v string) {
-    o.VoucherDeductionSeller = &v
+	o.VoucherDeductionSeller = &v
 }
 
 func (o Order202407GetPriceDetailResponseDataLineItems) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Order202407GetPriceDetailResponseDataLineItems) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CodFee) {
-        toSerialize["cod_fee"] = o.CodFee
-    }
-    if !utils.IsNil(o.CodFeeAmount) {
-        toSerialize["cod_fee_amount"] = o.CodFeeAmount
-    }
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
-    if !utils.IsNil(o.Id) {
-        toSerialize["id"] = o.Id
-    }
-    if !utils.IsNil(o.NetPriceAmount) {
-        toSerialize["net_price_amount"] = o.NetPriceAmount
-    }
-    if !utils.IsNil(o.Payment) {
-        toSerialize["payment"] = o.Payment
-    }
-    if !utils.IsNil(o.ShippingFeeDeductionPlatform) {
-        toSerialize["shipping_fee_deduction_platform"] = o.ShippingFeeDeductionPlatform
-    }
-    if !utils.IsNil(o.ShippingFeeDeductionPlatformVoucher) {
-        toSerialize["shipping_fee_deduction_platform_voucher"] = o.ShippingFeeDeductionPlatformVoucher
-    }
-    if !utils.IsNil(o.ShippingFeeDeductionSeller) {
-        toSerialize["shipping_fee_deduction_seller"] = o.ShippingFeeDeductionSeller
-    }
-    if !utils.IsNil(o.ShippingListPrice) {
-        toSerialize["shipping_list_price"] = o.ShippingListPrice
-    }
-    if !utils.IsNil(o.ShippingSalePrice) {
-        toSerialize["shipping_sale_price"] = o.ShippingSalePrice
-    }
-    if !utils.IsNil(o.SkuGiftNetPrice) {
-        toSerialize["sku_gift_net_price"] = o.SkuGiftNetPrice
-    }
-    if !utils.IsNil(o.SkuGiftOriginalPrice) {
-        toSerialize["sku_gift_original_price"] = o.SkuGiftOriginalPrice
-    }
-    if !utils.IsNil(o.SkuListPrice) {
-        toSerialize["sku_list_price"] = o.SkuListPrice
-    }
-    if !utils.IsNil(o.SkuSalePrice) {
-        toSerialize["sku_sale_price"] = o.SkuSalePrice
-    }
-    if !utils.IsNil(o.Subtotal) {
-        toSerialize["subtotal"] = o.Subtotal
-    }
-    if !utils.IsNil(o.SubtotalDeductionPlatform) {
-        toSerialize["subtotal_deduction_platform"] = o.SubtotalDeductionPlatform
-    }
-    if !utils.IsNil(o.SubtotalDeductionSeller) {
-        toSerialize["subtotal_deduction_seller"] = o.SubtotalDeductionSeller
-    }
-    if !utils.IsNil(o.SubtotalTaxAmount) {
-        toSerialize["subtotal_tax_amount"] = o.SubtotalTaxAmount
-    }
-    if !utils.IsNil(o.TaxAmount) {
-        toSerialize["tax_amount"] = o.TaxAmount
-    }
-    if !utils.IsNil(o.TaxRate) {
-        toSerialize["tax_rate"] = o.TaxRate
-    }
-    if !utils.IsNil(o.Total) {
-        toSerialize["total"] = o.Total
-    }
-    if !utils.IsNil(o.VoucherDeductionPlatform) {
-        toSerialize["voucher_deduction_platform"] = o.VoucherDeductionPlatform
-    }
-    if !utils.IsNil(o.VoucherDeductionSeller) {
-        toSerialize["voucher_deduction_seller"] = o.VoucherDeductionSeller
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CodFee) {
+		toSerialize["cod_fee"] = o.CodFee
+	}
+	if !utils.IsNil(o.CodFeeAmount) {
+		toSerialize["cod_fee_amount"] = o.CodFeeAmount
+	}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
+	if !utils.IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !utils.IsNil(o.NetPriceAmount) {
+		toSerialize["net_price_amount"] = o.NetPriceAmount
+	}
+	if !utils.IsNil(o.Payment) {
+		toSerialize["payment"] = o.Payment
+	}
+	if !utils.IsNil(o.ShippingFeeDeductionPlatform) {
+		toSerialize["shipping_fee_deduction_platform"] = o.ShippingFeeDeductionPlatform
+	}
+	if !utils.IsNil(o.ShippingFeeDeductionPlatformVoucher) {
+		toSerialize["shipping_fee_deduction_platform_voucher"] = o.ShippingFeeDeductionPlatformVoucher
+	}
+	if !utils.IsNil(o.ShippingFeeDeductionSeller) {
+		toSerialize["shipping_fee_deduction_seller"] = o.ShippingFeeDeductionSeller
+	}
+	if !utils.IsNil(o.ShippingListPrice) {
+		toSerialize["shipping_list_price"] = o.ShippingListPrice
+	}
+	if !utils.IsNil(o.ShippingSalePrice) {
+		toSerialize["shipping_sale_price"] = o.ShippingSalePrice
+	}
+	if !utils.IsNil(o.SkuGiftNetPrice) {
+		toSerialize["sku_gift_net_price"] = o.SkuGiftNetPrice
+	}
+	if !utils.IsNil(o.SkuGiftOriginalPrice) {
+		toSerialize["sku_gift_original_price"] = o.SkuGiftOriginalPrice
+	}
+	if !utils.IsNil(o.SkuListPrice) {
+		toSerialize["sku_list_price"] = o.SkuListPrice
+	}
+	if !utils.IsNil(o.SkuSalePrice) {
+		toSerialize["sku_sale_price"] = o.SkuSalePrice
+	}
+	if !utils.IsNil(o.Subtotal) {
+		toSerialize["subtotal"] = o.Subtotal
+	}
+	if !utils.IsNil(o.SubtotalDeductionPlatform) {
+		toSerialize["subtotal_deduction_platform"] = o.SubtotalDeductionPlatform
+	}
+	if !utils.IsNil(o.SubtotalDeductionSeller) {
+		toSerialize["subtotal_deduction_seller"] = o.SubtotalDeductionSeller
+	}
+	if !utils.IsNil(o.SubtotalTaxAmount) {
+		toSerialize["subtotal_tax_amount"] = o.SubtotalTaxAmount
+	}
+	if !utils.IsNil(o.TaxAmount) {
+		toSerialize["tax_amount"] = o.TaxAmount
+	}
+	if !utils.IsNil(o.TaxRate) {
+		toSerialize["tax_rate"] = o.TaxRate
+	}
+	if !utils.IsNil(o.Total) {
+		toSerialize["total"] = o.Total
+	}
+	if !utils.IsNil(o.VoucherDeductionPlatform) {
+		toSerialize["voucher_deduction_platform"] = o.VoucherDeductionPlatform
+	}
+	if !utils.IsNil(o.VoucherDeductionSeller) {
+		toSerialize["voucher_deduction_seller"] = o.VoucherDeductionSeller
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Order202407GetPriceDetailResponseDataLineItems) UnmarshalJSON(data []byte) (err error) {
-    varOrder202407GetPriceDetailResponseDataLineItems := _Order202407GetPriceDetailResponseDataLineItems{}
+	varOrder202407GetPriceDetailResponseDataLineItems := _Order202407GetPriceDetailResponseDataLineItems{}
 
-    err = json.Unmarshal(data, &varOrder202407GetPriceDetailResponseDataLineItems)
+	err = json.Unmarshal(data, &varOrder202407GetPriceDetailResponseDataLineItems)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Order202407GetPriceDetailResponseDataLineItems(varOrder202407GetPriceDetailResponseDataLineItems)
+	*o = Order202407GetPriceDetailResponseDataLineItems(varOrder202407GetPriceDetailResponseDataLineItems)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "cod_fee")
-        delete(additionalProperties, "cod_fee_amount")
-        delete(additionalProperties, "currency")
-        delete(additionalProperties, "id")
-        delete(additionalProperties, "net_price_amount")
-        delete(additionalProperties, "payment")
-        delete(additionalProperties, "shipping_fee_deduction_platform")
-        delete(additionalProperties, "shipping_fee_deduction_platform_voucher")
-        delete(additionalProperties, "shipping_fee_deduction_seller")
-        delete(additionalProperties, "shipping_list_price")
-        delete(additionalProperties, "shipping_sale_price")
-        delete(additionalProperties, "sku_gift_net_price")
-        delete(additionalProperties, "sku_gift_original_price")
-        delete(additionalProperties, "sku_list_price")
-        delete(additionalProperties, "sku_sale_price")
-        delete(additionalProperties, "subtotal")
-        delete(additionalProperties, "subtotal_deduction_platform")
-        delete(additionalProperties, "subtotal_deduction_seller")
-        delete(additionalProperties, "subtotal_tax_amount")
-        delete(additionalProperties, "tax_amount")
-        delete(additionalProperties, "tax_rate")
-        delete(additionalProperties, "total")
-        delete(additionalProperties, "voucher_deduction_platform")
-        delete(additionalProperties, "voucher_deduction_seller")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "cod_fee")
+		delete(additionalProperties, "cod_fee_amount")
+		delete(additionalProperties, "currency")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "net_price_amount")
+		delete(additionalProperties, "payment")
+		delete(additionalProperties, "shipping_fee_deduction_platform")
+		delete(additionalProperties, "shipping_fee_deduction_platform_voucher")
+		delete(additionalProperties, "shipping_fee_deduction_seller")
+		delete(additionalProperties, "shipping_list_price")
+		delete(additionalProperties, "shipping_sale_price")
+		delete(additionalProperties, "sku_gift_net_price")
+		delete(additionalProperties, "sku_gift_original_price")
+		delete(additionalProperties, "sku_list_price")
+		delete(additionalProperties, "sku_sale_price")
+		delete(additionalProperties, "subtotal")
+		delete(additionalProperties, "subtotal_deduction_platform")
+		delete(additionalProperties, "subtotal_deduction_seller")
+		delete(additionalProperties, "subtotal_tax_amount")
+		delete(additionalProperties, "tax_amount")
+		delete(additionalProperties, "tax_rate")
+		delete(additionalProperties, "total")
+		delete(additionalProperties, "voucher_deduction_platform")
+		delete(additionalProperties, "voucher_deduction_seller")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableOrder202407GetPriceDetailResponseDataLineItems struct {
@@ -1026,5 +1026,3 @@ func (v *NullableOrder202407GetPriceDetailResponseDataLineItems) UnmarshalJSON(s
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

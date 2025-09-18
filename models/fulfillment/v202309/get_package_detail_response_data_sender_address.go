@@ -11,36 +11,36 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309GetPackageDetailResponseDataSenderAddress type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309GetPackageDetailResponseDataSenderAddress type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309GetPackageDetailResponseDataSenderAddress{}
 
 // Fulfillment202309GetPackageDetailResponseDataSenderAddress struct for Fulfillment202309GetPackageDetailResponseDataSenderAddress
 type Fulfillment202309GetPackageDetailResponseDataSenderAddress struct {
-    // Full sender detail address.
-    AddressDetail *string `json:"address_detail,omitempty"`
-    // The first line of the sender's street address.
-    AddressLine1 *string `json:"address_line1,omitempty"`
-    // The second line of the sender's street address.
-    AddressLine2 *string `json:"address_line2,omitempty"`
-    // The third line of the sender's street address. Usually only for the Brazilian market.
-    AddressLine3 *string `json:"address_line3,omitempty"`
-    // The fourth line of the sender's street address. Usually only for the Brazilian market.
-    AddressLine4 *string `json:"address_line4,omitempty"`
-    // The complete sender addresses information.
-    FullAddress *string `json:"full_address,omitempty"`
-    // The name of the sender.
-    Name *string `json:"name,omitempty"`
-    // The telephone number of the sender. 
-    PhoneNumber *string `json:"phone_number,omitempty"`
-    // The postal code of the sender.
-    PostalCode *string `json:"postal_code,omitempty"`
-    // Region code of the sender.
-    RegionCode *string `json:"region_code,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Full sender detail address.
+	AddressDetail *string `json:"address_detail,omitempty"`
+	// The first line of the sender's street address.
+	AddressLine1 *string `json:"address_line1,omitempty"`
+	// The second line of the sender's street address.
+	AddressLine2 *string `json:"address_line2,omitempty"`
+	// The third line of the sender's street address. Usually only for the Brazilian market.
+	AddressLine3 *string `json:"address_line3,omitempty"`
+	// The fourth line of the sender's street address. Usually only for the Brazilian market.
+	AddressLine4 *string `json:"address_line4,omitempty"`
+	// The complete sender addresses information.
+	FullAddress *string `json:"full_address,omitempty"`
+	// The name of the sender.
+	Name *string `json:"name,omitempty"`
+	// The telephone number of the sender.
+	PhoneNumber *string `json:"phone_number,omitempty"`
+	// The postal code of the sender.
+	PostalCode *string `json:"postal_code,omitempty"`
+	// Region code of the sender.
+	RegionCode           *string `json:"region_code,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309GetPackageDetailResponseDataSenderAddress Fulfillment202309GetPackageDetailResponseDataSenderAddress
@@ -50,413 +50,413 @@ type _Fulfillment202309GetPackageDetailResponseDataSenderAddress Fulfillment2023
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309GetPackageDetailResponseDataSenderAddress() *Fulfillment202309GetPackageDetailResponseDataSenderAddress {
-    this := Fulfillment202309GetPackageDetailResponseDataSenderAddress{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseDataSenderAddress{}
+	return &this
 }
 
 // NewFulfillment202309GetPackageDetailResponseDataSenderAddressWithDefaults instantiates a new Fulfillment202309GetPackageDetailResponseDataSenderAddress object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309GetPackageDetailResponseDataSenderAddressWithDefaults() *Fulfillment202309GetPackageDetailResponseDataSenderAddress {
-    this := Fulfillment202309GetPackageDetailResponseDataSenderAddress{}
-    return &this
+	this := Fulfillment202309GetPackageDetailResponseDataSenderAddress{}
+	return &this
 }
 
 // GetAddressDetail returns the AddressDetail field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressDetail() string {
-    if o == nil || utils.IsNil(o.AddressDetail) {
-        var ret string
-        return ret
-    }
-    return *o.AddressDetail
+	if o == nil || utils.IsNil(o.AddressDetail) {
+		var ret string
+		return ret
+	}
+	return *o.AddressDetail
 }
 
 // GetAddressDetailOk returns a tuple with the AddressDetail field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressDetailOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.AddressDetail) {
-        return nil, false
-    }
-    return o.AddressDetail, true
+	if o == nil || utils.IsNil(o.AddressDetail) {
+		return nil, false
+	}
+	return o.AddressDetail, true
 }
 
 // HasAddressDetail returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasAddressDetail() bool {
-    if o != nil && !utils.IsNil(o.AddressDetail) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AddressDetail) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddressDetail gets a reference to the given string and assigns it to the AddressDetail field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetAddressDetail(v string) {
-    o.AddressDetail = &v
+	o.AddressDetail = &v
 }
 
 // GetAddressLine1 returns the AddressLine1 field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressLine1() string {
-    if o == nil || utils.IsNil(o.AddressLine1) {
-        var ret string
-        return ret
-    }
-    return *o.AddressLine1
+	if o == nil || utils.IsNil(o.AddressLine1) {
+		var ret string
+		return ret
+	}
+	return *o.AddressLine1
 }
 
 // GetAddressLine1Ok returns a tuple with the AddressLine1 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressLine1Ok() (*string, bool) {
-    if o == nil || utils.IsNil(o.AddressLine1) {
-        return nil, false
-    }
-    return o.AddressLine1, true
+	if o == nil || utils.IsNil(o.AddressLine1) {
+		return nil, false
+	}
+	return o.AddressLine1, true
 }
 
 // HasAddressLine1 returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasAddressLine1() bool {
-    if o != nil && !utils.IsNil(o.AddressLine1) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AddressLine1) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddressLine1 gets a reference to the given string and assigns it to the AddressLine1 field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetAddressLine1(v string) {
-    o.AddressLine1 = &v
+	o.AddressLine1 = &v
 }
 
 // GetAddressLine2 returns the AddressLine2 field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressLine2() string {
-    if o == nil || utils.IsNil(o.AddressLine2) {
-        var ret string
-        return ret
-    }
-    return *o.AddressLine2
+	if o == nil || utils.IsNil(o.AddressLine2) {
+		var ret string
+		return ret
+	}
+	return *o.AddressLine2
 }
 
 // GetAddressLine2Ok returns a tuple with the AddressLine2 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressLine2Ok() (*string, bool) {
-    if o == nil || utils.IsNil(o.AddressLine2) {
-        return nil, false
-    }
-    return o.AddressLine2, true
+	if o == nil || utils.IsNil(o.AddressLine2) {
+		return nil, false
+	}
+	return o.AddressLine2, true
 }
 
 // HasAddressLine2 returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasAddressLine2() bool {
-    if o != nil && !utils.IsNil(o.AddressLine2) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AddressLine2) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddressLine2 gets a reference to the given string and assigns it to the AddressLine2 field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetAddressLine2(v string) {
-    o.AddressLine2 = &v
+	o.AddressLine2 = &v
 }
 
 // GetAddressLine3 returns the AddressLine3 field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressLine3() string {
-    if o == nil || utils.IsNil(o.AddressLine3) {
-        var ret string
-        return ret
-    }
-    return *o.AddressLine3
+	if o == nil || utils.IsNil(o.AddressLine3) {
+		var ret string
+		return ret
+	}
+	return *o.AddressLine3
 }
 
 // GetAddressLine3Ok returns a tuple with the AddressLine3 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressLine3Ok() (*string, bool) {
-    if o == nil || utils.IsNil(o.AddressLine3) {
-        return nil, false
-    }
-    return o.AddressLine3, true
+	if o == nil || utils.IsNil(o.AddressLine3) {
+		return nil, false
+	}
+	return o.AddressLine3, true
 }
 
 // HasAddressLine3 returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasAddressLine3() bool {
-    if o != nil && !utils.IsNil(o.AddressLine3) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AddressLine3) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddressLine3 gets a reference to the given string and assigns it to the AddressLine3 field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetAddressLine3(v string) {
-    o.AddressLine3 = &v
+	o.AddressLine3 = &v
 }
 
 // GetAddressLine4 returns the AddressLine4 field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressLine4() string {
-    if o == nil || utils.IsNil(o.AddressLine4) {
-        var ret string
-        return ret
-    }
-    return *o.AddressLine4
+	if o == nil || utils.IsNil(o.AddressLine4) {
+		var ret string
+		return ret
+	}
+	return *o.AddressLine4
 }
 
 // GetAddressLine4Ok returns a tuple with the AddressLine4 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetAddressLine4Ok() (*string, bool) {
-    if o == nil || utils.IsNil(o.AddressLine4) {
-        return nil, false
-    }
-    return o.AddressLine4, true
+	if o == nil || utils.IsNil(o.AddressLine4) {
+		return nil, false
+	}
+	return o.AddressLine4, true
 }
 
 // HasAddressLine4 returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasAddressLine4() bool {
-    if o != nil && !utils.IsNil(o.AddressLine4) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.AddressLine4) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetAddressLine4 gets a reference to the given string and assigns it to the AddressLine4 field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetAddressLine4(v string) {
-    o.AddressLine4 = &v
+	o.AddressLine4 = &v
 }
 
 // GetFullAddress returns the FullAddress field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetFullAddress() string {
-    if o == nil || utils.IsNil(o.FullAddress) {
-        var ret string
-        return ret
-    }
-    return *o.FullAddress
+	if o == nil || utils.IsNil(o.FullAddress) {
+		var ret string
+		return ret
+	}
+	return *o.FullAddress
 }
 
 // GetFullAddressOk returns a tuple with the FullAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetFullAddressOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.FullAddress) {
-        return nil, false
-    }
-    return o.FullAddress, true
+	if o == nil || utils.IsNil(o.FullAddress) {
+		return nil, false
+	}
+	return o.FullAddress, true
 }
 
 // HasFullAddress returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasFullAddress() bool {
-    if o != nil && !utils.IsNil(o.FullAddress) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.FullAddress) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetFullAddress gets a reference to the given string and assigns it to the FullAddress field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetFullAddress(v string) {
-    o.FullAddress = &v
+	o.FullAddress = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 // GetPhoneNumber returns the PhoneNumber field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetPhoneNumber() string {
-    if o == nil || utils.IsNil(o.PhoneNumber) {
-        var ret string
-        return ret
-    }
-    return *o.PhoneNumber
+	if o == nil || utils.IsNil(o.PhoneNumber) {
+		var ret string
+		return ret
+	}
+	return *o.PhoneNumber
 }
 
 // GetPhoneNumberOk returns a tuple with the PhoneNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetPhoneNumberOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PhoneNumber) {
-        return nil, false
-    }
-    return o.PhoneNumber, true
+	if o == nil || utils.IsNil(o.PhoneNumber) {
+		return nil, false
+	}
+	return o.PhoneNumber, true
 }
 
 // HasPhoneNumber returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasPhoneNumber() bool {
-    if o != nil && !utils.IsNil(o.PhoneNumber) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PhoneNumber) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPhoneNumber gets a reference to the given string and assigns it to the PhoneNumber field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetPhoneNumber(v string) {
-    o.PhoneNumber = &v
+	o.PhoneNumber = &v
 }
 
 // GetPostalCode returns the PostalCode field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetPostalCode() string {
-    if o == nil || utils.IsNil(o.PostalCode) {
-        var ret string
-        return ret
-    }
-    return *o.PostalCode
+	if o == nil || utils.IsNil(o.PostalCode) {
+		var ret string
+		return ret
+	}
+	return *o.PostalCode
 }
 
 // GetPostalCodeOk returns a tuple with the PostalCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetPostalCodeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.PostalCode) {
-        return nil, false
-    }
-    return o.PostalCode, true
+	if o == nil || utils.IsNil(o.PostalCode) {
+		return nil, false
+	}
+	return o.PostalCode, true
 }
 
 // HasPostalCode returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasPostalCode() bool {
-    if o != nil && !utils.IsNil(o.PostalCode) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.PostalCode) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPostalCode gets a reference to the given string and assigns it to the PostalCode field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetPostalCode(v string) {
-    o.PostalCode = &v
+	o.PostalCode = &v
 }
 
 // GetRegionCode returns the RegionCode field value if set, zero value otherwise.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetRegionCode() string {
-    if o == nil || utils.IsNil(o.RegionCode) {
-        var ret string
-        return ret
-    }
-    return *o.RegionCode
+	if o == nil || utils.IsNil(o.RegionCode) {
+		var ret string
+		return ret
+	}
+	return *o.RegionCode
 }
 
 // GetRegionCodeOk returns a tuple with the RegionCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) GetRegionCodeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.RegionCode) {
-        return nil, false
-    }
-    return o.RegionCode, true
+	if o == nil || utils.IsNil(o.RegionCode) {
+		return nil, false
+	}
+	return o.RegionCode, true
 }
 
 // HasRegionCode returns a boolean if a field has been set.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) HasRegionCode() bool {
-    if o != nil && !utils.IsNil(o.RegionCode) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RegionCode) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRegionCode gets a reference to the given string and assigns it to the RegionCode field.
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) SetRegionCode(v string) {
-    o.RegionCode = &v
+	o.RegionCode = &v
 }
 
 func (o Fulfillment202309GetPackageDetailResponseDataSenderAddress) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309GetPackageDetailResponseDataSenderAddress) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.AddressDetail) {
-        toSerialize["address_detail"] = o.AddressDetail
-    }
-    if !utils.IsNil(o.AddressLine1) {
-        toSerialize["address_line1"] = o.AddressLine1
-    }
-    if !utils.IsNil(o.AddressLine2) {
-        toSerialize["address_line2"] = o.AddressLine2
-    }
-    if !utils.IsNil(o.AddressLine3) {
-        toSerialize["address_line3"] = o.AddressLine3
-    }
-    if !utils.IsNil(o.AddressLine4) {
-        toSerialize["address_line4"] = o.AddressLine4
-    }
-    if !utils.IsNil(o.FullAddress) {
-        toSerialize["full_address"] = o.FullAddress
-    }
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
-    if !utils.IsNil(o.PhoneNumber) {
-        toSerialize["phone_number"] = o.PhoneNumber
-    }
-    if !utils.IsNil(o.PostalCode) {
-        toSerialize["postal_code"] = o.PostalCode
-    }
-    if !utils.IsNil(o.RegionCode) {
-        toSerialize["region_code"] = o.RegionCode
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.AddressDetail) {
+		toSerialize["address_detail"] = o.AddressDetail
+	}
+	if !utils.IsNil(o.AddressLine1) {
+		toSerialize["address_line1"] = o.AddressLine1
+	}
+	if !utils.IsNil(o.AddressLine2) {
+		toSerialize["address_line2"] = o.AddressLine2
+	}
+	if !utils.IsNil(o.AddressLine3) {
+		toSerialize["address_line3"] = o.AddressLine3
+	}
+	if !utils.IsNil(o.AddressLine4) {
+		toSerialize["address_line4"] = o.AddressLine4
+	}
+	if !utils.IsNil(o.FullAddress) {
+		toSerialize["full_address"] = o.FullAddress
+	}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !utils.IsNil(o.PhoneNumber) {
+		toSerialize["phone_number"] = o.PhoneNumber
+	}
+	if !utils.IsNil(o.PostalCode) {
+		toSerialize["postal_code"] = o.PostalCode
+	}
+	if !utils.IsNil(o.RegionCode) {
+		toSerialize["region_code"] = o.RegionCode
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309GetPackageDetailResponseDataSenderAddress) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309GetPackageDetailResponseDataSenderAddress := _Fulfillment202309GetPackageDetailResponseDataSenderAddress{}
+	varFulfillment202309GetPackageDetailResponseDataSenderAddress := _Fulfillment202309GetPackageDetailResponseDataSenderAddress{}
 
-    err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseDataSenderAddress)
+	err = json.Unmarshal(data, &varFulfillment202309GetPackageDetailResponseDataSenderAddress)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309GetPackageDetailResponseDataSenderAddress(varFulfillment202309GetPackageDetailResponseDataSenderAddress)
+	*o = Fulfillment202309GetPackageDetailResponseDataSenderAddress(varFulfillment202309GetPackageDetailResponseDataSenderAddress)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "address_detail")
-        delete(additionalProperties, "address_line1")
-        delete(additionalProperties, "address_line2")
-        delete(additionalProperties, "address_line3")
-        delete(additionalProperties, "address_line4")
-        delete(additionalProperties, "full_address")
-        delete(additionalProperties, "name")
-        delete(additionalProperties, "phone_number")
-        delete(additionalProperties, "postal_code")
-        delete(additionalProperties, "region_code")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "address_detail")
+		delete(additionalProperties, "address_line1")
+		delete(additionalProperties, "address_line2")
+		delete(additionalProperties, "address_line3")
+		delete(additionalProperties, "address_line4")
+		delete(additionalProperties, "full_address")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "phone_number")
+		delete(additionalProperties, "postal_code")
+		delete(additionalProperties, "region_code")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309GetPackageDetailResponseDataSenderAddress struct {
@@ -494,5 +494,3 @@ func (v *NullableFulfillment202309GetPackageDetailResponseDataSenderAddress) Unm
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

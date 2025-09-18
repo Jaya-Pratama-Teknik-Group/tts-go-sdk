@@ -11,20 +11,20 @@ API version: 1.0.0
 package logistics_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation type satisfies the MappedNullable interface at compile time
+// checks if the Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation{}
 
 // Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation struct for Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation
 type Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation struct {
-    // The latitude of the address.
-    Latitude *string `json:"latitude,omitempty"`
-    // The longitude of the address.
-    Longitude *string `json:"longitude,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The latitude of the address.
+	Latitude *string `json:"latitude,omitempty"`
+	// The longitude of the address.
+	Longitude            *string `json:"longitude,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation
@@ -34,125 +34,125 @@ type _Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation Lo
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation() *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation {
-    this := Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation{}
-    return &this
+	this := Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation{}
+	return &this
 }
 
 // NewLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocationWithDefaults instantiates a new Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocationWithDefaults() *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation {
-    this := Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation{}
-    return &this
+	this := Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation{}
+	return &this
 }
 
 // GetLatitude returns the Latitude field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) GetLatitude() string {
-    if o == nil || utils.IsNil(o.Latitude) {
-        var ret string
-        return ret
-    }
-    return *o.Latitude
+	if o == nil || utils.IsNil(o.Latitude) {
+		var ret string
+		return ret
+	}
+	return *o.Latitude
 }
 
 // GetLatitudeOk returns a tuple with the Latitude field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) GetLatitudeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Latitude) {
-        return nil, false
-    }
-    return o.Latitude, true
+	if o == nil || utils.IsNil(o.Latitude) {
+		return nil, false
+	}
+	return o.Latitude, true
 }
 
 // HasLatitude returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) HasLatitude() bool {
-    if o != nil && !utils.IsNil(o.Latitude) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Latitude) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLatitude gets a reference to the given string and assigns it to the Latitude field.
 func (o *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) SetLatitude(v string) {
-    o.Latitude = &v
+	o.Latitude = &v
 }
 
 // GetLongitude returns the Longitude field value if set, zero value otherwise.
 func (o *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) GetLongitude() string {
-    if o == nil || utils.IsNil(o.Longitude) {
-        var ret string
-        return ret
-    }
-    return *o.Longitude
+	if o == nil || utils.IsNil(o.Longitude) {
+		var ret string
+		return ret
+	}
+	return *o.Longitude
 }
 
 // GetLongitudeOk returns a tuple with the Longitude field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) GetLongitudeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Longitude) {
-        return nil, false
-    }
-    return o.Longitude, true
+	if o == nil || utils.IsNil(o.Longitude) {
+		return nil, false
+	}
+	return o.Longitude, true
 }
 
 // HasLongitude returns a boolean if a field has been set.
 func (o *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) HasLongitude() bool {
-    if o != nil && !utils.IsNil(o.Longitude) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Longitude) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetLongitude gets a reference to the given string and assigns it to the Longitude field.
 func (o *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) SetLongitude(v string) {
-    o.Longitude = &v
+	o.Longitude = &v
 }
 
 func (o Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Latitude) {
-        toSerialize["latitude"] = o.Latitude
-    }
-    if !utils.IsNil(o.Longitude) {
-        toSerialize["longitude"] = o.Longitude
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Latitude) {
+		toSerialize["latitude"] = o.Latitude
+	}
+	if !utils.IsNil(o.Longitude) {
+		toSerialize["longitude"] = o.Longitude
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation) UnmarshalJSON(data []byte) (err error) {
-    varLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation := _Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation{}
+	varLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation := _Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation{}
 
-    err = json.Unmarshal(data, &varLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation)
+	err = json.Unmarshal(data, &varLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation(varLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation)
+	*o = Logistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation(varLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "latitude")
-        delete(additionalProperties, "longitude")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "latitude")
+		delete(additionalProperties, "longitude")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableLogistics202309GetWarehouseListResponseDataWarehousesAddressGeolocation struct {
@@ -190,5 +190,3 @@ func (v *NullableLogistics202309GetWarehouseListResponseDataWarehousesAddressGeo
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

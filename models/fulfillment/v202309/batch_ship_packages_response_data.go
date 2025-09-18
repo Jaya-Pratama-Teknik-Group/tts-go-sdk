@@ -11,18 +11,18 @@ API version: 1.0.0
 package fulfillment_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Fulfillment202309BatchShipPackagesResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Fulfillment202309BatchShipPackagesResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Fulfillment202309BatchShipPackagesResponseData{}
 
 // Fulfillment202309BatchShipPackagesResponseData struct for Fulfillment202309BatchShipPackagesResponseData
 type Fulfillment202309BatchShipPackagesResponseData struct {
-    // Return list of possible errors during package batch shipment attempt.
-    Errors []Fulfillment202309BatchShipPackagesResponseDataErrors `json:"errors,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Return list of possible errors during package batch shipment attempt.
+	Errors               []Fulfillment202309BatchShipPackagesResponseDataErrors `json:"errors,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Fulfillment202309BatchShipPackagesResponseData Fulfillment202309BatchShipPackagesResponseData
@@ -32,89 +32,89 @@ type _Fulfillment202309BatchShipPackagesResponseData Fulfillment202309BatchShipP
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFulfillment202309BatchShipPackagesResponseData() *Fulfillment202309BatchShipPackagesResponseData {
-    this := Fulfillment202309BatchShipPackagesResponseData{}
-    return &this
+	this := Fulfillment202309BatchShipPackagesResponseData{}
+	return &this
 }
 
 // NewFulfillment202309BatchShipPackagesResponseDataWithDefaults instantiates a new Fulfillment202309BatchShipPackagesResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFulfillment202309BatchShipPackagesResponseDataWithDefaults() *Fulfillment202309BatchShipPackagesResponseData {
-    this := Fulfillment202309BatchShipPackagesResponseData{}
-    return &this
+	this := Fulfillment202309BatchShipPackagesResponseData{}
+	return &this
 }
 
 // GetErrors returns the Errors field value if set, zero value otherwise.
 func (o *Fulfillment202309BatchShipPackagesResponseData) GetErrors() []Fulfillment202309BatchShipPackagesResponseDataErrors {
-    if o == nil || utils.IsNil(o.Errors) {
-        var ret []Fulfillment202309BatchShipPackagesResponseDataErrors
-        return ret
-    }
-    return o.Errors
+	if o == nil || utils.IsNil(o.Errors) {
+		var ret []Fulfillment202309BatchShipPackagesResponseDataErrors
+		return ret
+	}
+	return o.Errors
 }
 
 // GetErrorsOk returns a tuple with the Errors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fulfillment202309BatchShipPackagesResponseData) GetErrorsOk() ([]Fulfillment202309BatchShipPackagesResponseDataErrors, bool) {
-    if o == nil || utils.IsNil(o.Errors) {
-        return nil, false
-    }
-    return o.Errors, true
+	if o == nil || utils.IsNil(o.Errors) {
+		return nil, false
+	}
+	return o.Errors, true
 }
 
 // HasErrors returns a boolean if a field has been set.
 func (o *Fulfillment202309BatchShipPackagesResponseData) HasErrors() bool {
-    if o != nil && !utils.IsNil(o.Errors) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Errors) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetErrors gets a reference to the given []Fulfillment202309BatchShipPackagesResponseDataErrors and assigns it to the Errors field.
 func (o *Fulfillment202309BatchShipPackagesResponseData) SetErrors(v []Fulfillment202309BatchShipPackagesResponseDataErrors) {
-    o.Errors = v
+	o.Errors = v
 }
 
 func (o Fulfillment202309BatchShipPackagesResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Fulfillment202309BatchShipPackagesResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Errors) {
-        toSerialize["errors"] = o.Errors
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Errors) {
+		toSerialize["errors"] = o.Errors
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Fulfillment202309BatchShipPackagesResponseData) UnmarshalJSON(data []byte) (err error) {
-    varFulfillment202309BatchShipPackagesResponseData := _Fulfillment202309BatchShipPackagesResponseData{}
+	varFulfillment202309BatchShipPackagesResponseData := _Fulfillment202309BatchShipPackagesResponseData{}
 
-    err = json.Unmarshal(data, &varFulfillment202309BatchShipPackagesResponseData)
+	err = json.Unmarshal(data, &varFulfillment202309BatchShipPackagesResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Fulfillment202309BatchShipPackagesResponseData(varFulfillment202309BatchShipPackagesResponseData)
+	*o = Fulfillment202309BatchShipPackagesResponseData(varFulfillment202309BatchShipPackagesResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "errors")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "errors")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFulfillment202309BatchShipPackagesResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableFulfillment202309BatchShipPackagesResponseData) UnmarshalJSON(s
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

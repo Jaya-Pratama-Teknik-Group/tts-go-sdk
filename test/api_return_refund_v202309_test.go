@@ -11,10 +11,10 @@ package sdk_golang
 
 import (
 	"context"
+	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
 )
 
 func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309CancellationsCancelIdApprovePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var cancelId string
 
@@ -38,7 +38,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309CancellationsCancelIdRejectPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var cancelId string
 
@@ -52,7 +52,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309CancellationsPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ReturnRefundV202309API.ReturnRefund202309CancellationsPost(context.Background()).Execute()
 
@@ -64,7 +64,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309CancellationsSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ReturnRefundV202309API.ReturnRefund202309CancellationsSearchPost(context.Background()).Execute()
 
@@ -76,7 +76,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309OrdersOrderIdAftersaleEligibilityGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orderId string
 
@@ -90,7 +90,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309RefundsCalculatePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ReturnRefundV202309API.ReturnRefund202309RefundsCalculatePost(context.Background()).Execute()
 
@@ -102,7 +102,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309RejectReasonsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ReturnRefundV202309API.ReturnRefund202309RejectReasonsGet(context.Background()).Execute()
 
@@ -114,7 +114,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309ReturnsPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ReturnRefundV202309API.ReturnRefund202309ReturnsPost(context.Background()).Execute()
 
@@ -126,7 +126,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309ReturnsReturnIdApprovePost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var returnId string
 
@@ -140,7 +140,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309ReturnsReturnIdRecordsGet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var returnId string
 
@@ -154,7 +154,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309ReturnsReturnIdRejectPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var returnId string
 
@@ -168,7 +168,7 @@ func Test_sdk_golang_ReturnRefundV202309APIService(t *testing.T) {
 
 	t.Run("Test ReturnRefundV202309APIService ReturnRefund202309ReturnsSearchPost", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ReturnRefundV202309API.ReturnRefund202309ReturnsSearchPost(context.Background()).Execute()
 

@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CreateProductRequestBodySkusInventory type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CreateProductRequestBodySkusInventory type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CreateProductRequestBodySkusInventory{}
 
 // Product202309CreateProductRequestBodySkusInventory struct for Product202309CreateProductRequestBodySkusInventory
 type Product202309CreateProductRequestBodySkusInventory struct {
-    // The total SKU quantity available in the warehouse. Valid range: [1, 99,999]
-    Quantity *int32 `json:"quantity,omitempty"`
-    // The ID of the warehouse where the SKU is stored.  Retrieve the list of warehouses available for your shop from the [Get Warehouse List API](https://partner.tiktokshop.com/docv2/page/650aa418defece02be6e66b6).
-    WarehouseId *string `json:"warehouse_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The total SKU quantity available in the warehouse. Valid range: [1, 99,999]
+	Quantity *int32 `json:"quantity,omitempty"`
+	// The ID of the warehouse where the SKU is stored.  Retrieve the list of warehouses available for your shop from the [Get Warehouse List API](https://partner.tiktokshop.com/docv2/page/650aa418defece02be6e66b6).
+	WarehouseId          *string `json:"warehouse_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CreateProductRequestBodySkusInventory Product202309CreateProductRequestBodySkusInventory
@@ -34,125 +34,125 @@ type _Product202309CreateProductRequestBodySkusInventory Product202309CreateProd
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CreateProductRequestBodySkusInventory() *Product202309CreateProductRequestBodySkusInventory {
-    this := Product202309CreateProductRequestBodySkusInventory{}
-    return &this
+	this := Product202309CreateProductRequestBodySkusInventory{}
+	return &this
 }
 
 // NewProduct202309CreateProductRequestBodySkusInventoryWithDefaults instantiates a new Product202309CreateProductRequestBodySkusInventory object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CreateProductRequestBodySkusInventoryWithDefaults() *Product202309CreateProductRequestBodySkusInventory {
-    this := Product202309CreateProductRequestBodySkusInventory{}
-    return &this
+	this := Product202309CreateProductRequestBodySkusInventory{}
+	return &this
 }
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
 func (o *Product202309CreateProductRequestBodySkusInventory) GetQuantity() int32 {
-    if o == nil || utils.IsNil(o.Quantity) {
-        var ret int32
-        return ret
-    }
-    return *o.Quantity
+	if o == nil || utils.IsNil(o.Quantity) {
+		var ret int32
+		return ret
+	}
+	return *o.Quantity
 }
 
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CreateProductRequestBodySkusInventory) GetQuantityOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Quantity) {
-        return nil, false
-    }
-    return o.Quantity, true
+	if o == nil || utils.IsNil(o.Quantity) {
+		return nil, false
+	}
+	return o.Quantity, true
 }
 
 // HasQuantity returns a boolean if a field has been set.
 func (o *Product202309CreateProductRequestBodySkusInventory) HasQuantity() bool {
-    if o != nil && !utils.IsNil(o.Quantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Quantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantity gets a reference to the given int32 and assigns it to the Quantity field.
 func (o *Product202309CreateProductRequestBodySkusInventory) SetQuantity(v int32) {
-    o.Quantity = &v
+	o.Quantity = &v
 }
 
 // GetWarehouseId returns the WarehouseId field value if set, zero value otherwise.
 func (o *Product202309CreateProductRequestBodySkusInventory) GetWarehouseId() string {
-    if o == nil || utils.IsNil(o.WarehouseId) {
-        var ret string
-        return ret
-    }
-    return *o.WarehouseId
+	if o == nil || utils.IsNil(o.WarehouseId) {
+		var ret string
+		return ret
+	}
+	return *o.WarehouseId
 }
 
 // GetWarehouseIdOk returns a tuple with the WarehouseId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CreateProductRequestBodySkusInventory) GetWarehouseIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.WarehouseId) {
-        return nil, false
-    }
-    return o.WarehouseId, true
+	if o == nil || utils.IsNil(o.WarehouseId) {
+		return nil, false
+	}
+	return o.WarehouseId, true
 }
 
 // HasWarehouseId returns a boolean if a field has been set.
 func (o *Product202309CreateProductRequestBodySkusInventory) HasWarehouseId() bool {
-    if o != nil && !utils.IsNil(o.WarehouseId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.WarehouseId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWarehouseId gets a reference to the given string and assigns it to the WarehouseId field.
 func (o *Product202309CreateProductRequestBodySkusInventory) SetWarehouseId(v string) {
-    o.WarehouseId = &v
+	o.WarehouseId = &v
 }
 
 func (o Product202309CreateProductRequestBodySkusInventory) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CreateProductRequestBodySkusInventory) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Quantity) {
-        toSerialize["quantity"] = o.Quantity
-    }
-    if !utils.IsNil(o.WarehouseId) {
-        toSerialize["warehouse_id"] = o.WarehouseId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Quantity) {
+		toSerialize["quantity"] = o.Quantity
+	}
+	if !utils.IsNil(o.WarehouseId) {
+		toSerialize["warehouse_id"] = o.WarehouseId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CreateProductRequestBodySkusInventory) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CreateProductRequestBodySkusInventory := _Product202309CreateProductRequestBodySkusInventory{}
+	varProduct202309CreateProductRequestBodySkusInventory := _Product202309CreateProductRequestBodySkusInventory{}
 
-    err = json.Unmarshal(data, &varProduct202309CreateProductRequestBodySkusInventory)
+	err = json.Unmarshal(data, &varProduct202309CreateProductRequestBodySkusInventory)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CreateProductRequestBodySkusInventory(varProduct202309CreateProductRequestBodySkusInventory)
+	*o = Product202309CreateProductRequestBodySkusInventory(varProduct202309CreateProductRequestBodySkusInventory)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "quantity")
-        delete(additionalProperties, "warehouse_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "quantity")
+		delete(additionalProperties, "warehouse_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CreateProductRequestBodySkusInventory struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309CreateProductRequestBodySkusInventory) UnmarshalJS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

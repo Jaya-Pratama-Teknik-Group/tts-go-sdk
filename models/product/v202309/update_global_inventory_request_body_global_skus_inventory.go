@@ -11,20 +11,20 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory type satisfies the MappedNullable interface at compile time
+// checks if the Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory{}
 
 // Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory struct for Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory
 type Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory struct {
-    // The ID of the global warehouse where the SKU is stored. Retrieve this value from [Get Global Product](6509e2b0bace3e02b7490c96) or [Get Global Seller Warehouse](650aa3f0defece02be6e5ffb).
-    GlobalWarehouseId *string `json:"global_warehouse_id,omitempty"`
-    // The updated SKU quantity.
-    Quantity *int32 `json:"quantity,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The ID of the global warehouse where the SKU is stored. Retrieve this value from [Get Global Product](6509e2b0bace3e02b7490c96) or [Get Global Seller Warehouse](650aa3f0defece02be6e5ffb).
+	GlobalWarehouseId *string `json:"global_warehouse_id,omitempty"`
+	// The updated SKU quantity.
+	Quantity             *int32 `json:"quantity,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory
@@ -34,125 +34,125 @@ type _Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory Product20
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory() *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory {
-    this := Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory{}
-    return &this
+	this := Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory{}
+	return &this
 }
 
 // NewProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventoryWithDefaults instantiates a new Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventoryWithDefaults() *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory {
-    this := Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory{}
-    return &this
+	this := Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory{}
+	return &this
 }
 
 // GetGlobalWarehouseId returns the GlobalWarehouseId field value if set, zero value otherwise.
 func (o *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) GetGlobalWarehouseId() string {
-    if o == nil || utils.IsNil(o.GlobalWarehouseId) {
-        var ret string
-        return ret
-    }
-    return *o.GlobalWarehouseId
+	if o == nil || utils.IsNil(o.GlobalWarehouseId) {
+		var ret string
+		return ret
+	}
+	return *o.GlobalWarehouseId
 }
 
 // GetGlobalWarehouseIdOk returns a tuple with the GlobalWarehouseId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) GetGlobalWarehouseIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.GlobalWarehouseId) {
-        return nil, false
-    }
-    return o.GlobalWarehouseId, true
+	if o == nil || utils.IsNil(o.GlobalWarehouseId) {
+		return nil, false
+	}
+	return o.GlobalWarehouseId, true
 }
 
 // HasGlobalWarehouseId returns a boolean if a field has been set.
 func (o *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) HasGlobalWarehouseId() bool {
-    if o != nil && !utils.IsNil(o.GlobalWarehouseId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.GlobalWarehouseId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetGlobalWarehouseId gets a reference to the given string and assigns it to the GlobalWarehouseId field.
 func (o *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) SetGlobalWarehouseId(v string) {
-    o.GlobalWarehouseId = &v
+	o.GlobalWarehouseId = &v
 }
 
 // GetQuantity returns the Quantity field value if set, zero value otherwise.
 func (o *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) GetQuantity() int32 {
-    if o == nil || utils.IsNil(o.Quantity) {
-        var ret int32
-        return ret
-    }
-    return *o.Quantity
+	if o == nil || utils.IsNil(o.Quantity) {
+		var ret int32
+		return ret
+	}
+	return *o.Quantity
 }
 
 // GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) GetQuantityOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Quantity) {
-        return nil, false
-    }
-    return o.Quantity, true
+	if o == nil || utils.IsNil(o.Quantity) {
+		return nil, false
+	}
+	return o.Quantity, true
 }
 
 // HasQuantity returns a boolean if a field has been set.
 func (o *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) HasQuantity() bool {
-    if o != nil && !utils.IsNil(o.Quantity) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Quantity) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQuantity gets a reference to the given int32 and assigns it to the Quantity field.
 func (o *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) SetQuantity(v int32) {
-    o.Quantity = &v
+	o.Quantity = &v
 }
 
 func (o Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.GlobalWarehouseId) {
-        toSerialize["global_warehouse_id"] = o.GlobalWarehouseId
-    }
-    if !utils.IsNil(o.Quantity) {
-        toSerialize["quantity"] = o.Quantity
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.GlobalWarehouseId) {
+		toSerialize["global_warehouse_id"] = o.GlobalWarehouseId
+	}
+	if !utils.IsNil(o.Quantity) {
+		toSerialize["quantity"] = o.Quantity
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory := _Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory{}
+	varProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory := _Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory{}
 
-    err = json.Unmarshal(data, &varProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory)
+	err = json.Unmarshal(data, &varProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory(varProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory)
+	*o = Product202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory(varProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "global_warehouse_id")
-        delete(additionalProperties, "quantity")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "global_warehouse_id")
+		delete(additionalProperties, "quantity")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventory struct {
@@ -190,5 +190,3 @@ func (v *NullableProduct202309UpdateGlobalInventoryRequestBodyGlobalSkusInventor
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

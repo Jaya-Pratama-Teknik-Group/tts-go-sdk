@@ -11,20 +11,20 @@ API version: 1.0.0
 package return_refund_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the ReturnRefund202309CreateReturnResponseData type satisfies the MappedNullable interface at compile time
+// checks if the ReturnRefund202309CreateReturnResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &ReturnRefund202309CreateReturnResponseData{}
 
 // ReturnRefund202309CreateReturnResponseData struct for ReturnRefund202309CreateReturnResponseData
 type ReturnRefund202309CreateReturnResponseData struct {
-    // The identifier of a specific return request.
-    ReturnId *string `json:"return_id,omitempty"`
-    // Return status, available values: - RETURN_OR_REFUND_REQUEST_PENDING: Request is pending, needs to be approved by seller or platform - REFUND_OR_RETURN_REQUEST_REJECT: Seller rejected the request - AWAITING_BUYER_SHIP: Waiting buyer to ship items to seller, if exceed the deadline, request will be closed by platform - BUYER_SHIPPED_ITEM: Buyer has shipped items to seller. - REJECT_RECEIVE_PACKAGE: Seller reject return package - RETURN_OR_REFUND_REQUEST_SUCCESS: The refund/return request is successful, buyer will be refunded. - RETURN_OR_REFUND_REQUEST_CANCEL: The request has been cancelled by buyer or system - RETURN_OR_REFUND_REQUEST_COMPLETE: The request is successful, and the amount has been refunded.
-    ReturnStatus *string `json:"return_status,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The identifier of a specific return request.
+	ReturnId *string `json:"return_id,omitempty"`
+	// Return status, available values: - RETURN_OR_REFUND_REQUEST_PENDING: Request is pending, needs to be approved by seller or platform - REFUND_OR_RETURN_REQUEST_REJECT: Seller rejected the request - AWAITING_BUYER_SHIP: Waiting buyer to ship items to seller, if exceed the deadline, request will be closed by platform - BUYER_SHIPPED_ITEM: Buyer has shipped items to seller. - REJECT_RECEIVE_PACKAGE: Seller reject return package - RETURN_OR_REFUND_REQUEST_SUCCESS: The refund/return request is successful, buyer will be refunded. - RETURN_OR_REFUND_REQUEST_CANCEL: The request has been cancelled by buyer or system - RETURN_OR_REFUND_REQUEST_COMPLETE: The request is successful, and the amount has been refunded.
+	ReturnStatus         *string `json:"return_status,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _ReturnRefund202309CreateReturnResponseData ReturnRefund202309CreateReturnResponseData
@@ -34,125 +34,125 @@ type _ReturnRefund202309CreateReturnResponseData ReturnRefund202309CreateReturnR
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewReturnRefund202309CreateReturnResponseData() *ReturnRefund202309CreateReturnResponseData {
-    this := ReturnRefund202309CreateReturnResponseData{}
-    return &this
+	this := ReturnRefund202309CreateReturnResponseData{}
+	return &this
 }
 
 // NewReturnRefund202309CreateReturnResponseDataWithDefaults instantiates a new ReturnRefund202309CreateReturnResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewReturnRefund202309CreateReturnResponseDataWithDefaults() *ReturnRefund202309CreateReturnResponseData {
-    this := ReturnRefund202309CreateReturnResponseData{}
-    return &this
+	this := ReturnRefund202309CreateReturnResponseData{}
+	return &this
 }
 
 // GetReturnId returns the ReturnId field value if set, zero value otherwise.
 func (o *ReturnRefund202309CreateReturnResponseData) GetReturnId() string {
-    if o == nil || utils.IsNil(o.ReturnId) {
-        var ret string
-        return ret
-    }
-    return *o.ReturnId
+	if o == nil || utils.IsNil(o.ReturnId) {
+		var ret string
+		return ret
+	}
+	return *o.ReturnId
 }
 
 // GetReturnIdOk returns a tuple with the ReturnId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309CreateReturnResponseData) GetReturnIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ReturnId) {
-        return nil, false
-    }
-    return o.ReturnId, true
+	if o == nil || utils.IsNil(o.ReturnId) {
+		return nil, false
+	}
+	return o.ReturnId, true
 }
 
 // HasReturnId returns a boolean if a field has been set.
 func (o *ReturnRefund202309CreateReturnResponseData) HasReturnId() bool {
-    if o != nil && !utils.IsNil(o.ReturnId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ReturnId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReturnId gets a reference to the given string and assigns it to the ReturnId field.
 func (o *ReturnRefund202309CreateReturnResponseData) SetReturnId(v string) {
-    o.ReturnId = &v
+	o.ReturnId = &v
 }
 
 // GetReturnStatus returns the ReturnStatus field value if set, zero value otherwise.
 func (o *ReturnRefund202309CreateReturnResponseData) GetReturnStatus() string {
-    if o == nil || utils.IsNil(o.ReturnStatus) {
-        var ret string
-        return ret
-    }
-    return *o.ReturnStatus
+	if o == nil || utils.IsNil(o.ReturnStatus) {
+		var ret string
+		return ret
+	}
+	return *o.ReturnStatus
 }
 
 // GetReturnStatusOk returns a tuple with the ReturnStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ReturnRefund202309CreateReturnResponseData) GetReturnStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.ReturnStatus) {
-        return nil, false
-    }
-    return o.ReturnStatus, true
+	if o == nil || utils.IsNil(o.ReturnStatus) {
+		return nil, false
+	}
+	return o.ReturnStatus, true
 }
 
 // HasReturnStatus returns a boolean if a field has been set.
 func (o *ReturnRefund202309CreateReturnResponseData) HasReturnStatus() bool {
-    if o != nil && !utils.IsNil(o.ReturnStatus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ReturnStatus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReturnStatus gets a reference to the given string and assigns it to the ReturnStatus field.
 func (o *ReturnRefund202309CreateReturnResponseData) SetReturnStatus(v string) {
-    o.ReturnStatus = &v
+	o.ReturnStatus = &v
 }
 
 func (o ReturnRefund202309CreateReturnResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o ReturnRefund202309CreateReturnResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ReturnId) {
-        toSerialize["return_id"] = o.ReturnId
-    }
-    if !utils.IsNil(o.ReturnStatus) {
-        toSerialize["return_status"] = o.ReturnStatus
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ReturnId) {
+		toSerialize["return_id"] = o.ReturnId
+	}
+	if !utils.IsNil(o.ReturnStatus) {
+		toSerialize["return_status"] = o.ReturnStatus
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *ReturnRefund202309CreateReturnResponseData) UnmarshalJSON(data []byte) (err error) {
-    varReturnRefund202309CreateReturnResponseData := _ReturnRefund202309CreateReturnResponseData{}
+	varReturnRefund202309CreateReturnResponseData := _ReturnRefund202309CreateReturnResponseData{}
 
-    err = json.Unmarshal(data, &varReturnRefund202309CreateReturnResponseData)
+	err = json.Unmarshal(data, &varReturnRefund202309CreateReturnResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = ReturnRefund202309CreateReturnResponseData(varReturnRefund202309CreateReturnResponseData)
+	*o = ReturnRefund202309CreateReturnResponseData(varReturnRefund202309CreateReturnResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "return_id")
-        delete(additionalProperties, "return_status")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "return_id")
+		delete(additionalProperties, "return_status")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableReturnRefund202309CreateReturnResponseData struct {
@@ -190,5 +190,3 @@ func (v *NullableReturnRefund202309CreateReturnResponseData) UnmarshalJSON(src [
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

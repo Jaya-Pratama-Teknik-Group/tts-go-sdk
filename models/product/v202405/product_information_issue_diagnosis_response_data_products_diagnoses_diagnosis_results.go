@@ -11,22 +11,22 @@ API version: 1.0.0
 package product_v202405
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults type satisfies the MappedNullable interface at compile time
+// checks if the Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults{}
 
 // Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults struct for Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults
 type Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults struct {
-    // A machine-readable code that represents an identified issue. Refer to [Listing quality diagnosis](https://partner.tiktokshop.com/docv2/page/66eb8f5c6f2da702e96a49dd) for the full list of diagnosed issues and the corresponding recommendations.
-    Code *string `json:"code,omitempty"`
-    // The recommendation for resolving the identified issue, returned in the default locale language of the shop. Refer to [Listing quality diagnosis](https://partner.tiktokshop.com/docv2/page/66eb8f5c6f2da702e96a49dd) for the full list of recommendations.
-    HowToSolve *string `json:"how_to_solve,omitempty"`
-    // The listing quality tier you can reach by implementing the recommendation. Possible values: - FAIR - GOOD  **Note**:  - To reach a higher tier, you must implement all recommendations from the destination tier and all preceding tiers. For example, a product will reach the \"GOOD\" tier once all \"FAIR\" and \"GOOD\" recommendations are addressed or implemented. - Available only for the US market.
-    QualityTier *string `json:"quality_tier,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// A machine-readable code that represents an identified issue. Refer to [Listing quality diagnosis](https://partner.tiktokshop.com/docv2/page/66eb8f5c6f2da702e96a49dd) for the full list of diagnosed issues and the corresponding recommendations.
+	Code *string `json:"code,omitempty"`
+	// The recommendation for resolving the identified issue, returned in the default locale language of the shop. Refer to [Listing quality diagnosis](https://partner.tiktokshop.com/docv2/page/66eb8f5c6f2da702e96a49dd) for the full list of recommendations.
+	HowToSolve *string `json:"how_to_solve,omitempty"`
+	// The listing quality tier you can reach by implementing the recommendation. Possible values: - FAIR - GOOD  **Note**:  - To reach a higher tier, you must implement all recommendations from the destination tier and all preceding tiers. For example, a product will reach the \"GOOD\" tier once all \"FAIR\" and \"GOOD\" recommendations are addressed or implemented. - Available only for the US market.
+	QualityTier          *string `json:"quality_tier,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults
@@ -36,161 +36,161 @@ type _Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnoses
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults() *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults {
-    this := Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults{}
-    return &this
+	this := Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults{}
+	return &this
 }
 
 // NewProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResultsWithDefaults instantiates a new Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResultsWithDefaults() *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults {
-    this := Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults{}
-    return &this
+	this := Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults{}
+	return &this
 }
 
 // GetCode returns the Code field value if set, zero value otherwise.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) GetCode() string {
-    if o == nil || utils.IsNil(o.Code) {
-        var ret string
-        return ret
-    }
-    return *o.Code
+	if o == nil || utils.IsNil(o.Code) {
+		var ret string
+		return ret
+	}
+	return *o.Code
 }
 
 // GetCodeOk returns a tuple with the Code field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) GetCodeOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Code) {
-        return nil, false
-    }
-    return o.Code, true
+	if o == nil || utils.IsNil(o.Code) {
+		return nil, false
+	}
+	return o.Code, true
 }
 
 // HasCode returns a boolean if a field has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) HasCode() bool {
-    if o != nil && !utils.IsNil(o.Code) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Code) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCode gets a reference to the given string and assigns it to the Code field.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) SetCode(v string) {
-    o.Code = &v
+	o.Code = &v
 }
 
 // GetHowToSolve returns the HowToSolve field value if set, zero value otherwise.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) GetHowToSolve() string {
-    if o == nil || utils.IsNil(o.HowToSolve) {
-        var ret string
-        return ret
-    }
-    return *o.HowToSolve
+	if o == nil || utils.IsNil(o.HowToSolve) {
+		var ret string
+		return ret
+	}
+	return *o.HowToSolve
 }
 
 // GetHowToSolveOk returns a tuple with the HowToSolve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) GetHowToSolveOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.HowToSolve) {
-        return nil, false
-    }
-    return o.HowToSolve, true
+	if o == nil || utils.IsNil(o.HowToSolve) {
+		return nil, false
+	}
+	return o.HowToSolve, true
 }
 
 // HasHowToSolve returns a boolean if a field has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) HasHowToSolve() bool {
-    if o != nil && !utils.IsNil(o.HowToSolve) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.HowToSolve) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetHowToSolve gets a reference to the given string and assigns it to the HowToSolve field.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) SetHowToSolve(v string) {
-    o.HowToSolve = &v
+	o.HowToSolve = &v
 }
 
 // GetQualityTier returns the QualityTier field value if set, zero value otherwise.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) GetQualityTier() string {
-    if o == nil || utils.IsNil(o.QualityTier) {
-        var ret string
-        return ret
-    }
-    return *o.QualityTier
+	if o == nil || utils.IsNil(o.QualityTier) {
+		var ret string
+		return ret
+	}
+	return *o.QualityTier
 }
 
 // GetQualityTierOk returns a tuple with the QualityTier field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) GetQualityTierOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.QualityTier) {
-        return nil, false
-    }
-    return o.QualityTier, true
+	if o == nil || utils.IsNil(o.QualityTier) {
+		return nil, false
+	}
+	return o.QualityTier, true
 }
 
 // HasQualityTier returns a boolean if a field has been set.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) HasQualityTier() bool {
-    if o != nil && !utils.IsNil(o.QualityTier) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.QualityTier) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetQualityTier gets a reference to the given string and assigns it to the QualityTier field.
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) SetQualityTier(v string) {
-    o.QualityTier = &v
+	o.QualityTier = &v
 }
 
 func (o Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Code) {
-        toSerialize["code"] = o.Code
-    }
-    if !utils.IsNil(o.HowToSolve) {
-        toSerialize["how_to_solve"] = o.HowToSolve
-    }
-    if !utils.IsNil(o.QualityTier) {
-        toSerialize["quality_tier"] = o.QualityTier
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Code) {
+		toSerialize["code"] = o.Code
+	}
+	if !utils.IsNil(o.HowToSolve) {
+		toSerialize["how_to_solve"] = o.HowToSolve
+	}
+	if !utils.IsNil(o.QualityTier) {
+		toSerialize["quality_tier"] = o.QualityTier
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults) UnmarshalJSON(data []byte) (err error) {
-    varProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults := _Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults{}
+	varProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults := _Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults{}
 
-    err = json.Unmarshal(data, &varProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults)
+	err = json.Unmarshal(data, &varProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults(varProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults)
+	*o = Product202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults(varProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "code")
-        delete(additionalProperties, "how_to_solve")
-        delete(additionalProperties, "quality_tier")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "code")
+		delete(additionalProperties, "how_to_solve")
+		delete(additionalProperties, "quality_tier")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202405ProductInformationIssueDiagnosisResponseDataProductsDiagnosesDiagnosisResults struct {
@@ -228,5 +228,3 @@ func (v *NullableProduct202405ProductInformationIssueDiagnosisResponseDataProduc
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,20 +11,20 @@ API version: 1.0.0
 package supply_chain_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the SupplyChain202309ConfirmPackageShipmentRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the SupplyChain202309ConfirmPackageShipmentRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &SupplyChain202309ConfirmPackageShipmentRequestBody{}
 
 // SupplyChain202309ConfirmPackageShipmentRequestBody struct for SupplyChain202309ConfirmPackageShipmentRequestBody
 type SupplyChain202309ConfirmPackageShipmentRequestBody struct {
-    // Package info list
-    Packages []SupplyChain202309ConfirmPackageShipmentRequestBodyPackages `json:"packages,omitempty"`
-    // Warehouse provider ID, unique and provided by TikTok
-    WarehouseProviderId *string `json:"warehouse_provider_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Package info list
+	Packages []SupplyChain202309ConfirmPackageShipmentRequestBodyPackages `json:"packages,omitempty"`
+	// Warehouse provider ID, unique and provided by TikTok
+	WarehouseProviderId  *string `json:"warehouse_provider_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _SupplyChain202309ConfirmPackageShipmentRequestBody SupplyChain202309ConfirmPackageShipmentRequestBody
@@ -34,125 +34,125 @@ type _SupplyChain202309ConfirmPackageShipmentRequestBody SupplyChain202309Confir
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewSupplyChain202309ConfirmPackageShipmentRequestBody() *SupplyChain202309ConfirmPackageShipmentRequestBody {
-    this := SupplyChain202309ConfirmPackageShipmentRequestBody{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentRequestBody{}
+	return &this
 }
 
 // NewSupplyChain202309ConfirmPackageShipmentRequestBodyWithDefaults instantiates a new SupplyChain202309ConfirmPackageShipmentRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewSupplyChain202309ConfirmPackageShipmentRequestBodyWithDefaults() *SupplyChain202309ConfirmPackageShipmentRequestBody {
-    this := SupplyChain202309ConfirmPackageShipmentRequestBody{}
-    return &this
+	this := SupplyChain202309ConfirmPackageShipmentRequestBody{}
+	return &this
 }
 
 // GetPackages returns the Packages field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBody) GetPackages() []SupplyChain202309ConfirmPackageShipmentRequestBodyPackages {
-    if o == nil || utils.IsNil(o.Packages) {
-        var ret []SupplyChain202309ConfirmPackageShipmentRequestBodyPackages
-        return ret
-    }
-    return o.Packages
+	if o == nil || utils.IsNil(o.Packages) {
+		var ret []SupplyChain202309ConfirmPackageShipmentRequestBodyPackages
+		return ret
+	}
+	return o.Packages
 }
 
 // GetPackagesOk returns a tuple with the Packages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBody) GetPackagesOk() ([]SupplyChain202309ConfirmPackageShipmentRequestBodyPackages, bool) {
-    if o == nil || utils.IsNil(o.Packages) {
-        return nil, false
-    }
-    return o.Packages, true
+	if o == nil || utils.IsNil(o.Packages) {
+		return nil, false
+	}
+	return o.Packages, true
 }
 
 // HasPackages returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBody) HasPackages() bool {
-    if o != nil && !utils.IsNil(o.Packages) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Packages) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetPackages gets a reference to the given []SupplyChain202309ConfirmPackageShipmentRequestBodyPackages and assigns it to the Packages field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBody) SetPackages(v []SupplyChain202309ConfirmPackageShipmentRequestBodyPackages) {
-    o.Packages = v
+	o.Packages = v
 }
 
 // GetWarehouseProviderId returns the WarehouseProviderId field value if set, zero value otherwise.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBody) GetWarehouseProviderId() string {
-    if o == nil || utils.IsNil(o.WarehouseProviderId) {
-        var ret string
-        return ret
-    }
-    return *o.WarehouseProviderId
+	if o == nil || utils.IsNil(o.WarehouseProviderId) {
+		var ret string
+		return ret
+	}
+	return *o.WarehouseProviderId
 }
 
 // GetWarehouseProviderIdOk returns a tuple with the WarehouseProviderId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBody) GetWarehouseProviderIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.WarehouseProviderId) {
-        return nil, false
-    }
-    return o.WarehouseProviderId, true
+	if o == nil || utils.IsNil(o.WarehouseProviderId) {
+		return nil, false
+	}
+	return o.WarehouseProviderId, true
 }
 
 // HasWarehouseProviderId returns a boolean if a field has been set.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBody) HasWarehouseProviderId() bool {
-    if o != nil && !utils.IsNil(o.WarehouseProviderId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.WarehouseProviderId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetWarehouseProviderId gets a reference to the given string and assigns it to the WarehouseProviderId field.
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBody) SetWarehouseProviderId(v string) {
-    o.WarehouseProviderId = &v
+	o.WarehouseProviderId = &v
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o SupplyChain202309ConfirmPackageShipmentRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Packages) {
-        toSerialize["packages"] = o.Packages
-    }
-    if !utils.IsNil(o.WarehouseProviderId) {
-        toSerialize["warehouse_provider_id"] = o.WarehouseProviderId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Packages) {
+		toSerialize["packages"] = o.Packages
+	}
+	if !utils.IsNil(o.WarehouseProviderId) {
+		toSerialize["warehouse_provider_id"] = o.WarehouseProviderId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *SupplyChain202309ConfirmPackageShipmentRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varSupplyChain202309ConfirmPackageShipmentRequestBody := _SupplyChain202309ConfirmPackageShipmentRequestBody{}
+	varSupplyChain202309ConfirmPackageShipmentRequestBody := _SupplyChain202309ConfirmPackageShipmentRequestBody{}
 
-    err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentRequestBody)
+	err = json.Unmarshal(data, &varSupplyChain202309ConfirmPackageShipmentRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = SupplyChain202309ConfirmPackageShipmentRequestBody(varSupplyChain202309ConfirmPackageShipmentRequestBody)
+	*o = SupplyChain202309ConfirmPackageShipmentRequestBody(varSupplyChain202309ConfirmPackageShipmentRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "packages")
-        delete(additionalProperties, "warehouse_provider_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "packages")
+		delete(additionalProperties, "warehouse_provider_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableSupplyChain202309ConfirmPackageShipmentRequestBody struct {
@@ -190,5 +190,3 @@ func (v *NullableSupplyChain202309ConfirmPackageShipmentRequestBody) UnmarshalJS
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

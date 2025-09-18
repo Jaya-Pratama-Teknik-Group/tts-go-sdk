@@ -11,28 +11,28 @@ API version: 1.0.0
 package product_v202312
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202312SearchGlobalProductsRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Product202312SearchGlobalProductsRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202312SearchGlobalProductsRequestBody{}
 
 // Product202312SearchGlobalProductsRequestBody struct for Product202312SearchGlobalProductsRequestBody
 type Product202312SearchGlobalProductsRequestBody struct {
-    // Filter global products to show only those that are created on or after the specified date and time. Unix timestamp.  **Note**: The \"create_time_ge\" and \"create_time_le\" together constitute the creation time filter condition. - If \"create_time_ge\" is filled but \"create_time_le\" is empty, \"create_time_le\" will default to the current time. - If \"create_time_le\" is filled but \"create_time_ge\" is empty, \"create_time_ge\" will default to the earliest shop time.
-    CreateTimeGe *int64 `json:"create_time_ge,omitempty"`
-    // Filter global products to show only those that are created on or before the specified date and time. Unix timestamp. Refer to notes in \"create_time_ge\" for more usage information.
-    CreateTimeLe *int64 `json:"create_time_le,omitempty"`
-    // Filter global products by these seller SKU codes.
-    SellerSkus []string `json:"seller_skus,omitempty"`
-    // Filter global products by their status. Possible values: - PUBLISHED - UNPUBLISHED - DRAFT - DELETED
-    Status *string `json:"status,omitempty"`
-    // Filter global products to show only those that are updated on or after the specified date and time. Unix timestamp.  **Note**: The fields \"update_time_ge\" and \"update_time_le\" together define the update time filter condition. - If \"update_time_ge\" is filled but \"update_time_le\" is empty, \"update_time_le\" will default to the current time. - If \"update_time_le\" is filled but \"update_time_ge\" is empty, \"update_time_ge\" will default to the earliest shop time.
-    UpdateTimeGe *int64 `json:"update_time_ge,omitempty"`
-    // Filter global products to show only those that are updated on or before the specified date and time. Unix timestamp. Refer to notes in `update_time_ge` for more usage information.
-    UpdateTimeLe *int64 `json:"update_time_le,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// Filter global products to show only those that are created on or after the specified date and time. Unix timestamp.  **Note**: The \"create_time_ge\" and \"create_time_le\" together constitute the creation time filter condition. - If \"create_time_ge\" is filled but \"create_time_le\" is empty, \"create_time_le\" will default to the current time. - If \"create_time_le\" is filled but \"create_time_ge\" is empty, \"create_time_ge\" will default to the earliest shop time.
+	CreateTimeGe *int64 `json:"create_time_ge,omitempty"`
+	// Filter global products to show only those that are created on or before the specified date and time. Unix timestamp. Refer to notes in \"create_time_ge\" for more usage information.
+	CreateTimeLe *int64 `json:"create_time_le,omitempty"`
+	// Filter global products by these seller SKU codes.
+	SellerSkus []string `json:"seller_skus,omitempty"`
+	// Filter global products by their status. Possible values: - PUBLISHED - UNPUBLISHED - DRAFT - DELETED
+	Status *string `json:"status,omitempty"`
+	// Filter global products to show only those that are updated on or after the specified date and time. Unix timestamp.  **Note**: The fields \"update_time_ge\" and \"update_time_le\" together define the update time filter condition. - If \"update_time_ge\" is filled but \"update_time_le\" is empty, \"update_time_le\" will default to the current time. - If \"update_time_le\" is filled but \"update_time_ge\" is empty, \"update_time_ge\" will default to the earliest shop time.
+	UpdateTimeGe *int64 `json:"update_time_ge,omitempty"`
+	// Filter global products to show only those that are updated on or before the specified date and time. Unix timestamp. Refer to notes in `update_time_ge` for more usage information.
+	UpdateTimeLe         *int64 `json:"update_time_le,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202312SearchGlobalProductsRequestBody Product202312SearchGlobalProductsRequestBody
@@ -42,269 +42,269 @@ type _Product202312SearchGlobalProductsRequestBody Product202312SearchGlobalProd
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202312SearchGlobalProductsRequestBody() *Product202312SearchGlobalProductsRequestBody {
-    this := Product202312SearchGlobalProductsRequestBody{}
-    return &this
+	this := Product202312SearchGlobalProductsRequestBody{}
+	return &this
 }
 
 // NewProduct202312SearchGlobalProductsRequestBodyWithDefaults instantiates a new Product202312SearchGlobalProductsRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202312SearchGlobalProductsRequestBodyWithDefaults() *Product202312SearchGlobalProductsRequestBody {
-    this := Product202312SearchGlobalProductsRequestBody{}
-    return &this
+	this := Product202312SearchGlobalProductsRequestBody{}
+	return &this
 }
 
 // GetCreateTimeGe returns the CreateTimeGe field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsRequestBody) GetCreateTimeGe() int64 {
-    if o == nil || utils.IsNil(o.CreateTimeGe) {
-        var ret int64
-        return ret
-    }
-    return *o.CreateTimeGe
+	if o == nil || utils.IsNil(o.CreateTimeGe) {
+		var ret int64
+		return ret
+	}
+	return *o.CreateTimeGe
 }
 
 // GetCreateTimeGeOk returns a tuple with the CreateTimeGe field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) GetCreateTimeGeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.CreateTimeGe) {
-        return nil, false
-    }
-    return o.CreateTimeGe, true
+	if o == nil || utils.IsNil(o.CreateTimeGe) {
+		return nil, false
+	}
+	return o.CreateTimeGe, true
 }
 
 // HasCreateTimeGe returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) HasCreateTimeGe() bool {
-    if o != nil && !utils.IsNil(o.CreateTimeGe) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CreateTimeGe) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCreateTimeGe gets a reference to the given int64 and assigns it to the CreateTimeGe field.
 func (o *Product202312SearchGlobalProductsRequestBody) SetCreateTimeGe(v int64) {
-    o.CreateTimeGe = &v
+	o.CreateTimeGe = &v
 }
 
 // GetCreateTimeLe returns the CreateTimeLe field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsRequestBody) GetCreateTimeLe() int64 {
-    if o == nil || utils.IsNil(o.CreateTimeLe) {
-        var ret int64
-        return ret
-    }
-    return *o.CreateTimeLe
+	if o == nil || utils.IsNil(o.CreateTimeLe) {
+		var ret int64
+		return ret
+	}
+	return *o.CreateTimeLe
 }
 
 // GetCreateTimeLeOk returns a tuple with the CreateTimeLe field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) GetCreateTimeLeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.CreateTimeLe) {
-        return nil, false
-    }
-    return o.CreateTimeLe, true
+	if o == nil || utils.IsNil(o.CreateTimeLe) {
+		return nil, false
+	}
+	return o.CreateTimeLe, true
 }
 
 // HasCreateTimeLe returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) HasCreateTimeLe() bool {
-    if o != nil && !utils.IsNil(o.CreateTimeLe) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.CreateTimeLe) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCreateTimeLe gets a reference to the given int64 and assigns it to the CreateTimeLe field.
 func (o *Product202312SearchGlobalProductsRequestBody) SetCreateTimeLe(v int64) {
-    o.CreateTimeLe = &v
+	o.CreateTimeLe = &v
 }
 
 // GetSellerSkus returns the SellerSkus field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsRequestBody) GetSellerSkus() []string {
-    if o == nil || utils.IsNil(o.SellerSkus) {
-        var ret []string
-        return ret
-    }
-    return o.SellerSkus
+	if o == nil || utils.IsNil(o.SellerSkus) {
+		var ret []string
+		return ret
+	}
+	return o.SellerSkus
 }
 
 // GetSellerSkusOk returns a tuple with the SellerSkus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) GetSellerSkusOk() ([]string, bool) {
-    if o == nil || utils.IsNil(o.SellerSkus) {
-        return nil, false
-    }
-    return o.SellerSkus, true
+	if o == nil || utils.IsNil(o.SellerSkus) {
+		return nil, false
+	}
+	return o.SellerSkus, true
 }
 
 // HasSellerSkus returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) HasSellerSkus() bool {
-    if o != nil && !utils.IsNil(o.SellerSkus) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SellerSkus) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSellerSkus gets a reference to the given []string and assigns it to the SellerSkus field.
 func (o *Product202312SearchGlobalProductsRequestBody) SetSellerSkus(v []string) {
-    o.SellerSkus = v
+	o.SellerSkus = v
 }
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsRequestBody) GetStatus() string {
-    if o == nil || utils.IsNil(o.Status) {
-        var ret string
-        return ret
-    }
-    return *o.Status
+	if o == nil || utils.IsNil(o.Status) {
+		var ret string
+		return ret
+	}
+	return *o.Status
 }
 
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) GetStatusOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Status) {
-        return nil, false
-    }
-    return o.Status, true
+	if o == nil || utils.IsNil(o.Status) {
+		return nil, false
+	}
+	return o.Status, true
 }
 
 // HasStatus returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) HasStatus() bool {
-    if o != nil && !utils.IsNil(o.Status) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Status) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetStatus gets a reference to the given string and assigns it to the Status field.
 func (o *Product202312SearchGlobalProductsRequestBody) SetStatus(v string) {
-    o.Status = &v
+	o.Status = &v
 }
 
 // GetUpdateTimeGe returns the UpdateTimeGe field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsRequestBody) GetUpdateTimeGe() int64 {
-    if o == nil || utils.IsNil(o.UpdateTimeGe) {
-        var ret int64
-        return ret
-    }
-    return *o.UpdateTimeGe
+	if o == nil || utils.IsNil(o.UpdateTimeGe) {
+		var ret int64
+		return ret
+	}
+	return *o.UpdateTimeGe
 }
 
 // GetUpdateTimeGeOk returns a tuple with the UpdateTimeGe field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) GetUpdateTimeGeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UpdateTimeGe) {
-        return nil, false
-    }
-    return o.UpdateTimeGe, true
+	if o == nil || utils.IsNil(o.UpdateTimeGe) {
+		return nil, false
+	}
+	return o.UpdateTimeGe, true
 }
 
 // HasUpdateTimeGe returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) HasUpdateTimeGe() bool {
-    if o != nil && !utils.IsNil(o.UpdateTimeGe) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UpdateTimeGe) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUpdateTimeGe gets a reference to the given int64 and assigns it to the UpdateTimeGe field.
 func (o *Product202312SearchGlobalProductsRequestBody) SetUpdateTimeGe(v int64) {
-    o.UpdateTimeGe = &v
+	o.UpdateTimeGe = &v
 }
 
 // GetUpdateTimeLe returns the UpdateTimeLe field value if set, zero value otherwise.
 func (o *Product202312SearchGlobalProductsRequestBody) GetUpdateTimeLe() int64 {
-    if o == nil || utils.IsNil(o.UpdateTimeLe) {
-        var ret int64
-        return ret
-    }
-    return *o.UpdateTimeLe
+	if o == nil || utils.IsNil(o.UpdateTimeLe) {
+		var ret int64
+		return ret
+	}
+	return *o.UpdateTimeLe
 }
 
 // GetUpdateTimeLeOk returns a tuple with the UpdateTimeLe field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) GetUpdateTimeLeOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.UpdateTimeLe) {
-        return nil, false
-    }
-    return o.UpdateTimeLe, true
+	if o == nil || utils.IsNil(o.UpdateTimeLe) {
+		return nil, false
+	}
+	return o.UpdateTimeLe, true
 }
 
 // HasUpdateTimeLe returns a boolean if a field has been set.
 func (o *Product202312SearchGlobalProductsRequestBody) HasUpdateTimeLe() bool {
-    if o != nil && !utils.IsNil(o.UpdateTimeLe) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.UpdateTimeLe) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetUpdateTimeLe gets a reference to the given int64 and assigns it to the UpdateTimeLe field.
 func (o *Product202312SearchGlobalProductsRequestBody) SetUpdateTimeLe(v int64) {
-    o.UpdateTimeLe = &v
+	o.UpdateTimeLe = &v
 }
 
 func (o Product202312SearchGlobalProductsRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202312SearchGlobalProductsRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.CreateTimeGe) {
-        toSerialize["create_time_ge"] = o.CreateTimeGe
-    }
-    if !utils.IsNil(o.CreateTimeLe) {
-        toSerialize["create_time_le"] = o.CreateTimeLe
-    }
-    if !utils.IsNil(o.SellerSkus) {
-        toSerialize["seller_skus"] = o.SellerSkus
-    }
-    if !utils.IsNil(o.Status) {
-        toSerialize["status"] = o.Status
-    }
-    if !utils.IsNil(o.UpdateTimeGe) {
-        toSerialize["update_time_ge"] = o.UpdateTimeGe
-    }
-    if !utils.IsNil(o.UpdateTimeLe) {
-        toSerialize["update_time_le"] = o.UpdateTimeLe
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.CreateTimeGe) {
+		toSerialize["create_time_ge"] = o.CreateTimeGe
+	}
+	if !utils.IsNil(o.CreateTimeLe) {
+		toSerialize["create_time_le"] = o.CreateTimeLe
+	}
+	if !utils.IsNil(o.SellerSkus) {
+		toSerialize["seller_skus"] = o.SellerSkus
+	}
+	if !utils.IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !utils.IsNil(o.UpdateTimeGe) {
+		toSerialize["update_time_ge"] = o.UpdateTimeGe
+	}
+	if !utils.IsNil(o.UpdateTimeLe) {
+		toSerialize["update_time_le"] = o.UpdateTimeLe
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202312SearchGlobalProductsRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varProduct202312SearchGlobalProductsRequestBody := _Product202312SearchGlobalProductsRequestBody{}
+	varProduct202312SearchGlobalProductsRequestBody := _Product202312SearchGlobalProductsRequestBody{}
 
-    err = json.Unmarshal(data, &varProduct202312SearchGlobalProductsRequestBody)
+	err = json.Unmarshal(data, &varProduct202312SearchGlobalProductsRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202312SearchGlobalProductsRequestBody(varProduct202312SearchGlobalProductsRequestBody)
+	*o = Product202312SearchGlobalProductsRequestBody(varProduct202312SearchGlobalProductsRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "create_time_ge")
-        delete(additionalProperties, "create_time_le")
-        delete(additionalProperties, "seller_skus")
-        delete(additionalProperties, "status")
-        delete(additionalProperties, "update_time_ge")
-        delete(additionalProperties, "update_time_le")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "create_time_ge")
+		delete(additionalProperties, "create_time_le")
+		delete(additionalProperties, "seller_skus")
+		delete(additionalProperties, "status")
+		delete(additionalProperties, "update_time_ge")
+		delete(additionalProperties, "update_time_le")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202312SearchGlobalProductsRequestBody struct {
@@ -342,5 +342,3 @@ func (v *NullableProduct202312SearchGlobalProductsRequestBody) UnmarshalJSON(src
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

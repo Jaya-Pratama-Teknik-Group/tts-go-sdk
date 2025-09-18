@@ -62,9 +62,9 @@ type ServerVariable struct {
 
 // ServerConfiguration stores the information about a server
 type ServerConfiguration struct {
-	URL string
+	URL         string
 	Description string
-	Variables map[string]ServerVariable
+	Variables   map[string]ServerVariable
 }
 
 // ServerConfigurations stores multiple ServerConfiguration items
@@ -81,25 +81,23 @@ type Configuration struct {
 	OperationServers map[string]ServerConfigurations
 	HTTPClient       *http.Client
 
-	AppKey string `json:"appKey,omitempty"`
+	AppKey    string `json:"appKey,omitempty"`
 	AppSecret string `json:"appSecret,omitempty"`
-
 }
 
 // NewConfiguration returns a new Configuration object
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
-		DefaultHeader:    make(map[string]string),
-		UserAgent:        "sdk_golang/1.0.0",
-		Debug:            false,
-		Servers:          ServerConfigurations{
+		DefaultHeader: make(map[string]string),
+		UserAgent:     "sdk_golang/1.0.0",
+		Debug:         false,
+		Servers: ServerConfigurations{
 			{
-				URL: "https://open-api.tiktokglobalshop.com",
+				URL:         "https://open-api.tiktokglobalshop.com",
 				Description: "open-api tiktokglobalshop",
 			},
 		},
-		OperationServers: map[string]ServerConfigurations{
-		},
+		OperationServers: map[string]ServerConfigurations{},
 	}
 	return cfg
 }
@@ -111,7 +109,7 @@ func (c *Configuration) AddAppInfo(appKey, secret string) {
 }
 
 // ResetServerURL reset Servers URL
-func (c *Configuration) ResetServerURL(url string)  {
+func (c *Configuration) ResetServerURL(url string) {
 	if len(url) == 0 {
 		return
 	}

@@ -11,23 +11,23 @@ API version: 1.0.0
 package promotion_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202309RemoveActivityProductResponse type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202309RemoveActivityProductResponse type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202309RemoveActivityProductResponse{}
 
 // Promotion202309RemoveActivityProductResponse struct for Promotion202309RemoveActivityProductResponse
 type Promotion202309RemoveActivityProductResponse struct {
-    // The success or failure status code returned in API response.
-    Code *int32 `json:"code,omitempty"`
-    Data *Promotion202309RemoveActivityProductResponseData `json:"data,omitempty"`
-    // The success or failure messages returned in API response. Reasons of failure will be described in the message.
-    Message *string `json:"message,omitempty"`
-    // Request log.
-    RequestId *string `json:"request_id,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The success or failure status code returned in API response.
+	Code *int32                                            `json:"code,omitempty"`
+	Data *Promotion202309RemoveActivityProductResponseData `json:"data,omitempty"`
+	// The success or failure messages returned in API response. Reasons of failure will be described in the message.
+	Message *string `json:"message,omitempty"`
+	// Request log.
+	RequestId            *string `json:"request_id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202309RemoveActivityProductResponse Promotion202309RemoveActivityProductResponse
@@ -37,197 +37,197 @@ type _Promotion202309RemoveActivityProductResponse Promotion202309RemoveActivity
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202309RemoveActivityProductResponse() *Promotion202309RemoveActivityProductResponse {
-    this := Promotion202309RemoveActivityProductResponse{}
-    return &this
+	this := Promotion202309RemoveActivityProductResponse{}
+	return &this
 }
 
 // NewPromotion202309RemoveActivityProductResponseWithDefaults instantiates a new Promotion202309RemoveActivityProductResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202309RemoveActivityProductResponseWithDefaults() *Promotion202309RemoveActivityProductResponse {
-    this := Promotion202309RemoveActivityProductResponse{}
-    return &this
+	this := Promotion202309RemoveActivityProductResponse{}
+	return &this
 }
 
 // GetCode returns the Code field value if set, zero value otherwise.
 func (o *Promotion202309RemoveActivityProductResponse) GetCode() int32 {
-    if o == nil || utils.IsNil(o.Code) {
-        var ret int32
-        return ret
-    }
-    return *o.Code
+	if o == nil || utils.IsNil(o.Code) {
+		var ret int32
+		return ret
+	}
+	return *o.Code
 }
 
 // GetCodeOk returns a tuple with the Code field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309RemoveActivityProductResponse) GetCodeOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.Code) {
-        return nil, false
-    }
-    return o.Code, true
+	if o == nil || utils.IsNil(o.Code) {
+		return nil, false
+	}
+	return o.Code, true
 }
 
 // HasCode returns a boolean if a field has been set.
 func (o *Promotion202309RemoveActivityProductResponse) HasCode() bool {
-    if o != nil && !utils.IsNil(o.Code) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Code) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCode gets a reference to the given int32 and assigns it to the Code field.
 func (o *Promotion202309RemoveActivityProductResponse) SetCode(v int32) {
-    o.Code = &v
+	o.Code = &v
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
 func (o *Promotion202309RemoveActivityProductResponse) GetData() Promotion202309RemoveActivityProductResponseData {
-    if o == nil || utils.IsNil(o.Data) {
-        var ret Promotion202309RemoveActivityProductResponseData
-        return ret
-    }
-    return *o.Data
+	if o == nil || utils.IsNil(o.Data) {
+		var ret Promotion202309RemoveActivityProductResponseData
+		return ret
+	}
+	return *o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309RemoveActivityProductResponse) GetDataOk() (*Promotion202309RemoveActivityProductResponseData, bool) {
-    if o == nil || utils.IsNil(o.Data) {
-        return nil, false
-    }
-    return o.Data, true
+	if o == nil || utils.IsNil(o.Data) {
+		return nil, false
+	}
+	return o.Data, true
 }
 
 // HasData returns a boolean if a field has been set.
 func (o *Promotion202309RemoveActivityProductResponse) HasData() bool {
-    if o != nil && !utils.IsNil(o.Data) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Data) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetData gets a reference to the given Promotion202309RemoveActivityProductResponseData and assigns it to the Data field.
 func (o *Promotion202309RemoveActivityProductResponse) SetData(v Promotion202309RemoveActivityProductResponseData) {
-    o.Data = &v
+	o.Data = &v
 }
 
 // GetMessage returns the Message field value if set, zero value otherwise.
 func (o *Promotion202309RemoveActivityProductResponse) GetMessage() string {
-    if o == nil || utils.IsNil(o.Message) {
-        var ret string
-        return ret
-    }
-    return *o.Message
+	if o == nil || utils.IsNil(o.Message) {
+		var ret string
+		return ret
+	}
+	return *o.Message
 }
 
 // GetMessageOk returns a tuple with the Message field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309RemoveActivityProductResponse) GetMessageOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Message) {
-        return nil, false
-    }
-    return o.Message, true
+	if o == nil || utils.IsNil(o.Message) {
+		return nil, false
+	}
+	return o.Message, true
 }
 
 // HasMessage returns a boolean if a field has been set.
 func (o *Promotion202309RemoveActivityProductResponse) HasMessage() bool {
-    if o != nil && !utils.IsNil(o.Message) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Message) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetMessage gets a reference to the given string and assigns it to the Message field.
 func (o *Promotion202309RemoveActivityProductResponse) SetMessage(v string) {
-    o.Message = &v
+	o.Message = &v
 }
 
 // GetRequestId returns the RequestId field value if set, zero value otherwise.
 func (o *Promotion202309RemoveActivityProductResponse) GetRequestId() string {
-    if o == nil || utils.IsNil(o.RequestId) {
-        var ret string
-        return ret
-    }
-    return *o.RequestId
+	if o == nil || utils.IsNil(o.RequestId) {
+		var ret string
+		return ret
+	}
+	return *o.RequestId
 }
 
 // GetRequestIdOk returns a tuple with the RequestId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202309RemoveActivityProductResponse) GetRequestIdOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.RequestId) {
-        return nil, false
-    }
-    return o.RequestId, true
+	if o == nil || utils.IsNil(o.RequestId) {
+		return nil, false
+	}
+	return o.RequestId, true
 }
 
 // HasRequestId returns a boolean if a field has been set.
 func (o *Promotion202309RemoveActivityProductResponse) HasRequestId() bool {
-    if o != nil && !utils.IsNil(o.RequestId) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RequestId) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRequestId gets a reference to the given string and assigns it to the RequestId field.
 func (o *Promotion202309RemoveActivityProductResponse) SetRequestId(v string) {
-    o.RequestId = &v
+	o.RequestId = &v
 }
 
 func (o Promotion202309RemoveActivityProductResponse) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202309RemoveActivityProductResponse) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Code) {
-        toSerialize["code"] = o.Code
-    }
-    if !utils.IsNil(o.Data) {
-        toSerialize["data"] = o.Data
-    }
-    if !utils.IsNil(o.Message) {
-        toSerialize["message"] = o.Message
-    }
-    if !utils.IsNil(o.RequestId) {
-        toSerialize["request_id"] = o.RequestId
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Code) {
+		toSerialize["code"] = o.Code
+	}
+	if !utils.IsNil(o.Data) {
+		toSerialize["data"] = o.Data
+	}
+	if !utils.IsNil(o.Message) {
+		toSerialize["message"] = o.Message
+	}
+	if !utils.IsNil(o.RequestId) {
+		toSerialize["request_id"] = o.RequestId
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202309RemoveActivityProductResponse) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202309RemoveActivityProductResponse := _Promotion202309RemoveActivityProductResponse{}
+	varPromotion202309RemoveActivityProductResponse := _Promotion202309RemoveActivityProductResponse{}
 
-    err = json.Unmarshal(data, &varPromotion202309RemoveActivityProductResponse)
+	err = json.Unmarshal(data, &varPromotion202309RemoveActivityProductResponse)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202309RemoveActivityProductResponse(varPromotion202309RemoveActivityProductResponse)
+	*o = Promotion202309RemoveActivityProductResponse(varPromotion202309RemoveActivityProductResponse)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "code")
-        delete(additionalProperties, "data")
-        delete(additionalProperties, "message")
-        delete(additionalProperties, "request_id")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "code")
+		delete(additionalProperties, "data")
+		delete(additionalProperties, "message")
+		delete(additionalProperties, "request_id")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202309RemoveActivityProductResponse struct {
@@ -265,5 +265,3 @@ func (v *NullablePromotion202309RemoveActivityProductResponse) UnmarshalJSON(src
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

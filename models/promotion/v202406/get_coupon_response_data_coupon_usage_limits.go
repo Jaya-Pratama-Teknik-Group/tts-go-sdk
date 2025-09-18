@@ -11,22 +11,22 @@ API version: 1.0.0
 package promotion_v202406
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Promotion202406GetCouponResponseDataCouponUsageLimits type satisfies the MappedNullable interface at compile time
+// checks if the Promotion202406GetCouponResponseDataCouponUsageLimits type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Promotion202406GetCouponResponseDataCouponUsageLimits{}
 
 // Promotion202406GetCouponResponseDataCouponUsageLimits struct for Promotion202406GetCouponResponseDataCouponUsageLimits
 type Promotion202406GetCouponResponseDataCouponUsageLimits struct {
-    // The number of times that a claimed coupon can be redeemed across all buyers. (Only available in ID, MY, PH, TH, SG, VN regions.) 
-    RedemptionLimit *int32 `json:"redemption_limit,omitempty"`
-    // The number of times a single buyer can claim the coupon.
-    SingleBuyerClaimLimit *int32 `json:"single_buyer_claim_limit,omitempty"`
-    // The total number of claims allowed for the coupon across all buyers.
-    TotalClaimLimit *int32 `json:"total_claim_limit,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The number of times that a claimed coupon can be redeemed across all buyers. (Only available in ID, MY, PH, TH, SG, VN regions.)
+	RedemptionLimit *int32 `json:"redemption_limit,omitempty"`
+	// The number of times a single buyer can claim the coupon.
+	SingleBuyerClaimLimit *int32 `json:"single_buyer_claim_limit,omitempty"`
+	// The total number of claims allowed for the coupon across all buyers.
+	TotalClaimLimit      *int32 `json:"total_claim_limit,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Promotion202406GetCouponResponseDataCouponUsageLimits Promotion202406GetCouponResponseDataCouponUsageLimits
@@ -36,161 +36,161 @@ type _Promotion202406GetCouponResponseDataCouponUsageLimits Promotion202406GetCo
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPromotion202406GetCouponResponseDataCouponUsageLimits() *Promotion202406GetCouponResponseDataCouponUsageLimits {
-    this := Promotion202406GetCouponResponseDataCouponUsageLimits{}
-    return &this
+	this := Promotion202406GetCouponResponseDataCouponUsageLimits{}
+	return &this
 }
 
 // NewPromotion202406GetCouponResponseDataCouponUsageLimitsWithDefaults instantiates a new Promotion202406GetCouponResponseDataCouponUsageLimits object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPromotion202406GetCouponResponseDataCouponUsageLimitsWithDefaults() *Promotion202406GetCouponResponseDataCouponUsageLimits {
-    this := Promotion202406GetCouponResponseDataCouponUsageLimits{}
-    return &this
+	this := Promotion202406GetCouponResponseDataCouponUsageLimits{}
+	return &this
 }
 
 // GetRedemptionLimit returns the RedemptionLimit field value if set, zero value otherwise.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) GetRedemptionLimit() int32 {
-    if o == nil || utils.IsNil(o.RedemptionLimit) {
-        var ret int32
-        return ret
-    }
-    return *o.RedemptionLimit
+	if o == nil || utils.IsNil(o.RedemptionLimit) {
+		var ret int32
+		return ret
+	}
+	return *o.RedemptionLimit
 }
 
 // GetRedemptionLimitOk returns a tuple with the RedemptionLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) GetRedemptionLimitOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.RedemptionLimit) {
-        return nil, false
-    }
-    return o.RedemptionLimit, true
+	if o == nil || utils.IsNil(o.RedemptionLimit) {
+		return nil, false
+	}
+	return o.RedemptionLimit, true
 }
 
 // HasRedemptionLimit returns a boolean if a field has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) HasRedemptionLimit() bool {
-    if o != nil && !utils.IsNil(o.RedemptionLimit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.RedemptionLimit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetRedemptionLimit gets a reference to the given int32 and assigns it to the RedemptionLimit field.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) SetRedemptionLimit(v int32) {
-    o.RedemptionLimit = &v
+	o.RedemptionLimit = &v
 }
 
 // GetSingleBuyerClaimLimit returns the SingleBuyerClaimLimit field value if set, zero value otherwise.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) GetSingleBuyerClaimLimit() int32 {
-    if o == nil || utils.IsNil(o.SingleBuyerClaimLimit) {
-        var ret int32
-        return ret
-    }
-    return *o.SingleBuyerClaimLimit
+	if o == nil || utils.IsNil(o.SingleBuyerClaimLimit) {
+		var ret int32
+		return ret
+	}
+	return *o.SingleBuyerClaimLimit
 }
 
 // GetSingleBuyerClaimLimitOk returns a tuple with the SingleBuyerClaimLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) GetSingleBuyerClaimLimitOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.SingleBuyerClaimLimit) {
-        return nil, false
-    }
-    return o.SingleBuyerClaimLimit, true
+	if o == nil || utils.IsNil(o.SingleBuyerClaimLimit) {
+		return nil, false
+	}
+	return o.SingleBuyerClaimLimit, true
 }
 
 // HasSingleBuyerClaimLimit returns a boolean if a field has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) HasSingleBuyerClaimLimit() bool {
-    if o != nil && !utils.IsNil(o.SingleBuyerClaimLimit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.SingleBuyerClaimLimit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetSingleBuyerClaimLimit gets a reference to the given int32 and assigns it to the SingleBuyerClaimLimit field.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) SetSingleBuyerClaimLimit(v int32) {
-    o.SingleBuyerClaimLimit = &v
+	o.SingleBuyerClaimLimit = &v
 }
 
 // GetTotalClaimLimit returns the TotalClaimLimit field value if set, zero value otherwise.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) GetTotalClaimLimit() int32 {
-    if o == nil || utils.IsNil(o.TotalClaimLimit) {
-        var ret int32
-        return ret
-    }
-    return *o.TotalClaimLimit
+	if o == nil || utils.IsNil(o.TotalClaimLimit) {
+		var ret int32
+		return ret
+	}
+	return *o.TotalClaimLimit
 }
 
 // GetTotalClaimLimitOk returns a tuple with the TotalClaimLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) GetTotalClaimLimitOk() (*int32, bool) {
-    if o == nil || utils.IsNil(o.TotalClaimLimit) {
-        return nil, false
-    }
-    return o.TotalClaimLimit, true
+	if o == nil || utils.IsNil(o.TotalClaimLimit) {
+		return nil, false
+	}
+	return o.TotalClaimLimit, true
 }
 
 // HasTotalClaimLimit returns a boolean if a field has been set.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) HasTotalClaimLimit() bool {
-    if o != nil && !utils.IsNil(o.TotalClaimLimit) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.TotalClaimLimit) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetTotalClaimLimit gets a reference to the given int32 and assigns it to the TotalClaimLimit field.
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) SetTotalClaimLimit(v int32) {
-    o.TotalClaimLimit = &v
+	o.TotalClaimLimit = &v
 }
 
 func (o Promotion202406GetCouponResponseDataCouponUsageLimits) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Promotion202406GetCouponResponseDataCouponUsageLimits) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.RedemptionLimit) {
-        toSerialize["redemption_limit"] = o.RedemptionLimit
-    }
-    if !utils.IsNil(o.SingleBuyerClaimLimit) {
-        toSerialize["single_buyer_claim_limit"] = o.SingleBuyerClaimLimit
-    }
-    if !utils.IsNil(o.TotalClaimLimit) {
-        toSerialize["total_claim_limit"] = o.TotalClaimLimit
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.RedemptionLimit) {
+		toSerialize["redemption_limit"] = o.RedemptionLimit
+	}
+	if !utils.IsNil(o.SingleBuyerClaimLimit) {
+		toSerialize["single_buyer_claim_limit"] = o.SingleBuyerClaimLimit
+	}
+	if !utils.IsNil(o.TotalClaimLimit) {
+		toSerialize["total_claim_limit"] = o.TotalClaimLimit
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Promotion202406GetCouponResponseDataCouponUsageLimits) UnmarshalJSON(data []byte) (err error) {
-    varPromotion202406GetCouponResponseDataCouponUsageLimits := _Promotion202406GetCouponResponseDataCouponUsageLimits{}
+	varPromotion202406GetCouponResponseDataCouponUsageLimits := _Promotion202406GetCouponResponseDataCouponUsageLimits{}
 
-    err = json.Unmarshal(data, &varPromotion202406GetCouponResponseDataCouponUsageLimits)
+	err = json.Unmarshal(data, &varPromotion202406GetCouponResponseDataCouponUsageLimits)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Promotion202406GetCouponResponseDataCouponUsageLimits(varPromotion202406GetCouponResponseDataCouponUsageLimits)
+	*o = Promotion202406GetCouponResponseDataCouponUsageLimits(varPromotion202406GetCouponResponseDataCouponUsageLimits)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "redemption_limit")
-        delete(additionalProperties, "single_buyer_claim_limit")
-        delete(additionalProperties, "total_claim_limit")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "redemption_limit")
+		delete(additionalProperties, "single_buyer_claim_limit")
+		delete(additionalProperties, "total_claim_limit")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullablePromotion202406GetCouponResponseDataCouponUsageLimits struct {
@@ -228,5 +228,3 @@ func (v *NullablePromotion202406GetCouponResponseDataCouponUsageLimits) Unmarsha
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

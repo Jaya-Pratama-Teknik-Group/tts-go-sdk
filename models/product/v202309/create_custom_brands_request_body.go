@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202309CreateCustomBrandsRequestBody type satisfies the MappedNullable interface at compile time
+// checks if the Product202309CreateCustomBrandsRequestBody type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202309CreateCustomBrandsRequestBody{}
 
 // Product202309CreateCustomBrandsRequestBody struct for Product202309CreateCustomBrandsRequestBody
 type Product202309CreateCustomBrandsRequestBody struct {
-    // The brand name.  **Note**: - Length: [2, 30] - No language restrictions, but do not use Chinese. - The name will not be translated into multiple languages.
-    Name *string `json:"name,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The brand name.  **Note**: - Length: [2, 30] - No language restrictions, but do not use Chinese. - The name will not be translated into multiple languages.
+	Name                 *string `json:"name,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202309CreateCustomBrandsRequestBody Product202309CreateCustomBrandsRequestBody
@@ -32,89 +32,89 @@ type _Product202309CreateCustomBrandsRequestBody Product202309CreateCustomBrands
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202309CreateCustomBrandsRequestBody() *Product202309CreateCustomBrandsRequestBody {
-    this := Product202309CreateCustomBrandsRequestBody{}
-    return &this
+	this := Product202309CreateCustomBrandsRequestBody{}
+	return &this
 }
 
 // NewProduct202309CreateCustomBrandsRequestBodyWithDefaults instantiates a new Product202309CreateCustomBrandsRequestBody object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202309CreateCustomBrandsRequestBodyWithDefaults() *Product202309CreateCustomBrandsRequestBody {
-    this := Product202309CreateCustomBrandsRequestBody{}
-    return &this
+	this := Product202309CreateCustomBrandsRequestBody{}
+	return &this
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Product202309CreateCustomBrandsRequestBody) GetName() string {
-    if o == nil || utils.IsNil(o.Name) {
-        var ret string
-        return ret
-    }
-    return *o.Name
+	if o == nil || utils.IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
 }
 
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202309CreateCustomBrandsRequestBody) GetNameOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Name) {
-        return nil, false
-    }
-    return o.Name, true
+	if o == nil || utils.IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Product202309CreateCustomBrandsRequestBody) HasName() bool {
-    if o != nil && !utils.IsNil(o.Name) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Name) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *Product202309CreateCustomBrandsRequestBody) SetName(v string) {
-    o.Name = &v
+	o.Name = &v
 }
 
 func (o Product202309CreateCustomBrandsRequestBody) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202309CreateCustomBrandsRequestBody) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Name) {
-        toSerialize["name"] = o.Name
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202309CreateCustomBrandsRequestBody) UnmarshalJSON(data []byte) (err error) {
-    varProduct202309CreateCustomBrandsRequestBody := _Product202309CreateCustomBrandsRequestBody{}
+	varProduct202309CreateCustomBrandsRequestBody := _Product202309CreateCustomBrandsRequestBody{}
 
-    err = json.Unmarshal(data, &varProduct202309CreateCustomBrandsRequestBody)
+	err = json.Unmarshal(data, &varProduct202309CreateCustomBrandsRequestBody)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202309CreateCustomBrandsRequestBody(varProduct202309CreateCustomBrandsRequestBody)
+	*o = Product202309CreateCustomBrandsRequestBody(varProduct202309CreateCustomBrandsRequestBody)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "name")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "name")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202309CreateCustomBrandsRequestBody struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202309CreateCustomBrandsRequestBody) UnmarshalJSON(src [
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

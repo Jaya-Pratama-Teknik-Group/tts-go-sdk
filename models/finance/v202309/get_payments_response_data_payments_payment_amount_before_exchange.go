@@ -11,20 +11,20 @@ API version: 1.0.0
 package finance_v202309
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange type satisfies the MappedNullable interface at compile time
+// checks if the Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange{}
 
 // Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange struct for Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange
 type Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange struct {
-    // The original currency code in ISO 4217 format.
-    Currency *string `json:"currency,omitempty"`
-    // The original payment amount. 
-    Value *string `json:"value,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The original currency code in ISO 4217 format.
+	Currency *string `json:"currency,omitempty"`
+	// The original payment amount.
+	Value                *string `json:"value,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange
@@ -34,125 +34,125 @@ type _Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange Fi
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange() *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange {
-    this := Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange{}
-    return &this
+	this := Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange{}
+	return &this
 }
 
 // NewFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchangeWithDefaults instantiates a new Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchangeWithDefaults() *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange {
-    this := Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange{}
-    return &this
+	this := Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange{}
+	return &this
 }
 
 // GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) GetCurrency() string {
-    if o == nil || utils.IsNil(o.Currency) {
-        var ret string
-        return ret
-    }
-    return *o.Currency
+	if o == nil || utils.IsNil(o.Currency) {
+		var ret string
+		return ret
+	}
+	return *o.Currency
 }
 
 // GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) GetCurrencyOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Currency) {
-        return nil, false
-    }
-    return o.Currency, true
+	if o == nil || utils.IsNil(o.Currency) {
+		return nil, false
+	}
+	return o.Currency, true
 }
 
 // HasCurrency returns a boolean if a field has been set.
 func (o *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) HasCurrency() bool {
-    if o != nil && !utils.IsNil(o.Currency) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Currency) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetCurrency gets a reference to the given string and assigns it to the Currency field.
 func (o *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) SetCurrency(v string) {
-    o.Currency = &v
+	o.Currency = &v
 }
 
 // GetValue returns the Value field value if set, zero value otherwise.
 func (o *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) GetValue() string {
-    if o == nil || utils.IsNil(o.Value) {
-        var ret string
-        return ret
-    }
-    return *o.Value
+	if o == nil || utils.IsNil(o.Value) {
+		var ret string
+		return ret
+	}
+	return *o.Value
 }
 
 // GetValueOk returns a tuple with the Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) GetValueOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Value) {
-        return nil, false
-    }
-    return o.Value, true
+	if o == nil || utils.IsNil(o.Value) {
+		return nil, false
+	}
+	return o.Value, true
 }
 
 // HasValue returns a boolean if a field has been set.
 func (o *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) HasValue() bool {
-    if o != nil && !utils.IsNil(o.Value) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Value) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetValue gets a reference to the given string and assigns it to the Value field.
 func (o *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) SetValue(v string) {
-    o.Value = &v
+	o.Value = &v
 }
 
 func (o Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.Currency) {
-        toSerialize["currency"] = o.Currency
-    }
-    if !utils.IsNil(o.Value) {
-        toSerialize["value"] = o.Value
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
+	if !utils.IsNil(o.Value) {
+		toSerialize["value"] = o.Value
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange) UnmarshalJSON(data []byte) (err error) {
-    varFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange := _Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange{}
+	varFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange := _Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange{}
 
-    err = json.Unmarshal(data, &varFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange)
+	err = json.Unmarshal(data, &varFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange(varFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange)
+	*o = Finance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange(varFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "currency")
-        delete(additionalProperties, "value")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "currency")
+		delete(additionalProperties, "value")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBeforeExchange struct {
@@ -190,5 +190,3 @@ func (v *NullableFinance202309GetPaymentsResponseDataPaymentsPaymentAmountBefore
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

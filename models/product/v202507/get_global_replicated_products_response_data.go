@@ -11,18 +11,18 @@ API version: 1.0.0
 package product_v202507
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Product202507GetGlobalReplicatedProductsResponseData type satisfies the MappedNullable interface at compile time
+// checks if the Product202507GetGlobalReplicatedProductsResponseData type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Product202507GetGlobalReplicatedProductsResponseData{}
 
 // Product202507GetGlobalReplicatedProductsResponseData struct for Product202507GetGlobalReplicatedProductsResponseData
 type Product202507GetGlobalReplicatedProductsResponseData struct {
-    // The globally associated replicas in other markets if the product has been replicated through local replication.
-    ReplicatedProducts []Product202507GetGlobalReplicatedProductsResponseDataReplicatedProducts `json:"replicated_products,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// The globally associated replicas in other markets if the product has been replicated through local replication.
+	ReplicatedProducts   []Product202507GetGlobalReplicatedProductsResponseDataReplicatedProducts `json:"replicated_products,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Product202507GetGlobalReplicatedProductsResponseData Product202507GetGlobalReplicatedProductsResponseData
@@ -32,89 +32,89 @@ type _Product202507GetGlobalReplicatedProductsResponseData Product202507GetGloba
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewProduct202507GetGlobalReplicatedProductsResponseData() *Product202507GetGlobalReplicatedProductsResponseData {
-    this := Product202507GetGlobalReplicatedProductsResponseData{}
-    return &this
+	this := Product202507GetGlobalReplicatedProductsResponseData{}
+	return &this
 }
 
 // NewProduct202507GetGlobalReplicatedProductsResponseDataWithDefaults instantiates a new Product202507GetGlobalReplicatedProductsResponseData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewProduct202507GetGlobalReplicatedProductsResponseDataWithDefaults() *Product202507GetGlobalReplicatedProductsResponseData {
-    this := Product202507GetGlobalReplicatedProductsResponseData{}
-    return &this
+	this := Product202507GetGlobalReplicatedProductsResponseData{}
+	return &this
 }
 
 // GetReplicatedProducts returns the ReplicatedProducts field value if set, zero value otherwise.
 func (o *Product202507GetGlobalReplicatedProductsResponseData) GetReplicatedProducts() []Product202507GetGlobalReplicatedProductsResponseDataReplicatedProducts {
-    if o == nil || utils.IsNil(o.ReplicatedProducts) {
-        var ret []Product202507GetGlobalReplicatedProductsResponseDataReplicatedProducts
-        return ret
-    }
-    return o.ReplicatedProducts
+	if o == nil || utils.IsNil(o.ReplicatedProducts) {
+		var ret []Product202507GetGlobalReplicatedProductsResponseDataReplicatedProducts
+		return ret
+	}
+	return o.ReplicatedProducts
 }
 
 // GetReplicatedProductsOk returns a tuple with the ReplicatedProducts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Product202507GetGlobalReplicatedProductsResponseData) GetReplicatedProductsOk() ([]Product202507GetGlobalReplicatedProductsResponseDataReplicatedProducts, bool) {
-    if o == nil || utils.IsNil(o.ReplicatedProducts) {
-        return nil, false
-    }
-    return o.ReplicatedProducts, true
+	if o == nil || utils.IsNil(o.ReplicatedProducts) {
+		return nil, false
+	}
+	return o.ReplicatedProducts, true
 }
 
 // HasReplicatedProducts returns a boolean if a field has been set.
 func (o *Product202507GetGlobalReplicatedProductsResponseData) HasReplicatedProducts() bool {
-    if o != nil && !utils.IsNil(o.ReplicatedProducts) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ReplicatedProducts) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetReplicatedProducts gets a reference to the given []Product202507GetGlobalReplicatedProductsResponseDataReplicatedProducts and assigns it to the ReplicatedProducts field.
 func (o *Product202507GetGlobalReplicatedProductsResponseData) SetReplicatedProducts(v []Product202507GetGlobalReplicatedProductsResponseDataReplicatedProducts) {
-    o.ReplicatedProducts = v
+	o.ReplicatedProducts = v
 }
 
 func (o Product202507GetGlobalReplicatedProductsResponseData) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Product202507GetGlobalReplicatedProductsResponseData) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ReplicatedProducts) {
-        toSerialize["replicated_products"] = o.ReplicatedProducts
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ReplicatedProducts) {
+		toSerialize["replicated_products"] = o.ReplicatedProducts
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Product202507GetGlobalReplicatedProductsResponseData) UnmarshalJSON(data []byte) (err error) {
-    varProduct202507GetGlobalReplicatedProductsResponseData := _Product202507GetGlobalReplicatedProductsResponseData{}
+	varProduct202507GetGlobalReplicatedProductsResponseData := _Product202507GetGlobalReplicatedProductsResponseData{}
 
-    err = json.Unmarshal(data, &varProduct202507GetGlobalReplicatedProductsResponseData)
+	err = json.Unmarshal(data, &varProduct202507GetGlobalReplicatedProductsResponseData)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Product202507GetGlobalReplicatedProductsResponseData(varProduct202507GetGlobalReplicatedProductsResponseData)
+	*o = Product202507GetGlobalReplicatedProductsResponseData(varProduct202507GetGlobalReplicatedProductsResponseData)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "replicated_products")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "replicated_products")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableProduct202507GetGlobalReplicatedProductsResponseData struct {
@@ -152,5 +152,3 @@ func (v *NullableProduct202507GetGlobalReplicatedProductsResponseData) Unmarshal
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -11,20 +11,20 @@ API version: 1.0.0
 package authorization_v202312
 
 import (
-    "encoding/json"
-    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
+	"encoding/json"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
-            // checks if the Authorization202312GetWidgetTokenResponseDataWidgetToken type satisfies the MappedNullable interface at compile time
+// checks if the Authorization202312GetWidgetTokenResponseDataWidgetToken type satisfies the MappedNullable interface at compile time
 var _ utils.MappedNullable = &Authorization202312GetWidgetTokenResponseDataWidgetToken{}
 
 // Authorization202312GetWidgetTokenResponseDataWidgetToken struct for Authorization202312GetWidgetTokenResponseDataWidgetToken
 type Authorization202312GetWidgetTokenResponseDataWidgetToken struct {
-    // widget token expire timestamp, usually 5 minutes
-    ExpireAt *int64 `json:"expire_at,omitempty"`
-    // token used to pass widget api
-    Token *string `json:"token,omitempty"`
-    AdditionalProperties map[string]interface{}
+	// widget token expire timestamp, usually 5 minutes
+	ExpireAt *int64 `json:"expire_at,omitempty"`
+	// token used to pass widget api
+	Token                *string `json:"token,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
 type _Authorization202312GetWidgetTokenResponseDataWidgetToken Authorization202312GetWidgetTokenResponseDataWidgetToken
@@ -34,125 +34,125 @@ type _Authorization202312GetWidgetTokenResponseDataWidgetToken Authorization2023
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewAuthorization202312GetWidgetTokenResponseDataWidgetToken() *Authorization202312GetWidgetTokenResponseDataWidgetToken {
-    this := Authorization202312GetWidgetTokenResponseDataWidgetToken{}
-    return &this
+	this := Authorization202312GetWidgetTokenResponseDataWidgetToken{}
+	return &this
 }
 
 // NewAuthorization202312GetWidgetTokenResponseDataWidgetTokenWithDefaults instantiates a new Authorization202312GetWidgetTokenResponseDataWidgetToken object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewAuthorization202312GetWidgetTokenResponseDataWidgetTokenWithDefaults() *Authorization202312GetWidgetTokenResponseDataWidgetToken {
-    this := Authorization202312GetWidgetTokenResponseDataWidgetToken{}
-    return &this
+	this := Authorization202312GetWidgetTokenResponseDataWidgetToken{}
+	return &this
 }
 
 // GetExpireAt returns the ExpireAt field value if set, zero value otherwise.
 func (o *Authorization202312GetWidgetTokenResponseDataWidgetToken) GetExpireAt() int64 {
-    if o == nil || utils.IsNil(o.ExpireAt) {
-        var ret int64
-        return ret
-    }
-    return *o.ExpireAt
+	if o == nil || utils.IsNil(o.ExpireAt) {
+		var ret int64
+		return ret
+	}
+	return *o.ExpireAt
 }
 
 // GetExpireAtOk returns a tuple with the ExpireAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Authorization202312GetWidgetTokenResponseDataWidgetToken) GetExpireAtOk() (*int64, bool) {
-    if o == nil || utils.IsNil(o.ExpireAt) {
-        return nil, false
-    }
-    return o.ExpireAt, true
+	if o == nil || utils.IsNil(o.ExpireAt) {
+		return nil, false
+	}
+	return o.ExpireAt, true
 }
 
 // HasExpireAt returns a boolean if a field has been set.
 func (o *Authorization202312GetWidgetTokenResponseDataWidgetToken) HasExpireAt() bool {
-    if o != nil && !utils.IsNil(o.ExpireAt) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.ExpireAt) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetExpireAt gets a reference to the given int64 and assigns it to the ExpireAt field.
 func (o *Authorization202312GetWidgetTokenResponseDataWidgetToken) SetExpireAt(v int64) {
-    o.ExpireAt = &v
+	o.ExpireAt = &v
 }
 
 // GetToken returns the Token field value if set, zero value otherwise.
 func (o *Authorization202312GetWidgetTokenResponseDataWidgetToken) GetToken() string {
-    if o == nil || utils.IsNil(o.Token) {
-        var ret string
-        return ret
-    }
-    return *o.Token
+	if o == nil || utils.IsNil(o.Token) {
+		var ret string
+		return ret
+	}
+	return *o.Token
 }
 
 // GetTokenOk returns a tuple with the Token field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Authorization202312GetWidgetTokenResponseDataWidgetToken) GetTokenOk() (*string, bool) {
-    if o == nil || utils.IsNil(o.Token) {
-        return nil, false
-    }
-    return o.Token, true
+	if o == nil || utils.IsNil(o.Token) {
+		return nil, false
+	}
+	return o.Token, true
 }
 
 // HasToken returns a boolean if a field has been set.
 func (o *Authorization202312GetWidgetTokenResponseDataWidgetToken) HasToken() bool {
-    if o != nil && !utils.IsNil(o.Token) {
-        return true
-    }
+	if o != nil && !utils.IsNil(o.Token) {
+		return true
+	}
 
-    return false
+	return false
 }
 
 // SetToken gets a reference to the given string and assigns it to the Token field.
 func (o *Authorization202312GetWidgetTokenResponseDataWidgetToken) SetToken(v string) {
-    o.Token = &v
+	o.Token = &v
 }
 
 func (o Authorization202312GetWidgetTokenResponseDataWidgetToken) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-        return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
 }
 
 func (o Authorization202312GetWidgetTokenResponseDataWidgetToken) ToMap() (map[string]interface{}, error) {
-    toSerialize := map[string]interface{}{}
-    if !utils.IsNil(o.ExpireAt) {
-        toSerialize["expire_at"] = o.ExpireAt
-    }
-    if !utils.IsNil(o.Token) {
-        toSerialize["token"] = o.Token
-    }
+	toSerialize := map[string]interface{}{}
+	if !utils.IsNil(o.ExpireAt) {
+		toSerialize["expire_at"] = o.ExpireAt
+	}
+	if !utils.IsNil(o.Token) {
+		toSerialize["token"] = o.Token
+	}
 
-    for key, value := range o.AdditionalProperties {
-        toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-    return toSerialize, nil
+	return toSerialize, nil
 }
 
 func (o *Authorization202312GetWidgetTokenResponseDataWidgetToken) UnmarshalJSON(data []byte) (err error) {
-    varAuthorization202312GetWidgetTokenResponseDataWidgetToken := _Authorization202312GetWidgetTokenResponseDataWidgetToken{}
+	varAuthorization202312GetWidgetTokenResponseDataWidgetToken := _Authorization202312GetWidgetTokenResponseDataWidgetToken{}
 
-    err = json.Unmarshal(data, &varAuthorization202312GetWidgetTokenResponseDataWidgetToken)
+	err = json.Unmarshal(data, &varAuthorization202312GetWidgetTokenResponseDataWidgetToken)
 
-    if err != nil {
-        return err
-    }
+	if err != nil {
+		return err
+	}
 
-    *o = Authorization202312GetWidgetTokenResponseDataWidgetToken(varAuthorization202312GetWidgetTokenResponseDataWidgetToken)
+	*o = Authorization202312GetWidgetTokenResponseDataWidgetToken(varAuthorization202312GetWidgetTokenResponseDataWidgetToken)
 
-    additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-    if err = json.Unmarshal(data, &additionalProperties); err == nil {
-        delete(additionalProperties, "expire_at")
-        delete(additionalProperties, "token")
-        o.AdditionalProperties = additionalProperties
-    }
-    return err
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "expire_at")
+		delete(additionalProperties, "token")
+		o.AdditionalProperties = additionalProperties
+	}
+	return err
 }
 
 type NullableAuthorization202312GetWidgetTokenResponseDataWidgetToken struct {
@@ -190,5 +190,3 @@ func (v *NullableAuthorization202312GetWidgetTokenResponseDataWidgetToken) Unmar
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-
