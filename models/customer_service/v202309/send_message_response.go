@@ -12,7 +12,7 @@ package customer_service_v202309
 
 import (
     "encoding/json"
-    "tiktokshop/open/sdk_golang/utils"
+    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 )
 
             // checks if the CustomerService202309SendMessageResponse type satisfies the MappedNullable interface at compile time

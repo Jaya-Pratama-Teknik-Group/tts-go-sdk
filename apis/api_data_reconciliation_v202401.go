@@ -17,7 +17,7 @@ import (
     "net/http"
     "net/url"
 
-    "tiktokshop/open/sdk_golang/models/data_reconciliation/v202401"
+    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/data_reconciliation/v202401"
 )
 
 

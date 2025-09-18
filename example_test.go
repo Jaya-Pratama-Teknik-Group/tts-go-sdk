@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"testing"
 
-	"tiktokshop/open/sdk_golang/apis"
-    "tiktokshop/open/sdk_golang/utils"
+	"github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/apis"
+    "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/utils"
 
-	product_v202309 "tiktokshop/open/sdk_golang/models/product/v202309"
+	product_v202309 "github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk/models/product/v202309"
 )
 
 var (

@@ -1,4 +1,4 @@
-module tiktokshop/open/sdk_golang
+module github.com/Jaya-Pratama-Teknik-Group/tts-go-sdk
 
 go 1.23
 
